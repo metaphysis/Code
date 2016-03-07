@@ -1,0 +1,21 @@
+roaster
+coastal
+postal
+booster
+roasted
+coasted
+rooster
+a
+b
+c
+abc
+abb
+aba
+
+booster roasted
+coastal postal
+postal postal
+a g
+a c
+abc aba
+aba aba

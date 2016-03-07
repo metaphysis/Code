@@ -1,0 +1,11 @@
+P: 0 rock art
+P: 3 concepts conceptions
+P: 1   art rock   metaphor concepts
+T: Rock Art of the Maori|
+T: Jazz and Rock - Art Brubeck and Elvis Presley|
+T: Don't Rock --- the Boat as Metaphor in 1984, Concepts
+   and (Mis)-Conceptions of an Art Historian.|
+T: Carved in Rock, The Art and Craft of making promises
+   believable when your `phone bills have gone
+   through the roof|
+#

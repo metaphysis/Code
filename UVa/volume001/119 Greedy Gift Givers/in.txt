@@ -1,0 +1,12 @@
+5
+dave laura owen vick amr
+dave 200 3 laura owen vick
+owen 500 1 dave
+amr 150 2 vick owen
+laura 0 2 amr vick
+vick 0 0
+3
+liz steve dave
+liz 30 1 steve
+steve 55 2 liz dave
+dave 0 2 steve liz

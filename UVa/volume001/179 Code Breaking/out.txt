@@ -1,0 +1,18 @@
+found k: 2
+2 1 
+This is a test
+2 1 
+oNc cyel
+found k: 3
+3 1 2 
+cab?d?
+found k: 27
+1 2 3 27 27 25 23 24 22 21 24 19 18 16 17 15 14 13 12 10 11 9 8 7 4 5 6 
+alkddihfiafj;lekdijlkah;knnkdk?????????????hhlhahhhdkk
+found k: 4
+3 4 2 1 
+kiladhihjiifjiao
+found k: 4
+found k: 8
+4 4 2 1 8 7 6 5 
+iilahdihiiifijao

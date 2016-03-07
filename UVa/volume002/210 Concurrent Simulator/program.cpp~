@@ -1,0 +1,172 @@
+// Concurrent Simulator
+// UVa IDs: 210
+// Verdict: Accepted
+// Submission Date: 
+// UVa Run Time: s
+//
+// 版权所有（C）2016，邱秋。metaphysis # yeah dot net
+
+#include <iostream>
+#include <deque>
+#include <cstring>
+#include <sstream>
+
+using namespace std;
+
+#define ASSIGNMENT 0
+#define OUTPUT 1
+#define LOCK 2
+#define UNLOCK 3
+#define END 4
+
+struct statement
+{
+    int programId, statementType;
+    char variableName;
+    int variableValue;
+};
+
+typedef deque < statement > program;
+
+int timeNeeded[END + 1], timeQuantum;
+bool isLocked = false;
+int valueSetted[26];
+
+void execute(deque < program > ready)
+{
+    deque < program > blocked;
+    memset(valueSetted, 0, sizeof(valueSetted));
+    
+    while (!ready.empty())
+    {
+        program pRunning = ready.front();
+        ready.pop_front();
+        
+        int timeRemain = timeQuantum;
+        bool intoBlockedQueue = false;
+        while (timeRemain > 0)
+        {
+            statement sCurrent = pRunning.front();
+            pRunning.pop_front();
+            switch(sCurrent.statementType)
+            {
+                case ASSIGNMENT:
+                    valueSetted[sCurrent.variableName - 'a'] = sCurrent.variableValue;
+                    break;
+                case OUTPUT:
+                    cout << sCurrent.programId << ": " << valueSetted[sCurrent.variableName - 'a'] << endl;
+                    break;
+                case LOCK:
+                    if (isLocked)
+                    {
+                        pRunning.push_front(sCurrent);
+                        blocked.push_back(pRunning);
+                        timeRemain = 0;
+                        intoBlockedQueue = true;
+                    }
+                    else
+                        isLocked = true;
+                    break;
+                case UNLOCK:
+                    if (!blocked.empty())
+                    {
+                        program pNext = blocked.front();
+                        blocked.pop_front();
+                        ready.push_front(pNext);
+                    }
+                    isLocked = false;
+                    break;
+                case END:
+                    timeRemain = 0;
+                    break;
+            }
+            
+            timeRemain -= timeNeeded[sCurrent.statementType];
+        }
+        
+        if (!pRunning.empty() && !intoBlockedQueue)
+            ready.push_back(pRunning);
+    }
+}
+
+statement parseToStatement(string line, int programId)
+{
+    statement s;
+    s.programId = programId;
+
+    if (line.find('=') != line.npos)
+    {
+        istringstream iss(line);
+        s.statementType = ASSIGNMENT;
+        iss >> s.variableName;
+
+        string blank;
+        iss >> blank;
+
+        iss >> s.variableValue;
+    }
+    else if (line == "end")
+    {
+        s.statementType = END;
+    }
+    else if (line == "lock")
+    {
+        s.statementType = LOCK;
+    }
+    else if (line == "unlock")
+    {
+        s.statementType = UNLOCK;
+    }
+    else
+    {
+        s.statementType = OUTPUT;
+        s.variableName = line[line.length() - 1];
+    }
+
+    return s;
+}
+
+int main(int argc, char *argv[])
+{
+    string line;
+    int cases, numbers;
+    bool startPrintBlankLine = false;
+    
+    // 读入测试用例数
+    cin >> cases;
+    while (cases-- > 0)
+    {
+        // 在两个测试用例输出之间输出空行
+        if (startPrintBlankLine)
+            cout << endl;
+        else
+            startPrintBlankLine = true;
+        
+        // 读入空行
+        getline(cin, line);
+
+        // 读入各语句执行时间及单个时间片时间数
+        cin >> numbers;
+        for (int i = ASSIGNMENT; i <= END; i++)
+            cin >> timeNeeded[i];
+        cin >> timeQuantum;
+        cin.ignore();   // 忽
+
+        // 读入程序语句
+        int programId = numbers;
+        deque < program > ready;
+        while (numbers-- > 0)
+        {
+            deque < statement > program;
+            while (getline(cin, line), line != "end")
+                program.push_back(parseToStatement(line, programId - numbers));
+            program.push_back(parseToStatement(line, programId - numbers));
+            ready.push_back(program);
+        }
+
+        // 模拟执行
+        execute(ready);
+    }
+
+    return 0;
+}

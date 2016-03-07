@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+
+int n, k;
+
+int findLast()
+{
+    int s = 0;
+    for (int i = 1; i <= n; i++)
+        s = (s + k) % i;
+    return (s + 1);
+}
+
+int main(int argc, char *argv[])
+{
+    while (cin >> n >> k, n && k)
+        cout << findLast() << endl;
+
+    return 0;
+}

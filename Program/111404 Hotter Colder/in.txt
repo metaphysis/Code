@@ -1,0 +1,4 @@
+10.0 10.0 Colder
+10.0 0.0 Hotter
+0.0 0.0 Colder
+10.0 10.0 Hotter

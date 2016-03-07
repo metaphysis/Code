@@ -1,0 +1,71 @@
+// Common Permutation （公共排列）
+// PC/UVa IDs: 110303/10252, Popularity: A, Success rate: average Level: 1
+// Verdict: Accepted
+// Submission Date: 2011-05-22
+// UVa Run Time: 0.044s
+//
+// 版权所有（C）2011，邱秋。metaphysis # yeah dot net
+	
+#include <iostream>
+#include <algorithm>
+#include <cmath>
+
+using namespace std;
+
+void first(string a, string b)
+{
+    int acount[26] = { 0 }, bcount[26] = { 0 };
+    
+    // 统计公共字符数目
+    for (int i = 0; i < a.length(); i++)
+        acount[a[i] - 'a']++;
+    for (int i = 0; i < b.length(); i++)
+        bcount[b[i] - 'a']++;
+    
+    // 输出公共字符
+    for (int i = 0; i < 26; i++)
+        for (int j = 0; j < min(acount[i], bcount[i]); j++)
+            cout << (char)('a' + i);
+            
+    cout << endl;
+}
+
+void second(string a, string b)
+{
+	// 比较前先按字典排序，保证输出的是字典序。
+	sort(a.begin(), a.end());
+	sort(b.begin(), b.end());
+	
+	// 查找共有的字符，不同的忽略。
+	for (int i = 0, j = 0; i < a.length() && j < b.length(); )
+	{
+		if (a[i] == b[j])
+		{
+			cout << a[i];
+			i++;
+			j++;
+		}
+		else
+		{
+			if (a[i] < b[j])
+				i++;
+			else
+				j++;
+		
+		}
+	}
+	
+	cout << endl;
+}
+
+int main(int ac, char *av[])
+{
+    string a, b;
+    while (getline(cin, a), getline(cin, b))
+    {
+        first(a, b);
+        // second(a, b);    
+    }
+	
+	return 0;
+}

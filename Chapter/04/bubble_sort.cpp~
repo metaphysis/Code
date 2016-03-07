@@ -1,0 +1,124 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+void display(vector<int>& numbers)
+{
+    for (int i = 0; i < numbers.size(); i++)
+        cout << numbers[i] << " ";
+    cout << endl;
+}
+
+
+void merge(vector<int>& numbers, int first, int middle, int last)
+{
+    vector<int> temp(numbers.size());
+    int i = first, j = middle + 1;
+    while (i < middle && j < last)
+        temp.push_back(numbers[i] < numbers[j] ? numbers[i++] : numbers[j++]);
+    while (i < middle)
+        temp.push_back(numbers[i++]);
+    while (j < last)
+        temp.push_back(numbers[j++]);
+    for (int k = 0; k < temp.size(); k++)
+        numbers[first + k] = temp[k];
+}
+
+void mergeSort(vector<int>& numbers, int first, int last)
+{
+    if (first < last)
+    {
+        int middle = (first + last) / 2;
+        mergeSort(numbers, first, middle);
+        mergeSort(numbers, middle + 1, last);
+        merge(numbers, first, middle, last);       
+    }
+}
+
+void quickSort(vector<int>& numbers, int left, int right)
+{
+    if (left < right)
+    {
+        int pivot = numbers[left], low = left, high = right;
+        while (low < high)
+        {
+            while (low < high && numbers[high] > pivot)
+                high--;
+            numbers[low] = numbers[high];
+                
+            //display(numbers);
+            
+            while (low < high && numbers[low] < pivot)
+                low++;
+            numbers[high] = numbers[low];
+            
+            //display(numbers);
+        }
+        numbers[low] = pivot;
+        quickSort(numbers, left, low - 1);
+        quickSort(numbers, low + 1, right);
+    }
+}
+
+void insertionSort(vector<int>& numbers)
+{
+    for (int i = 1; i < numbers.size(); i++)
+    {
+        int temp = numbers[i], j = i - 1;
+        while (j >= 0 && numbers[j] > temp)
+        {
+            numbers[j + 1] = numbers[j];
+            j--;
+        }
+        numbers[j + 1] = temp;
+    }
+}
+
+void selectionSort(vector<int>& numbers)
+{
+    for (int i = 0; i < numbers.size(); i++)
+        for (int j = i + 1; j < numbers.size(); j++)
+        {
+            if (numbers[i] > numbers[j])
+            {
+                int temp = numbers[i];
+                numbers[i] = numbers[j];
+                numbers[j] = temp;
+            }
+        }
+}
+
+void bubbleSort(vector<int>& numbers)
+{
+    for (int i = 0; i < numbers.size(); i++)
+        for (int j = 0; j < (numbers.size() - i - 1); j++)
+        {
+            if (numbers[j] > numbers[j + 1])
+            {
+                int temp = numbers[j];
+                numbers[j] = numbers[j + 1];
+                numbers[j + 1] = temp;
+            }
+        }
+}
+
+int main(int argc, char* argv[])
+{
+    vector< int > numbers;
+    for (int i = 10; i >= 1; i--)
+        numbers.push_back(i);
+    
+    random_shuffle(numbers.begin(), numbers.end());
+    
+    display(numbers);
+    
+    //bubbleSort(numbers);
+    //quickSort(numbers, 0, numbers.size() - 1);
+    mergeSort(numbers, 0, numbers.size() - 1);
+    
+    display(numbers);
+        
+    return 0;
+}

@@ -1,0 +1,24 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+struct tag {
+
+};
+
+int main(int argc, char * argv[])
+{ 
+    int sample[10];
+    for (int i = 0; i < 10; i++) {
+        sample[i] = i + 1;
+        cout << sample[i] << " ";
+    }
+    cout << endl;
+    
+    memset(sample, 0, 5 * sizeof(int));
+    for (int i = 0; i < 10; i++)
+        cout << sample[i] << " ";
+    cout << endl;
+
+    return 0;
+}

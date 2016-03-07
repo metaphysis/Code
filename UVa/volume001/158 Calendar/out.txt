@@ -1,0 +1,103 @@
+Today is: 26  2
+ 28  2 ***     Feb Regular
+  1  3 **      First Day of March
+
+Today is: 27  2
+ 28  2 ****    Feb Regular
+  1  3 ***     First Day of March
+
+Today is: 28  2
+ 28  2 *TODAY* Feb Regular
+  1  3 ****    First Day of March
+
+Today is:  1  3
+  1  3 *TODAY* First Day of March
+
+Today is:  2  3
+
+Today is:  3  3
+
+Today is: 20 12
+ 20 12 *TODAY* Unspecified Anniversary
+ 23 12 ***     Partner's birthday
+ 25 12 ***     Christmas
+ 25 12 ***     Christmas So Important
+ 26 12 *       Boxing Day
+ 26 12 *       Christmas Eve + 2
+
+Today is: 21 12
+ 23 12 ****    Partner's birthday
+ 25 12 ****    Christmas
+ 25 12 ****    Christmas So Important
+ 26 12 **      Boxing Day
+ 26 12 **      Christmas Eve + 2
+
+Today is: 22 12
+ 23 12 *****   Partner's birthday
+ 25 12 *****   Christmas
+ 25 12 *****   Christmas So Important
+ 26 12 ***     Boxing Day
+ 26 12 ***     Christmas Eve + 2
+
+Today is: 23 12
+ 23 12 *TODAY* Partner's birthday
+ 25 12 ******  Christmas
+ 25 12 ******  Christmas So Important
+ 26 12 ****    Boxing Day
+ 26 12 ****    Christmas Eve + 2
+
+Today is: 24 12
+ 25 12 ******* Christmas
+ 25 12 ******* Christmas So Important
+ 26 12 *****   Boxing Day
+ 26 12 *****   Christmas Eve + 2
+
+Today is: 25 12
+ 25 12 *TODAY* Christmas
+ 25 12 *TODAY* Christmas So Important
+ 26 12 ******  Boxing Day
+ 26 12 ******  Christmas Eve + 2
+ 31 12 *       New Year Eve
+  1  1 *       New Year Again
+
+Today is: 26 12
+ 26 12 *TODAY* Boxing Day
+ 26 12 *TODAY* Christmas Eve + 2
+ 31 12 **      New Year Eve
+  1  1 **      New Year Again
+  1  1 *       New Year
+
+Today is: 27 12
+ 31 12 ***     New Year Eve
+  1  1 ***     New Year Again
+  1  1 **      New Year
+
+Today is: 28 12
+ 31 12 ****    New Year Eve
+  1  1 ****    New Year Again
+  1  1 ***     New Year
+
+Today is: 29 12
+ 31 12 *****   New Year Eve
+  1  1 *****   New Year Again
+  1  1 ****    New Year
+  2  1 *       Nothing
+
+Today is: 30 12
+ 31 12 ******  New Year Eve
+  1  1 ******  New Year Again
+  1  1 *****   New Year
+  2  1 **      Nothing
+
+Today is: 31 12
+ 31 12 *TODAY* New Year Eve
+  1  1 ******* New Year Again
+  1  1 ******  New Year
+  2  1 ***     Nothing
+
+Today is:  1  1
+  1  1 *TODAY* New Year
+  1  1 *TODAY* New Year Again
+  2  1 ****    Nothing
+
+Today is:  1  2

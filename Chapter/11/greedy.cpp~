@@ -1,0 +1,85 @@
+#include <iostream>
+#include <limits>
+#include <algorithm>
+#include <iomanip>
+
+using namespace std;
+
+int denominations[110], solutions[10010][3], counter[110], n;
+const int MAX_INT = numeric_limits < int >::max();
+
+void findPath(int m)
+{
+    if (m > 0)
+    {
+        counter[solutions[m][2]]++;
+        findPath(solutions[m][1]);
+    }
+}
+
+void findMiniumChange(int money)
+{
+    fill(solutions[0], solutions[0] + 10010 * 3, MAX_INT);
+    fill(counter, counter + 110, 0);
+
+    solutions[0][0] = 0;
+
+    for (int i = 1; i <= money; i++)
+    {
+        int minCount = MAX_INT, minIndex = MAX_INT;
+        
+        for (int j = 0; j < n; j++)
+            if (i >= denominations[j] &&
+                solutions[i - denominations[j]][0] != MAX_INT &&
+                minCount > (solutions[i - denominations[j]][0] + 1))
+            {
+                minCount = solutions[i - denominations[j]][0] + 1;
+                minIndex = j;
+            }
+
+        if (minIndex != MAX_INT)
+        {
+            solutions[i][0] = minCount;
+            solutions[i][1] = i - denominations[minIndex];
+            solutions[i][2] = minIndex;
+        }
+    }
+
+    if (solutions[money][0] == MAX_INT)
+    {
+        cout << "No solution." << endl;
+    }
+    else
+    {
+        cout << setw(3) << right << solutions[money][0];
+
+        findPath(money);
+
+        int plusPrinted = 0;
+        for (int i = 0; i < n; i++)
+            if (counter[i] > 0)
+            {
+                cout << (plusPrinted++ ? "+" : " ");
+                cout << counter[i] << "x" << denominations[i];
+            }
+
+        cout << endl;
+    }
+}
+
+int main(int argc, char *argv[])
+{
+    double money;
+    
+    while (cin >> n, n)
+    {
+        for (int i = 0; i < n; i++)
+            cin >> denominations[i];
+            
+        cin >> money;
+        
+        findMiniumChange((int)(money * 100.0 + 0.5));
+    }
+
+    return 0;
+}

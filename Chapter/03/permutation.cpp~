@@ -1,0 +1,97 @@
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+template < typename _BidirectionalIterator >
+    bool
+prev_permutation(_BidirectionalIterator __first, _BidirectionalIterator __last)
+{
+    if (__first == __last)
+        return false;
+    _BidirectionalIterator __i = __first;
+    ++__i;
+    if (__i == __last)
+        return false;
+    __i = __last;
+    --__i;
+
+    for (;;)
+    {
+        _BidirectionalIterator __ii = __i;
+        --__i;
+        if (*__ii < *__i)
+        {
+            _BidirectionalIterator __j = __last;
+            while (!(*--__j < *__i))
+            {
+            }
+            std::iter_swap(__i, __j);
+            std::reverse(__ii, __last);
+            return true;
+        }
+        if (__i == __first)
+        {
+            std::reverse(__first, __last);
+            return false;
+        }
+    }
+}
+
+template < typename _BidirectionalIterator >
+    bool
+next_permutation(_BidirectionalIterator __first, _BidirectionalIterator __last)
+{
+    if (__first == __last)
+        return false;
+    _BidirectionalIterator __i = __first;
+    ++__i;
+    if (__i == __last)
+        return false;
+    __i = __last;
+    --__i;
+
+    for (;;)
+    {
+        _BidirectionalIterator __ii = __i;
+        --__i;
+        if (*__i < *__ii)
+        {
+            _BidirectionalIterator __j = __last;
+            while (!(*__i < *--__j))
+            {
+            }
+            std::iter_swap(__i, __j);
+            std::reverse(__ii, __last);
+            return true;
+        }
+        if (__i == __first)
+        {
+            std::reverse(__first, __last);
+            return false;
+        }
+    }
+}
+
+int main(int argc, char *argv[])
+{
+    string something = "abc";
+
+    cout << something << endl;
+    while (next_permutation(something.begin(), something.end()))
+        cout << something << endl;
+
+    cout << endl;
+    cout << "after next_permutation: " << something << endl;
+    cout << endl;
+
+    something.assign("cba");
+    while (prev_permutation(something.begin(), something.end()))
+        cout << something << endl;
+    cout << something << endl;
+
+    cout << endl;
+    cout << "after prev_permutation: " << something << endl;
+
+    return 0;
+}

@@ -1,0 +1,24 @@
+#include <iostream>
+#include <string>
+#include <sstream>
+#include <vector>
+#include <iterator>
+ 
+using namespace std;
+ 
+typedef vector< vector< char > > twod_vector;
+ 
+ostream& operator<<(ostream &out, const twod_vector &v)
+{
+	twod_vector::const_iterator p;
+ 
+	for(p = v.begin(); p < v.end(); p++) {
+		copy((*p).begin(), (*p).end(),
+				ostream_iterator< char >(cout, ""));
+		cout<<endl;
+	}
+ 
+	return out;
+}
+ 
+void reset(twod_vector 
