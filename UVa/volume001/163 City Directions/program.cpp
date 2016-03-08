@@ -156,13 +156,8 @@ bool validateMove()
 {
     if (command == TURN_LEFT)
     {
-        if (heading == N && avenue == 0)
-            return false;
-        if (heading == E && street == 100)
-            return false;
-        if (heading == S && avenue == 100)
-            return false;
-        if (heading == W && street == 0)
+        if (heading == N && avenue == 0 || heading == S && avenue == 100 ||
+            heading == W && street == 0 || heading == S && avenue == 100)
             return false;
         if (heading == NE)
         {
@@ -653,12 +648,9 @@ int main(int argc, char *argv[])
     string line;
     bool startPositionReaded = false;
 
-    while (getline(cin, line))
+    while (getline(cin, line), line != "END")
     {
         parseDirection(line);
-
-        if (texts.size() == 1 && texts[0] == "END")
-            break;
 
         if (texts.size() == 1 && texts[0] == "STOP")
         {
