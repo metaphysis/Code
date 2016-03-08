@@ -1,6 +1,6 @@
 // Paper Folding
 // UVa IDs: 177
-// Verdict: Accepted
+// Verdict: 
 // Submission Date: 
 // UVa Run Time: s
 //
@@ -28,7 +28,7 @@ void rotate()
             newMatrix[i][j] = oldMatrix[j][SIDE - 1 - i];
             if (newMatrix[i][j] == 0)
                 continue;
-                
+
             if (newMatrix[i][j] == '_')
                 newMatrix[i][j] = '|';
             else

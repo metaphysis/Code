@@ -54,6 +54,7 @@ void parseDirection(string line)
         texts.push_back(text);
 }
 
+// 判断最后是否停留在快速路上。
 bool isStayOnThroughways()
 {
     if ((avenue == 0 || avenue == 50 || avenue == 100) && heading == N)
