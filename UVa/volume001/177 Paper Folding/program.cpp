@@ -18,6 +18,7 @@ char oldMatrix[SIDE][SIDE] = { 0 }, newMatrix[SIDE][SIDE] = { 0 };
 int rotateX, rotateY;
 int startX, startY;
 
+
 void rotate()
 {
     memset(newMatrix, 0, sizeof(newMatrix));
@@ -67,7 +68,6 @@ void display()
         for (int j = 0; j < SIDE; j++)
             if (oldMatrix[i][j] > 0)
                 cout << oldMatrix[i][j];
-        cout << "\n";
     }
     
     cout << "\n^\n";
