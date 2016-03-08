@@ -1,6 +1,6 @@
 // 
 // UVa IDs: 
-// Verdict: Accepted
+// Verdict: 
 // Submission Date: 
 // UVa Run Time: s
 //
