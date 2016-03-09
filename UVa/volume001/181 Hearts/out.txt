@@ -1,0 +1,88 @@
+3C 6C
+C
+TS TH 7S 7H 7D 7C 5D 3S 2D 2C 
+AH AC KS QC JS JD 6D 4H 4C 3H 
+KH KC 8S 8H 6S 6H 5H 5C 4S 2S 
+AD KD QS TC 9S 9H 9D 9C 8D 3D 
+AS QH QD JH JC TD 8C 5S 4D 2H 
+leader 0 card: TS
+ follower 1 card: KS follower 2 card: 8S follower 3 card: QS follower 4 card: AS
+winner: 4
+TH 7S 7H 7D 7C 5D 3S 2D 2C 
+AH AC QC JS JD 6D 4H 4C 3H 
+KH KC 8H 6S 6H 5H 5C 4S 2S 
+AD KD TC 9S 9H 9D 9C 8D 3D 
+QH QD JH JC TD 8C 5S 4D 2H 
+leader 4 card: QH
+ follower 0 card: TH follower 1 card: AH follower 2 card: KH follower 3 card: 9H
+winner: 1
+7S 7H 7D 7C 5D 3S 2D 2C 
+AC QC JS JD 6D 4H 4C 3H 
+KC 8H 6S 6H 5H 5C 4S 2S 
+AD KD TC 9S 9D 9C 8D 3D 
+QD JH JC TD 8C 5S 4D 2H 
+leader 1 card: AC
+ follower 2 card: KC follower 3 card: TC follower 4 card: JC follower 0 card: 7C
+winner: 0
+7S 7H 7D 5D 3S 2D 2C 
+QC JS JD 6D 4H 4C 3H 
+8H 6S 6H 5H 5C 4S 2S 
+AD KD 9S 9D 9C 8D 3D 
+QD JH TD 8C 5S 4D 2H 
+leader 0 card: 7S
+ follower 1 card: JS follower 2 card: 6S follower 3 card: 9S follower 4 card: 5S
+winner: 1
+7H 7D 5D 3S 2D 2C 
+QC JD 6D 4H 4C 3H 
+8H 6H 5H 5C 4S 2S 
+AD KD 9D 9C 8D 3D 
+QD JH TD 8C 4D 2H 
+leader 1 card: QC
+ follower 2 card: 5C follower 3 card: 9C follower 4 card: 8C follower 0 card: 2C
+winner: 0
+7H 7D 5D 3S 2D 
+JD 6D 4H 4C 3H 
+8H 6H 5H 4S 2S 
+AD KD 9D 8D 3D 
+QD JH TD 4D 2H 
+leader 0 card: 7H
+ follower 1 card: 4H follower 2 card: 8H follower 3 card: AD follower 4 card: QD
+winner: 3
+7D 5D 3S 2D 
+JD 6D 4C 3H 
+6H 5H 4S 2S 
+KD 9D 8D 3D 
+JH TD 4D 2H 
+leader 3 card: KD
+ follower 4 card: TD follower 0 card: 7D follower 1 card: JD follower 2 card: 6H
+winner: 3
+5D 3S 2D 
+6D 4C 3H 
+5H 4S 2S 
+9D 8D 3D 
+JH 4D 2H 
+leader 3 card: 9D
+ follower 4 card: 4D follower 0 card: 5D follower 1 card: 6D follower 2 card: 5H
+winner: 3
+3S 2D 
+4C 3H 
+4S 2S 
+8D 3D 
+JH 2H 
+leader 3 card: 8D
+ follower 4 card: JH follower 0 card: 3S follower 1 card: 4C follower 2 card: 4S
+winner: 1
+2D 
+3H 
+2S 
+3D 
+2H 
+leader 1 card: 3H
+ follower 2 card: 2S follower 3 card: 3D follower 4 card: 2H follower 0 card: 2D
+winner: 1
+
+
+
+
+
+  0  0 74  0 30
