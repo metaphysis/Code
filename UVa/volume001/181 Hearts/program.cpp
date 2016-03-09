@@ -20,7 +20,7 @@ int leader = 0, winner, trump;
 string winnerCard;
 bool trumped;
 
-bool cmp(string x, string y)
+bool followerCmp(string x, string y)
 {
     int face1 = face.find(x[0]);
     int face2 = face.find(y[0]);
@@ -28,19 +28,9 @@ bool cmp(string x, string y)
     int suit2 = suit.find(y[1]);
     
     if (face1 != face2)
-    {
         return face1 > face2;
-    }
-    else if (suit1 == suit[trump])
-    {
-        return true;
-    }
-    else if (suit2 == suit[trump])
-    {
-        return false;
-    }
-
-    return suit1 > suit2;
+    else
+        return suit1 > suit2;
 }
 
 void getWinnerCard(int index, string followerCard)
@@ -50,39 +40,36 @@ void getWinnerCard(int index, string followerCard)
     int suit1 = suit.find(winnerCard[1]);
     int suit2 = suit.find(followerCard[1]);
     
-    if (suit2 == trump)
+    if (suit1 != suit2)
     {
-        winner = index;
-        winnerCard = followerCard;
+        if (suit2 == trump)
+        {
+            winner = index;
+            winnerCard = followerCard;
+        }
+        //else if (suit1 != trump && suit2 != trump)
+        //{
+            //if (face2 > face1 || (face1 == face2 && suit2 > suit1))
+            //{
+                //winner = index;
+                //winnerCard = followerCard;
+            //}
+        //}
     }
     else
     {
-        if (suit1 != suit2)
+        if (face2 > face1)
         {
-            if (suit1 != trump && suit2 != trump)
-            {
-                if (face2 > face1 || (face1 == face2 && suit2 > suit1))
-                {
-                    winner = index;
-                    winnerCard = followerCard;
-                }
-            }
+            winner = index;
+            winnerCard = followerCard;
         }
-        else
-        {
-            if (face2 > face1)
-            {
-                winner = index;
-                winnerCard = followerCard;
-            }
-        }        
-    }
+    }        
 }
 
 string getFollowerCard(int index, string leaderCard)
 {
     string followerCard;
-    sort(players[index].begin(), players[index].end(), cmp);
+    sort(players[index].begin(), players[index].end(), followerCmp);
     
     // find correct suit card
     bool found = false;
@@ -117,14 +104,35 @@ string getFollowerCard(int index, string leaderCard)
     
     getWinnerCard(index, followerCard);
     
-    cout << " follower " << index << " card: " << followerCard;
+    //cout << " follower " << index << " card: " << followerCard;
     
     return followerCard;
 }
 
+bool leaderCmp(string x, string y)
+{
+    int face1 = face.find(x[0]);
+    int face2 = face.find(y[0]);
+    int suit1 = suit.find(x[1]);
+    int suit2 = suit.find(y[1]);
+    
+    if (face1 != face2)
+        return face1 > face2;
+    else
+    {
+        if (suit1 == trump && suit2 != trump)
+            return true;
+            
+        if (suit1 != trump && suit2 == trump)
+            return false;
+            
+        return suit1 > suit2;
+    }
+}
+
 string getLeaderCard(int index)
 {
-    sort(players[index].begin(), players[index].end(), cmp);
+    sort(players[index].begin(), players[index].end(), leaderCmp);
     string leaderCard = players[index][0];
     players[index].erase(players[index].begin());
     trumped = leaderCard[1] == suit[trump];
@@ -146,7 +154,7 @@ void play()
     vector < string > followerCards;
     followerCards.push_back(getLeaderCard(leader));
     
-    cout << "leader " << leader << " card: " << followerCards[0] << endl;
+    //cout << "leader " << leader << " card: " << followerCards[0] << endl;
     
     winner = leader;
     winnerCard = followerCards[0];
@@ -157,14 +165,17 @@ void play()
         followerCards.push_back(getFollowerCard(leader, followerCards.back()));
     }
     
-    cout << endl;
-    cout << "winner: " << winner << endl;
+    //cout << endl;
+    //cout << "winner: " << winner << " scores: " << scores[winner] << endl;
     
     for (int i = 0; i < followerCards.size(); i++)
         if (followerCards[i][1] == 'H')
+        {
             scores[winner] += (face.find(followerCards[i][0]) + 2);
+            //cout << "found " << followerCards[i] << " " << scores[winner] << endl;
+        }
     
-    showCard();
+    //showCard();
             
     leader = winner;
 }
@@ -187,6 +198,7 @@ int main(int argc, char *argv[])
     {
         lineNumber++;
         deck += line;
+        //cout << line << endl;
         
         if (lineNumber == 4)
         {
@@ -194,19 +206,19 @@ int main(int argc, char *argv[])
                 if (isblank(deck[i]))
                     deck.erase(deck.begin() + i);
             
-            int marker = 0, index = 0;
+            //cout << deck << endl;
+            
+            int marker = 0;
             for (int i = 0; i < deck.length() - 4; i += 2)
             {
-                players[marker % 5][index] = deck.substr(i, 2);
+                players[marker % 5].push_back(deck.substr(i, 2));
                 marker++;
-                if (marker % 5 == 0)
-                    index++;
             }
             
             string last1 = deck.substr(102, 2);
             string last2 = deck.substr(100, 2);
             
-            cout << last1 << " " << last2 << endl;
+            //cout << last1 << " " << last2 << endl;
             
             int face1 = face.find(last1[0]);
             int face2 = face.find(last2[0]);
@@ -221,12 +233,12 @@ int main(int argc, char *argv[])
             
             trump = suit.find(cTrump);
             
-            cout << suit[trump] << endl;
+            //cout << suit[trump] << endl;
             
             for (int i = 0; i < players.size(); i++)
-                sort(players[i].begin(), players[i].end(), cmp);
+                sort(players[i].begin(), players[i].end(), leaderCmp);
                 
-            showCard();
+            //showCard();
                   
             fill(scores.begin(), scores.end(), 0);
             

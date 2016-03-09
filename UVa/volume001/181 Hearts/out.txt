@@ -1,88 +1,100 @@
-3C 6C
-C
-TS TH 7S 7H 7D 7C 5D 3S 2D 2C 
-AH AC KS QC JS JD 6D 4H 4C 3H 
-KH KC 8S 8H 6S 6H 5H 5C 4S 2S 
-AD KD QS TC 9S 9H 9D 9C 8D 3D 
-AS QH QD JH JC TD 8C 5S 4D 2H 
-leader 0 card: TS
- follower 1 card: KS follower 2 card: 8S follower 3 card: QS follower 4 card: AS
-winner: 4
-TH 7S 7H 7D 7C 5D 3S 2D 2C 
-AH AC QC JS JD 6D 4H 4C 3H 
-KH KC 8H 6S 6H 5H 5C 4S 2S 
-AD KD TC 9S 9H 9D 9C 8D 3D 
-QH QD JH JC TD 8C 5S 4D 2H 
-leader 4 card: QH
- follower 0 card: TH follower 1 card: AH follower 2 card: KH follower 3 card: 9H
-winner: 1
-7S 7H 7D 7C 5D 3S 2D 2C 
-AC QC JS JD 6D 4H 4C 3H 
-KC 8H 6S 6H 5H 5C 4S 2S 
-AD KD TC 9S 9D 9C 8D 3D 
-QD JH JC TD 8C 5S 4D 2H 
-leader 1 card: AC
- follower 2 card: KC follower 3 card: TC follower 4 card: JC follower 0 card: 7C
-winner: 0
-7S 7H 7D 5D 3S 2D 2C 
-QC JS JD 6D 4H 4C 3H 
-8H 6S 6H 5H 5C 4S 2S 
-AD KD 9S 9D 9C 8D 3D 
-QD JH TD 8C 5S 4D 2H 
-leader 0 card: 7S
- follower 1 card: JS follower 2 card: 6S follower 3 card: 9S follower 4 card: 5S
-winner: 1
-7H 7D 5D 3S 2D 2C 
-QC JD 6D 4H 4C 3H 
-8H 6H 5H 5C 4S 2S 
-AD KD 9D 9C 8D 3D 
-QD JH TD 8C 4D 2H 
-leader 1 card: QC
- follower 2 card: 5C follower 3 card: 9C follower 4 card: 8C follower 0 card: 2C
-winner: 0
-7H 7D 5D 3S 2D 
-JD 6D 4H 4C 3H 
-8H 6H 5H 4S 2S 
-AD KD 9D 8D 3D 
-QD JH TD 4D 2H 
-leader 0 card: 7H
- follower 1 card: 4H follower 2 card: 8H follower 3 card: AD follower 4 card: QD
-winner: 3
-7D 5D 3S 2D 
-JD 6D 4C 3H 
-6H 5H 4S 2S 
-KD 9D 8D 3D 
-JH TD 4D 2H 
-leader 3 card: KD
- follower 4 card: TD follower 0 card: 7D follower 1 card: JD follower 2 card: 6H
-winner: 3
-5D 3S 2D 
-6D 4C 3H 
-5H 4S 2S 
-9D 8D 3D 
-JH 4D 2H 
-leader 3 card: 9D
- follower 4 card: 4D follower 0 card: 5D follower 1 card: 6D follower 2 card: 5H
-winner: 3
-3S 2D 
-4C 3H 
-4S 2S 
-8D 3D 
-JH 2H 
-leader 3 card: 8D
- follower 4 card: JH follower 0 card: 3S follower 1 card: 4C follower 2 card: 4S
-winner: 1
-2D 
-3H 
-2S 
-3D 
-2H 
-leader 1 card: 3H
- follower 2 card: 2S follower 3 card: 3D follower 4 card: 2H follower 0 card: 2D
-winner: 1
-
-
-
-
-
-  0  0 74  0 30
+  0 23  4  3 68
+ 18  1 21  0 56
+  0  0  2 52 47
+101  0  0  0  0
+ 38 17  0  0 52
+ 55  0  0  0 40
+  0  0 84  0 15
+108  0  0  0  0
+  0  0  0  0 88
+  0  0  0  0111
+ 41 10  0  0 54
+  0  0 91 11  0
+ 13  0 11 38  0
+  1  0 20 56 43
+ 52  0  0 12 35
+  0  0  9  0 89
+  0  0 57 11 13
+  0 15  0  0 90
+  0  0113  0  4
+ 21 14  0 12 51
+ 38 52 19  0  0
+  0  0 16 46 27
+  0 52  0 49  0
+ 35  0  0 56  0
+  0  0 60  0 32
+  0  0108 10  0
+  0  0  0 93  0
+ 58 29  0  0  0
+ 31  0  0 43  0
+  0103  0  0 59
+  0  0 70 41  0
+  0  0  0107  0
+  9  0  0 92  0
+  0 49 35  0  0
+  0  0 94  0  0
+  0 28  0 79  5
+  8  0 57  0  0
+ 67  0  0 64  0
+  0 27  0  0 43
+ 82  7  0  0 12
+  0  0 14 51 35
+ 23  0  0 53  0
+ 40 56  0  0  0
+ 94  7  0  0 30
+  0 37  0  0 53
+ 24 85  0  0  0
+ 46  0 61  0 10
+  7  0  0  0108
+  0  0  0 24 72
+ 19  0 50  0  0
+  0  7  0  0114
+ 18  0 88  0  6
+ 47  0  0 30  0
+  9 21  0  0 78
+  0  0 40 54  0
+  8  0  0 57 36
+  0  7  4 63 25
+  0 60 32  0  0
+ 12  0  0 48  0
+  0  0 79 57  5
+  0 52 58  0  0
+  0105  0  0  0
+  0  0 44  0 49
+  0 92  7  8  0
+  0 44 13 11  0
+  0  0 30 55 34
+ 15 70  0  6  0
+ 22 50  0  9  0
+ 47  0 58  0  0
+  0 58 38  0 12
+ 19 58 29  0  0
+ 28  0  9  8 26
+  0  0  0 99 26
+  0  0  0  0111
+ 80  0 13  0  0
+  0  0  0  8 87
+ 46  0 58  0  0
+  0  0  0  0112
+  0  0  0  0108
+ 41  0 52  0  0
+  0 85  0  0  0
+ 91 22  0  0  0
+  0 15 90  0  0
+ 27  0  0 76  0
+ 26 43  0  0  0
+  8118  0  0  0
+  0  0 59  0  0
+  7 88 12  0  0
+  0 58 41 15  0
+ 15 76  0  0  0
+ 83  0  0  0  0
+  0 53  0  0 77
+  0  0  0104  3
+  0  0 21 80  5
+ 48  0 10 21  0
+  0  0  0 58 54
+  0  0 55 44  0
+  0 27  0  0 68
+ 90  0  0  0  0
+  0  7 55 33  0
