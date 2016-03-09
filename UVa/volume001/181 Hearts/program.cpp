@@ -69,7 +69,8 @@ void getWinnerCard(int index, string followerCard)
 
 string getFollowerCard(int index, string leaderCard)
 {   
-    //cout << "leader card: " << leaderCard << " ";
+    cout << "leader card: " << leaderCard << " ";
+    
     string followerCard;
     sort(players[index].begin(), players[index].end(), followerCmp);
     
@@ -88,13 +89,16 @@ string getFollowerCard(int index, string leaderCard)
     if (found == false)
     {
         for (int i = 0; i < players[index].size(); i++)
+        {
+            //cout << players[index][i] << " " << suit[trump] << endl;
             if (players[index][i][1] == suit[trump])
             {
                 followerCard = players[index][i];
                 players[index].erase(players[index].begin() + i);
                 found = true;
                 break;
-            }        
+            }
+        }      
     }
     
     // find highest card
@@ -106,7 +110,7 @@ string getFollowerCard(int index, string leaderCard)
     
     getWinnerCard(index, followerCard);
     
-    //cout << "follower " << index << " card: " << followerCard << endl;
+    cout << "follower " << index << " card: " << followerCard << endl;
     
     return followerCard;
 }
@@ -151,13 +155,12 @@ void showCard()
     }
 }
 
-
 void play()
 {
     followerCards.clear();
     followerCards.push_back(getLeaderCard(leader));
     
-    //cout << "  leader " << leader << " card: " << followerCards[0] << endl;
+    cout << "  leader " << leader << " card: " << followerCards[0] << endl;
     
     winner = leader;
     winnerCard = followerCards[0];
@@ -168,17 +171,17 @@ void play()
         followerCards.push_back(getFollowerCard(leader, followerCards[0]));
     }
     
-    //cout << endl;
-    //cout << "winner: " << winner << " scores: " << scores[winner] << endl;
+    cout << endl;
+    cout << "winner: " << winner << " scores: " << scores[winner] << endl;
     
     for (int i = 0; i < followerCards.size(); i++)
         if (followerCards[i][1] == 'H')
         {
             scores[winner] += (face.find(followerCards[i][0]) + 2);
-            //cout << "found " << followerCards[i] << " " << scores[winner] << endl;
+            cout << "found " << followerCards[i] << " " << scores[winner] << endl;
         }
     
-    //showCard();
+    showCard();
             
     leader = winner;
 }
@@ -208,8 +211,11 @@ int main(int argc, char *argv[])
                 if (isblank(deck[i]))
                     deck.erase(deck.begin() + i);
             
-            //cout << deck << endl;
+            cout << deck << endl;
             
+            //for (int i = 0; i < players.size(); i++)
+                //players[i].clear();
+                
             int marker = 0;
             for (int i = 0; i < deck.length() - 4; i += 2)
             {
@@ -220,7 +226,7 @@ int main(int argc, char *argv[])
             string last1 = deck.substr(102, 2);
             string last2 = deck.substr(100, 2);
             
-            //cout << last1 << " " << last2 << endl;
+            cout << last1 << " " << last2 << endl;
             
             int face1 = face.find(last1[0]);
             int face2 = face.find(last2[0]);
@@ -235,20 +241,17 @@ int main(int argc, char *argv[])
             
             trump = suit.find(cTrump);
             
-            //cout << suit[trump] << endl;
+            cout << suit[trump] << endl;
             
             for (int i = 0; i < players.size(); i++)
                 sort(players[i].begin(), players[i].end(), leaderCmp);
                 
-            //showCard();
+            showCard();
                   
             fill(scores.begin(), scores.end(), 0);
             
             for (int i = 1; i <= 10; i++)
-            {
-                trumped = false;
                 play();
-            }
             
             cout << setw(3) << right << scores[4];
             for (int i = 0; i <= 3; i++)
@@ -257,7 +260,7 @@ int main(int argc, char *argv[])
             
             deck.clear();
             lineNumber = 0;
-            leader = 1;
+            leader = 0;
         }
     }
     
