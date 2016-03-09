@@ -14,6 +14,7 @@
 using namespace std;
 
 vector < vector < string > > players;
+vector < string > followerCards;
 vector < int > scores;
 string face = "23456789TJQKA", suit = "CDHS";
 int leader = 0, winner, trump;
@@ -40,7 +41,7 @@ void getWinnerCard(int index, string followerCard)
     int suit1 = suit.find(winnerCard[1]);
     int suit2 = suit.find(followerCard[1]);
     
-    if (suit1 != suit2)
+    if (suit2 != suit1)
     {
         if (suit2 == trump)
         {
@@ -67,7 +68,8 @@ void getWinnerCard(int index, string followerCard)
 }
 
 string getFollowerCard(int index, string leaderCard)
-{
+{   
+    //cout << "leader card: " << leaderCard << " ";
     string followerCard;
     sort(players[index].begin(), players[index].end(), followerCmp);
     
@@ -104,7 +106,7 @@ string getFollowerCard(int index, string leaderCard)
     
     getWinnerCard(index, followerCard);
     
-    //cout << " follower " << index << " card: " << followerCard;
+    //cout << "follower " << index << " card: " << followerCard << endl;
     
     return followerCard;
 }
@@ -149,12 +151,13 @@ void showCard()
     }
 }
 
+
 void play()
 {
-    vector < string > followerCards;
+    followerCards.clear();
     followerCards.push_back(getLeaderCard(leader));
     
-    //cout << "leader " << leader << " card: " << followerCards[0] << endl;
+    //cout << "  leader " << leader << " card: " << followerCards[0] << endl;
     
     winner = leader;
     winnerCard = followerCards[0];
@@ -162,7 +165,7 @@ void play()
     for (int i = 1; i <= 4; i++)
     {
         leader = (leader + 1) % 5;
-        followerCards.push_back(getFollowerCard(leader, followerCards.back()));
+        followerCards.push_back(getFollowerCard(leader, followerCards[0]));
     }
     
     //cout << endl;
@@ -188,8 +191,6 @@ int main(int argc, char *argv[])
     for (int i = 1; i <= 5; i++)
     {
         vector < string > cards;
-        for (int i = 1; i <= 10; i++)
-            cards.push_back("1H");
         players.push_back(cards);
         scores.push_back(0);
     }
@@ -198,6 +199,7 @@ int main(int argc, char *argv[])
     {
         lineNumber++;
         deck += line;
+        
         //cout << line << endl;
         
         if (lineNumber == 4)
