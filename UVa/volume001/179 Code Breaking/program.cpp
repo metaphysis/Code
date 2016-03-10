@@ -36,7 +36,7 @@ void decrypt(string encrypted)
         while (subEncrypted.length() < keyLength)
             subEncrypted += '?';
         for (int i = 0; i < keyLength; i++)
-                cout << subEncrypted[key[i] - 1];
+            cout << subEncrypted[key[i] - 1];
         index += keyLength;
     }
 }
