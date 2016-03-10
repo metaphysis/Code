@@ -7,4 +7,7 @@ No cycle
 abc
 bca
 abcd
+abcdc
+baccd
+abcdefgh
 #

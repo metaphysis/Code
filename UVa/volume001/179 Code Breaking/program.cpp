@@ -17,18 +17,9 @@ vector < int > k, key;
 
 string encrypt(string plain)
 {
-    while (plain.length() < key.size())
-        plain += '\0';
-        
     string encrypted(plain);
-    
     for (int i = 0; i < key.size(); i++)
         encrypted[key[i] - 1] = plain[i];
-        
-    for (int i = encrypted.length() - 1; i >= 0; i--)
-        if (encrypted[i] == '\0')
-            encrypted.erase(encrypted.begin() + i);
-            
     return encrypted;
 }
 
@@ -61,6 +52,10 @@ bool verifyKey()
         int subLength = min(keyLength, textLength - index);
         string subPlain = plaintext.substr(index, subLength);
         string subEncrypted = cyphertext1.substr(index, subLength);
+        while (subPlain.length() < keyLength)
+            subPlain += '?';
+        while (subEncrypted.length() < keyLength)
+            subEncrypted += '?';    
         if (encrypt(subPlain) != subEncrypted)
             return false;
         index += keyLength;
@@ -111,9 +106,6 @@ bool findKeyByMatch(int keyLength)
                     key[i] = j + 1;
                     subEncrypted[j] = '\0';
                 }
-        
-        if (keyLength == plaintext.length())
-            return true;
             
         if(verifyKey())
             return true;
@@ -199,7 +191,7 @@ int main(int argc, char *argv[])
     {
         getline(cin, cyphertext1);
         getline(cin, cyphertext2);
-        
+                                
         if (findK() && findKey())
             decrypt(cyphertext2);
         else
