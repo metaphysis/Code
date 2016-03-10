@@ -21,12 +21,13 @@ string encrypt(string plain)
         plain += '\0';
         
     string encrypted(plain);
-    for (int i = encrypted.length() - 1; i >= 0; i--)
-    {
+    
+    for (int i = 0; i < key.size(); i++)
         encrypted[key[i] - 1] = plain[i];
+        
+    for (int i = encrypted.length() - 1; i >= 0; i--)
         if (encrypted[i] == '\0')
             encrypted.erase(encrypted.begin() + i);
-    }
             
     return encrypted;
 }
@@ -34,20 +35,17 @@ string encrypt(string plain)
 void decrypt(string encrypted)
 {
     int index = 0;
-    int keyLength = key.size(), textLength = encrypted.length();
+    int keyLength = key.size();
+    int textLength = encrypted.length();
     
     while (index < textLength)
     {
         int subLength = min(keyLength, textLength - index);
         string subEncrypted = encrypted.substr(index, subLength);
+        while (subEncrypted.length() < keyLength)
+            subEncrypted += '?';
         for (int i = 0; i < keyLength; i++)
-        {
-            if (key[i] <= subLength)
                 cout << subEncrypted[key[i] - 1];
-            else
-                cout << '?';
-        }
-        
         index += keyLength;
     }
 }
@@ -55,9 +53,10 @@ void decrypt(string encrypted)
 bool verifyKey()
 {
     int index = 0;
-    int keyLength = key.size(), textLength = plaintext.length();
+    int keyLength = key.size();
+    int textLength = plaintext.length();
     
-    while (index < plaintext.length())
+    while (index < textLength)
     {
         int subLength = min(keyLength, textLength - index);
         string subPlain = plaintext.substr(index, subLength);
@@ -96,7 +95,7 @@ bool findKeyByMatch(int keyLength)
     
     int index = 0, textLength = plaintext.length();
     
-    while (index < plaintext.length())
+    while (index < textLength)
     {
         int subLength = min(keyLength, textLength - index);
         if (subLength < keyLength)
@@ -169,10 +168,9 @@ bool findK()
             string subText1 = plaintext.substr(index, subLength);
             string subText2 = cyphertext1.substr(index, subLength);
             
+            // compare plain text to cypher text
             sort(subText1.begin(), subText1.end());
             sort(subText2.begin(), subText2.end());
-            
-            //cout << subText1 << " " << subText2 << endl;
             
             if (subText1 != subText2)
             {
@@ -203,10 +201,7 @@ int main(int argc, char *argv[])
         getline(cin, cyphertext2);
         
         if (findK() && findKey())
-        {
-            //cout << "key found! key size = " << key.size() << endl;
             decrypt(cyphertext2);
-        }
         else
             cout << cyphertext2;
         cout << "\n";
