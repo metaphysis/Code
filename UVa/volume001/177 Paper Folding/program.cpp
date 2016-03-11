@@ -1,89 +1,105 @@
 // Paper Folding
 // UVa IDs: 177
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2016-03-11
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
 #include <iostream>
 #include <cstring>
+#include <map>
 
 using namespace std;
 
-const int SIDE = 1024;
+map <char, char> mapped;
+char matrix[1024][1024];
 
-char oldMatrix[SIDE][SIDE] = { 0 }, newMatrix[SIDE][SIDE] = { 0 };
-
-int rotateX, rotateY;
-int startX, startY;
-
-
-void rotate()
-{
-    memset(newMatrix, 0, sizeof(newMatrix));
-    for (int i = 0; i < SIDE; i++)
-        for (int j = 0; j < SIDE; j++)
-        {
-            newMatrix[i][j] = oldMatrix[j][SIDE - 1 - i];
-            if (newMatrix[i][j] == 0)
-                continue;
-
-            if (newMatrix[i][j] == '_')
-                newMatrix[i][j] = '|';
-            else
-                newMatrix[i][j] = '_';
-        }
-}
-
-void merge()
-{
-    for (int i = 0; i < SIDE; i++)
-        for (int j = 0; j < SIDE; j++)
-            oldMatrix[i][j] += newMatrix[i][j];
-}
-
-void unfolding(int n)
+string unfolding(int n)
 {
     if (n > 1)
     {
-        unfolding(n - 1);
-        rotate();
-        merge();
+        string pattern = unfolding(n - 1);
+        int length = pattern.length();
+        for (int i = length - 1; i >= 0; i--)
+            pattern += mapped[pattern[i]];
+        return pattern;
     }
     else
-    {
-        startX = 0;
-        startY = 0;
-        rotateX = 1;
-        rotateY = 0;
-        oldMatrix[0][0] = '_';
-    }
+        return "RU";
 }
 
-void display()
+void display(int n)
 {
-    for (int i = 0; i < SIDE; i++)
+    string pattern = unfolding(n);
+    memset(matrix, 0, sizeof(matrix));
+    
+    int x = 512, y = 512;
+    for (int i = 0; i < pattern.length(); i++)
     {
-        for (int j = 0; j < SIDE; j++)
-            if (oldMatrix[i][j] > 0)
-                cout << oldMatrix[i][j];
+        if (pattern[i] == 'L')
+        {
+            matrix[x][y] = '_';
+        }
+        else if (pattern[i] == 'R')
+        {
+            matrix[x][y] = '_';
+        }
+        else if (pattern[i] == 'U')
+        {
+            matrix[x][y] = '|';
+        }
+        else
+        {
+            matrix[x][y] = '|';
+        }
+    }
+
+    // left margin
+    int left = 1023;
+    for (int i = 0; i < 1024; i++)
+        for (int j = 0; j < 1024; j++)
+        {
+            if (matrix[i][j] != 0)
+            {
+                if (j < left)
+                    left = j;
+                break;
+            }
+        }
+    
+    for (int i = 0; i < 1024; i++)
+    {
+        int end = -1;
+        for (int j = 1023; j >= 0; j--)
+            if (matrix[i][j] != 0)
+            {
+                end = j;
+                break;
+            }
+        if (end == -1)
+            continue;
+            
+        for (int j = left; j <= end; j++)
+            if (matrxi
     }
     
-    cout << "\n^\n";
+    cout << "^\n";
 }
 
 int main(int argc, char *argv[])
 {
+    cin.tie(0);
+    cout.sync_with_stdio(false);
+    
+    mapped.insert(make_pair('R', 'U'));
+    mapped.insert(make_pair('U', 'L'));
+    mapped.insert(make_pair('L', 'D'));
+    mapped.insert(make_pair('D', 'R'));
+    
     int n;
     while (cin >> n, n)
-    {
-        memset(oldMatrix, 0, sizeof(oldMatrix));
-
-        unfolding(n);
-        
-        display();
-    }
+        display(n);
     
 	return 0;
 }
