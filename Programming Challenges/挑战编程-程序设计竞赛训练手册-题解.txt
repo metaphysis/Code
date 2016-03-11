@@ -1,0 +1,144 @@
+PC = Programming Challenges （http://www.programming-challenges.com/）
+UVa = University of Valladolid Online Judge（http://uva.onlinejudge.org/）
+
+《挑战编程:程序设计竞赛训练手册》PDF下载地址（英文版）：http://www.acmsolver.org/books/Programming_Challenges_Miguel_Skiena.pdf。
+
+第一章：入门
+PC/UVa 题号: 110101/100   The 3n+1 problem （3n+1 问题） | 题解 http://blog.csdn.net/metaphysis/article/details/6431937
+PC/UVa 题号: 110102/10189 Minesweeper （扫雷） | 题解 http://blog.csdn.net/metaphysis/article/details/6432031
+PC/UVa 题号: 110103/10137 The Trip （旅行） | 题解 http://blog.csdn.net/metaphysis/article/details/6432062
+PC/UVa 题号: 110104/706   LC-Display （液晶显示屏） | 题解 http://blog.csdn.net/metaphysis/article/details/6432069
+PC/UVa 题号: 110105/10267 Graphical Editor （图形化编辑器） | 题解 http://blog.csdn.net/metaphysis/article/details/6432075
+PC/UVa 题号: 110106/10033 Interpreter （解释器） | 题解 http://blog.csdn.net/metaphysis/article/details/6432087
+PC/UVa 题号: 110107/10196 Check the Check （将军） | 题解 http://blog.csdn.net/metaphysis/article/details/6432094
+PC/UVa 题号: 110108/10142 Australian Voting （澳大利亚投票） | 题解 http://blog.csdn.net/metaphysis/article/details/6432104
+
+第二章：数据结构
+PC/UVa 题号: 110201/10038 Jolly Jumpers （快乐的跳跃者） | 题解 http://blog.csdn.net/metaphysis/article/details/6432118
+PC/UVa 题号: 110202/10315 Poker Hands （扑克牌型） | 题解 http://blog.csdn.net/metaphysis/article/details/6432140
+PC/UVa 题号: 110203/10050 Hartals （罢工） | 题解 http://blog.csdn.net/metaphysis/article/details/6432155
+PC/UVa 题号: 110204/843   Crypt Kicker （解密） | 题解 http://blog.csdn.net/metaphysis/article/details/6432193
+PC/UVa 题号: 110205/10205 Stack ’em Up （完美洗牌术） | 题解 http://blog.csdn.net/metaphysis/article/details/6432225
+PC/UVa 题号: 110206/10044 Erdos Numbers （Erdos 数） | 题解 http://blog.csdn.net/metaphysis/article/details/6432247
+PC/UVa 题号: 110207/10258 Contest Scoreboard （比赛计分板） | 题解 http://blog.csdn.net/metaphysis/article/details/6432278
+PC/UVa 题号: 110208/10149 Yahtzee （Yahtzee 游戏） | 题解 http://blog.csdn.net/metaphysis/article/details/6432286
+
+第三章：字符串
+PC/UVa 题号: 110301/10082 WERTYU （WERTYU 键盘） | 题解 http://blog.csdn.net/metaphysis/article/details/6432295
+PC/UVa 题号: 110302/10010 Where’s Waldorf?（寻找单词） | 题解 http://blog.csdn.net/metaphysis/article/details/6432306
+PC/UVa 题号: 110303/10252 Common Permutation （公共排列） | 题解 http://blog.csdn.net/metaphysis/article/details/6432313
+PC/UVa 题号: 110304/850   Crypt Kicker II （解密 II） | 题解 http://blog.csdn.net/metaphysis/article/details/6432320
+PC/UVa 题号: 110305/10188 Automated Judge Script （自动评测脚本） | 题解 http://blog.csdn.net/metaphysis/article/details/6432328
+PC/UVa 题号: 110306/10132 File Fragmentation （文件碎片） | 题解 http://blog.csdn.net/metaphysis/article/details/6435539
+PC/UVa 题号: 110307/10150 Doublets （Doublets 序列） | 题解 http://blog.csdn.net/metaphysis/article/details/6435544
+PC/UVa 题号: 110308/848   Fmt （Fmt 程序） | 题解 http://blog.csdn.net/metaphysis/article/details/6438682
+
+第四章：排序
+PC/UVa 题号: 110401/10041 Vito’s Family （Vito 家族） | 题解 http://blog.csdn.net/metaphysis/article/details/6438684
+PC/UVa 题号: 110402/120   Stacks of Flapjacks （煎饼堆） | 题解 http://blog.csdn.net/metaphysis/article/details/6438687
+PC/UVa 题号: 110403/10037 Bridge （过桥） | 题解 http://blog.csdn.net/metaphysis/article/details/6438689
+PC/UVa 题号: 110404/10191 Longest Nap （最长打盹时间） | 题解 http://blog.csdn.net/metaphysis/article/details/6438690
+PC/UVa 题号: 110405/10026 Shoemaker’s Problem （鞋匠的烦恼） | 题解 http://blog.csdn.net/metaphysis/article/details/6441299
+PC/UVa 题号: 110406/10138 CDVII （CDVII 高速公路） | 题解 http://blog.csdn.net/metaphysis/article/details/6441300
+PC/UVa 题号: 110407/10152 ShellSort （龟壳排序） | 题解 http://blog.csdn.net/metaphysis/article/details/6450400
+PC/UVa 题号: 110408/10194 Football (aka Soccer) （足球） | 题解 http://blog.csdn.net/metaphysis/article/details/6450403
+
+第五章：算术与代数
+PC/UVa 题号: 110501/10035 Primary Arithmetic （小学生算术） | 题解 http://blog.csdn.net/metaphysis/article/details/6453194
+PC/UVa 题号: 110502/10018 Reverse and Add （反转相加） | 题解 http://blog.csdn.net/metaphysis/article/details/6453198
+PC/UVa 题号: 110503/701   The Archeologist’s Dilemma （考古学家的烦恼） | 题解 http://blog.csdn.net/metaphysis/article/details/6453199
+PC/UVa 题号: 110504/10127 Ones （仅由 1 组成的数） | 题解 http://blog.csdn.net/metaphysis/article/details/6453200
+PC/UVa 题号: 110505/847   A Multiplication Game （乘法游戏） | 题解 http://blog.csdn.net/metaphysis/article/details/6453201
+PC/UVa 题号: 110506/10105 Polynomial Coefficients （多项式系数） | 题解 http://blog.csdn.net/metaphysis/article/details/6453203
+PC/UVa 题号: 110507/10077 The Stern-Brocot Number System （Stern-Brocot 代数系统） | 题解 http://blog.csdn.net/metaphysis/article/details/6453205
+PC/UVa 题号: 110508/10202 Pairsumonious Numbers （两两之和） | 题解 http://blog.csdn.net/metaphysis/article/details/6453207
+
+第六章：组合数学
+PC/UVa 题号: 110601/10183 How Many Fibs? （斐波那契计数） （扫雷） | 题解 http://blog.csdn.net/metaphysis/article/details/6457794
+PC/UVa 题号: 110602/10213 How Many Pieces of Land? （土地分割） | 题解 http://blog.csdn.net/metaphysis/article/details/6457966
+PC/UVa 题号: 110603/10198 Counting （数数） | 题解 http://blog.csdn.net/metaphysis/article/details/6462550
+PC/UVa 题号: 110604/10157 Expressions （括号表达式） | 题解 http://blog.csdn.net/metaphysis/article/details/6525829
+PC/UVa 题号: 110605/10247 Complete Tree Labeling （完全树标号） | 题解 http://blog.csdn.net/metaphysis/article/details/6528414
+PC/UVa 题号: 110606/10254 The Priest Mathematician （牧师数学家） | 题解 http://blog.csdn.net/metaphysis/article/details/6532636
+PC/UVa 题号: 110607/10049 Self-describing Sequence （自描述序列） | 题解  http://blog.csdn.net/metaphysis/article/details/6532638
+PC/UVa 题号: 110608/846   Steps （数轴行走） | 题解 http://blog.csdn.net/metaphysis/article/details/6533864
+
+第七章：数论
+PC/UVa 题号: 110701/10110 Light, More Light （开灯与关灯） | 题解 http://blog.csdn.net/metaphysis/article/details/6535147
+PC/UVa 题号: 110702/10006 Carmichael Numbers （Carmichael 数） | 题解 http://blog.csdn.net/metaphysis/article/details/6535149
+PC/UVa 题号: 110703/10104 Euclid Problem （欧几里德问题） | 题解 http://blog.csdn.net/metaphysis/article/details/6538584
+PC/UVa 题号: 110704/10139 Factovisors （阶乘与整除） | 题解 http://blog.csdn.net/metaphysis/article/details/6538589
+PC/UVa 题号: 110705/10168 Summation of Four Primes （四素数之和） | 题解 http://blog.csdn.net/metaphysis/article/details/6538591
+PC/UVa 题号: 110706/10042 Smith Numbers （Smith 数） | 题解 http://blog.csdn.net/metaphysis/article/details/6538596
+PC/UVa 题号: 110707/10090 Marbles （弹珠） | 题解 http://blog.csdn.net/metaphysis/article/details/6544852
+PC/UVa 题号: 110708/10089 Repackaging （重新打包） | 题解 http://blog.csdn.net/metaphysis/article/details/6553009
+
+第八章：回溯法
+PC/UVa 题号: 110801/861   Little Bishops （棋盘上的象） | 题解 http://blog.csdn.net/metaphysis/article/details/6553011
+PC/UVa 题号: 110802/10181 15-Puzzle Problem （15 数码游戏） | 题解 http://blog.csdn.net/metaphysis/article/details/6560047
+PC/UVa 题号: 110803/10128 Queue （队伍） | 题解 http://blog.csdn.net/metaphysis/article/details/6566478
+PC/UVa 题号: 110804/10160 Servicing Stations （服务站） | 题解 http://blog.csdn.net/metaphysis/article/details/6601365
+PC/UVa 题号: 110805/10032 Tug of War （拔河） | 题解 http://blog.csdn.net/metaphysis/article/details/6668485
+PC/UVa 题号: 110806/10001 Garden of Eden （伊甸园） | 题解 http://blog.csdn.net/metaphysis/article/details/6679389
+PC/UVa 题号: 110807/704   Colour Hash （色彩缤纷游戏） | 题解 http://blog.csdn.net/metaphysis/article/details/6726688
+PC/UVa 题号: 110808/10270 Bigger Square Please... （拼接正方形） | 题解 http://blog.csdn.net/metaphysis/article/details/6820367
+
+第九章：图遍历
+PC/UVa 题号: 110901/10004 Bicoloring （双着色） | 题解 http://blog.csdn.net/metaphysis/article/details/6820913
+PC/UVa 题号: 110902/10067 Playing With Wheels （摆弄轮子） | 题解 http://blog.csdn.net/metaphysis/article/details/6821788
+PC/UVa 题号: 110903/10099 The Tourist Guide （导游） | 题解 http://blog.csdn.net/metaphysis/article/details/6824768
+PC/UVa 题号: 110904/705   Slash Maze （斜线迷宫） | 题解 http://blog.csdn.net/metaphysis/article/details/6828457
+PC/UVa 题号: 110905/10029 Edit Step Ladders （递变阶梯） | 题解 http://blog.csdn.net/metaphysis/article/details/6836688
+PC/UVa 题号: 110906/10051 Tower of Cubes （立方体之塔） | 题解 http://blog.csdn.net/metaphysis/article/details/6839962
+PC/UVa 题号: 110907/10187 From Dusk till Dawn （从黄昏到拂晓） | 题解 http://blog.csdn.net/metaphysis/article/details/6841386
+PC/UVa 题号: 110908/10276 Hanoi Tower Troubles Again! （汉诺塔卷土重来！） | 题解 http://blog.csdn.net/metaphysis/article/details/6841390
+
+第十章：图算法
+PC/UVa 题号: 111001/10034 Freckles （斑点） | 题解 http://blog.csdn.net/metaphysis/article/details/6841830
+PC/UVa 题号: 111002/10054 The Necklace （项链） | 题解 http://blog.csdn.net/metaphysis/article/details/6844236
+PC/UVa 题号: 111003/10278 Fire Station （消防站） | 题解 http://blog.csdn.net/metaphysis/article/details/6845366
+PC/UVa 题号: 111004/10039 Railroads （铁路） | 题解 http://blog.csdn.net/metaphysis/article/details/6846199
+PC/UVa 题号: 111005/10158 War （战争） | 题解 http://blog.csdn.net/metaphysis/article/details/6848901
+PC/UVa 题号: 111006/10199 Tourist Guide （导游） | 题解 http://blog.csdn.net/metaphysis/article/details/6850439
+PC/UVa 题号: 111007/10249 The Grand Dinner （丰盛的晚餐） | 题解 http://blog.csdn.net/metaphysis/article/details/6853781
+PC/UVa 题号: 111008/10092 The Problem With the Problem Setter （命题者的难题） | 题解 http://blog.csdn.net/metaphysis/article/details/6856875
+
+第十一章：动态规划
+PC/UVa 题号: 111101/10131 Is Bigger Smarter? （越大越聪明？） | 题解 http://blog.csdn.net/metaphysis/article/details/6860405
+PC/UVa 题号: 111102/10069 Distinct Subsequences （不同的子序列） | 题解 http://blog.csdn.net/metaphysis/article/details/6862964
+PC/UVa 题号: 111103/10154 Weights and Measures （重量和力量） | 题解 http://blog.csdn.net/metaphysis/article/details/6863505
+PC/UVa 题号: 111104/116   Unidirectional TSP （单向旅行商问题） | 题解 http://blog.csdn.net/metaphysis/article/details/6868160
+PC/UVa 题号: 111105/10003 Cutting Sticks （切割木棍） | 题解 http://blog.csdn.net/metaphysis/article/details/6872560
+PC/UVa 题号: 111106/10261 Ferry Loading （渡船装载）  | 题解 http://blog.csdn.net/metaphysis/article/details/6877397
+PC/UVa 题号: 111107/10271 Chopsticks （筷子） | 题解 http://blog.csdn.net/metaphysis/article/details/6888972
+PC/UVa 题号: 111108/10201 Adventures in Moving: Part IV （搬家大冒险：第四部） | 题解 http://blog.csdn.net/metaphysis/article/details/6888976
+
+第十二章：网格
+PC/UVa 题号: 111201/10161 Ant on a Chessboard （棋盘上的蚂蚁） | 题解 http://blog.csdn.net/metaphysis/article/details/6923383
+PC/UVa 题号: 111202/10047 The Monocycle（独轮车） | 题解 http://blog.csdn.net/metaphysis/article/details/6926227
+PC/UVa 题号: 111203/10159 Star （六角星） | 题解 http://blog.csdn.net/metaphysis/article/details/6926997
+PC/UVa 题号: 111204/10182 Bee Maja （蜜蜂 Maja） | 题解 http://blog.csdn.net/metaphysis/article/details/6930611
+PC/UVa 题号: 111205/707   Robbery （抢劫） | 题解 http://blog.csdn.net/metaphysis/article/details/6937623
+PC/UVa 题号: 111206/10177 (2/3/4)-D Sqr/Rects/Cubes/Boxes? （2/3/4-维立方体？） | 题解 http://blog.csdn.net/metaphysis/article/details/6939857
+PC/UVa 题号: 111207/10233 Dermuba Triangle （Dermuba 三角） | 题解 http://blog.csdn.net/metaphysis/article/details/6941969
+PC/UVa 题号: 111208/10075 Airlines （航线） | 题解 http://blog.csdn.net/metaphysis/article/details/6945728
+
+第十三章：几何
+PC/UVa 题号: 111301/10310 Dog and Gopher （狗拿地鼠） | 题解 http://blog.csdn.net/metaphysis/article/details/6950522
+PC/UVa 题号: 111302/10180 Rope Crisis in Ropeland! （绳子王国的危机！） | 题解 http://blog.csdn.net/metaphysis/article/details/6953949
+PC/UVa 题号: 111303/10195 The Knights of the Round Table （圆桌骑士） | 题解 http://blog.csdn.net/metaphysis/article/details/6954503
+PC/UVa 题号: 111304/10136 Chocolate Chip Cookies （巧克力片饼干） | 题解 http://blog.csdn.net/metaphysis/article/details/6959557
+PC/UVa 题号: 111305/10167 Birthday Cake （生日蛋糕） | 题解 http://blog.csdn.net/metaphysis/article/details/6962353
+PC/UVa 题号: 111306/10215 The Largest/Smallest Box... （最大/最小的盒子） | 题解 http://blog.csdn.net/metaphysis/article/details/6965122
+PC/UVa 题号: 111307/10209 Is This Integration? （需要积分吗？） | 题解 http://blog.csdn.net/metaphysis/article/details/6967275
+PC/UVa 题号: 111308/10012 How Big Is It? （它有多大？） | 题解 http://blog.csdn.net/metaphysis/article/details/6971378
+
+第十四章：计算几何
+PC/UVa 题号: 111401/10135 Herding Frosh （新生集会） | 题解 http://blog.csdn.net/metaphysis/article/details/6975410
+PC/UVa 题号: 111402/10245 The Closest Pair Problem （最近点对问题） | 题解 http://blog.csdn.net/metaphysis/article/details/6978970
+PC/UVa 题号: 111403/10043 Chainsaw Massacre （电锯惊魂） | 题解 http://blog.csdn.net/metaphysis/article/details/6978980
+PC/UVa 题号: 111404/10084 Hotter Colder （冷热游戏） | 题解 http://blog.csdn.net/metaphysis/article/details/6978990
+PC/UVa 题号: 111405/10065 Useless Tile Packers （没用的瓷砖打包公司） | 题解 http://blog.csdn.net/metaphysis/article/details/6978995
+PC/UVa 题号: 111406/849   Radar Tracking （雷达追踪） | 题解 http://blog.csdn.net/metaphysis/article/details/6979016
+PC/UVa 题号: 111402/10088 Trees on My Island （岛上的树） | 题解 http://blog.csdn.net/metaphysis/article/details/6979019
+PC/UVa 题号: 111408/10117 Nice Milk （美味的牛奶） | 题解 http://blog.csdn.net/metaphysis/article/details/6979026

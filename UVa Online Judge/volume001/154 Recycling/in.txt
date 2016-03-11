@@ -1,0 +1,11 @@
+r/P,o/G,y/S,g/A,b/N
+r/G,o/P,y/S,g/A,b/N
+r/P,y/S,o/G,g/N,b/A
+r/P,o/S,y/A,g/G,b/N
+e
+r/G,o/P,y/S,g/A,b/N
+r/P,y/S,o/G,g/N,b/A
+r/P,o/S,y/A,g/G,b/N
+r/P,o/G,y/S,g/A,b/N
+ecclesiastical
+#

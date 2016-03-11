@@ -1,0 +1,11 @@
+00:00:40
+00:05:00
+Signals fail to synchronise in 5 hours
+00:00:20
+00:25:40
+Signals fail to synchronise in 5 hours
+00:00:20
+00:03:00
+00:00:40
+00:01:52
+00:19:20

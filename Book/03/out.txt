@@ -1,0 +1,309 @@
+100 3
+remian: 0
+index: 3 set to false.
+n: 100
+remian: 0
+index: 6 set to false.
+n: 100
+remian: 0
+index: 9 set to false.
+n: 100
+remian: 0
+index: 12 set to false.
+n: 100
+remian: 0
+index: 15 set to false.
+n: 100
+remian: 0
+index: 18 set to false.
+n: 100
+remian: 0
+index: 21 set to false.
+n: 100
+remian: 0
+index: 24 set to false.
+n: 100
+remian: 0
+index: 27 set to false.
+n: 100
+remian: 0
+index: 30 set to false.
+n: 100
+remian: 0
+index: 33 set to false.
+n: 100
+remian: 0
+index: 36 set to false.
+n: 100
+remian: 0
+index: 39 set to false.
+n: 100
+remian: 0
+index: 42 set to false.
+n: 100
+remian: 0
+index: 45 set to false.
+n: 100
+remian: 0
+index: 48 set to false.
+n: 100
+remian: 0
+index: 51 set to false.
+n: 100
+remian: 0
+index: 54 set to false.
+n: 100
+remian: 0
+index: 57 set to false.
+n: 100
+remian: 0
+index: 60 set to false.
+n: 100
+remian: 0
+index: 63 set to false.
+n: 100
+remian: 0
+index: 66 set to false.
+n: 100
+remian: 0
+index: 69 set to false.
+n: 100
+remian: 0
+index: 72 set to false.
+n: 100
+remian: 0
+index: 75 set to false.
+n: 100
+remian: 0
+index: 78 set to false.
+n: 100
+remian: 0
+index: 81 set to false.
+n: 100
+remian: 0
+index: 84 set to false.
+n: 100
+remian: 0
+index: 87 set to false.
+n: 100
+remian: 0
+index: 90 set to false.
+n: 100
+remian: 0
+index: 93 set to false.
+n: 100
+remian: 0
+index: 96 set to false.
+n: 100
+remian: 0
+index: 99 set to false.
+n: 100
+remian: 2
+current kk: 0
+index: 2 set to false.
+n: 100
+remian: 0
+index: 7 set to false.
+n: 100
+remian: 0
+index: 11 set to false.
+n: 100
+remian: 0
+index: 16 set to false.
+n: 100
+remian: 0
+index: 20 set to false.
+n: 100
+remian: 0
+index: 25 set to false.
+n: 100
+remian: 0
+index: 29 set to false.
+n: 100
+remian: 0
+index: 34 set to false.
+n: 100
+remian: 0
+index: 38 set to false.
+n: 100
+remian: 0
+index: 43 set to false.
+n: 100
+remian: 0
+index: 47 set to false.
+n: 100
+remian: 0
+index: 52 set to false.
+n: 100
+remian: 0
+index: 56 set to false.
+n: 100
+remian: 0
+index: 61 set to false.
+n: 100
+remian: 0
+index: 65 set to false.
+n: 100
+remian: 0
+index: 70 set to false.
+n: 100
+remian: 0
+index: 74 set to false.
+n: 100
+remian: 0
+index: 79 set to false.
+n: 100
+remian: 0
+index: 83 set to false.
+n: 100
+remian: 0
+index: 88 set to false.
+n: 100
+remian: 0
+index: 92 set to false.
+n: 100
+remian: 0
+index: 97 set to false.
+n: 100
+remian: 1
+current kk: 0
+index: 1 set to false.
+n: 100
+remian: 0
+index: 8 set to false.
+n: 100
+remian: 0
+index: 14 set to false.
+n: 100
+remian: 0
+index: 22 set to false.
+n: 100
+remian: 0
+index: 28 set to false.
+n: 100
+remian: 0
+index: 35 set to false.
+n: 100
+remian: 0
+index: 41 set to false.
+n: 100
+remian: 0
+index: 49 set to false.
+n: 100
+remian: 0
+index: 55 set to false.
+n: 100
+remian: 0
+index: 62 set to false.
+n: 100
+remian: 0
+index: 68 set to false.
+n: 100
+remian: 0
+index: 76 set to false.
+n: 100
+remian: 0
+index: 82 set to false.
+n: 100
+remian: 0
+index: 89 set to false.
+n: 100
+remian: 0
+index: 95 set to false.
+n: 100
+remian: 1
+current kk: 0
+index: 4 set to false.
+n: 100
+remian: 0
+index: 13 set to false.
+n: 100
+remian: 0
+index: 23 set to false.
+n: 100
+remian: 0
+index: 32 set to false.
+n: 100
+remian: 0
+index: 44 set to false.
+n: 100
+remian: 0
+index: 53 set to false.
+n: 100
+remian: 0
+index: 64 set to false.
+n: 100
+remian: 0
+index: 73 set to false.
+n: 100
+remian: 0
+index: 85 set to false.
+n: 100
+remian: 0
+index: 94 set to false.
+n: 100
+remian: 1
+current kk: 0
+index: 5 set to false.
+n: 100
+remian: 0
+index: 19 set to false.
+n: 100
+remian: 0
+index: 37 set to false.
+n: 100
+remian: 0
+index: 50 set to false.
+n: 100
+remian: 0
+index: 67 set to false.
+n: 100
+remian: 0
+index: 80 set to false.
+n: 100
+remian: 0
+index: 98 set to false.
+n: 100
+remian: 2
+current kk: 0
+index: 17 set to false.
+n: 100
+remian: 0
+index: 40 set to false.
+n: 100
+remian: 0
+index: 59 set to false.
+n: 100
+remian: 0
+index: 86 set to false.
+n: 100
+remian: 1
+current kk: 0
+index: 10 set to false.
+n: 100
+remian: 0
+index: 46 set to false.
+n: 100
+remian: 0
+index: 77 set to false.
+n: 100
+remian: 1
+current kk: 0
+index: 26 set to false.
+n: 100
+remian: 0
+index: 71 set to false.
+n: 100
+remian: 1
+current kk: 0
+index: 31 set to false.
+n: 100
+remian: 0
+index: 100 set to false.
+n: 100
+remian: 3
+current kk: 1
+current kk: 0
+index: 58 set to false.
+n: 100
+91
