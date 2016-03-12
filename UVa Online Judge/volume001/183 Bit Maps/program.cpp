@@ -1,8 +1,8 @@
 // Bit Maps
 // UVa IDs: 183
-// Verdict:
-// Submission Date:
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2016-03-12
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
@@ -129,7 +129,7 @@ void bitToCode()
         for (int j = 0; j < column; j++)
             matrix[i][j] = buffer[i * column + j];
 
-    cout << category << right << setw(4)
+    cout << "D" << right << setw(4)
          << row << right << setw(4) << column << "\n";
 
     string code = getCode(0, 0, row - 1, column - 1);
@@ -186,7 +186,7 @@ void codeToBit()
     int index = 0;
     getBit(index, 0, 0, row - 1, column - 1);
 
-    cout << category << right << setw(4)
+    cout << "B" << right << setw(4)
          << row << right << setw(4) << column << "\n";
 
     string bit;
