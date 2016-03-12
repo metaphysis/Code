@@ -9,13 +9,16 @@
 #include <iostream>
 #include <sstream>
 #include <cstring>
+#include <vector>
+#include <iomanip>
 
 using namespace std;
 
-string category, code, buffer;
+string category, buffer;
 int row, column;
 char matrix[210][210];
 
+// trim out the space in input line
 string trim(string line)
 {
     for (int i = line.length() - 1; i >= 0; i--)
@@ -30,15 +33,10 @@ string trim(string line)
     return line;
 }
 
+// transfer bit to code
 string getCode(int top, int left, int bottom, int right)
 {
-    for (int i = top; i <= bottom; i++)
-    {
-        for (int j = left; j <= right; j++)
-            cout << matrix[i][j];
-        cout << endl;
-    }
-    
+    // is all same in area
     if (top == bottom)
     {
         bool allSame = true;
@@ -48,8 +46,8 @@ string getCode(int top, int left, int bottom, int right)
                 allSame = false;
                 break;
             }
-           
-        if (allSame)     
+
+        if (allSame)
             return matrix[top][left] == '1' ? "1" : "0";
     }
     else if (left == right)
@@ -61,82 +59,152 @@ string getCode(int top, int left, int bottom, int right)
                 allSame = false;
                 break;
             }
-        
-        if (allSame)        
-            return matrix[top][left] == '1' ? "1" : "0";        
+
+        if (allSame)
+            return matrix[top][left] == '1' ? "1" : "0";
     }
-    
+
+    // get middle of row and column
     int middleRow = (top + bottom) / 2;
     int middleColumn = (left + right) / 2;
 
-    
-    string topLeftCode = getCode(top, left, middleRow, middleColumn);
-    string topRightCode = getCode(top, middleColumn + 1, middleRow, right);
-    string bottomLeftCode = getCode(middleRow + 1, left, bottom, middleColumn);
-    string bottomRightCode = getCode(middleRow + 1, middleColumn + 1, bottom, right);
-
-    string bitCode;
-
-    if (topLeftCode.front() == '1' && topRightCode.front() == '1' &&
-            bottomLeftCode.front() == '1' && bottomRightCode.front() == '1')
-        bitCode += '1';
-    else if (topLeftCode.front() == '0' && topRightCode.front() == '0' &&
-             bottomLeftCode.front() == '0' && bottomRightCode.front() == '0')
-        bitCode += '0';
-    else
-        bitCode += 'D';
-
-    if (topLeftCode.front() == 'D')
-        bitCode += topLeftCode;
-    else
-        bitCode += topLeftCode.front();
-
-    if (topRightCode.front() == 'D')
-        bitCode += topRightCode;
-    else
-        bitCode += topRightCode.front();
-
-    if (bottomLeftCode.front() == 'D')
-        bitCode += bottomLeftCode;
-    else
-        bitCode += bottomLeftCode.front();
-
-    if (bottomRightCode.front() == 'D')
-        bitCode += bottomRightCode;
-    else
-        bitCode += bottomRightCode.front();
-
-    return bitCode;
-}
-
-void bitToCode()
-{
-    cout << category << " " << row << " " << column << endl;
-    cout << buffer << endl;
-    memset(matrix, 0, sizeof(matrix));
-    for (int i = 0; i < row; i++)
+    vector < string > codes;
+    if (left != right && top != bottom)
     {
-        for (int j = 0; j < column; j++)
-        {
-            matrix[i][j] = buffer[i * column + j];
-            cout << matrix[i][j];
-        }
-        cout << endl;
+        // quarter 1, 2, 3, 4
+        codes.push_back(getCode(top, left, middleRow, middleColumn));
+        codes.push_back(getCode(top, middleColumn + 1, middleRow, right));
+        codes.push_back(getCode(middleRow + 1, left, bottom, middleColumn));
+        codes.push_back(getCode(middleRow + 1, middleColumn + 1, bottom,
+                                right));
+    }
+    else if (left == right)
+    {
+        // quarter 1, 3
+        codes.push_back(getCode(top, left, middleRow, middleColumn));
+        codes.push_back(getCode(middleRow + 1, left, bottom, middleColumn));
+    }
+    else if (top == bottom)
+    {
+        // quarter 1, 2
+        codes.push_back(getCode(top, left, middleRow, middleColumn));
+        codes.push_back(getCode(top, middleColumn + 1, middleRow, right));
     }
 
-    cout << getCode(0, 0, row - 1, column - 1) << endl;
+    // get code from sub area
+    string bitCode;
+    bool allOne = true, allZero = true;
+    for (int i = 0; i < codes.size(); i++)
+    {
+        if (codes[i].front() == '1')
+        {
+            allZero = false;
+            bitCode += '1';
+        }
+        else if (codes[i].front() == '0')
+        {
+            allOne = false;
+            bitCode += '0';
+        }
+        else
+        {
+            allOne = false;
+            allZero = false;
+            bitCode += codes[i];
+        }
+    }
+
+    // return result
+    if (allOne)
+        return "1";
+    if (allZero)
+        return "0";
+    return "D" + bitCode;
 }
 
-void getBit()
+// transfer bit to code
+void bitToCode()
 {
+    for (int i = 0; i < row; i++)
+        for (int j = 0; j < column; j++)
+            matrix[i][j] = buffer[i * column + j];
+
+    cout << category << right << setw(4)
+         << row << right << setw(4) << column << "\n";
+
+    string code = getCode(0, 0, row - 1, column - 1);
+
+    while (code.length() > 50)
+    {
+        cout << code.substr(0, 50) << endl;
+        code = code.substr(50);
+    }
+    if (code.length() > 0)
+        cout << code << endl;
 }
 
+// index of current position in code
+void getBit(int &index, int top, int left, int bottom, int right)
+{
+    if (buffer[index] != 'D')
+    {
+        for (int i = top; i <= bottom; i++)
+            for (int j = left; j <= right; j++)
+                matrix[i][j] = buffer[index];
+    }
+    else
+    {
+        int middleRow = (top + bottom) / 2;
+        int middleColumn = (left + right) / 2;
+
+        if (left != right && top != bottom)
+        {
+            // quarter 1, 2, 3, 4
+            getBit(++index, top, left, middleRow, middleColumn);
+            getBit(++index, top, middleColumn + 1, middleRow, right);
+            getBit(++index, middleRow + 1, left, bottom, middleColumn);
+            getBit(++index, middleRow + 1, middleColumn + 1, bottom, right);
+        }
+        else if (left == right)
+        {
+            // quarter 1, 3
+            getBit(++index, top, left, middleRow, middleColumn);
+            getBit(++index, middleRow + 1, left, bottom, middleColumn);
+        }
+        else if (top == bottom)
+        {
+            // quarter 1, 2
+            getBit(++index, top, left, middleRow, middleColumn);
+            getBit(++index, top, middleColumn + 1, middleRow, right);
+        }
+    }
+}
+
+// transfer code to bit
 void codeToBit()
 {
-    cout << category << " " << row << " " << column << endl;
-    cout << buffer << endl;
+    int index = 0;
+    getBit(index, 0, 0, row - 1, column - 1);
+
+    cout << category << right << setw(4)
+         << row << right << setw(4) << column << "\n";
+
+    string bit;
+    for (int i = 0; i < row; i++)
+        for (int j = 0; j < column; j++)
+            bit += matrix[i][j];
+
+    while (bit.length() > 50)
+    {
+        cout << bit.substr(0, 50) << endl;
+        bit = bit.substr(50);
+    }
+
+    if (bit.length() > 0)
+        cout << bit << endl;
 }
 
+// process by category of input
 void process()
 {
     if (category == "B")
@@ -145,6 +213,7 @@ void process()
         codeToBit();
 }
 
+// read category of input, row, column
 void read(string line)
 {
     istringstream iss(line);
@@ -174,7 +243,7 @@ int main(int argc, char *argv[])
                 read(line);
             }
         }
-        else if(line != "#")
+        else if (line != "#")
         {
             buffer += trim(line);
         }

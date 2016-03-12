@@ -2,3 +2,5 @@
 *.cpp~
 *.txt~
 *.pdf
+*.cpp~
+*.orig
