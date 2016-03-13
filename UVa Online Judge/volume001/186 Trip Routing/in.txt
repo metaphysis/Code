@@ -1,0 +1,19 @@
+San Luis Obispo,Bakersfield,CA-58,117
+Bakersfield,Mojave,CA-58,65
+Mojave,Barstow,CA-58,70
+Barstow,Baker,I-15,62
+Baker,Las Vegas,I-15,92
+San Luis Obispo,Santa Barbara,US-101,106
+San Luis Obispo,Santa Barbara,CA-1,113
+Santa Barbara,Los Angeles,US-101,95
+Bakersfield,Wheeler Ridge,CA-99,24
+Wheeler Ridge,Los Angeles,I-5,88
+Mojave,Los Angeles,CA-14,94
+Los Angeles,San Bernardino,I-10,65
+San Bernardino,Barstow,I-15,73
+Los Angeles,San Diego,I-5,121
+San Bernardino,San Diego,I-15,103
+
+Santa Barbara,Las Vegas
+San Diego,Los Angeles
+San Luis Obispo,Los Angeles

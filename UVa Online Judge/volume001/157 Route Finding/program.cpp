@@ -5,8 +5,6 @@
 // UVa Run times: 0.000s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
-//
-// 此题难点在于如何构建交通路线的图表示。
 
 #include <iostream>
 #include <sstream>
@@ -93,7 +91,7 @@ string trim(string line)
     return line;
 }
 
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
     string line;
     int routes;
