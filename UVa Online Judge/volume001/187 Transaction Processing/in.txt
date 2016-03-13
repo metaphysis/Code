@@ -1,0 +1,25 @@
+111Cash
+121Accounts Receivable
+211Accounts Payable
+655Things may not be in order
+241Sales Tax Payable 
+401Sales
+555Office Supplies
+045Do not stop
+000No such account
+001045    567
+001401    -568
+100111    21795
+100121   -11795
+101121      105
+101241       -7 
+101401      100
+102211   -70000
+102555    40000
+103111   -40000
+103555    40000
+104655    -500231
+104211  89
+104241   9023
+104045            2746
+000000        0
