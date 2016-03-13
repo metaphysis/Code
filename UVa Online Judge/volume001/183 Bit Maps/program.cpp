@@ -33,7 +33,7 @@ string trim(string line)
     return line;
 }
 
-// transfer bit to code
+// transform bit to code
 string getCode(int top, int left, int bottom, int right)
 {
     // is all same in area
@@ -122,7 +122,7 @@ string getCode(int top, int left, int bottom, int right)
     return "D" + bitCode;
 }
 
-// transfer bit to code
+// transform bit to code
 void bitToCode()
 {
     for (int i = 0; i < row; i++)
@@ -180,7 +180,7 @@ void getBit(int &index, int top, int left, int bottom, int right)
     }
 }
 
-// transfer code to bit
+// transform code to bit
 void codeToBit()
 {
     int index = 0;
