@@ -62,8 +62,6 @@ bool segmentsIntersect(segment ray, segment side)
     return false;
 }
 
-
-
 bool isPointInPolygon(point p, polygon hull)
 {
     // 找到多边形顶点中位于最右边的点的横坐标。
