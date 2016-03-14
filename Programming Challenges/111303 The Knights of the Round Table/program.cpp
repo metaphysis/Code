@@ -5,10 +5,6 @@
 // UVa Run Time: 0.016s
 //
 // 版权所有（C）2011，邱秋。metaphysis # yeah dot net
-//
-// [解题方法]
-// 问题的实质是求三角形内接圆的半径，由余弦定理加上简单的运算即可求得，注意处理某边边长为 0 的特
-// 殊情况。
 
 #include <iostream>
 #include <iomanip>
