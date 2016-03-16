@@ -1,97 +1,81 @@
 // Graph Coloring
 // UVa IDs: 193
-// Verdict:
-// Submission Date:
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2016-03-16
+// UVa Run Time: 0.003s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
+//
+// The test data on UVa is so weak that backtracking can be accepted.
 
 #include <iostream>
-#include <iomanip>
-#include <sstream>
 #include <vector>
 #include <algorithm>
-#include <queue>
 
 using namespace std;
 
 vector < vector < int > > edges;
-vector < bool > visited;
-vector < int > colors;
-vector < int > black;
-bool colorable = true;
-int maximum;
+vector < bool > black;
+vector < int > answer;
+int maximum, n;
 
-bool bfs(int start)
+void backtrack(int node)
 {
-    queue <int> q;
-
-    colors[start] = 1;
-    q.push(start);
-    visited[start] = true;
-
-    while (!q.empty())
+    if (node == n + 1)
     {
-        int v = q.front();
-        
-        q.pop();
-
-        for (int i = 0; i < edges[v].size(); i++)
+        int total = 0;
+        for (int i = 1; i <= n; i++)
+            if (black[i])
+                total++;
+                
+        if (total > maximum)
         {
-            if (visited[edges[v][i]] == false)
-            {
-                q.push(edges[v][i]);
-                visited[edges[v][i]] = true;
-            }
-
-            if (colors[edges[v][i]] == -1)
-                colors[edges[v][i]] = (colors[v] == 1 ? 0 : 1);
-            else if (colors[edges[v][i]] == colors[v] && colors[v] == 1)
-                return false;
+            maximum = total;
+            answer.clear();
+            for (int i = 1; i <= n; i++)
+                if (black[i])
+                    answer.push_back(i);
         }
+        
+        return;
     }
+    
+    bool blacked = false;
+    for (int i = 0; i < edges[node].size(); i++)
+        if (black[edges[node][i]])
+        {
+            blacked = true;
+            break;
+        }
 
-    return true;
+    if (blacked == false)
+    {
+    
+        black[node] = true;
+        backtrack(node + 1);
+        black[node] = false;
+    }
+    
+    backtrack(node + 1);
 }
 
-void findMaximum(int n)
+void findMaximum()
 {
     maximum = 0;
-    visited.resize(n + 1);
-    colors.resize(n + 1);
-
-    for (int i = 1; i <= n; i++)
-    {
-        fill(visited.begin(), visited.end(), false);
-        fill(colors.begin(), colors.end(), -1);
-
-        if(bfs(i) == false)
-            continue;
-        
-        int blackCounter = 0;
-        for (int j = 1; j <= n; j++)
-            if (colors[j] == 1 || colors[j] == -1)
-                blackCounter++;
-
-        if (blackCounter > maximum)
-        {
-            maximum = blackCounter;
-            black.clear();
-            for (int j = 1; j <= n; j++)
-                if (colors[j] == 1 || colors[j] == -1)
-                    black.push_back(j);
-        }
-    }
+    black.resize(n + 1);
+    fill(black.begin(), black.end(), false);
+    
+    backtrack(1);
 
     cout << maximum << "\n";
-    for (int i = 0; i < black.size(); i++)
-        cout << (i > 0 ? " " : "" ) << black[i];
+    for (int i = 0; i < answer.size(); i++)
+        cout << (i > 0 ? " " : "" ) << answer[i];
     cout << "\n";
 }
 
 int main(int argc, char *argv[])
 {
-    int m, n, k, start, end;
+    int m, k, start, end;
 
     cin >> m;
     while (m--)
@@ -108,7 +92,7 @@ int main(int argc, char *argv[])
             edges[end].push_back(start);
         }
 
-        findMaximum(n);
+        findMaximum();
     }
 
     return 0;

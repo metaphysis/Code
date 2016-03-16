@@ -1,7 +1,7 @@
 // Spreadsheet
 // UVa IDs: 196
 // Verdict: Accepted
-// Submission Date: 
+// Submission Date: 2016-03-15
 // UVa Run Time: 0.093s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net

@@ -7,10 +7,10 @@
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
 #include <iostream>
-#include <iomanip>
-#include <vector>
-#include <algorithm>
 #include <cmath>
+#include <vector>
+#include <iomanip>
+#include <algorithm>
 
 using namespace std;
 
@@ -31,7 +31,7 @@ void calculate()
         return;
     }
 
-    vector < int > digits;
+    vector < int >digits;
     long long temp = number - 1;
     while (temp)
     {
