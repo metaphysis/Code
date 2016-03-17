@@ -1,6 +1,6 @@
 // No Rectangles
 // UVa IDs: 135
-// Verdict: Accepted
+// Verdict: 
 // Submission Date: 
 // UVa Run Time: s
 //
