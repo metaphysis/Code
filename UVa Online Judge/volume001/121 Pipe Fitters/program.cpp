@@ -4,9 +4,6 @@
 // UVa Run Time: 0.056s
 //
 // 版权所有（C）2011，邱秋。metaphysis # yeah dot net
-//
-// [解题方法]
-// 可以归类为网格题，简单题。
 
 #include <iostream>
 #include <cmath>
