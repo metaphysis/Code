@@ -1,8 +1,8 @@
 // Synchronous Design
-// UVa IDs: 
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// UVa IDs: 192
+// Verdict: Wrong Answer
+// Submission Date: 2016-03-22
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
@@ -24,7 +24,7 @@ struct vertex
 };
 
 vector < vertex > verties;
-vector < int > parent;
+vector < int > parent, path;
 vector < bool > discovered;
 vector < vector < int > > edges;
 int maximumDelay;
@@ -112,16 +112,85 @@ bool floyd(int clock)
                 distances[i][j] < maximumDelay)
                     maximumDelay = distances[i][j];
     
-    return abs(maximumDelay) > clock;
+    maximumDelay = abs(maximumDelay);
+    
+    return maximumDelay > clock;
 }
 
-int findMaximumDelay()
+void backtrack(int start, int end)
 {
+    for (int i = 0; i < edges[start].size(); i++)
+    {
+        if (edges[start][i] == end)
+        {
+            int tempMax = 0;
+            
+            //for (int k = 0; k < (int)path.size(); k++)
+                //cout << path[k] << " ";
+            //cout << endl;
+                    
+            for (int j = 0; j < (int)path.size(); j++)
+                if (verties[path[j]].type == ASYN)
+                    tempMax += verties[path[j]].delay;
+                else
+                    break;
+                
+            if (tempMax > maximumDelay)
+                maximumDelay = tempMax;
+                
+            //cout << "maximumDelay: " << maximumDelay << endl;
+        }
+        else
+        {
+            vector < int > oldPath(path);
+            sort(oldPath.begin(), oldPath.end());
+            
+            bool repeated = false;
+            for (int j = 0; j < (int)oldPath.size() - 1; j++)
+                if (oldPath[j] == oldPath[j + 1])
+                {
+                    repeated = true;
+                    break;
+                }
+            
+            bool canAdd = false;
+            if (repeated == false)
+                canAdd = true;
+            else
+            {
+                bool findLast = false;
+                for (int j = 0; j < oldPath.size(); j++)
+                    if (oldPath[j] == edges[start][i])
+                    {
+                        findLast = true;
+                        break;
+                    }
+                if (findLast)
+                    canAdd = false;
+            }
+            
+            if (canAdd)
+            {
+                path.push_back(edges[start][i]);
+                int size = (int)path.size();
+                backtrack(edges[start][i], end);
+                path.erase(path.begin() + size - 1, path.end());
+            }
+        }
+    }
+}
+
+void findMaximumDelay()
+{
+    maximumDelay = 0;
     for (int i = 0; i < verties.size(); i++)
         for (int j = 0; j < verties.size(); j++)
-        {
-        
-        }
+            if (verties[i].type == SYN && verties[j].type == SYN)
+            {
+                path.clear();
+                //cout << "from " << i << " to " << j << endl;
+                backtrack(i, j);
+            }
 }
 
 int main(int argc, char *argv[])
@@ -154,14 +223,6 @@ int main(int argc, char *argv[])
             cin >> start >> end;
             edges[start].push_back(end);
         }
-        
-        for (int i = 0; i < edges.size(); i++)
-        {
-            cout << i;
-            for (int j = 0; j < edges[i].size(); j++)
-                cout << " " << edges[i][j];
-            cout << endl;
-        }
           
         if (findCycle(false))
             cout << "Circuit contains cycle." << endl;
@@ -169,7 +230,7 @@ int main(int argc, char *argv[])
         {
             if (findCycle(true))
             {
-                maximumDelay = findMaximumDelay();
+                findMaximumDelay();
                 
                 if (maximumDelay > clock)
                     cout << "Clock period exceeded." << endl;
@@ -181,7 +242,7 @@ int main(int argc, char *argv[])
                 if (floyd(clock))
                     cout << "Clock period exceeded." << endl;
                 else
-                    cout << "Synchronous design. Maximum delay: " << abs(maximumDelay) << "." << endl;
+                    cout << "Synchronous design. Maximum delay: " << maximumDelay << "." << endl;
             }
         }
     }
