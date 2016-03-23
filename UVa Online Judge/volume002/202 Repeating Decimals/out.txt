@@ -1,0 +1,69 @@
+41/468 = 0.08(760683)
+   6 = number of digits in repeating cycle
+
+1169/725 = 1.61(2413793103448275862068965517)
+   28 = number of digits in repeating cycle
+
+2962/465 = 6.3(698924731182795)
+   15 = number of digits in repeating cycle
+
+2705/1146 = 2.3(6038394415357766143106457242582897033158813263525...)
+   95 = number of digits in repeating cycle
+
+2281/1828 = 1.24(781181619256017505470459518599562363238512035010...)
+   152 = number of digits in repeating cycle
+
+961/492 = 1.95(32520)
+   5 = number of digits in repeating cycle
+
+0/5 = 0.(0)
+   1 = number of digits in repeating cycle
+
+76/25 = 3.04(0)
+   1 = number of digits in repeating cycle
+
+5/43 = 0.(116279069767441860465)
+   21 = number of digits in repeating cycle
+
+1/397 = 0.(00251889168765743073047858942065491183879093198992...)
+   99 = number of digits in repeating cycle
+
+0/101 = 0.(0)
+   1 = number of digits in repeating cycle
+
+1/101 = 0.(0099)
+   4 = number of digits in repeating cycle
+
+20/5 = 4.(0)
+   1 = number of digits in repeating cycle
+
+33/70 = 0.4(714285)
+   6 = number of digits in repeating cycle
+
+3/77 = 0.(038961)
+   6 = number of digits in repeating cycle
+
+15/899 = 0.(01668520578420467185761957730812013348164627363737...)
+   420 = number of digits in repeating cycle
+
+3/7 = 0.(428571)
+   6 = number of digits in repeating cycle
+
+0/9 = 0.(0)
+   1 = number of digits in repeating cycle
+
+1/999 = 0.(001)
+   3 = number of digits in repeating cycle
+
+15/89 = 0.(16853932584269662921348314606741573033707865)
+   44 = number of digits in repeating cycle
+
+12/2999 = 0.(00400133377792597532510836945648549516505501833944...)
+   1499 = number of digits in repeating cycle
+
+12/1000 = 0.012(0)
+   1 = number of digits in repeating cycle
+
+2999/3000 = 0.999(6)
+   1 = number of digits in repeating cycle
+
