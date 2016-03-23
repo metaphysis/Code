@@ -123,22 +123,21 @@ void backtrack(int start, int end)
     {
         if (edges[start][i] == end)
         {
-            int tempMax = 0;
-            
-            //for (int k = 0; k < (int)path.size(); k++)
-                //cout << path[k] << " ";
-            //cout << endl;
-                    
+            int tempMax = 0;     
             for (int j = 0; j < (int)path.size(); j++)
                 if (verties[path[j]].type == ASYN)
                     tempMax += verties[path[j]].delay;
                 else
-                    break;
-                
+                    return;
+                    
+            for (int k = 0; k < (int)path.size(); k++)
+                cout << path[k] << " ";
+            cout << endl;    
+            
             if (tempMax > maximumDelay)
                 maximumDelay = tempMax;
                 
-            //cout << "maximumDelay: " << maximumDelay << endl;
+            cout << "maximumDelay: " << maximumDelay << endl;
         }
         else
         {
@@ -188,7 +187,7 @@ void findMaximumDelay()
             if (verties[i].type == SYN && verties[j].type == SYN)
             {
                 path.clear();
-                //cout << "from " << i << " to " << j << endl;
+                cout << "from " << i << " to " << j << endl;
                 backtrack(i, j);
             }
 }
