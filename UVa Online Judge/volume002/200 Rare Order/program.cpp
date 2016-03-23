@@ -12,10 +12,7 @@
 
 using namespace std;
 
-int map[26][26] = { 0 }, letters[26] =
-
-{
-0}, degree[26];
+int map[26][26] = { 0 }, letters[26] = { 0 }, degree[26];
 
 int main(int argc, char *argv[])
 {
