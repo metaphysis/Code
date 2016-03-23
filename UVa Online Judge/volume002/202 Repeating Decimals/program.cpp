@@ -1,8 +1,8 @@
 // Repeating Decimals
 // UVa IDs: 202
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2016-03-23
+// UVa Run Time: 0.023s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
