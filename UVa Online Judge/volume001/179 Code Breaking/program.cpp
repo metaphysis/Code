@@ -1,7 +1,7 @@
 // Code Breaking
 // UVa IDs: 179
 // Verdict: Wrong Answer
-// Submission Date: 2016-02-22
+// Submission Date: 2016-03-25
 // UVa Run Time: 0.000s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
@@ -71,7 +71,7 @@ void initializeKey(int keyLength)
         key.push_back(i);
 }
 
-bool findNextPermutation(int keyLength)
+bool findPermutation(int keyLength)
 {
     initializeKey(keyLength);
         
@@ -84,7 +84,7 @@ bool findNextPermutation(int keyLength)
     return false;
 }
 
-int maxTimesTry = 500000;
+int maxTimesTry = 10000;
 int timesTried = 0;
 bool keyFound = false, finish = false;
 string source, target;
@@ -97,11 +97,8 @@ void initializeTag(int keyLength)
         matched.push_back(false);
 }
 
-void findKeyByBacktrack(int index, int keyLength)
+void backtrack(int index, int keyLength)
 {
-    if (finish)
-        return;
-        
     if (index == keyLength)
     {
         if (verifyKey())
@@ -121,7 +118,9 @@ void findKeyByBacktrack(int index, int keyLength)
         {
             matched[i] = true;
             key[index] = i + 1;
-            findKeyByBacktrack(index + 1, keyLength);
+            backtrack(index + 1, keyLength);
+            if (finish)
+                return;
             matched[i] = false;
         }
 }
@@ -130,60 +129,25 @@ bool findKeyByMatch(int keyLength)
 {
     initializeKey(keyLength);
     
-    //int index = 0, textLength = plaintext.length();
-    
-    //while (index < textLength)
-    //{
-    //    int subLength = min(keyLength, textLength - index);
-    //    if (subLength < keyLength)
-    //        break;
-        
-    //    string subPlain = plaintext.substr(index, subLength);
-    //    string subEncrypted = cyphertext1.substr(index, subLength);
-        
-    //    for (int i = 0; i < keyLength; i++)
-    //        for (int j = 0; j < keyLength; j++)
-    //            if (subEncrypted[j] == subPlain[i])
-    //            {
-    //                key[i] = j + 1;
-    //                subEncrypted[j] = '\0';
-    //            }
-            
-    //    if(verifyKey())
-    //        return true;
-    
-    //    index += keyLength;
-    //}
-
     finish = false;
     timesTried = 0;
     keyFound = false;
     source = plaintext.substr(0, keyLength);
     target = cyphertext1.substr(0, keyLength);
     initializeTag(keyLength);
-    findKeyByBacktrack(0, keyLength);
+    
+    backtrack(0, keyLength);
     
     return keyFound;
 }
 
 bool findKey()
 {
-    //cout << "plaintext: " << plaintext << endl;
-    //cout << "cyphertext1: " << cyphertext1 << endl;
-    //cout << "cyphertext2: " << cyphertext2 << endl;
-    
-    //cout << "key length: ";
-    //for (int i = 0; i < k.size(); i++)
-        //cout << k[i] << " ";
-    //cout << endl;
-    
     int keyIndex = 0;
     while (keyIndex < k.size())
     {
-        //cout << "current key length: " << k[keyIndex] << endl;
-        
-        //if (k[keyIndex] <= 7 && findNextPermutation(k[keyIndex]))
-            //return true;
+        if (k[keyIndex] <= 7 && findPermutation(k[keyIndex]))
+            return true;
         
         if (findKeyByMatch(k[keyIndex]))
             return true;
@@ -241,7 +205,7 @@ int main(int argc, char *argv[])
     {
         getline(cin, cyphertext1);
         getline(cin, cyphertext2);
-                                
+                                  
         if (findK() && findKey())
             decrypt(cyphertext2);
         else
