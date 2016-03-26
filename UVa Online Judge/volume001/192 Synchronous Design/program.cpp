@@ -7,16 +7,13 @@
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
 #include <iostream>
-#include <iomanip>
-#include <sstream>
 #include <vector>
 #include <algorithm>
-#include <limits>
 
 using namespace std;
 
 const int INPUT = 0, OUTPUT = 1, SYN = 2, ASYN = 3;
-const int MAX_DELAY = numeric_limits<int>::min();
+const string typeText = "iosa";
 
 struct vertex
 {
@@ -27,10 +24,10 @@ vector < vertex > verties;
 vector < int > parent, path;
 vector < bool > discovered;
 vector < vector < int > > edges;
-int maximumDelay;
+int maximumDelay, maxNodes;
 bool foundCycle = false;
 
-void dfs(int start, bool detectSYN)
+void dfs(int start)
 {
     if (foundCycle)
         return;
@@ -39,12 +36,12 @@ void dfs(int start, bool detectSYN)
     for (int i = 0; i < edges[start].size(); i++)
     {
         vertex v = verties[edges[start][i]];
-        if (v.type == ASYN || (detectSYN && v.type == SYN))
+        if (v.type == ASYN)
         {
             if (discovered[v.index] == false)
             {
                 parent[v.index] = start;
-                dfs(v.index, detectSYN);
+                dfs(v.index);
             }
             else
             {
@@ -58,7 +55,7 @@ void dfs(int start, bool detectSYN)
     }
 }
 
-bool findCycle(bool detectSYN)
+bool findCycle()
 {
     parent.clear();
     discovered.clear();
@@ -67,137 +64,53 @@ bool findCycle(bool detectSYN)
     discovered.resize(verties.size());
     
     for (int i = 0; i < verties.size(); i++)
-        if (verties[i].type == ASYN || (detectSYN && verties[i].type == SYN))
+        if (verties[i].type == ASYN)
         {
             foundCycle = false;
             
             fill(parent.begin(), parent.end(), -1);
             fill(discovered.begin(), discovered.end(), false);
             
-            dfs(i, detectSYN);
+            dfs(i);
             
             if (foundCycle)
                 return true;
         }
 }
 
-bool floyd(int clock)
+void forward(int v, int index)
 {
-    vector < vector < int > > distances;
+    path[index] = v;
     
-    distances.clear();
-    distances.resize(verties.size());
-    
-    for (int i = 0; i < verties.size(); i++)
-        for (int j = 0; j < verties.size(); j++)
-            distances[i].push_back(1);
-            
-    for (int i = 0 ; i < edges.size(); i++)
-        for (int j = 0; j < edges[i].size(); j++)
-            distances[i][edges[i][j]] = -verties[i].delay;
-        
-    for (int k = 0; k < verties.size(); k++)
-        for (int i = 0; i < verties.size(); i++)
-            for (int j = 0; j < verties.size(); j++)
-            {
-                if (distances[i][k] < 1 && distances[k][j] < 1)
-                    if (distances[i][j] > (distances[i][k] + distances[k][j]))
-                        distances[i][j] = distances[i][k] + distances[k][j];
-            }
-    
-    maximumDelay = 0;
-    for (int i = 0; i < edges.size(); i++)
-        for (int j = 0; j < edges.size(); j++)
-            if (verties[i].type == SYN && verties[j].type == SYN &&
-                distances[i][j] < maximumDelay)
-                    maximumDelay = distances[i][j];
-    
-    maximumDelay = abs(maximumDelay);
-    
-    return maximumDelay > clock;
-}
-
-void backtrack(int start, int end)
-{
-    for (int i = 0; i < edges[start].size(); i++)
+    if (index >= 1 && verties[path[index]].type != ASYN)
     {
-        if (edges[start][i] == end)
-        {
-            int tempMax = 0;     
-            for (int j = 0; j < (int)path.size(); j++)
-                if (verties[path[j]].type == ASYN)
-                    tempMax += verties[path[j]].delay;
-                else
-                    return;
-                    
-            for (int k = 0; k < (int)path.size(); k++)
-                cout << path[k] << " ";
-            cout << endl;    
-            
-            if (tempMax > maximumDelay)
-                maximumDelay = tempMax;
-                
-            cout << "maximumDelay: " << maximumDelay << endl;
-        }
-        else
-        {
-            vector < int > oldPath(path);
-            sort(oldPath.begin(), oldPath.end());
-            
-            bool repeated = false;
-            for (int j = 0; j < (int)oldPath.size() - 1; j++)
-                if (oldPath[j] == oldPath[j + 1])
-                {
-                    repeated = true;
-                    break;
-                }
-            
-            bool canAdd = false;
-            if (repeated == false)
-                canAdd = true;
-            else
-            {
-                bool findLast = false;
-                for (int j = 0; j < oldPath.size(); j++)
-                    if (oldPath[j] == edges[start][i])
-                    {
-                        findLast = true;
-                        break;
-                    }
-                if (findLast)
-                    canAdd = false;
-            }
-            
-            if (canAdd)
-            {
-                path.push_back(edges[start][i]);
-                int size = (int)path.size();
-                backtrack(edges[start][i], end);
-                path.erase(path.begin() + size - 1, path.end());
-            }
-        }
+        int tempMax = 0;       
+        for (int i = 0; i <= index; i++)
+            tempMax += verties[path[i]].delay;
+        maximumDelay = max(tempMax, maximumDelay);
+    }
+    else
+    {
+        for (int i = 0; i < edges[v].size(); i++)
+            forward(edges[v][i], index + 1);        
     }
 }
 
 void findMaximumDelay()
 {
+    path.resize(verties.size());
     maximumDelay = 0;
     for (int i = 0; i < verties.size(); i++)
-        for (int j = 0; j < verties.size(); j++)
-            if (verties[i].type == SYN && verties[j].type == SYN)
-            {
-                path.clear();
-                cout << "from " << i << " to " << j << endl;
-                backtrack(i, j);
-            }
+        if (verties[i].type == INPUT || verties[i].type == SYN)
+            forward(i, 0);
 }
 
 int main(int argc, char *argv[])
 {
     int clock, circuits, delay, nodes, start, end, typeIndex;
     string type;
-    cin >> circuits;
     
+    cin >> circuits;
     while (circuits--)
     {
         cin >> clock >> nodes;
@@ -209,40 +122,29 @@ int main(int argc, char *argv[])
         for (int i = 0; i < nodes; i++)
         {
             cin >> type >> delay;
-            typeIndex = ASYN;
-            if (type == "i" || type == "o" || type == "s")
-                typeIndex = SYN;
+            typeIndex = (int)typeText.find(type);
+            if (typeIndex == INPUT || typeIndex == OUTPUT || typeIndex == SYN)
+                delay = 0;
             verties.push_back((vertex){i, delay, typeIndex});
         }
         
         int m;
         cin >> m;
-        for (int i = 0; i < m; i++)
+        for (int i = 1; i <= m; i++)
         {
             cin >> start >> end;
             edges[start].push_back(end);
         }
           
-        if (findCycle(false))
+        if (findCycle())
             cout << "Circuit contains cycle." << endl;
         else 
         {
-            if (findCycle(true))
-            {
-                findMaximumDelay();
-                
-                if (maximumDelay > clock)
-                    cout << "Clock period exceeded." << endl;
-                else
-                    cout << "Synchronous design. Maximum delay: " << maximumDelay << "." << endl;
-            }
+            findMaximumDelay();
+            if (maximumDelay > clock)
+                cout << "Clock period exceeded." << endl;
             else
-            {
-                if (floyd(clock))
-                    cout << "Clock period exceeded." << endl;
-                else
-                    cout << "Synchronous design. Maximum delay: " << maximumDelay << "." << endl;
-            }
+                cout << "Synchronous design. Maximum delay: " << maximumDelay << "." << endl;
         }
     }
     
