@@ -1,7 +1,7 @@
 // Synchronous Design
 // UVa IDs: 192
-// Verdict: Wrong Answer
-// Submission Date: 2016-03-22
+// Verdict: Accepted
+// Submission Date: 2016-03-27
 // UVa Run Time: 0.000s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
@@ -21,61 +21,51 @@ struct vertex
 };
 
 vector < vertex > verties;
-vector < int > parent, path;
-vector < bool > discovered;
+vector < int > path;
 vector < vector < int > > edges;
-int maximumDelay, maxNodes;
-bool foundCycle = false;
+int maximumDelay;
 
-void dfs(int start)
+// topological sorting
+bool findCycle()
 {
-    if (foundCycle)
-        return;
-
-    discovered[start] = true;
-    for (int i = 0; i < edges[start].size(); i++)
+    vector < int > connections;
+    connections.resize(verties.size());
+    fill(connections.begin(), connections.end(), 0);
+    
+    for (int i = 0; i < edges.size(); i++)
+        for (int j = 0; j < edges[i].size(); j++)
+            if (verties[edges[i][j]].type == ASYN)
+                connections[edges[i][j]]++;
+   
+    vector < bool > removed;
+    removed.resize(verties.size());
+    fill(removed.begin(), removed.end(), false);
+    
+    bool nodeRemoved = true;
+    int numberRemovedNodes = 0;
+    
+    while (nodeRemoved)
     {
-        vertex v = verties[edges[start][i]];
-        if (v.type == ASYN)
+        nodeRemoved = false;
+        
+        for (int i = 0; i < removed.size(); i++)
         {
-            if (discovered[v.index] == false)
+            if (removed[i] == false && connections[i] == 0)
             {
-                parent[v.index] = start;
-                dfs(v.index);
-            }
-            else
-            {
-                if (parent[v.index] != start)
+                nodeRemoved = true;
+                numberRemovedNodes++;
+                removed[i] = true;
+                
+                for (int j = 0; j < edges[i].size(); j++)
                 {
-                    foundCycle = true;
-                    return;
+                    if (verties[edges[i][j]].type == ASYN)
+                        connections[edges[i][j]]--;
                 }
             }
         }
     }
-}
-
-bool findCycle()
-{
-    parent.clear();
-    discovered.clear();
     
-    parent.resize(verties.size());
-    discovered.resize(verties.size());
-    
-    for (int i = 0; i < verties.size(); i++)
-        if (verties[i].type == ASYN)
-        {
-            foundCycle = false;
-            
-            fill(parent.begin(), parent.end(), -1);
-            fill(discovered.begin(), discovered.end(), false);
-            
-            dfs(i);
-            
-            if (foundCycle)
-                return true;
-        }
+    return numberRemovedNodes != verties.size();
 }
 
 void forward(int v, int index)
