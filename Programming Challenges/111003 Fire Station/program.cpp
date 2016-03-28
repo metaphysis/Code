@@ -92,14 +92,14 @@ int main(int ac, char *av[])
 		}
 
 		// 使用 Floyd 算法计算点对间最短距离。
-		for (int k = 1; k <= nintersections; k++)
-			for (int i = 1; i <= nintersections; i++)
-				for (int j = 1; j <= nintersections; j++)
-				{
-					int through = weight[i][k] + weight[k][j];
-					if (through < weight[i][j])
-						weight[i][j] = through;
-				}
+        for (int k = 1; k <= nintersections; k++)
+	        for (int i = 1; i <= nintersections; i++)
+		        for (int j = 1; j <= nintersections; j++)
+		        {
+			        int through = weight[i][k] + weight[k][j];
+			        if (through < weight[i][j])
+				        weight[i][j] = through;
+		        }
 
 		// 当路口与消防站位于同一路口时，距离为 0。
 		for (int i = 1; i <= nintersections; i++)

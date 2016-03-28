@@ -23,11 +23,11 @@ struct segment
     int miles;
 };
 
-vector < vector < segment > >routes;
+vector < vector < segment > > routes;
 vector < string > cityName;
-map < string, int >cityIndex;
-vector < pair < int, int >>parent;
-vector < int >distances;
+map < string, int > cityIndex;
+vector < pair < int, int > > parent;
+vector < int > distances;
 vector < bool > visited;
 
 void trim(string & line)

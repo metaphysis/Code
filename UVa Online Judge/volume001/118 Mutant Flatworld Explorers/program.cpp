@@ -9,10 +9,9 @@
 
 using namespace std;
 
-#define MAXN 55
-
-#define DANGEROUS 0
-#define SAFE 1
+const int MAXN = 55;
+const int DANGEROUS = 0;
+const int SAFE = 1;
 
 struct status
 {

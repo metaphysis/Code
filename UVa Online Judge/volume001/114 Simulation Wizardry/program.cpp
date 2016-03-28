@@ -9,16 +9,9 @@
 
 using namespace std;
 
-#define MAXN 55
-
-#define GRID 0
-#define OBSTACLE 1
-#define WALL 3
-
-#define RIGHT 0
-#define UP 1
-#define LEFT 2
-#define DOWN 3
+const int MAXN = 55;
+const int GRID = 0, OBSTACLE = 1, WALL = 3;
+const int RIGHT = 0, UP = 1, LEFT = 2, DOWN = 3;
 
 struct obstacle
 {
@@ -35,20 +28,11 @@ obstacle bumpers[MAXN][MAXN];
 int grid[MAXN][MAXN], gridWidth, gridHeight, costHitWall;
 int offset[4][2] = { { 1, 0 }, { 0, 1 }, { -1, 0 }, { 0, -1 } };
 
-void ballStatus(void)
-{
-	cout << pinball.x << " " << pinball.y << " " << pinball.direction;
-	cout << " " << pinball.lifetime << " " << pinball.points << endl;
-}
-
 void play(void)
 {
 	int newX, newY;
-	
 	while (pinball.lifetime > 0)
 	{
-		// ballStatus();
-
 		pinball.lifetime--;
 		newX = pinball.x + offset[pinball.direction][0];
 		newY = pinball.y + offset[pinball.direction][1];
@@ -85,7 +69,7 @@ void play(void)
 	}
 }
 
-int main (int argc, char const* argv[])
+int main (int argc, char *argv[])
 {
 	int totalPoints = 0, numberBumpers, tmpX, tmpY;
 
@@ -122,4 +106,3 @@ int main (int argc, char const* argv[])
 
 	return 0;
 }
-
