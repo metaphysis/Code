@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
             for (int j = 0; j < 26; j++)
                 if (map[i][j] == 1)
                     degreeOfIn[j]++;
-                        
+
         while (true)
         {
             bool outputed = false;
