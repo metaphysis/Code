@@ -1,7 +1,7 @@
 // UVa Problem 112 - Tree Summing
 // Verdict: Accepted
-// Submission Date: 2011-11-26
-// UVa Run Time: 0.304s
+// Submission Date: 2016-04-04
+// UVa Run Time: 0.042s
 //
 // 版权所有（C）2011，邱秋。metaphysis # yeah dot net
 //
