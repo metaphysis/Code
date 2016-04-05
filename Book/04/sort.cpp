@@ -6,11 +6,55 @@ using namespace std;
 
 const int MAX_SIZE = 20;
 
-void display(int data[], int n)
+void output(int data[], int n)
 {
     for (int i = 0; i < n; i++)
         cout << data[i] << " ";
     cout << endl;
+}
+
+// 获取给定数指定位置的数字。
+int getDigitAtIndex(int number, int index)
+{
+    while (number > 0 && index > 0)
+    {
+        number /= 10;
+        index--;
+    }
+    return number % 10;
+}
+
+// 使用计数排序的变种对数组按指定位置排序。
+void countingSort2(int data[], int n, int index)
+{
+    int *bucket = new int[10], *sorted = new int[n];
+    
+    for (int i = 0; i < 10; i++)
+        bucket[i] = 0;
+        
+    for (int i = 0; i < n; i++)
+        bucket[getDigitAtIndex(data[i], index)]++;
+        
+    for (int i = 1; i < 10; i++)
+        bucket[i] += bucket[i - 1];
+    
+    for (int i = n - 1; i >= 0; i--)
+    {
+        int digit = getDigitAtIndex(data[i], index);
+        sorted[bucket[digit] - 1] = data[i];
+        bucket[digit]--;
+    }
+    
+    for (int i = 0; i < n; i++)
+        data[i] = sorted[i];
+                
+    delete [] bucket;
+}
+
+void radixSort(int data[], int n, int digits)
+{
+    for (int index = 0; index < digits; index++)
+        countingSort2(data, n, index);
 }
 
 void shellSort(int data[], int n)
@@ -28,13 +72,12 @@ void shellSort(int data[], int n)
 
 void countingSort(int data[], int n, int ceiling)
 {
-    int i, index = 0;
     int *bucket = new int[ceiling];
     
     for (int i = 0; i < n; i++)
         bucket[data[i]]++;
     
-    for (int i = 0; i < ceiling; i++)
+    for (int i = 0, index = 0; i < ceiling; i++)
         while (bucket[i]-- > 0)
             data[index++] = i;
             
@@ -178,7 +221,7 @@ int main(int argc, char *argv[])
 
     random_shuffle(data, data + MAX_SIZE);
 
-    display(data, MAX_SIZE);
+    output(data, MAX_SIZE);
 
     //bubbleSort(data, MAX_SIZE);
     //selectionSort(data, MAX_SIZE);
@@ -187,9 +230,10 @@ int main(int argc, char *argv[])
     //mergeSort(data, 0, MAX_SIZE - 1);
     //heapSort(data, MAX_SIZE);
     //countingSort(data, MAX_SIZE, MAX_SIZE + 1);
-    shellSort(data, MAX_SIZE);
+    //shellSort(data, MAX_SIZE);
+    radixSort(data, MAX_SIZE, 4);
     
-    display(data, MAX_SIZE);
+    output(data, MAX_SIZE);
 
     return 0;
 }
