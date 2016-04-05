@@ -24,6 +24,37 @@ int getDigitAtIndex(int number, int index)
     return number % 10;
 }
 
+void radixSort2(int data[], int n, int digits)
+{
+    int *bucket[10];
+    
+    for (int i = 0; i < 10; i++)
+    {
+        bucket[i] = new int[n + 1];
+        bucket[i][0] = 0;
+    }
+    
+    for (int index = 0; index < digits; index++)
+    {
+        for (int i = 0; i < n; i++)
+        {
+            int digit = getDigitAtIndex(data[i], index);
+            bucket[digit][++bucket[digit][0]] = data[i];
+        }
+        
+        for (int i = 0, j = 0; i < 10; i++)
+        {
+            int k = 1;
+            while (k <= bucket[i][0])
+                data[j++] = bucket[i][k++];
+            bucket[i][0] = 0;
+        }
+    }
+    
+    for (int i = 0; i < 10; i++)
+        delete [] bucket[i];
+}
+
 // 使用计数排序的变种对数组按指定位置排序。
 void countingSort2(int data[], int n, int index)
 {
@@ -48,7 +79,7 @@ void countingSort2(int data[], int n, int index)
     for (int i = 0; i < n; i++)
         data[i] = sorted[i];
                 
-    delete [] bucket;
+    delete [] bucket, sorted;
 }
 
 void radixSort(int data[], int n, int digits)
@@ -231,7 +262,8 @@ int main(int argc, char *argv[])
     //heapSort(data, MAX_SIZE);
     //countingSort(data, MAX_SIZE, MAX_SIZE + 1);
     //shellSort(data, MAX_SIZE);
-    radixSort(data, MAX_SIZE, 4);
+    //radixSort(data, MAX_SIZE, 4);
+    radixSort2(data, MAX_SIZE, 4);
     
     output(data, MAX_SIZE);
 
