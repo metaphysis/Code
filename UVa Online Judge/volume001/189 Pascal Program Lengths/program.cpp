@@ -1,7 +1,7 @@
 // Pascal Program Lengths
 // UVa IDs: 189
-// Verdict: Wrong Answer
-// Submission Date: 2016-04-04
+// Verdict: Accepted
+// Submission Date: 2016-04-05
 // UVa Run Time: 0.000s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
@@ -13,18 +13,19 @@ using namespace std;
 
 string program;
 string operators[13] = {
-    "<=", ">=", "<>", ":=", "@", "^", "+", "-", "*", "/", "=", "<", ">", 
+    "<=", ">=", "<>", ":=", "@", "^", "+", "-", "*", "/", "=", "<", ">",
 };
 
 int count()
 {
+    int counter = 0;
+
+    // convert to lower case
     for (int i = 0; i < program.length(); i++)
         if (isalpha(program[i]))
             program[i] = tolower(program[i]);
-            
-    int counter = 0;
-    
-    // comment
+
+    // comment and string constant
     int index = 0;
     while (index < program.length())
     {
@@ -37,34 +38,22 @@ int count()
                 program[index] = ' ';
                 if (current == '}')
                     break;
-                index++;    
+                index++;
             }
         }
-        
-        index++;
-    }
-    
-    //cout << program << endl;
-    
-    // string constant
-    index = 0;
-    string quotes;
-    while (index < program.length())
-    {
-        if (program[index] == '\'')
+        else if (program[index] == '\'')
         {
             counter++;
             program[index++] = ' ';
             while (index < program.length())
             {
-                char current = program[index];
-                if (current == '\'' && (index + 1) < program.length())
+                if (program[index] == '\'')
                 {
                     if (program[index + 1] == '\'')
                     {
                         program[index] = ' ';
                         program[index + 1] = ' ';
-                        index++;
+                        index += 2;
                     }
                     else
                     {
@@ -73,16 +62,13 @@ int count()
                     }
                 }
                 else
-                    program[index] = ' ';
-                index++;
+                    program[index++] = ' ';
             }
-                
         }
+
         index++;
     }
-    
-    //cout << program << endl;
-    
+
     // braces
     index = 0;
     while (index < program.length())
@@ -98,15 +84,13 @@ int count()
         }
         index++;
     }
-    
-    //cout << program << endl;
-    
+
     // identifiers
     index = 0;
     int last = program.find("begin");
     if (last == program.npos)
         last = program.length();
-    vector <string> variables;
+    vector < string > variables;
     while (index < last)
     {
         if (isalpha(program[index]) || program[index] == '_')
@@ -127,11 +111,9 @@ int count()
             variables.push_back(block);
         }
         index++;
-    }        
+    }
 
-    //for (int i = 0; i < variables.size(); i++)
-        //cout << variables[i] << endl;
-        
+    // find identifiers and replace it by space
     index = 0;
     while (index < variables.size())
     {
@@ -147,16 +129,14 @@ int count()
             {
                 counter++;
                 for (int i = 0; i < variables[index].length(); i++)
-                    program[next + i] = ' ';            
+                    program[next + i] = ' ';
             }
             next += variables[index].length();
             next = program.find(variables[index], next);
         }
         index++;
     }
-    
-    //cout << program << endl;
-    
+
     // number
     index = 0;
     while (index < program.length())
@@ -169,10 +149,9 @@ int count()
             {
                 char current = program[index];
                 if (isdigit(current) || (current >= 'a' && current <= 'f'))
-                    program[index] = ' ';
+                    program[index++] = ' ';
                 else
                     break;
-                index++;
             }
         }
         else if (isdigit(program[index]))
@@ -184,7 +163,7 @@ int count()
                     program[index++] = ' ';
                 else
                     break;
-                
+
             if (index < program.length() && program[index] == '.')
             {
                 program[index++] = ' ';
@@ -194,7 +173,7 @@ int count()
                     else
                         break;
             }
-            
+
             if (index < program.length() && program[index] == 'e')
             {
                 program[index++] = ' ';
@@ -204,12 +183,10 @@ int count()
                     program[index++] = ' ';
             }
         }
-        
+
         index++;
     }
-    
-    //cout << program << endl;
-    
+
     // operators
     for (int i = 0; i < 13; i++)
     {
@@ -224,28 +201,25 @@ int count()
             next = program.find(operators[i], start);
         }
     }
-    
-    //cout << program << endl;
-    
+
     // others
     index = 0;
     while (index < program.length())
     {
-        if (isalpha(program[index]))
+        if (isalpha(program[index]) || program[index] == '_')
         {
             counter++;
             program[index++] = ' ';
             while (index < program.length())
-                if (isalpha(program[index]))
+                if (isalpha(program[index]) || isdigit(program[index]) ||
+                    program[index] == '_')
                     program[index++] = ' ';
                 else
                     break;
         }
         index++;
     }
-    
-    //cout << program << endl;
-    
+
     return counter;
 }
 
@@ -272,6 +246,6 @@ int main(int argc, char *argv[])
             program += ' ';
         }
     }
-    
-	return 0;
+
+    return 0;
 }
