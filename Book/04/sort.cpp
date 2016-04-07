@@ -94,11 +94,7 @@ void shellSort(int data[], int n)
     for (gap = n / 2; gap > 0; gap /= 2)
         for (i = gap; i < n; i++)
             for (j = i - gap; j >= 0 && data[j] > data[j + gap]; j -= gap)
-            {
-                temp = data[j];
-                data[j] = data[j + gap];
-                data[j + gap] = temp;
-            }
+                swap(data[j], data[j + gap]);
 }
 
 void countingSort(int data[], int n, int ceiling)
@@ -220,28 +216,45 @@ void selectionSort(int data[], int n)
 {
     for (int i = 0; i < n; i++)
         for (int j = i + 1; j < n; j++)
-        {
             if (data[i] > data[j])
+                swap(data[i], data[j]);
+}
+
+// 双向冒泡排序，减少了循环排序的次数。
+void bidirectionalBubbleSort(int data[], int n)
+{
+    int left = 0, right = n - 1, shift;
+
+    while(left < right)
+    {
+        // 将较大的值移到末尾
+        for(int i = left; i < right; i++)
+            if(data[i] > data[i + 1])
             {
-                int temp = data[i];
-                data[i] = data[j];
-                data[j] = temp;
+                swap(data[i], data[i + 1]);
+                shift = i;
             }
-        }
+
+        right = shift;
+
+        // 将较小的值移到开头
+        for(int i = right - 1; i >= left; i--)
+            if(data[i] > data[i + 1])
+            {
+                swap(data[i], data[i + 1]);
+                shift = i + 1;
+            }
+
+        left = shift;
+    }
 }
 
 void bubbleSort(int data[], int n)
 {
     for (int i = 0; i < n; i++)
         for (int j = 0; j < (n - i - 1); j++)
-        {
             if (data[j] > data[j + 1])
-            {
-                int temp = data[j];
-                data[j] = data[j + 1];
-                data[j + 1] = temp;
-            }
-        }
+                swap(data[j], data[j + 1]);
 }
 
 int main(int argc, char *argv[])
@@ -255,6 +268,7 @@ int main(int argc, char *argv[])
     output(data, MAX_SIZE);
 
     //bubbleSort(data, MAX_SIZE);
+    //bidirectionalBubbleSort(data, MAX_SIZE);
     //selectionSort(data, MAX_SIZE);
     //insertionSort(data, MAX_SIZE);
     //quickSort(data, 0, MAX_SIZE - 1);
@@ -263,7 +277,7 @@ int main(int argc, char *argv[])
     //countingSort(data, MAX_SIZE, MAX_SIZE + 1);
     //shellSort(data, MAX_SIZE);
     //radixSort(data, MAX_SIZE, 4);
-    radixSort2(data, MAX_SIZE, 4);
+    //radixSort2(data, MAX_SIZE, 4);
     
     output(data, MAX_SIZE);
 
