@@ -65,7 +65,6 @@ bool isStayOnThroughways()
         return true;
     if ((avenue + street) == 100 && (heading == NW || heading == SE))
         return true;
-
     return false;
 }
 
@@ -73,7 +72,6 @@ bool isStayOnThroughways()
 void displayDestination()
 {
     if (isStayOnThroughways())
-        //cout << "Illegal stopping place ";
         cout << "Illegal stopping place" << endl;
     else
     {
@@ -98,9 +96,6 @@ void setStartPosition()
     avenue = getAvenueOrStreet(texts[0]);
     street = getAvenueOrStreet(texts[1]);
     heading = find(directions, directions + 8, texts[2]) - directions;
-
-    //cout << "Start Position: ";
-    //displayDestination();
 }
 
 bool validateCommand()
@@ -119,7 +114,7 @@ bool validateCommand()
         command = find(cmds, cmds + 7, target) - cmds;
         intersections = 1;
 
-        return command < NONE;
+        return command < GO;
     }
 
     // 检查是否为符合语法规则的 GO 命令。
@@ -152,38 +147,51 @@ bool validateMove()
 {
     if (command == TURN_LEFT)
     {
-        if (heading == N && avenue == 0 || heading == S && avenue == 100 ||
-            heading == W && street == 0 || heading == S && avenue == 100)
-            return false;
-        if (heading == NE)
+        if (heading == N)
         {
-            if (street == 49 && avenue == 49)
-                return true;
-            if (street == 49 && avenue == 99)
+            if (avenue == 0)
+                return false;
+            return true;
+        }
+        else if (heading == E)
+        {
+            if (street == 100)
+                return false;
+            return true;
+        }
+        else if (heading == S)
+        {
+            if (avenue == 100)
+                return false;
+            return true;
+        }
+        else if (heading == W)
+        {
+            if (street == 0)
+                return false;
+            return true;
+        }
+        else if (heading == NE)
+        {
+            if (street == 49 && (avenue == 49 || avenue == 99))
                 return true;
             return false;
         }
-        if (heading == NW)
+        else if (heading == NW)
         {
-            if (avenue == 51 && street == 49)
-                return true;
-            if (avenue == 51 && street == 99)
+            if (avenue == 51 && (street == 49 || street == 99))
                 return true;
             return false;
         }
-        if (heading == SE)
+        else if (heading == SE)
         {
-            if (avenue == 49 && street == 51)
-                return true;
-            if (avenue == 49 && street == 1)
+            if (avenue == 49 && (street == 51 || street == 1))
                 return true;
             return false;
         }
-        if (heading == SW)
+        else if (heading == SW)
         {
-            if (street == 51 && avenue == 51)
-                return true;
-            if (street == 51 && avenue == 1)
+            if (street == 51 && (avenue == 51 || avenue == 1))
                 return true;
             return false;
         }
@@ -193,76 +201,47 @@ bool validateMove()
     {
         if (heading == N)
         {
-            if (avenue == 0 || avenue == 50)
-            {
-                if (street == 49 || street == 99)
-                    return true;
-                return false;
-            }
-            if (avenue == 100)
-                return false;
-            if (street == 49 || street == 99)
-                return false;
+            if ((avenue == 0 || avenue == 50) && (street == 49 || street == 99))
+                return true;
+            return false;
         }
-        if (heading == E)
+        else if (heading == E)
         {
-            if (street == 50 || street == 100)
-            {
-                if (avenue == 49 || avenue == 99)
-                    return true;
-                return false;
-            }
-            if (street == 0)
-                return false;
-            if (avenue == 49 || avenue == 99)
-                return false;
-
+            if ((street == 50 || street == 100) && (avenue == 49 || avenue == 99))
+                return true;
+            return false;
         }
-        if (heading == S)
+        else if (heading == S)
         {
-            if (avenue == 50 || avenue == 100)
-            {
-                if (street == 1 || street == 51)
-                    return true;
-                return false;
-            }
-            if (avenue == 0)
-                return false;
-            if (street == 1 || street == 51)
-                return false;
+            if ((avenue == 50 || avenue == 100) && (street == 1 || street == 51))
+                return true;
+            return false;
         }
-        if (heading == W)
+        else if (heading == W)
         {
-            if (street == 0 || street == 50)
-            {
-                if (avenue == 1 || avenue == 51)
-                    return true;
-                return false;
-            }
-            if (street == 100)
-                return false;
-            if (avenue == 1 || avenue == 51)
-                return false;
+            if ((street == 0 || street == 50) && (avenue == 1 || avenue == 51))
+                return true;
+            return false;
         }
-        if (heading == NE)
+        else if (heading == NE)
         {
             if (avenue == 49 && (street == 49 || street == 99))
                 return true;
             return false;
         }
-        if (heading == NW)
+        else if (heading == NW)
         {
             if (street == 49 && (avenue == 51 || avenue == 1))
                 return true;
             return false;
         }
-        if (heading == SE)
+        else if (heading == SE)
         {
             if (street == 51 && (avenue == 49 || avenue == 99))
                 return true;
             return false;
         }
-        if (heading == SW)
+        else if (heading == SW)
         {
             if (avenue == 51 && (street == 51 && street == 1))
                 return true;
@@ -282,7 +261,7 @@ bool validateMove()
                 return true;
             return false;
         }
-        if (heading == E)
+        else if (heading == E)
         {
             if (avenue == 49 && street == 50)
                 return true;
@@ -292,7 +271,7 @@ bool validateMove()
                 return true;
             return false;
         }
-        if (heading == S)
+        else if (heading == S)
         {
             if (avenue == 50 && street == 51)
                 return true;
@@ -302,7 +281,7 @@ bool validateMove()
                 return true;
             return false;
         }
-        if (heading == W)
+        else if (heading == W)
         {
             if (avenue == 51 && street == 50)
                 return true;
@@ -312,7 +291,7 @@ bool validateMove()
                 return true;
             return false;
         }
-        if (heading == NE)
+        else if (heading == NE)
         {
             if (avenue == 49 && street == 49)
                 return true;
@@ -322,7 +301,7 @@ bool validateMove()
                 return true;
             return false;
         }
-        if (heading == NW)
+        else if (heading == NW)
         {
             if (avenue == 51 && street == 49)
                 return true;
@@ -332,7 +311,7 @@ bool validateMove()
                 return true;
             return false;
         }
-        if (heading == SE)
+        else if (heading == SE)
         {
             if (avenue == 49 && street == 51)
                 return true;
@@ -342,7 +321,7 @@ bool validateMove()
                 return true;
             return false;
         }
-        if (heading == SW)
+        else if (heading == SW)
         {
             if (avenue == 51 && street == 51)
                 return true;
@@ -366,7 +345,7 @@ bool validateMove()
                 return true;
             return false;
         }
-        if (heading == E)
+        else if (heading == E)
         {
             if (avenue == 49 && street == 50)
                 return true;
@@ -376,7 +355,7 @@ bool validateMove()
                 return true;
             return false;
         }
-        if (heading == S)
+        else if (heading == S)
         {
             if (avenue == 50 && street == 51)
                 return true;
@@ -386,7 +365,7 @@ bool validateMove()
                 return true;
             return false;
         }
-        if (heading == W)
+        else if (heading == W)
         {
             if (avenue == 51 && street == 50)
                 return true;
@@ -396,7 +375,7 @@ bool validateMove()
                 return true;
             return false;
         }
-        if (heading == NE)
+        else if (heading == NE)
         {
             if (avenue == 49 && street == 49)
                 return true;
@@ -406,7 +385,7 @@ bool validateMove()
                 return true;
             return false;
         }
-        if (heading == NW)
+        else if (heading == NW)
         {
             if (avenue == 51 && street == 49)
                 return true;
@@ -416,7 +395,7 @@ bool validateMove()
                 return true;
             return false;
         }
-        if (heading == SE)
+        else if (heading == SE)
         {
             if (avenue == 49 && street == 51)
                 return true;
@@ -426,7 +405,7 @@ bool validateMove()
                 return true;
             return false;
         }
-        if (heading == SW)
+        else if (heading == SW)
         {
             if (avenue == 51 && street == 51)
                 return true;
@@ -450,7 +429,7 @@ bool validateMove()
                 return true;
             return false;
         }
-        if (heading == E)
+        else if (heading == E)
         {
             if ((avenue + street) == 49 && (avenue >= 0 && avenue <= 49))
                 return true;
@@ -460,7 +439,7 @@ bool validateMove()
                 return true;
             return false;
         }
-        if (heading == S)
+        else if (heading == S)
         {
             if ((street - avenue) == 51 && (avenue >= 0 && avenue <= 49))
                 return true;
@@ -470,7 +449,7 @@ bool validateMove()
                 return true;
             return false;
         }
-        if (heading == W)
+        else if (heading == W)
         {
             if ((avenue + street) == 51 && (avenue >= 1 && avenue <= 50))
                 return true;
@@ -480,7 +459,7 @@ bool validateMove()
                 return true;
             return false;
         }
-        if (heading == NE)
+        else if (heading == NE)
         {
             if ((street - avenue) == 50 && (avenue >= 0 && avenue <= 49))
                 return true;
@@ -490,7 +469,7 @@ bool validateMove()
                 return true;
             return false;
         }
-        if (heading == NW)
+        else if (heading == NW)
         {
             if ((avenue + street) == 50 && (avenue >= 1 && avenue <= 50))
                 return true;
@@ -500,7 +479,7 @@ bool validateMove()
                 return true;
             return false;
         }
-        if (heading == SE)
+        else if (heading == SE)
         {
             if ((avenue + street) == 50 && (avenue >= 0 && avenue <= 49))
                 return true;
@@ -510,7 +489,7 @@ bool validateMove()
                 return true;
             return false;
         }
-        if (heading == SW)
+        else if (heading == SW)
         {
             if ((street - avenue) == 50 && (avenue >= 1 && avenue <= 50))
                 return true;
@@ -536,8 +515,7 @@ bool validateMove()
                 return true;
             return false;
         }
-
-        if (heading == E)
+        else if (heading == E)
         {
             if (avenue == 49 && street == 50)
                 return true;
@@ -549,8 +527,7 @@ bool validateMove()
                 return true;
             return false;
         }
-
-        if (heading == S)
+        else if (heading == S)
         {
             if (avenue == 50 && street == 51)
                 return true;
@@ -562,8 +539,7 @@ bool validateMove()
                 return true;
             return false;
         }
-
-        if (heading == W)
+        else if (heading == W)
         {
             if (avenue == 51 && street == 50)
                 return true;
@@ -575,8 +551,7 @@ bool validateMove()
                 return true;
             return false;
         }
-
-        if (heading == NE)
+        else if (heading == NE)
         {
             if (avenue == 49 && street == 49)
                 return true;
@@ -588,8 +563,7 @@ bool validateMove()
                 return true;
             return false;
         }
-
-        if (heading == NW)
+        else if (heading == NW)
         {
             if (avenue == 51 && street == 49)
                 return true;
@@ -601,8 +575,7 @@ bool validateMove()
                 return true;
             return false;
         }
-
-        if (heading == SE)
+        else if (heading == SE)
         {
             if (avenue == 49 && street == 51)
                 return true;
@@ -614,8 +587,7 @@ bool validateMove()
                 return true;
             return false;
         }
-
-        if (heading == SW)
+        else if (heading == SW)
         {
             if (avenue == 51 && street == 51)
                 return true;
@@ -628,15 +600,6 @@ bool validateMove()
             return false;
         }
     }
-
-    int index = avenue + step[heading][0] * intersections;
-    if (index < 0 || index > 100)
-        return false;
-    index = street + step[heading][1] * intersections;
-    if (index < 0 || index > 100)
-        return false;
-
-    return true;
 }
 
 int main(int argc, char *argv[])
@@ -662,25 +625,12 @@ int main(int argc, char *argv[])
             continue;
         }
 
-        if (validateCommand())
+        if (validateCommand() && validateMove())
         {
-            //cout << cmds[command] << " ";
-            //if (command == GO)
-            //cout << intersections << " ";
-
-            if (validateMove())
-            {
-                avenue += step[heading][0] * intersections;
-                street += step[heading][1] * intersections;
-                heading = headingAfterTurn[heading][command];
-
-                //displayDestination();
-            }
-            //else
-                //cout << "Ignore" << endl;
+            avenue += step[heading][0] * intersections;
+            street += step[heading][1] * intersections;
+            heading = headingAfterTurn[heading][command];
         }
-        //else
-            //cout << "Ignore" << endl;
     }
 
     return 0;
