@@ -1,7 +1,7 @@
 // City Directions
 // UVa IDs: 163
-// Verdict: Wrong Answer
-// Submission Date: 2016-02-18
+// Verdict: Accepted
+// Submission Date: 2016-04-10
 // UVa Run Time: 0.000s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
@@ -13,7 +13,6 @@
 
 using namespace std;
 
-// 转向
 string cmds[7] = {
     "_TURN_LEFT", "_TURN_RIGHT", "_TURN_HALF_LEFT", "_TURN_HALF_RIGHT",
     "_TURN_SHARP_LEFT", "_TURN_SHARP_RIGHT", "_GO"
@@ -22,29 +21,24 @@ string cmds[7] = {
 int TURN_LEFT = 0, TURN_RIGHT = 1, TURN_HALF_LEFT = 2, TURN_HALF_RIGHT = 3,
     TURN_SHARP_LEFT = 4, TURN_SHARP_RIGHT = 5, GO = 6, NONE = 7;
 
-// 方位
 string directions[8] = { "N", "E", "S", "W", "NE", "NW", "SE", "SW" };
 
 int N = 0, E = 1, S = 2, W = 3, NE = 4, NW = 5, SE = 6, SW = 7;
 
-// 给定起始方位经特定转向后的方位
-int headingAfterTurn[8][7] = {
+int aheadAfterTurn[8][7] = {
     {W, E, NW, NE, SW, SE, N}, {N, S, NE, SE, NW, SW, E},
     {E, W, SE, SW, NE, NW, S}, {S, N, SW, NW, SE, NE, W},
     {NW, SE, N, E, W, S, NE}, {SW, NE, W, N, S, E, NW},
     {NE, SW, E, S, N, W, SE}, {SE, NW, S, W, E, N, SW}
 };
 
-// 转向后坐标变化值
 int step[8][2] = {
     {0, 1}, {1, 0}, {0, -1}, {-1, 0}, {1, 1}, {-1, 1}, {1, -1}, {-1, -1}
 };
 
-int command, intersections;
-int avenue, street, heading;
+int command, intersections, avenue, street, ahead;
 vector < string > texts;
 
-// 将每行命令解析成单词以便判断。
 void parseDirection(string line)
 {
     string text;
@@ -54,48 +48,45 @@ void parseDirection(string line)
         texts.push_back(text);
 }
 
-// 判断最后是否停留在快速路上。
-bool isStayOnThroughways()
+int isStayOnThroughways(int x, int y, int heading)
 {
-    if ((avenue % 50 == 0) && (heading == N || heading == S))
-        return true;
-    if ((street % 50 == 0) && (heading == E || heading == W))
-        return true;
-    if ((avenue - street) == 0 && (heading == NE || heading == SW))
-        return true;
-    if ((avenue + street) == 100 && (heading == NW || heading == SE))
-        return true;
-    return false;
+    if ((x % 50 == 0) && (heading == N || heading == S))
+        return -1;
+    if ((y % 50 == 0) && (heading == E || heading == W))
+        return -1;
+    if ((x - y) == 0 && (heading == NE || heading == SW))
+        return -2;
+    if ((x + y) == 100 && (heading == NW || heading == SE))
+        return -2;
+    return 1;
 }
 
-// 显示终点位置。因为以左下角为原点，显示时需要调整。
 void displayDestination()
 {
-    if (isStayOnThroughways())
+    if (isStayOnThroughways(avenue, street, ahead) < 0)
         cout << "Illegal stopping place" << endl;
     else
     {
         cout << "A" << abs(avenue - 50) << (avenue >= 50 ? 'E' : 'W');
         cout << " S" << abs(street - 50) << (street >= 50 ? 'N' : 'S');
-        cout << " " << directions[heading] << endl;
+        cout << " " << directions[ahead] << endl;
     }
 }
 
-// 获取经路和纬路的序号，将序号调整为以左下角为原点。
 int getAvenueOrStreet(string text)
 {
     int index = 0;
     if (isalpha(text.back()))
         index = stoi(text.substr(1, text.length() - 2));
     index = 50 + (text.back() == 'E' || text.back() == 'N' ? index : -index);
+    return index;
 }
 
-// 设置起始位置。以左下角为坐标原点计算街道的序号。
 void setStartPosition()
 {
     avenue = getAvenueOrStreet(texts[0]);
     street = getAvenueOrStreet(texts[1]);
-    heading = find(directions, directions + 8, texts[2]) - directions;
+    ahead = find(directions, directions + 8, texts[2]) - directions;
 }
 
 bool validateCommand()
@@ -107,499 +98,120 @@ bool validateCommand()
     for (int i = 0; i < texts.size(); i++)
         target += "_" + texts.at(i);
 
-    // 检查是否为符合语法规则的 TURN 命令。
     if (texts.front() == "TURN")
     {
-        // 设置转向命令。
         command = find(cmds, cmds + 7, target) - cmds;
         intersections = 1;
 
         return command < GO;
     }
-
-    // 检查是否为符合语法规则的 GO 命令。
-    if (texts.front() == "GO")
+    else if (texts.front() == "GO")
     {
-        // 排除形如 GO ON 2 AND 的命令。
-        if (texts.size() == 3 && texts.at(1) != "STRAIGHT")
+        if (texts.size() == 3 && texts[1] != "STRAIGHT")
             return false;
 
-        // 排除形如 GO 123 或 GO 12H 等形式的命令。
         if (texts.back().length() > 2 || !isdigit(texts.back().front()))
             return false;
 
-        // 排除形如 GO 1H 的命令。
         if (texts.back().length() == 2 && !isdigit(texts.back().back()))
             return false;
 
-        // 设置命令。
         command = GO;
         intersections = stoi(texts.back());
 
-        // 排除形如 GO 0 的命令。
         return 1 <= intersections && intersections <= 99;
     }
 
     return false;
 }
 
+bool validateDirection(int x, int y, int heading)
+{
+    if (x == 100 && y == 100)
+        return (heading == SW || heading == W || heading == S);
+    if (x == 100 && y == 50)
+        return (heading == NW || heading == SW || heading == N || heading == S || heading == W);
+    if (x == 100 && y == 0)
+        return (heading == NW || heading == N || heading == W);
+    if (x == 50 && y == 100)
+        return (heading == SE || heading == SW || heading == E || heading == S || heading == W);
+    if (x == 50 && y == 0)
+        return (heading == NE || heading == NW || heading == E || heading == N || heading == W);
+    if (x == 0 && y == 100)
+        return (heading == SE || heading == E || heading == S);
+    if (x == 0 && y == 50)
+        return (heading == NE && heading == SE || heading == N || heading == E || heading == S);
+    if (x == 0 && y == 0)
+        return (heading == NE || heading == N || heading == E);
+
+    if ((x - y == -50 || x - y == 0 || x - y == 50) && (heading == NE || heading == SW))
+        return true;
+    if ((x + y == 50 || x + y == 100 || x + y == 150) && (heading == NW || heading == SE))
+        return true;
+
+    if (y == 100 && (heading == N || heading == NE || heading == NW))
+        return false;
+    if (y == 0 && (heading == SE || heading == S || heading == SW))
+        return false;
+    if (x == 0 && (heading == SW || heading == W || heading == NW))
+        return false;
+    if (x == 100 && (heading == NE || heading == E || heading == SE))
+        return false;
+
+    if (heading == N || heading == E || heading == S || heading == W)
+        return true;
+
+    return false;
+}
+
 bool validateMove()
 {
-    if (command == TURN_LEFT)
+    int x = avenue + step[ahead][0] * intersections;
+    int y = street + step[ahead][1] * intersections;
+    int heading = aheadAfterTurn[ahead][command];
+
+    bool validMove = false;
+
+    if (command == GO)
     {
-        if (heading == N)
-        {
-            if (avenue == 0)
-                return false;
-            return true;
-        }
-        else if (heading == E)
-        {
-            if (street == 100)
-                return false;
-            return true;
-        }
-        else if (heading == S)
-        {
-            if (avenue == 100)
-                return false;
-            return true;
-        }
-        else if (heading == W)
-        {
-            if (street == 0)
-                return false;
-            return true;
-        }
-        else if (heading == NE)
-        {
-            if (street == 49 && (avenue == 49 || avenue == 99))
-                return true;
-            return false;
-        }
-        else if (heading == NW)
-        {
-            if (avenue == 51 && (street == 49 || street == 99))
-                return true;
-            return false;
-        }
-        else if (heading == SE)
-        {
-            if (avenue == 49 && (street == 51 || street == 1))
-                return true;
-            return false;
-        }
-        else if (heading == SW)
-        {
-            if (street == 51 && (avenue == 51 || avenue == 1))
-                return true;
-            return false;
-        }
+        validMove = true;
+
+        if (x < 0 || x > 100 || y < 0 || y > 100)
+            validMove = false;
+
+        return validMove;
     }
 
-    if (command == TURN_RIGHT)
-    {
-        if (heading == N)
-        {
-            if ((avenue == 0 || avenue == 50) && (street == 49 || street == 99))
-                return true;
-            return false;
-        }
-        else if (heading == E)
-        {
-            if ((street == 50 || street == 100) && (avenue == 49 || avenue == 99))
-                return true;
-            return false;
-        }
-        else if (heading == S)
-        {
-            if ((avenue == 50 || avenue == 100) && (street == 1 || street == 51))
-                return true;
-            return false;
-        }
-        else if (heading == W)
-        {
-            if ((street == 0 || street == 50) && (avenue == 1 || avenue == 51))
-                return true;
-            return false;
-        }
-        else if (heading == NE)
-        {
-            if (avenue == 49 && (street == 49 || street == 99))
-                return true;
-            return false;
-        }
-        else if (heading == NW)
-        {
-            if (street == 49 && (avenue == 51 || avenue == 1))
-                return true;
-            return false;
-        }
-        else if (heading == SE)
-        {
-            if (street == 51 && (avenue == 49 || avenue == 99))
-                return true;
-            return false;
-        }
-        else if (heading == SW)
-        {
-            if (avenue == 51 && (street == 51 && street == 1))
-                return true;
-            return false;
-        }
-    }
+    // make sure the direction is valid
+    if (validateDirection(x, y, heading) == false)
+        return false;
 
-    if (command == TURN_HALF_LEFT)
-    {
-        if (heading == N)
-        {
-            if (avenue == 50 && street == 49)
-                return true;
-            if ((avenue + street) == 49 && (avenue >= 1 && avenue <= 49))
-                return true;
-            if ((avenue + street) == 149 && (avenue >= 51 && avenue <= 100))
-                return true;
-            return false;
-        }
-        else if (heading == E)
-        {
-            if (avenue == 49 && street == 50)
-                return true;
-            if ((street - avenue) == 51 && (street >= 51 && street <= 99))
-                return true;
-            if ((avenue - street) == 49 && (street >= 0 && street <= 49))
-                return true;
-            return false;
-        }
-        else if (heading == S)
-        {
-            if (avenue == 50 && street == 51)
-                return true;
-            if ((avenue + street) == 51 && (avenue >= 0 && avenue <= 49))
-                return true;
-            if ((avenue + street) == 151 && (avenue >= 51 && avenue <= 99))
-                return true;
-            return false;
-        }
-        else if (heading == W)
-        {
-            if (avenue == 51 && street == 50)
-                return true;
-            if ((street - avenue) == 49 && (street >= 51 && street <= 100))
-                return true;
-            if ((avenue - street) == 51 && (street >= 1 && street <= 49))
-                return true;
-            return false;
-        }
-        else if (heading == NE)
-        {
-            if (avenue == 49 && street == 49)
-                return true;
-            if ((street - avenue) == 50 && (avenue >= 0 && avenue <= 48))
-                return true;
-            if ((avenue - street) == 50 && (avenue >= 50 && avenue <= 99))
-                return true;
-            return false;
-        }
-        else if (heading == NW)
-        {
-            if (avenue == 51 && street == 49)
-                return true;
-            if ((avenue + street) == 50 && (avenue >= 2 && avenue <= 50))
-                return true;
-            if ((avenue + street) == 150 && (avenue >= 51 && avenue <= 100))
-                return true;
-            return false;
-        }
-        else if (heading == SE)
-        {
-            if (avenue == 49 && street == 51)
-                return true;
-            if ((avenue + street) == 50 && (avenue >= 0 && avenue <= 49))
-                return true;
-            if ((avenue + street) == 150 && (avenue >= 50 && avenue <= 98))
-                return true;
-            return false;
-        }
-        else if (heading == SW)
-        {
-            if (avenue == 51 && street == 51)
-                return true;
-            if ((street - avenue) == 50 && (street >= 51 && street <= 100))
-                return true;
-            if ((avenue - street) == 50 && (street >= 2 && street <= 50))
-                return true;
-            return false;
-        }
-    }
+    int before = isStayOnThroughways(avenue, street, ahead);
+    int after = isStayOnThroughways(x, y, heading);
 
-    if (command == TURN_HALF_RIGHT)
+    // check enter or exiting throughways or boulevards
+    if (before < 0 && after > 0)
     {
-        if (heading == N)
-        {
-            if (avenue == 50 && street == 49)
-                return true;
-            if ((street - avenue) == 49 && (avenue >= 0 && avenue <= 49))
-                return true;
-            if ((avenue - street) == 51 && (avenue >= 51 && avenue <= 99))
-                return true;
-            return false;
-        }
-        else if (heading == E)
-        {
-            if (avenue == 49 && street == 50)
-                return true;
-            if ((avenue + street) == 49 && (street >= 1 && street <= 49))
-                return true;
-            if ((avenue + street) == 149 && (street >= 51 && street <= 100))
-                return true;
-            return false;
-        }
-        else if (heading == S)
-        {
-            if (avenue == 50 && street == 51)
-                return true;
-            if ((street - avenue) == 51 && (avenue >= 1 && avenue <= 49))
-                return true;
-            if ((avenue - street) == 49 && (avenue >= 51 && avenue <= 100))
-                return true;
-            return false;
-        }
-        else if (heading == W)
-        {
-            if (avenue == 51 && street == 50)
-                return true;
-            if ((avenue + street) == 51 && (street >= 0 && street <= 49))
-                return true;
-            if ((avenue + street) == 151 && (street >= 51 && street <= 99))
-                return true;
-            return false;
-        }
-        else if (heading == NE)
-        {
-            if (avenue == 49 && street == 49)
-                return true;
-            if ((street - avenue) == 50 && (avenue >= 0 && avenue <= 49))
-                return true;
-            if ((avenue - street) == 50 && (avenue >= 50 && avenue <= 98))
-                return true;
-            return false;
-        }
-        else if (heading == NW)
-        {
-            if (avenue == 51 && street == 49)
-                return true;
-            if ((avenue + street) == 50 && (avenue >= 1 && avenue <= 50))
-                return true;
-            if ((avenue + street) == 150 && (avenue >= 52 && avenue <= 100))
-                return true;
-            return false;
-        }
-        else if (heading == SE)
-        {
-            if (avenue == 49 && street == 51)
-                return true;
-            if ((avenue + street) == 50 && (avenue >= 0 && avenue <= 48))
-                return true;
-            if ((avenue + street) == 150 && (avenue >= 50 && avenue <= 99))
-                return true;
-            return false;
-        }
-        else if (heading == SW)
-        {
-            if (avenue == 51 && street == 51)
-                return true;
-            if ((street - avenue) == 50 && (avenue >= 2 && avenue <= 50))
-                return true;
-            if ((avenue - street) == 50 && (avenue >= 51 && avenue <= 100))
-                return true;
-            return false;
-        }
+        if (before == -1)
+            validMove = command == TURN_LEFT;
+        else
+            validMove = command == TURN_SHARP_LEFT;
     }
+    else if (before > 0 && after < 0)
+    {
+        if (after == -1)
+            validMove = command == TURN_LEFT;
+        else
+            validMove = command == TURN_SHARP_LEFT;
+    }
+    else
+        validMove = true;
 
-    if (command == TURN_SHARP_LEFT)
-    {
-        if (heading == N)
-        {
-            if ((street - avenue) == 49 && (avenue >= 1 && avenue <= 50))
-                return true;
-            if ((avenue - street) == 51 && (avenue >= 51 && avenue <= 100))
-                return true;
-            if ((avenue - street) == 1 && (avenue >= 1 && avenue <= 100))
-                return true;
-            return false;
-        }
-        else if (heading == E)
-        {
-            if ((avenue + street) == 49 && (avenue >= 0 && avenue <= 49))
-                return true;
-            if ((avenue + street) == 149 && (avenue >= 50 && avenue <= 99))
-                return true;
-            if ((avenue + street) == 99 && (avenue >= 0 && avenue <= 99))
-                return true;
-            return false;
-        }
-        else if (heading == S)
-        {
-            if ((street - avenue) == 51 && (avenue >= 0 && avenue <= 49))
-                return true;
-            if ((avenue - street) == 49 && (avenue >= 50 && avenue <= 99))
-                return true;
-            if ((street - avenue) == 1 && (avenue >= 0 && avenue <= 99))
-                return true;
-            return false;
-        }
-        else if (heading == W)
-        {
-            if ((avenue + street) == 51 && (avenue >= 1 && avenue <= 50))
-                return true;
-            if ((avenue + street) == 151 && (avenue >= 51 && avenue <= 100))
-                return true;
-            if ((avenue + street) == 101 && (avenue >= 1 && avenue <= 100))
-                return true;
-            return false;
-        }
-        else if (heading == NE)
-        {
-            if ((street - avenue) == 50 && (avenue >= 0 && avenue <= 49))
-                return true;
-            if ((avenue - street) == 50 && (avenue >= 50 && avenue <= 99))
-                return true;
-            if ((avenue - street) == 0 && (avenue >= 0 && avenue <= 99))
-                return true;
-            return false;
-        }
-        else if (heading == NW)
-        {
-            if ((avenue + street) == 50 && (avenue >= 1 && avenue <= 50))
-                return true;
-            if ((avenue + street) == 150 && (avenue >= 51 && avenue <= 100))
-                return true;
-            if ((avenue + street) == 100 && (avenue >= 1 && avenue <= 100))
-                return true;
-            return false;
-        }
-        else if (heading == SE)
-        {
-            if ((avenue + street) == 50 && (avenue >= 0 && avenue <= 49))
-                return true;
-            if ((avenue + street) == 150 && (avenue >= 50 && avenue <= 99))
-                return true;
-            if ((avenue + street) == 100 && (avenue >= 0 && avenue <= 99))
-                return true;
-            return false;
-        }
-        else if (heading == SW)
-        {
-            if ((street - avenue) == 50 && (avenue >= 1 && avenue <= 50))
-                return true;
-            if ((avenue - street) == 50 && (avenue >= 51 && avenue <= 100))
-                return true;
-            if ((avenue - street) == 0 && (avenue >= 1 && avenue <= 100))
-                return true;
-            return false;
-        }
-    }
+    // At nine intersections, any turn is valid
+    if ((x == 0 || x == 50 || x == 100) && (y == 0 || y == 50 || y == 100))
+        validMove = true;
 
-    if (command == TURN_SHARP_RIGHT)
-    {
-        if (heading == N)
-        {
-            if (avenue == 50 && street == 49)
-                return true;
-            if (avenue == 0 && street == 99)
-                return true;
-            if ((avenue + street) == 49 && (avenue >= 0 && avenue <= 49))
-                return true;
-            if ((avenue + street) == 149 && (avenue >= 50 && avenue <= 99))
-                return true;
-            return false;
-        }
-        else if (heading == E)
-        {
-            if (avenue == 49 && street == 50)
-                return true;
-            if (avenue == 99 && street == 100)
-                return true;
-            if ((street - avenue) == 51 && (avenue >= 0 && avenue <= 49))
-                return true;
-            if ((avenue - street) == 49 && (avenue >= 50 && avenue <= 99))
-                return true;
-            return false;
-        }
-        else if (heading == S)
-        {
-            if (avenue == 50 && street == 51)
-                return true;
-            if (avenue == 100 && street == 1)
-                return true;
-            if ((avenue + street) == 51 && (avenue >= 1 && avenue <= 50))
-                return true;
-            if ((avenue + street) == 151 && (avenue >= 51 && avenue <= 100))
-                return true;
-            return false;
-        }
-        else if (heading == W)
-        {
-            if (avenue == 51 && street == 50)
-                return true;
-            if (avenue == 1 && street == 0)
-                return true;
-            if ((street - avenue) == 49 && (avenue >= 1 && avenue <= 50))
-                return true;
-            if ((avenue - street) == 51 && (avenue >= 51 && avenue <= 100))
-                return true;
-            return false;
-        }
-        else if (heading == NE)
-        {
-            if (avenue == 49 && street == 49)
-                return true;
-            if (avenue == 99 && street == 99)
-                return true;
-            if ((street - avenue) == 50 && (avenue >= 0 && avenue <= 49))
-                return true;
-            if ((avenue - street) == 50 && (avenue >= 50 && avenue <= 99))
-                return true;
-            return false;
-        }
-        else if (heading == NW)
-        {
-            if (avenue == 51 && street == 49)
-                return true;
-            if (avenue == 1 && street == 99)
-                return true;
-            if ((avenue + street) == 50 && (avenue >= 1 && avenue <= 50))
-                return true;
-            if ((avenue + street) == 150 && (avenue >= 51 && avenue <= 100))
-                return true;
-            return false;
-        }
-        else if (heading == SE)
-        {
-            if (avenue == 49 && street == 51)
-                return true;
-            if (avenue == 99 && street == 1)
-                return true;
-            if ((avenue + street) == 50 && (avenue >= 0 && avenue <= 49))
-                return true;
-            if ((avenue + street) == 150 && (avenue >= 50 && avenue <= 99))
-                return true;
-            return false;
-        }
-        else if (heading == SW)
-        {
-            if (avenue == 51 && street == 51)
-                return true;
-            if (avenue == 1 && street == 1)
-                return true;
-            if ((street - avenue) == 50 && (avenue >= 1 && avenue <= 50))
-                return true;
-            if ((avenue - street) == 50 && (avenue >= 51 && avenue <= 100))
-                return true;
-            return false;
-        }
-    }
+    return validMove;
 }
 
 int main(int argc, char *argv[])
@@ -611,7 +223,7 @@ int main(int argc, char *argv[])
     {
         parseDirection(line);
 
-        if (texts.size() == 1 && texts[0] == "STOP")
+        if (line == "STOP")
         {
             displayDestination();
             startPositionReaded = false;
@@ -627,9 +239,9 @@ int main(int argc, char *argv[])
 
         if (validateCommand() && validateMove())
         {
-            avenue += step[heading][0] * intersections;
-            street += step[heading][1] * intersections;
-            heading = headingAfterTurn[heading][command];
+            avenue += step[ahead][0] * intersections;
+            street += step[ahead][1] * intersections;
+            ahead = aheadAfterTurn[ahead][command];
         }
     }
 
