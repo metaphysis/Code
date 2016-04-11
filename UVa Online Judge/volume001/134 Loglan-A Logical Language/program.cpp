@@ -1,200 +1,152 @@
 // Loglan-A Logical Language
 // UVa IDs: 134
 // Verdict: Accepted
-// Submission Date: 2016-01-01
+// Submission Date: 2016-04-11
 // UVa Run Time: 0.000s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
 #include <iostream>
-#include <string>
 #include <vector>
 #include <sstream>
 
 using namespace std;
 
-// A => a | e | i | o | u
-bool isA(char c)
+const int NONE = -1, A = 0, MOD = 1, BA = 2, DA = 3, LA = 4, NAM = 5,
+    PREDA = 6, PREDSTRING = 7, PREDNAME = 8, PREDS = 9, VERBPRED = 10,
+    PREDVERB = 11, PREDCLAIM = 12, STATEMENT = 13, SENTENCE = 14;
+
+vector < int > symbols;
+vector < string > words;
+
+int groups[14][4] = {
+    {PREDA, NONE, PREDA, PREDA}, {PREDA, NONE, NONE, PREDSTRING},
+    {NAM, NONE, NONE, PREDNAME}, {LA, NONE, PREDSTRING, PREDNAME},
+    {MOD, NONE, PREDSTRING, VERBPRED}, {A, PREDSTRING, PREDSTRING, PREDSTRING},
+    {PREDSTRING, NONE, NONE, PREDS}, {DA, NONE, PREDS, PREDCLAIM},
+    {BA, PREDNAME, PREDS, PREDCLAIM}, {VERBPRED, PREDNAME, NONE, PREDVERB},
+    {PREDVERB, NONE, PREDNAME, STATEMENT}, {PREDVERB, NONE, NONE, STATEMENT},
+    {STATEMENT, NONE, NONE, SENTENCE}, {PREDCLAIM, NONE, NONE, SENTENCE}
+};
+
+int getSymbol(string word)
 {
     string vowel = "aeiou";
-    return vowel.find(c) != string::npos;
-}
-
-// MOD => ga | ge | gi | go | gu
-bool isMOD(string word)
-{
-    return word.length() == 2 && word[0] == 'g' && isA(word[1]);
-}
-
-// BA => ba | be | bi | bo | bu
-bool isBA(string word)
-{
-    return word.length() == 2 && word[0] == 'b' && isA(word[1]);
-}
-
-// DA => da | de | di | do | du
-bool isDA(string word)
-{
-    return word.length() == 2 && word[0] == 'd' && isA(word[1]);
-}
-
-// LA => la | le | li | lo | lu
-bool isLA(string word)
-{
-    return word.length() == 2 && word[0] == 'l' && isA(word[1]);
-}
-
-// NAM => { all names }，最后一个字母为辅音字母。
-bool isNAM(string word)
-{
-    return !isA(word.at(word.length() - 1));
-}
-
-// PREDA => { all predicates }，满足 CCVCV 或者 CVCCV 的模式，C 为辅音字母，
-// V 为元音字母。使用位操作，将字符位置编为一个二进制数进行判断。
-bool isPREDA(string word)
-{
-    if (word.length() != 5)
-        return false;
-
-    int bitOr = 0;
-    for (int i = 0; i < 5; i++)
-        bitOr |= ((isA(word[i]) ? 1 : 0) << (4 - i));
-            
-    return (bitOr == 5 || bitOr == 9);
-}
-
-// <predstring> => PREDA | <predstring> PREDA
-bool isPredstring(vector<string> words)
-{
-    if (words.size() == 0)
-        return false;
-
-    for (int i = 0; i < words.size(); i++)
-        if (!isPREDA(words[i]))
-            return false;
-    return true;
-}
-
-// <preds> => <predstring> | <preds> A <predstring>
-bool isPreds(vector<string> words)
-{
-    if (words.size() == 0)
-        return false;
-
-    // 找到起始的 PREDA 或 A
-    for (int i = words.size() - 1; i >= 0; i--)
+    if (word.length() == 1 && vowel.find(word[0]) != word.npos)
+        return A;
+    if (word.length() == 2 && vowel.find(word[1]) != word.npos)
     {
-        if (isPREDA(words[i]))
-            continue;
-        else if (words[i].length() == 1 && isA(words[i][0]))
+        switch (word[0])
         {
-            if (i > 0)
-            {
-                vector<string> preds(words.begin(), words.begin() + i);
-                return isPreds(preds);
-            }
-            else
-                return false;
+            case 'g':
+                return MOD;
+            case 'b':
+                return BA;
+            case 'd':
+                return DA;
+            case 'l':
+                return LA;
         }
+        return NONE;
+    }
+    if (vowel.find(word.back()) == word.npos)
+        return NAM;
+    if (word.length() == 5)
+    {
+        int bitOr = 0;
+        for (int i = 0; i < 5; i++)
+            bitOr |= ((vowel.find(word[i]) != word.npos ? 1 : 0) << (4 - i));
+        if (bitOr == 5 || bitOr == 9)
+            return PREDA;
+    }
+    return NONE;
+}
+
+bool translateToSymbol()
+{
+    symbols.clear();
+    for (int i = 0; i < words.size(); i++)
+    {
+        int temp = getSymbol(words[i]);
+        if (temp == NONE)
+            return false;
         else
-            return false;
+            symbols.push_back(temp);
     }
-
     return true;
 }
 
-// <predname> => LA <predstring> | NAM
-bool isPredname(vector<string> words)
+bool isSentence()
 {
-    if (words.size() == 0)
-        return false;
-        
-    if (!isLA(words.front()) && !isNAM(words.front()))
+    if (translateToSymbol() == false)
         return false;
 
-    if (words.size() == 1 && isNAM(words.front()))
-        return true;
-
-    if (isLA(words.front()))
+    for (int i = 0; i < 14; i++)
     {
-        vector<string> predstring(words.begin() + 1, words.end());
-        return isPredstring(predstring);
-    }
-    else
-        return false;
-
-    return true;
-}
-
-// <statement> => <predname> <verbpred> <predname> | <predname> <verbpred>
-bool isStatement(vector<string> words)
-{
-    // 找到 <verbpred>
-    int i, j;
-    for (i = 0; i <= (words.size() - 2); i++)
-        if (isMOD(words.at(i)))
+        while (true)
         {
-            // 提取 <verbpred> 之前的 <predname>
-            vector<string> predname(words.begin(), words.begin() + i);
-            
-            // 找到构成 <verbpred> 在 MOD 之后的所有 PREDA，若未到 words 的末端，
-            // 则句子可能是 statement 的第一种模式，否则可能是第二种模式
-            for (j = i + 1; j < words.size(); j++)
-                if (!isPREDA(words[j]))
-                    break;
-            if (j < (words.size() - 1))
+            bool found = false;
+            for (int j = 0; j < symbols.size(); j++)
             {
-                vector<string> nextPredname(words.begin() + j, words.end());
-                return isPredname(predname) && isPredname(nextPredname);
+                if (symbols[j] == groups[i][0])
+                {
+                    if (groups[i][1] != NONE && j == 0)
+                        continue;
+
+                    if (groups[i][2] != NONE && j == (symbols.size() - 1))
+                        continue;
+
+                    if (groups[i][1] == NONE && groups[i][2] == NONE)
+                    {
+                        found = true;
+                        symbols[j] = groups[i][3];
+                        break;
+                    }
+
+                    if (groups[i][1] != NONE && groups[i][2] != NONE)
+                    {
+                        if (symbols[j - 1] == groups[i][1] &&
+                            symbols[j + 1] == groups[i][2])
+                        {
+                            found = true;
+                            symbols[j - 1] = groups[i][3];
+                            symbols.erase(symbols.begin() + j + 1);
+                            symbols.erase(symbols.begin() + j);
+                            break;
+                        }
+                    }
+                    else if (groups[i][1] != NONE &&
+                        symbols[j - 1] == groups[i][1])
+                    {
+                        found = true;
+                        symbols[j - 1] = groups[i][3];
+                        symbols.erase(symbols.begin() + j);
+                        break;
+                    }
+                    else if (groups[i][2] != NONE &&
+                        symbols[j + 1] == groups[i][2])
+                    {
+                        found = true;
+                        symbols[j] = groups[i][3];
+                        symbols.erase(symbols.begin() + j + 1);
+                        break;
+                    }
+                }
             }
-            else
-                return isPredname(predname);
-        }
 
-    return false;
-}
-
-// <predclaim> => <predname> BA <preds> | DA <preds>
-bool isPredclaim(vector<string> words)
-{
-    // DA <preds>
-    if (isDA(words.front()))
-    {
-        vector<string> preds(words.begin() + 1, words.end());
-        return isPreds(preds);
-    }
-
-    // <predname> BA <preds>
-    for (int i = 0; i < words.size(); i++)
-    {
-        if (isBA(words[i]))
-        {
-            vector<string> predname(words.begin(), words.begin() + i);
-            vector<string> preds(words.begin() + i + 1, words.end());
-            return isPredname(predname) && isPreds(preds);
+            if (found == false)
+                break;
         }
     }
 
-    return false;
-}
-
-// <sentence> => <statement> | <predclaim>
-bool isSentence(vector<string> words)
-{
-    if (words.size() == 0)
-        return false;
-    return isStatement(words) || isPredclaim(words);
+    return (symbols.size() == 1 && symbols[0] == SENTENCE);
 }
 
 int main(int argc, char *argv[])
 {
-    vector<string> words;
-
     string line, word;
     while (getline(cin, line), line != "#")
     {
-        // 读入字符串，将其转换为单词数组以便判定。
         string newLine(line);
         if (line.find('.') != string::npos)
             newLine = newLine.substr(0, newLine.find('.'));
@@ -205,7 +157,7 @@ int main(int argc, char *argv[])
 
         if (line.find('.') != string::npos)
         {
-            cout << (isSentence(words) ? "Good" : "Bad!") << endl;
+            cout << (isSentence()? "Good" : "Bad!") << endl;
             words.clear();
         }
     }

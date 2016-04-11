@@ -35,8 +35,8 @@ using namespace std;
 #endif
 
 #ifdef DEBUG_MODE
-string type[STRAIGHT_FLUSH + 1] =
-    { "HIGH_CARD", "PAIR", "TWO_PAIR", "THREE_KIND",
+string type[STRAIGHT_FLUSH + 1] = {
+    "HIGH_CARD", "PAIR", "TWO_PAIR", "THREE_KIND",
     "STRAIGHT", "FLUSH", "FULL_HOUSE", "FOUR_KIND", "STRAIGHT_FLUSH"
 };
 #endif
