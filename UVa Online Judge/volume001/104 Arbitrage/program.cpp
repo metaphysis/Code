@@ -6,12 +6,11 @@
 // 版权所有（C）2011，邱秋。metaphysis # yeah dot net
 //
 // [解题方法]
-// 本质是求一个最小环，要求边权的积大于或等于 1.02，可以使用动态规划和
-// Floyd-Warshall 算法（实际上Floyd-Warshall 本身就已经使用了动态规划的思想）
-// 来解决本题。
+// 本质是求一个最小环，要求边权的积大于或等于 1.02，可以使用动态规划和 Floyd-Warshall
+// 算法（实际上 Floyd-Warshall 本身就已经使用了动态规划的思想）来解决本题。
 //
-// 用 profit(i, j, step) 表示 “由 i 经过 step 步套汇得到 j 可以得到的最大 profit 值”。则有以
-// 下递推关系：
+// 用 profit(i, j, step) 表示 “由 i 经过 step 步套汇得到 j 可以得到的最大 profit 值”。
+// 则有以下递推关系：
 //
 // profit(i, j, step) = profit(i, k, step-1) * profit(k, j, 1)
 // 条件是：profit(i, k, step-1) * profit(k, j, 1) > profit(i, j, step)
