@@ -1,10 +1,10 @@
 // Stacks of Flapjacks
 // UVa IDs: 120
 // Verdict: Accepted
-// Submission Date: 2011-05-22
-// UVa Run Time: 0.028s
+// Submission Date: 2016-04-12
+// UVa Run Time: 0.000s
 //
-// 版权所有（C）2011，邱秋。metaphysis # yeah dot net
+// 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 	
 #include <iostream>
 #include <sstream>
@@ -43,6 +43,9 @@ void flip(int pos, int size)
 	
 int main(int ac, char *av[])
 {
+    cin.tie(0);
+    cout.sync_with_stdio(false);
+    
 	string line;
 	while (getline(cin, line))
 	{

@@ -3,7 +3,7 @@
 // Submission Date: 2016-04-12
 // UVa Run Time: 0.000s
 //
-// 版权所有（C）2011，邱秋。metaphysis # yeah dot net
+// 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 //
 // [解题方法]
 // 图论，欧拉路径。根据题意，度为奇数的节点数为 1 的情况不可能出现，度为奇数的节点数
