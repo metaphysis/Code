@@ -1,7 +1,7 @@
 // Loglan-A Logical Language
 // UVa IDs: 134
 // Verdict: Accepted
-// Submission Date: 2016-04-11
+// Submission Date: 2016-04-12
 // UVa Run Time: 0.000s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
@@ -16,10 +16,10 @@ const int NONE = -1, A = 0, MOD = 1, BA = 2, DA = 3, LA = 4, NAM = 5,
     PREDA = 6, PREDSTRING = 7, PREDNAME = 8, PREDS = 9, VERBPRED = 10,
     PREDVERB = 11, PREDCLAIM = 12, STATEMENT = 13, SENTENCE = 14;
 
-vector < int > symbols;
-vector < string > words;
+vector < int > S;
+vector < string > W;
 
-int groups[14][4] = {
+int T[14][4] = {
     {PREDA, NONE, PREDA, PREDA}, {PREDA, NONE, NONE, PREDSTRING},
     {NAM, NONE, NONE, PREDNAME}, {LA, NONE, PREDSTRING, PREDNAME},
     {MOD, NONE, PREDSTRING, VERBPRED}, {A, PREDSTRING, PREDSTRING, PREDSTRING},
@@ -64,14 +64,14 @@ int getSymbol(string word)
 
 bool translateToSymbol()
 {
-    symbols.clear();
-    for (int i = 0; i < words.size(); i++)
+    S.clear();
+    for (int i = 0; i < W.size(); i++)
     {
-        int temp = getSymbol(words[i]);
-        if (temp == NONE)
+        int symbol = getSymbol(W[i]);
+        if (symbol == NONE)
             return false;
         else
-            symbols.push_back(temp);
+            S.push_back(symbol);
     }
     return true;
 }
@@ -82,64 +82,21 @@ bool isSentence()
         return false;
 
     for (int i = 0; i < 14; i++)
-    {
-        while (true)
+        for (int j = 0; j < S.size();)
         {
-            bool found = false;
-            for (int j = 0; j < symbols.size(); j++)
+            if ((S[j] != T[i][0]) ||
+                (T[i][1] != NONE && (j == 0 || S[j - 1] != T[i][1])) ||
+                (T[i][2] != NONE && (j == (S.size() - 1) || S[j + 1] != T[i][2])))
             {
-                if (symbols[j] == groups[i][0])
-                {
-                    if (groups[i][1] != NONE && j == 0)
-                        continue;
-
-                    if (groups[i][2] != NONE && j == (symbols.size() - 1))
-                        continue;
-
-                    if (groups[i][1] == NONE && groups[i][2] == NONE)
-                    {
-                        found = true;
-                        symbols[j] = groups[i][3];
-                        break;
-                    }
-
-                    if (groups[i][1] != NONE && groups[i][2] != NONE)
-                    {
-                        if (symbols[j - 1] == groups[i][1] &&
-                            symbols[j + 1] == groups[i][2])
-                        {
-                            found = true;
-                            symbols[j - 1] = groups[i][3];
-                            symbols.erase(symbols.begin() + j + 1);
-                            symbols.erase(symbols.begin() + j);
-                            break;
-                        }
-                    }
-                    else if (groups[i][1] != NONE &&
-                        symbols[j - 1] == groups[i][1])
-                    {
-                        found = true;
-                        symbols[j - 1] = groups[i][3];
-                        symbols.erase(symbols.begin() + j);
-                        break;
-                    }
-                    else if (groups[i][2] != NONE &&
-                        symbols[j + 1] == groups[i][2])
-                    {
-                        found = true;
-                        symbols[j] = groups[i][3];
-                        symbols.erase(symbols.begin() + j + 1);
-                        break;
-                    }
-                }
+                j++;
+                continue;
             }
-
-            if (found == false)
-                break;
+            j = T[i][1] != NONE ? S.erase(S.begin() + j - 1) - S.begin() : j;
+            j = T[i][2] != NONE ? S.erase(S.begin() + j + 1) - S.begin() - 1 : j;
+            S[j] = T[i][3];
         }
-    }
 
-    return (symbols.size() == 1 && symbols[0] == SENTENCE);
+    return (S.size() == 1 && S[0] == SENTENCE);
 }
 
 int main(int argc, char *argv[])
@@ -153,12 +110,12 @@ int main(int argc, char *argv[])
 
         istringstream iss(newLine);
         while (iss >> word)
-            words.push_back(word);
+            W.push_back(word);
 
         if (line.find('.') != string::npos)
         {
             cout << (isSentence()? "Good" : "Bad!") << endl;
-            words.clear();
+            W.clear();
         }
     }
 
