@@ -1,10 +1,10 @@
 // Unidirectional TSP
 // UVa IDs: 116
 // Verdict: Accepted
-// Submission Date: 2011-10-12
-// UVa Run Time: 0.252s
+// Submission Date: 2016-04-12
+// UVa Run Time: 0.030s
 //
-// 版权所有（C）2011，邱秋。metaphysis # yeah dot net
+// 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
 #include <iostream>
 
@@ -16,6 +16,9 @@ using namespace std;
 
 int main(int ac, char *av[])
 {
+    cin.tie(0);
+    cout.sync_with_stdio(false);
+    
 	int line, row, tag, tmp;
 	int successor[MAXLINE][MAXROW];
 	long long matrix[MAXLINE][MAXROW];
@@ -27,8 +30,9 @@ int main(int ac, char *av[])
 			for (int j = 1; j <= row; j++)
 				cin >> matrix[i][j];
 
-		// 列优先处理，从倒数第二列开始处理，因为需要字典序最小的最小权和路径，如果从左
-		// 往右处理，可以得到行号最小的权和方案，但是不一定是字典序最小的。
+		// 从右往左进行动态规划，即列优先处理，从倒数第二列开始，因为需要字典序最小
+		// 的最小权和路径，如果从左往右处理，可以得到行号最小的权和方案，但是不一定
+		// 是字典序最小的。
 		for (int j = row - 1; j >= 1; j--)
 		{
 			for (int i = 1; i <= line; i++)
@@ -66,7 +70,7 @@ int main(int ac, char *av[])
 			}
 		}
 
-		// 找权和最小的单元格。
+		// 找第一列权和最小的单元格。
 		min = MAXINT;
 		for (int i = 1; i <= line; i++)
 			if (matrix[i][1] < min)
@@ -75,7 +79,7 @@ int main(int ac, char *av[])
 				tag = i;
 			}
 
-		// 输出。
+		// 输出路径和最小权和。
 		cout << tag;
 		int next = 1;
 		int tmp = tag;
@@ -86,8 +90,8 @@ int main(int ac, char *av[])
 			next++;
 		}
 
-		cout << endl;
-		cout << matrix[tag][1] << endl;
+		cout << "\n";
+		cout << matrix[tag][1] << "\n";
 	}
 
 	return 0;
