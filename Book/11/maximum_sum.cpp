@@ -7,8 +7,8 @@ int maximumSumN3(int data[], int n)
 {
     int maximum = numeric_limits<int>::min();
 
-    for (int i = 0; i < n - 1; i++)
-        for (int j = i + 1; j < n; j++)
+    for (int i = 0; i < n; i++)
+        for (int j = i; j < n; j++)
         {
             int sum = 0;
             for (int k = i; k <= j; k++)
@@ -67,13 +67,45 @@ int maximumSumN(int data[], int n)
     return maximum;
 }
 
+int maximumSum(int data[], int n)
+{
+    int maximum = data[0], maximumCurrent = data[0];
+    
+    for (int i = 1; i < n; i++)
+    {
+        maximumCurrent = max(data[i], maximumCurrent + data[i]);
+        maximum = max(maximum, maximumCurrent);
+    }
+    
+    return maximum;
+}
+
+long long maximumProduct(int data[], int n)
+{
+    long long maximum = data[0], maxCurrent = data[0], minCurrent = data[0];
+    
+    for (int i = 1; i < n; i++)
+    {
+        long long element = data[i];
+        maxCurrent = max(element,
+            max(maxCurrent * element, minCurrent * element));
+        minCurrent = min(element,
+            min(maxCurrent * element, minCurrent * element));
+        maximum = max(maximum, maxCurrent);
+    }
+    
+    return maximum;
+}
+
 int main(int argc, char *argv[])
 {
-    int data[] = { 13, -17, 45, 89, -77, 33, 90, -31, 103, 28 };
+    int data[] = { -13, -17, 45, -20, 33, -33, 90, 30, 41, 7 };
 
     cout << maximumSumN3(data, 10) << endl;
     cout << maximumSumNLogN(data, 0, 9) << endl;
     cout << maximumSumN(data, 10) << endl;
+    cout << maximumSum(data, 10) << endl;
+    cout << maximumProduct(data, 10) << endl;
     
     return 0;
 }
