@@ -1,13 +1,13 @@
 Sample Test Data Set 1
 4
 Ownship
-0.0 0.0 90.0 10.0 
+0.0 0.0 90.0 10.0
 Windswept
 10.0 10.0 135.0 8.0
 Footloose
 -5.0 6.0 275.0 6.0
 Crasher 1
-0.0 9.0 135 14.14  
+0.0 9.0 135 14.14
 Aquavit
 -2.0 -2.0 294.0 15.0
 Sample Test Data Set 2
@@ -24,3 +24,243 @@ Cornelius
 0.3140954 -9.0 0.0 1.0
 Daeron
 0.4278773 -9.8 0.0 1.0
+pQHMAlldFRVcGBkNDXfFzsTjRPgrnVsMCSYqeIeF
+29
+Ownship
+38.4 72.8 296.2 13.5
+WRnKcftSysaP
+76.0 6.9 296.5 43.2
+eupaOgOyfbpj
+55.4 68.4 228.6 42.1
+eWNRPXjLoAWX
+2.3 43.8 109.2 22.3
+OsZVtDnyyFxS
+46.2 16.1 160.0 33.5
+xrBNGOKtyNOU
+69.6 11.1 260.1 9.9
+TIJAypSmSjfG
+11.7 81.4 271.2 98.9
+ynRDPsTswDZo
+48.4 87.2 83.7 86.7
+jvwxRbdGLgUB
+46.9 43.5 104.7 31.9
+SpoGgKudoOBx
+34.5 49.7 87.0 29.6
+UeZHlUGEjqJn
+6.4 32.1 52.4 25.4
+JrzaulchFMIw
+88.1 65.0 113.4 54.4
+UnSssTKqCzEu
+31.7 60.6 16.7 55.2
+JpINedsraYma
+15.6 39.6 87.7 2.1
+unpSABZXHchE
+89.2 66.0 93.6 14.3
+pWqgoaMwDYXt
+76.8 87.8 148.9 66.3
+crbpOhKQuRzn
+21.4 20.2 84.8 9.1
+lzpIgLeduORR
+91.1 28.1 148.4 15.6
+wPWJLfAmIpPu
+28.2 24.9 170.9 78.6
+MaXNnhQrulfo
+82.4 26.7 39.7 74.2
+LDmcOkFjRXtO
+23.2 92.8 280.1 93.4
+lfIPyczIkaxg
+69.9 43.8 293.2 70.0
+GXtvRhBpibvB
+1.6 43.0 58.8 28.6
+oZKBjmsTsfOF
+0.8 63.3 206.5 37.4
+ZuZWIuPXqlUV
+87.5 1.4 230.0 60.2
+NfjAMcFKiuuI
+30.4 62.8 112.5 58.0
+KbckZzODKhZF
+47.2 85.3 216.3 34.7
+PZkoUdtxJker
+23.4 26.4 65.5 25.5
+OWtpPciKlyiR
+81.5 91.7 132.8 68.8
+nVZDyNYdumHE
+81.4 8.4 249.5 21.4
+ogFZvqXWmxYGDAZGVokgCmmRHyYGJKkzAXKOZMuZ
+67
+Ownship
+45.6 39.6 231.4 23.2
+diCyuFBSEygv
+25.7 99.4 271.9 32.1
+FRrskTDHRIbz
+83.2 62.4 240.1 40.9
+paAWEJchrvjS
+90.9 72.5 15.2 32.7
+npYgIOqWwZQe
+52.9 21.8 230.0 49.2
+vIPLyMmukHED
+36.3 82.3 296.6 95.3
+GpFDJJWqUqIv
+54.0 15.6 190.1 75.5
+guLjusabLmqM
+13.0 73.7 132.1 87.7
+QTdEmcbrtEYw
+43.1 69.3 139.5 17.4
+MAawvsBOoLHp
+19.4 31.3 283.4 96.5
+KFgyHCySEZTo
+47.6 98.9 310.3 67.5
+hiRQjWJmpHeq
+78.0 5.7 73.6 7.2
+JcyfviUEgidC
+54.6 78.1 91.1 52.4
+AunGpOyoCqkM
+56.6 29.6 289.9 77.4
+HdmhQAHRtfAl
+68.1 79.6 323.7 70.4
+clEJMnRyZirn
+60.2 5.5 60.4 57.6
+RuxrUEjBxyfK
+9.8 89.8 195.2 78.3
+dxDvCuDCXAds
+28.0 60.5 92.2 86.9
+gvJoOLkgFPPK
+78.0 63.9 139.3 61.8
+xZqlVbwXiFfC
+11.0 68.2 297.3 74.9
+WBqCHBJlMQgM
+65.5 70.0 211.8 7.9
+lGfPusucyvHP
+2.2 95.8 181.3 66.4
+xfPpfLpPefmK
+99.5 70.4 163.3 8.0
+muMtpnmDySvP
+99.1 82.5 137.8 36.7
+FUHEKkSmNNaX
+13.7 44.3 150.5 72.5
+QPFVUSFWhxZj
+30.5 95.6 206.9 59.3
+XtGKtILdiQDJ
+53.5 18.1 183.1 86.8
+JBcJRnDcddRp
+75.6 3.0 62.1 55.8
+UtWlRlzzbuXo
+88.0 65.5 57.7 25.5
+aNOJiVoqNKvH
+4.9 43.1 252.2 30.2
+GJSxaMuqHkhX
+62.5 25.5 144.1 74.9
+qsFEdUJoxOkv
+74.3 7.1 79.7 4.2
+wfUxfPSyLjHv
+10.7 41.5 239.0 67.8
+FOgGNaDLHGyj
+35.8 15.9 104.5 28.1
+zosKugNnaJpi
+83.1 52.7 56.0 44.2
+NOxjmskHwoML
+27.9 78.2 62.6 0.3
+LqWmvhmOpByw
+43.6 78.9 158.4 42.6
+XpaknTuazODW
+38.4 91.6 106.0 88.8
+QDstXAYqXcXw
+84.3 82.7 176.5 66.9
+cDOaXPmBlsxK
+0.3 70.6 305.1 56.9
+dykcbTvXxJot
+73.8 37.6 111.9 91.5
+kcATUgDpwYAa
+17.5 30.2 229.6 84.5
+ysTZvdySXBfv
+34.7 46.8 203.0 66.9
+PHzaMNNimuCt
+53.3 85.0 23.4 63.6
+pHWJzKCmPxxZ
+29.3 66.4 256.3 9.8
+iYXqerieXfsD
+88.4 9.4 161.7 10.2
+wJFBLZBnatHd
+73.6 69.1 134.1 22.6
+KNuhkETwasnq
+97.2 40.8 279.8 74.8
+fFgPVrjZlmjN
+89.3 18.1 103.6 86.9
+BAcFCZBhUxav
+90.1 12.2 22.4 78.9
+SCMVDwmNWUDC
+33.9 63.0 238.4 34.7
+ULmCwWkLbQVS
+95.1 97.1 104.7 32.1
+ggazSuZfHXJJ
+23.4 0.7 97.0 58.9
+NmjvuNcyewoH
+39.5 69.9 144.3 8.8
+VZIZuwfLtqXY
+79.4 52.7 351.3 4.2
+KEbLYraNxUmI
+86.4 9.0 163.6 42.7
+AowxtXUzWUPB
+18.0 56.6 124.5 80.2
+knBcBjDjiilp
+80.6 12.1 213.9 25.7
+dQvtEhLlbVQZ
+2.3 15.6 184.6 32.6
+QyhxDIFewIEq
+80.5 64.7 317.5 1.8
+mJfGMGtJnqmp
+6.7 68.2 253.3 22.9
+iSPqjDywYTLY
+95.0 10.8 314.4 17.4
+BvrLvekIayjE
+94.4 94.2 293.7 26.3
+APhbibNwrLRz
+28.8 95.2 78.3 40.6
+AfEIzyAUmhKn
+4.7 90.6 11.4 40.4
+ZNtsWhFjRBHq
+3.5 85.2 169.1 21.7
+vEYpfpHuaTWt
+95.0 60.6 264.0 15.6
+iyrXxzeBekQI
+64.8 43.1 212.4 41.5
+Ruben's Boat Data Set 1
+7
+Ownship
+0.0 0.0 0.0 1.0
+Degree-ship
+0.003 -90.0 0 1.0
+Another ship
+0.003 -5.0 0 0.3
+Ship
+0 -5.0 0 1.9
+Shippique
+0 -5.0 180 1.9
+Sheep
+10.0 0.0 55.7 1.0
+Bowling-skibet
+1.005 0.0 111.1 2.2
+Katamari
+1.015 0.0 222.2 2.3
+RerjFKtJfZFdIlCkUHdZURQUQuYKehbmhOQXvmWi
+1
+Ownship
+21.8 17.0 113.0 82.3
+QpFKCqEMBUZo
+23.5 17.5 48.1 91.9
+in1
+3
+Ownship
+0.0 0.0 0.0 1.0
+Ship1
+-0.0001 9.999 180.0 1.0
+Ship2
+0.0 9.999 180.0 1.0
+Ship3
+0.0001 9.999 180.0 1.0
+Test
+1
+Ownship
+0 0 0 0
+Ship
+-10 0 90.00001 0.0001

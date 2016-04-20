@@ -1,8 +1,8 @@
 // Running Lights Visibility Calculator
 // UVa IDs: 203
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2016-04-20
+// UVa Run Time: 0.040s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
@@ -12,31 +12,33 @@
 #include <vector>
 #include <algorithm>
 #include <cmath>
+#include <cstring>
 
 using namespace std;
 
-const double PI = 3.141592653589793, EPSILON = 1E-7;
+const double PI = 3.14159265358979323846, EPSILON = 1E-7;
 
 struct ship
 {
     string name;
-    double x, y, course, speed, x1, y1;
+    double x, y, course, speed;
     double bearing, distance, bearing1, distance1;
 };
 
 string scenario;
 vector < ship > ships;
 
-double roundedBearing(double bearing)
+string roundedBearing(double bearing)
 {
-    // bearing = bearing * 180 / PI;
-    int rounded = (int)(bearing * 100 + 0.5);
-    if (rounded == 36000)
-        rounded = 0;
-    return (double)rounded / 100.0;
+    char data[100];
+    sprintf(data, "%.2lf", bearing + EPSILON);
+    if(!strcmp(data, "360.00"))
+        strcpy(data, "0.00");
+    string number(data);
+    return number;
 }
 
-double getBearing(ship ownship, ship othership)
+double getBearing(ship othership, ship ownship)
 {
     // calculate the anlge of vector from A to B
     double bearing = atan2(ownship.y - othership.y, ownship.x - othership.x);
@@ -59,125 +61,89 @@ double getBearing(ship ownship, ship othership)
     return bearing;
 }
 
-string getLights(ship ownship, ship othership)
+string getLights(double bearing)
 {
-    bool green = false, red = false, masthead = false, stern = false;
-    
-    // green
-    if (othership.bearing >= 357.5 || othership.bearing <= 115.0)
-        green = true;  
-    // red
-    if (othership.bearing >= 245.0 || othership.bearing <= 2.5)
-        red = true;
-    // stern
-    if (othership.bearing >= 110.0 && othership.bearing <= 250.0)
-        stern = true;
-    // masthead is allways visible when distance less than 10.0
-    masthead = true;
-    
-    string lights;
-    if (fabs(othership.bearing) <= EPSILON ||
-        fabs(360.0 - othership.bearing) <= EPSILON ||
-        fabs(othership.bearing - 180.0) <= EPSILON)
-    {
-        lights += green ? "Green " : "";
-        lights += masthead ? "Masthead " : "";
-        lights += red ? "Red " : "";
-        lights += stern ? "Stern " : "";
-    }
-    else if (othership.bearing > 0.0 && othership.bearing < 180.0)
-    {
-        lights += stern ? "Stern " : "";
-        lights += masthead ? "Masthead " : "";
-        lights += green ? "Green " : "";
-        lights += red ? "Red " : "";
-    }
-    else
-    {
-        lights += green ? "Green " : "";
-        lights += red ? "Red " : "";
-        lights += masthead ? "Masthead " : "";
-        lights += stern ? "Stern " : "";
-    }
-    
-    lights.erase(lights.end() - 1);
-        
-    return lights;
+      if(bearing >= 360.0 - EPSILON || bearing <= 0.0 + EPSILON)
+        return "Green Masthead Red";
+      else if(bearing > 0.0 + EPSILON && bearing < 2.5 - EPSILON)
+        return "Masthead Green Red";
+      else if(bearing >= 2.5 - EPSILON && bearing <= 110.0 + EPSILON)
+        return "Masthead Green";
+      else if(bearing > 110.0 + EPSILON && bearing < 115.0 - EPSILON)
+        return "Stern Masthead Green";
+      else if(bearing >= 115.0 - EPSILON && bearing < 180.0 - EPSILON)
+        return "Stern Masthead";
+      else if(bearing >= 180.0 - EPSILON && bearing <= 245.0 + EPSILON)
+        return "Masthead Stern";
+      else if(bearing > 245.0 + EPSILON && bearing < 250.0 - EPSILON)
+        return "Red Masthead Stern";
+      else if(bearing >= 250.0 - EPSILON && bearing <= 357.5 + EPSILON)
+        return "Red Masthead";
+      else if(bearing > 357.5 + EPSILON && bearing < 360.0 - EPSILON)
+        return "Green Red Masthead";
 }
 
 void calculate()
 {
     // display the header
-    cout << "Scenario: " << scenario << endl << endl;
+    cout << "Scenario: " << scenario << "\n" << "\n";
     cout << setw(16) << left << "Boat ID";
     cout << setw(7) << right << "Bearing";
     cout << setw(14) << right << "Distance";
     cout << string(3, ' ');;
-    cout << setw(23) << left << "Lights (left to right)" << endl;
-    cout << string(63, '-') << endl;
+    cout << "Lights (left to right)" << "\n";
+    cout << string(63, '-') << "\n";
     
     // calculate the initially bearing and distance between ownship and others ships
-    ship ownship = ships[0];
     for (int i = 1; i < ships.size(); i++)
     {
         cout << setw(16) << left << ships[i].name;
-        ships[i].bearing = getBearing(ownship, ships[i]);
-        ships[i].distance = sqrt(pow(ownship.x - ships[i].x, 2) + pow(ownship.y - ships[i].y, 2));
-        cout << setw(7) << right << setprecision(2) << fixed << roundedBearing(ships[i].bearing);
-        cout << setw(12) << right << setprecision(2) << fixed << ships[i].distance;
+        ships[i].bearing = getBearing(ships[i], ships[0]);
+        ships[i].distance = sqrt(pow(ships[0].x - ships[i].x, 2) + pow(ships[0].y - ships[i].y, 2));
+        cout << setw(7) << right <<  fixed << setprecision(2) << roundedBearing(ships[i].bearing);
+        cout << setw(12) << right << fixed << setprecision(2) << (ships[i].distance + EPSILON);
         cout << string(5, ' ');
         
         // get the lights configuration
-        if (ships[i].distance > 10.0)
-            cout << setw(23) << left << "Lights not visible" << endl;
+        if (ships[i].distance <= (10.0 + EPSILON))
+            cout << getLights(ships[i].bearing) << "\n";
         else
-        {
-            cout << setw(23) << left << getLights(ownship, ships[i]) << endl;
-        }
+            cout << "Lights not visible" << "\n";
     }
     
     // recalculate the position of ship
     for (int i = 0; i < ships.size(); i++)
     {
-        double angle = ships[i].course;
-        
-        if (angle >= 0.0 && angle <= 90.0)
-            angle = 90.0 - angle;
-        else if (angle > 90.0 && angle <= 180.0)
-            angle = 270.0 + (180.0 - angle);
-        else if (angle > 180.0 && angle <= 270.0)
-            angle = 180.0 + (270.0 - angle);
-        else 
-            angle = 90.0 + (360.0 - angle);
-                
-        ships[i].x1 = ships[i].x + ships[i].speed / 20.0 * cos(angle * PI / 180.0);
-        ships[i].y1 = ships[i].y + ships[i].speed / 20.0 * sin(angle * PI / 180.0);
+        ships[i].x += ships[i].speed / 20.0 * sin(ships[i].course * PI / 180.0);
+        ships[i].y += ships[i].speed / 20.0 * cos(ships[i].course * PI / 180.0);
         
     }
     
     // recalculate the bearing and distance after 3 minutes
-    ownship = ships[0];
     for (int i = 1; i < ships.size(); i++)
     {
-        ships[i].bearing1 = getBearing(ownship, ships[i]);
-        ships[i].distance1 = sqrt(pow(ownship.x1 - ships[i].x1, 2) + pow(ownship.y1 - ships[i].y1, 2));
+        ships[i].bearing1 = getBearing(ships[i], ships[0]);
+        ships[i].distance1 = sqrt(pow(ships[0].x - ships[i].x, 2) + pow(ships[0].y - ships[i].y, 2));
         
-        if (ships[i].distance < 10.0 && ships[i].distance1 < ships[i].distance)
+        if (ships[i].distance <= (10.0 + EPSILON) && ships[i].distance1 < (ships[i].distance - EPSILON))
         {
             // the difference of first bearing and second within 2 degree
             double difference = fabs(ships[i].bearing - ships[i].bearing1);
-            if (difference < 2.0 || difference > 358.0)
-            cout << "** Collision warning -->" << ships[i].name << ": Distance = "
-                 << setprecision(2) << fixed << setw(5) << right << ships[i].distance1 << endl;
+            if (difference <= 2.0 + EPSILON || difference >= 358.0 + EPSILON)
+            cout << "** Collision warning -->" << ships[i].name << ":  Distance =  "
+                 << fixed << setprecision(2) << (ships[i].distance1 + EPSILON) << "\n";
         }  
     }
     
     // display the footer
-    cout << string(63, '*') << endl;
+    cout << string(63, '*') << "\n";
 }
 
 int main(int argc, char *argv[])
 {
+    cin.tie(0);
+    cout.sync_with_stdio(false);
+    
     int shipNumber;
     string line;
     while (getline(cin, scenario))
@@ -186,7 +152,7 @@ int main(int argc, char *argv[])
         shipNumber = stoi(line);
 
         ships.resize(shipNumber + 1);
-        for (int i = 0; i <= shipNumber; i++)
+        for (int i = 0; i < ships.size(); i++)
         {
             getline(cin, ships[i].name);
             getline(cin, line);
