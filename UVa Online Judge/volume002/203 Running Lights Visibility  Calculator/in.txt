@@ -1,0 +1,26 @@
+Sample Test Data Set 1
+4
+Ownship
+0.0 0.0 90.0 10.0 
+Windswept
+10.0 10.0 135.0 8.0
+Footloose
+-5.0 6.0 275.0 6.0
+Crasher 1
+0.0 9.0 135 14.14  
+Aquavit
+-2.0 -2.0 294.0 15.0
+Sample Test Data Set 2
+5
+Ownship
+0.0 0.0 90.0 1.0
+Sturmtebergh
+0.0 9.0 180.0 1.0
+Aldimere
+0.3140954 9.0 180.0 1.0
+Borand
+0.4278773 9.8 180.0 1.0
+Cornelius
+0.3140954 -9.0 0.0 1.0
+Daeron
+0.4278773 -9.8 0.0 1.0

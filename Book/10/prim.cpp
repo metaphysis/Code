@@ -13,8 +13,10 @@ vector< vector < edge > > edges;
 vector< int > parent, distances;
 vector< bool > intree;
 
-void prim(int start)
+int prim(int start)
 {
+    int minWeightSum = 0;
+    
     parent.clear();
     intree.clear();
     distances.clear();
@@ -41,7 +43,6 @@ void prim(int start)
             }
         }
 
-        start = 0;
         int minDistance = numeric_limits< int >::max();
         for (int i = 0; i < edges.size(); i++)
             if (intree[i] == false && minDistance > distances[i])
@@ -49,7 +50,11 @@ void prim(int start)
                 minDistance = distances[i];
                 start = i;
             }
+            
+        minWeightSum += distances[start];
     }
+    
+    return minWeightSum;
 }
 
 int main(int argc, char *argv[])

@@ -41,7 +41,6 @@ void dijkstra(int start)
             }
         }
 
-        start = 0;
         int minDistance = numeric_limits< int >::max();
         for (int i = 0; i < edges.size(); i++)
             if (visited[i] == false && minDistance > distances[i])

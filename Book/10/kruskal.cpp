@@ -53,16 +53,31 @@ void unionSet(int x, int y)
     }
 }
 
-void kruskal()
+int kruskal()
 {
+    int minWeightSum = 0;
+    
     makeSet();
     sort(edges.begin(), edges.end(), cmp);
     
     for (int i = 0; i < edges.size(); i++)
-        unionSet(edges[i].start, edges[i].end);
+    {
+        int x = findSet(edges[i].start);
+        int y = findSet(edges[i].end);
+        
+        if (x != y)
+        {
+            unionSet(x, y);
+            minWeightSum += edges[i].weight;
+        }
+    }
+    
+    return minWeightSum;
 }
 
 int main(int argc, char *argv[])
 {
-    kruskal();
+    cout << kruskal() << endl;
+ 
+    return 0;   
 }
