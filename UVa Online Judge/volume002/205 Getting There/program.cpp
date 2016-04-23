@@ -1,7 +1,7 @@
 // Getting There
 // UVa IDs: 205
 // Verdict: Accepted
-// Submission Date: 2016-04-22
+// Submission Date: 2016-04-23
 // UVa Run Time: 0.030s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
