@@ -1,0 +1,25 @@
+TRAVEL 001
+CenterCity Homeville 05:20A 06:55A 012.50
+CenterCity Greenville 5:45A 5:46A 35.00
+Homeville Greenville 07:45A 9:35A 20.00
+ArcherCity Homeville 5:00A 0:03P 612.50
+#
+CenterCity Greenville TIME
+ArcherCity Greenville TIME
+CenterCity ArcherCity TIME
+#
+TRAVEL 992
+GreenVille Greenmile 10:30A 11:30A 5.00
+GreenMile GreenYARD 0:30P 3:00P 0.51
+AA BB 1:00A 1:01A 0.01
+ZZZ ZZZZ 0:03A 0:02A 0.50
+ZZZZ ZZZZZ 0:02A 0:01A 0.50
+ZZZZZ ZZZZZZ 0:01A 0:00A 0.50
+#
+GREENVILLE GreeNVILLE COST
+Greenville Greenmile TIME
+GreenMile GreenYard TIME
+AA Greenville TIME
+ZZZ ZZZZZZ TIME
+AA ZZZZ TIME
+#
