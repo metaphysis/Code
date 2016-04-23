@@ -6,8 +6,8 @@
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 //
-// 一道不是非常完善的题目。测试数据和评判程序可能有问题，不过好在测试数据应该比较
-// 简单，不然很难 AC。截止 AC 时，只有 22 通过。
+// 一道不是非常完善的题目。测试数据对应的输出和评判程序可能有问题，不过好在测试数据
+// 应该比较简单，不然很难 AC。截止 AC 时，只有 22 人通过。
 
 #include <iostream>
 #include <algorithm>
@@ -40,6 +40,7 @@ double toDegree(double radian)
     return (radian / PI) * 180.0;
 }
 
+// 根据不同情况进行计算。
 double getValue(double b, double c, double A, double x, double C, int category)
 {
     if (category == COUNTER_CLOCKWISE)
@@ -54,6 +55,7 @@ double getValue(double b, double c, double A, double x, double C, int category)
 
 double binarySearch(double b, double c, double A, double C, int category)
 {
+    // 求取边界值。
     double x = 0.0;
     while (x < A)
     {
@@ -81,45 +83,31 @@ void calculate(point first, point second)
     point solutions[3];
     int counter = 0;
 
-    // 当前后两次的角度相同时，说明物体的运动轨迹是过极点的直线，且前两次观察结果方向相同。
+    // 当前后两次的角度相同时，说明物体的运动轨迹是过极点的直线。
     if (first.angle == second.angle)
     {
         // 远离极点方向。
         if (second.distance >= first.distance)
-            solutions[counter++] = (point)
-        {
-            first.angle, second.distance + (second.distance - first.distance)
-        };
+            solutions[counter++] = (point){first.angle, second.distance + (second.distance - first.distance)};
         // 靠近极点方向，可能会越过极点到相对的另一侧。
         else
         {
             if (second.distance > (first.distance - second.distance))
-                solutions[counter++] = (point)
-            {
-                first.angle, second.distance - (first.distance - second.distance)
-            };
+                solutions[counter++] = (point){first.angle, second.distance - (first.distance - second.distance)};
             else
-                solutions[counter++] = (point)
-            {
+                solutions[counter++] = (point){
                 ((first.angle >= 180.0) ? (first.angle - 180.0) : (first.angle + 180.0)),
-                fabs(second.distance - (first.distance - second.distance))
-            };
+                fabs(second.distance - (first.distance - second.distance))};
         }
     }
     // 当前后两次观察到的位置极角相差 180 度时，说明物体的运动轨迹是过极点的直线。
     else if (fabs(first.angle - second.angle) == 180.0)
     {
         // 注意在第二次观察时，时间过去了 1 s，但是再下一次观察时，将是 3s。故移动距
-        // 离要增加一倍。
-        solutions[counter++] = (point)
-        {
-            second.angle, 3 * second.distance + 2 * first.distance
-        };
+        // 离要增加一倍。有两种可能。
+        solutions[counter++] = (point){second.angle, 3 * second.distance + 2 * first.distance};
         if (fabs(2 * second.distance - first.distance) < 1e-8)
-            solutions[counter++] = (point)
-        {
-            second.angle, first.distance + second.distance
-        };
+            solutions[counter++] = (point){second.angle, first.distance + second.distance};
     }
     // 当第一次和第二次的极角不同，且相差不是 180 度时，物体的运动轨迹是一条不过极点的直线。
     else
@@ -138,7 +126,7 @@ void calculate(point first, point second)
                 C = toRadian(first.angle - second.angle);
 
             // 不失一般性，设第一次观察的位置距离为 a，第二次观察的距离为 b，可
-            // 由余弦定理求出边 b 对应的角 B。先求边 c。
+            // 由余弦定理求出边 a 对应的角 A。先求边 c。
             double a = first.distance, b = second.distance;
             double c = sqrt(a * a + b * b - 2.0 * a * b * cos(C));
             double A = acos((b * b + c * c - a * a) / (2.0 * b * c));
@@ -168,17 +156,16 @@ void calculate(point first, point second)
             finalAngle = second.angle - toDegree(x);
             if (finalAngle < 0.0)
                 finalAngle += 360.0;
-            finalDistance = b * sin(A) / sin(A - x);
-            solutions[counter++] = (point)
-            {
-                finalAngle, finalDistance
-            };
+            finalDistance = b * sin(A) / sin(A - x);{finalAngle, finalDistance};
         }
         else
         {
             // 第二个位置在第一个位置的顺时针方向，有两种可能，一种是在观察到第一个位置后的
             // 同一个扫描周期内观察到第二个位置，另外一种情况是在下一个扫描周期内观察到第二
-            // 个位置。则第三次观察可能有三种情况，能 AC 的组合是 1，3 或 2，3。
+            // 个位置。则有三种情况：第 1，2，3 次观察同时处于一个周期内，第 1，2 次观察处于同一
+            // 周期，第3次观察处于第二个周期，第1次观察处于第一个周期，第2次观察处于第二个周期
+            // 第三次观察处于第三个周期，如果要 AC，只能输出两组答案，能 AC 的组合是第一种和
+            // 第三种情况或者第二种和第三种情况。比较奇怪。
             if (first.angle > second.angle && angleDiff > 180.0)
                 C = toRadian(second.angle + (360.0 - first.angle));
             else
@@ -188,6 +175,8 @@ void calculate(point first, point second)
             double c = sqrt(a * a + b * b - 2.0 * a * b * cos(C));
             double A = acos((b * b + c * c - a * a) / (2.0 * b * c));
 
+            // 思路同前，二分求值，不过在边界值的求取时有差异，所以未能把前面的二分
+            // 查找和此处的二分查找统一成为一个函数。
             double x = binarySearch(b, c, A, C, CLOCKWISE_SAME_SAME_CYCLE);
             double finalAngle = second.angle + toDegree(x);
             if (finalAngle > 360.0)
@@ -200,20 +189,14 @@ void calculate(point first, point second)
                     finalAngle -= 360.0;
             }
             finalDistance = b * sin(A) / sin(A - x);
-            solutions[counter++] = (point)
-            {
-                finalAngle, finalDistance
-            };
+            solutions[counter++] = (point){finalAngle, finalDistance};
 
             x = binarySearch(b, c, A, C, CLOCKWISE_NEXT_NEXT_CYCLE);
             finalAngle = second.angle + toDegree(x);
             if (finalAngle > 360.0)
                 finalAngle -= 360.0;
             finalDistance = b * sin(A) / sin(A - x);
-            solutions[counter++] = (point)
-            {
-                finalAngle, finalDistance
-            };
+            solutions[counter++] = (point){finalAngle, finalDistance};
         }
     }
 
