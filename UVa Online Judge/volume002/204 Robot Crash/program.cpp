@@ -48,13 +48,13 @@ vector < segment > leftSegments, rightSegments;
 // 判断两条直线是否平行。
 bool isParallelLine(line line1, line line2)
 {
-    return (fabs(line1.a - line2.a) <= EPSILON) && (fabs(line1.b - line2.b) <= EPSILON);
+    return (fabs(line1.a - line2.a) < EPSILON) && (fabs(line1.b - line2.b) < EPSILON);
 }
 
 // 判断两条直线是否为同一条直线。
 bool isSameLine(line line1, line line2)
 {
-    return isParallelLine(line1, line2) && (fabs(line1.c - line2.c) <= EPSILON);
+    return isParallelLine(line1, line2) && (fabs(line1.c - line2.c) < EPSILON);
 }
 
 // 求两条直线的交点，如果存在交点则返回 true，否则返回 false。
@@ -63,8 +63,7 @@ point intersectionPoint(line line1, line line2)
     point p;
 
     // 两条直线相交，求出交点。
-    p.x = (line2.b * line1.c - line1.b * line2.c) / (line2.a * line1.b -
-        line1.a * line2.b);
+    p.x = (line2.b * line1.c - line1.b * line2.c) / (line2.a * line1.b - line1.a * line2.b);
     if (fabs(line1.b) > EPSILON)
         p.y = -(line1.a * p.x + line1.c) / line1.b;
     else
@@ -103,124 +102,151 @@ void getSegments()
     leftSegments.clear();
     double slope = tan((leftRobot.angle) * PI / 180.0);
     double x = leftRobot.x, y = leftRobot.y;
-    if (leftRobot.angle > 0)
+    
+    if (fabs(leftRobot.angle) < EPSILON)
     {
-        if (fabs(y - 10.0) > EPSILON)
-        {
-            point start = (point){x, y};
-            line l = pointAndSlopeToLine(start, slope);
-            point end = (point){x + (10.0 - y) / fabs(slope), 10.0};
-            double length = distances(start, end);
-            segment s = (segment){start, end, length, l};
-            leftSegments.push_back(s);
-            x = end.x;
-            y = 10.0;
-            slope = -slope;
-        }
+        // angle is 0
+        point start = (point){x, y};
+        line l = pointAndSlopeToLine(start, slope);
+        point end = (point){rightRobot.x, leftRobot.y};
+        double length = fabs(rightRobot.x - leftRobot.x);
+        segment s = (segment){start, end, length, l};
+        leftSegments.push_back(s);
     }
     else
     {
-        if (fabs(y) > EPSILON)
+        if (leftRobot.angle > 0.0)
         {
-            point start = (point){x, y};
-            line l = pointAndSlopeToLine(start, slope);
-            point end = (point){x + y / fabs(slope), 0.0};
-            double length = distances(start, end);
-            segment s = (segment){start, end, length, l};
-            leftSegments.push_back(s);
-            x = end.x;
-            y = 0.0;
-            slope = -slope;
-        }
-    }
-        
-    while (x < rightRobot.x)
-    {
-        if (slope > 0)
-        {
-            point start = (point){x, 0.0};
-            line l = pointAndSlopeToLine(start, slope);
-            point end = (point){x + 10.0 / fabs(slope), 10.0};
-            double length = distances(start, end);
-            segment s = (segment){start, end, length, l};
-            leftSegments.push_back(s);
-            x = end.x;
-            y = 10.0;
+            if (fabs(y - 10.0) > EPSILON)
+            {
+                point start = (point){x, y};
+                line l = pointAndSlopeToLine(start, slope);
+                point end = (point){x + (10.0 - y) / fabs(slope), 10.0};
+                double length = distances(start, end);
+                segment s = (segment){start, end, length, l};
+                leftSegments.push_back(s);
+                x = end.x;
+                y = 10.0;
+                slope = -slope;
+            }
         }
         else
         {
-            point start = (point){x, 10.0};
-            line l = pointAndSlopeToLine(start, slope);
-            point end = (point){x + 10.0 / fabs(slope), 0.0};
-            double length = distances(start, end);
-            segment s = (segment){start, end, length, l};
-            leftSegments.push_back(s);
-            x = end.x;
-            y = 0.0;
+            if (fabs(y) > EPSILON)
+            {
+                point start = (point){x, y};
+                line l = pointAndSlopeToLine(start, slope);
+                point end = (point){x + y / fabs(slope), 0.0};
+                double length = distances(start, end);
+                segment s = (segment){start, end, length, l};
+                leftSegments.push_back(s);
+                x = end.x;
+                y = 0.0;
+                slope = -slope;
+            }
         }
-        slope = -slope;
+        
+        while (x < rightRobot.x)
+        {
+            if (slope > 0.0)
+            {
+                point start = (point){x, 0.0};
+                line l = pointAndSlopeToLine(start, slope);
+                point end = (point){x + 10.0 / fabs(slope), 10.0};
+                double length = distances(start, end);
+                segment s = (segment){start, end, length, l};
+                leftSegments.push_back(s);
+                x = end.x;
+                y = 10.0;
+            }
+            else
+            {
+                point start = (point){x, 10.0};
+                line l = pointAndSlopeToLine(start, slope);
+                point end = (point){x + 10.0 / fabs(slope), 0.0};
+                double length = distances(start, end);
+                segment s = (segment){start, end, length, l};
+                leftSegments.push_back(s);
+                x = end.x;
+                y = 0.0;
+            }
+            slope = -slope;
+        }
     }
     
     rightSegments.clear();
     slope = tan((rightRobot.angle) * PI / 180.0);
     x = rightRobot.x, y = rightRobot.y;
-    if (rightRobot.angle > 0)
+    
+    if (fabs(rightRobot.angle) == 180.0)
     {
-        if (fabs(y - 10.0) > EPSILON)
-        {
-            point start = (point){x, y};
-            line l = pointAndSlopeToLine(start, slope);
-            point end = (point){x - (10.0 - y) / fabs(slope), 10.0};
-            double length = distances(start, end);
-            segment s = (segment){start, end, length, l};
-            rightSegments.push_back(s);
-            x = end.x;
-            y = 10.0;
-            slope = -slope;
-        }
+        // angle is 180.0
+        point start = (point){x, y};
+        line l = pointAndSlopeToLine(start, slope);
+        point end = (point){leftRobot.x, rightRobot.y};
+        double length = fabs(rightRobot.x - leftRobot.x);
+        segment s = (segment){start, end, length, l};
+        rightSegments.push_back(s);
     }
     else
     {
-        if (fabs(y) > EPSILON)
+        if (rightRobot.angle > 0.0)
         {
-            point start = (point){x, y};
-            line l = pointAndSlopeToLine(start, slope);
-            point end = (point){x - y / fabs(slope), 0.0};
-            double length = distances(start, end);
-            segment s = (segment){start, end, length, l};
-            rightSegments.push_back(s);
-            //cout << start.x << " " << start.y << " " << end.x << " " << end.y << endl;
-            x = end.x;
-            y = 0.0;
-            slope = -slope;
-        }
-    }
-      
-    while (x > leftRobot.x)
-    {
-        if (slope > 0)
-        {
-            point start = (point){x, 10.0};
-            line l = pointAndSlopeToLine(start, slope);
-            point end = (point){x - 10.0 / fabs(slope), 0.0};
-            double length = distances(start, end);
-            segment s = (segment){start, end, length, l};
-            rightSegments.push_back(s);
-            x = end.x;
-            y = 0.0;
+            if (fabs(y - 10.0) > EPSILON)
+            {
+                point start = (point){x, y};
+                line l = pointAndSlopeToLine(start, slope);
+                point end = (point){x - (10.0 - y) / fabs(slope), 10.0};
+                double length = distances(start, end);
+                segment s = (segment){start, end, length, l};
+                rightSegments.push_back(s);
+                x = end.x;
+                y = 10.0;
+                slope = -slope;
+            }
         }
         else
         {
-            point start = (point){x, 0.0};
-            line l = pointAndSlopeToLine(start, slope);
-            point end = (point){x - 10.0 / fabs(slope), 10.0};
-            double length = distances(start, end);
-            segment s = (segment){start, end, length, l};
-            rightSegments.push_back(s);
-            x = end.x;
-            y = 10.0;
+            if (fabs(y) > EPSILON)
+            {
+                point start = (point){x, y};
+                line l = pointAndSlopeToLine(start, slope);
+                point end = (point){x - y / fabs(slope), 0.0};
+                double length = distances(start, end);
+                segment s = (segment){start, end, length, l};
+                rightSegments.push_back(s);
+                x = end.x;
+                y = 0.0;
+                slope = -slope;
+            }
         }
-        slope = -slope;
+      
+        while (x > leftRobot.x)
+        {
+            if (slope > 0.0)
+            {
+                point start = (point){x, 10.0};
+                line l = pointAndSlopeToLine(start, slope);
+                point end = (point){x - 10.0 / fabs(slope), 0.0};
+                double length = distances(start, end);
+                segment s = (segment){start, end, length, l};
+                rightSegments.push_back(s);
+                x = end.x;
+                y = 0.0;
+            }
+            else
+            {
+                point start = (point){x, 0.0};
+                line l = pointAndSlopeToLine(start, slope);
+                point end = (point){x - 10.0 / fabs(slope), 10.0};
+                double length = distances(start, end);
+                segment s = (segment){start, end, length, l};
+                rightSegments.push_back(s);
+                x = end.x;
+                y = 10.0;
+            }
+            slope = -slope;
+        }
     }
 }
 
@@ -238,12 +264,22 @@ void calculate()
     cases++;
     cout << "Robot Problem #" << cases << ": ";
 
-    if (leftRobot.x >= (rightRobot.x + EPSILON))
+    // special cases
+    if (leftRobot.x > rightRobot.x)
     {
         cout << "Robots do not collide.\n\n";
         return;
     }
 
+    if (leftRobot.x == rightRobot.x)
+    {
+        if(leftRobot.y == rightRobot.y)
+            collide(leftRobot.x, leftRobot.y);
+        else
+            cout << "Robots do not collide.\n\n";
+        return;
+    }
+    
     if (leftRobot.angle == 0.0 && fabs(rightRobot.angle) == 180.0)
     {
         if (fabs(leftRobot.y - rightRobot.y) < EPSILON)
@@ -257,19 +293,22 @@ void calculate()
             cout << "Robots do not collide.\n\n";
         return;
     }
-
+    
+    point bestPoint;
+    double bestTime = 0.5;
+    bool found = false;
     double leftRobotPath = 0.0;
     for (int i = 0; i < leftSegments.size(); i++)
     {
         if (i > 0)
             leftRobotPath += leftSegments[i - 1].length;
-            
+        
         double rightRobotPath = 0.0;
         for (int j = 0; j < rightSegments.size(); j++)
         {
             if (j > 0)
                 rightRobotPath += rightSegments[j - 1].length;
-            
+
             //cout << endl;
             //cout << leftSegments[i].start.x << " " << leftSegments[i].start.y << " ";
             //cout << leftSegments[i].end.x << " " << leftSegments[i].end.y << " ";
@@ -325,7 +364,7 @@ void calculate()
                 !pointInBox(p, rightSegments[j].start, rightSegments[j].end))
                 continue;
             
-            if (p.x < leftRobot.x + EPSILON || p.x > rightRobot.x + EPSILON)
+            if (p.x < leftRobot.x || p.x > rightRobot.x)
                 continue;
                 
             double leftRobotTime = (leftRobotPath +
@@ -333,19 +372,46 @@ void calculate()
             double rightRobotTime = (rightRobotPath +
                 distances(p, rightSegments[i].start)) / rightRobot.speed;
             
-            if (fabs(leftRobotTime - rightRobotTime) < 0.5)
+            //cout << "intersection: " << p.x << " " << p.y << endl;
+            //cout << "leftRobotTime = " << leftRobotTime << " rightRobotTime = " << rightRobotTime << endl;
+
+            if (fabs(leftRobotTime - rightRobotTime) <= 0.5)
             {
-                collide(p.x, p.y);
-                return;
+                double minTime = min(leftRobotTime, rightRobotTime);
+                if (found)
+                {
+                    if (fabs(minTime - bestTime) < EPSILON)
+                    {
+                        if (p.x < bestPoint.x)
+                            bestPoint = p;
+                    }
+                    else if (minTime < bestTime)
+                    {
+                        bestTime = minTime;
+                        bestPoint = p;
+                    }
+                }
+                else
+                {
+                    bestPoint = p;
+                    bestTime = minTime;
+                    found = true;
+                }
             }
         }
     }
 
-    cout << "Robots do not collide.\n\n";
+    if (found)
+        collide(bestPoint.x, bestPoint.y);
+    else
+        cout << "Robots do not collide.\n\n";
 }
 
 int main(int argc, char *argv[])
 {
+    cin.tie(0);
+    cout.sync_with_stdio(false);
+    
     string line;
     while (getline(cin, line))
     {
