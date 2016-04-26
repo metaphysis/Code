@@ -101,7 +101,7 @@ void route()
 int main(int argc, char *argv[])
 {
     cin.tie(0);
-    cout.sync_with_stdio(false);
+    cin.sync_with_stdio(false);
     
     string customerName;
     int x, y;
