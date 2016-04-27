@@ -12,6 +12,7 @@
 #include <vector>
 #include <algorithm>
 #include <limits>
+#include <cstring>
 
 using namespace std;
 
