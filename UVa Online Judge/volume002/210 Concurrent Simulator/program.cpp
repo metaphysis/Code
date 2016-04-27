@@ -136,6 +136,9 @@ statement parseToStatement(string line, int programId)
 
 int main(int argc, char *argv[])
 {
+    cin.tie(0);
+    cin.sync_with_stdio(false);
+    
     string line;
     int cases, numbers;
     bool startPrintBlankLine = false;
