@@ -13,6 +13,10 @@
 #include <algorithm>
 #include <limits>
 #include <cstring>
+#include <stack>
+#include <map>
+#include <queue>
+#include <set>
 
 using namespace std;
 
