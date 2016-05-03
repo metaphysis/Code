@@ -5,9 +5,6 @@
 // UVa Run Time: 0.016s
 //
 // 版权所有（C）2011，邱秋。metaphysis # yeah dot net
-//
-// [解题方法]
-// 以编号为 0 的房子中心为原点计算其他房子中心的相对坐标，使用平面坐标系的距离公式计算其距离即可。
 
 #include <iostream>
 #include <iomanip>

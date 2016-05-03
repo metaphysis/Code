@@ -5,10 +5,6 @@
 // UVa Run Time: 0.036s
 //
 // 版权所有（C）2011，邱秋。metaphysis # yeah dot net
-//
-// [解题方法]
-// 提示：如何建图来同时刻画时间和空间？如何高效的遍历以确定可能的位置？如果解决了这两个问题，本问
-// 题就解决了！
 
 #include <iostream>
 
@@ -106,6 +102,8 @@ int main(int ac, char *av[])
 		// （width + 1，height），（width，height - 1），（width，height + 1）
 		// （width，height）五个位置中的一个。注意需要经过正反两个方向的搜索才能确定
 		// 通路上的可能位置。
+		
+		// 反向搜索以确定可能的位置。
 		for (int y = 1; y <= height; y++)
 			for (int x = 1; x <= width; x++)
 				if (grid[timeLocked][y][x] == UNOBSERVED)

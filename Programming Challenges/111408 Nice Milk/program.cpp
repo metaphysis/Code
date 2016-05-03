@@ -131,8 +131,7 @@ point intersectionPoint(line f, line s)
 }
 
 // 给定一组直线，求直线的交点得到多边形的顶点。
-void halfPlaneIntersection
-(line * edgeLine, int nLine, point * vertex, int &nPoint)
+void halfPlaneIntersection(line * edgeLine, int nLine, point * vertex, int &nPoint)
 {
     nPoint = 0;
     sort(edgeLine, edgeLine + nLine, cmpHalfPlane);

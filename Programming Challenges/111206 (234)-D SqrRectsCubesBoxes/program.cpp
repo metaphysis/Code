@@ -1,4 +1,4 @@
-// (2/3/4)-D Sqr/Rects/Cubes/Boxes? £¨2/3/4-Î¬Á¢·½Ìå£¿£©
+// (2/3/4)-D Sqr/Rects/Cubes/Boxes? ï¼ˆ2/3/4ç»´ç«‹æ–¹ä½“ï¼Ÿï¼‰
 // PC/UVa IDs: 111206/10177, Popularity: B, Success rate: high Level: 2
 // Verdict: Accepted
 // Submission Date: 2011-11-01

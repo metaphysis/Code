@@ -1,0 +1,21 @@
+4
+First 2.0 4.0
+Second 6.0 2.0
+Third 6.0 7.0
+Fourth 10.0 5.0
+2
+0.0 1.0
+1 First 270.0
+2 Fourth 90.0
+116.5651 2.2361
+4 Third 126.8699
+5 First 319.3987
+4
+First 2.0 4.0
+Second 6.0 2.0
+Third 6.0 7.0
+Fourth 10.0 5.0
+1
+0.0 1.0
+1 First 270.0
+2 Fourth 90.0

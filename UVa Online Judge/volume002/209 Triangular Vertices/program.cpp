@@ -14,24 +14,24 @@
 using namespace std;
 
 vector < int > vertices, levels;
-int secondary[33000], principal[33000], level[33000];
+int principal[33000], secondary[33000], level[33000];
 
 void makeSet()
 {
-    for (int n = 0, step = 1; (n + step) < 33000; n += step, step++)
-    {
-        int parent = n + step;
-        secondary[parent] = parent;
-        for (int i = parent, j = step; (i + j) < 33000; i += j, j++)
-            secondary[i + j] = parent;
-    }
-
     for (int n = 1, step = 0; (n + step) < 33000; n += step, step++)
     {
         int parent = n + step;
         principal[parent] = parent;
         for (int i = parent, j = step + 2; (i + j) < 33000; i += j, j++)
             principal[i + j] = parent;
+    }
+    
+    for (int n = 0, step = 1; (n + step) < 33000; n += step, step++)
+    {
+        int parent = n + step;
+        secondary[parent] = parent;
+        for (int i = parent, j = step; (i + j) < 33000; i += j, j++)
+            secondary[i + j] = parent;
     }
     
     for (int n = 1, step = 1; n < 33000; step++)
@@ -43,8 +43,6 @@ bool triangle()
 {
     if (levels[1] == levels[2])
     {
-        if ((levels[1] - levels[0]) != (vertices[2] - vertices[1]))
-            return false;
         if (secondary[vertices[0]] != secondary[vertices[1]])
             return false;
         if (principal[vertices[0]] != principal[vertices[2]])
@@ -53,8 +51,6 @@ bool triangle()
     }
     else if (levels[0] == levels[1])
     {
-        if ((levels[2] - levels[0]) != (vertices[1] - vertices[0]))
-            return false;
         if (principal[vertices[0]] != principal[vertices[2]])
             return false;
         if (secondary[vertices[1]] != secondary[vertices[2]])
