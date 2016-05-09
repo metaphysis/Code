@@ -91,7 +91,8 @@ int main(int argc, char *argv[])
             if (edges[i].size() > 0)
             {
                 sort(edges[i].begin(), edges[i].end());
-                int n = unique(edges[i].begin(), edges[i].end()) - edges[i].begin();
+                int n = unique(edges[i].begin(), edges[i].end()) -
+                    edges[i].begin();
                 edges[i].erase(edges[i].begin() + n, edges[i].end());
             }
         
