@@ -1,0 +1,17 @@
+Original number was 123456789
+987654321 - 123456789 = 864197532
+987654321 - 123456789 = 864197532
+Chain length 2
+
+Original number was 1234
+4321 - 1234 = 3087
+8730 - 378 = 8352
+8532 - 2358 = 6174
+7641 - 1467 = 6174
+Chain length 4
+
+Original number was 444
+444 - 444 = 0
+0 - 0 = 0
+Chain length 2
+

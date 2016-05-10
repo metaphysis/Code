@@ -1,0 +1,21 @@
+Puzzle #1:
+This puzzle has no final configuration.
+
+Puzzle #2:
+This puzzle has no final configuration.
+
+Puzzle #3:
+T R G S J
+X O K L I
+M D V B N
+W P   A E
+U Q H C F
+
+Puzzle #4:
+This puzzle has no final configuration.
+
+Puzzle #5:
+This puzzle has no final configuration.
+
+Puzzle #6:
+This puzzle has no final configuration.
