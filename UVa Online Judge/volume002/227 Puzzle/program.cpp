@@ -2,7 +2,7 @@
 // UVa IDs: 227
 // Verdict: Accepted
 // Submission Date: 2016-05-10
-// UVa Run Time: 0.020s
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
@@ -66,7 +66,7 @@ int main(int argc, char *argv[])
         }
         
         if (cases++)
-            cout << endl;
+            cout << "\n";
         
         cout << "Puzzle #" << cases << ":\n";
         
@@ -82,7 +82,7 @@ int main(int argc, char *argv[])
         //cout << endl;
         
         if (invalid)
-            cout << "This puzzle has no final configuration." << endl;
+            cout << "This puzzle has no final configuration." << "\n";
         else
         {
             for (int i = 0; i < 5; i++)

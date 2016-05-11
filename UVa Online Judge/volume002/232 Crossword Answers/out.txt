@@ -1,0 +1,132 @@
+puzzle #1:
+Across
+  1.ANTIC
+  6.ACE
+  9.DOUCE
+ 10.MUG
+ 11.ARTILLERY
+ 13.ELL
+ 14.NIP
+ 15.HOLY
+ 17.RIOT
+ 18.ARA
+ 19.VAT
+ 20.SIGNIFIED
+ 24.TOE
+ 25.STERE
+ 26.ENS
+ 27.ASSAY
+Down
+  1.ADA
+  2.NOR
+  3.TUTELAGES
+  4.ICILY
+  5.CELL
+  6.AMENITIES
+  7.CURIO
+  8.EGYPT
+ 12.L
+ 15.HASTE
+ 16.ORION
+ 17.RAFTS
+ 19.VISA
+ 21.N
+ 22.ERA
+ 23.DEY
+
+puzzle #2:
+Across
+  1.LAUREL
+  7.PASSERINE
+ 10.EST
+ 11.CABER
+ 12.WHOA
+ 14.SETA
+ 15.UTTER
+ 17.LINT
+ 19.RARE
+ 22.INDIE
+ 24.TON
+ 25.INERTNESS
+ 27.DECODE
+Down
+  1.LASH
+  2.ASTOUNDED
+  3.US
+  4.REC
+  5.ERASER
+  6.LIBERATED
+  7.PEW
+  8.NET
+  9.ERA
+ 13.ATTIRE
+ 16.T
+ 17.LII
+ 18.INN
+ 20.ROSE
+ 21.ENS
+ 23.ETC
+ 26.NO
+
+puzzle #3:
+Across
+  1.OREO
+  5.EBON
+  9.LAMP
+ 10.RODE
+ 11.EGOTISTIC
+ 13.OATS
+ 14.TANK
+ 15.I
+ 16.N
+ 17.UPON
+ 20.LIVE
+ 23.SYNODICAL
+ 25.ERAS
+ 26.MASS
+ 27.DELE
+ 28.ALEE
+Down
+  1.OLEO
+  2.RAGA
+  3.EMOTIONAL
+  4.OPTS
+  5.ERST
+  6.BOTANICAL
+  7.ODIN
+  8.NECK
+ 12.I
+ 17.USED
+ 18.PYRE
+ 19.NOSE
+ 20.LIMA
+ 21.VASE
+ 22.ELSE
+ 24.D
+
+puzzle #4:
+Across
+Down
+
+puzzle #5:
+Across
+  1.Z
+Down
+  1.Z
+
+puzzle #6:
+Across
+  1.HAIR
+  5.RI
+  6.L
+  7.E
+  8.ILD
+ 10.Z
+Down
+  1.HI
+  2.A
+  3.ILL
+  4.R
+  5.RE
+  8.I
+  9.DZ
