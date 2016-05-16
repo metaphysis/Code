@@ -1,8 +1,8 @@
 // Race Tracks
 // UVa IDs: 298
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2016-05-16
+// UVa Run Time: 0.820s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
@@ -17,22 +17,18 @@ struct hop
     int x, y, vx, vy, step;
 };
 
-int grid[31][31], minimum[31][31], X, Y, startx, starty, endx, endy;
+int grid[31][31], X, Y, startx, starty, endx, endy;
 set < string > visited;
 
 string getKey(int x, int y, int vx, int vy)
 {
-    return to_string(x) + "#" + to_string(y) + "#" + to_string(vx) + "#" + to_string(vy);
+    return to_string(x) + "*" + to_string(y) + "*" + to_string(vx) + "*" + to_string(vy);
 }
 
-void bfs(int startx, int starty)
+void bfs()
 {
     visited.clear();
-        
-    for (int i = 0; i < X; i++)
-        for (int j = 0; j < Y; j++)
-            minimum[i][j] = -1;
-
+    
     queue < hop > unvisited;
     unvisited.push((hop){startx, starty, 0, 0, 0});
     
@@ -41,29 +37,41 @@ void bfs(int startx, int starty)
         hop current = unvisited.front();
         unvisited.pop();
         
-        string key = getKey(current.x, current.y, current.vx, current.vy);
-        if (visited.count(key) > 0)
-            continue;
-        else
-            visited.insert(key);
-            
+        if (current.x == endx && current.y == endy)
+        {
+            cout << "Optimal solution takes " << current.step << " hops." << endl;
+            return;
+        }
+        
         for (int i = -1; i <= 1; i++)
             for (int j = -1; j <= 1; j++)
             {   
                 int vxx = current.vx + i;
                 int vyy = current.vy + j;
                 
+                if (abs(vxx) > 3 || abs(vyy) > 3)
+                    continue;
+                    
                 int xx = current.x + vxx;
                 int yy = current.y + vyy;
                 
-                if (xx >= 0 && xx < X && yy >= 0 && yy < Y && grid[xx][yy] == 0)
+                if (xx >= 0 && xx < X && yy >= 0 && yy < Y)
                 {
-                    if (minimum[xx][yy] < 0 || (current.step + 1) < minimum[xx][yy])
-                        minimum[xx][yy] = current.step + 1;
+                    if (grid[xx][yy] == 1)
+                        continue;
+                        
+                    string key = getKey(xx, yy, vxx, vyy);
+                    if (visited.count(key) > 0)
+                        continue;
+                    else
+                        visited.insert(key);
+                        
                     unvisited.push((hop){xx, yy, vxx, vyy, current.step + 1});
                 }
             }
     }
+    
+    cout << "No solution." << endl;
 }
 
 int main(int argc, char *argv[])
@@ -96,22 +104,7 @@ int main(int argc, char *argv[])
                     grid[m][n] = 1;
         }
         
-        if (startx == endx && starty == endy)
-        {
-            cout << "Optimal solution takes 0 hops." << endl;
-            continue;
-        }
-        
-        bfs(startx, starty);
-        
-        if (minimum[endx][endy] == -1)
-            cout << "No solution." << endl;
-        else
-        {
-            cout << "Optimal solution takes ";
-            cout << minimum[endx][endy];
-            cout << " hops." << endl;
-        }
+        bfs();
     }
     
 	return 0;

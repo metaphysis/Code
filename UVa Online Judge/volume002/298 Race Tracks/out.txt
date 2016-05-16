@@ -2,9 +2,9 @@ No solution.
 Optimal solution takes 3 hops.
 No solution.
 Optimal solution takes 3 hops.
-Optimal solution takes 9 hops.
-Optimal solution takes 8 hops.
+Optimal solution takes 12 hops.
+Optimal solution takes 11 hops.
 Optimal solution takes 1 hops.
 No solution.
 Optimal solution takes 3 hops.
-No solution.
+Optimal solution takes 0 hops.
