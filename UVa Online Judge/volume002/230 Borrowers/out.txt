@@ -1,0 +1,10 @@
+END
+Put "Algorithms" after "A House for Mr. Biswas"
+END
+Put "The C Programming Languag" after "The Canterbury Tales"
+END
+Put "The Canterbury Taless" first
+END
+Put "The C Programming Language" after "The Canterbury Tales"
+Put "A House for Mr. Biswas" after "A Congo Diary"
+END

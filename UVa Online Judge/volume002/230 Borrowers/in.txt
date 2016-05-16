@@ -1,0 +1,27 @@
+"The Canterbury Tales" by Chaucer, G.
+"The Canterbury Taless" by Chaucer, B.
+"Algorithms" by Sedgewick, R.
+"The C Programming Language" by Kernighan, B. and Ritchiee, D.
+"The C Programming Languag" by Kernighan, B. and Ritchiee, D.
+"The D Programming Language" by Kernighan, B. and Ritchiee, D.
+"A House for Mr. Biswas" by Naipaul, V.S.
+"A Congo Diary" by Naipaul, V.S.
+END
+BORROW "Algorithms"
+BORROW "The C Programming Language"
+BORROW "The C Programming Languag"
+BORROW "The Canterbury Taless"
+SHELVE
+RETURN "Algorithms"
+SHELVE
+RETURN "The C Programming Languag"
+SHELVE
+BORROW "The C Programming Languag"
+BORROW "The Canterbury Taless"
+BORROW "A House for Mr. Biswas"
+RETURN "The Canterbury Taless" 
+SHELVE
+RETURN "The C Programming Language"
+RETURN "A House for Mr. Biswas"
+SHELVE
+END

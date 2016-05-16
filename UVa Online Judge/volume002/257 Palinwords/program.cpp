@@ -1,0 +1,29 @@
+// Palinwords
+// UVa IDs: 257
+// Verdict: 
+// Submission Date: 
+// UVa Run Time: s
+//
+// 版权所有（C）2016，邱秋。metaphysis # yeah dot net
+
+#include <iostream>
+#include <iomanip>
+#include <sstream>
+#include <vector>
+#include <algorithm>
+#include <limits>
+#include <cstring>
+#include <stack>
+#include <map>
+#include <queue>
+#include <set>
+
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+    cin.tie(0);
+    cout.sync_with_stdio(false);
+    
+	return 0;
+}

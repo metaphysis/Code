@@ -1,0 +1,128 @@
+Data Set #1
+minimum cost = $5.34
+Data Set #2
+minimum cost = $17.14
+Data Set #3
+minimum cost = $11.51
+Data Set #4
+minimum cost = $1.77
+Data Set #5
+minimum cost = $8.29
+Data Set #6
+minimum cost = $10.87
+Data Set #7
+minimum cost = $16.12
+Data Set #8
+minimum cost = $2.06
+Data Set #9
+minimum cost = $9.84
+Data Set #10
+minimum cost = $21.14
+Data Set #11
+minimum cost = $6.88
+Data Set #12
+minimum cost = $2.22
+Data Set #13
+minimum cost = $10.58
+Data Set #14
+minimum cost = $8.47
+Data Set #15
+minimum cost = $12.66
+Data Set #16
+minimum cost = $5.90
+Data Set #17
+minimum cost = $20.79
+Data Set #18
+minimum cost = $7.23
+Data Set #19
+minimum cost = $5.73
+Data Set #20
+minimum cost = $6.22
+Data Set #21
+minimum cost = $8.15
+Data Set #22
+minimum cost = $11.91
+Data Set #23
+minimum cost = $8.92
+Data Set #24
+minimum cost = $16.07
+Data Set #25
+minimum cost = $9.29
+Data Set #26
+minimum cost = $6.06
+Data Set #27
+minimum cost = $15.32
+Data Set #28
+minimum cost = $5.92
+Data Set #29
+minimum cost = $1.39
+Data Set #30
+minimum cost = $17.09
+Data Set #31
+minimum cost = $6.60
+Data Set #32
+minimum cost = $8.03
+Data Set #33
+minimum cost = $7.51
+Data Set #34
+minimum cost = $14.61
+Data Set #35
+minimum cost = $15.54
+Data Set #36
+minimum cost = $16.34
+Data Set #37
+minimum cost = $9.44
+Data Set #38
+minimum cost = $2.02
+Data Set #39
+minimum cost = $4.35
+Data Set #40
+minimum cost = $27.59
+Data Set #41
+minimum cost = $6.10
+Data Set #42
+minimum cost = $15.27
+Data Set #43
+minimum cost = $4.97
+Data Set #44
+minimum cost = $4.91
+Data Set #45
+minimum cost = $4.83
+Data Set #46
+minimum cost = $7.59
+Data Set #47
+minimum cost = $9.53
+Data Set #48
+minimum cost = $3.77
+Data Set #49
+minimum cost = $5.00
+Data Set #50
+minimum cost = $10.50
+Data Set #51
+minimum cost = $3.93
+Data Set #52
+minimum cost = $2.02
+Data Set #53
+minimum cost = $11.82
+Data Set #54
+minimum cost = $13.73
+Data Set #55
+minimum cost = $12.08
+Data Set #56
+minimum cost = $5.03
+Data Set #57
+minimum cost = $8.08
+Data Set #58
+minimum cost = $15.98
+Data Set #59
+minimum cost = $11.42
+Data Set #60
+minimum cost = $12.06
+Data Set #61
+minimum cost = $13.99
+Data Set #62
+minimum cost = $6.91
+Data Set #63
+minimum cost = $13.22
+Data Set #64
+minimum cost = $24.78

@@ -1,0 +1,31 @@
+|                                 || 
+|| *                              |||| 
+The solution is: |||| 
+|                                 ||| 
+||                                |||||| 
+|||| *                            || n 
+The solution is: || n 
+| *                               nnnnnn 9 
+||                                nn 999 
+|||| *                            nnnn 999999 
+|||||||| *                        nnnnnnnn 99 8 
+The solution is: nnnnnnnn 88 
+|                                 n 
+||                                nn 
+|||| *                            nnnn 
+||||||||                          nnnnnnnn 
+|||||| n                          nnnnnn 9 
+|| nnn *                          nn 999 
+|||| nnnnnn *                     nnnn 999999 
+The solution is: 8 
+|                                 ||| 
+||                                |||||| 
+||||                              || n 
+|||||||| *                        |||| nn 
+|||||| n                          |||||||| nnnn 
+|| nnn *                          |||||| nnnnnnnnn 
+|||| nnnnnn *                     || nnnnnnnnn 9 
+|||||||| nn 9 *                   |||| nnnnnnnn 999 
+|||||| nnnnn 99 *                 |||||||| nnnnnn 9999999 
+|| n 99999 *                      |||||| nnn 99999 8 
+The solution is: 888 
