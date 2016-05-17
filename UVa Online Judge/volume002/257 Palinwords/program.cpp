@@ -22,8 +22,7 @@ bool manacher(string word)
     vector < int > P(word.size());
     set < string > palindromes;
 
-    int center = 0, rightmost = 0;
-    int low = 0, up = 0;
+    int center = 0, rightmost = 0, low = 0, up = 0;
     for (int i = 1; i < word.length(); i++)
     {
         if (rightmost > i)
