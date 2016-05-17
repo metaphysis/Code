@@ -13,140 +13,101 @@
 
 using namespace std;
 
-bool isPalinword(string word)
+bool manacher(string word)
 {
-    string newWord;
-    for (int i = 0; i < word.length(); i++)
-    {
-        newWord += "#";
-        newWord += word[i];
-    }
-    newWord += "#";
+    for (int i = word.length() - 1; i >= 0; i--)
+        word.insert(word.begin() + i, '#');
+    word.push_back('#');
 
-    vector < int > P(newWord.size());
-
-    //P[0] = 1;
-
-    //int mx = 0, id;
-    //for (int i = 1; i < newWord.size(); i++)
-    //{
-    //if (mx > i)
-    //mx = min(P[2 * id - 1], mx - i);
-    //else
-    //P[i] = 1;
-
-    //while (newWord[i - P[i]] == newWord[i + P[i]])
-    //P[i]++;
-
-    //if (i + P[i] > mx)
-    //{
-    //mx = i + P[i];
-    //id = i;
-    //}
-    //}
-
+    vector < int > P(word.size());
     set < string > palindromes;
-    
-    int c = 0, r = 0;           // Here the first element in newWord has been processed.
-    int m = 0, n = 0;           // The walking indices to compare if two elements are the same
-    for (int i = 1; i < newWord.length(); i++)
+
+    int center = 0, rightmost = 0;
+    int low = 0, up = 0;
+    for (int i = 1; i < word.length(); i++)
     {
-        if (i > r)
+        if (rightmost > i)
         {
-            P[i] = 0;
-            m = i - 1;
-            n = i + 1;
-        }
-        else
-        {
-            int i2 = c * 2 - i;
-            if (P[i2] < (r - i))
+            int i2 = center * 2 - i;
+            if (P[i2] < (rightmost - i))
             {
                 P[i] = P[i2];
-                m = -1;         // This signals bypassing the while loop below. 
+                low = -1;
             }
             else
             {
-                P[i] = r - i;
-                n = r + 1;
-                m = i * 2 - n;
+                P[i] = rightmost - i;
+                up = rightmost + 1;
+                low = i * 2 - up;
             }
         }
-        
-        while (m >= 0 && n < newWord.length() && newWord[m] == newWord[n])
+        else
+        {
+            P[i] = 0;
+            low = i - 1;
+            up = i + 1;
+        }
+
+        while (low >= 0 && up < word.length() && word[low] == word[up])
         {
             P[i]++;
-            m--;
-            n++;
+            low--;
+            up++;
         }
-        
-        if ((i + P[i]) > r)
+
+        if ((i + P[i]) > rightmost)
         {
-            c = i;
-            r = i + P[i];
+            center = i;
+            rightmost = i + P[i];
         }
         
         if (P[i] >= 3)
         {
             string palindrome;
-            if (isalpha(newWord[i]))
-                palindrome += newWord[i];
+            if (isalpha(word[i]))
+                palindrome += word[i];
 
             for (int j = i + 1; j <= (i + P[i] - 1); j++)
-            {
-                if (isalpha(newWord[j]))
+                if (isalpha(word[j]))
                 {
-                    palindrome += newWord[j];
-                    palindrome.insert(palindrome.begin(), newWord[j]);
-                    
+                    palindrome += word[j];
+                    palindrome.insert(palindrome.begin(), word[j]);
+
                     if (palindrome.length() >= 5)
                         break;
-                        
+
                     if (palindrome.length() >= 3)
                     {
                         if (palindromes.count(palindrome) > 0)
                             continue;
-                            
+
                         for (auto it = palindromes.begin(); it != palindromes.end(); it++)
-                        {
                             if (palindrome.find(*it) == palindrome.npos &&
                                 (*it).find(palindrome) == palindrome.npos)
-                                return true; 
-                        }
-                        
+                                return true;
+
                         palindromes.insert(palindrome);
                     }
                 }
-            }
         }
     }
 
     return false;
 }
 
-void findPalinwords(string line)
-{
-    istringstream iss(line);
-    string word;
-    while (iss >> word)
-    {
-        if (isPalinword(word))
-            cout << word << "\n";
-    }
-}
-
 int main(int argc, char *argv[])
 {
-    cin.tie(0);
-    cout.sync_with_stdio(false);
-
     string line;
     while (getline(cin, line))
     {
         if (line.length() == 0)
             continue;
 
-        findPalinwords(line);
+        string word;
+        istringstream iss(line);
+        while (iss >> word)
+            if (manacher(word))
+                cout << word << "\n";
     }
 
     return 0;
