@@ -40,7 +40,7 @@ bool manacher(string word)
             center = i;
             rightmost = i + P[i];
         }
-
+        
         if (P[i] >= 3)
         {
             string palindrome;

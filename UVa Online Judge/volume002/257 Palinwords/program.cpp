@@ -19,39 +19,41 @@ bool manacher(string word)
         word.insert(word.begin() + i, '#');
     word.push_back('#');
 
+    //cout << word << endl;
+    
     vector < int > P(word.size());
     set < string > palindromes;
-
-    int center = 0, rightmost = 0, low = 0, up = 0;
+    
+    int center = 0, rightmost = 0, low = 0, high = 0;
     for (int i = 1; i < word.length(); i++)
     {
         if (rightmost > i)
         {
-            int i2 = center * 2 - i;
-            if (P[i2] < (rightmost - i))
+            int j = center * 2 - i;
+            if (P[j] < (rightmost - i))
             {
-                P[i] = P[i2];
+                P[i] = P[j];
                 low = -1;
             }
             else
             {
                 P[i] = rightmost - i;
-                up = rightmost + 1;
-                low = i * 2 - up;
+                high = rightmost + 1;
+                low = i * 2 - high;
             }
         }
         else
         {
             P[i] = 0;
             low = i - 1;
-            up = i + 1;
+            high = i + 1;
         }
 
-        while (low >= 0 && up < word.length() && word[low] == word[up])
+        while (low >= 0 && high < word.length() && word[low] == word[high])
         {
             P[i]++;
             low--;
-            up++;
+            high++;
         }
 
         if ((i + P[i]) > rightmost)
@@ -59,6 +61,8 @@ bool manacher(string word)
             center = i;
             rightmost = i + P[i];
         }
+        
+        //cout << P[i];
         
         if (P[i] >= 3)
         {
@@ -83,7 +87,10 @@ bool manacher(string word)
                         for (auto it = palindromes.begin(); it != palindromes.end(); it++)
                             if (palindrome.find(*it) == palindrome.npos &&
                                 (*it).find(palindrome) == palindrome.npos)
-                                return true;
+                                {
+                                    //cout << endl;
+                                    return true;
+                                }
 
                         palindromes.insert(palindrome);
                     }
@@ -91,6 +98,8 @@ bool manacher(string word)
         }
     }
 
+    //cout << endl;
+    
     return false;
 }
 
