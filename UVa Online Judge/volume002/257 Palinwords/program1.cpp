@@ -27,10 +27,7 @@ bool manacher(string word)
     int center = 0, rightmost = 0;
     for (int i = 1; i < word.size(); i++)
     {
-        if (rightmost > i)
-            P[i] = min(P[2 * center - i], rightmost - i);
-        else
-            P[i] = 1;
+        P[i] = (rightmost > i) ? P[2 * center - i] : 1;
 
         while (word[i - P[i]] == word[i + P[i]])
             P[i]++;
