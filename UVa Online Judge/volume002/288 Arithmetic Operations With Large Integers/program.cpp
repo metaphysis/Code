@@ -1,6 +1,18 @@
+// Arithmetic Operations With Large Integers
+// UVa IDs: 288
+// Verdict: Accepted
+// Submission Date: 2016-05-24
+// UVa Run Time: 0.000s
+//
+// 版权所有（C）2016，邱秋。metaphysis # yeah dot net
+
 #include <iostream>
+#include <stack>
+#include <string>
+#include <map>
 #include <vector>
 #include <iomanip>
+#include <algorithm>
 
 using namespace std;
 
@@ -14,14 +26,14 @@ class BigInteger
     friend bool operator<(const BigInteger&, const BigInteger&);
     friend bool operator<=(const BigInteger&, const BigInteger&);
     friend bool operator==(const BigInteger&, const BigInteger&);
-
+    
     friend BigInteger operator+(const BigInteger&, const BigInteger&);
     friend BigInteger operator-(const BigInteger&, const BigInteger&);
     friend BigInteger operator*(const BigInteger&, const BigInteger&);
     friend BigInteger operator/(const BigInteger&, const BigInteger&);
     friend BigInteger operator%(const BigInteger&, const BigInteger&);
-    friend BigInteger operator^(const BigInteger&, const unsigned int&);
     friend BigInteger operator^(const BigInteger&, const BigInteger&);
+    friend BigInteger operator^(const BigInteger&, const unsigned int&);
     friend BigInteger operator<<(const BigInteger&, const unsigned int&);
 
 public:
@@ -449,21 +461,203 @@ BigInteger operator^(const BigInteger& x, const BigInteger& y)
         return ((x ^ (y / 2)) ^ 2);
 }
 
+struct symbol
+{
+    char operatorType;
+    BigInteger value;
+    bool isOperator;
+};
+
+// 使用栈来计算后缀表达式的值。从左至右扫描后缀表达式，如果是数字，则压入结果栈，
+// 如果是运算符，则取出结果栈栈顶的两个元素进行运算符所指定的运算，然后将运算结果
+// 压入结果栈中，直到后缀表达式处理完毕，结果栈的栈顶元素即为表达式的值。
+BigInteger calculate(vector <string> postfix)
+{
+    //cout << postfix.size() << endl;
+    //for (int i = 0; i < postfix.size(); i++)
+       //cout << postfix[i];
+    //cout << endl;
+    
+    vector <symbol> symbols;
+    for (int i = 0; i < postfix.size(); i++)
+    {
+        symbol s;
+        if (isdigit(postfix[i].front()))
+        {
+            s.value = BigInteger(postfix[i]);
+            s.isOperator = false;
+        }
+        else
+        {
+            s.operatorType = postfix[i].front();
+            s.isOperator = true;
+        }
+        symbols.push_back(s);
+    }
+    
+    //cout << symbols.size() << endl;
+    
+    stack<BigInteger> result;
+    for (int i = 0; i < symbols.size(); i++)
+    {
+        symbol s = symbols[i];
+        if (s.isOperator == false)
+            result.push(s.value);
+        else
+        {
+            BigInteger b = result.top();
+            result.pop();
+            BigInteger a = result.top();
+            result.pop();
+
+            switch (s.operatorType)
+            {
+                case '+':
+                    result.push(a + b);
+                    break;
+                case '-':
+                    result.push(a - b);
+                    break;
+                case '*':
+                    result.push(a * b);
+                    break;
+                case '^':
+                    result.push(a ^ b);
+                    break;
+                default:
+                    break;
+            }
+            
+            //cout << result.top() << endl;
+        }
+    }
+    
+    return result.top();
+}
+
+// 比较运算符在栈中的优先级顺序。在栈中，括号的优先级最小。
+bool lessPriority(char a, char b)
+{
+    map<char, int> priority;
+    priority.insert(pair<char, int>('+', 1));
+    priority.insert(pair<char, int>('-', 1));
+    priority.insert(pair<char, int>('*', 2));
+    priority.insert(pair<char, int>('^', 3));
+
+    return priority[a] <= priority[b];
+}
+
+vector <string> parse(string line)
+{
+    vector <string> postfix;
+    for (int i = line.length(); i >= 1; i--)
+        if (line[i] == '*' && line[i - 1] == '*')
+        {
+            line.erase(line.begin() + i);
+            line[i - 1] = '^';
+        }
+    
+    //cout << line << endl;
+    
+    for (int i = 0; i < line.length(); i++)
+    {
+        string block;
+        while (isdigit(line[i]))
+            block += line[i++];
+        postfix.push_back(block);
+        
+        if (i < line.length())
+        {
+            block = line[i];
+            postfix.push_back(block);
+        }
+    }
+    
+    //for (int i = 0; i < postfix.size(); i++)
+        //cout << postfix[i];
+    //cout << endl;
+    
+    return postfix;
+}
+
+// 将中缀表达式转换为后缀表达式。
+vector <string> toPostfix(vector <string> infixNotation)
+{
+    stack<string> operands; // 操作数栈。
+    stack<string> operators;  // 运算符栈。
+
+    for (int i = 0; i < infixNotation.size(); i++)
+    {
+        string c = infixNotation[i];
+        // 如果是数字，直接压入操作数栈中。
+        if (isdigit(c.front()))
+            operands.push(c);
+        else
+        {
+            // 如果是左括号，直接压入运算符栈中。
+            if (c.front() == '(')
+                operators.push(c);
+            // 如果是右括号，则弹出运算符栈顶元素，直到遇到左括号。
+            else if (c.front() == ')')
+            {
+                while (!operators.empty() && operators.top().front() != '(')
+                {
+                    operands.push(operators.top());
+                    operators.pop();
+                }
+
+                if (!operators.empty())
+                    operators.pop();
+            }
+            else
+            {
+                // 如果是非括号运算符，当运算符堆栈为空，或者运算符堆栈栈顶元素
+                // 为左括号，或者比运算符堆栈栈顶运算符的优先级高，将当前运算符
+                // 压入运算符堆栈。
+                if (operators.empty() || operators.top().front() == '('
+                    || !lessPriority(c.front(), operators.top().front()))
+                    operators.push(c);
+                else
+                {
+                    // 当运算符的优先级比运算符堆栈栈顶元素的优先级低或相等时，
+                    // 弹出运算符堆栈栈顶元素，直到运算符堆栈为空，或者遇到比
+                    // 当前运算符优先级低的运算符。
+                    while (!operators.empty() && lessPriority(c.front(), operators.top().front()))
+                    {
+                        operands.push(operators.top());
+                        operators.pop();
+                    }
+
+                    // 将当前运算符压入运算符堆栈。
+                    operators.push(c);
+                }
+            }
+        }
+    }
+
+    // 当中缀表达式处理完毕，运算符堆栈不为空时，逐个弹出压入到操作数堆栈中。
+    while (!operators.empty())
+    {
+        operands.push(operators.top());
+        operators.pop();
+    }
+
+    // 将操作数堆栈中保存的后缀表达式转换为一个字符串以利于后续值的计算。
+    vector <string> postfixNotation;
+    while (!operands.empty())
+    {
+        postfixNotation.insert(postfixNotation.begin(), operands.top());
+        operands.pop();
+    }
+
+    return postfixNotation;
+}
+
 int main(int argc, char *argv[])
 {
-    int cases;
-    string number;
-
-    cin >> cases;
-    while (cases--)
-    {
-        cin >> number;
-        BigInteger a(number);
-
-        cout << ((a ^ 4) - BigInteger("6") * (a ^ 3) +
-                 BigInteger("23") * (a ^ 2) - BigInteger("18") * a +
-                 BigInteger("24")) / BigInteger("24") << "\n";
-    }
+    string line;
+    while (getline(cin, line))
+        cout << calculate(toPostfix(parse(line))) << endl;
 
     return 0;
 }

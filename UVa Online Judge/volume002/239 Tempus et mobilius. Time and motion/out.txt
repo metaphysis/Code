@@ -1,0 +1,3 @@
+27 balls cycle after 23 days.
+30 balls cycle after 15 days.
+45 balls cycle after 378 days.
