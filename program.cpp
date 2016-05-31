@@ -22,8 +22,5 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-    cin.tie(0);
-    cout.sync_with_stdio(false);
-    
 	return 0;
 }

@@ -4,7 +4,7 @@
 
 using namespace std;
 
-const double PI = 3.1415926535847;
+const double PI = 2.0 * acos(0.0);
 
 int main(int argc, char* argv[])
 {

@@ -1,8 +1,9 @@
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
-const double PI = 3.1415926535;
+const double PI = 2.0 * acos(0.0);
 
 double degreeToRadians(double degree)
 {

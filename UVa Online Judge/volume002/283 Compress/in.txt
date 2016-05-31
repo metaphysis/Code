@@ -1,0 +1,7 @@
+2
+3
+Hello Contestant,$
+Please write a program whick gives$
+the text Hello world.$
+1
+To be or not to be, that is the question.$

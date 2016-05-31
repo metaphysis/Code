@@ -23,23 +23,10 @@ int calculate(string postfixNotation)
             int a = result.top();
             result.pop();
 
-            switch (c)
-            {
-                case '+':
-                    result.push(a + b);
-                    break;
-                case '-':
-                    result.push(a - b);
-                    break;
-                case '*':
-                    result.push(a * b);
-                    break;
-                case '/':
-                    result.push(a / b);
-                    break;
-                default:
-                    break;
-            }
+            if (c == '+') result.push(a + b);
+            if (c == '-') result.push(a - b);
+            if (c == '*') result.push(a * b);
+            if (c == '/') result.push(a / b);
         }
     }
     

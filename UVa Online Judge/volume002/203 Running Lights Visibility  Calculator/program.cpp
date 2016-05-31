@@ -30,11 +30,12 @@ vector < ship > ships;
 
 string roundedBearing(double bearing)
 {
-    char data[100];
-    sprintf(data, "%.2lf", bearing + EPSILON);
-    if(!strcmp(data, "360.00"))
-        strcpy(data, "0.00");
-    string number(data);
+    stringstream ss;
+    ss << fixed << setprecision(2) << (bearing + EPSILON);
+    string number;
+    ss >> number;
+    if (number == "360.00")
+        number = "0.00";
     return number;
 }
 

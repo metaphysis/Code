@@ -1,4 +1,4 @@
-// 168 Theseus and the Minotaur
+// Theseus and the Minotaur
 // UVa IDs: 168
 // Verdict: Accepted
 // Submission Date: 2016-02-18
@@ -20,7 +20,7 @@ int theseus, minotaur, k, lighted[26];
 void buildGraph(string line)
 {
     for (int i = 0; i < caverns.size(); i++)
-            caverns[i].clear();
+        caverns[i].clear();
     
     for (int i = line.length() - 1; i >= 0; i--)
     {
@@ -28,8 +28,8 @@ void buildGraph(string line)
             line.erase(line.begin() + i);
         if (line[i] == '.' || line[i] == ';')
             line[i] = ' ';
-   }
-    
+    }
+
     istringstream iss(line);
     vector < string > blocks;
     string block;

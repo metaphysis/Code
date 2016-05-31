@@ -12,10 +12,12 @@
 using namespace std;
 
 char grid[60][60];
+int visited[60][60][4];
 int flapped[60][60], column, row, startx, starty, endx, endy;
 int direction[4][2] = {{-1, 0}, {0, 1}, {1, 0}, {0, -1}};
 int mirror[4][2][3] = {{{0, 1, 1}, {0, -1, 3}}, {{-1, 0, 0}, {1, 0, 2}}, {{0, -1, 3}, {0, 1, 1}}, {{1, 0, 2}, {-1, 0, 0}}};
 bool found = false;
+int path[60][60];
 
 void dfs(int x, int y, int heading)
 {
@@ -35,45 +37,23 @@ void dfs(int x, int y, int heading)
         }
     }
     
-    if (grid[xx][yy] == '/' || grid[xx][yy] == '\\')
-    {
-        int reflect = 0;
-        if (grid[xx][yy] == '\\')
-            reflect = 1;
-            
-        int xxx = xx + mirror[heading][reflect][0];
-        int yyy = yy + mirror[heading][reflect][1];
-
-        if (grid[xxx][yyy] != '*')
+    if (xx >= 0 && xx < row && yy >= 0 && yy < column)
+        if (grid[xx][yy] == '/' || grid[xx][yy] == '\\')
         {
-            flapped[xx][yy] = 1;
-            dfs(xxx, yyy, mirror[heading][reflect][2]);
-            flapped[xx][yy] = 0;
+            for (int i = 0; i <= 1; i++)
+            {
+                int xxx = xx + mirror[heading][i][0];
+                int yyy = yy + mirror[heading][i][1];
+                int next = mirror[heading][i][2];
+                
+                if (visited[xxx][yyy][next] == 0)
+                {
+                    visited[xxx][yyy][next] = 1;
+                    dfs(xxx, yyy, next);
+                }
+            }
+            
         }
-        
-        if (flapped[xx][yy] == 0)
-        {
-            flapped[xx][yy] = 1;
-            if (grid[xx][yy] == '/')
-                grid[xx][yy] = '\\';
-            else
-                grid[xx][yy] = '/';
-            
-            reflect = (reflect == 0 ? 1 : 0);
-            
-            xxx = xx + mirror[heading][reflect][0];
-            yyy = yy + mirror[heading][reflect][1];
-            
-            if (grid[xxx][yyy] != '*')
-                dfs(xxx, yyy, mirror[heading][reflect][2]);
-            
-            if (grid[xx][yy] == '/')
-                grid[xx][yy] = '\\';
-            else
-                grid[xx][yy] = '/';
-            flapped[xx][yy] = 0;
-        }
-    }
     
     if (lastx == endx && lasty == endy)
     {
@@ -118,6 +98,7 @@ int main(int argc, char *argv[])
             }
 
         memset(flapped, 0, sizeof(flapped));
+        memset(visited, 0, sizeof(visited));
         
         if (first)
             first = false;
@@ -125,13 +106,13 @@ int main(int argc, char *argv[])
             cout << endl;
         
         int heading;
-        if (startx == 0 && starty != 0 && starty != (column - 1))
+        if (startx == 0 && starty > 0)
             heading = 2;
-        else if (startx == (row - 1) && starty != 0 && starty != (column - 1))
+        else if (startx == (row - 1) && starty > 0)
             heading = 0;
-        else if (starty == 0 && startx != 0 && startx != (row - 1))
+        else if (starty == 0 && startx > 0)
             heading = 1;
-        else if (starty == (column - 1) && startx != 0 && startx != (row - 1))
+        else if (starty == (column - 1) && startx > 0)
             heading = 3;
         
         found = false;    

@@ -13,7 +13,7 @@
 
 using namespace std;
 
-const double EPSILON = 1E-6, PI = 3.14159265358979323846, HALF_PI = PI / 2.0;
+const double EPSILON = 1E-6, PI = 2.0 * acos(0.0), HALF_PI = PI / 2.0;
 
 map < char, double > p, old;
 map < char, bool > defined;

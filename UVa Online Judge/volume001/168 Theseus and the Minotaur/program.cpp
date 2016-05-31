@@ -1,4 +1,4 @@
-// 168 Theseus and the Minotaur
+// Theseus and the Minotaur
 // UVa IDs: 168
 // Verdict: Accepted
 // Submission Date: 2016-02-18
