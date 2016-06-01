@@ -113,18 +113,18 @@ void startPursuit()
         {
             entered[minotaurTo] = passage;
 
+            // Minotaur can go to this cavern?
             if (lighted[passage])
             {
-                // check Theueus and Minotaur meet in passge or not
+                // check Theueus and Minotaur if meet in passge or not
                 if (theseusFrom == passage && theseusTo == minotaurTo)
                 {
-                    cout << "Theseus is killed between " << (char)('A' +
-                            theseusFrom);
+                    cout << "Theseus is killed between " << (char)('A' + theseusFrom);
                     cout << " and " << (char)('A' + theseusTo) << "\n";
                     break;
                 }
 
-                // target canvers is lighted, Minotaur flee back
+                // target canvers lighted, Minotaur flee back
                 minotaurFrom = passage, minotaurTo = minotaurTo;
             }
             else
