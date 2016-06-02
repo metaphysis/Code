@@ -22,13 +22,11 @@ void backtrack(int index)
         int miss[10] = { 0 };
         for (int i = 1; i <= a; i++)
         {
-            int j =
-                lower_bound(minutes, minutes + p, alignment[i][1]) - minutes;
+            int j = lower_bound(minutes, minutes + p, alignment[i][1]) - minutes;
             if (j > p)
                 miss[alignment[i][0]] += alignment[i][1] - minutes[p];
             else
-                miss[alignment[i][0]] +=
-                    min(abs(alignment[i][1] - minutes[j - 1]),
+                miss[alignment[i][0]] += min(abs(alignment[i][1] - minutes[j - 1]),
                     abs(alignment[i][1] - minutes[j]));
         }
 

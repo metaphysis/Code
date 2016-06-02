@@ -6,17 +6,21 @@
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
+#include <algorithm>
+#include <bitset>
+#include <cassert>
+#include <cmath>
+#include <cstring>
 #include <iostream>
 #include <iomanip>
-#include <sstream>
-#include <vector>
-#include <algorithm>
 #include <limits>
-#include <cstring>
-#include <stack>
+#include <list>
 #include <map>
 #include <queue>
+#include <sstream>
+#include <stack>
 #include <set>
+#include <vector>
 
 using namespace std;
 
