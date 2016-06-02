@@ -1,8 +1,9 @@
 #include <iostream>
 #include <vector>
-#include <limits>
 
 using namespace std;
+
+const int MAX_INT = 100000;
 
 struct edge
 {
@@ -23,7 +24,7 @@ void dijkstra(int start)
     {
         parent.push_back(-1);
         visited.push_back(false);
-        distances.push_back(numeric_limits< int >::max());
+        distances.push_back(MAX_INT);
     }
 
     distances[start] = 0;
@@ -41,7 +42,7 @@ void dijkstra(int start)
             }
         }
 
-        int minDistance = numeric_limits< int >::max();
+        int minDistance = MAX_INT;
         for (int i = 0; i < edges.size(); i++)
             if (visited[i] == false && minDistance > distances[i])
             {
