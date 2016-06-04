@@ -1,112 +1,93 @@
 // Compress
 // UVa IDs: 283
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2016-06-03
+// UVa Run Time: 0.250s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
+#include <algorithm>
+#include <bitset>
+#include <cassert>
+#include <cmath>
+#include <cstring>
 #include <iostream>
 #include <iomanip>
-#include <sstream>
-#include <vector>
-#include <algorithm>
 #include <limits>
-#include <cstring>
-#include <stack>
+#include <list>
 #include <map>
 #include <queue>
+#include <sstream>
+#include <stack>
 #include <set>
+#include <vector>
 
 using namespace std;
 
-int findMinimumLength(vector <int> count, vector <int> length)
+vector < int >counter, codes(10);
+int minimalBits;
+
+void backtrack(int prefix, int index, int bits)
 {
-    reverse(count.begin(), count.end());
-    for (int i = 0; i < count.size(); i++)
-        cout << setw(3) << right << count[i];
-    cout << endl;
-    
-    for (int i = 0; i < length.size(); i++)
-        cout << setw(3) << right << length[i];
-    cout << endl;
-    
-    cout << "----" << endl;
-    
-    int sum = 0;
-    for (int i = 0; i < count.size(); i++)
-        sum += count[i] * length[i];
-        
-    cout << sum << endl;
-    cout << "----" << endl;
-    return sum;
+    for (int i = 1; i <= 8; i++)
+    {
+        if (index + codes[i] >= counter.size())
+        {
+            int next_bits = bits;
+            for (int j = index; j < counter.size(); j++)
+                next_bits += counter[j] * (prefix + i);
+
+            minimalBits = min(minimalBits, next_bits);
+        }
+        else
+        {
+            int next_index = index, next_bits = bits;
+            for (int j = 1; j < codes[i]; j++)
+                next_bits += counter[next_index++] * (prefix + i);
+
+            if (next_bits < minimalBits)
+                backtrack(prefix + i, next_index, next_bits);
+        }
+    }
 }
 
 int main(int argc, char *argv[])
 {
     int cases;
-    
+
+    for (int i = 1; i <= 8; i++)
+        codes[i] = pow(2, i);
+
     string line;
     getline(cin, line);
     cases = stoi(line);
-    
+
     while (cases--)
     {
         int n;
         getline(cin, line);
         n = stoi(line);
-        
-        string text;
-        for (int i = 0; i < n; i++)
+
+        map < char, int >frequency;
+        for (int i = 1; i <= n; i++)
         {
             getline(cin, line);
-            text += line;
+
+            for (int i = 0; i < line.length(); i++)
+                frequency[line[i]]++;
         }
-        
-        map<char, int> frequency;
-        for (int i = 0; i < text.length(); i++)
-            frequency[text[i]]++;
-        
-        vector <int> count, length;
+
+        counter.clear();
         for (auto it = frequency.begin(); it != frequency.end(); it++)
-            count.push_back((*it).second);
-        sort(count.begin(), count.end());
-        
-        int maxLength = 1, base = 2;
-        while (base < count.size())
-            maxLength++, base *= 2;
-        
-        int minLength = numeric_limits<int>::max();
-        for (int i = 1, baseCount = 2; i <= maxLength; i++, baseCount *= 2)
-        {
-            length.clear();
-            
-            int codeCount = baseCount, codeLength = i;
-            
-            while (true)
-            {
-                if (length.size() + codeCount >= count.size())
-                {
-                    for (int j = 1; j <= codeCount && length.size() < count.size(); j++)
-                        length.push_back(codeLength);
-                }
-                else
-                {
-                    for (int j = 1; j < codeCount; j++)
-                        length.push_back(codeLength);
-                }
-                
-                if (length.size() >= count.size())
-                    break;
-                    
-                codeLength += i;
-            }
-            
-            minLength = min(minLength, findMinimumLength(count, length));
-        }
-        
-        cout << minLength << endl;
+            counter.push_back((*it).second);
+
+        sort(counter.begin(), counter.end(), greater < int >());
+
+        minimalBits = numeric_limits < int >::max();
+        backtrack(0, 0, 0);
+
+        cout << minimalBits << endl;
     }
-    
-	return 0;
+
+    return 0;
 }

@@ -12,7 +12,7 @@ struct letter
     int frequency;
     string code;
 
-    bool operator<(letter y) const
+    bool operator<(letter x) const
     {
         return ascii < x.ascii;
     }
@@ -47,7 +47,7 @@ void huffman(string line)
 
         symbol s;
         s.frequency = (*it).second;
-        s.letters.push_back(aLetter);
+        s.letters.push_back(l);
 
         symbols.push(s);
     }
