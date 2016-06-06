@@ -1,0 +1,75 @@
+c
+end
+rename *c *d
+end
+abFile001.c
+abFile001.cxx
+abprog001.c
+abfile.c
+abFile.c
+abFile.C
+abfile.C
+abFileXX.c
+abfileXX.c
+abfileXx.c
+abfile*Xx.c
+abFileprog.c
+end
+rename abfile*.c bprog*.cxx
+rename a*.c *
+rename * *
+end
+acm.c
+end
+rename ac*.c ib*.cpp
+end
+a.c
+ab.c
+end
+rename a*.c ab*.c
+end
+a.c
+b.c
+end
+rename a.* b.*
+rename *.c *.d
+end
+ab
+abab
+end
+rename ab*ab asd*asd
+end
+a.c
+ab.c
+end
+rename a*.c ab*.c
+end
+b.d
+a.c
+end
+rename *d *txt
+rename a* x*
+end
+abFile001.c
+abFile001.cxx
+abprog001.c
+abfile.c
+abFile.c
+abFileprog.c
+end
+rename abFile*.c bprog*.cxx
+end
+acm.c
+end
+rename ac*.c ib*.cpp
+end
+ab
+abab
+end
+rename ab*ab asd*asd
+end
+abcd*cde*.c
+end
+rename abcd*.c eeee*.e
+end
+

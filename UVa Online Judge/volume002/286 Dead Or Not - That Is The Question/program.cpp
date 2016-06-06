@@ -8,8 +8,8 @@
 
 // The problem statement is not so clear.
 // When a pawn is in the 8th row, do I have to count it as any potentially promoted piece?
-// NO, you can assume that potential promotion already took place. 
-// the input is given as row by row, first a1 - a8, then b1 - b8, etc.
+// NO, you can assume that potential promotion already took place. so, a pawn in the 8th row is just a pawn.
+// The input is given as row by row, first a1 - h1, then a2 - h2, etc.
 
 #include <algorithm>
 #include <bitset>
