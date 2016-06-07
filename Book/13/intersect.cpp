@@ -8,7 +8,9 @@ using namespace std;
 struct point
 {
     double x, y;
-    bool valid;                 // 标示点是否为有效交点
+    
+    // 标记是否为有效交点
+    bool is_valid;     
 };
 
 struct segment
@@ -48,8 +50,7 @@ line pointsToLine(point start, point end)
 // 判断两条直线是否平行。
 bool isParallelLine(line line1, line line2)
 {
-    return (fabs(line1.a - line2.a) <= EPSILON)
-        && (fabs(line1.b - line2.b) <= EPSILON);
+    return (fabs(line1.a - line2.a) <= EPSILON) && (fabs(line1.b - line2.b) <= EPSILON);
 }
 
 // 判断两条直线是否为同一条直线。
@@ -59,48 +60,45 @@ bool isSameLine(line line1, line line2)
 }
 
 // 求两条直线的交点，如果存在交点则返回 true，否则返回 false。
-point intersectionPoint(line line1, line line2)
+point intersect(line line1, line line2)
 {
-    point p;
+    point pr;
 
     // 当两条直线平行时，认为其无交点。
     if (isParallelLine(line1, line2))
     {
-        return (point)
-        {
-        0.0, 0.0, false};
+        return (point){0.0, 0.0, false};
     }
 
-    p.valid = true;
+    pr.is_valid = true;
+    
     // 当两条直线重合时，任意取直线上一点作为交点。
     if (isSameLine(line1, line2))
     {
         // 系数 a 不为 0，取 y = 0。
         if (fabs(line1.a) > EPSILON)
         {
-            p.x = -line1.c / line1.a;
-            p.y = 0.0;
+            pr.x = -line1.c / line1.a;
+            pr.y = 0.0;
         }
         // 系数 b 不为 0，取 x = 0。
         else
         {
-            p.x = 0.0;
-            p.y = -line1.c / line1.b;
+            pr.x = 0.0;
+            pr.y = -line1.c / line1.b;
         }
 
-        return p;
+        return pr;
     }
 
     // 两条直线相交，求出交点。
-    p.x =
-        (line2.b * line1.c - line1.b * line2.c) / (line2.a * line1.b -
-        line1.a * line2.b);
+    pr.x = (line2.b * line1.c - line1.b * line2.c) / (line2.a * line1.b - line1.a * line2.b);
     if (fabs(line1.b) > EPSILON)
-        p.y = -(line1.a * p.x + line1.c) / line1.b;
+        pr.y = -(line1.a * pr.x + line1.c) / line1.b;
     else
-        p.y = -(line2.a * p.x + line2.c) / line2.b;
+        pr.y = -(line2.a * pr.x + line2.c) / line2.b;
 
-    return p;
+    return pr;
 }
 
 // 将使用斜率与直线上一点的表示方式转换为标准形式。
@@ -117,30 +115,30 @@ line pointAndSlopeToLine(point p, double slope)
 }
 
 // 求经过点 pOutside 与直线 lr 垂直的直线 lp 与 lr 的交点。
-point closestPoint(point pOutside, line lr)
+point closestPoint(point p1, line lr)
 {
-    point pOnLine;
+    point p2;
 
     // 先判断特殊情形。
     // 若为平行于 X 轴的直线。
     if (fabs(lr.a) <= EPSILON)
     {
-        pOnLine.x = pOutside.x;
-        pOnLine.y = -lr.c;
+        p2.x = p1.x;
+        p2.y = -lr.c;
     }
     // 若为垂直于 X 轴的直线。
     else if (fabs(lr.b) <= EPSILON)
     {
-        pOnLine.x = -lr.c;
-        pOnLine.y = pOutside.y;
+        p2.x = -lr.c;
+        p2.y = p1.y;
     }
     else
     {
-        line lp = pointAndSlopeToLine(pOutside, lr.b / lr.a);
-        pOnLine = intersectionPoint(lr, lp);
+        line lp = pointAndSlopeToLine(p1, lr.b / lr.a);
+        p2 = intersect(lr, lp);
     }
 
-    return pOnLine;
+    return p2;
 }
 
 // 包围盒测试。
@@ -166,8 +164,8 @@ bool segmentsIntersect(segment aSegment, segment bSegment)
     if (isParallelLine(aLine, bLine))
         return false;
 
-    p = intersectionPoint(aLine, bLine);
-    if (p.valid == false)
+    p = intersect(aLine, bLine);
+    if (p.is_valid == false)
         return false;
 
     return (pointInBox(p, aSegment.start, aSegment.end) &&

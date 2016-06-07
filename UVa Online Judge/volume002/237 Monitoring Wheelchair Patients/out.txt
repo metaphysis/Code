@@ -1,0 +1,13 @@
+Case Number 1
+Left restricted area at point (400.0,132.8) and time 67.2 sec.
+Total distance traveled was 559.0 feet
+***************************************
+Case Number 2
+No departure from restricted area
+Maximum distance patient traveled from door was 172.0 feet
+Total distance traveled was 240.0 feet
+***************************************
+Case Number 3
+Left restricted area at point (67.0,200.0) and time 2191.4 sec.
+Total distance traveled was 354.7 feet
+***************************************
