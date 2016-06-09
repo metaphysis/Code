@@ -1,0 +1,63 @@
+8
+
+1. Betty Boop
+2. Elmer Fudd
+3. Olive Oyl
+
+1 2 3
+1 2 3
+1 2 3
+2 1 3
+2 1 3
+2 1 3
+3 1 2
+3 1 2
+3 1 2
+
+1. Bill Clinton
+2. Barbara Bush
+3. Margaret Thatcher
+4. John Minor
+5. Clint Eastwood
+6. Jesse Ventura
+7. Sonny Bono
+8. Cher
+
+2 4 6 8
+1 2 3
+5 7
+8
+6 6
+5
+5
+5
+5 7 2
+8
+3 2 5
+
+1. Chubby Checker
+2. Kid Creole
+3. Rest of the coconuts
+4. Eddy Grant
+
+1 2 3 4
+
+1. Chubby Checker
+
+
+1. Chubby Checker
+2. Kid Creole
+
+
+1. Chubby Checker
+
+1
+
+1. Chubby Checker
+
+2
+
+1. Chubby Checker
+
+2
+1

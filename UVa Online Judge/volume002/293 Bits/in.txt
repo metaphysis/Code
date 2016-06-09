@@ -1,0 +1,61 @@
+16
+a : array[-42..42] of (justoneid)
+b : string(0)
+c : array[-42..42] of [42..42]
+d : { a:[1..1] b:[2..2] c:(a) }
+year : [1970..2030]
+team : {
+        name : string(14)
+        members : array [1..3] of {
+                sex : ( male, female )
+                name : string(20)
+                age : [16..30]
+        }
+        position : [1..40]
+}
+jurynames : array [1..3] of string(20)
+fish : array [1..2] of array [1..1] of array [63..66] of array [565..588] of string(14)
+fisk : array [1..2] of array [1..2] of array [1..2] of array [1..2] of array [1..32] of array [1..9] of array [-1..9] of array [-77..-72] of string(4)
+frosk : {
+loff : string(55)
+sopp : [-10000..-9999]
+dings : ( dfsdf, dfgd, dfgdfg, dfgfdg, ghfhg )
+}
+
+year:[ 1970 . . 2030 ]
+team:{name:string     (
+
+14
+
+)members :
+array[1    ..3        ]of{sex:(male      ,female)
+                name
+
+
+ :string    (20          
+
+
+
+)
+                age :[16    .                
+     .    
+30
+
+
+]}
+        position 
+
+
+
+: [   1          .
+
+.40]
+
+}jurynames :array[1..3]ofstring(20   
+)fish:array[1..2]of array[1.     .1] of array[63..66] of array [565..588] of string(14)
+fisk : array [1..2] of array [1..2] of array [1..2] of array [1..2] of array [1..32] of array [1..9] of array [-1..9] of array [-77..-72] of string(4)
+frosk : {
+loff : string(55)
+sopp : [-10000..-9999]
+dings : ( dfsdf, dfgd, dfgdfg, dfgfdg, ghfhg )
+}

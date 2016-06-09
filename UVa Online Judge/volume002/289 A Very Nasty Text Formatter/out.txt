@@ -1,0 +1,75 @@
+This  is  an example
+of a paragraph which
+is  prettyprinted on
+a  row with a length
+of twenty.
+This    is   an
+example   of  a
+paragraph which
+is prettyprint-
+ed   on  a  row
+with  a  length
+of fifteen.
+This is an
+example of
+a paragra-
+ph   which
+is pretty-
+printed on
+a row with
+a   length
+of ten.
+This
+is an
+exam-
+ple
+of  a
+para-
+graph
+which
+is p-
+rett-
+ypri-
+nted
+on  a
+row
+with
+a le-
+ngth
+of f-
+ive.
+Th-
+is
+is
+an
+ex-
+am-
+ple
+of
+a
+pa-
+ra-
+gr-
+aph
+wh-
+ich
+is
+pr-
+et-
+ty-
+pr-
+in-
+ted
+on
+a
+row
+wi-
+th
+a
+le-
+ng-
+th
+of
+th-
+re-
+e.
