@@ -51,8 +51,7 @@ double execute(int current_address, int next_address)
     current_address = (current_address > n) ? (current_address - n) : current_address;
 
     // continue execution
-    if (instructions[next_address].address1 > 0
-        && instructions[next_address].address2 == NO_ADDRESS)
+    if (instructions[next_address].address1 > 0 && instructions[next_address].address2 == NO_ADDRESS)
         elapsed += execute(current_address, instructions[next_address].address1);
     else if (instructions[next_address].address1 > 0 && instructions[next_address].address2 > 0)
     {
@@ -62,51 +61,6 @@ double execute(int current_address, int next_address)
     }
 
     return elapsed;
-}
-
-// find directed circle by topological sort
-bool findCircle()
-{
-    vector < int >in(n + 1);
-
-    fill(in.begin(), in.end(), 0);
-
-    for (int i = 1; i <= n; i++)
-    {
-        if (instructions[i].address1 > 0)
-            in[instructions[i].address1]++;
-        if (instructions[i].address2 > 0)
-            in[instructions[i].address2]++;
-    }
-
-    bool looped = false;
-    int nodes = n;
-    while (nodes > 0)
-    {
-        int index = 0;
-        for (int i = 1; i <= n; i++)
-            if (in[i] == 0)
-            {
-                index = i;
-                break;
-            }
-
-        if (index == 0)
-        {
-            looped = true;
-            break;
-        }
-
-        nodes--;
-
-        in[index]--;
-        if (instructions[index].address1 > 0)
-            in[instructions[index].address1]--;
-        if (instructions[index].address2 > 0)
-            in[instructions[index].address2]--;
-    }
-
-    return looped;
 }
 
 int main(int argc, char *argv[])
@@ -133,16 +87,8 @@ int main(int argc, char *argv[])
                 cin >> instructions[indexer].address2;
         }
 
-        ++cases;
-
-        if (findCircle())
-        {
-            cout << "Case " << cases << " is looped!" << endl;
-            assert(false);
-        }
-
         double execution_time = execute(0, 1);
-        cout << "Case " << cases << ". Execution time = ";
+        cout << "Case " << ++cases << ". Execution time = ";
         cout << fixed << setprecision(4) << execution_time << endl;
     }
 
