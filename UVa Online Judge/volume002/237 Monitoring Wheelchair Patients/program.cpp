@@ -24,7 +24,7 @@
 
 using namespace std;
 
-const double PI = 2.0 * acos(0.0), EPSILON = 1E-7;
+const double PI = 2.0 * acos(0.0), EPSILON = numeric_limits<float>::epsilon();
 
 struct point
 {
@@ -143,12 +143,13 @@ int main(int argc, char *argv[])
             endy += distance_moved * cos(bearing);
             
             double distance_from_start = sqrt(pow(endx - 200.0, 2) + pow(endy, 2));
-                
-            maximum_distance = max(maximum_distance, distance_from_start);
+            
+            if (distance_from_start > maximum_distance + EPSILON)
+                maximum_distance = distance_from_start;
             
             if (first_out_found == false)
             {
-                if (endx <= 0.0 || endx >= 400.0 || endy <= 0.0 || endy >= 200.0)
+                if (endx + EPSILON < 0.0 || endx > 400.0 + EPSILON || endy + EPSILON < 0.0 || endy > 200.0 + EPSILON)
                 {
                     line traveled = pointsToLine((point){startx, starty}, (point){endx, endy});
                     line boundary[4] = {left_line, top_line, right_line, bottom_line};
@@ -234,20 +235,20 @@ int main(int argc, char *argv[])
         if (first_out_found)
         {
             cout << "Left restricted area at point (";
-            cout << fixed << setprecision(1) << first_out_x;
-            cout << fixed << setprecision(1) << "," << first_out_y;
+            cout << fixed << setprecision(1) << (first_out_x + EPSILON);
+            cout << fixed << setprecision(1) << "," << (first_out_y + EPSILON);
             cout << ") and time ";
-            cout << fixed << setprecision(1) << first_out_time;
+            cout << fixed << setprecision(1) << (first_out_time + EPSILON);
             cout << " sec." << endl;
         }
         else
         {
             cout << "No departure from restricted area" << endl;
             cout << "Maximum distance patient traveled from door was ";
-            cout << fixed << setprecision(1) << maximum_distance << " feet" << endl;
+            cout << fixed << setprecision(1) << (maximum_distance + EPSILON) << " feet" << endl;
         }
         cout << "Total distance traveled was ";
-        cout << fixed << setprecision(1) << total_distance << " feet" << endl;
+        cout << fixed << setprecision(1) << (total_distance + EPSILON) << " feet" << endl;
         cout << "***************************************" << endl;
     }
     

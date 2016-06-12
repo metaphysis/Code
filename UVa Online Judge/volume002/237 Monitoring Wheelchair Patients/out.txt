@@ -11,3 +11,35 @@ Case Number 3
 Left restricted area at point (67.0,200.0) and time 2191.4 sec.
 Total distance traveled was 354.7 feet
 ***************************************
+Case Number 4
+Left restricted area at point (400.0,200.0) and time 85.0 sec.
+Total distance traveled was 475.0 feet
+***************************************
+Case Number 5
+Left restricted area at point (0.0,200.0) and time 85.0 sec.
+Total distance traveled was 475.0 feet
+***************************************
+Case Number 6
+Left restricted area at point (400.0,0.0) and time 140.0 sec.
+Total distance traveled was 625.0 feet
+***************************************
+Case Number 7
+Left restricted area at point (0.0,0.0) and time 140.0 sec.
+Total distance traveled was 625.0 feet
+***************************************
+Case Number 8
+Left restricted area at point (400.0,200.0) and time 120.0 sec.
+Total distance traveled was 525.0 feet
+***************************************
+Case Number 9
+Left restricted area at point (400.0,0.0) and time 120.0 sec.
+Total distance traveled was 525.0 feet
+***************************************
+Case Number 10
+Left restricted area at point (0.0,200.0) and time 120.0 sec.
+Total distance traveled was 525.0 feet
+***************************************
+Case Number 11
+Left restricted area at point (0.0,0.0) and time 120.0 sec.
+Total distance traveled was 525.0 feet
+***************************************

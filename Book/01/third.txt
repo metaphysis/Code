@@ -1,14 +1,14 @@
-bool: 1Byte(s), 0~1
-char: 1Byte(s), -128~127
-unsigned char: 1Byte(s), 0~255
-short int: 2Byte(s), -32768~32767
-unsigned short int: 2Byte(s), 0~65535
-int: 4Byte(s), -2147483648~2147483647
-unsigned int: 4Byte(s), 0~4294967295
-long int: 4Byte(s), -2147483648~2147483647
-unsigned long int: 4Byte(s), 0~4294967295
-long long int: 8Byte(s), -9223372036854775808~9223372036854775807
-unsigned long long int: 8Byte(s), 0~18446744073709551615
-float: 4Byte(s), 1.17549e-38~3.40282e+38
-double: 8Byte(s), 2.22507e-308~1.79769e+308
-long double: 12Byte(s), 3.3621e-4932~1.18973e+4932
+                   bool:  1B,                    0 ~ 1
+                   char:  1B,                 -128 ~ 127
+          unsigned char:  1B,                    0 ~ 255
+              short int:  2B,               -32768 ~ 32767
+     unsigned short int:  2B,                    0 ~ 65535
+                    int:  4B,          -2147483648 ~ 2147483647
+           unsigned int:  4B,                    0 ~ 4294967295
+               long int:  4B,          -2147483648 ~ 2147483647
+      unsigned long int:  4B,                    0 ~ 4294967295
+          long long int:  8B, -9223372036854775808 ~ 9223372036854775807
+ unsigned long long int:  8B,                    0 ~ 18446744073709551615
+                  float:  4B,          1.17549e-38 ~ 3.40282e+38
+                 double:  8B,         2.22507e-308 ~ 1.79769e+308
+            long double: 12B,         3.3621e-4932 ~ 1.18973e+4932

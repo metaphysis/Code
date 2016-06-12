@@ -1,0 +1,17 @@
+16
+1 h 1
+1 v 1
+2 vv 2
+7 vhhhvhh 4
+7 hhhhhhh 0
+7 vhhhhhh 0
+7 hhvhhvh 7
+7 hhvvhvh 6
+7 hhvvhvh 7
+10 hhvvhvhvhv 10
+11 vhhvvhvhvhv 11
+12 vvhhvvhvhvhv 12
+12 vvhhvvhvhvhv 6
+12 vvhhvvhvhvhv 4
+12 vvhhvvhvhvhv 2
+12 vvhhvvhvhvhv 1

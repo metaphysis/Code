@@ -25,10 +25,11 @@ int main(int argc, char *argv[])
 
     for (int i = 0; i < 14; i++)
     {
-        cout << "    cout << \"" << dataTypes[i] << ": \" << sizeof("
-             << dataTypes[i] << ") << \"Byte(s), \" << "
+        cout << "    cout << setw(24) << right << \"" << dataTypes[i]
+             << ":\" << setw(3) << right << sizeof("
+             << dataTypes[i] << ") << \"B, \" << setw(20) << right << "
              << (i <= 2 ? "(int)" : "") << "numeric_limits<" << dataTypes[i]
-             << ">::min() << \"~\" << " << (i <= 2 ? "(int)" : "")
+             << ">::min() << \" ~ \" << left << " << (i <= 2 ? "(int)" : "")
              << "numeric_limits<" << dataTypes[i] << ">::max() << endl;\n";
     }
 
