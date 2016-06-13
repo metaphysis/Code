@@ -1,7 +1,7 @@
-Case 1. Execution time = 0.0000
-Case 2. Execution time = 0.0000
-Case 3. Execution time = 6.0000
-Case 4. Execution time = 21.0000
-Case 5. Execution time = 12.0000
-Case 6. Execution time = 12.5000
-Case 7. Execution time = 26.5000
+Case 1. Execution time = 31.0000
+Case 2. Execution time = 6.0000
+Case 3. Execution time = 21.0000
+Case 4. Execution time = 12.0000
+Case 5. Execution time = 12.5000
+Case 6. Execution time = 26.5000
+Case 7. Execution time = 41.0000
