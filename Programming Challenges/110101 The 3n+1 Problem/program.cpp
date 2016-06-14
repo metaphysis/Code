@@ -100,6 +100,8 @@ int counter(long long number)
 	
 int main(int ac, char *av[])
 {
+    ios::sync_with_stdio(false);
+    
 	// 对于 GUN C++ 编译器，使用默认参数，在编译时会自动将全局数组 cache 中未初始化
 	// 的元素初始化为 0，故可以不需要显式的进行初始化的工作。对于其他编译器应该根据情况调整。
 	//
