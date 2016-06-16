@@ -1,5 +1,6 @@
 #include <iostream>
 #include <iomanip>
+#include <vector>
 
 using namespace std;
 
@@ -12,25 +13,34 @@ int main(int argc, char *argv[])
          << "int main(int argc, char *argv[])\n"
          << "{\n";
 
-    string dataTypes[] = {
-        "bool",
-        "char", "unsigned char",
-        "short int", "unsigned short int",
-        "int", "unsigned int",
-        "long int", "unsigned long int",
+    vector<string> dataTypes = {
+        "bool", "char", "unsigned char", "short int", "unsigned short int",
+        "int", "unsigned int", "long int", "unsigned long int",
         "long long int", "unsigned long long int",
-        "float",
-        "double", "long double"
+        "float", "double", "long double"
     };
 
-    for (int i = 0; i < 14; i++)
+    string literal =
+        "    cout << setw(24) << right << [$:] << "
+        "setw(3) << right << sizeof($) << [B, ] << "
+        "setw(20) << right << #numeric_limits<$>::min()"
+        " << [ ~ ] << "
+        "left << #numeric_limits<$>::max() << endl;";
+
+    for (auto t : dataTypes)
     {
-        cout << "    cout << setw(24) << right << \"" << dataTypes[i]
-             << ":\" << setw(3) << right << sizeof("
-             << dataTypes[i] << ") << \"B, \" << setw(20) << right << "
-             << (i <= 2 ? "(int)" : "") << "numeric_limits<" << dataTypes[i]
-             << ">::min() << \" ~ \" << left << " << (i <= 2 ? "(int)" : "")
-             << "numeric_limits<" << dataTypes[i] << ">::max() << endl;\n";
+        for (auto c : literal)
+        {
+            if (c == '[' || c == ']') cout << '\"';
+            else if (c == '$') cout << t;
+            else if (c == '#')
+            {
+                if (t.front() == 'b' || t.back() == 'r') cout << "(int)";
+            }
+            else cout << c;
+        }
+
+        cout << endl;
     }
 
     cout << "    return 0;\n"
