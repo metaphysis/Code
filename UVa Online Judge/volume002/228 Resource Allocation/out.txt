@@ -1,0 +1,42 @@
+Optimal resource allocation problem #1
+
+Total budget: $80000
+Total new programmers: 6
+Total productivity increase: 210000
+
+Division #1 resource allocation:
+Budget:  $0
+Programmers: 2
+Incremental lines of code: 60000
+
+Division #2 resource allocation:
+Budget:  $40000
+Programmers: 4
+Incremental lines of code: 90000
+
+Division #3 resource allocation:
+Budget:  $40000
+Programmers: 0
+Incremental lines of code: 60000
+
+
+Optimal resource allocation problem #2
+
+Total budget: $80000
+Total new programmers: 6
+Total productivity increase: 210000
+
+Division #1 resource allocation:
+Budget:  $0
+Programmers: 2
+Incremental lines of code: 60000
+
+Division #2 resource allocation:
+Budget:  $40000
+Programmers: 4
+Incremental lines of code: 90000
+
+Division #3 resource allocation:
+Budget:  $40000
+Programmers: 0
+Incremental lines of code: 60000

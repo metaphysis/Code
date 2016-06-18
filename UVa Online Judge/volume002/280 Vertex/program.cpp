@@ -15,8 +15,7 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-    cin.tie(0);
-    cin.sync_with_stdio(false);
+    ios::sync_with_stdio(false);
     
     int vertices;
     vector < vector < int > > edges;
