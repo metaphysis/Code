@@ -1,0 +1,29 @@
+# A Comment!
+RFred Joe  1 Fred is Joe's son
+RFran Fred 2
+RJake Fred 1
+RBill Joe  1
+RBill Sue  1
+RJean Sue  1
+RJean Don  1
+RPhil Jean 3
+RStan Jean 1
+RJohn Jean 1
+RMary Don  1
+RSusanMary 4
+RPeg  Mary 2
+FFred Joe
+FJean Jake
+FPhil Bill
+FPhil Susan
+FJake Bill
+FDon  Sue
+FStan John
+FPeg  John
+FJean Susan
+FFran Peg
+FJohn Avram
+RAvramStan 99
+FJohn Avram
+FAvramPhil
+  E

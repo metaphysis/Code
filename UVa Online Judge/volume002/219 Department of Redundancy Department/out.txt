@@ -1,0 +1,18 @@
+Set number 1
+     FD 3 is redundant using FDs: 1 2
+
+Set number 2
+     FD 3 is redundant using FDs: 1
+     FD 5 is redundant using FDs: 4 6 2
+
+Set number 3
+     FD 5 is redundant using FDs: 2 4
+
+Set number 4
+     No redundant FDs.
+
+Set number 5
+     FD 11 is redundant using FDs: 12
+     FD 19 is redundant using FDs: 30 34 12 14 33 24
+     FD 31 is redundant using FDs: 33 12 14 24 41 42 10
+     FD 38 is redundant using FDs: 22 30 11 24 41 35
