@@ -1,9 +1,9 @@
 // UVa Problem 12016 - Herbicide
 // Verdict: Accepted
-// Submission Date: 2011-11-04
-// UVa Run Time: 4.112s
+// Submission Date: 2016-06-18
+// UVa Run Time: 2.250s
 //
-// 版权所有（C）2011，邱秋。metaphysis # yeah dot net
+// 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 //
 // [解题方法]
 // 本题为计算几何题，本质是点定位问题。使用射线法判断点是否在除草剂形成的多边形内。
@@ -12,6 +12,7 @@
 
 #include <iostream>
 #include <algorithm>
+#include <cmath>
 
 using namespace std;
 
@@ -32,8 +33,7 @@ struct polygon
 
 	bool inRectBox(point & pt)
 	{
-		return (left <= pt.x && pt.x <= right) &&
-		    (bottom <= pt.y && pt.y <= top);
+		return (left <= pt.x && pt.x <= right) && (bottom <= pt.y && pt.y <= top);
 	}
 };
 
@@ -97,6 +97,8 @@ int countWeeds(polygon & polygons)
 
 int main(int ac, char *av[])
 {
+    ios::sync_with_stdio(false);
+    
 	int cases, currentCase = 1;
 	int tmpIndex;
 
