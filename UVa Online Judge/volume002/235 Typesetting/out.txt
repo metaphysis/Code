@@ -1,0 +1,17 @@
+Paragraph 1
+Line 1: A (-19 whitespace)
+Line 2: B (-1 whitespace)
+Line 3: C ... C (0 whitespace)
+Line 4: D ... D (0 whitespace)
+Line 5: ABCD (-356 whitespace)
+Paragraph 2
+Line 1: AAA ... AAA (70 whitespace)
+Line 2: AAA (-188 whitespace)
+Line 3: BBB ... CCC (7 whitespace)
+Line 4: ABC (-3 whitespace)
+Line 5: CBA ... CBA (49 whitespace)
+Line 6: AABC ... AABC (24 whitespace)
+Line 7: CACA (-70 whitespace)
+Line 8: D ... D (72 whitespace)
+Line 9: AABBB ... AABBB (10 whitespace)
+Line 10: B ... DAB (36 whitespace)
