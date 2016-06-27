@@ -28,7 +28,6 @@ using namespace std;
 vector<set<int>> edges, removed;
 vector<bool> visited;
 
-// 深度优先遍历。
 void dfs(int vertex)
 {
     for (auto next : removed[vertex])
@@ -39,38 +38,31 @@ void dfs(int vertex)
         }
 }
 
-// 获取连通图中割点的个数。顶点序号从1开始。
 int checkArticulationPoints()
 {
-    // 当图的顶点数为1时，割点数为0。
     int n = edges.size() - 1;
     
     if (n == 1)
         return 0;
     
     visited.resize(edges.size());
-        
-    // 逐个定点判读是否为割点。
+
     int counter = 0;
     for (int i = 1; i <= n; i++)
     {
-        // 复制当前邻接表。
         removed.clear();
         for (auto edge : edges)
             removed.push_back(edge);
-        
-        // 获取移除当前顶点以及相连接的边。        
+     
         for (int j = 1; j <= n; j++)
             removed[j].erase(i);
         removed[i].clear();
-        
-        // 使用深度优先遍历来遍历图。从任意一个剩余的顶点开始遍历。
+
         fill(visited.begin(), visited.end(), false);
         int start = (i - 1 > 0 ? i - 1 : i + 1);
         visited[start] = true;
         dfs(start);
         
-        // 检查图是否仍是连通图。
         for (int j = 1; j <= n; j++)
             if (visited[j] == false && j != i)
             {

@@ -1,5 +1,27 @@
-#include <iostream>
+// Intersecting Lines
+// UVa IDs: 378
+// Verdict: 
+// Submission Date: 
+// UVa Run Time: s
+//
+// 版权所有（C）2016，邱秋。metaphysis # yeah dot net
+
+#include <algorithm>
+#include <bitset>
+#include <cassert>
 #include <cmath>
+#include <cstring>
+#include <iomanip>
+#include <iostream>
+#include <limits>
+#include <list>
+#include <map>
+#include <queue>
+#include <set>
+#include <sstream>
+#include <stack>
+#include <string>
+#include <vector>
 
 using namespace std;
 
@@ -11,11 +33,6 @@ struct point
     
     // 标记是否为有效交点
     bool is_valid;     
-};
-
-struct segment
-{
-    point start, end;
 };
 
 struct line
@@ -101,91 +118,38 @@ point intersect(line line1, line line2)
     return pr;
 }
 
-// 将使用斜率与直线上一点的表示方式转换为标准形式。
-line pointAndSlopeToLine(point p, double slope)
-{
-    line lr;
-
-    // 直线与 X 轴不垂直，系数 b 规定为 1。
-    lr.a = -slope;
-    lr.b = 1.0;
-    lr.c = -(lr.a * p.x + lr.b * p.y);
-
-    return lr;
-}
-
-// 求经过点 pOutside 与直线 lr 垂直的直线 lp 与 lr 的交点。
-point closestPoint(point p1, line lr)
-{
-    point p2;
-
-    // 先判断特殊情形。
-    // 若为平行于 X 轴的直线。
-    if (fabs(lr.a) <= EPSILON)
-    {
-        p2.x = p1.x;
-        p2.y = -lr.c;
-    }
-    // 若为垂直于 X 轴的直线。
-    else if (fabs(lr.b) <= EPSILON)
-    {
-        p2.x = -lr.c;
-        p2.y = p1.y;
-    }
-    else
-    {
-        line lp = pointAndSlopeToLine(p1, lr.b / lr.a);
-        p2 = intersect(lr, lp);
-    }
-
-    return p2;
-}
-
-// 包围盒测试。
-bool pointInBox(point p, point a, point b)
-{
-    return ((p.x >= min(a.x, b.x)) && (p.x <= max(a.x, b.x))
-        && (p.y >= min(a.y, b.y)) && (p.y <= max(a.y, b.y)));
-}
-
-// 判断两条线段是否相交。
-bool segmentsIntersect(segment aSegment, segment bSegment)
-{
-    line aLine, bLine;
-    point p;
-
-    aLine = pointsToLine(aSegment.start, aSegment.end);
-    bLine = pointsToLine(bSegment.start, bSegment.end);
-
-    if (isSameLine(aLine, bLine))
-        return (pointInBox(aSegment.start, bSegment.start, bSegment.end)
-            || pointInBox(aSegment.end, bSegment.start, bSegment.end));
-
-    if (isParallelLine(aLine, bLine))
-        return false;
-
-    p = intersect(aLine, bLine);
-    if (p.is_valid == false)
-        return false;
-
-    return (pointInBox(p, aSegment.start, aSegment.end) &&
-        pointInBox(p, bSegment.start, bSegment.end));
-}
-
 int main(int argc, char *argv[])
 {
-    line lr;
-    lr.a = 2.0;
-    lr.b = -1.0;
-    lr.c = 0.0;
-
-    point p;
-    p.x = 3.0;
-    p.y = 4.0;
-
-    point pOnLine = closestPoint(p, lr);
-
-    cout << pOnLine.x << " " << pOnLine.y << endl;
-
-    return 0;
+    int n;
+    while (cin >> n)
+    {
+        cout << "INTERSECTING LINES OUTPUT" << endl;
+        
+        double x1, y1, x2, y2, x3, y3, x4, y4;
+        for (int i = 1; i <= n; i++)
+        {
+            cin >> x1 >> y1 >> x2 >> y2 >> x3 >> y3 >> x4 >> y4;
+            
+            point a = (point){x1, y1};
+            point b = (point){x2, y2};
+            point c = (point){x3, y3};
+            point d = (point){x4, y4};
+            
+            line line1 = pointsToLine(a, b);
+            line line2 = pointsToLine(c, d);
+            
+            if (isSameLine(line1, line2)) cout << "LINE" << endl;
+            else if (isParallelLine(line1, line2)) cout << "NONE" << endl;
+            else
+            {
+                point pi = intersect(line1, line2);
+                cout << "POINT " << fixed << setprecision(2) << pi.x;
+                cout << " " << fixed << setprecision(2) << pi.y << endl;
+            }
+        }
+        
+        cout << "END OF OUTPUT" << endl;
+    }
+    
+	return 0;
 }
