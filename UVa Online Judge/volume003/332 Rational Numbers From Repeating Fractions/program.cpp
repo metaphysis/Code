@@ -1,8 +1,8 @@
 // Rational Numbers From Repeating Fractions
 // UVa IDs: 332
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2016-06-28
+// UVa Run Time: 0.120s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
@@ -25,37 +25,43 @@
 
 using namespace std;
 
-long long int getGcd(long long int a, long long int b)
-{
-    if (a == 0) return b;
-    if (a < b) return getGcd(b, a);
-    if (a > 0) return getGcd(a % b, b);
-}
-
 int main(int argc, char *argv[])
 {
     int j, cases = 0;
     string fractions;
     
-    while (cin >> j, j > 0)
+    while (cin >> j, j >= 0)
     {
         cin >> fractions;
         
-        fractions = fractions.substr(2);
-        int k = fractions.length() - j;
-        string repeating = fractions.substr(fractions.length() - j);
-        while (fractions.length() <= 20)
-            fractions += repeating;
+        long long int numerator, denominator;
+        if (j == 0)
+        {
+            fractions = fractions.substr(2);
+            numerator = stoll(fractions);
+            denominator = pow(10, fractions.length());
+        }
+        else
+        {
+            fractions = fractions.substr(2);
+            int k = fractions.length() - j;
+            string repeating = fractions.substr(fractions.length() - j);
+            while (fractions.length() <= 30)
+                fractions += repeating;
+            
+            string first = fractions.substr(0, k + j);
+            string second = fractions.substr(0, k);
+            if (second.length() == 0) second = "0";
+            
+            numerator = stoll(first) - stoll(second);
+            denominator = pow(10, k + j) - pow(10, k);
+        }
         
-        string first = fractions.substr(0, k + j);
-        string second = fractions.substr(0, k);
-        if (second.length() == 0) second = "0";
-        
-        long long int numerator = stoll(first) - stoll(second);
-        long long int denominator = pow(10, k + j) - pow(10, k);
-        long long int gcd = getGcd(numerator, denominator);
+        long long int a = numerator, b = denominator, c;
+        while (b != 0)
+            c = a % b, a = b, b = c;
 
-        cout << "Case " << ++cases << ": " << numerator / gcd << "/" << denominator / gcd << endl;
+        cout << "Case " << ++cases << ": " << numerator / a << "/" << denominator / a << endl;
     }
     
 	return 0;
