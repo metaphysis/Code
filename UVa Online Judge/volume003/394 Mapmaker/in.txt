@@ -1,0 +1,16 @@
+1 14
+ONE       1500 2 2 0 3 1 5
+ONE       0 1
+ONE       0 2
+ONE       0 3
+ONE       0 4
+ONE       0 5
+ONE       1 1
+ONE       1 2
+ONE       1 3
+ONE       1 4
+ONE       1 5
+ONE       2 1
+ONE       2 2
+ONE       2 3
+ONE       2 4
