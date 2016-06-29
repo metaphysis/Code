@@ -2,7 +2,7 @@
 // UVa IDs: 301
 // Verdict: Accepted
 // Submission Date: 2016-06-29
-// UVa Run Time: 0.560s
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
@@ -39,45 +39,41 @@ struct order
 };
 
 int n, stations, orders, maxMoney = 0;
-vector<order> allOrders;
+order allOrders[30];
+int passengers[20];
 
-void dfs(int i, int total, map<int, int> passengers, int money)
+void dfs(int current, int previous, int total, int money)
 {
-    if (i == orders)
+    if (current == orders)
     {
         maxMoney = max(maxMoney, money);
         return;
     }
     
     // pruning, nor TLE
-    if (money + allOrders[i].sumOfRemain <= maxMoney)
+    if (money + allOrders[current].sumOfRemain <= maxMoney)
         return;
     
     // passengers get down
-    for (int j = 0; j <= allOrders[i].start; j++)
-    {
+    for (int j = previous + 1; j <= allOrders[current].start; j++)
         total -= passengers[j];
-        passengers[j] = 0;
-    }
     
     // take order
-    if (total + allOrders[i].passenger <= n)
+    if (total + allOrders[current].passenger <= n)
     {
-        map<int, int> nextPassengers(passengers);
-        nextPassengers[allOrders[i].end] += allOrders[i].passenger;
-        
-        int nextTotal = total + allOrders[i].passenger;
-        int nextMoney = money + allOrders[i].money;
-        
-        dfs(i + 1, nextTotal, nextPassengers, nextMoney);
+        passengers[allOrders[current].end] += allOrders[current].passenger;
+        dfs(current + 1, allOrders[current].start, total + allOrders[current].passenger, money + allOrders[current].money);
+        passengers[allOrders[current].end] -= allOrders[current].passenger;
     }
     
     // no take order
-    dfs(i + 1, total, passengers, money);
+    dfs(current + 1, allOrders[current].start, total, money);
 }
 
 int main(int argc, char *argv[])
 {
+    cin.tie(0);
+    cout.tie(0);
     ios::sync_with_stdio(false);
     
     while (cin >> n >> stations >> orders)
@@ -85,27 +81,23 @@ int main(int argc, char *argv[])
         if (n == 0 && stations == 0 && orders == 0)
             break;
         
-        allOrders.clear();
-        for (int i = 1; i <= orders; i++)
+        for (int i = 0; i < orders; i++)
         {
-            order aOrder;
-            cin >> aOrder.start >> aOrder.end >> aOrder.passenger;
-            aOrder.money = (aOrder.end - aOrder.start) * aOrder.passenger;
-            aOrder.sumOfRemain = aOrder.money;
-            allOrders.push_back(aOrder);
+            cin >> allOrders[i].start >> allOrders[i].end >> allOrders[i].passenger;
+            allOrders[i].money = (allOrders[i].end - allOrders[i].start) * allOrders[i].passenger;
+            allOrders[i].sumOfRemain = allOrders[i].money;
         }
         
-        sort(allOrders.begin(), allOrders.end());
+        sort(allOrders, allOrders + orders);
         
-        for (int i = allOrders.size() - 2; i >= 0; i--)
+        for (int i = orders - 2; i >= 0; i--)
             allOrders[i].sumOfRemain += allOrders[i + 1].sumOfRemain;
-        
-        map<int, int> passengers;
+
         for (int i = 0; i <= stations; i++)
             passengers[i] = 0;
             
         maxMoney = 0;
-        dfs(0, 0, passengers, 0);
+        dfs(0, 0, 0, 0);
 
         cout << maxMoney << endl;
     }

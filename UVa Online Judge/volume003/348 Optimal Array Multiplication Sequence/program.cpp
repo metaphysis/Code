@@ -28,7 +28,7 @@ using namespace std;
 string answer;
 int record = -1;
 
-void dfs(list<pair<int, int>> arrays, list<string> sequences, int times)
+void backtrack(list<pair<int, int>> arrays, list<string> sequences, int times)
 {
     if (record > 0 && times > record)
         return;
@@ -76,7 +76,7 @@ void dfs(list<pair<int, int>> arrays, list<string> sequences, int times)
         for (auto i = nextB; i != end(sequences); i++)
             nextSequences.push_back(*i);
             
-        dfs(nextArrays, nextSequences, times + added);
+        backtrack(nextArrays, nextSequences, times + added);
     }
 }
 
@@ -98,7 +98,7 @@ int main(int argc, char *argv[])
             sequences.push_back("A" + to_string(i));
 
         record = -1;
-        dfs(arrays, sequences, 0);
+        backtrack(arrays, sequences, 0);
 
         cout << "Case " << ++cases << ": " << answer << endl;
     }
