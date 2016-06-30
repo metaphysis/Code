@@ -1,8 +1,8 @@
 // Identifying Legal Pascal Real Constants
 // UVa IDs: 325
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2016-06-30
+// UVa Run Time: 0.190s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
@@ -28,36 +28,28 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
+    ios::sync_with_stdio(false);
+    
     string line;
     while (getline(cin, line))
     {
         if (line == "*")
             break;
+
+        string pattern = "^\\s*[\\+|-]?\\d+(\\.\\d+(e[\\+|-]?\\d+)?|e[\\+|-]?\\d+)\\s*$";
+        regex e(pattern, regex_constants::icase);
         
-        // remove the blank character    
-        while (isblank(line.front()))
-            line.erase(line.begin());
-        while (isblank(line.back()))
-            line.erase(line.end() - 1);
+        int left = 0, right = line.length() - 1;
+        while (left < line.length() && isblank(line[left])) left++;
+        while (right >= 0 && isblank(line[right])) right--;
+        
+        for (int i = left; i <= right; i++)
+            cout << line[i];
             
-        if (line.find(' ') != line.npos || line.find('\t') != line.npos)
-        {
-            cout << line << " is illegal." << endl;
-            continue;
-        }
-        
-        if (line.find('e') == line.npos && line.find('E') == line.npos && line.find('.') == line.npos)
-        {
-            cout << line << " is illegal." << endl;
-            continue;
-        }
-        
-        string pattern = R"(^[\+|-]?([1-9]\\d*\.\d+([e|E](\+|-)?[1-9]\d*)?|[1-9]\d*[e|E](\+|-)?[1-9]\d*)$)";
-        
-        if (regex_match(line, regex(pattern, regex_constants::extended)))
-            cout << line << " is legal." << endl;
+        if (regex_match(line, e))
+            cout << " is legal." << endl;
         else
-            cout << line << " is illegal." << endl;
+            cout << " is illegal." << endl;
     }
     
 	return 0;
