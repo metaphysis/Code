@@ -1,0 +1,12 @@
+System #1
+The last domino falls after 27.0 seconds, at key domino 2.
+
+System #2
+The last domino falls after 7.5 seconds, between key dominoes 2 and 3.
+
+System #3
+The last domino falls after 10.0 seconds, at key domino 3.
+
+System #4
+The last domino falls after 0.0 seconds, at key domino 1.
+
