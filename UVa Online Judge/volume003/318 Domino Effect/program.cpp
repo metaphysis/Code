@@ -1,14 +1,12 @@
 // Domino Effect
 // UVa IDs: 318
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2016-07-02
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
 #include <iostream>
-#include <iomanip>
-#include <cmath>
 #include <vector>
 
 using namespace std;
@@ -20,6 +18,8 @@ struct edge
 
 int main(int argc, char *argv[])
 {
+    ios::sync_with_stdio(false);
+    
     int n, m, cases = 0;
     int start, end, seconds;
     int parent[510], distances[510], visited[510];
@@ -60,59 +60,53 @@ int main(int argc, char *argv[])
             for (int i = 0; i < edges[current].size(); i++)
             {
                 edge e = edges[current][i];
-                if (visited[e.number] == 0)
+                if (visited[e.number] == 0 &&
+                    (distances[e.number] == -1 || distances[current] + e.seconds < distances[e.number]))
                 {
-                    if (distances[e.number] == -1 || distances[current] + e.seconds < distances[e.number])
-                    {
-                        distances[e.number] = distances[current] + e.seconds;
-                        parent[e.number] = current;
-                    }
+                    distances[e.number] = distances[current] + e.seconds;
+                    parent[e.number] = current;
                 }
             }
             
             int minDistances = -1;
             for (int i = 1; i <= n; i++)
-                if (visited[i] == 0)
+                if (visited[i] == 0 && distances[i] != -1 && (minDistances == -1 || distances[i] < minDistances))
                 {
-                    if (minDistances == -1 || distances[i] < minDistances)
-                    {
-                        minDistances = distances[i];
-                        current = i;
-                    }
+                    minDistances = distances[i];
+                    current = i;
                 }
         }
         
         bool isEndAtKey = true;
         int startKey = 1, endKey = 1;
         
-        double maxWastedTime = 0.0;
+        int maxWastedTime = 0;
         for (int i = 1; i <= n; i++)
             for (int j = 1; j <= n; j++)
                 if (linked[i][j])
                 {
-                    double wastedTime1 = distances[i];
-                    double wastedTime2 = distances[j];
+                    int wastedTime1 = distances[i];
+                    int wastedTime2 = distances[j];
                     
                     if (i == parent[j] || j == parent[i])
                     {
-                        if (wastedTime1 > maxWastedTime)
+                        if (2 * wastedTime1 >= maxWastedTime)
                         {
                             isEndAtKey = true;
                             endKey = i;
-                            maxWastedTime = wastedTime1;
+                            maxWastedTime = 2 * wastedTime1;
                         }
                         
-                        if (wastedTime2 > maxWastedTime)
+                        if (2 * wastedTime2 >= maxWastedTime)
                         {
                             isEndAtKey = true;
                             endKey = j;
-                            maxWastedTime = wastedTime2;
+                            maxWastedTime = 2 * wastedTime2;
                         }
                     }
                     else
                     {
-                        double wastedTime3 = max(wastedTime1, wastedTime2);
-                        wastedTime3 += fabs(length[i][j] - fabs(wastedTime1 - wastedTime2)) / 2.0;
+                        int wastedTime3 = 2 * max(wastedTime1, wastedTime2) + length[i][j] - abs(wastedTime1 - wastedTime2);
                         if (wastedTime3 > maxWastedTime)
                         {
                             isEndAtKey = false;
@@ -124,8 +118,8 @@ int main(int argc, char *argv[])
                 }
                 
         
-        cout << "The last domino falls after ";
-        cout << fixed << setprecision(1) << maxWastedTime << " seconds, ";
+        cout << "The last domino falls after " << maxWastedTime / 2;
+        cout << (maxWastedTime % 2 == 0 ? ".0" : ".5") << " seconds, ";
         if (isEndAtKey)
             cout << "at key domino " << endKey << "." << endl;
         else
