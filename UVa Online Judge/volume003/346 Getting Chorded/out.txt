@@ -1,0 +1,15 @@
+b# fb g is a C Major chord.
+c# e# a# is a A# Minor chord.
+Ab cb eb is a G# Minor chord.
+C E F# is unrecognized.
+C Eb G is a C Minor chord.
+c# a f# is a F# Minor chord.
+f g# C is a F Minor chord.
+B# e# A is a F Major chord.
+eb Bb Gb is a D# Minor chord.
+cb Eb Gb is a B Major chord.
+Eb F# a# is a D# Minor chord.
+b eb f# is a B Major chord.
+c fb g is a C Major chord.
+db F Ab is a C# Major chord.
+db E# Ab is a C# Major chord.
