@@ -21,9 +21,7 @@ int main(int argc, char *argv[])
     string line;
     while (getline(cin, line))
     {
-        int variable[26] = { }, used[26] =
-        {
-        }, position = 0;
+        int variable[26] = { }, used[26] = { }, position = 0;
 
         int value = 0;
         for (int i = 0; i < line.length(); i++)
