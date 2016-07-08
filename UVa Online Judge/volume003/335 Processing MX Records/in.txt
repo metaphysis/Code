@@ -1,0 +1,75 @@
+31
+a.com  0  b.com
+a.com  0  c.com
+a.com  0  d.com
+y.com  0  G.com
+Z.com  0  e.com
+mail.b.edu 0 server1.com
+*.b.edu 0 server2.com
+*.edu 0 server3.com
+*il.b.edu 0 server4.com
+*edu 0 server5.com
+mail.b.org 5 server1.org
+*.b.org 4 server2.org
+*.org 3 server3.org
+*il.b.org 2 server4.org
+*org 1 server5.org
+*net 1 server5.net
+*il.b.net 2 server4.net
+*.net 3 server3.net
+*.b.net 4 server2.net
+mail.b.net 5 server1.net
+*ws 5 server5.ws
+*il.b.ws 4 server4.ws
+*.ws 3 server3.ws
+*.b.ws 2 server2.ws
+mail.b.ws 1 server1.ws
+mail.b.biz 1 server1.biz
+*il.b.biz 2 server2.biz
+*.b.biz 3 server3.biz
+*.biz 4 server4.biz
+*biz 5 server5.biz
+* 100 catchall
+A a.com
+D c.com
+A a.com
+D b.com
+A a.com
+U c.com
+A a.com
+D d.com
+A a.com
+A A.com
+A z.com
+A y.com
+A Y.com
+A mail.b.edu
+A grail.b.edu
+A home.b.edu
+A c.edu
+A cedu
+A mail.b.org
+A grail.b.org
+A home.b.org
+A c.org
+A corg
+A mail.b.net
+A grail.b.net
+A home.b.net
+A c.net
+A cnet
+A mail.b.ws
+A grail.b.ws
+A home.b.ws
+A c.ws
+A cws
+A mail.b.biz
+A grail.b.biz
+A home.b.biz
+A c.biz
+A cbiz
+A g.com.sg
+A microsoft.com
+A uva.edu.es
+A onlinejudge.uva.es
+X

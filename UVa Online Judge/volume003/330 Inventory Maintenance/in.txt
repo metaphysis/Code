@@ -1,0 +1,33 @@
+new test 0.5 1.5555
+report
+buy test 20 
+sell test 10
+report
+delete test 
+new test 0.5 1.0
+buy test 20
+sell test 10
+report 
+new Shade01 0.50 3.79
+new Towel01 1.47 6.98
+new Shade02 0.63 4.29
+new BluBlock 1.00 4.98
+buy BluBlock 100
+sell BluBlock 2
+buy Towel01 500
+buy Shade01 100
+buy Shade02 100
+sell Towel01 1
+sell Towel01 1
+sell BluBlock 2
+report
+delete Shade01
+sell BluBlock 5
+new Shade03 0.51 1.98
+buy Shade03 250
+sell Towel01 5
+sell Shade03 4
+sell Shade02 10
+report
+*
+

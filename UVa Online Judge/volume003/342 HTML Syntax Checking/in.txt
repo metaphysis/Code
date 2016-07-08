@@ -1,0 +1,56 @@
+6
+This is some ordinary text.
+<BEGIN> This is included in the BEGIN tag </BEGIN>
+        <START>    Here's some stuff
+and so is this
+
+     more stuff. </START>
+2
+   This has a null tag <>
+   And an extra line after the error
+5
+   This has some good stuff <OKAY> and some bad stuff later on.
+   <GOOD> All is still okay, but later on we'll have an error.
+   </GOOD> We're still in the pink! <THISISTOOLONG>
+   This line will be skipped.
+   As will this one.
+1
+   This is an interesting error: <ERROR
+2
+   This one is okay                               <IN> </IN>
+
+1
+   Mismatch <START> </STOP>
+1
+    Missing start symbol:   <OK></OK></NOTOK>   more garbage...
+1
+<ELEVENChars>Both too long and invalid letter</ELEVENChars>
+1
+<ELEVENCHARs>Both too long and invalid letter</ELEVENCHARs>
+1
+<ELEVENCHARS!>Both too long and invalid letter</ELEVENCHARS!>
+1
+something<BLAH>something</Blah>something
+1
+something<BLAH>something</Blahlalallalalal>something
+1
+something<BLAH>something</>something
+2
+hi<BL
+U> go </BLU> too
+1
+<A
+8
+<A> 1st line
+<B> 2nd line
+<C> 3rd line
+</C> 4th line
+</B> 5th line
+<D> 6th line
+7th line
+8th line
+1
+<A>kk<
+1
+<A>kk</
+0

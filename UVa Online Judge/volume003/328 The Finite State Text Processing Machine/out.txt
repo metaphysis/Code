@@ -1,0 +1,6 @@
+Finite State Machine 1:
+Th< vowel >s < vowel >s < vowel > t< vowel >st wh< vowel >r< vowel > < vowel >t'll < vowel >nd < vowel >n "ST \A\ RT". < vowel >nd h< vowel >r< vowel > < vowel >t < vowel >nds.
+\ENDING_FROM_START\
+Finite State Machine 2:
+th< vowel >s t< vowel >st w< vowel >ll < vowel >nd < vowel >n "C \A\ P< VOWEL >T< VOWEL >L". < VOWEL >nd h \e\ r< vowel > < vowel >t's < vowel >nd< vowel >ng. BY \E\ !
+\ENDING_FROM_CAPITAL\

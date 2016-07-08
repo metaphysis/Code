@@ -1,0 +1,48 @@
+                  INVENTORY REPORT
+Item Name     Buy At      Sell At      On Hand        Value
+---------     ------      -------      -------        -----
+test            0.50         1.56            0         0.00
+------------------------
+Total value of inventory                               0.00
+Profit since last report                               0.00
+
+                  INVENTORY REPORT
+Item Name     Buy At      Sell At      On Hand        Value
+---------     ------      -------      -------        -----
+test            0.50         1.56           10         5.00
+------------------------
+Total value of inventory                               5.00
+Profit since last report                              10.56
+
+                  INVENTORY REPORT
+Item Name     Buy At      Sell At      On Hand        Value
+---------     ------      -------      -------        -----
+test            0.50         1.00           10         5.00
+------------------------
+Total value of inventory                               5.00
+Profit since last report                               0.00
+
+                  INVENTORY REPORT
+Item Name     Buy At      Sell At      On Hand        Value
+---------     ------      -------      -------        -----
+BluBlock        1.00         4.98           96        96.00
+Shade01         0.50         3.79          100        50.00
+Shade02         0.63         4.29          100        63.00
+Towel01         1.47         6.98          498       732.06
+test            0.50         1.00           10         5.00
+------------------------
+Total value of inventory                             946.06
+Profit since last report                              26.94
+
+                  INVENTORY REPORT
+Item Name     Buy At      Sell At      On Hand        Value
+---------     ------      -------      -------        -----
+BluBlock        1.00         4.98           91        91.00
+Shade02         0.63         4.29           90        56.70
+Shade03         0.51         1.98          246       125.46
+Towel01         1.47         6.98          493       724.71
+test            0.50         1.00           10         5.00
+------------------------
+Total value of inventory                            1002.87
+Profit since last report                              39.93
+

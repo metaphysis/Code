@@ -1,0 +1,25 @@
+2
+START 4
+      aeiou       START   <\bvowel\b>
+      AEIOU       CAPITAL \b\\\c\\\b
+      \n          END     \n\\ENDING_FROM_START\\\n
+      \c          START   \c
+CAPITAL 4
+      aeiou       START   \b\\\c\\\b
+      AEIOU       CAPITAL <\bVOWEL\b>
+      \n          END     \n\\ENDING_FROM_CAPITAL\\\n
+      \c          START   \c  this sentence isn't part of input.
+This is a test where it'll end in "START". and here it ends.
+2
+START 4
+      aeiou       START   <\bvowel\b>
+      AEIOU       CAPITAL \b\\\c\\\b
+      \n          END     \n\\ENDING_FROM_START\\\n
+      \c          START   \c
+CAPITAL 4
+      aeiou       START   \b\\\c\\\b
+      AEIOU       CAPITAL <\bVOWEL\b>
+      \n          END     \n\\ENDING_FROM_CAPITAL\\\n
+      \c          CAPITAL \c  this sentence isn't part of input.
+this test will end in "CAPITAL". And here it's ending. BYE!
+0
