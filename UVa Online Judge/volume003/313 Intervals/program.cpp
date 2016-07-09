@@ -1,8 +1,8 @@
 // Intervals
 // UVa IDs: 313
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2016-07-09
+// UVa Run Time: 0.040s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
@@ -25,7 +25,7 @@
 using namespace std;
 
 const double HALF_PI = acos(0.0);
-const double EPSILON = 1E-10;
+const double EPSILON = 1E-7;
 
 struct point
 {
@@ -36,11 +36,6 @@ struct pipe
 {
     double x, y, r;
 };
-
-double distanceOfPoints(point from, point to)
-{
-    return sqrt(pow(from.x - to.x, 2) + pow(from.y - to.y, 2));
-}
 
 int main(int argc, char *argv[])
 {
@@ -61,20 +56,46 @@ int main(int argc, char *argv[])
             pipes.push_back(aPipe);
         }
 
-        vector <pair<double, double>> intervals;
+        // a bit strict on float point number epsilon
+        // avoid using triangle function
+        vector < pair < double, double >>intervals;
+        double a, b, c, left, right;
+
         for (int i = 0; i < pipes.size(); i++)
         {
-            double angle1 = asin(pipes[i].r / distanceOfPoints(light, (point) { pipes[i].x, pipes[i].y }));
-            double angle2 = atan2(light.y - pipes[i].y, light.x - pipes[i].x);
-            double start, end;
-            start = light.x - light.y / tan(angle2 - angle1);
-            end = light.x - light.y / tan(angle2 + angle1);
-            intervals.push_back(make_pair(start, end));
+            a = (pipes[i].x - light.x) * (pipes[i].x - light.x) - pipes[i].r * pipes[i].r;
+            b = 2 * (pipes[i].x - light.x) * (light.y - pipes[i].y);
+            c = (light.y - pipes[i].y) * (light.y - pipes[i].y) - pipes[i].r * pipes[i].r;
+            if (b * b - 4 * a * c > 0)
+            {
+                if (fabs(a) >= EPSILON)
+                {
+                    double m1 = (-b + sqrt(b * b - 4 * a * c)) / (2 * a);
+                    double m2 = (-b - sqrt(b * b - 4 * a * c)) / (2 * a);
+                    double left, right;
+                    c = light.y - m1 * light.x;
+                    left = -c / m1;
+                    c = light.y - m2 * light.x;
+                    right = -c / m2;
+                    if (left >= right)
+                        swap(left, right);
+                    intervals.push_back(make_pair(left, right));
+                }
+                else
+                {
+                    double m1 = -c / b;
+                    c = light.y - m1 * light.x;
+                    left = -c / m1;
+                    right = light.x;
+                    if (left >= right)
+                        swap(left, right);
+                    intervals.push_back(make_pair(left, right));
+                }
+            }
         }
-        
+
         sort(intervals.begin(), intervals.end());
 
-        // a bit strict on float point number epsilon
         double coverL, coverR;
         coverL = intervals[0].first;
         coverR = intervals[0].second;
@@ -89,7 +110,7 @@ int main(int argc, char *argv[])
                 coverR = intervals[i].second;
             }
         }
-        cout << fixed << setprecision(2) << coverL<< " " << coverR << endl;
+        cout << fixed << setprecision(2) << coverL << " " << coverR << endl;
         cout << endl;
     }
 

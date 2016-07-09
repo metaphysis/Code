@@ -8,8 +8,7 @@ const double EPSILON = 10E-6;
 // 包围盒测试。测试点p是否在线段ab上。
 bool pointInBox(point p, point a, point b)
 {
-    return ((p.x >= min(a.x, b.x)) && (p.x <= max(a.x, b.x))
-        && (p.y >= min(a.y, b.y)) && (p.y <= max(a.y, b.y)));
+    return ((p.x >= min(a.x, b.x)) && (p.x <= max(a.x, b.x)) && (p.y >= min(a.y, b.y)) && (p.y <= max(a.y, b.y)));
 }
 
 double direction(point a, point b, point c)
