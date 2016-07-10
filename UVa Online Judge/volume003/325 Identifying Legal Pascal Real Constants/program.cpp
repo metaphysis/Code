@@ -36,7 +36,8 @@ int main(int argc, char *argv[])
         if (line == "*")
             break;
 
-        string pattern = "^\\s*[\\+|-]?\\d+(\\.\\d+(e[\\+|-]?\\d+)?|e[\\+|-]?\\d+)\\s*$";
+        //string pattern = "^\\s*[\\+|-]?\\d+(\\.\\d+(e[\\+|-]?\\d+)?|e[\\+|-]?\\d+)\\s*$";
+        string pattern = R"(^\s*[\+|-]?\d+(\.\d+(e[\+|-]?\d+)?|e[\+|-]?\d+)\s*$)";
         regex e(pattern, regex_constants::icase);
         
         int left = 0, right = line.length() - 1;
