@@ -3,14 +3,11 @@
 
 using namespace std;
 
-const double EPSILON = 1E-10;
+const double EPSILON = 1E-7;
 
 struct point
 {
-    double x, y;
-    
-    // 标记是否为有效交点
-    bool is_valid;     
+    double x, y;    
 };
 
 struct segment
@@ -60,36 +57,9 @@ bool isSameLine(line line1, line line2)
 }
 
 // 求两条直线的交点，如果存在交点则返回 true，否则返回 false。
-point intersect(line line1, line line2)
+point getIntersection(line line1, line line2)
 {
     point pr;
-
-    // 当两条直线平行时，认为其无交点。
-    if (isParallelLine(line1, line2))
-    {
-        return (point){0.0, 0.0, false};
-    }
-
-    pr.is_valid = true;
-    
-    // 当两条直线重合时，任意取直线上一点作为交点。
-    if (isSameLine(line1, line2))
-    {
-        // 系数 a 不为 0，取 y = 0。
-        if (fabs(line1.a) > EPSILON)
-        {
-            pr.x = -line1.c / line1.a;
-            pr.y = 0.0;
-        }
-        // 系数 b 不为 0，取 x = 0。
-        else
-        {
-            pr.x = 0.0;
-            pr.y = -line1.c / line1.b;
-        }
-
-        return pr;
-    }
 
     // 两条直线相交，求出交点。
     pr.x = (line2.b * line1.c - line1.b * line2.c) / (line2.a * line1.b - line1.a * line2.b);
@@ -135,7 +105,7 @@ point closestPoint(point p1, line lr)
     else
     {
         line lp = pointAndSlopeToLine(p1, lr.b / lr.a);
-        p2 = intersect(lr, lp);
+        p2 = getIntersection(lr, lp);
     }
 
     return p2;
@@ -144,32 +114,28 @@ point closestPoint(point p1, line lr)
 // 包围盒测试。
 bool pointInBox(point p, point a, point b)
 {
-    return ((p.x >= min(a.x, b.x)) && (p.x <= max(a.x, b.x))
-        && (p.y >= min(a.y, b.y)) && (p.y <= max(a.y, b.y)));
+    return ((p.x >= min(a.x, b.x)) && (p.x <= max(a.x, b.x)) && (p.y >= min(a.y, b.y)) && (p.y <= max(a.y, b.y)));
 }
 
 // 判断两条线段是否相交。
 bool segmentsIntersect(segment aSegment, segment bSegment)
 {
-    line aLine, bLine;
-    point p;
+    line first, second;
 
-    aLine = pointsToLine(aSegment.start, aSegment.end);
-    bLine = pointsToLine(bSegment.start, bSegment.end);
+    first = pointsToLine(aSegment.start, aSegment.end);
+    second = pointsToLine(bSegment.start, bSegment.end);
 
-    if (isSameLine(aLine, bLine))
-        return (pointInBox(aSegment.start, bSegment.start, bSegment.end)
-            || pointInBox(aSegment.end, bSegment.start, bSegment.end));
+    if (isSameLine(first, second))
+        return (pointInBox(aSegment.start, bSegment.start, bSegment.end) ||
+            pointInBox(aSegment.end, bSegment.start, bSegment.end));
 
-    if (isParallelLine(aLine, bLine))
+    if (isParallelLine(first, second))
         return false;
 
-    p = intersect(aLine, bLine);
-    if (p.is_valid == false)
-        return false;
+    point intersection = getIntersection(first, second);
 
-    return (pointInBox(p, aSegment.start, aSegment.end) &&
-        pointInBox(p, bSegment.start, bSegment.end));
+    return (pointInBox(intersection, aSegment.start, aSegment.end) &&
+        pointInBox(intersection, bSegment.start, bSegment.end));
 }
 
 int main(int argc, char *argv[])
