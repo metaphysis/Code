@@ -25,40 +25,21 @@
 using namespace std;
 
 const double PI = 2.0 * acos(0);
-double matrix[3][3] = { 1, 0, 0, 0, 1, 0, 0, 0, 1};
+double M[3][3] = { 1, 0, 0, 0, 1, 0, 0, 0, 1}, R[3][3], T[3][3], S[3][3];
 double last_x = 0, last_y, current_x = 0, current_y = 0, new_x = 0, new_y = 0;
-    
-void multiplication(double transformation[3][3])
+double rotated_angle, translatex, translatey, scalex, scaley;
+
+void multiplication(double A[3][3], double B[3][3])
 {
     double temp[3][3] = {0.0};
     for (int i = 0; i < 3; i++)
         for (int j = 0; j < 3; j++)
             temp[i][j] = 0.0;
     
-    //for (int i = 0; i < 3; i++)
-    //{
-    //    for (int j = 0; j < 3; j++)
-    //        cout << setw(15) << left << transformation[i][j];
-    //    cout << endl;
-    //}
-            
     for (int i = 0; i < 3; i++)
         for (int j = 0; j < 3; j++)
             for (int k = 0; k < 3; k++)
-                temp[i][j] += transformation[i][k] * matrix[k][j];
-    
-    return;
-    cout << "###########" << endl;
-    for (int i = 0; i < 3; i++)
-    {
-        for (int j = 0; j < 3; j++)
-        {
-            matrix[i][j] = temp[i][j];
-            cout << setw(15) << left << matrix[i][j];
-        }
-        cout << endl;
-    }
-    cout << "###########" << endl;
+                temp[i][j] += A[i][k] * B[k][j];
 }
 
 int main(int argc, char *argv[])
@@ -77,9 +58,7 @@ int main(int argc, char *argv[])
 
         if (parameters.back() == "rotate")
         {
-            double radian = stod(parameters[0]) * PI / 180.0;
-            double rotate[3][3] = {cos(radian), sin(radian), 0, -sin(radian), cos(radian), 0, 0, 0, 1};
-            multiplication(rotate);
+            rotated_angle += stod(parameters[0]);
         }
         else if (parameters.back() == "translate")
         {
@@ -88,8 +67,7 @@ int main(int argc, char *argv[])
         }
         else if (parameters.back() == "scale")
         {
-            double scale[3][3] = {stod(parameters[0]), 0, 0, 0, stod(parameters[1]), 0, 0, 0, 1};
-            multiplication(scale);
+            scalex *= stod(parameters[0]), scaley *= stod(parameters[1]);
         }
         else if (parameters.back() == "moveto" || parameters.back() == "lineto")
         {

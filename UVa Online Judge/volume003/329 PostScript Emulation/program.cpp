@@ -52,12 +52,7 @@ int main(int argc, char *argv[])
             new_x = last_new_x * cos(radian) + last_new_y * sin(radian);
             new_y = -last_new_x * sin(radian) + last_new_y * cos(radian);
 
-            // 当X轴和Y轴缩放比例不一时，绕原点对坐标轴旋转，实际旋转的角度不是
-            // 给定的角度。
-            //total_angle += rotate_angle;
-            //radian = total_angle * PI / 180.0;
-            //scalex = scalex * cos(radian) * cos(radian) + sin(radian) * sin(radian);
-            //scaley = scaley * cos(radian) * cos(radian) + sin(radian) * sin(radian);
+            total_angle += rotate_angle;
             
             //cout << "after rotate " << rotate_angle << " new_x = " << new_x << " new_y = " << new_y << endl;
         }
@@ -85,15 +80,15 @@ int main(int argc, char *argv[])
         }
         else if (parameters.back() == "moveto" || parameters.back() == "lineto")
         {
-            new_x = stod(parameters[0]) * scalex;
-            new_y = stod(parameters[1]) * scaley;
-            
-            //cout << "new_x = " << new_x << " new_y = " << new_y << endl;
-            
             double radian = total_angle * PI / 180.0;
             
-            current_x = new_x * cos(radian) - new_y * sin(radian) + tx;
-            current_y = new_x * sin(radian) + new_y * cos(radian) + ty;
+            new_x = stod(parameters[0]);
+            new_y = stod(parameters[1]);
+            
+            //cout << "new_x = " << new_x << " new_y = " << new_y << endl;
+
+            current_x = (new_x * cos(radian) - new_y * sin(radian)) * scalex + tx;
+            current_y = (new_x * sin(radian) + new_y * cos(radian)) * scaley + ty;
             
             //cout << "current_x = " << current_x << " current_y = " << current_y << endl;
             
