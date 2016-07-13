@@ -1,0 +1,1656 @@
+AGA -- is a regular palindrome.
+
+NOTAPALINDROME -- is not a palindrome.
+
+333 -- is a regular palindrome.
+
+ISAPALINILAPASI -- is a regular palindrome.
+
+A3MEA -- is a mirrored string.
+
+8 -- is a mirrored palindrome.
+
+C -- is a regular palindrome.
+
+ATOYOTA -- is a mirrored palindrome.
+
+MADAMIMADAM -- is a regular palindrome.
+
+STEPHENFAUSTIN -- is not a palindrome.
+
+MCNEESE -- is not a palindrome.
+
+MCNEESEESEENCM -- is a regular palindrome.
+
+2SS22S -- is a mirrored string.
+
+ABCDEFGHIJJIHGFEDCBA -- is a regular palindrome.
+
+ABCDEFGHIJIHGFEDCBA -- is a regular palindrome.
+
+NOTAPALINDROME -- is not a palindrome.
+
+ISAPALINILAPASI -- is a regular palindrome.
+
+A3MEA -- is a mirrored string.
+
+8 -- is a mirrored palindrome.
+
+C -- is a regular palindrome.
+
+ATOYOTA -- is a mirrored palindrome.
+
+MADAMIMADAM -- is a regular palindrome.
+
+STEPHENFAUSTIN -- is not a palindrome.
+
+MCNEESE -- is not a palindrome.
+
+MCNEESEESEENCM -- is a regular palindrome.
+
+2SS22S -- is a mirrored string.
+
+ABCDEFGHIJJIHGFEDCBA -- is a regular palindrome.
+
+ABCDEFGHIJIHGFEDCBA -- is a regular palindrome.
+
+558EUZJELA -- is not a palindrome.
+
+TJO35HWLOJJ53 -- is not a palindrome.
+
+L11IMTE -- is not a palindrome.
+
+MIWELWMJMXM -- is not a palindrome.
+
+UJ1ETAIV2EM8Z8HA -- is not a palindrome.
+
+HHZIX1MH8USW15E -- is not a palindrome.
+
+WE -- is not a palindrome.
+
+UJ1MIEL5EM2SM3HOS2 -- is not a palindrome.
+
+UYE1M2WLZJM -- is not a palindrome.
+
+YVY5W1ES2OLHVAH3S5V -- is not a palindrome.
+
+XUV2MHE -- is not a palindrome.
+
+JS322VZMJ1Z5E3AU3IS -- is not a palindrome.
+
+825UMTMUTSTWY -- is not a palindrome.
+
+SSZAY3YS1XL2IA3VI2LE -- is not a palindrome.
+
+VSVA15OO -- is not a palindrome.
+
+VX3JVUEJ3Z3EVA -- is not a palindrome.
+
+STIIWHUHV -- is not a palindrome.
+
+AJ3MTL2EE5WV3YSX -- is not a palindrome.
+
+OETOS1U -- is not a palindrome.
+
+OW5OA2MJWWV3MW -- is not a palindrome.
+
+IETA1ZXJA -- is not a palindrome.
+
+WOHLZVVJT3LLEO3V2Z1 -- is not a palindrome.
+
+V5S3 -- is not a palindrome.
+
+EU -- is not a palindrome.
+
+IUHZZJ5 -- is not a palindrome.
+
+XTWEJZMMEIZ11U -- is not a palindrome.
+
+JSU8LTUXW3ZL -- is not a palindrome.
+
+2I8TUV -- is not a palindrome.
+
+YLY3L1XA -- is not a palindrome.
+
+HHYTUX -- is not a palindrome.
+
+5AJT55YTXZSEJ3T -- is not a palindrome.
+
+HHYL3MMOMM5Z2 -- is not a palindrome.
+
+MZUSISMZ25TH -- is not a palindrome.
+
+V8MOAOALJMTT -- is not a palindrome.
+
+1OLU2VJJ3MWI -- is not a palindrome.
+
+MA -- is not a palindrome.
+
+M12MAIJOITT -- is not a palindrome.
+
+258WIJ83XI -- is not a palindrome.
+
+UOV -- is not a palindrome.
+
+JZUUEL -- is not a palindrome.
+
+LISTUV -- is not a palindrome.
+
+85W11E23AZSHY5 -- is not a palindrome.
+
+LSV8355AIIHVW -- is not a palindrome.
+
+8MT31HV18S1W21LXES -- is not a palindrome.
+
+US1TMYWS1A3M8IZ133MX -- is not a palindrome.
+
+XMMTHT8 -- is not a palindrome.
+
+33VIX8OJ -- is not a palindrome.
+
+Z5TXJOY2 -- is not a palindrome.
+
+VWMEM5S -- is not a palindrome.
+
+LU8JVZEE3W8J2M -- is not a palindrome.
+
+ZYS2A8XHTLSUTL38 -- is not a palindrome.
+
+O2Z1VY1MMXUA5LXUX -- is not a palindrome.
+
+UV8U8H2 -- is not a palindrome.
+
+WEOTTW -- is not a palindrome.
+
+ISY1E3E -- is not a palindrome.
+
+LEUVW -- is not a palindrome.
+
+EASW32VAXAU -- is not a palindrome.
+
+L2A28 -- is not a palindrome.
+
+HV3IS -- is not a palindrome.
+
+ZX1LE -- is not a palindrome.
+
+IIL -- is not a palindrome.
+
+XHOJA3HSTOJS -- is not a palindrome.
+
+ESMULO38HTZLSESTJ5HM -- is not a palindrome.
+
+JLE -- is not a palindrome.
+
+XTV1ZY2H3OLIHJL -- is not a palindrome.
+
+2S33 -- is not a palindrome.
+
+M8WMI1US118HMZ25T5Y -- is not a palindrome.
+
+EZ2L8IEL -- is not a palindrome.
+
+2AL1XV2M8L8ZJE8 -- is not a palindrome.
+
+31LYO -- is not a palindrome.
+
+XH -- is not a palindrome.
+
+3822L1VIAJYTE -- is not a palindrome.
+
+SJ3EM85HZYLO5H8A -- is not a palindrome.
+
+15VUEM8JJI5XH28MYAW -- is not a palindrome.
+
+5WMU1VM3ULWIIHYJMX -- is not a palindrome.
+
+UYJHZA8AZ8VL1ATL1 -- is not a palindrome.
+
+UWSZET3EH -- is not a palindrome.
+
+OX -- is not a palindrome.
+
+2LU28S23HY -- is not a palindrome.
+
+MUOXXAVH -- is not a palindrome.
+
+52VLWWMV55ZXEJ -- is not a palindrome.
+
+AWJ5X1J5LVV2U8583YVE -- is not a palindrome.
+
+H -- is a mirrored palindrome.
+
+Z8I -- is not a palindrome.
+
+UL -- is not a palindrome.
+
+3LH8EX1JT5Z5 -- is not a palindrome.
+
+H3WHYLXZSXEHUJ -- is not a palindrome.
+
+AT81XA1YXT3 -- is not a palindrome.
+
+LVAAV3U -- is not a palindrome.
+
+TZIIA2JI -- is not a palindrome.
+
+OUJYU5MUW5HAY -- is not a palindrome.
+
+LHAIY2XMLLSTMJ -- is not a palindrome.
+
+OS12VU -- is not a palindrome.
+
+T -- is a mirrored palindrome.
+
+Y5WZ5 -- is not a palindrome.
+
+2ES1I8WYMZ8 -- is not a palindrome.
+
+EI1XU -- is not a palindrome.
+
+MJU1T2UHZ -- is not a palindrome.
+
+2VOWVYLYX2L2T -- is not a palindrome.
+
+SVLEEXEO3 -- is not a palindrome.
+
+IMMXMAYEU8VAX1WIW2AA -- is not a palindrome.
+
+MTH -- is not a palindrome.
+
+U1O3 -- is not a palindrome.
+
+3AZ -- is not a palindrome.
+
+V5HH8UEUUWL81ZYYYV -- is not a palindrome.
+
+HYLVOUS1SMUOZMT2 -- is not a palindrome.
+
+25 -- is not a palindrome.
+
+MU3IIU32 -- is not a palindrome.
+
+SZJE3ZMSAEYJ -- is not a palindrome.
+
+551SZ8HV -- is not a palindrome.
+
+T8UUHAO -- is not a palindrome.
+
+E1UIZO18X -- is not a palindrome.
+
+AJ3SI1ITTHV -- is not a palindrome.
+
+Z35IMEEX2HMMM -- is not a palindrome.
+
+V85H12JVJLOOW1OEXA5W -- is not a palindrome.
+
+JV -- is not a palindrome.
+
+1OJ8XS5ISZ -- is not a palindrome.
+
+IWUY -- is not a palindrome.
+
+Z58OW -- is not a palindrome.
+
+SLMJ2OOLVAW -- is not a palindrome.
+
+8JE2LTVTUA2 -- is not a palindrome.
+
+ZTAYYX381H -- is not a palindrome.
+
+WTT25OMWMSXAXHW8W -- is not a palindrome.
+
+1YH -- is not a palindrome.
+
+X12 -- is not a palindrome.
+
+W -- is a mirrored palindrome.
+
+5Y -- is not a palindrome.
+
+SHLHAWMW1YI2JLMJZ1 -- is not a palindrome.
+
+O5A3W3AIW22UJ3 -- is not a palindrome.
+
+J1JUM8ITYLW -- is not a palindrome.
+
+TJ1LVWLSIAM -- is not a palindrome.
+
+WHE8J2WSX112Y2L -- is not a palindrome.
+
+HZLT5AWUW31X1H3MJ3 -- is not a palindrome.
+
+OY3XJVTAHIISI3 -- is not a palindrome.
+
+X2VJMA88 -- is not a palindrome.
+
+YEV8J -- is not a palindrome.
+
+HT88E -- is not a palindrome.
+
+TSATWJ2ZETL33SE -- is not a palindrome.
+
+LET5A31HI5VA1VH -- is not a palindrome.
+
+5IWULSIM1MJXYI -- is not a palindrome.
+
+3 -- is a regular palindrome.
+
+3YEZUE -- is not a palindrome.
+
+SV1IE5 -- is not a palindrome.
+
+383SJITU5ZWUO -- is not a palindrome.
+
+5H -- is not a palindrome.
+
+11ZSL2LVL5ZM25IYYT3 -- is not a palindrome.
+
+1M1T1LYOE1 -- is not a palindrome.
+
+2TYJZSOLXL32 -- is not a palindrome.
+
+Y5WOLSJEW3 -- is not a palindrome.
+
+OAEXE2W1 -- is not a palindrome.
+
+L33YJEJO5ELV333HLE -- is not a palindrome.
+
+25VE -- is not a palindrome.
+
+WW3MIXUTULAWMH3II -- is not a palindrome.
+
+YA3VEAVJZO -- is not a palindrome.
+
+2JIMEUUX32HH2XT -- is not a palindrome.
+
+UUAUI5MY8 -- is not a palindrome.
+
+HHE -- is not a palindrome.
+
+11Y2EZMVLELS -- is not a palindrome.
+
+8AV2SAZ3IVIZV -- is not a palindrome.
+
+3VOLJ -- is not a palindrome.
+
+5AEVLV2 -- is not a palindrome.
+
+1HS1H2US2 -- is not a palindrome.
+
+L3Z -- is not a palindrome.
+
+VIXSY8X18TZA8 -- is not a palindrome.
+
+VYIL1U51MSIEWO5MWTSJ -- is not a palindrome.
+
+8EL1AYUAWOULSXE3V2H5 -- is not a palindrome.
+
+ISL8W2T8 -- is not a palindrome.
+
+I88OZ8AH3UTL1Z3ZVS -- is not a palindrome.
+
+XJOYWUXJM8IJ -- is not a palindrome.
+
+AISZAMZ -- is not a palindrome.
+
+2EIU28JOLV3U5V -- is not a palindrome.
+
+MIIXI -- is not a palindrome.
+
+ZJL2 -- is not a palindrome.
+
+52 -- is not a palindrome.
+
+VX -- is not a palindrome.
+
+XZETYIY5ZVMVEM2 -- is not a palindrome.
+
+O -- is a mirrored palindrome.
+
+IWHL12ZWVVHJAX -- is not a palindrome.
+
+AEUEZM1IXJJ2EOIMS -- is not a palindrome.
+
+MYTHS5Y2513WW1V -- is not a palindrome.
+
+2JIVO -- is not a palindrome.
+
+ZW -- is not a palindrome.
+
+Y2YAJOM11TJWAAUY -- is not a palindrome.
+
+ELT -- is not a palindrome.
+
+HM2L2E8TVOILAIUOTI -- is not a palindrome.
+
+1OW1MH -- is not a palindrome.
+
+8EWTYWXS -- is not a palindrome.
+
+OSZ15E5JAEWOTZS -- is not a palindrome.
+
+A -- is a mirrored palindrome.
+
+5M8LIE1 -- is not a palindrome.
+
+X -- is a mirrored palindrome.
+
+H8HTOZIIZEOXE5 -- is not a palindrome.
+
+SWLUWEM -- is not a palindrome.
+
+5U58ITVSVST5 -- is not a palindrome.
+
+E811 -- is not a palindrome.
+
+IM38M -- is not a palindrome.
+
+VTYHU -- is not a palindrome.
+
+3TO2MULZ5YAOUXSTTHS -- is not a palindrome.
+
+SLTWT58H5O82YOV52Y -- is not a palindrome.
+
+XLY31JMJXMU -- is not a palindrome.
+
+2 -- is a regular palindrome.
+
+225581 -- is not a palindrome.
+
+8 -- is a mirrored palindrome.
+
+Z2 -- is not a palindrome.
+
+Z228Z8 -- is not a palindrome.
+
+3812112 -- is not a palindrome.
+
+53 -- is not a palindrome.
+
+3A8A -- is not a palindrome.
+
+5111 -- is not a palindrome.
+
+2883 -- is not a palindrome.
+
+1 -- is a mirrored palindrome.
+
+AZA3 -- is not a palindrome.
+
+25 -- is not a palindrome.
+
+21 -- is not a palindrome.
+
+1883 -- is not a palindrome.
+
+538Z8 -- is not a palindrome.
+
+3A1ZA5Z -- is not a palindrome.
+
+8Z1 -- is not a palindrome.
+
+3 -- is a regular palindrome.
+
+Z1 -- is not a palindrome.
+
+1 -- is a mirrored palindrome.
+
+23Z -- is not a palindrome.
+
+8 -- is a mirrored palindrome.
+
+22Z5A -- is not a palindrome.
+
+A -- is a mirrored palindrome.
+
+AZ82A82 -- is not a palindrome.
+
+8Z8 -- is a regular palindrome.
+
+A88111 -- is not a palindrome.
+
+ZZ3238 -- is not a palindrome.
+
+A31A2 -- is not a palindrome.
+
+8A3A -- is not a palindrome.
+
+A -- is a mirrored palindrome.
+
+3 -- is a regular palindrome.
+
+3232AA2 -- is not a palindrome.
+
+2 -- is a regular palindrome.
+
+Z588 -- is not a palindrome.
+
+18135 -- is not a palindrome.
+
+5182A3 -- is not a palindrome.
+
+58 -- is not a palindrome.
+
+1A23AZ5 -- is not a palindrome.
+
+3Z -- is not a palindrome.
+
+288 -- is not a palindrome.
+
+Z3A2A3 -- is not a palindrome.
+
+1 -- is a mirrored palindrome.
+
+2Z -- is not a palindrome.
+
+181Z -- is not a palindrome.
+
+2 -- is a regular palindrome.
+
+1Z3A -- is not a palindrome.
+
+AA2 -- is not a palindrome.
+
+81 -- is not a palindrome.
+
+53583A8 -- is not a palindrome.
+
+ZA3322 -- is not a palindrome.
+
+1ZA52 -- is not a palindrome.
+
+Z11 -- is not a palindrome.
+
+15 -- is not a palindrome.
+
+8 -- is a mirrored palindrome.
+
+83Z1Z81 -- is not a palindrome.
+
+123855A -- is not a palindrome.
+
+Z1Z3 -- is not a palindrome.
+
+Z553 -- is not a palindrome.
+
+AA333 -- is not a palindrome.
+
+883 -- is not a palindrome.
+
+25 -- is not a palindrome.
+
+28115Z -- is not a palindrome.
+
+8 -- is a mirrored palindrome.
+
+AA8 -- is not a palindrome.
+
+12A -- is not a palindrome.
+
+A8122 -- is not a palindrome.
+
+5 -- is a regular palindrome.
+
+8A1A -- is not a palindrome.
+
+A22128 -- is not a palindrome.
+
+2521 -- is not a palindrome.
+
+Z323 -- is not a palindrome.
+
+51ZZ5 -- is not a palindrome.
+
+Z2851Z -- is not a palindrome.
+
+AZZZZ1 -- is not a palindrome.
+
+5 -- is a regular palindrome.
+
+2Z5511 -- is not a palindrome.
+
+35 -- is not a palindrome.
+
+A -- is a mirrored palindrome.
+
+851A1Z5 -- is not a palindrome.
+
+1Z1 -- is a regular palindrome.
+
+A1 -- is not a palindrome.
+
+1185 -- is not a palindrome.
+
+A31Z8 -- is not a palindrome.
+
+53 -- is not a palindrome.
+
+51 -- is not a palindrome.
+
+33538Z -- is not a palindrome.
+
+8A88AZA -- is not a palindrome.
+
+188 -- is not a palindrome.
+
+3285A -- is not a palindrome.
+
+35AAA2 -- is not a palindrome.
+
+118 -- is not a palindrome.
+
+Z2 -- is not a palindrome.
+
+1Z51152 -- is not a palindrome.
+
+313 -- is a regular palindrome.
+
+2Z52AA8 -- is not a palindrome.
+
+A8Z212 -- is not a palindrome.
+
+Z -- is a regular palindrome.
+
+35552A -- is not a palindrome.
+
+8Z8ZZZ -- is not a palindrome.
+
+32 -- is not a palindrome.
+
+8235Z32 -- is not a palindrome.
+
+523 -- is not a palindrome.
+
+3AZ2533 -- is not a palindrome.
+
+A323 -- is not a palindrome.
+
+383A12 -- is not a palindrome.
+
+55332A8 -- is not a palindrome.
+
+2Z28Z3A -- is not a palindrome.
+
+83ZA8 -- is not a palindrome.
+
+158ZA -- is not a palindrome.
+
+2128A82 -- is not a palindrome.
+
+8ZZZ -- is not a palindrome.
+
+3A1 -- is not a palindrome.
+
+A -- is a mirrored palindrome.
+
+81531AA -- is not a palindrome.
+
+5Z512A -- is not a palindrome.
+
+1Z53112 -- is not a palindrome.
+
+22ZZ -- is not a palindrome.
+
+Z82518 -- is not a palindrome.
+
+3AZ1 -- is not a palindrome.
+
+1A52 -- is not a palindrome.
+
+13AA81Z -- is not a palindrome.
+
+815 -- is not a palindrome.
+
+3 -- is a regular palindrome.
+
+822 -- is not a palindrome.
+
+515AA -- is not a palindrome.
+
+A21ZA2A -- is not a palindrome.
+
+A5Z -- is not a palindrome.
+
+A183321 -- is not a palindrome.
+
+5Z2Z88Z -- is not a palindrome.
+
+51152 -- is not a palindrome.
+
+325 -- is not a palindrome.
+
+83AAZ -- is not a palindrome.
+
+AZ -- is not a palindrome.
+
+1381 -- is not a palindrome.
+
+A -- is a mirrored palindrome.
+
+831AAA -- is not a palindrome.
+
+1 -- is a mirrored palindrome.
+
+3325A83 -- is not a palindrome.
+
+3185A -- is not a palindrome.
+
+12A855 -- is not a palindrome.
+
+Z31Z1AA -- is not a palindrome.
+
+1853 -- is not a palindrome.
+
+2 -- is a regular palindrome.
+
+3811Z -- is not a palindrome.
+
+5A15213 -- is not a palindrome.
+
+A1A1183 -- is not a palindrome.
+
+8A3 -- is not a palindrome.
+
+5831 -- is not a palindrome.
+
+8Z28 -- is not a palindrome.
+
+A -- is a mirrored palindrome.
+
+518Z -- is not a palindrome.
+
+151 -- is a regular palindrome.
+
+533 -- is not a palindrome.
+
+183A2Z -- is not a palindrome.
+
+1282A55 -- is not a palindrome.
+
+2581Z5 -- is not a palindrome.
+
+2A -- is not a palindrome.
+
+3 -- is a regular palindrome.
+
+283 -- is not a palindrome.
+
+823A323 -- is not a palindrome.
+
+3ZZ18 -- is not a palindrome.
+
+5A33122 -- is not a palindrome.
+
+5Z1 -- is not a palindrome.
+
+158 -- is not a palindrome.
+
+58ZA85Z -- is not a palindrome.
+
+22 -- is a regular palindrome.
+
+358 -- is not a palindrome.
+
+18 -- is not a palindrome.
+
+8AAA -- is not a palindrome.
+
+2 -- is a regular palindrome.
+
+1 -- is a mirrored palindrome.
+
+A533ZZ -- is not a palindrome.
+
+ZA3A8A -- is not a palindrome.
+
+Z1A5 -- is not a palindrome.
+
+12 -- is not a palindrome.
+
+Z21AZ -- is not a palindrome.
+
+A2ZAZ8 -- is not a palindrome.
+
+ZA218 -- is not a palindrome.
+
+Z52355 -- is not a palindrome.
+
+233 -- is not a palindrome.
+
+Z3513 -- is not a palindrome.
+
+A111118 -- is not a palindrome.
+
+23522 -- is not a palindrome.
+
+3A3A -- is not a palindrome.
+
+A133 -- is not a palindrome.
+
+181AZ3 -- is not a palindrome.
+
+8 -- is a mirrored palindrome.
+
+AZ8AAZZ -- is not a palindrome.
+
+A58Z -- is not a palindrome.
+
+3 -- is a regular palindrome.
+
+A58223Z -- is not a palindrome.
+
+ZZZA -- is not a palindrome.
+
+Z81A -- is not a palindrome.
+
+8A3AAA5 -- is not a palindrome.
+
+552A33 -- is not a palindrome.
+
+Z5A2321 -- is not a palindrome.
+
+3A83 -- is not a palindrome.
+
+8 -- is a mirrored palindrome.
+
+2 -- is a regular palindrome.
+
+225581 -- is not a palindrome.
+
+8 -- is a mirrored palindrome.
+
+Z2 -- is not a palindrome.
+
+Z228Z8 -- is not a palindrome.
+
+3812112 -- is not a palindrome.
+
+53 -- is not a palindrome.
+
+3A8A -- is not a palindrome.
+
+5111 -- is not a palindrome.
+
+2883 -- is not a palindrome.
+
+1 -- is a mirrored palindrome.
+
+AZA3 -- is not a palindrome.
+
+25 -- is not a palindrome.
+
+21 -- is not a palindrome.
+
+1883 -- is not a palindrome.
+
+538Z8 -- is not a palindrome.
+
+3A1ZA5Z -- is not a palindrome.
+
+8Z1 -- is not a palindrome.
+
+3 -- is a regular palindrome.
+
+Z1 -- is not a palindrome.
+
+1 -- is a mirrored palindrome.
+
+23Z -- is not a palindrome.
+
+8 -- is a mirrored palindrome.
+
+22Z5A -- is not a palindrome.
+
+A -- is a mirrored palindrome.
+
+AZ82A82 -- is not a palindrome.
+
+8Z8 -- is a regular palindrome.
+
+A88111 -- is not a palindrome.
+
+ZZ3238 -- is not a palindrome.
+
+A31A2 -- is not a palindrome.
+
+8A3A -- is not a palindrome.
+
+A -- is a mirrored palindrome.
+
+3 -- is a regular palindrome.
+
+3232AA2 -- is not a palindrome.
+
+2 -- is a regular palindrome.
+
+Z588 -- is not a palindrome.
+
+18135 -- is not a palindrome.
+
+5182A3 -- is not a palindrome.
+
+58 -- is not a palindrome.
+
+1A23AZ5 -- is not a palindrome.
+
+3Z -- is not a palindrome.
+
+288 -- is not a palindrome.
+
+Z3A2A3 -- is not a palindrome.
+
+1 -- is a mirrored palindrome.
+
+2Z -- is not a palindrome.
+
+181Z -- is not a palindrome.
+
+2 -- is a regular palindrome.
+
+1Z3A -- is not a palindrome.
+
+AA2 -- is not a palindrome.
+
+81 -- is not a palindrome.
+
+53583A8 -- is not a palindrome.
+
+ZA3322 -- is not a palindrome.
+
+1ZA52 -- is not a palindrome.
+
+Z11 -- is not a palindrome.
+
+15 -- is not a palindrome.
+
+8 -- is a mirrored palindrome.
+
+83Z1Z81 -- is not a palindrome.
+
+123855A -- is not a palindrome.
+
+Z1Z3 -- is not a palindrome.
+
+Z553 -- is not a palindrome.
+
+AA333 -- is not a palindrome.
+
+883 -- is not a palindrome.
+
+25 -- is not a palindrome.
+
+28115Z -- is not a palindrome.
+
+8 -- is a mirrored palindrome.
+
+AA8 -- is not a palindrome.
+
+12A -- is not a palindrome.
+
+A8122 -- is not a palindrome.
+
+5 -- is a regular palindrome.
+
+8A1A -- is not a palindrome.
+
+A22128 -- is not a palindrome.
+
+2521 -- is not a palindrome.
+
+Z323 -- is not a palindrome.
+
+51ZZ5 -- is not a palindrome.
+
+Z2851Z -- is not a palindrome.
+
+AZZZZ1 -- is not a palindrome.
+
+5 -- is a regular palindrome.
+
+2Z5511 -- is not a palindrome.
+
+35 -- is not a palindrome.
+
+A -- is a mirrored palindrome.
+
+851A1Z5 -- is not a palindrome.
+
+1Z1 -- is a regular palindrome.
+
+A1 -- is not a palindrome.
+
+1185 -- is not a palindrome.
+
+A31Z8 -- is not a palindrome.
+
+53 -- is not a palindrome.
+
+51 -- is not a palindrome.
+
+33538Z -- is not a palindrome.
+
+8A88AZA -- is not a palindrome.
+
+188 -- is not a palindrome.
+
+3285A -- is not a palindrome.
+
+35AAA2 -- is not a palindrome.
+
+118 -- is not a palindrome.
+
+Z2 -- is not a palindrome.
+
+1Z51152 -- is not a palindrome.
+
+313 -- is a regular palindrome.
+
+2Z52AA8 -- is not a palindrome.
+
+A8Z212 -- is not a palindrome.
+
+Z -- is a regular palindrome.
+
+35552A -- is not a palindrome.
+
+8Z8ZZZ -- is not a palindrome.
+
+32 -- is not a palindrome.
+
+8235Z32 -- is not a palindrome.
+
+523 -- is not a palindrome.
+
+3AZ2533 -- is not a palindrome.
+
+A323 -- is not a palindrome.
+
+383A12 -- is not a palindrome.
+
+55332A8 -- is not a palindrome.
+
+2Z28Z3A -- is not a palindrome.
+
+83ZA8 -- is not a palindrome.
+
+158ZA -- is not a palindrome.
+
+2128A82 -- is not a palindrome.
+
+8ZZZ -- is not a palindrome.
+
+3A1 -- is not a palindrome.
+
+A -- is a mirrored palindrome.
+
+81531AA -- is not a palindrome.
+
+5Z512A -- is not a palindrome.
+
+1Z53112 -- is not a palindrome.
+
+22ZZ -- is not a palindrome.
+
+Z82518 -- is not a palindrome.
+
+3AZ1 -- is not a palindrome.
+
+1A52 -- is not a palindrome.
+
+13AA81Z -- is not a palindrome.
+
+815 -- is not a palindrome.
+
+3 -- is a regular palindrome.
+
+822 -- is not a palindrome.
+
+515AA -- is not a palindrome.
+
+A21ZA2A -- is not a palindrome.
+
+A5Z -- is not a palindrome.
+
+A183321 -- is not a palindrome.
+
+5Z2Z88Z -- is not a palindrome.
+
+51152 -- is not a palindrome.
+
+325 -- is not a palindrome.
+
+83AAZ -- is not a palindrome.
+
+AZ -- is not a palindrome.
+
+1381 -- is not a palindrome.
+
+A -- is a mirrored palindrome.
+
+831AAA -- is not a palindrome.
+
+1 -- is a mirrored palindrome.
+
+3325A83 -- is not a palindrome.
+
+3185A -- is not a palindrome.
+
+12A855 -- is not a palindrome.
+
+Z31Z1AA -- is not a palindrome.
+
+1853 -- is not a palindrome.
+
+2 -- is a regular palindrome.
+
+3811Z -- is not a palindrome.
+
+5A15213 -- is not a palindrome.
+
+A1A1183 -- is not a palindrome.
+
+8A3 -- is not a palindrome.
+
+5831 -- is not a palindrome.
+
+8Z28 -- is not a palindrome.
+
+A -- is a mirrored palindrome.
+
+518Z -- is not a palindrome.
+
+151 -- is a regular palindrome.
+
+533 -- is not a palindrome.
+
+183A2Z -- is not a palindrome.
+
+1282A55 -- is not a palindrome.
+
+2581Z5 -- is not a palindrome.
+
+2A -- is not a palindrome.
+
+3 -- is a regular palindrome.
+
+283 -- is not a palindrome.
+
+823A323 -- is not a palindrome.
+
+3ZZ18 -- is not a palindrome.
+
+5A33122 -- is not a palindrome.
+
+5Z1 -- is not a palindrome.
+
+158 -- is not a palindrome.
+
+58ZA85Z -- is not a palindrome.
+
+22 -- is a regular palindrome.
+
+358 -- is not a palindrome.
+
+18 -- is not a palindrome.
+
+8AAA -- is not a palindrome.
+
+2 -- is a regular palindrome.
+
+1 -- is a mirrored palindrome.
+
+A533ZZ -- is not a palindrome.
+
+ZA3A8A -- is not a palindrome.
+
+Z1A5 -- is not a palindrome.
+
+12 -- is not a palindrome.
+
+Z21AZ -- is not a palindrome.
+
+A2ZAZ8 -- is not a palindrome.
+
+ZA218 -- is not a palindrome.
+
+Z52355 -- is not a palindrome.
+
+233 -- is not a palindrome.
+
+Z3513 -- is not a palindrome.
+
+A111118 -- is not a palindrome.
+
+23522 -- is not a palindrome.
+
+3A3A -- is not a palindrome.
+
+A133 -- is not a palindrome.
+
+181AZ3 -- is not a palindrome.
+
+8 -- is a mirrored palindrome.
+
+AZ8AAZZ -- is not a palindrome.
+
+A58Z -- is not a palindrome.
+
+3 -- is a regular palindrome.
+
+A58223Z -- is not a palindrome.
+
+ZZZA -- is not a palindrome.
+
+Z81A -- is not a palindrome.
+
+8A3AAA5 -- is not a palindrome.
+
+552A33 -- is not a palindrome.
+
+Z5A2321 -- is not a palindrome.
+
+3A83 -- is not a palindrome.
+
+8 -- is a mirrored palindrome.
+
+A -- is a mirrored palindrome.
+
+2A -- is not a palindrome.
+
+113Z -- is not a palindrome.
+
+1 -- is a mirrored palindrome.
+
+A -- is a mirrored palindrome.
+
+32A1 -- is not a palindrome.
+
+8Z -- is not a palindrome.
+
+1551 -- is a regular palindrome.
+
+2 -- is a regular palindrome.
+
+33 -- is a regular palindrome.
+
+25 -- is not a palindrome.
+
+88A -- is not a palindrome.
+
+A53 -- is not a palindrome.
+
+51 -- is not a palindrome.
+
+8A -- is not a palindrome.
+
+1AA2 -- is not a palindrome.
+
+2 -- is a regular palindrome.
+
+13 -- is not a palindrome.
+
+1151 -- is not a palindrome.
+
+3ZA -- is not a palindrome.
+
+Z1Z -- is a regular palindrome.
+
+32 -- is not a palindrome.
+
+3 -- is a regular palindrome.
+
+31Z -- is not a palindrome.
+
+A8 -- is not a palindrome.
+
+AA2 -- is not a palindrome.
+
+385 -- is not a palindrome.
+
+5Z -- is a mirrored string.
+
+A -- is a mirrored palindrome.
+
+8 -- is a mirrored palindrome.
+
+88 -- is a mirrored palindrome.
+
+3 -- is a regular palindrome.
+
+23A5 -- is not a palindrome.
+
+2382 -- is not a palindrome.
+
+A3Z2 -- is not a palindrome.
+
+8 -- is a mirrored palindrome.
+
+2 -- is a regular palindrome.
+
+83 -- is not a palindrome.
+
+81 -- is not a palindrome.
+
+5 -- is a regular palindrome.
+
+8532 -- is not a palindrome.
+
+Z2AZ -- is not a palindrome.
+
+28 -- is not a palindrome.
+
+18 -- is not a palindrome.
+
+32ZZ -- is not a palindrome.
+
+11Z5 -- is not a palindrome.
+
+5A2 -- is not a palindrome.
+
+A1 -- is not a palindrome.
+
+322 -- is not a palindrome.
+
+515 -- is a regular palindrome.
+
+238 -- is not a palindrome.
+
+11 -- is a mirrored palindrome.
+
+2 -- is a regular palindrome.
+
+85 -- is not a palindrome.
+
+A812 -- is not a palindrome.
+
+A35Z -- is not a palindrome.
+
+35 -- is not a palindrome.
+
+813 -- is not a palindrome.
+
+8 -- is a mirrored palindrome.
+
+1Z -- is not a palindrome.
+
+52 -- is not a palindrome.
+
+8882 -- is not a palindrome.
+
+Z2ZZ -- is not a palindrome.
+
+ZZZ -- is a regular palindrome.
+
+A3 -- is not a palindrome.
+
+8 -- is a mirrored palindrome.
+
+88A -- is not a palindrome.
+
+2 -- is a regular palindrome.
+
+A5Z -- is not a palindrome.
+
+88A3 -- is not a palindrome.
+
+3 -- is a regular palindrome.
+
+3 -- is a regular palindrome.
+
+85 -- is not a palindrome.
+
+A -- is a mirrored palindrome.
+
+1558 -- is not a palindrome.
+
+113 -- is not a palindrome.
+
+1 -- is a mirrored palindrome.
+
+5A5 -- is a regular palindrome.
+
+ZZ -- is a regular palindrome.
+
+A1 -- is not a palindrome.
+
+231 -- is not a palindrome.
+
+1Z5 -- is not a palindrome.
+
+8ZZ3 -- is not a palindrome.
+
+5 -- is a regular palindrome.
+
+ZZ1 -- is not a palindrome.
+
+2 -- is a regular palindrome.
+
+22A -- is not a palindrome.
+
+2A2 -- is a regular palindrome.
+
+1 -- is a mirrored palindrome.
+
+53A -- is not a palindrome.
+
+88 -- is a mirrored palindrome.
+
+2821 -- is not a palindrome.
+
+AA1 -- is not a palindrome.
+
+Z -- is a regular palindrome.
+
+82 -- is not a palindrome.
+
+Z -- is a regular palindrome.
+
+52A -- is not a palindrome.
+
+315Z -- is not a palindrome.
+
+A -- is a mirrored palindrome.
+
+5 -- is a regular palindrome.
+
+858 -- is a regular palindrome.
+
+ZZ8 -- is not a palindrome.
+
+8 -- is a mirrored palindrome.
+
+AZ -- is not a palindrome.
+
+51A3 -- is not a palindrome.
+
+5 -- is a regular palindrome.
+
+A121 -- is not a palindrome.
+
+3A3 -- is a regular palindrome.
+
+21A1 -- is not a palindrome.
+
+5 -- is a regular palindrome.
+
+A -- is a mirrored palindrome.
+
+281 -- is not a palindrome.
+
+53 -- is not a palindrome.
+
+A3Z -- is not a palindrome.
+
+ZA -- is not a palindrome.
+
+Z2A -- is not a palindrome.
+
+5 -- is a regular palindrome.
+
+Z8Z -- is a regular palindrome.
+
+AZA -- is a regular palindrome.
+
+2 -- is a regular palindrome.
+
+83A -- is not a palindrome.
+
+251 -- is not a palindrome.
+
+8A13 -- is not a palindrome.
+
+135 -- is not a palindrome.
+
+118 -- is not a palindrome.
+
+188Z -- is not a palindrome.
+
+81 -- is not a palindrome.
+
+1A -- is not a palindrome.
+
+3 -- is a regular palindrome.
+
+25 -- is not a palindrome.
+
+58Z2 -- is not a palindrome.
+
+51AA -- is not a palindrome.
+
+11Z -- is not a palindrome.
+
+AZ -- is not a palindrome.
+
+31A2 -- is not a palindrome.
+
+8221 -- is not a palindrome.
+
+Z53 -- is not a palindrome.
+
+2Z8 -- is not a palindrome.
+
+81AA -- is not a palindrome.
+
+8 -- is a mirrored palindrome.
+
+15Z1 -- is a mirrored string.
+
+55 -- is a regular palindrome.
+
+5 -- is a regular palindrome.
+
+A -- is a mirrored palindrome.
+
+228 -- is not a palindrome.
+
+312 -- is not a palindrome.
+
+8 -- is a mirrored palindrome.
+
+53 -- is not a palindrome.
+
+Z -- is a regular palindrome.
+
+1281 -- is not a palindrome.
+
+318 -- is not a palindrome.
+
+A3Z5 -- is not a palindrome.
+
+Z253 -- is not a palindrome.
+
+3828 -- is not a palindrome.
+
+A131 -- is not a palindrome.
+
+2153 -- is not a palindrome.
+
+5 -- is a regular palindrome.
+
+8AZZ -- is not a palindrome.
+
+2135 -- is not a palindrome.
+
+522 -- is not a palindrome.
+
+8A8 -- is a mirrored palindrome.
+
+83 -- is not a palindrome.
+
+Z -- is a regular palindrome.
+
+A31 -- is not a palindrome.
+
+Z112 -- is not a palindrome.
+
+A1 -- is not a palindrome.
+
+851Z -- is not a palindrome.
+
+Z -- is a regular palindrome.
+
+53 -- is not a palindrome.
+
+355A -- is not a palindrome.
+
+152 -- is not a palindrome.
+
+8AA -- is not a palindrome.
+
+8 -- is a mirrored palindrome.
+
+3 -- is a regular palindrome.
+
+22A -- is not a palindrome.
+
+13 -- is not a palindrome.
+
+Z88 -- is not a palindrome.
+
+322A -- is not a palindrome.
+
+Z -- is a regular palindrome.
+
+21 -- is not a palindrome.
+
+8153 -- is not a palindrome.
+
+A132 -- is not a palindrome.
+
+588 -- is not a palindrome.
+
+82 -- is not a palindrome.
+
+5 -- is a regular palindrome.
+
+3Z35 -- is not a palindrome.
+
+35 -- is not a palindrome.
+
+588 -- is not a palindrome.
+
+38A8 -- is not a palindrome.
+
+A82Z -- is not a palindrome.
+
+ZA3 -- is not a palindrome.
+
+3 -- is a regular palindrome.
+
+A1A -- is a mirrored palindrome.
+
+235 -- is not a palindrome.
+
+1 -- is a mirrored palindrome.
+
+25 -- is not a palindrome.
+
+1 -- is a mirrored palindrome.
+
+2Z -- is not a palindrome.
+
+1 -- is a mirrored palindrome.
+
+A121 -- is not a palindrome.
+

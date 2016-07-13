@@ -1,0 +1,43 @@
+4
+XXXX                XXXXX
+XXX               XXXXXXX
+XXXXX                XXXX
+XX                 XXXXXX
+2
+XXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXX
+1
+XXXXXXXXX              XX
+5
+XXXX                XXXXX
+XXX               XXXXXXX
+XXXXX                XXXX
+XX                 XXXXXX
+X XXXXXXXXXXXXXXXXXXXXXXX
+5
+XXXX                XXXXX
+XXX               XXXXXXX
+XXXXX                XXXX
+XX                 XXXXXX
+XXXXXXXXXXXXXXXXXXX   XXX
+2
+X                       X
+X                       X
+1
+X                       X
+2
+X                      XX  
+X                       X
+11
+XXX                     X
+XXXXXXXXX             XXX
+XXXXXX                  X
+XXXXXXX               XXX
+XXX                XXXXXX
+XXXXXX                  X
+XXX                     X
+XXXXXXXXXXXXXXXXXXXXX XXX
+XXX            XXXXXXXXXX
+XXXXXXXXXXXXX     XXXXXXX
+X                       X
+0
