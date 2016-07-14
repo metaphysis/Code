@@ -2,7 +2,7 @@
 // UVa IDs: 325
 // Verdict: Accepted
 // Submission Date: 2016-06-30
-// UVa Run Time: 0.190s
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
@@ -30,16 +30,16 @@ int main(int argc, char *argv[])
 {
     ios::sync_with_stdio(false);
     
+    //string pattern = "^\\s*[\\+|-]?\\d+(\\.\\d+(e[\\+|-]?\\d+)?|e[\\+|-]?\\d+)\\s*$";
+    string pattern = R"(^\s*[\+|-]?\d+(\.\d+(e[\+|-]?\d+)?|e[\+|-]?\d+)\s*$)";
+    regex e(pattern, regex_constants::icase);
+        
     string line;
     while (getline(cin, line))
     {
         if (line == "*")
             break;
 
-        //string pattern = "^\\s*[\\+|-]?\\d+(\\.\\d+(e[\\+|-]?\\d+)?|e[\\+|-]?\\d+)\\s*$";
-        string pattern = R"(^\s*[\+|-]?\d+(\.\d+(e[\+|-]?\d+)?|e[\+|-]?\d+)\s*$)";
-        regex e(pattern, regex_constants::icase);
-        
         int left = 0, right = line.length() - 1;
         while (left < line.length() && isblank(line[left])) left++;
         while (right >= 0 && isblank(line[right])) right--;
