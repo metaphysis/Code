@@ -1,0 +1,1611 @@
+2147483686 + 7964
+first number too big
+result too big
+2147483642 * 1073741851
+result too big
+1073741832 * 1073741786
+result too big
+2147483616 + 13365
+result too big
+29317 * 4294967318
+second number too big
+result too big
+5831 * 4294967298
+second number too big
+result too big
+2147483608 + 3059
+result too big
+1073741849 * 2
+result too big
+49 * 2147483600
+result too big
+501310630016395651 + 4294967275
+first number too big
+second number too big
+result too big
+2147483655 + 13794
+first number too big
+result too big
+2147483656 + 2147483690
+first number too big
+second number too big
+result too big
+2235 * 604082590
+result too big
+4294967312 + 4294967339
+first number too big
+second number too big
+result too big
+28411 + 2147483653
+second number too big
+result too big
+4294967284 + 440544146155733240
+first number too big
+second number too big
+result too big
+2147483653 * 2147483687
+first number too big
+second number too big
+result too big
+58237 * 30364
+303103244888090752 + 15539
+first number too big
+result too big
+4294967260 * 5248906229691771
+first number too big
+second number too big
+result too big
+2147483647 + 633472872
+result too big
+2147483606 + 614091326870023393
+second number too big
+result too big
+1073741831 * 1025907851
+result too big
+2147483678 + 27764
+first number too big
+result too big
+80 + 11975
+4294967257 * 60
+first number too big
+result too big
+1027344626 + 1073741851
+2147483672 * 30
+first number too big
+result too big
+74 * 31
+1073741831 + 45227
+11579 + 15394
+4294967274 + 49326
+first number too big
+result too big
+358012573140555601 * 32
+first number too big
+result too big
+25090 * 5822
+74 * 2147483684
+second number too big
+result too big
+1073741800 * 264576664
+result too big
+2147483661 + 7561
+first number too big
+result too big
+826777809055389970 * 14145
+first number too big
+result too big
+2470 + 1073741815
+12027 + 7856
+15613 + 913084075889998629
+second number too big
+result too big
+233795416967160685 + 2123705978
+first number too big
+result too big
+2147483624 * 512313511
+result too big
+68 + 4294967289
+second number too big
+result too big
+75 + 4294967285
+second number too big
+result too big
+73 + 102014802590426432
+second number too big
+result too big
+2147483630 + 8700
+result too big
+1073741786 + 1237137197
+result too big
+13624 + 2147483678
+second number too big
+result too big
+8021 * 4294967290
+second number too big
+result too big
+1937669605 + 882667445485115560
+second number too big
+result too big
+1072243778570963247 * 4294967285
+first number too big
+second number too big
+result too big
+1073741841 + 764752415
+1732435928 * 77
+result too big
+36 + 13786
+12 * 1158624794
+result too big
+13126 * 1073741847
+result too big
+2147483602 + 1073741810
+result too big
+4294967307 + 30748960060153810
+first number too big
+second number too big
+result too big
+55 + 2147483663
+second number too big
+result too big
+36908 * 551158328042816319
+second number too big
+result too big
+2147483609 + 914
+result too big
+12791 + 34420
+537931868200851185 + 4769
+first number too big
+result too big
+1073741830 + 248297047
+889731505119093947 * 1688718091
+first number too big
+result too big
+445232743214672909 * 10328
+first number too big
+result too big
+782774458978566795 * 1073741809
+first number too big
+result too big
+8564 * 2147483690
+second number too big
+result too big
+1073741789 * 1073741849
+result too big
+560592555 * 1087269787295024402
+second number too big
+result too big
+750415135784897724 * 2034793589
+first number too big
+result too big
+1073741852 + 2147483696
+second number too big
+result too big
+2147483637 + 22
+result too big
+799027653755939199 + 2147483655
+first number too big
+second number too big
+result too big
+2147483611 * 1073741852
+result too big
+2147483626 * 1477878424
+result too big
+1073741820 * 1073741782
+result too big
+55 + 1174185412
+4294967276 + 1073741785
+first number too big
+result too big
+2147483638 + 74
+result too big
+40825 * 7796
+432381742 * 442586763684543238
+second number too big
+result too big
+1661177925 + 1073741825
+result too big
+10266 * 2147483668
+second number too big
+result too big
+12 + 2147483673
+second number too big
+result too big
+1647 + 87
+1111531361475582192 * 2147483639
+first number too big
+result too big
+45144 + 327886915291700529
+second number too big
+result too big
+37357 * 2129190702
+result too big
+2147483612 * 1073741796
+result too big
+1703464478 + 4294967251
+second number too big
+result too big
+14861 * 1073741848
+result too big
+1088218196450005803 + 98
+first number too big
+result too big
+74985135226148750 + 72
+first number too big
+result too big
+26 + 1073741800
+7519 * 35
+1073741806 + 3279
+42 * 1073741826
+result too big
+22 + 4294967317
+second number too big
+result too big
+1818972563 * 2147483623
+result too big
+1127311345623967227 + 2147483598
+first number too big
+result too big
+6600 * 1073741839
+result too big
+103594641409625387 * 367971696
+first number too big
+result too big
+2147483672 * 4294967293
+first number too big
+second number too big
+result too big
+31848 + 1073741815
+12422 * 281831480771590997
+second number too big
+result too big
+1477649066 * 823821950882975636
+second number too big
+result too big
+525532812450738418 * 89
+first number too big
+result too big
+29774 + 34400
+2147483631 + 3010
+result too big
+1073741820 + 4294967297
+second number too big
+result too big
+1107418659 * 1899097444
+result too big
+15922 * 920920739196705404
+second number too big
+result too big
+1073741863 * 1120476725094003609
+second number too big
+result too big
+26343 * 4294967304
+second number too big
+result too big
+2028 + 494453891612034250
+second number too big
+result too big
+79 * 465040065791506868
+second number too big
+result too big
+2147483636 * 1073741840
+result too big
+567275816 + 526538548947229273
+second number too big
+result too big
+937588341 + 35841
+1073741798 * 4294967277
+second number too big
+result too big
+399808694138823580 * 2147483607
+first number too big
+result too big
+4294967321 + 63287
+first number too big
+result too big
+7556 * 2147483679
+second number too big
+result too big
+56536 * 2147483603
+result too big
+2147483651 * 915598842182284999
+first number too big
+second number too big
+result too big
+4294967250 + 1073741826
+first number too big
+result too big
+33123 + 7332
+15854 + 1073741832
+18 + 1045561570952298798
+second number too big
+result too big
+1073741814 * 2147483600
+result too big
+22558 + 1073741798
+15 * 4294967246
+second number too big
+result too big
+13461 * 1073741779
+result too big
+2147483665 * 2147483668
+first number too big
+second number too big
+result too big
+2147483609 + 500204516782161315
+second number too big
+result too big
+14130 * 10713
+1073741854 + 936342251247967637
+second number too big
+result too big
+1073741792 * 680036554
+result too big
+2240 * 2147483649
+second number too big
+result too big
+1109807421975847404 + 276036565893517803
+first number too big
+second number too big
+result too big
+9 * 2147483612
+result too big
+4294967345 * 12156
+first number too big
+result too big
+13196 + 225250942
+1047887963925614333 * 12860
+first number too big
+result too big
+4294967281 * 474935729
+first number too big
+result too big
+4294967334 + 4447
+first number too big
+result too big
+4294967309 * 33519
+first number too big
+result too big
+1073741839 + 12936
+4294967285 + 8739
+first number too big
+result too big
+45 + 1
+4294967287 * 47500
+first number too big
+result too big
+1073741829 + 4294967329
+second number too big
+result too big
+12914 + 10419
+10240 * 6160
+289112635266440968 * 79
+first number too big
+result too big
+6661 + 1006181207
+1073741851 + 2147483691
+second number too big
+result too big
+1073741859 + 359082066808941029
+second number too big
+result too big
+7737 + 4294967291
+second number too big
+result too big
+1019750929896252025 * 3119
+first number too big
+result too big
+942652183095588047 * 1073741799
+first number too big
+result too big
+2147483671 * 4294967327
+first number too big
+second number too big
+result too big
+11298064874101831 + 2147483623
+first number too big
+result too big
+12586 * 2147483627
+result too big
+1073741858 + 7280
+2147483691 * 38947
+first number too big
+result too big
+2147483665 * 2147483647
+first number too big
+result too big
+1073741816 + 735314083498210006
+second number too big
+result too big
+2147483637 + 33
+result too big
+27102 + 48
+5779 * 766569100499429679
+second number too big
+result too big
+862653447164397373 * 1073741780
+first number too big
+result too big
+34263 + 4294967247
+second number too big
+result too big
+344814060329307292 + 1938978451
+first number too big
+result too big
+20237 * 334615168196878002
+second number too big
+result too big
+785543802 + 13260
+36671 * 10845
+9393 * 2147483626
+result too big
+1073741795 + 43587
+1632976314 * 4294967340
+second number too big
+result too big
+4294967297 + 1131560685199324124
+first number too big
+second number too big
+result too big
+1344359112 * 2147483613
+result too big
+74 * 15561
+2091 + 1047504151
+4294967272 + 572068684
+first number too big
+result too big
+344989041 + 2147483598
+result too big
+12197 + 80
+779116067 + 2147483609
+result too big
+25 * 286589127656860308
+second number too big
+result too big
+36457 + 861511271
+32259 * 4294967342
+second number too big
+result too big
+1608310428 + 4294967260
+second number too big
+result too big
+1073741857 * 975417413
+result too big
+2065938293 + 518130676633841630
+second number too big
+result too big
+95064141634530294 + 86423706
+first number too big
+result too big
+11519 + 42
+848942625 + 1073741856
+1113 * 145804090035975894
+second number too big
+result too big
+1073741812 + 541262162
+88 + 801653247170308462
+second number too big
+result too big
+1461482577 * 11882
+result too big
+1073741788 + 160665394131793442
+second number too big
+result too big
+4294967260 + 2147483689
+first number too big
+second number too big
+result too big
+4294967328 + 1073741790
+first number too big
+result too big
+45520 + 1073741854
+74 * 524318117749055761
+second number too big
+result too big
+30312 * 2147483687
+second number too big
+result too big
+7 * 1073741866
+result too big
+95 + 28230
+4294967315 + 1073741796
+first number too big
+result too big
+1073741850 * 13583
+result too big
+0 + 47619
+2147483693 * 1073741867
+first number too big
+result too big
+4294967268 + 4294967246
+first number too big
+second number too big
+result too big
+4294967264 * 369468226287451602
+first number too big
+second number too big
+result too big
+2147483681 + 1073741870
+first number too big
+result too big
+1073741820 + 29378
+1073741837 * 40858
+result too big
+389 * 266245079637836226
+second number too big
+result too big
+8093 + 31556
+1073741848 * 1073741808
+result too big
+2324 + 2147483625
+result too big
+1073741819 * 1073741841
+result too big
+2147483616 + 760805125
+result too big
+1100163664 * 4294967318
+second number too big
+result too big
+41 + 4031
+4294967325 + 4294967305
+first number too big
+second number too big
+result too big
+1073741834 * 1073741856
+result too big
+44681 * 788566087
+result too big
+556481244484271222 + 581090690389009334
+first number too big
+second number too big
+result too big
+2147483654 * 2147483615
+first number too big
+result too big
+1073741804 * 12849
+result too big
+433435591839312721 * 4294967291
+first number too big
+second number too big
+result too big
+1073741796 * 85
+result too big
+1073741827 * 2147483691
+second number too big
+result too big
+4294967283 + 122267449777255819
+first number too big
+second number too big
+result too big
+5714 * 87
+2147483649 * 2147483648
+first number too big
+second number too big
+result too big
+14982 * 2078456067
+result too big
+14 + 55
+1073741834 + 13595
+903937528 + 1073741829
+10419 + 2147483622
+result too big
+1073741814 * 4294967331
+second number too big
+result too big
+13614 + 15109
+4294967287 + 4294967256
+first number too big
+second number too big
+result too big
+4294967295 + 35273
+first number too big
+result too big
+2147483654 + 2147483672
+first number too big
+second number too big
+result too big
+245430103987968935 * 105410874
+first number too big
+result too big
+2147483659 * 200522853206375358
+first number too big
+second number too big
+result too big
+2147483618 + 1073741856
+result too big
+45 * 8
+9540 * 12375
+21404 + 1928323660
+865074113 + 4294967280
+second number too big
+result too big
+329271179368195631 * 14311
+first number too big
+result too big
+26019 * 256485696728055815
+second number too big
+result too big
+4294967298 * 4294967338
+first number too big
+second number too big
+result too big
+35148 * 4294967249
+second number too big
+result too big
+2147483656 + 2147483656
+first number too big
+second number too big
+result too big
+1157467349 + 4294967337
+second number too big
+result too big
+1544142316 + 14360
+7388 * 2147483653
+second number too big
+result too big
+948606999380403826 * 2147483628
+first number too big
+result too big
+2147483687 + 30302
+first number too big
+result too big
+22875 + 18774
+31445 + 4294967278
+second number too big
+result too big
+567565026710307465 * 3581
+first number too big
+result too big
+509137412843588312 + 251124902281574246
+first number too big
+second number too big
+result too big
+2147483684 + 2147483619
+first number too big
+result too big
+1187269638 + 4294967280
+second number too big
+result too big
+12393 + 196866790594730193
+second number too big
+result too big
+2147483623 * 51219
+result too big
+27 + 42
+4294967340 + 473232416
+first number too big
+result too big
+2147483646 * 1073741788
+result too big
+7 + 1158
+4294967257 + 2537
+first number too big
+result too big
+41154 * 1073741824
+result too big
+78 + 14423
+880687341152496976 + 1073741815
+first number too big
+result too big
+1091600462 + 848934867
+2147483616 + 53449
+result too big
+66023310398424959 * 8
+first number too big
+result too big
+4294967334 + 94
+first number too big
+result too big
+18108 * 123769426772161940
+second number too big
+result too big
+4294967299 * 4294967268
+first number too big
+second number too big
+result too big
+653066156 + 2184
+4294967254 + 7
+first number too big
+result too big
+195740360715997984 * 1235828554
+first number too big
+result too big
+1133859795255276160 * 1110638713940470030
+first number too big
+second number too big
+result too big
+8 + 1073741791
+5459 + 672395346035012646
+second number too big
+result too big
+4294967266 * 51127
+first number too big
+result too big
+32 * 2147483694
+second number too big
+result too big
+103928059740801378 + 2147483667
+first number too big
+second number too big
+result too big
+89553789 * 2147483665
+second number too big
+result too big
+12142 * 236089756
+result too big
+375894462869715793 + 1073741846
+first number too big
+result too big
+28549 + 1296512221
+2147483610 * 28
+result too big
+80 + 14387
+559505283 + 13417
+6989 * 1073741841
+result too big
+2147483696 * 48996
+first number too big
+result too big
+658576874 + 3664
+5748 * 18001
+5185 + 5306
+1073741784 + 7671
+451441329 + 4294967261
+second number too big
+result too big
+7 + 62
+2147483676 + 1073741832
+first number too big
+result too big
+45 * 23344
+1073741795 * 33448
+result too big
+34 + 1073741814
+1291360007 * 664793027539437001
+second number too big
+result too big
+2147483649 * 733450820073207289
+first number too big
+second number too big
+result too big
+945264721 + 2147483632
+result too big
+275674709991230628 + 2147483666
+first number too big
+second number too big
+result too big
+60 + 408439360
+4324 * 914228169
+result too big
+768669035074956493 + 1218857559
+first number too big
+result too big
+6534 + 37949
+2147483624 + 59
+result too big
+337961573146042078 * 507994360044285336
+first number too big
+second number too big
+result too big
+1073741830 + 4294967250
+second number too big
+result too big
+110724267453229599 * 1073741854
+first number too big
+result too big
+26 + 1233
+38141 + 1073741821
+778803875 * 1073741854
+result too big
+12682 + 4294967285
+second number too big
+result too big
+625362791875125762 * 943412425492448431
+first number too big
+second number too big
+result too big
+36249 * 1706848514
+result too big
+605764316793344170 * 166777898
+first number too big
+result too big
+2147483633 + 201982689
+result too big
+2147483655 + 1073741866
+first number too big
+result too big
+9200 * 1683583686
+result too big
+727116054223503415 + 29390
+first number too big
+result too big
+4294967325 * 48508
+first number too big
+result too big
+1073741807 * 2147483662
+second number too big
+result too big
+23508 * 281570020620879168
+second number too big
+result too big
+27758 * 66
+2147483668 + 606013711440470249
+first number too big
+second number too big
+result too big
+717347308 * 1056012524
+result too big
+47 * 408730261
+result too big
+35 + 4294967291
+second number too big
+result too big
+597417646 * 4294967344
+second number too big
+result too big
+1733764616 * 54027
+result too big
+2147483609 * 4294967257
+second number too big
+result too big
+31961 + 23419
+496432056 + 9113
+33 * 1640725180
+result too big
+45176 * 25
+2147483615 * 58
+result too big
+12608 * 4294967246
+second number too big
+result too big
+1976246334 * 1073741781
+result too big
+285097540515145981 + 4294967320
+first number too big
+second number too big
+result too big
+560115675577996379 * 1023587029429818313
+first number too big
+second number too big
+result too big
+952330673 + 1073741783
+1073741835 * 1073741867
+result too big
+4294967275 * 9572
+first number too big
+result too big
+8690 * 4294967343
+second number too big
+result too big
+5978 + 1073741845
+2147483649 + 4
+first number too big
+result too big
+1073741847 + 1141202813528642045
+second number too big
+result too big
+101196127768336852 * 12993
+first number too big
+result too big
+352231132925621871 * 2147483631
+first number too big
+result too big
+511274550622254138 * 38
+first number too big
+result too big
+46 + 3
+889458038052560760 * 92
+first number too big
+result too big
+2095405299 * 3430
+result too big
+2147483599 + 48564
+result too big
+121779432356674758 * 4294967261
+first number too big
+second number too big
+result too big
+35873 + 943253890543276677
+second number too big
+result too big
+1073741846 + 945589576876338731
+second number too big
+result too big
+720689659522972952 * 9238
+first number too big
+result too big
+2147483694 + 4294967332
+first number too big
+second number too big
+result too big
+836063377 + 1073741817
+4294967291 * 1502
+first number too big
+result too big
+2147483633 * 4294967295
+second number too big
+result too big
+2147483599 * 4294967296
+second number too big
+result too big
+1073741835 * 4294967305
+second number too big
+result too big
+7099 + 10
+1073741797 + 2147483622
+result too big
+74 * 36
+2147483637 * 703599064642115009
+second number too big
+result too big
+4294967328 + 13
+first number too big
+result too big
+652790101 * 1137336241
+result too big
+478627365 + 2147483676
+second number too big
+result too big
+49 + 96543329563269045
+second number too big
+result too big
+536685102 + 52657
+4294967279 + 37
+first number too big
+result too big
+38191 * 689037001068355264
+second number too big
+result too big
+13223 + 2147483659
+second number too big
+result too big
+1073741795 * 2147483689
+second number too big
+result too big
+39303 + 551
+14275 * 66
+1073741783 + 2147483642
+result too big
+1126989413 * 2147483619
+result too big
+42 + 38
+4294967330 + 767302180616853572
+first number too big
+second number too big
+result too big
+18 * 2306
+1876432603 * 10898
+result too big
+4294967280 * 2147483683
+first number too big
+second number too big
+result too big
+4294967270 + 4294967292
+first number too big
+second number too big
+result too big
+71 + 47319
+2147483615 * 1073741782
+result too big
+644476313937866546 * 1073741825
+first number too big
+result too big
+287514590029592820 * 4294967309
+first number too big
+second number too big
+result too big
+4294967281 + 403865453914611475
+first number too big
+second number too big
+result too big
+1375389589 * 7713
+result too big
+4294967310 * 15995
+first number too big
+result too big
+2892 * 622284814119187283
+second number too big
+result too big
+2147483609 * 1073741814
+result too big
+2147483686 + 4294967335
+first number too big
+second number too big
+result too big
+892972464 + 662866776639347306
+second number too big
+result too big
+4294967263 + 4294967255
+first number too big
+second number too big
+result too big
+60 + 30349
+78 * 1073741803
+result too big
+2147483674 * 58285
+first number too big
+result too big
+783141120155695721 + 5621
+first number too big
+result too big
+1771131183 * 10274
+result too big
+35 * 22
+4294967259 + 2147483654
+first number too big
+second number too big
+result too big
+14445 * 13814
+16 + 1073741777
+15083 + 1033042220478524441
+second number too big
+result too big
+1073741783 * 4294967258
+second number too big
+result too big
+50 * 95259713
+result too big
+829964035 + 49207
+24566 * 4294967326
+second number too big
+result too big
+29 * 4294967285
+second number too big
+result too big
+4294967335 * 1819333254
+first number too big
+result too big
+10804 + 366569707580723297
+second number too big
+result too big
+488997297 + 2147483634
+result too big
+1073741843 * 4294967287
+second number too big
+result too big
+1880181676 * 1073741796
+result too big
+1073741803 + 1033424224
+15935 + 2147483620
+result too big
+546297352324540114 + 23554
+first number too big
+result too big
+204737289966576381 * 52358
+first number too big
+result too big
+10508 + 180238903953803728
+second number too big
+result too big
+1043038636 * 1541270467
+result too big
+2147483655 + 624780037230189359
+first number too big
+second number too big
+result too big
+1073741840 + 12
+11452 + 50006179649688517
+second number too big
+result too big
+26496 * 52
+5652 * 26
+37176 * 618468376706339227
+second number too big
+result too big
+12211 + 13898
+1073741844 * 2147483683
+second number too big
+result too big
+4294967274 + 1073741819
+first number too big
+result too big
+53909 * 55
+29 * 1062341112165091944
+second number too big
+result too big
+1073741856 + 4294967277
+second number too big
+result too big
+10387 * 7827
+4294967262 * 31158
+first number too big
+result too big
+2147483684 + 4294967282
+first number too big
+second number too big
+result too big
+435913800 + 2147483611
+result too big
+2147483637 * 18
+result too big
+4575 * 53602
+122119083998739144 * 206739971792023070
+first number too big
+second number too big
+result too big
+69 * 1146573665099363135
+second number too big
+result too big
+63 * 1152546999328361406
+second number too big
+result too big
+1073741836 * 490464372
+result too big
+348659414210591153 * 12612
+first number too big
+result too big
+1249760270 + 1367031614
+result too big
+52266 + 2079984131
+4294967252 * 0
+first number too big
+7417 * 1032258888123481319
+second number too big
+result too big
+221678636365699121 + 9202
+first number too big
+result too big
+348476654824042589 + 2147483646
+first number too big
+result too big
+12187 * 13832
+117704925512126993 + 4294967256
+first number too big
+second number too big
+result too big
+4294967298 * 2147483623
+first number too big
+result too big
+2147483639 + 4294967264
+second number too big
+result too big
+69929037 * 4294967273
+second number too big
+result too big
+4294967317 + 4294967330
+first number too big
+second number too big
+result too big
+51166 + 14681
+6923 + 1073741796
+22 * 2147483665
+second number too big
+result too big
+69 + 32
+4294967309 * 4294967263
+first number too big
+second number too big
+result too big
+4294967313 + 2147483672
+first number too big
+second number too big
+result too big
+4294967248 * 1002389639273319934
+first number too big
+second number too big
+result too big
+4294967329 * 31160
+first number too big
+result too big
+1165761308 + 4294967260
+second number too big
+result too big
+2147483648 * 1073741796
+first number too big
+result too big
+7889 * 200429635
+result too big
+2147483631 * 1073741866
+result too big
+2147483680 * 10157
+first number too big
+result too big
+1073741784 * 542109687124147378
+second number too big
+result too big
+1073741778 + 4294967268
+second number too big
+result too big
+118478664 + 1612686325
+13617 * 508309363969894317
+second number too big
+result too big
+4294967329 * 1655062302
+first number too big
+result too big
+30 + 76
+91 + 1073741860
+2147483603 * 2087443491
+result too big
+10572 + 460053045
+42735570 + 276502445
+9754 + 519573292469112905
+second number too big
+result too big
+11673 * 24
+1095725011966139000 * 76716284
+first number too big
+result too big
+12925 + 11381
+69 + 95
+420235118134230429 * 286851284765440016
+first number too big
+second number too big
+result too big
+9570 * 606
+34 + 1329960295
+17 * 9952
+2147483689 * 17869
+first number too big
+result too big
+31215561553794425 * 754471440552130731
+first number too big
+second number too big
+result too big
+2147483611 + 139331732314634678
+second number too big
+result too big
+18208 + 1076270612039474998
+second number too big
+result too big
+11590 * 4294967334
+second number too big
+result too big
+4294967315 * 1073741803
+first number too big
+result too big
+2147483669 + 32
+first number too big
+result too big
+1073741796 + 3361
+20548 + 414515064530650644
+second number too big
+result too big
+2147483645 * 2147483608
+result too big
+8246 + 1073741823
+1073741815 * 36620
+result too big
+710973967 * 27047
+result too big
+4294967265 * 23551
+first number too big
+result too big
+60428 + 4294967260
+second number too big
+result too big
+4294967315 * 30254
+first number too big
+result too big
+2147483652 * 6720
+first number too big
+result too big
+2002845941 + 671697431
+result too big
+21283 * 671915694128895484
+second number too big
+result too big
+48 + 2147483626
+result too big
+58 * 80
+2403 + 35524
+950796716818305866 + 4294967264
+first number too big
+second number too big
+result too big
+1998944295 + 2147483616
+result too big
+2147483604 + 1073741816
+result too big
+21492 + 694286796265187710
+second number too big
+result too big
+82 + 1886122395
+1073741819 + 22625
+4294967341 * 2147483672
+first number too big
+second number too big
+result too big
+2 + 37799
+41050 + 6588
+1895578796 + 13248
+4294967311 + 1073741850
+first number too big
+result too big
+4294967303 * 4294967295
+first number too big
+second number too big
+result too big
+1073741776 + 4215
+1073741830 * 1021471715452576594
+second number too big
+result too big
+49 * 42855
+23943 + 4294967337
+second number too big
+result too big
+2147483613 * 1076052924902607353
+second number too big
+result too big
+41614 * 926359644386441325
+second number too big
+result too big
+29023 + 4294967334
+second number too big
+result too big
+1073741788 + 453630443440670957
+second number too big
+result too big
+51677 * 1073741788
+result too big
+2072412236 * 4294967274
+second number too big
+result too big
+4294967290 * 159550251284230983
+first number too big
+second number too big
+result too big
+134047749117794652 * 867379497659262911
+first number too big
+second number too big
+result too big
+1073741794 + 1073741822
+337473841672513891 + 2147483683
+first number too big
+second number too big
+result too big
+33849 + 792259225882365675
+second number too big
+result too big
+2147483657 * 1073741873
+first number too big
+result too big
+2147483637 * 4294967306
+second number too big
+result too big
+60457 + 4294967249
+second number too big
+result too big
+153648050220408868 + 300835187657179496
+first number too big
+second number too big
+result too big
+380104940 * 1073741835
+result too big
+42 * 2084657703
+result too big
+2113 + 852299792639729603
+second number too big
+result too big
+29 * 4294967305
+second number too big
+result too big
+4561 * 33301
+51790 * 238848100007833863
+second number too big
+result too big
+4294967249 * 2147483652
+first number too big
+second number too big
+result too big
+266543496 + 5625
+2202 + 12
+30281 + 92
+49925 + 2133751479
+18 + 4294967335
+second number too big
+result too big
+1051768230501356027 * 1073741805
+first number too big
+result too big
+998880893292162159 + 113063219
+first number too big
+result too big
+27 * 431622059970295152
+second number too big
+result too big
+2147483606 + 4294967306
+second number too big
+result too big
+4294967265 * 85
+first number too big
+result too big
+5032 * 4254
+1133900716486728228 * 366713255
+first number too big
+result too big
+5649 * 2147483608
+result too big
+63 + 156579413351617169
+second number too big
+result too big
+1073741796 + 708400730011890232
+second number too big
+result too big
+1073741851 + 9143
+2147483661 + 59
+first number too big
+result too big
+38865 * 1073741786
+result too big
+4294967313 * 12911
+first number too big
+result too big
+41679 + 12
+694221420 * 1073741816
+result too big
+4294967311 + 19055340908615119
+first number too big
+second number too big
+result too big
+1776402014 + 26403
+2063728188 + 1475933059
+result too big
+65 + 6826
+523776205 * 1073741774
+result too big
+2147483668 * 72
+first number too big
+result too big
+1059852677 + 7506
+51 + 1073741779
+6991 + 207962804437319128
+second number too big
+result too big
+912819803951682525 * 22
+first number too big
+result too big
+51805 * 49327
+result too big
+1599243366 + 2147483645
+result too big
+628251970710064748 * 1192535895
+first number too big
+result too big
+2147483615 + 1073741796
+result too big
+18758350 * 494286163
+result too big
+29 * 4294967288
+second number too big
+result too big
+1073741847 + 31155
+4294967325 * 2147483685
+first number too big
+second number too big
+result too big
+2147483665 + 1073741777
+first number too big
+result too big
+282184171 + 54
+4294967311 * 2147483664
+first number too big
+second number too big
+result too big
+4294967286 * 4294967338
+first number too big
+second number too big
+result too big
+1073741790 + 1073741840
+11966 + 9271
+33111 + 2147483619
+result too big
+1073741803 * 31401
+result too big
+1073741828 + 1073741782
+15521 + 190943380300962916
+second number too big
+result too big
+13 * 1530153329
+result too big
+109674961 + 1073741872
+2147483634 * 1073741790
+result too big
+2147483695 + 1388393210
+first number too big
+result too big
+2022704924 + 50175612
+1073741790 + 254139774
+769246249225760555 + 2147483646
+first number too big
+result too big
+35058 * 938900875271154603
+second number too big
+result too big
+23356 * 4294967261
+second number too big
+result too big
+1073741798 + 4294967306
+second number too big
+result too big
+4294967320 * 15051
+first number too big
+result too big
+1073741797 + 4119
+61305 + 1195726334
+4294967303 + 6191
+first number too big
+result too big
+2147483667 * 2147483625
+first number too big
+result too big
+10857 + 4294967249
+second number too big
+result too big
+63 + 52
+1073741777 + 1056332812
+1579872868 * 2147483633
+result too big
+4294967265 + 2147483648
+first number too big
+second number too big
+result too big
+2147483673 + 5987
+first number too big
+result too big
+4294967252 + 40062
+first number too big
+result too big
+115080011142935932 + 1073741811
+first number too big
+result too big
+4294967249 * 4294967332
+first number too big
+second number too big
+result too big
+4294967321 + 1073741812
+first number too big
+result too big
+17749 + 1129619635077746633
+second number too big
+result too big
+10252 * 7415
+1073741792 * 21063
+result too big
+68 * 2147483649
+second number too big
+result too big
+805993664960822883 * 1933457264
+first number too big
+result too big
+1073741829 * 352284526041263415
+second number too big
+result too big
+4294967306 * 18
+first number too big
+result too big
+4294967285 + 1298578199
+first number too big
+result too big
+1712180387 * 922812969970989054
+second number too big
+result too big
+8491 + 4294967312
+second number too big
+result too big
+131961195967047757 * 5984
+first number too big
+result too big
+1073741796 + 4294967284
+second number too big
+result too big
+4294967250 * 1073741862
+first number too big
+result too big
+46 + 19160
+846669422 * 2147483622
+result too big
+2147483658 * 2147483696
+first number too big
+second number too big
+result too big
+10203 + 2147483631
+result too big
+17719 * 4294967342
+second number too big
+result too big
+52431807 * 53441
+result too big
+1088636845880931665 + 827000850908811920
+first number too big
+second number too big
+result too big

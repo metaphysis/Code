@@ -1,0 +1,21 @@
+20 
+FF + F 
+ABC + CDE 
+AA + 991 
+F0C + A 
+FFF - FFF 
+AA + DDD 
+FFF - CCD 
+DDA - C9C 
+E0A - ABB 
+C - 9 
+A + B 
+FFF - 123 
+36 + 2 
+0 + 0 
+3 - 0 
+23 - 1 
+A46 - 1A 
+F - 1 
+14 - 13 
+988 - FA 
