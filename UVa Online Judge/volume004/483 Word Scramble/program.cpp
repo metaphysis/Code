@@ -1,5 +1,5 @@
 // Word Scramble
-// UVa IDs: 483
+// UVa ID: 483
 // Verdict: Accepted
 // Submission Date: 2016-07-13
 // UVa Run Time: 0.000s

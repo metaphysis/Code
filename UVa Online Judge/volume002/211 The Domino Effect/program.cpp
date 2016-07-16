@@ -1,5 +1,5 @@
 // The Domino Effect
-// UVa IDs: 211
+// UVa ID: 211
 // Verdict: Accepted
 // Submission Date: 2016-04-28
 // UVa Run Time: 0.100s

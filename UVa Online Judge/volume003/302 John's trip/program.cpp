@@ -1,5 +1,5 @@
 // John's trip
-// UVa IDs: 302
+// UVa ID: 302
 // Verdict: Accepted
 // Submission Date: 2016-07-02
 // UVa Run Time: 0.020s

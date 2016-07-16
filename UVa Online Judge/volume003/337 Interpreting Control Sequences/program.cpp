@@ -1,5 +1,5 @@
 // Interpreting Control Sequences
-// UVa IDs: 337
+// UVa ID: 337
 // Verdict: Accepted
 // Submission Date: 2016-07-01
 // UVa Run Time: 0.000s

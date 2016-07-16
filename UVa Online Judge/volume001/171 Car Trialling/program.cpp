@@ -1,5 +1,5 @@
 // Car Trialling
-// UVa IDs: 171
+// UVa ID: 171
 // Verdict: Accepted
 // Submission Date: 2016-03-06
 // UVa Run Time: 0.000s

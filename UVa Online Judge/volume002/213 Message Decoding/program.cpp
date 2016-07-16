@@ -1,5 +1,5 @@
 // Message Decoding
-// UVa IDs: 213
+// UVa ID: 213
 // Verdict: Accepted
 // Submission Date: 2016-04-28
 // UVa Run Time: 0.010s

@@ -1,5 +1,5 @@
 // Permalex
-// UVa IDs: 153
+// UVa ID: 153
 // Verdict: Accepted
 // Submission Date: 2016-02-02
 // UVa Run Time: 0.000s

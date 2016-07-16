@@ -1,4 +1,5 @@
-// UVa Problem 114 - Simulation Wizardry
+// Simulation Wizardry
+// UVa ID: 114
 // Verdict: Accepted
 // Submission Date: 2011-12-02
 // UVa Run Time: 0.084s

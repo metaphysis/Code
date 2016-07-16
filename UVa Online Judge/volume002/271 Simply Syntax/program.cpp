@@ -1,5 +1,5 @@
 // Simply Syntax
-// UVa IDs: 271
+// UVa ID: 271
 // Verdict: Accepted
 // Submission Date: 2016-05-10
 // UVa Run Time: 0.060s

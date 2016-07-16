@@ -1,5 +1,5 @@
 // Code Generation
-// UVa IDs: 214
+// UVa ID: 214
 // Verdict: Accepted
 // Submission Date: 2016-04-29
 // UVa Run Time: 0.000s

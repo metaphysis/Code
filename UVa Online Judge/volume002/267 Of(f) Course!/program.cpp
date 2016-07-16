@@ -1,5 +1,5 @@
 // Of(f) Course!
-// UVa IDs: 267
+// UVa ID: 267
 // Verdict: Accepted
 // Submission Date: 2016-05-27
 // UVa Run Time: 0.050s

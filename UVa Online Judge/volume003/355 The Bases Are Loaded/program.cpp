@@ -1,5 +1,5 @@
 // The Bases Are Loaded
-// UVa IDs: 355
+// UVa ID: 355
 // Verdict: 
 // Submission Date: 
 // UVa Run Time: s

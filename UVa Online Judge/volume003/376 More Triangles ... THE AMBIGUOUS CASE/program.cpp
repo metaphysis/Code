@@ -1,5 +1,5 @@
 // More Triangles ... THE AMBIGUOUS CASE
-// UVa IDs: 376
+// UVa ID: 376
 // Verdict: Accepted
 // Submission Date: 2016-07-08
 // UVa Run Time: 0.050s

@@ -1,5 +1,5 @@
 // Number Chains
-// UVa IDs: 263
+// UVa ID: 263
 // Verdict: Accepted
 // Submission Date: 2016-05-10
 // UVa Run Time: 0.380s

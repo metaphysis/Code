@@ -1,5 +1,5 @@
 // Recongnizing Good ISBNs
-// UVa IDs: 333
+// UVa ID: 333
 // Verdict: Accepted
 // Submission Date: 2016-06-28
 // UVa Run Time: 0.050s

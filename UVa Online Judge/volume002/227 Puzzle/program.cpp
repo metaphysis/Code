@@ -1,5 +1,5 @@
 // Puzzle
-// UVa IDs: 227
+// UVa ID: 227
 // Verdict: Accepted
 // Submission Date: 2016-05-10
 // UVa Run Time: 0.000s

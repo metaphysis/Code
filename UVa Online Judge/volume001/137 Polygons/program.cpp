@@ -1,5 +1,5 @@
 // Polygons
-// UVa IDs: 137
+// UVa ID: 137
 // Verdict: Accepted
 // Submission Date: 
 // UVa Run Time: s

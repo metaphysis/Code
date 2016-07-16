@@ -1,5 +1,5 @@
 // Triangle
-// UVa IDs: 194
+// UVa ID: 194
 // Verdict: Accepted
 // Submission Date: 2016-03-24
 // UVa Run Time: 0.006s

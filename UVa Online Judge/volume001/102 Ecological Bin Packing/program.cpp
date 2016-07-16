@@ -1,4 +1,5 @@
-// UVa Problem 102 - Ecological Bin Packing
+// Ecological Bin Packing
+// UVa ID: 102
 // Verdict: Accepted
 // Submission Date: 2011-10-16
 // UVa Run Time: 0.164s

@@ -1,5 +1,5 @@
 // All Squares
-// UVa IDs: 155
+// UVa ID: 155
 // Verdict: Accepted
 // Submission Date: 2016-02-03
 // UVa Run Time: 0.000s

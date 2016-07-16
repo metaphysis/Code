@@ -1,4 +1,5 @@
-// UVa Problem 106 - Fermat vs. Pythagoras
+// Fermat vs. Pythagoras
+// UVa ID: 106
 // Verdict: Accepted
 // Submission Date: 2011-11-21
 // UVa Run Time: 0.236s

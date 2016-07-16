@@ -1,5 +1,5 @@
 // Packets
-// UVa IDs: 311
+// UVa ID: 311
 // Verdict: Accepted
 // Submission Date: 2016-06-28
 // UVa Run Time: 0.000s

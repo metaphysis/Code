@@ -1,5 +1,5 @@
 // Monitoring Wheelchair Patients
-// UVa IDs: 237
+// UVa ID: 237
 // Verdict: Wrong Answer
 // Submission Date: 2016-06-07
 // UVa Run Time: 0.000s

@@ -1,5 +1,5 @@
 // Software Allocation
-// UVa IDs: 259
+// UVa ID: 259
 // Verdict: Accepted
 // Submission Date: 2016-05-12
 // UVa Run Time: 0.000s

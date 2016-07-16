@@ -1,5 +1,5 @@
 // HTML Syntax Checking
-// UVa IDs: 342
+// UVa ID: 342
 // Verdict: Accepted
 // Submission Date: 2016-07-08
 // UVa Run Time: 0.070s

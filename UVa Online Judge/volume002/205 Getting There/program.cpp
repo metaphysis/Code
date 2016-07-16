@@ -1,5 +1,5 @@
 // Getting There
-// UVa IDs: 205
+// UVa ID: 205
 // Verdict: Accepted
 // Submission Date: 2016-04-23
 // UVa Run Time: 0.030s

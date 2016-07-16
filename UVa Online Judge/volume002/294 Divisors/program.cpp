@@ -1,5 +1,5 @@
 // Divisors
-// UVa IDs: 294
+// UVa ID: 294
 // Verdict: Accepted
 // Submission Date: 2016-05-09
 // UVa Run Time: 0.020s

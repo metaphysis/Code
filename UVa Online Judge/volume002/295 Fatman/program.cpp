@@ -1,5 +1,5 @@
 // Fatman
-// UVa IDs: 295
+// UVa ID: 295
 // Verdict: Accepted
 // Submission Date: 2016-06-03
 // UVa Run Time: 0.870s

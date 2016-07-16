@@ -1,5 +1,5 @@
 // Pseudo-Random Number
-// UVa IDs: 350
+// UVa ID: 350
 // Verdict: Accepted
 // Submission Date: 2016-06-25
 // UVa Run Time: 0.030s

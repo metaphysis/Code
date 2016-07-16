@@ -1,5 +1,5 @@
 // Lining Up
-// UVa IDs: 270
+// UVa ID: 270
 // Verdict: Accepted
 // Submission Date: 2016-05-11
 // UVa Run Time: 0.410s

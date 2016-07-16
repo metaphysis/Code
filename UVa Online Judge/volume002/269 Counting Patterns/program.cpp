@@ -1,5 +1,5 @@
 // Counting Patterns
-// UVa IDs: 269
+// UVa ID: 269
 // Verdict: Accepted
 // Submission Date: 2016-06-04
 // UVa Run Time: 0.240s

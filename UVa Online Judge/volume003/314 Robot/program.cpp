@@ -1,5 +1,5 @@
 // Robot
-// UVa IDs: 314
+// UVa ID: 314
 // Verdict: Accepted
 // Submission Date: 2016-07-02
 // UVa Run Time: 0.010s

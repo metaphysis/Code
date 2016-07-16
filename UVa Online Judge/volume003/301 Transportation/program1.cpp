@@ -1,5 +1,5 @@
 // Transportation
-// UVa IDs: 301
+// UVa ID: 301
 // Verdict: Accepted
 // Submission Date: 2016-06-29
 // UVa Run Time: 0.000s

@@ -1,5 +1,5 @@
 // Rename
-// UVa IDs: 282
+// UVa ID: 282
 // Verdict: Accepted
 // Submission Date: 2016-06-06
 // UVa Run Time: 0.120s

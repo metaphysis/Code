@@ -1,5 +1,5 @@
 // Student Grants
-// UVa IDs: 144
+// UVa ID: 144
 // Verdict: Accepted
 // Submission Date: 2016-01-21
 // UVa Run Time: 0.000s

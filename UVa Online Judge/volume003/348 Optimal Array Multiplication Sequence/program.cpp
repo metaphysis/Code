@@ -1,5 +1,5 @@
 // Optimal Array Multiplication Sequence
-// UVa IDs: 348
+// UVa ID: 348
 // Verdict: Accepted
 // Submission Date: 2016-06-27
 // UVa Run Time: 1.140s

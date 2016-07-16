@@ -1,5 +1,5 @@
 // Combinations
-// UVa IDs: 369
+// UVa ID: 369
 // Verdict: Accetped
 // Submission Date: 2016-06-25
 // UVa Run Time: 0.000s

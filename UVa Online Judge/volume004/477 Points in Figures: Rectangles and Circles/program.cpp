@@ -1,5 +1,5 @@
 // Points in Figures: Rectangles and Circles
-// UVa IDs: 477
+// UVa ID: 477
 // Verdict: Accepted
 // Submission Date: 2016-07-14
 // UVa Run Time: 0.020s

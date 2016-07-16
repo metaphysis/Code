@@ -1,5 +1,5 @@
 // Cube painting
-// UVa IDs: 253
+// UVa ID: 253
 // Verdict: Accepted
 // Submission Date: 2016-05-10
 // UVa Run Time: 0.000s

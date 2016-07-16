@@ -1,5 +1,5 @@
 // Fibonacci Freeze
-// UVa IDs: 495
+// UVa ID: 495
 // Verdict: Accepted
 // Submission Date: 2016-07-13
 // UVa Run Time: 0.027s

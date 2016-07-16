@@ -17,6 +17,7 @@
 36 0 rlineto
 1 -4 scale
 0 18 rlineto
+*
 300 300 moveto
 0 72 rlineto
 0 0 rlineto

@@ -1,5 +1,5 @@
 // Firetruck
-// UVa IDs: 208
+// UVa ID: 208
 // Verdict: Accepted
 // Submission Date: 2016-04-26
 // UVa Run Time: 0.000s

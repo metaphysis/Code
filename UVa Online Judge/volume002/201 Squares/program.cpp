@@ -1,5 +1,5 @@
 // Squares
-// UVa IDs: 201
+// UVa ID: 201
 // Verdict: 
 // Submission Date: 
 // UVa Run Time: s

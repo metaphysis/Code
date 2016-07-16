@@ -1,5 +1,5 @@
 // Numbering Paths
-// UVa IDs: 125
+// UVa ID: 125
 // Verdict: Accepted
 // Submission Date: 2015-11-27
 // UVa Run Time: 0.000s

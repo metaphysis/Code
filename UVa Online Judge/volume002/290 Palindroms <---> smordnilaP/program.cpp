@@ -1,5 +1,5 @@
 // Palindroms <---> smordnilaP
-// UVa IDs: 290
+// UVa ID: 290
 // Verdict: Accepted
 // Submission Date: 2016-05-14
 // UVa Run Time: 0.040s

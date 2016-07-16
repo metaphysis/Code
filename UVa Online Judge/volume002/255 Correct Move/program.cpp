@@ -1,5 +1,5 @@
 // Correct Move
-// UVa IDs: 255
+// UVa ID: 255
 // Verdict: Accepted
 // Submission Date: 2016-05-12
 // UVa Run Time: 0.110s

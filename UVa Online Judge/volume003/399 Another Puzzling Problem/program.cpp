@@ -1,5 +1,5 @@
 // Another Puzzling Problem
-// UVa IDs: 399
+// UVa ID: 399
 // Verdict: Accepted
 // Submission Date: 2016-07-06
 // UVa Run Time: 0.000s

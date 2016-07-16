@@ -1,5 +1,5 @@
 // Dining Diplomats
-// UVa IDs: 265
+// UVa ID: 265
 // Verdict: Accepted
 // Submission Date: 2016-06-06
 // UVa Run Time: 0.030s

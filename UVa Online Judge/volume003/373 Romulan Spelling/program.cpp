@@ -1,5 +1,5 @@
 // Romulan Spelling
-// UVa IDs: 373
+// UVa ID: 373
 // Verdict: 
 // Submission Date: 
 // UVa Run Time: s

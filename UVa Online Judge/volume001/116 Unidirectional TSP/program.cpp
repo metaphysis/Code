@@ -1,5 +1,5 @@
 // Unidirectional TSP
-// UVa IDs: 116
+// UVa ID: 116
 // Verdict: Accepted
 // Submission Date: 2016-04-12
 // UVa Run Time: 0.030s

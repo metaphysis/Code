@@ -1,5 +1,5 @@
 // Don't Have A Cow, Dude
-// UVa IDs: 358
+// UVa ID: 358
 // Verdict: Accepted
 // Submission Date: 2016-07-06
 // UVa Run Time: 0.040s

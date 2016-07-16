@@ -1,5 +1,5 @@
 // Double Time
-// UVa IDs: 150
+// UVa ID: 150
 // Verdict: Accepted
 // Submission Date: 2016-01-30
 // UVa Run Time: 0.019s

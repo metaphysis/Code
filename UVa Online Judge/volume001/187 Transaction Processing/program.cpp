@@ -1,5 +1,5 @@
 // Transaction Processing
-// UVa IDs: 187
+// UVa ID: 187
 // Verdict: Accepted
 // Submission Date: 2016-03-13
 // UVa Run Time: 0.000s

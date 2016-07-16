@@ -1,5 +1,5 @@
 // Train Swapping
-// UVa IDs: 299
+// UVa ID: 299
 // Verdict: Accepted
 // Submission Date: 2016-05-09
 // UVa Run Time: 0.000s

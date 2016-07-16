@@ -1,5 +1,5 @@
 // Saftbreaker
-// UVa IDs: 296
+// UVa ID: 296
 // Verdict: Accepted
 // Submission Date: 2016-05-13
 // UVa Run Time: 0.020s

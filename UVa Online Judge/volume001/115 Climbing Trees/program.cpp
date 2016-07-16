@@ -1,4 +1,5 @@
-// UVa Problem 115 - Climbing Trees
+// Climbing Trees
+// UVa ID: 115
 // Verdict: Accepted
 // Submission Date: 2011-11-27
 // UVa Run Time: 0.008s

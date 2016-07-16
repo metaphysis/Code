@@ -1,5 +1,5 @@
 // Department
-// UVa IDs: 304
+// UVa ID: 304
 // Verdict: Accepted
 // Submission Date: 2016-07-10
 // UVa Run Time: 0.000s

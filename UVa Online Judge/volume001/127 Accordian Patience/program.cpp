@@ -1,5 +1,5 @@
 // "Accordian" Patience
-// UVa IDs: 127
+// UVa ID: 127
 // Verdict: Accepted
 // Submission Date: 2015-11-28
 // UVa Run Time: 1.159s

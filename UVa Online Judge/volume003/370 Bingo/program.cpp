@@ -1,5 +1,5 @@
 // Bingo
-// UVa IDs: 370
+// UVa ID: 370
 // Verdict: Accepted
 // Submission Date: 2016-07-08
 // UVa Run Time: 0.210s

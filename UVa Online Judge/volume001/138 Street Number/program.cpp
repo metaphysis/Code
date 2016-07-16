@@ -1,5 +1,5 @@
 // Street Number
-// UVa IDs: 138
+// UVa ID: 138
 // Verdict: Accepted
 // Submission Date: 2016-01-19
 // UVa Run Time: 0.349s

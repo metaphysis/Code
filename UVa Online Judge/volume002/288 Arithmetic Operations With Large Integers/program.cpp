@@ -1,5 +1,5 @@
 // Arithmetic Operations With Large Integers
-// UVa IDs: 288
+// UVa ID: 288
 // Verdict: Accepted
 // Submission Date: 2016-05-24
 // UVa Run Time: 0.000s

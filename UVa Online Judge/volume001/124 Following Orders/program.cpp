@@ -1,5 +1,5 @@
 // Following Orders
-// UVa IDs: 124
+// UVa ID: 124
 // Verdict: Accepted
 // Submission Date: 2015-11-27
 // UVa Run Time: 0.000s

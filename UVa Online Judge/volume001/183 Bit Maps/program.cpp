@@ -1,5 +1,5 @@
 // Bit Maps
-// UVa IDs: 183
+// UVa ID: 183
 // Verdict: Accepted
 // Submission Date: 2016-03-12
 // UVa Run Time: 0.000s

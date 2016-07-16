@@ -1,5 +1,5 @@
 // Bumpy Objects
-// UVa IDs: 132
+// UVa ID: 132
 // Verdict: Accepted
 // Submission Date: 2015-12-11
 // UVa Run Time: 0.000s

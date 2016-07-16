@@ -1,5 +1,5 @@
 // Crossword Answers
-// UVa IDs: 232
+// UVa ID: 232
 // Verdict: Accepted
 // Submission Date: 2016-05-11
 // UVa Run Time: 0.000s

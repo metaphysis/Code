@@ -1,5 +1,5 @@
 // Package Pricing
-// UVa IDs: 233
+// UVa ID: 233
 // Verdict: Accepted
 // Submission Date: 2016-06-21
 // UVa Run Time: 0.460s

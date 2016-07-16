@@ -1,5 +1,5 @@
 // MIDI Preprocessing
-// UVa IDs: 226
+// UVa ID: 226
 // Verdict: Accepted
 // Submission Date: 2016-06-02
 // UVa Run Time: 0.050s

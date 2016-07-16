@@ -1,5 +1,5 @@
 // Lotto
-// UVa IDs: 441
+// UVa ID: 441
 // Verdict: Accepted
 // Submission Date: 2016-07-14
 // UVa Run Time: 0.000s

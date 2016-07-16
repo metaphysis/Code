@@ -1,5 +1,5 @@
 // Urban Elevations
-// UVa IDs: 221
+// UVa ID: 221
 // Verdict: Accepted
 // Submission Date: 2016-05-23
 // UVa Run Time: 0.000s

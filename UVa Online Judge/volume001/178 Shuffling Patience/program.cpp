@@ -1,5 +1,5 @@
 // Shuffling Patience
-// UVa IDs: 178
+// UVa ID: 178
 // Verdict: Accepted
 // Submission Date: 2016-02-22
 // UVa Run Time: 0.012s

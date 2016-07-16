@@ -1,5 +1,5 @@
 // Pascal Program Lengths
-// UVa IDs: 189
+// UVa ID: 189
 // Verdict: Accepted
 // Submission Date: 2016-04-05
 // UVa Run Time: 0.000s

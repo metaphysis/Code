@@ -1,5 +1,5 @@
 // Synchronous Design
-// UVa IDs: 192
+// UVa ID: 192
 // Verdict: Accepted
 // Submission Date: 2016-03-27
 // UVa Run Time: 0.000s

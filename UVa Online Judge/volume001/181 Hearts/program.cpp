@@ -1,5 +1,5 @@
 // Hearts
-// UVa IDs: 181
+// UVa ID: 181
 // Verdict: Accepted
 // Submission Date: 2016-03-09
 // UVa Run Time: 0.000s

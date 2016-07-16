@@ -1,5 +1,5 @@
 // Race Tracks
-// UVa IDs: 298
+// UVa ID: 298
 // Verdict: Accepted
 // Submission Date: 2016-05-16
 // UVa Run Time: 0.820s

@@ -1,5 +1,5 @@
 // Roman Roulette
-// UVa IDs: 130
+// UVa ID: 130
 // Verdict: Accepted
 // Submission Date: 2015-12-10
 // UVa Run Time: 0.000s

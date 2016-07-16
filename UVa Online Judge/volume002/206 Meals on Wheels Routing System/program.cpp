@@ -1,5 +1,5 @@
 // Meals on Wheels Routing System
-// UVa IDs: 206
+// UVa ID: 206
 // Verdict: Accpted
 // Submission Date: 2016-04-25
 // UVa Run Time: 0.200s

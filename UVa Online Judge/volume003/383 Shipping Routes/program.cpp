@@ -1,5 +1,5 @@
 // Shippint Routes
-// UVa IDs: 383
+// UVa ID: 383
 // Verdict: Accepted
 // Submission Date: 2016-06-28
 // UVa Run Time: 0.000s

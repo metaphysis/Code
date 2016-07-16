@@ -1,4 +1,5 @@
-// UVa Problem 113 - Power of Cryptography
+// Power of Cryptography
+// UVa ID: 113
 // Verdict: Accepted
 // Submission Date: 2011-11-25
 // UVa Run Time: 0.312s

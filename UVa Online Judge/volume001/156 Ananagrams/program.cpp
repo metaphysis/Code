@@ -1,5 +1,5 @@
 // Ananagrams
-// UVa IDs: 156
+// UVa ID: 156
 // Verdict: Accepted
 // Submission Date: 2016-02-04
 // UVa Run Time: 0.000s

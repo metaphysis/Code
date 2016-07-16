@@ -1,5 +1,5 @@
 // Logic
-// UVa IDs: 284
+// UVa ID: 284
 // Verdict: Accepted
 // Submission Date: 2016-06-06
 // UVa Run Time: 0.000s

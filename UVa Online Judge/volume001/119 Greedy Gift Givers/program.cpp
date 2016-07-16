@@ -1,4 +1,5 @@
-// UVa Problem 119 - Greedy Gift Givers
+// Greedy Gift Givers
+// UVa ID: 119
 // Verdict: Accepted
 // Submission Date: 2011-11-26
 // UVa Run Time: 0.012s

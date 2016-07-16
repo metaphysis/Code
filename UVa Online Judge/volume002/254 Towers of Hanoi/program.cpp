@@ -1,5 +1,5 @@
 // Towers of Hanoi
-// UVa IDs: 254
+// UVa ID: 254
 // Verdict: Accepted
 // Submission Date: 2016-05-13
 // UVa Run Time: 0.020s

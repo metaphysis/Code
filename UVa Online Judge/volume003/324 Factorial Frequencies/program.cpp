@@ -1,5 +1,5 @@
 // Factorial Frequencies
-// UVa IDs: 324
+// UVa ID: 324
 // Verdict: Accepted
 // Submission Date: 2016-06-26
 // UVa Run Time: 0.000s

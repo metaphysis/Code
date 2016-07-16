@@ -1,5 +1,5 @@
 // Hangman Judge
-// UVa IDs: 489
+// UVa ID: 489
 // Verdict: Accepted
 // Submission Date: 2016-07-14
 // UVa Run Time: 0.580s

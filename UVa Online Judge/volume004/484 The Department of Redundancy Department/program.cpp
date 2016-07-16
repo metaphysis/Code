@@ -1,5 +1,5 @@
 // The Department of Redundancy Department
-// UVa IDs: 484
+// UVa ID: 484
 // Verdict: Accepted
 // Submission Date: 2016-06-17
 // UVa Run Time: 0.000s

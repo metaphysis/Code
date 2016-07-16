@@ -1,5 +1,5 @@
 // Bandwidth
-// UVa IDs: 140
+// UVa ID: 140
 // Verdict: Accepted
 // Submission Date: 2016-01-19
 // UVa Run Time: 0.079s

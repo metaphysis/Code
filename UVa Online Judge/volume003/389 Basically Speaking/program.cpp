@@ -1,5 +1,5 @@
 // Basically Speaking
-// UVa IDs: 389
+// UVa ID: 389
 // Verdict: Accepted
 // Submission Date: 2016-06-27
 // UVa Run Time: 0.270s

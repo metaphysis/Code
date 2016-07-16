@@ -1,5 +1,5 @@
 // Count on Cantor
-// UVa IDs: 264
+// UVa ID: 264
 // Verdict: Accepted
 // Submission Date: 2016-05-09
 // UVa Run Time: 0.020s

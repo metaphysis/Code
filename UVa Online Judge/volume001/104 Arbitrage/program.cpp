@@ -1,4 +1,5 @@
-// UVa Problem 104 - Arbitrage
+// Arbitrage
+// UVa ID: 104
 // Verdict: Accepted
 // Submission Date: 2011-12-22
 // UVa Run Time: 0.068s

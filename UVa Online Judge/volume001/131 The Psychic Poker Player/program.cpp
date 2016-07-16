@@ -1,5 +1,5 @@
 // The Psychic Poker Player
-// UVa IDs: 131
+// UVa ID: 131
 // Verdict: Accepted
 // Submission Date: 2015-12-11
 // UVa Run Time: 0.059s

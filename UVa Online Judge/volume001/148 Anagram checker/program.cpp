@@ -1,5 +1,5 @@
 // Anagram checker
-// UVa IDs: 148
+// UVa ID: 148
 // Verdict: Accepted
 // Submission Date: 2016-01-22
 // UVa Run Time: 0.059s

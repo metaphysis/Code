@@ -1,5 +1,5 @@
 // Stamps and Envelope Size
-// UVa IDs: 242
+// UVa ID: 242
 // Verdict: Accepted
 // Submission Date: 2016-05-15
 // UVa Run Time: 0.040s

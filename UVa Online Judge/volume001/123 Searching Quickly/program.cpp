@@ -1,4 +1,5 @@
-// UVa Problem 123 - Searching Quickly 
+// Searching Quickly
+// UVa ID: 123
 // Verdict: Accepted
 // Submission Date: 2012-01-03
 // UVa Run Time: 0.056s

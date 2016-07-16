@@ -1,5 +1,5 @@
 // Peter's Calculator
-// UVa IDs: 198
+// UVa ID: 198
 // Verdict: Accepted
 // Submission Date: 2016-03-17
 // UVa Run Time: 0.000s

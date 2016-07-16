@@ -1,5 +1,5 @@
 // Partial differential equations
-// UVa IDs: 199
+// UVa ID: 199
 // Verdict: Accepted
 // Submission Date: 2016-03-20
 // UVa Run Time: 0.000s

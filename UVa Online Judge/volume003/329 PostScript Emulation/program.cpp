@@ -1,5 +1,5 @@
 // PostScript Emulation
-// UVa IDs: 329
+// UVa ID: 329
 // Verdict: 
 // Submission Date: 
 // UVa Run Time: s

@@ -1,5 +1,5 @@
 // Strategy
-// UVa IDs: 174
+// UVa ID: 174
 // Verdict: Accepted
 // Submission Date: 2016-03-07
 // UVa Run Time: 0.000s

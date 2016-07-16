@@ -1,5 +1,5 @@
 // Long Multiplication
-// UVa IDs: 338
+// UVa ID: 338
 // Verdict: Accepted
 // Submission Date: 2016-07-05
 // UVa Run Time: 0.090s

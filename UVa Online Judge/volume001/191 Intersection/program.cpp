@@ -1,5 +1,5 @@
 // Intersection
-// UVa IDs: 191
+// UVa ID: 191
 // Verdict: Accepted
 // Submission Date: 2016-03-14
 // UVa Run Time: 0.000s

@@ -1,4 +1,5 @@
-// UVa Problem 121 - Pipe Fitters
+// Pipe Fitters
+// UVa ID: 121
 // Verdict: Accepted
 // Submission Date: 2011-12-18
 // UVa Run Time: 0.056s

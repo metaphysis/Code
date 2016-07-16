@@ -1,5 +1,5 @@
 // Making the Grade
-// UVa IDs: 381
+// UVa ID: 381
 // Verdict: Accepted
 // Submission Date: 2016-07-04
 // UVa Run Time: 0.000s

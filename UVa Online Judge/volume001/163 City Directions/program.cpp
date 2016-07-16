@@ -1,5 +1,5 @@
 // City Directions
-// UVa IDs: 163
+// UVa ID: 163
 // Verdict: Accepted
 // Submission Date: 2016-04-10
 // UVa Run Time: 0.000s

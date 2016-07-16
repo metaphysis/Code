@@ -1,5 +1,5 @@
 // Triangle Wave
-// UVa IDs: 488
+// UVa ID: 488
 // Verdict: Accepted
 // Submission Date: 2016-07-12
 // UVa Run Time: 0.020s

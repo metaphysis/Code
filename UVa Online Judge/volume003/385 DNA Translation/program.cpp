@@ -1,5 +1,5 @@
 // DNS Translation
-// UVa IDs: 385
+// UVa ID: 385
 // Verdict: Accepted
 // Submission Date: 2016-07-06
 // UVa Run Time: 0.040s

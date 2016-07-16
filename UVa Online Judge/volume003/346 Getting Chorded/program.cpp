@@ -1,5 +1,5 @@
 // Getting Chorded
-// UVa IDs: 346
+// UVa ID: 346
 // Verdict: Accepted
 // Submission Date: 2016-07-05
 // UVa Run Time: 0.040s

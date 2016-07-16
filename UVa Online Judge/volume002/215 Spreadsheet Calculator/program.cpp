@@ -1,5 +1,5 @@
 // Spreadsheet Calculator
-// UVa IDs: 215
+// UVa ID: 215
 // Verdict: Accepted
 // Submission Date: 2016-04-30
 // UVa Run Time: 0.000s

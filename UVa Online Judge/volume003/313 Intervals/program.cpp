@@ -1,5 +1,5 @@
 // Intervals
-// UVa IDs: 313
+// UVa ID: 313
 // Verdict: Accepted
 // Submission Date: 2016-07-09
 // UVa Run Time: 0.040s

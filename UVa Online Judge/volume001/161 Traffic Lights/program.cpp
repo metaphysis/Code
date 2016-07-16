@@ -1,5 +1,5 @@
 // Traffic Lights
-// UVa IDs: 162
+// UVa ID: 162
 // Verdict: Accepted
 // Submission Date: 2016-02-10
 // UVa Run instant: 0.003s

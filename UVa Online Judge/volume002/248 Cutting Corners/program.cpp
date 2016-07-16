@@ -1,5 +1,5 @@
 // Cutting Corners
-// UVa IDs: 248
+// UVa ID: 248
 // Verdict: 
 // Submission Date: 
 // UVa Run Time: s

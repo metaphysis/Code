@@ -1,5 +1,5 @@
 // String Computer
-// UVa IDs: 164
+// UVa ID: 164
 // Verdict: Accepted
 // Submission Date: 2016-02-12
 // UVa Run Time: 0.019s

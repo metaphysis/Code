@@ -1,5 +1,5 @@
 // Square Pegs And Round Holes
-// UVa IDs: 356
+// UVa ID: 356
 // Verdict: Accepted
 // Submission Date: 2016-06-28
 // UVa Run Time: 0.000s

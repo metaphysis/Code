@@ -1,5 +1,5 @@
 // Borrowers
-// UVa IDs: 230
+// UVa ID: 230
 // Verdict: Accepted
 // Submission Date: 2016-05-14
 // UVa Run Time: 0.000s

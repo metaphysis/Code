@@ -1,5 +1,5 @@
 // Joseph
-// UVa IDs: 305
+// UVa ID: 305
 // Verdict: Accepted
 // Submission Date: 2016-06-26
 // UVa Run Time: 0.040s

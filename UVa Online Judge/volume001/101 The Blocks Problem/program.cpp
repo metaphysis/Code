@@ -1,4 +1,5 @@
-// UVa Problem 101 - The Blocks Problem
+// The Blocks Problem
+// UVa ID: 101
 // Verdict: Accepted
 // Submission Date: 2011-10-16
 // UVa Run Time: 0.020s

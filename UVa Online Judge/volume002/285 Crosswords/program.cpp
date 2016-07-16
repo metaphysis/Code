@@ -1,5 +1,5 @@
 // Crosswords
-// UVa IDs: 285
+// UVa ID: 285
 // Verdict: Accepted
 // Submission Date: 2016-06-07
 // UVa Run Time: 0.020s

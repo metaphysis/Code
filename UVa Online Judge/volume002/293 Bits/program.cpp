@@ -1,5 +1,5 @@
 // Bits
-// UVa IDs: 293
+// UVa ID: 293
 // Verdict: Accepted
 // Submission Date: 2016-06-09
 // UVa Run Time: 0.010s

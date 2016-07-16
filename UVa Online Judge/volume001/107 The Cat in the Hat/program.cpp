@@ -1,4 +1,5 @@
-// UVa Problem 107 - The Cat in the Hat
+// The Cat in the Hat
+// UVa ID: 107
 // Verdict: Accepted
 // Submission Date: 2011-11-23
 // UVa Run Time: 1.132s

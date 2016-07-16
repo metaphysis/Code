@@ -1,5 +1,5 @@
 // Cops and Robbers
-// UVa IDs: 361
+// UVa ID: 361
 // Verdict: Accepted
 // Submission Date: 2016-07-06
 // UVa Run Time: 0.490s

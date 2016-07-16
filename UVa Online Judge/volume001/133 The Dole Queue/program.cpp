@@ -1,5 +1,5 @@
 // The Dole Queue
-// UVa IDs: 133
+// UVa ID: 133
 // Verdict: Accepted
 // Submission Date: 2015-12-13
 // UVa Run Time: 0.000s

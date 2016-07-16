@@ -1,5 +1,5 @@
 // Train Time
-// UVa IDs: 244
+// UVa ID: 244
 // Verdict: Accepted
 // Submission Date: 2016-06-09
 // UVa Run Time: 0.010s

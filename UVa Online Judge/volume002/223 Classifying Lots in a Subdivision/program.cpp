@@ -1,5 +1,5 @@
 // Classifying Lots in a Subdivision
-// UVa IDs: 223
+// UVa ID: 223
 // Verdict: 
 // Submission Date: 
 // UVa Run Time: s

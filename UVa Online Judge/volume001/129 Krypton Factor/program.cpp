@@ -1,5 +1,5 @@
 // Krypton Factor
-// UVa IDs: 129
+// UVa ID: 129
 // Verdict: Accepted
 // Submission Date: 2015-12-01
 // UVa Run Time: 0.000s

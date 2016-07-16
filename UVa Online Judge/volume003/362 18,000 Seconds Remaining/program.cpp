@@ -1,5 +1,5 @@
 // 18,000 Seconds Remaining
-// UVa IDs: 362
+// UVa ID: 362
 // Verdict: Accepted
 // Submission Date: 2016-07-01
 // UVa Run Time: 0.040s

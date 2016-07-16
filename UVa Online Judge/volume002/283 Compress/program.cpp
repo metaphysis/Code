@@ -1,5 +1,5 @@
 // Compress
-// UVa IDs: 283
+// UVa ID: 283
 // Verdict: Accepted
 // Submission Date: 2016-06-03
 // UVa Run Time: 0.250s

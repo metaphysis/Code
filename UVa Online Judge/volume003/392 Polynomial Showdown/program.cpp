@@ -1,5 +1,5 @@
 // Polynomial Showdown
-// UVa IDs: 392
+// UVa ID: 392
 // Verdict: Accepted
 // Submission Date: 2016-06-27
 // UVa Run Time: 0.040s

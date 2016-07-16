@@ -1,5 +1,5 @@
 // Recycling
-// UVa IDs: 154
+// UVa ID: 154
 // Verdict: Accepted
 // Submission Date: 2016-02-03
 // UVa Run Time: 0.000s

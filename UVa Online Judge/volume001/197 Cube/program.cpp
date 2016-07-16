@@ -1,5 +1,5 @@
 // Cube
-// UVa IDs: 197
+// UVa ID: 197
 // Verdict: 
 // Submission Date: 
 // UVa Run Time: s

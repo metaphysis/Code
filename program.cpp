@@ -1,5 +1,5 @@
 // 
-// UVa IDs: 
+// UVa ID: 
 // Verdict: 
 // Submission Date: 
 // UVa Run Time: s
@@ -27,7 +27,7 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-    ios::sync_with_stdio(false);
+    cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
 
 	return 0;
 }

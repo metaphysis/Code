@@ -1,5 +1,5 @@
 // Extraploation Using a Difference Table
-// UVa IDs: 326
+// UVa ID: 326
 // Verdict: Accepted
 // Submission Date: 2016-06-28
 // UVa Run Time: 0.000s

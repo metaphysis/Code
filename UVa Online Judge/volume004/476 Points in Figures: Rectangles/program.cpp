@@ -1,5 +1,5 @@
 // Points in Figures: Rectangles
-// UVa IDs: 476
+// UVa ID: 476
 // Verdict: Accepted
 // Submission Date: 2016-07-14
 // UVa Run Time: 0.010s

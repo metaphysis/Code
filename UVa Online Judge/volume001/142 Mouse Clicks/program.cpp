@@ -1,5 +1,5 @@
 // Mouse Clicks
-// UVa IDs: 142
+// UVa ID: 142
 // Verdict: Accepted
 // Submission Date: 2016-01-21
 // UVa Run Time: 0.012s

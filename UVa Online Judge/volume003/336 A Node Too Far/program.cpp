@@ -1,5 +1,5 @@
 // A Node Too Far
-// UVa IDs: 336
+// UVa ID: 336
 // Verdict: Accepted
 // Submission Date: 2016-06-26
 // UVa Run Time: 0.040s

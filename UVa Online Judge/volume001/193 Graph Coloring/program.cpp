@@ -1,5 +1,5 @@
 // Graph Coloring
-// UVa IDs: 193
+// UVa ID: 193
 // Verdict: Accepted
 // Submission Date: 2016-03-16
 // UVa Run Time: 0.003s

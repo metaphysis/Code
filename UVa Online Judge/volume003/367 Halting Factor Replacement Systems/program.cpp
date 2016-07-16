@@ -1,5 +1,5 @@
 // Halting Factor Replacement Systems
-// UVa IDs: 367
+// UVa ID: 367
 // Verdict: Accepted
 // Submission Date: 2016-07-08
 // UVa Run Time: 0.070s

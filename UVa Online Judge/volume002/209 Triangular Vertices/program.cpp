@@ -1,5 +1,5 @@
 // Triangular Vertices
-// UVa IDs: 209
+// UVa ID: 209
 // Verdict: Accepted
 // Submission Date: 2016-04-27
 // UVa Run Time: 0.010s

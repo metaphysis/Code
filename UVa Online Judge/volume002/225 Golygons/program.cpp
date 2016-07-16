@@ -1,5 +1,5 @@
 // Golygons
-// UVa IDs: 225 
+// UVa ID: 225 
 // Verdict: Accepted
 // Submission Date: 2016-05-24
 // UVa Run Time: 0.390s

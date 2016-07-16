@@ -1,5 +1,5 @@
 // Big Number
-// UVa IDs: 1185
+// UVa ID: 1185
 // Verdict: 
 // Submission Date: 
 // UVa Run Time: s

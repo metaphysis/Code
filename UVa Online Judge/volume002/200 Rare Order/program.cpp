@@ -1,5 +1,5 @@
 // Rare Order
-// UVa IDs: 200
+// UVa ID: 200
 // Verdict: Accepted
 // Submission Date: 2016-03-23
 // UVa Run Time: 0.000s

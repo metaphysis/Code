@@ -1,5 +1,5 @@
 // Nondeterministic Trellis Automata
-// UVa IDs: 251
+// UVa ID: 251
 // Verdict: 
 // Submission Date: 
 // UVa Run Time: s

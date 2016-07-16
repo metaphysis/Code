@@ -1,5 +1,5 @@
 // Pig-Latin
-// UVa IDs: 492
+// UVa ID: 492
 // Verdict: 
 // Submission Date: 
 // UVa Run Time: s

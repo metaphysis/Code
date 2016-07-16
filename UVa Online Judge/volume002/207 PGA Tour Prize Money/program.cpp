@@ -1,5 +1,5 @@
 // PGA Tour Prize Money
-// UVa IDs: 207
+// UVa ID: 207
 // Verdict: Accepted
 // Submission Date: 2016-04-26
 // UVa Run Time: 0.050s

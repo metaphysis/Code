@@ -1,5 +1,5 @@
 // Code Breaking
-// UVa IDs: 179
+// UVa ID: 179
 // Verdict: Accepted
 // Submission Date: 2016-03-27
 // UVa Run Time: 0.026s

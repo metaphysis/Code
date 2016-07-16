@@ -1,5 +1,5 @@
 // Clock Patience
-// UVa IDs: 170
+// UVa ID: 170
 // Verdict: Accepted
 // Submission Date: 2016-02-19
 // UVa Run Time: 0.000s

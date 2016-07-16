@@ -1,4 +1,5 @@
-// UVa Problem 103 - Stacking Boxes
+// Stacking Boxes
+// UVa ID: 103
 // Verdict: Accepted
 // Submission Date: 2011-10-17
 // UVa Run Time: 0.012s

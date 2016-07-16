@@ -1,5 +1,5 @@
 // The House Of Santa Claus
-// UVa IDs: 291
+// UVa ID: 291
 // Verdict: 
 // Submission Date: 
 // UVa Run Time: s

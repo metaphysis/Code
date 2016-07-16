@@ -1,5 +1,5 @@
 // Identifying Legal Pascal Real Constants
-// UVa IDs: 325
+// UVa ID: 325
 // Verdict: Accepted
 // Submission Date: 2016-06-30
 // UVa Run Time: 0.000s

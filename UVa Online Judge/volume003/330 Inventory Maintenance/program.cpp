@@ -1,5 +1,5 @@
 // Inventory Maintenance
-// UVa IDs: 330
+// UVa ID: 330
 // Verdict: Accepted
 // Submission Date: 2016-07-07
 // UVa Run Time: 0.290s

@@ -1,5 +1,5 @@
 // Getting in Line
-// UVa IDs: 216
+// UVa ID: 216
 // Verdict: Accepted
 // Submission Date: 2016-04-30
 // UVa Run Time: 0.000s

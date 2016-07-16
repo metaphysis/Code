@@ -1,5 +1,5 @@
 // Theseus and the Minotaur
-// UVa IDs: 168
+// UVa ID: 168
 // Verdict: Accepted
 // Submission Date: 2016-02-18
 // UVa Run Time: 0.000s

@@ -1,5 +1,5 @@
 // Network Wars
-// UVa IDs: 173
+// UVa ID: 173
 // Verdict: Accepted
 // Submission Date: 2016-02-21
 // UVa Run Time: 0.029s

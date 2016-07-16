@@ -1,5 +1,5 @@
 // Pattern Matching Prelims
-// UVa IDs: 250
+// UVa ID: 250
 // Verdict: Accepted
 // Submission Date: 2016-05-23
 // UVa Run Time: 0.040s

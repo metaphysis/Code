@@ -1,5 +1,5 @@
 // Transferable Voting (II)
-// UVa IDs: 349
+// UVa ID: 349
 // Verdict: Accepted
 // Submission Date: 2016-07-05
 // UVa Run Time: 0.000s

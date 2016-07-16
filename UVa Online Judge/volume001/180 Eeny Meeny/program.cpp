@@ -1,5 +1,5 @@
 // Eeny Meeny
-// UVa IDs: 180
+// UVa ID: 180
 // Verdict: Accepted
 // Submission Date: 2016-02-22
 // UVa Run Time: 0.035s

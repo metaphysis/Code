@@ -1,4 +1,5 @@
-// UVa Problem 117 - The Postal Worker Rings Once
+// The Postal Worker Rings Once
+// UVa ID: 117
 // Verdict: Accepted
 // Submission Date: 2016-04-12
 // UVa Run Time: 0.000s

@@ -1,5 +1,5 @@
 // The Decoder
-// UVa IDs: 458
+// UVa ID: 458
 // Verdict: Accepted
 // Submission Date: 2016-07-12
 // UVa Run Time: 0.010s

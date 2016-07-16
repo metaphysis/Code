@@ -1,5 +1,5 @@
 // Scanner
-// UVa IDs: 229
+// UVa ID: 229
 // Verdict: 
 // Submission Date: 
 // UVa Run Time: s

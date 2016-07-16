@@ -1,5 +1,5 @@
 // Kissin' Cousins
-// UVa IDs: 224
+// UVa ID: 224
 // Verdict: Accepted
 // Submission Date: 2016-06-18
 // UVa Run Time: 0.000s

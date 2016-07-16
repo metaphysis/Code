@@ -1,5 +1,5 @@
 // Typesetting
-// UVa IDs: 235
+// UVa ID: 235
 // Verdict: 
 // Submission Date: 
 // UVa Run Time: s

@@ -1,4 +1,5 @@
-// UVa Problem 118 - Mutant Flatworld Explorers
+// Mutant Flatworld Explorers
+// UVa ID: 118
 // Verdict: Accepted
 // Submission Date: 2011-11-26
 // UVa Run Time: 0.008s

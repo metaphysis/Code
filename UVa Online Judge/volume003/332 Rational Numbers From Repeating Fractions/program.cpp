@@ -1,5 +1,5 @@
 // Rational Numbers From Repeating Fractions
-// UVa IDs: 332
+// UVa ID: 332
 // Verdict: Accepted
 // Submission Date: 2016-06-28
 // UVa Run Time: 0.120s

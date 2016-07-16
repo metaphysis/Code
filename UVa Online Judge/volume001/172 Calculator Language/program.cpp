@@ -1,5 +1,5 @@
 // Calculator Language
-// UVa IDs: 172
+// UVa ID: 172
 // Verdict: Accepted
 // Submission Date: 2016-02-20
 // UVa Run Time: 0.000s

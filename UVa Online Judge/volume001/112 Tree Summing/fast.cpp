@@ -1,4 +1,5 @@
-// UVa Problem 112 - Tree Summing
+// Tree Summing
+// UVa ID: 112
 // Verdict: Accepted
 // Submission Date: 2016-04-04
 // UVa Run Time: 0.042s

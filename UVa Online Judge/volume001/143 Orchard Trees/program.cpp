@@ -1,5 +1,5 @@
 // Orchard Trees
-// UVa IDs: 143
+// UVa ID: 143
 // Verdict: Accepted
 // Submission Date: 2016-01-21
 // UVa Run Time: 0.099s

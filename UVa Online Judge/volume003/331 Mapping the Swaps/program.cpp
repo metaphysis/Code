@@ -1,5 +1,5 @@
 // Mapping the Swaps
-// UVa IDs: 331
+// UVa ID: 331
 // Verdict: Accepted
 // Submission Date: 2016-06-29
 // UVa Run Time: 0.000s

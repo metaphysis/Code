@@ -1,5 +1,5 @@
 // Il Gioco dell'X
-// UVa IDs: 260
+// UVa ID: 260
 // Verdict: Accepted
 // Submission Date: 2016-05-10
 // UVa Run Time: 0.200s

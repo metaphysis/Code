@@ -1,4 +1,5 @@
-// UVa Problem 109 - SCUD Busters
+// SCUD Busters
+// UVa ID: 109
 // Verdict: Accepted
 // Submission Date: 2011-11-24
 // UVa Run Time: 0.008s

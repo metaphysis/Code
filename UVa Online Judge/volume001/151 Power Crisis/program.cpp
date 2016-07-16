@@ -1,5 +1,5 @@
 // Power Crisis
-// UVa IDs: 151
+// UVa ID: 151
 // Verdict: Accepted
 // Submission Date: 2016-02-02
 // UVa Run Time: 0.000s

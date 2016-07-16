@@ -1,5 +1,5 @@
 // Calling Circles
-// UVa IDs: 247
+// UVa ID: 247
 // Verdict: Accepted
 // Submission Date: 2016-05-10
 // UVa Run Time: 0.000s

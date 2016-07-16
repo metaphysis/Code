@@ -1,5 +1,5 @@
 // Pi
-// UVa IDs: 412
+// UVa ID: 412
 // Verdict: Accepted
 // Submission Date: 2016-07-14
 // UVa Run Time: 0.060s

@@ -1,5 +1,5 @@
 // Moth Eradication
-// UVa IDs: 218
+// UVa ID: 218
 // Verdict: Accepted
 // Submission Date: 2016-04-30
 // UVa Run Time: 0.010s

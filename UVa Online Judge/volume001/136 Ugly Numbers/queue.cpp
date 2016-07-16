@@ -1,5 +1,5 @@
 // Ugly Numbers
-// UVa IDs: 136
+// UVa ID: 136
 // Verdict: Accepted
 // Submission Date: 2016-01-08
 // UVa Run Time: 0.000s

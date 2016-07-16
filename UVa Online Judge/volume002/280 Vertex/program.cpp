@@ -1,5 +1,5 @@
 // Vertex
-// UVa IDs: 280
+// UVa ID: 280
 // Verdict: Accepted
 // Submission Date: 2016-05-10
 // UVa Run Time: 0.210s

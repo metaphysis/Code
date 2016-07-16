@@ -1,5 +1,5 @@
 // What's The Frequency, Kenneth?
-// UVa IDs: 499
+// UVa ID: 499
 // Verdict: Accepted
 // Submission Date: 2016-07-13
 // UVa Run Time: 0.000s

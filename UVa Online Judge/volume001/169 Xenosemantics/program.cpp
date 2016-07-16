@@ -1,5 +1,5 @@
 // Xenosemantics
-// UVa IDs: 169
+// UVa ID: 169
 // Verdict: Accepted
 // Submission Date: 2016-02-19
 // UVa Run Time: 0.006s

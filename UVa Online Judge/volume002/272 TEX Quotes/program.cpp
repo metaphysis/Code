@@ -1,5 +1,5 @@
 // TEX Quotes
-// UVa IDs: 272
+// UVa ID: 272
 // Verdict: Accepted
 // Submission Date: 2016-05-08
 // UVa Run Time: 0.000s

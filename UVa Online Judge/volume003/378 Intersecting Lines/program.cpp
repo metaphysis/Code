@@ -1,5 +1,5 @@
 // Intersecting Lines
-// UVa IDs: 378
+// UVa ID: 378
 // Verdict: 
 // Submission Date: 
 // UVa Run Time: s

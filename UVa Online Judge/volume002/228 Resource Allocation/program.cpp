@@ -1,5 +1,5 @@
 // Resource Allocation
-// UVa IDs: 228
+// UVa ID: 228
 // Verdict: Accepted
 // Submission Date: 2016-06-18
 // UVa Run Time: 0.000s

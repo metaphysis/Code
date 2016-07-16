@@ -1,5 +1,5 @@
 // Egyptian Multiplication
-// UVa IDs: 276
+// UVa ID: 276
 // Verdict: Accepted
 // Submission Date: 2016-05-16
 // UVa Run Time: 0.000s

@@ -1,5 +1,5 @@
 // String Distance and Transform Process
-// UVa IDs: 526
+// UVa ID: 526
 // Verdict: Accepted
 // Submission Date: 2016-02-13
 // UVa Run Time: 0.009s

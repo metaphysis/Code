@@ -1,5 +1,5 @@
 // The Sultan's Successors
-// UVa IDs: 167
+// UVa ID: 167
 // Verdict: Accepted
 // Submission Date: 2016-02-18
 // UVa Run Time: 0.000s

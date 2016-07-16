@@ -1,4 +1,5 @@
-// UVa Problem 108 - Maximum Sum
+// Maximum Sum
+// UVa ID: 108
 // Verdict: Accepted
 // Submission Date: 2011-11-23
 // UVa Run Time: 0.112s

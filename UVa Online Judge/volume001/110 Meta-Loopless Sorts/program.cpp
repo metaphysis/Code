@@ -1,4 +1,5 @@
-// UVa Problem 110 - Meta-Loopless Sorts
+// Meta-Loopless Sorts
+// UVa ID: 110
 // Verdict: Accepted
 // Submission Date: 2011-11-25
 // UVa Run Time: 0.196s

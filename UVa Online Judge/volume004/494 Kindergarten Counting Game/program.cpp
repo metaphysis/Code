@@ -1,5 +1,5 @@
 // Kindergarten Counting Game
-// UVa IDs: 494
+// UVa ID: 494
 // Verdict: Accepted
 // Submission Date: 2016-07-12
 // UVa Run Time: 0.000s

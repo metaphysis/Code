@@ -1,5 +1,5 @@
-// The 3n+1 problem （3n+1 问题）
-// PC/UVa IDs: 110101/100, Popularity: A, Success rate: low Level: 1
+// The 3n+1 problem
+// UVa ID: 100
 // Verdict: Accepted
 // Submission Date: 2011-05-22
 // UVa Run Time: 0.032s

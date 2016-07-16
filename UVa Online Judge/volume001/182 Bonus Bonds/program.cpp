@@ -1,5 +1,5 @@
 // Bonus Bonds
-// UVa IDs: 182
+// UVa ID: 182
 // Verdict: Accepted
 // Submission Date: 2016-03-11
 // UVa Run Time: 0.000s

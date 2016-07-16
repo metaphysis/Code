@@ -1,5 +1,5 @@
 // Perfection
-// UVa IDs: 382
+// UVa ID: 382
 // Verdict: Accepted
 // Submission Date: 2016-06-25
 // UVa Run Time: 0.000s

@@ -1,5 +1,5 @@
 // Marvelous Mazes
-// UVa IDs: 445
+// UVa ID: 445
 // Verdict: Accepted
 // Submission Date: 2016-07-13
 // UVa Run Time: 0.000s

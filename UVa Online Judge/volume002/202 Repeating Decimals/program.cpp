@@ -1,5 +1,5 @@
 // Repeating Decimals
-// UVa IDs: 202
+// UVa ID: 202
 // Verdict: Accepted
 // Submission Date: 2016-03-23
 // UVa Run Time: 0.000s

@@ -1,5 +1,5 @@
 // Double Trouble
-// UVa IDs: 268
+// UVa ID: 268
 // Verdict: Accepted
 // Submission Date: 2016-05-22
 // UVa Run Time: 0.000s

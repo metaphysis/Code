@@ -1,5 +1,5 @@
 // Running Lights Visibility Calculator
-// UVa IDs: 203
+// UVa ID: 203
 // Verdict: Accepted
 // Submission Date: 2016-04-20
 // UVa Run Time: 0.040s

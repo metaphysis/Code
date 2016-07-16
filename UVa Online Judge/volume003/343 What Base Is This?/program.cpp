@@ -1,5 +1,5 @@
 // What Base Is This?
-// UVa IDs: 343
+// UVa ID: 343
 // Verdict: Accepted
 // Submission Date: 2016-06-27
 // UVa Run Time: 0.010s

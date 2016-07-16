@@ -1,5 +1,5 @@
 // The Doors
-// UVa IDs: 393
+// UVa ID: 393
 // Verdict: Accepted
 // Submission Date: 2016-07-04
 // UVa Run Time: 0.000s

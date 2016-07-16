@@ -1,5 +1,5 @@
 // Evaluating Simple C Expressions
-// UVa IDs: 327
+// UVa ID: 327
 // Verdict: Accepted
 // Submission Date: 2016-07-01
 // UVa Run Time: 0.210s

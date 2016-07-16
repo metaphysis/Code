@@ -1,5 +1,5 @@
 // Letter Sequence Analysis
-// UVa IDs: 390
+// UVa ID: 390
 // Verdict: Accepted
 // Submission Date: 2016-07-07
 // UVa Run Time: 0.000s

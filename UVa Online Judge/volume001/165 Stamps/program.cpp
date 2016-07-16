@@ -1,5 +1,5 @@
 // Stamps
-// UVa IDs: 165
+// UVa ID: 165
 // Verdict: Accepted
 // Submission Date: 2016-02-18
 // UVa Run Time: 0.000s

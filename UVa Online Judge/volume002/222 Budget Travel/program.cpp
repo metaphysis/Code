@@ -1,5 +1,5 @@
 // Budget Travel
-// UVa IDs: 222
+// UVa ID: 222
 // Verdict: Accepted
 // Submission Date: 2016-05-14
 // UVa Run Time: 0.000s

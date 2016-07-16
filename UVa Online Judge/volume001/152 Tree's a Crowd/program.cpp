@@ -1,5 +1,5 @@
 // Tree's a Crowd
-// UVa IDs: 152
+// UVa ID: 152
 // Verdict: Accepted
 // Submission Date: 2016-02-02
 // UVa Run Time: 0.046s

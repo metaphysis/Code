@@ -1,5 +1,5 @@
 // Knight Moves
-// UVa IDs: 439
+// UVa ID: 439
 // Verdict: Accepted
 // Submission Date: 2016-07-13
 // UVa Run Time: 0.010s

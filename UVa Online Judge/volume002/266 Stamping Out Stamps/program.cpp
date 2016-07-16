@@ -1,5 +1,5 @@
 // Stamping Out Stamps
-// UVa IDs: 266
+// UVa ID: 266
 // Verdict: Accepted
 // Submission Date: 2016-06-09
 // UVa Run Time: 0.140s

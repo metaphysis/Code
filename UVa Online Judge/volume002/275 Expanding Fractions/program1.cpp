@@ -1,5 +1,5 @@
 // Expanding Fractions
-// UVa IDs: 275
+// UVa ID: 275
 // Verdict: Accepted
 // Submission Date: 2016-05-11
 // UVa Run Time: 0.000s

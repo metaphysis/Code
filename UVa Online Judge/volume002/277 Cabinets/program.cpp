@@ -1,5 +1,5 @@
 // Cabinets
-// UVa IDs: 277
+// UVa ID: 277
 // Verdict: Accepted
 // Submission Date: 2016-05-26
 // UVa Run Time: 0.020s

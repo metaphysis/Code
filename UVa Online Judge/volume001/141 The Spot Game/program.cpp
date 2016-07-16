@@ -1,5 +1,5 @@
 // The Spot Game
-// UVa IDs: 141
+// UVa ID: 141
 // Verdict: Accepted
 // Submission Date: 2016-01-20
 // UVa Run Time: 0.003s

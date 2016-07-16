@@ -1,5 +1,5 @@
 // Jill's Bike
-// UVa IDs: 238
+// UVa ID: 238
 // Verdict: Accepted
 // Submission Date: 2016-06-02
 // UVa Run Time: 0.200s

@@ -1,5 +1,5 @@
 // Anagram
-// UVa IDs: 195
+// UVa ID: 195
 // Verdict: Accepted
 // Submission Date: 2016-03-15
 // UVa Run Time: 0.202s

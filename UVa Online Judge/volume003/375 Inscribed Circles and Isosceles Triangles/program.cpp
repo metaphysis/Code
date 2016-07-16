@@ -1,5 +1,5 @@
 // Inscribed Circles and Isosceles Triangles
-// UVa IDs: 375
+// UVa ID: 375
 // Verdict: Accepted
 // Submission Date: 2016-07-03
 // UVa Run Time: 0.040s

@@ -1,5 +1,5 @@
 // Processing MX Records
-// UVa IDs: 335
+// UVa ID: 335
 // Verdict: Accepted
 // Submission Date: 2016-07-07
 // UVa Run Time: 0.170s

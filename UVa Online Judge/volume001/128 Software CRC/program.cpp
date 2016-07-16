@@ -1,5 +1,5 @@
 // Software CRC
-// UVa IDs: 128
+// UVa ID: 128
 // Verdict: Accepted
 // Submission Date: 2015-12-01
 // UVa Run Time: 0.352s

@@ -1,5 +1,5 @@
 // Use of Hospital Facilities
-// UVa IDs: 212
+// UVa ID: 212
 // Verdict: Accepted
 // Submission Date: 2016-04-28
 // UVa Run Time: 0.000s

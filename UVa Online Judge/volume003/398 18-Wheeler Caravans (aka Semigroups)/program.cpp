@@ -1,5 +1,5 @@
 // 18-Wheeler Caravans (aka Semigroups)
-// UVa IDs: 398
+// UVa ID: 398
 // Verdict: Accepted
 // Submission Date: 2016-07-08
 // UVa Run Time: 0.000s

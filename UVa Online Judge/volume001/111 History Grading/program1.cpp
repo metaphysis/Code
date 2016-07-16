@@ -1,4 +1,5 @@
-// UVa Problem 111 - History Grading
+// History Grading
+// UVa ID: 111
 // Verdict: Accepted
 // Submission Date: 2016-02-29
 // UVa Run Time: 0.003s

@@ -1,5 +1,5 @@
 // Concurrent Simulator
-// UVa IDs: 210
+// UVa ID: 210
 // Verdict: Accepted
 // Submission Date: 2016-01-18
 // UVa Run Time: 0.395s

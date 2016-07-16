@@ -1,5 +1,5 @@
 // Network
-// UVa IDs: 315
+// UVa ID: 315
 // Verdict: Accepted
 // Submission Date: 2016-06-26
 // UVa Run Time: 0.190s

@@ -1,5 +1,5 @@
 // Cat and Mouse
-// UVa IDs: 274
+// UVa ID: 274
 // Verdict: Accepted
 // Submission Date: 2016-05-15
 // UVa Run Time: 0.000s

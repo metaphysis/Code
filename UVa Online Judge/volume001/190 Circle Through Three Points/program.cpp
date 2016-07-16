@@ -1,5 +1,5 @@
 // Circle Through Three Points
-// UVa IDs: 190
+// UVa ID: 190
 // Verdict: Accepted
 // Submission Date: 2016-03-14
 // UVa Run Time: 0.000s

@@ -1,5 +1,5 @@
 // No Rectangles
-// UVa IDs: 135
+// UVa ID: 135
 // Verdict: Accepted
 // Submission Date: 2016-04-05
 // UVa Run Time: 0.003s

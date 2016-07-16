@@ -1,5 +1,5 @@
 // Palinwords
-// UVa IDs: 257
+// UVa ID: 257
 // Verdict: Accepted
 // Submission Date: 2016-05-16
 // UVa Run Time: 0.020s

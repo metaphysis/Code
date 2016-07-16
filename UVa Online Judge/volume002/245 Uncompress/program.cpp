@@ -1,5 +1,5 @@
 // Uncompress
-// UVa IDs: 245
+// UVa ID: 245
 // Verdict: Accepted
 // Submission Date: 2016-05-12
 // UVa Run Time: 0.060s

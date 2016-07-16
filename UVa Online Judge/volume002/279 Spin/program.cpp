@@ -1,5 +1,5 @@
 // Spin
-// UVa IDs: 279
+// UVa ID: 279
 // Verdict: Accepted
 // Submission Date: 2016-06-11
 // UVa Run Time: 0.000s

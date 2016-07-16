@@ -1,4 +1,5 @@
-// UVa Problem 122 - Trees on the level
+// Trees on the level
+// UVa ID: 122
 // Verdict: Accepted
 // Submission Date: 2011-12-25
 // UVa Run Time: 0.008s

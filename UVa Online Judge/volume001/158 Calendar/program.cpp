@@ -1,5 +1,5 @@
 // Calendar
-// UVa IDs: 158
+// UVa ID: 158
 // Verdict: Accepted
 // Submission Date: 2016-02-09
 // UVa Run Time: 0.000s

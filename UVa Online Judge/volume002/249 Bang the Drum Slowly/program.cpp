@@ -1,5 +1,5 @@
 // Bang the Drum Slowly
-// UVa IDs: 249
+// UVa ID: 249
 // Verdict: Accepted
 // Submission Date: 2016-06-13
 // UVa Run Time: 0.010s

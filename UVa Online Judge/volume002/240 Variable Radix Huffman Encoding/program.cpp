@@ -1,5 +1,5 @@
 // Variable Radix Huffman Encoding
-// UVa IDs: 240
+// UVa ID: 240
 // Verdict: Accepted
 // Submission Date: 2016-05-25
 // UVa Run Time: 0.040s

@@ -1,5 +1,5 @@
 // The Windows Property
-// UVa IDs: 261
+// UVa ID: 261
 // Verdict: Accepted
 // Submission Date: 2016-05-26
 // UVa Run Time: 0.010s

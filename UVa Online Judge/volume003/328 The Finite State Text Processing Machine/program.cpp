@@ -1,5 +1,5 @@
 // The Finite State Text Processing Machine
-// UVa IDs: 328
+// UVa ID: 328
 // Verdict: Accepted
 // Submission Date: 2016-07-07
 // UVa Run Time: 0.000s

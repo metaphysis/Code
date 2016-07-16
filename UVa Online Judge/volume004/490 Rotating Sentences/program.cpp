@@ -1,5 +1,5 @@
 // Rotating Sentences
-// UVa IDs: 490
+// UVa ID: 490
 // Verdict: Accepted
 // Submission Date: 2016-07-13
 // UVa Run Time: 0.000s

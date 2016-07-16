@@ -1,5 +1,5 @@
 // Word Crosses
-// UVa IDs: 159
+// UVa ID: 159
 // Verdict: Accepted
 // Submission Date: 2016-02-09
 // UVa Run Time: 0.000s

@@ -1,5 +1,5 @@
 // Dead Or Not - That Is The Question
-// UVa IDs: 286
+// UVa ID: 286
 // Verdict: Accetped
 // Submission Date: 2016-06-04
 // UVa Run Time: 0.120s

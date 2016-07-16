@@ -1,5 +1,5 @@
 // L-system
-// UVa IDs: 310
+// UVa ID: 310
 // Verdict: 
 // Submission Date: 
 // UVa Run Time: s

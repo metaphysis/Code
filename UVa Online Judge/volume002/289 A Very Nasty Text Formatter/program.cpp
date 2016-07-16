@@ -1,5 +1,5 @@
 // A Very Nasty Text Formatter
-// UVa IDs: 289
+// UVa ID: 289
 // Verdict: Accepted
 // Submission Date: 2016-06-07
 // UVa Run Time: 0.750s

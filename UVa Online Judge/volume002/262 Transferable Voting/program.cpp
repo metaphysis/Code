@@ -1,5 +1,5 @@
 // Transferable Voting 
-// UVa IDs: 262
+// UVa ID: 262
 // Verdict: Accepted
 // Submission Date: 2016-06-08
 // UVa Run Time: 0.070s

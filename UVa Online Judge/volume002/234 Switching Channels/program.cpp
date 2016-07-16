@@ -1,5 +1,5 @@
 // Switching Channels
-// UVa IDs: 234
+// UVa ID: 234
 // Verdict: Accepted
 // Submission Date: 2016-06-01
 // UVa Run Time: 0.030s

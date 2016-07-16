@@ -1,5 +1,5 @@
 // Trip Routing
-// UVa IDs: 186
+// UVa ID: 186
 // Verdict: Accepted
 // Submission Date: 2016-03-13
 // UVa Run Time: 0.000s

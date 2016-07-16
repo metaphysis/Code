@@ -1,5 +1,5 @@
 // Pipe
-// UVa IDs: 303
+// UVa ID: 303
 // Verdict: Accepted
 // Submission Date: 2016-07-09
 // UVa Run Time: 0.010s

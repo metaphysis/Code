@@ -1,5 +1,5 @@
 // Gondwanaland Telecom
-// UVa IDs: 145
+// UVa ID: 145
 // Verdict: Accepted
 // Submission Date: 2016-01-22
 // UVa Run Time: 0.000s

@@ -1,5 +1,5 @@
 // Top Dog
-// UVa IDs: 396
+// UVa ID: 396
 // Verdict: Accepted
 // Submission Date: 2016-07-08
 // UVa Run Time: 0.000s

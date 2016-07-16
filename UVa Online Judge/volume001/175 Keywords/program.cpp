@@ -1,5 +1,5 @@
 // Keywords
-// UVa IDs: 175 
+// UVa ID: 175 
 // Verdict: Accepted
 // Submission Date: 2016-02-21
 // UVa Run Time: 0.000s

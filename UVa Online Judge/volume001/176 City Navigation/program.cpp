@@ -1,5 +1,5 @@
 // City Navigation
-// UVa IDs: 176
+// UVa ID: 176
 // Verdict: Accepted
 // Submission Date: 2016-02-26
 // UVa Run Time: 0.338s

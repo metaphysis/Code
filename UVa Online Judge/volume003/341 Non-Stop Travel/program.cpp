@@ -1,5 +1,5 @@
 // Non-Stop Travel
-// UVa IDs: 341
+// UVa ID: 341
 // Verdict: Accepted
 // Submission Date: 2016-06-28
 // UVa Run Time: 0.000s

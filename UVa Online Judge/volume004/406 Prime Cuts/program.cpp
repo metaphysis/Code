@@ -1,5 +1,5 @@
 // Prime Cuts
-// UVa IDs: 406
+// UVa ID: 406
 // Verdict: Accepted
 // Submission Date: 2016-07-13
 // UVa Run Time: 0.030s

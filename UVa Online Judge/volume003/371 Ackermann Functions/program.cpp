@@ -1,5 +1,5 @@
 // Ackermann Functions
-// UVa IDs: 371
+// UVa ID: 371
 // Verdict: Accepted
 // Submission Date: 2016-06-25
 // UVa Run Time: 0.000s

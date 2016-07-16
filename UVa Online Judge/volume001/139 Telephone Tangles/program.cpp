@@ -1,5 +1,5 @@
 // Telephone Tangles
-// UVa IDs: 139
+// UVa ID: 139
 // Verdict: Accepted
 // Submission Date: 2016-01-19
 // UVa Run Time: 0.085s

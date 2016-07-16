@@ -1,5 +1,5 @@
 // Mirror Maze
-// UVa IDs: 258
+// UVa ID: 258
 // Verdict: Accepted
 // Submission Date: 2016-06-01
 // UVa Run Time: 0.090s

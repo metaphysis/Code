@@ -1,5 +1,5 @@
 // Radio Direction Finder
-// UVa IDs: 217
+// UVa ID: 217
 // Verdict: Accepted
 // Submission Date: 2016-06-16
 // UVa Run Time: 0.070s

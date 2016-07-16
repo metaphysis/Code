@@ -1,5 +1,5 @@
 // Stacks of Flapjacks
-// UVa IDs: 120
+// UVa ID: 120
 // Verdict: Accepted
 // Submission Date: 2016-04-12
 // UVa Run Time: 0.000s

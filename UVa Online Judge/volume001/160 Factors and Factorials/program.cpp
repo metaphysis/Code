@@ -1,5 +1,5 @@
 // Factors and Factorials
-// UVa IDs: 160
+// UVa ID: 160
 // Verdict: Accepted
 // Submission Date: 2016-02-09
 // UVa Run Time: 0.000s

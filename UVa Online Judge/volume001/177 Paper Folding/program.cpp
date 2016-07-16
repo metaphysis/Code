@@ -1,5 +1,5 @@
 // Paper Folding
-// UVa IDs: 177
+// UVa ID: 177
 // Verdict: Accepted
 // Submission Date: 2016-03-11
 // UVa Run Time: 0.000s

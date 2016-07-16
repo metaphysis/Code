@@ -1,5 +1,5 @@
 // Let Me Count The Ways
-// UVa IDs: 357
+// UVa ID: 357
 // Verdict: Accepted
 // Submission Date: 2016-06-25
 // UVa Run Time: 0.010s

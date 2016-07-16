@@ -1,5 +1,5 @@
 // Laser Lines
-// UVa IDs: 184
+// UVa ID: 184
 // Verdict: Accepted
 // Submission Date: 2016-03-13
 // UVa Run Time: 1.176s

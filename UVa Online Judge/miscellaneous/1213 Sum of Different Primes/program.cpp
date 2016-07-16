@@ -1,5 +1,5 @@
 // Sum of Different Primes
-// UVa IDs: 1213
+// UVa ID: 1213
 // Verdict: Accepted
 // Submission Date: 2016-03-02
 // UVa Run Time: 0.000s

@@ -1,5 +1,5 @@
 // Sticks
-// UVa IDs: 307
+// UVa ID: 307
 // Verdict: 
 // Submission Date: 
 // UVa Run Time: s
@@ -16,7 +16,7 @@ int n, totalLength, minLength, maxDepth;
 vector<int> sticks;
 vector<bool> visited;
 
-bool dfs(int depth, int current, int length)
+bool backtrack(int depth, int current, int length)
 {
     // how to pruning?
     if (depth == maxDepth) return true;
@@ -30,7 +30,7 @@ bool dfs(int depth, int current, int length)
             if (current + sticks[i] <= length)
             {
                 visited[i] = true;
-                if (dfs(depth + 1, (current + sticks[i]) % length, length)) return true;
+                if (backtrack(depth + 1, (current + sticks[i]) % length, length)) return true;
                 visited[i] = false;
             }
         }
@@ -78,7 +78,7 @@ int main(int argc, char *argv[])
                     maxDepth--;
                 }
                     
-            if (dfs(0, 0, length))
+            if (backtrack(0, 0, length))
             {
                 cout << length << endl;
                 break;

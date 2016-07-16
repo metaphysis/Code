@@ -1,5 +1,5 @@
 // Master-Mind Hints
-// UVa IDs: 340
+// UVa ID: 340
 // Verdict: Accepted
 // Submission Date: 2016-06-27
 // UVa Run Time: 0.000s

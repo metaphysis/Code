@@ -1,5 +1,5 @@
 // ID Codes
-// UVa IDs: 146
+// UVa ID: 146
 // Verdict: Accepted
 // Submission Date: 2016-01-22
 // UVa Run Time: 0.000s
