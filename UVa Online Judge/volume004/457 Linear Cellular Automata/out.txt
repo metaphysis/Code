@@ -1,0 +1,101 @@
+                   .                    
+                  ...                   
+                 .x x.                  
+                .  .  .                 
+               .........                
+              .x       x.               
+             .  x     x  .              
+            ...xxx   xxx...             
+           .x .WW.x x.WW. x.            
+          .   .xxW . Wxx.   .           
+         ... . WxW...WxW . ...          
+        .x xx..WWWW WWWW..xx x.         
+       .  ..W.Wx  WWW  xW.W..  .        
+      ....xWWxWWx W W xWWxWWx....       
+     .x  .WWWWWWWW W WWWWWWWW.  x.      
+    .  x..x      WW WW      x..x  .     
+   ...x .. x     WWWWW     x .. x...    
+  .x .  xx xx    W   W    xx xx  . x.   
+ .   ..x.....x           x.....x..   .  
+... .x...   . x         x .   ...x. ... 
+x xx .. x. .. xx       xx .. .x .. xx x.
+x... xx   xxx ..x     x.. xxx   xx ...  
+ . x ..x x.W. x. x   x .x .W.x x.. x x. 
+.. x x. . WW.    xx xx    .WW . .x x.  .
+xx x.  x..Wx..  x.....x  ..xW..x  .  ...
+...  .x .WWW.x.x .   . x.x.WWW. x....x x
+x x..   .x xW.W  .. ..  W.Wx x.  .  . .x
+x. .x. .  .WWx. .xxxxx. .xWW.  ......x  
+  x . x....xWW x WWWWW x WWx...x    . x 
+ xx .  .  .WWWWxWW   WWxWWWW. . x  .. xx
+x.. .......x  WWWW   WWWW  x.x. xx.xx ..
+ .xxx     . x W  W   W  W x W.  .WWW. xx
+. WW.x   .. xW           WxW.....x x. ..
+..WxW x .xx WW           WWWW   . .  xxx
+xWWWWWx  W.WWW           W  W  ..x..x.W.
+WW   WWx .xx W                .x.....WW.
+WW   WWW  W.W                . ..   Wxx.
+WW   W W  .x.               ..xxx.  WxW 
+WW    W  . . .             .x.WWW . WWW 
+WW      ..x.x..           . .Wx W...W W 
+WW     .x..W..x.         ..x.WWW.W W.W  
+WW    . ..WWW.. .       .x..Wx xx.W.x.  
+WW   ..xxWx xWxx..     . ..WWW..WWWW. . 
+WW  .x.WxxW.WxxW.x.   ..xxWx xWWx  x.x..
+WW . .WWxxWxWxxWW. . .x.WxxW.WWWWxx W..x
+WW..x.xWxxxWxxxWx.x.x .WWxxWxx  Wx.W.W. 
+WxW..WWxxWxxxWxxWW.W  .xWxxxx.x WWWWxW..
+WWWWWxWxxxxWxxxxWxx. . WxxWWWW WW  WWWWx
+W   WWxxWWxxxWWxxxW x..WxxW  WWWW  W  WW
+    WWxxWWxWxWWxWxWW .WWxxW  W  W     WW
+
+                   .                    
+                  ...                   
+                 .x x.                  
+                .  .  .                 
+               .........                
+              .x       x.               
+             .  x     x  .              
+            ...xxx   xxx...             
+           .x .WW.x x.WW. x.            
+          .   .xxW . Wxx.   .           
+         ... . WxW...WxW . ...          
+        .x xx..WWWW WWWW..xx x.         
+       .  ..W.Wx  WWW  xW.W..  .        
+      ....xWWxWWx W W xWWxWWx....       
+     .x  .WWWWWWWW W WWWWWWWW.  x.      
+    .  x..x      WW WW      x..x  .     
+   ...x .. x     WWWWW     x .. x...    
+  .x .  xx xx    W   W    xx xx  . x.   
+ .   ..x.....x           x.....x..   .  
+... .x...   . x         x .   ...x. ... 
+x xx .. x. .. xx       xx .. .x .. xx x.
+x... xx   xxx ..x     x.. xxx   xx ...  
+ . x ..x x.W. x. x   x .x .W.x x.. x x. 
+.. x x. . WW.    xx xx    .WW . .x x.  .
+xx x.  x..Wx..  x.....x  ..xW..x  .  ...
+...  .x .WWW.x.x .   . x.x.WWW. x....x x
+x x..   .x xW.W  .. ..  W.Wx x.  .  . .x
+x. .x. .  .WWx. .xxxxx. .xWW.  ......x  
+  x . x....xWW x WWWWW x WWx...x    . x 
+ xx .  .  .WWWWxWW   WWxWWWW. . x  .. xx
+x.. .......x  WWWW   WWWW  x.x. xx.xx ..
+ .xxx     . x W  W   W  W x W.  .WWW. xx
+. WW.x   .. xW           WxW.....x x. ..
+..WxW x .xx WW           WWWW   . .  xxx
+xWWWWWx  W.WWW           W  W  ..x..x.W.
+WW   WWx .xx W                .x.....WW.
+WW   WWW  W.W                . ..   Wxx.
+WW   W W  .x.               ..xxx.  WxW 
+WW    W  . . .             .x.WWW . WWW 
+WW      ..x.x..           . .Wx W...W W 
+WW     .x..W..x.         ..x.WWW.W W.W  
+WW    . ..WWW.. .       .x..Wx xx.W.x.  
+WW   ..xxWx xWxx..     . ..WWW..WWWW. . 
+WW  .x.WxxW.WxxW.x.   ..xxWx xWWx  x.x..
+WW . .WWxxWxWxxWW. . .x.WxxW.WWWWxx W..x
+WW..x.xWxxxWxxxWx.x.x .WWxxWxx  Wx.W.W. 
+WxW..WWxxWxxxWxxWW.W  .xWxxxx.x WWWWxW..
+WWWWWxWxxxxWxxxxWxx. . WxxWWWW WW  WWWWx
+W   WWxxWWxxxWWxxxW x..WxxW  WWWW  W  WW
+    WWxxWWxWxWWxWxWW .WWxxW  W  W     WW

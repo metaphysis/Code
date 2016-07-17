@@ -2,7 +2,7 @@
 // UVa ID: 481
 // Verdict: Accepted
 // Submission Date: 2016-07-16
-// UVa Run Time: 0.350s
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
@@ -25,40 +25,45 @@
 
 using namespace std;
 
-vector<int> numbers, m;
-vector<vector<int>> sequences;
+vector<int> numbers, m, parent, indexer;
 
 int lis()
 {
+    parent.resize(numbers.size());
+    
     m.push_back(numbers.front());
-    vector<int> sequence;
-    sequence.push_back(numbers.front());
-    sequences.push_back(sequence);
+    indexer.push_back(0);
+    parent[0] = -1;
     
     for (int i = 1; i < numbers.size(); i++)
     { 
         if (numbers[i] > m.back())
         {
             m.push_back(numbers[i]);
-            vector<int> next(sequences.back());
-            next.push_back(numbers[i]);
-            sequences.push_back(next);
+            parent[i] = indexer.back();
+            indexer.push_back(i);
         }
         else
         {
             int n = lower_bound(m.begin(), m.end(), numbers[i]) - m.begin();
             m[n] = numbers[i];
             if (n == 0)
-                sequences[n].back() = numbers[i];
+                parent[i] = -1;
             else
-            {
-                sequences[n].assign(sequences[n- 1].begin(), sequences[n - 1].end());
-                sequences[n].push_back(numbers[i]);
-            }
+                parent[i] = indexer[n - 1];
+            
+            indexer[n] = i;
         }
     }
     
     return m.size();
+}
+
+void findPath(int i)
+{
+    if (parent[i] != -1)
+        findPath(parent[i]);
+    cout << numbers[i] << '\n';
 }
 
 int main(int argc, char *argv[])
@@ -70,8 +75,7 @@ int main(int argc, char *argv[])
     
     cout << lis() << '\n';
     cout << '-' << '\n';
-    for (auto n : sequences.back())
-        cout << n << '\n';
+    findPath(indexer.back());
     
 	return 0;
 }
