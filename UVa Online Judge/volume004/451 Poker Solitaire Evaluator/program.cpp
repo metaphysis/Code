@@ -1,29 +1,38 @@
-// The Psychic Poker Player
-// UVa ID: 131
+// Poker Solitaire Evaluator
+// UVa ID: 451
 // Verdict: Accepted
-// Submission Date: 2015-12-11
-// UVa Run Time: 0.000s
+// Submission Date: 2016-07-19
+// UVa Run Time: 0.180s
 //
-// 版权所有（C）2015，邱秋。metaphysis # yeah dot net
+// 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
-#include <iostream>
-#include <sstream>
-#include <cstring>
 #include <algorithm>
-#include <vector>
+#include <bitset>
+#include <cassert>
+#include <cmath>
+#include <cstring>
+#include <iomanip>
+#include <iostream>
+#include <limits>
+#include <list>
 #include <map>
+#include <numeric>
+#include <queue>
 #include <set>
+#include <sstream>
+#include <stack>
+#include <vector>
 
 using namespace std;
 
-// 注意 AC 2C 3C 4C 5C 和 TC JC QC KC AC 都是同花顺。
+// 注意 AC 2C 3C 4C 5C 和 TC JC QC KC AC 和 JC QC KC AC 2C 都是同花顺。
 bool isStraightFlush(vector<string> cards)
 {
     for (int i = 0; i < cards.size() - 1; i++)
         if (cards[i + 1][1] != cards[i][1])
             return false;
     
-    string sample = "A23456789TJQKA";
+    string sample = "23456789XJQKA2345";
     set<char> card;
     for (int i = 0; i < cards.size(); i++)
         card.insert(cards[i][0]);
@@ -110,80 +119,60 @@ bool isTwoPair(vector<string> cards)
     return false;
 }
 
-int findBestHand(vector<string> cards)
+int main(int argc, char *argv[])
 {
+    cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
+
     bool(*isSomeHand[8]) (vector<string>) = {
         isStraightFlush, isFourKind, isFullHouse,
         isFlush, isStraight, isThreeKind, isTwoPair, isOnePair
     };
-
-    for (int i = 0; i <= 7; i++)
-        if (isSomeHand[i] (cards))
-            return i;
-    return 8;
-}
-
-int minCardIndex;
-bool fetched[5];
-vector<string> cardInHand, cardInDeck;
-
-void backtrack(int start, int target)
-{
-    if (start == target)
-    {
-        vector<string> cards;
-        for (int i = 0; i < 5; i++)
-            if (fetched[i])
-                cards.push_back(cardInHand[i]);
-        for (int j = 0; j < (5 - target); j++)
-            cards.push_back(cardInDeck[j]);
-        minCardIndex = min(minCardIndex, findBestHand(cards));
-    }
-    else
-    {
-        for (int i = 0; i < 5; i++)
-            if (fetched[i] == false)
-            {
-                fetched[i] = true;
-                backtrack(start + 1, target);
-                fetched[i] = false;
-            }
-    }
-}
-
-int main(int argc, char *argv[])
-{
-    string line;
-    string result[9] = {
-        "straight-flush", "four-of-a-kind", "full-house", "flush", "straight",
-        "three-of-a-kind", "two-pairs", "one-pair", "highest-card"
-    };
-
-    while (getline(cin, line), line.length() > 0)
-    {
-        cardInHand.clear();
-        cardInDeck.clear();
         
+    int cases;
+    cin >> cases;
+    
+    for (int c = 1; c <= cases; c++)
+    {
+        if (c > 1) cout << '\n';
+        
+        vector<vector<string>> cards(11);
         string card;
-        istringstream iss(line);
-        while (iss >> card && cardInHand.size() < 5)
-            cardInHand.push_back(card);
+        for (int i = 1; i <= 5; i++)
+            for (int j = 1; j <= 5; j++)
+            {
+                cin >> card;
+                cards[i].push_back(card);
+            }
         
-        cardInDeck.push_back(card);
-        while (iss >> card)
-            cardInDeck.push_back(card);
-            
-        minCardIndex = 8;
-        for (int i = 0; i <= 5; i++)
+        for (int i = 6, j = 0; i <= 10; i++, j++)
+            for (int k = 1; k <= 5; k++)
+                cards[i].push_back(cards[k][j]);
+        
+        vector<int> hands(9);
+        fill(hands.begin(), hands.end(), 0);
+        
+        for (int i = 1; i <= 10; i++)
         {
-            memset(fetched, 0, sizeof(fetched));
-            backtrack(0, i);
+            bool handFound = false;
+            for (int j = 0; j < 8; j++)
+                if (isSomeHand[j](cards[i]))
+                {
+                    handFound = true;
+                    hands[8 - j]++;
+                    break;
+                }
+                
+            if (handFound == false)
+                hands[0]++;
         }
         
-        line = "Hand: " + line.insert(15, "Deck: ") + " Best hand: ";
-        line = line + result[minCardIndex];
-        cout << line << endl;
+        for (int j = 0; j < 9; j++)
+        {
+            if (j > 0) cout << ", ";
+            cout << hands[j];
+        }
+        cout << '\n';
     }
-
-    return 0;
+    
+	return 0;
 }

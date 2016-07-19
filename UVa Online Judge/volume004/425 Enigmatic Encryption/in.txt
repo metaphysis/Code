@@ -1,0 +1,11 @@
+h8E6dqt5lkL9o
+The parallel algorithms were executed on the Connection Machine model
+CM-2 --- a single-instruction multiple data (SIMD) parallel computer
+which, in its largest configuration, contains 65,536 bit-serial
+processors and 2048 Weitek floating-point units (FPU's).
+The bit-serial processors are clustered together into groups of 16
+within a single integrated circuit, and these IC's are connected
+together in a 12-dimensional hypercube. Two IC's, or 32 processors,
+share a single Weitek FPU. Note that a fully configured CM-2 contains
+2048 times as much floating point hardware as a conventional computer
+containing a single Weitek FPU (e.g., a SUN-4).
