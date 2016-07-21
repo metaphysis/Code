@@ -1,8 +1,8 @@
 // Poker Solitaire Evaluator
 // UVa ID: 451
 // Verdict: Accepted
-// Submission Date: 2016-07-19
-// UVa Run Time: 0.180s
+// Submission Date: 2016-07-20
+// UVa Run Time: 0.070s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
@@ -25,150 +25,98 @@
 
 using namespace std;
 
-// 注意 AC 2C 3C 4C 5C 和 TC JC QC KC AC 和 JC QC KC AC 2C 都是同花顺。
-bool isStraightFlush(vector<string> cards)
-{
-    for (int i = 0; i < cards.size() - 1; i++)
-        if (cards[i + 1][1] != cards[i][1])
-            return false;
+const int NOTHING = 1, ONE_PAIR = 2, TWO_PAIR = 3, THREE_KIND = 4, STRAIGHT = 5,
+    FLUSH = 6, FULL_HOUSE = 7, FOUR_KIND = 8, STRAIGHT_FLUSH = 9;
     
-    string sample = "23456789XJQKA2345";
-    set<char> card;
-    for (int i = 0; i < cards.size(); i++)
-        card.insert(cards[i][0]);
-    for (int i = 0; i < sample.length() - 4; i++)
+int findHand(vector<string>& cards)
+{
+    map<char, int> ranks;
+    set<char> suits;
+    vector<int> sequence;
+
+    for (int i = 0; i < 5; i++)
     {
-        bool flag = true;
-        for (int j = i; j < i + 5; j++)
-            if (card.find(sample[j]) == card.end())
+        ranks[cards[i].front()]++;
+        suits.insert(cards[i].back());
+    }
+    for (auto pair : ranks) sequence.push_back(pair.second);
+   
+    // straight flush
+    // AC 2C 3C 4C 5C, TC JC QC KC AC, JC QC KC AC 2C are straight flush
+    bool is_straight = false;
+    string straight = "23456789XJQKA2345";
+    for (int i = 0; i <= straight.length() - 5; i++)
+    {
+        is_straight = true;
+        for (int j = i; j <= i + 4; j++)
+            if (ranks.find(straight[j]) == ranks.end())
             {
-                flag = false;
+                is_straight = false;
                 break;
             }
-        if (flag) return true;
+        if (is_straight) break;
     }
-    return false;
-}
+    bool is_flush = (suits.size() == 1);
+    if (is_straight && is_flush) return STRAIGHT_FLUSH;
 
-bool isSameKind(vector<string> cards, int number, int index)
-{
-    for (int i = 0; i < cards.size(); i++)
-    {
-        int counter = 0;
-        for (int j = 0; j < cards.size(); j++)
-            if (cards[j][index] == cards[i][index])
-                counter++;
-        if (counter >= number)
-            return true;
-    }
-    return false;
-}
+    // four of a kind
+    bool four_kind = *max_element(sequence.begin(), sequence.end()) >= 4;
+    if (four_kind) return FOUR_KIND;
 
-bool isFourKind(vector<string> cards)
-{
-    return isSameKind(cards, 4, 0);
-}
+    // full house
+    bool is_full_house = (ranks.size() == 2 && accumulate(sequence.begin(), sequence.end(), int(0)) == 5);
+    if (is_full_house) return FULL_HOUSE;
 
-bool isOnePair(vector<string> cards)
-{
-    for (int i = 0; i < cards.size(); i++)
-        for (int j = i + 1; j < cards.size(); j++)
-            if (cards[i][0] == cards[j][0])
-                return true;
-    return false;
-}
+    // flush
+    if (is_flush) return FLUSH;
 
-bool isFullHouse(vector<string> cards)
-{
-    map<char, int> card;
-    for (int i = 0; i < cards.size(); i++)
-        card[cards[i][0]]++;
-    int sum = 0;
-    for (auto counter : card)
-        sum += counter.second;
-    return card.size() == 2 && sum == 5;
-}
+    // straight
+    if (is_straight) return STRAIGHT;
 
-bool isFlush(vector<string> cards)
-{
-    return isSameKind(cards, 5, 1);
-}
+    // three of a kind
+    bool three_kind = *max_element(sequence.begin(), sequence.end()) >= 3;
+    if (three_kind) return THREE_KIND;
 
-bool isStraight(vector<string> cards)
-{
-    for (int i = 0; i < cards.size(); i++)
-        cards[i][1] = 'C';
-    return isStraightFlush(cards);
-}
+    // two pair
+    bool is_two_pair = ranks.size() == 3;
+    if (is_two_pair) return TWO_PAIR;
 
-bool isThreeKind(vector<string> cards)
-{
-    return isSameKind(cards, 3, 0);
-}
+    // one pair
+    bool is_one_pair = *max_element(sequence.begin(), sequence.end()) >= 2;
+    if (is_one_pair) return ONE_PAIR;
 
-bool isTwoPair(vector<string> cards)
-{
-    for (int i = 0; i < cards.size(); i++)
-        for (int j = i + 1; j < cards.size(); j++)
-            if (cards[i][0] == cards[j][0])
-            {
-                cards.erase(cards.begin() + j);
-                cards.erase(cards.begin() + i);
-                return isOnePair(cards);
-            }
-    return false;
+    // nothing
+    return NOTHING;
 }
 
 int main(int argc, char *argv[])
 {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
-
-    bool(*isSomeHand[8]) (vector<string>) = {
-        isStraightFlush, isFourKind, isFullHouse,
-        isFlush, isStraight, isThreeKind, isTwoPair, isOnePair
-    };
         
     int cases;
-    cin >> cases;
+    vector<int> hands(10);
+    vector<vector<string>> cards(10, vector<string>(5));
     
+    cin >> cases;
     for (int c = 1; c <= cases; c++)
     {
         if (c > 1) cout << '\n';
+
+        for (int i = 0; i < 5; i++)
+            for (int j = 0; j < 5; j++)
+                cin >> cards[i][j];
         
-        vector<vector<string>> cards(11);
-        string card;
-        for (int i = 1; i <= 5; i++)
-            for (int j = 1; j <= 5; j++)
-            {
-                cin >> card;
-                cards[i].push_back(card);
-            }
+        for (int i = 5, j = 0; i < 10; i++, j++)
+            for (int k = 0; k < 5; k++)
+                cards[i][k] = cards[k][j];
         
-        for (int i = 6, j = 0; i <= 10; i++, j++)
-            for (int k = 1; k <= 5; k++)
-                cards[i].push_back(cards[k][j]);
-        
-        vector<int> hands(9);
         fill(hands.begin(), hands.end(), 0);
+        for (int i = 0; i < 10; i++)
+            hands[findHand(cards[i])]++;
         
-        for (int i = 1; i <= 10; i++)
+        for (int j = 1; j <= 9; j++)
         {
-            bool handFound = false;
-            for (int j = 0; j < 8; j++)
-                if (isSomeHand[j](cards[i]))
-                {
-                    handFound = true;
-                    hands[8 - j]++;
-                    break;
-                }
-                
-            if (handFound == false)
-                hands[0]++;
-        }
-        
-        for (int j = 0; j < 9; j++)
-        {
-            if (j > 0) cout << ", ";
+            if (j > 1) cout << ", ";
             cout << hands[j];
         }
         cout << '\n';
