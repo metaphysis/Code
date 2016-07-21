@@ -23,7 +23,7 @@ using namespace std;
 #define FOUR_KIND	7
 #define STRAIGHT_FLUSH	8
 
-#define TIE		0
+#define TIE		    0
 #define BLACK_WIN	1
 #define WHITE_WIN	2
 
@@ -91,122 +91,121 @@ long long unsigned getCardType(int *card, int type, string hands[])
 
     switch (type)
     {
-    case HIGH_CARD:
-        return getScore(card, HIGH_CARD);
+        case HIGH_CARD:
+            return getScore(card, HIGH_CARD);
 
-    case PAIR:
-        for (int i = 0; i < CARDS; i++)
-            if (card[i] == card[i + 1])
-            {
-                if (i > 0)
+        case PAIR:
+            for (int i = 0; i < CARDS; i++)
+                if (card[i] == card[i + 1])
                 {
-                    swap(card[i], card[0]);
-                    swap(card[i + 1], card[1]);
-                }
-
-                return getScore(card, PAIR);
-            }
-        break;
-
-    case TWO_PAIR:
-        for (int i = 0; i < CARDS - 2; i++)
-            if (card[i] == card[i + 1])
-            {
-                for (int j = i + 2; j < CARDS; j++)
-                    if (card[j] == card[j + 1])
+                    if (i > 0)
                     {
-                        if (i > 0)
-                        {
-                            swap(card[i], card[0]);
-                            swap(card[i + 1], card[1]);
-                        }
-                        if (j > 2)
-                        {
-                            swap(card[j], card[2]);
-                            swap(card[j + 1], card[3]);
-                        }
-
-                        return getScore(card, TWO_PAIR);
+                        swap(card[i], card[0]);
+                        swap(card[i + 1], card[1]);
                     }
-            }
-        break;
 
-    case THREE_KIND:
-        for (int i = 0; i < CARDS - 2; i++)
-            if (card[i] == card[i + 2])
-            {
-                if (i > 0)
+                    return getScore(card, PAIR);
+                }
+            break;
+
+        case TWO_PAIR:
+            for (int i = 0; i < CARDS - 2; i++)
+                if (card[i] == card[i + 1])
                 {
-                    swap(card[i], card[0]);
-                    swap(card[i + 1], card[1]);
-                    swap(card[i + 2], card[2]);
+                    for (int j = i + 2; j < CARDS; j++)
+                        if (card[j] == card[j + 1])
+                        {
+                            if (i > 0)
+                            {
+                                swap(card[i], card[0]);
+                                swap(card[i + 1], card[1]);
+                            }
+                            if (j > 2)
+                            {
+                                swap(card[j], card[2]);
+                                swap(card[j + 1], card[3]);
+                            }
+
+                            return getScore(card, TWO_PAIR);
+                        }
+                }
+            break;
+
+        case THREE_KIND:
+            for (int i = 0; i < CARDS - 2; i++)
+                if (card[i] == card[i + 2])
+                {
+                    if (i > 0)
+                    {
+                        swap(card[i], card[0]);
+                        swap(card[i + 1], card[1]);
+                        swap(card[i + 2], card[2]);
+                    }
+
+                    return getScore(card, THREE_KIND);
+                }
+            break;
+
+        case STRAIGHT:
+            flag = true;
+            for (int i = 0; i < CARDS - 1; i++)
+                if (card[i] != (card[i + 1] + 1))
+                {
+                    flag = false;
+                    break;
                 }
 
-                return getScore(card, THREE_KIND);
-            }
-        break;
+            if (flag)
+                return getScore(card, STRAIGHT);
+            break;
 
-    case STRAIGHT:
-        flag = true;
-        for (int i = 0; i < CARDS - 1; i++)
-            if (card[i] != (card[i + 1] + 1))
-            {
-                flag = false;
-                break;
-            }
-
-        if (flag)
-            return getScore(card, STRAIGHT);
-        break;
-
-    case FLUSH:
-        flag = true;
-        suit = hands[0][1];
-        for (int i = 1; i < CARDS; i++)
-            if (suit != hands[i][1])
-            {
-                flag = false;
-                break;
-            }
-        if (flag)
-            return getScore(card, FLUSH);
-        break;
-
-    case FULL_HOUSE:
-        if (card[0] == card[2] && card[3] == card[4])
-            return getScore(card, FULL_HOUSE);
-
-        if (card[0] == card[1] && card[2] == card[4])
-        {
-            swap(card[2], card[0]);
-            swap(card[3], card[1]);
-            swap(card[4], card[2]);
-
-            return getScore(card, FULL_HOUSE);
-        }
-
-        break;
-
-    case FOUR_KIND:
-        for (int i = 0; i < CARDS - 3; i++)
-            if (card[i] == card[i + 3])
-            {
-                if (i > 0)
+        case FLUSH:
+            flag = true;
+            suit = hands[0][1];
+            for (int i = 1; i < CARDS; i++)
+                if (suit != hands[i][1])
                 {
-                    swap(card[i], card[0]);
-                    swap(card[i + 1], card[1]);
-                    swap(card[i + 2], card[2]);
-                    swap(card[i + 3], card[3]);
+                    flag = false;
+                    break;
                 }
-                return getScore(card, FOUR_KIND);
-            }
-        break;
+            if (flag)
+                return getScore(card, FLUSH);
+            break;
 
-    case STRAIGHT_FLUSH:
-        if (getCardType(card, STRAIGHT, hands) &&
-            getCardType(card, FLUSH, hands))
-            return getScore(card, STRAIGHT_FLUSH);
-        break;
+        case FULL_HOUSE:
+            if (card[0] == card[2] && card[3] == card[4])
+                return getScore(card, FULL_HOUSE);
+
+            if (card[0] == card[1] && card[2] == card[4])
+            {
+                swap(card[2], card[0]);
+                swap(card[3], card[1]);
+                swap(card[4], card[2]);
+
+                return getScore(card, FULL_HOUSE);
+            }
+            break;
+
+        case FOUR_KIND:
+            for (int i = 0; i < CARDS - 3; i++)
+                if (card[i] == card[i + 3])
+                {
+                    if (i > 0)
+                    {
+                        swap(card[i], card[0]);
+                        swap(card[i + 1], card[1]);
+                        swap(card[i + 2], card[2]);
+                        swap(card[i + 3], card[3]);
+                    }
+                    return getScore(card, FOUR_KIND);
+                }
+            break;
+
+        case STRAIGHT_FLUSH:
+            if (getCardType(card, STRAIGHT, hands) &&
+                getCardType(card, FLUSH, hands))
+                return getScore(card, STRAIGHT_FLUSH);
+            break;
     }
 
     return 0;
@@ -240,26 +239,24 @@ long long unsigned getValue(string hands[])
             cout << "<Debug End>" << endl;
             cout << endl;
 #endif
-
             return value;
         }
     }
 }
 
 // 比较两手牌的大小，直接比较其值的大小即可。
-int compareCard(string aHands[], string bHands[])
+int compareCard(string black[], string white[])
 {
     long long unsigned aValue, bValue;
-    aValue = getValue(aHands);
-    bValue = getValue(bHands);
+    aValue = getValue(black);
+    bValue = getValue(white);
 
-    return (aValue == bValue) ? (TIE) : ((aValue > bValue) ?
-        (BLACK_WIN) : (WHITE_WIN));
+    return (aValue == bValue) ? (TIE) : ((aValue > bValue) ? (BLACK_WIN) : (WHITE_WIN));
 }
 
 int main(int ac, char *av[])
 {
-    string aHands[5], bHands[5], line;
+    string black[5], white[5], line;
     string info[3] = { "Tie.", "Black wins.", "White wins." };
 
     while (getline(cin, line))
@@ -267,11 +264,11 @@ int main(int ac, char *av[])
         istringstream iss(line);
 
         for (int i = 0; i < 5; i++)
-            iss >> aHands[i];
+            iss >> black[i];
         for (int i = 0; i < 5; i++)
-            iss >> bHands[i];
+            iss >> white[i];
 
-        cout << info[compareCard(aHands, bHands)] << endl;
+        cout << info[compareCard(black, white)] << endl;
     }
 
     return 0;

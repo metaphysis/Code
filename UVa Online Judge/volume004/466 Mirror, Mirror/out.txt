@@ -1,0 +1,13 @@
+Pattern 1 was reflected vertically and rotated 90 degrees.
+Pattern 2 was improperly transformed.
+Pattern 3 was rotated 90 degrees.
+Pattern 4 was reflected vertically and rotated 270 degrees.
+Pattern 5 was preserved.
+Pattern 6 was preserved.
+Pattern 7 was improperly transformed.
+Pattern 8 was improperly transformed.
+Pattern 9 was rotated 180 degrees.
+Pattern 10 was rotated 90 degrees.
+Pattern 11 was rotated 90 degrees.
+Pattern 12 was rotated 180 degrees.
+Pattern 13 was reflected vertically and rotated 90 degrees.

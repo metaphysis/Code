@@ -10,117 +10,74 @@
 #include <sstream>
 #include <cstring>
 #include <algorithm>
+#include <numeric>
 #include <vector>
 #include <map>
 #include <set>
 
 using namespace std;
 
-// 注意 AC 2C 3C 4C 5C 和 TC JC QC KC AC 都是同花顺。
-bool isStraightFlush(vector<string> cards)
-{
-    for (int i = 0; i < cards.size() - 1; i++)
-        if (cards[i + 1][1] != cards[i][1])
-            return false;
+const int NOTHING = 8, ONE_PAIR = 7, TWO_PAIR = 6, THREE_KIND = 5, STRAIGHT = 4,
+    FLUSH = 3, FULL_HOUSE = 2, FOUR_KIND = 1, STRAIGHT_FLUSH = 0;
     
-    string sample = "A23456789TJQKA";
-    set<char> card;
-    for (int i = 0; i < cards.size(); i++)
-        card.insert(cards[i][0]);
-    for (int i = 0; i < sample.length() - 4; i++)
+int findBestHand(vector<string>& cards)
+{
+    map<char, int> ranks;
+    set<char> suits;
+    vector<int> sequence;
+
+    for (int i = 0; i < 5; i++)
     {
-        bool flag = true;
-        for (int j = i; j < i + 5; j++)
-            if (card.find(sample[j]) == card.end())
+        ranks[cards[i].front()]++;
+        suits.insert(cards[i].back());
+    }
+    for (auto pair : ranks) sequence.push_back(pair.second);
+   
+    // straight flush, AC 2C 3C 4C 5C, TC JC QC KC AC are straight flush
+    bool is_straight = false;
+    string straight = "A23456789TJQKA";
+    for (int i = 0; i <= straight.length() - 5; i++)
+    {
+        is_straight = true;
+        for (int j = i; j <= i + 4; j++)
+            if (ranks.find(straight[j]) == ranks.end())
             {
-                flag = false;
+                is_straight = false;
                 break;
             }
-        if (flag) return true;
+        if (is_straight) break;
     }
-    return false;
-}
+    bool is_flush = (suits.size() == 1);
+    if (is_straight && is_flush) return STRAIGHT_FLUSH;
 
-bool isSameKind(vector<string> cards, int number, int index)
-{
-    for (int i = 0; i < cards.size(); i++)
-    {
-        int counter = 0;
-        for (int j = 0; j < cards.size(); j++)
-            if (cards[j][index] == cards[i][index])
-                counter++;
-        if (counter >= number)
-            return true;
-    }
-    return false;
-}
+    // four of a kind
+    bool four_kind = *max_element(sequence.begin(), sequence.end()) >= 4;
+    if (four_kind) return FOUR_KIND;
 
-bool isFourKind(vector<string> cards)
-{
-    return isSameKind(cards, 4, 0);
-}
+    // full house
+    bool is_full_house = (ranks.size() == 2 && accumulate(sequence.begin(), sequence.end(), int(0)) == 5);
+    if (is_full_house) return FULL_HOUSE;
 
-bool isOnePair(vector<string> cards)
-{
-    for (int i = 0; i < cards.size(); i++)
-        for (int j = i + 1; j < cards.size(); j++)
-            if (cards[i][0] == cards[j][0])
-                return true;
-    return false;
-}
+    // flush
+    if (is_flush) return FLUSH;
 
-bool isFullHouse(vector<string> cards)
-{
-    map<char, int> card;
-    for (int i = 0; i < cards.size(); i++)
-        card[cards[i][0]]++;
-    int sum = 0;
-    for (auto counter : card)
-        sum += counter.second;
-    return card.size() == 2 && sum == 5;
-}
+    // straight
+    if (is_straight) return STRAIGHT;
 
-bool isFlush(vector<string> cards)
-{
-    return isSameKind(cards, 5, 1);
-}
+    // three of a kind
+    bool three_kind = *max_element(sequence.begin(), sequence.end()) >= 3;
+    if (three_kind) return THREE_KIND;
 
-bool isStraight(vector<string> cards)
-{
-    for (int i = 0; i < cards.size(); i++)
-        cards[i][1] = 'C';
-    return isStraightFlush(cards);
-}
+    // two pair
+    bool is_two_pair = ranks.size() == 3;
+    if (is_two_pair) return TWO_PAIR;
 
-bool isThreeKind(vector<string> cards)
-{
-    return isSameKind(cards, 3, 0);
-}
+    // one pair
+    bool is_one_pair = *max_element(sequence.begin(), sequence.end()) >= 2;
+    if (is_one_pair) return ONE_PAIR;
 
-bool isTwoPair(vector<string> cards)
-{
-    for (int i = 0; i < cards.size(); i++)
-        for (int j = i + 1; j < cards.size(); j++)
-            if (cards[i][0] == cards[j][0])
-            {
-                cards.erase(cards.begin() + j);
-                cards.erase(cards.begin() + i);
-                return isOnePair(cards);
-            }
-    return false;
-}
-
-int findBestHand(vector<string> cards)
-{
-    bool(*isSomeHand[8]) (vector<string>) = {
-        isStraightFlush, isFourKind, isFullHouse,
-        isFlush, isStraight, isThreeKind, isTwoPair, isOnePair
-    };
-
-    for (int i = 0; i <= 7; i++)
-        if (isSomeHand[i] (cards))
-            return i;
-    return 8;
+    // nothing
+    return NOTHING;
 }
 
 int minCardIndex;

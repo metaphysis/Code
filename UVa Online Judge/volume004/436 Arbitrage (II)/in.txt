@@ -1,0 +1,4079 @@
+18
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+34
+A 4.9 D
+A 5.2 I
+A 9.2 R
+B 1.0 G
+B 6.2 P
+D 9.3 H
+D 3.1 L
+E 1.9 B
+F 0.5 L
+G 3.1 E
+G 3.7 I
+G 0.8 L
+H 2.9 B
+H 3.4 J
+H 8.9 K
+H 7.5 Q
+I 1.4 A
+I 2.7 G
+I 2.0 J
+I 7.0 N
+J 9.0 D
+J 1.0 N
+L 6.1 A
+L 6.9 B
+L 9.2 G
+L 5.2 J
+M 8.5 L
+N 1.1 G
+O 9.5 D
+P 7.6 B
+P 1.0 E
+R 9.4 B
+R 3.5 M
+R 1.6 Q
+
+6
+A
+B
+C
+D
+E
+F
+5
+B 8.0 F
+C 2.0 D
+C 5.4 E
+F 3.2 B
+F 5.7 E
+
+20
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+43
+A 6.4 B
+B 4.6 C
+B 5.2 E
+B 3.5 F
+B 1.3 G
+B 6.2 O
+B 2.7 Q
+C 3.0 P
+D 3.3 I
+D 4.1 J
+E 0.9 C
+E 5.1 K
+E 4.3 L
+F 4.6 S
+G 6.5 B
+G 9.7 C
+G 6.0 K
+G 5.3 L
+G 9.9 P
+H 4.2 A
+H 2.4 F
+H 8.2 I
+H 4.7 L
+H 8.3 T
+I 7.3 N
+I 4.0 S
+J 6.7 C
+J 0.9 O
+K 0.3 D
+K 2.9 E
+L 3.4 R
+M 8.8 L
+M 4.8 P
+O 2.3 F
+O 8.6 R
+P 6.5 C
+P 9.5 F
+P 3.1 I
+Q 1.0 P
+R 9.7 Q
+S 4.9 G
+S 5.9 N
+T 0.4 P
+
+24
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+X
+42
+A 7.3 C
+A 3.7 U
+A 3.0 W
+C 1.5 G
+C 4.9 T
+C 8.7 U
+C 9.2 W
+D 1.0 H
+D 6.2 W
+E 9.0 Q
+E 3.9 X
+H 2.8 O
+J 9.1 C
+J 8.3 K
+J 9.3 W
+K 2.3 B
+K 0.4 S
+K 2.8 X
+L 2.3 P
+M 5.6 D
+M 8.6 W
+N 9.2 V
+O 9.8 A
+O 9.2 B
+P 4.8 C
+Q 8.3 N
+Q 7.7 T
+Q 3.9 W
+R 6.3 K
+S 1.5 J
+S 2.3 O
+T 0.2 I
+T 2.6 O
+U 8.3 C
+U 1.1 O
+U 4.9 V
+V 7.3 J
+W 2.8 S
+W 8.5 V
+X 5.6 D
+X 1.0 I
+X 4.9 T
+
+13
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+19
+A 4.1 B
+A 9.1 G
+A 6.8 I
+A 4.3 M
+B 0.1 E
+B 7.4 J
+C 9.1 F
+C 1.8 M
+D 2.3 E
+F 7.7 H
+G 6.1 I
+G 6.9 K
+H 3.3 A
+I 5.1 G
+I 2.6 M
+K 1.1 A
+K 1.5 E
+L 2.0 C
+L 5.9 J
+
+11
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+15
+A 7.9 F
+C 1.1 F
+C 5.0 I
+C 5.7 K
+D 1.8 A
+E 0.7 B
+E 9.7 C
+G 4.2 B
+G 0.6 E
+H 7.1 A
+H 8.5 G
+I 1.4 J
+J 9.9 I
+J 6.9 K
+K 8.3 A
+
+26
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+X
+Y
+Z
+58
+A 3.9 D
+A 4.6 L
+A 0.9 X
+A 4.9 Y
+A 5.8 Z
+B 1.4 F
+B 4.8 J
+C 7.8 T
+C 4.7 W
+C 8.8 Y
+D 9.5 B
+D 10.0 F
+D 2.0 M
+D 9.6 U
+D 0.5 V
+F 5.8 U
+F 1.7 Z
+G 2.5 B
+G 1.7 N
+H 0.5 V
+H 4.0 W
+I 4.5 A
+J 8.0 H
+J 9.7 N
+K 2.3 J
+K 7.2 Z
+L 2.0 I
+L 6.9 P
+L 9.4 Q
+M 7.9 B
+M 3.7 L
+M 7.8 O
+M 5.7 P
+N 9.2 D
+N 3.5 Q
+O 2.7 D
+P 6.4 J
+P 2.8 S
+P 2.4 U
+S 2.8 J
+S 4.9 W
+T 0.8 D
+T 8.5 K
+U 0.7 S
+U 2.3 Y
+V 2.7 A
+V 8.9 M
+V 1.0 R
+W 7.1 V
+X 10.0 A
+X 9.9 S
+X 2.2 Z
+Y 5.7 G
+Y 5.8 J
+Y 5.6 L
+Y 5.1 Z
+Z 7.8 N
+Z 7.6 S
+
+7
+A
+B
+C
+D
+E
+F
+G
+4
+A 6.1 C
+B 3.5 C
+C 9.9 F
+G 1.4 E
+
+26
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+X
+Y
+Z
+74
+A 5.2 C
+A 7.5 H
+A 0.6 Q
+A 1.4 W
+B 7.9 G
+B 0.3 K
+B 2.7 L
+B 9.1 N
+B 6.1 P
+C 1.7 M
+C 9.5 O
+D 4.9 M
+D 9.3 P
+E 5.6 G
+E 2.8 W
+F 2.8 C
+F 0.3 G
+F 1.2 S
+F 6.3 Z
+G 3.1 I
+G 2.3 Q
+H 4.1 J
+I 3.0 O
+I 1.1 P
+I 0.2 U
+I 5.0 V
+J 7.3 D
+J 3.1 P
+J 7.5 Q
+J 0.1 S
+J 10.0 V
+K 2.8 D
+K 1.5 F
+K 6.6 I
+K 6.4 J
+K 0.4 L
+K 5.6 P
+K 8.2 S
+L 6.5 C
+L 0.3 O
+L 7.9 X
+M 9.2 Y
+N 2.6 F
+O 6.8 E
+O 5.2 Y
+O 9.0 Z
+P 2.5 J
+P 9.3 K
+P 4.0 U
+P 2.9 X
+Q 6.9 E
+Q 6.1 I
+Q 2.6 R
+Q 1.3 X
+Q 5.8 Z
+R 6.8 P
+R 9.3 U
+S 7.9 D
+S 0.5 K
+T 0.6 R
+U 5.0 F
+U 3.6 G
+U 9.3 V
+U 10.0 W
+V 8.6 O
+W 6.8 A
+W 10.0 P
+W 4.5 V
+X 10.0 E
+Y 2.2 E
+Y 9.7 F
+Y 9.0 J
+Z 6.1 B
+Z 5.0 O
+
+23
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+60
+A 8.3 M
+A 7.2 S
+B 9.7 E
+B 3.0 G
+B 9.2 I
+B 6.2 O
+C 1.9 B
+C 3.1 H
+C 2.8 M
+C 0.4 O
+C 6.5 R
+D 6.2 F
+E 8.1 D
+E 8.5 Q
+F 2.6 B
+F 7.8 M
+G 6.6 I
+G 2.6 J
+H 9.6 E
+H 2.5 R
+I 4.3 B
+I 1.0 E
+I 3.8 G
+I 2.6 J
+I 0.4 K
+I 2.1 Q
+I 0.1 T
+J 1.7 B
+J 4.9 G
+K 3.0 D
+K 4.9 J
+K 0.8 L
+K 0.9 M
+K 4.7 U
+M 1.5 E
+N 0.1 L
+N 4.3 R
+N 6.2 S
+N 4.3 T
+O 3.0 M
+P 5.0 C
+P 8.8 E
+P 0.6 H
+P 9.7 J
+P 0.1 N
+P 5.3 U
+P 4.3 V
+Q 10.0 N
+Q 0.4 V
+R 1.1 H
+R 1.8 I
+S 2.6 B
+S 5.0 J
+S 6.8 N
+T 3.5 R
+U 6.1 V
+V 7.1 C
+V 5.1 R
+V 1.8 S
+W 6.5 J
+
+26
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+X
+Y
+Z
+71
+A 4.2 C
+A 0.2 D
+A 3.2 I
+A 4.7 Z
+B 0.4 X
+C 6.0 A
+C 4.5 K
+C 7.5 N
+C 9.6 X
+C 5.2 Z
+D 1.4 I
+D 6.6 W
+D 6.6 Y
+E 0.3 V
+E 5.8 Z
+F 9.9 C
+F 7.0 E
+F 0.5 Q
+F 9.6 T
+G 3.9 E
+G 8.1 P
+G 8.1 S
+G 1.3 Y
+H 2.8 B
+H 3.5 O
+H 4.5 Q
+H 0.2 V
+I 0.2 F
+J 0.5 E
+J 0.3 G
+J 4.1 V
+J 2.2 X
+K 3.0 I
+K 5.9 U
+L 6.7 F
+M 3.2 E
+M 1.2 L
+M 7.2 T
+M 9.7 X
+N 7.0 T
+O 6.8 H
+O 2.1 I
+O 3.1 V
+P 0.6 G
+P 4.7 H
+P 3.9 V
+Q 9.5 L
+Q 8.7 U
+R 2.1 E
+R 7.3 H
+R 0.5 M
+S 5.5 E
+S 5.1 M
+T 8.3 L
+T 4.6 S
+U 5.8 D
+U 9.0 H
+U 7.1 R
+W 3.8 T
+W 7.2 U
+X 3.2 R
+X 9.8 U
+X 7.4 V
+Y 3.9 A
+Y 1.6 C
+Y 8.8 I
+Y 2.7 X
+Z 0.3 B
+Z 9.0 L
+Z 9.1 M
+Z 4.7 S
+
+11
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+10
+A 9.4 D
+A 7.4 G
+A 5.6 K
+B 3.9 K
+C 1.3 H
+D 6.0 G
+E 5.7 H
+H 0.7 I
+I 7.5 E
+J 4.4 B
+
+3
+A
+B
+C
+1
+C 6.4 B
+
+10
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+4
+D 9.4 G
+F 5.2 E
+G 1.3 F
+J 7.0 B
+
+3
+A
+B
+C
+1
+A 4.1 C
+
+18
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+30
+A 6.4 C
+A 4.2 D
+A 8.5 H
+A 8.3 L
+B 2.6 A
+B 6.0 Q
+D 9.3 E
+D 2.5 P
+D 8.4 Q
+E 2.7 H
+E 2.3 I
+E 8.2 L
+E 7.4 M
+F 5.3 D
+F 3.9 R
+G 9.5 C
+G 1.3 P
+I 4.0 F
+I 1.3 P
+I 2.5 R
+J 8.3 L
+J 4.9 N
+L 9.5 C
+M 4.6 C
+M 9.3 G
+M 3.3 K
+N 3.1 B
+P 8.4 E
+Q 8.4 F
+R 4.2 O
+
+13
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+13
+A 7.0 I
+E 0.4 G
+E 4.4 I
+E 1.6 K
+F 9.6 E
+G 0.6 J
+H 7.4 E
+H 1.1 I
+H 2.0 K
+J 3.3 H
+J 5.8 K
+L 3.9 D
+L 0.9 F
+
+12
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+16
+A 6.3 K
+C 3.2 E
+C 2.5 H
+D 1.3 F
+E 5.3 G
+H 6.9 D
+H 8.5 E
+H 8.5 L
+I 9.0 A
+I 0.7 D
+I 3.5 E
+I 2.1 G
+I 1.5 J
+J 5.5 F
+K 8.0 C
+L 7.8 H
+
+25
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+X
+Y
+59
+A 3.8 D
+B 3.5 H
+B 0.7 U
+B 9.0 V
+C 3.2 B
+C 2.3 E
+C 7.6 I
+E 2.7 C
+E 1.8 M
+F 4.8 M
+G 4.2 I
+G 2.5 S
+G 5.7 X
+H 3.3 A
+H 8.1 I
+H 5.2 W
+I 4.9 R
+J 1.5 G
+J 9.0 H
+J 6.0 I
+J 8.2 Q
+J 8.0 S
+J 8.9 Y
+K 2.6 C
+K 5.7 R
+K 2.2 S
+K 6.7 T
+K 1.8 V
+L 7.1 G
+L 2.9 M
+L 8.4 P
+L 2.1 W
+O 6.6 A
+O 4.3 S
+P 3.4 B
+P 9.8 D
+Q 1.8 G
+Q 8.2 Y
+R 9.3 D
+S 4.8 E
+S 5.2 F
+S 7.7 W
+T 5.6 H
+T 3.7 R
+T 8.4 V
+T 9.4 W
+T 8.6 X
+U 5.2 A
+U 9.6 H
+U 8.2 J
+U 6.8 T
+U 0.5 Y
+V 4.2 G
+V 7.6 P
+V 5.4 R
+V 6.7 T
+X 1.0 N
+X 8.8 S
+X 0.4 V
+
+1
+A
+0
+
+12
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+9
+A 6.2 I
+B 6.5 G
+C 5.6 E
+D 1.4 B
+D 9.3 J
+E 3.5 B
+F 8.9 A
+F 1.6 K
+J 4.6 H
+
+24
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+X
+65
+A 1.0 W
+B 3.8 J
+B 8.7 K
+B 3.0 L
+B 7.5 T
+C 9.2 N
+C 4.5 T
+D 2.7 C
+D 9.5 G
+D 8.1 H
+D 6.5 Q
+D 3.2 V
+E 0.7 A
+E 6.3 T
+E 4.7 V
+F 7.3 E
+F 7.4 J
+F 3.2 M
+F 5.4 R
+H 9.4 C
+H 2.3 P
+H 4.6 Q
+I 5.7 M
+I 8.7 P
+J 0.1 F
+J 2.1 P
+K 0.9 E
+K 4.1 Q
+K 0.4 U
+K 4.6 W
+L 3.0 D
+L 1.4 K
+L 9.7 P
+L 1.5 R
+M 5.2 C
+M 2.7 J
+M 0.5 N
+M 7.3 R
+M 4.0 V
+M 0.8 X
+O 8.0 C
+O 0.2 F
+O 3.3 J
+O 3.2 P
+P 8.5 I
+P 7.3 V
+P 5.5 X
+Q 3.1 I
+Q 1.5 O
+Q 9.8 P
+Q 9.3 X
+S 7.8 T
+S 7.4 X
+T 0.2 C
+T 0.9 N
+T 5.6 S
+U 9.4 H
+V 0.6 F
+V 6.1 H
+V 10.0 Q
+W 1.9 A
+W 4.4 C
+W 0.5 E
+W 8.5 M
+X 3.4 J
+
+19
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+28
+A 7.8 M
+B 4.5 Q
+C 0.5 F
+D 7.7 N
+E 2.4 F
+E 2.3 R
+F 7.2 R
+G 5.8 C
+G 0.9 I
+I 2.5 E
+I 8.0 N
+J 1.2 L
+K 0.3 F
+K 0.2 Q
+M 2.2 E
+M 5.4 O
+N 1.2 R
+O 9.0 C
+O 9.6 N
+O 8.4 S
+P 9.5 B
+P 5.5 L
+P 2.5 M
+Q 4.5 E
+R 3.0 C
+R 6.5 D
+R 2.8 H
+R 2.5 J
+
+25
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+X
+Y
+58
+A 9.7 F
+A 9.2 I
+B 7.5 K
+B 5.7 L
+B 9.8 N
+C 1.2 K
+D 4.3 I
+D 6.0 L
+E 6.5 N
+F 6.6 B
+F 9.7 O
+G 6.0 F
+G 5.7 O
+H 3.1 G
+H 8.3 Q
+H 1.4 U
+I 8.9 J
+I 2.7 N
+J 4.3 C
+J 8.7 K
+J 2.5 V
+K 1.1 E
+K 7.4 H
+K 6.4 I
+L 1.1 A
+L 1.1 U
+L 8.2 Y
+M 7.8 L
+M 0.1 P
+M 7.8 W
+N 5.2 A
+N 3.7 F
+N 5.5 T
+N 6.0 U
+O 6.8 I
+P 0.6 J
+P 3.6 R
+P 5.4 V
+Q 0.5 C
+Q 9.2 D
+Q 4.2 H
+Q 3.8 I
+Q 8.3 Y
+S 8.8 O
+S 2.5 P
+T 6.6 B
+T 4.0 D
+T 3.5 K
+T 7.4 O
+T 7.4 Q
+U 0.7 H
+U 1.9 M
+U 4.7 N
+W 1.9 A
+W 2.2 C
+X 4.9 P
+Y 8.6 L
+Y 0.6 M
+
+8
+A
+B
+C
+D
+E
+F
+G
+H
+2
+A 4.0 H
+C 0.3 G
+
+7
+A
+B
+C
+D
+E
+F
+G
+3
+A 4.5 F
+C 1.9 F
+E 1.6 F
+
+4
+A
+B
+C
+D
+3
+A 7.3 C
+B 9.0 C
+D 6.4 C
+
+6
+A
+B
+C
+D
+E
+F
+2
+C 1.6 F
+F 7.9 C
+
+7
+A
+B
+C
+D
+E
+F
+G
+4
+A 8.1 B
+A 3.9 F
+E 5.5 D
+E 0.3 G
+
+26
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+X
+Y
+Z
+86
+A 2.6 D
+A 7.2 L
+A 5.4 U
+A 4.7 V
+A 9.1 Z
+B 5.7 K
+B 6.3 L
+B 0.8 Q
+B 1.1 T
+C 9.5 O
+C 6.6 Q
+C 5.3 W
+D 4.6 M
+D 4.8 S
+D 2.7 W
+E 7.0 L
+E 3.4 X
+E 7.2 Z
+F 5.6 A
+F 10.0 S
+F 9.0 T
+G 9.1 B
+G 3.8 W
+G 8.9 Z
+H 9.5 F
+H 1.6 M
+H 1.8 N
+H 6.4 O
+H 5.4 W
+H 5.1 Z
+I 4.3 N
+I 5.1 S
+I 6.9 W
+J 4.6 D
+J 9.9 L
+J 8.0 U
+J 3.5 W
+J 6.4 Z
+K 5.1 D
+K 5.6 G
+K 8.1 M
+K 1.2 P
+K 1.8 R
+L 1.5 C
+L 5.0 G
+L 9.2 Y
+M 2.5 B
+M 2.4 C
+M 7.3 G
+M 4.5 I
+M 5.0 R
+M 3.3 T
+N 2.8 J
+N 0.7 M
+O 8.0 I
+O 0.6 N
+O 6.7 Z
+Q 4.0 L
+Q 9.4 X
+R 3.1 E
+R 6.2 F
+R 4.2 I
+R 5.9 P
+R 4.9 X
+R 8.4 Z
+S 7.4 P
+S 6.3 X
+T 5.3 B
+T 4.7 E
+T 7.8 F
+T 1.2 K
+U 0.5 C
+U 5.7 W
+V 8.6 A
+V 3.8 E
+V 6.3 L
+V 2.7 X
+W 8.5 F
+W 7.9 G
+W 1.4 I
+W 4.3 R
+Y 6.8 F
+Z 8.5 A
+Z 4.5 G
+Z 8.6 K
+Z 1.0 R
+
+1
+A
+0
+
+12
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+6
+A 4.5 D
+D 8.2 E
+G 9.9 F
+G 5.9 I
+J 0.9 B
+K 4.0 D
+
+18
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+28
+A 2.5 C
+A 9.2 E
+B 5.6 L
+C 2.4 P
+C 7.4 R
+D 1.8 N
+D 1.2 Q
+F 7.0 H
+F 5.8 J
+G 6.7 O
+H 3.5 D
+H 5.5 M
+I 3.2 G
+I 2.0 J
+I 3.7 K
+I 7.8 O
+J 8.6 M
+L 8.6 B
+M 1.4 B
+N 6.7 C
+N 1.4 D
+N 9.8 O
+N 7.7 P
+P 7.0 C
+Q 3.5 E
+Q 6.0 R
+R 6.6 O
+R 1.4 Q
+
+26
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+X
+Y
+Z
+68
+A 2.3 I
+A 2.4 K
+A 6.4 U
+B 7.7 X
+C 3.0 G
+C 1.8 P
+C 5.7 U
+D 0.3 M
+D 3.8 O
+D 5.8 X
+F 4.8 N
+G 6.9 F
+G 8.4 I
+G 6.5 K
+G 4.0 S
+G 3.5 X
+H 4.0 Q
+I 9.1 X
+J 8.7 I
+J 9.2 R
+J 3.9 S
+K 3.0 I
+K 7.9 P
+K 2.4 Z
+L 9.2 B
+L 4.4 F
+L 4.3 T
+L 7.8 U
+L 8.2 Y
+M 1.0 P
+M 8.4 X
+N 3.2 D
+N 2.0 R
+O 5.0 I
+O 2.7 J
+O 0.1 M
+O 4.4 Q
+O 0.4 X
+P 1.5 J
+P 5.8 L
+P 4.2 Y
+Q 2.6 C
+Q 3.0 M
+Q 8.2 S
+Q 1.4 U
+Q 2.4 Z
+R 3.1 Q
+R 2.6 V
+R 9.5 Z
+S 8.4 M
+T 9.9 A
+T 9.4 K
+T 5.3 M
+T 7.2 Z
+U 0.7 H
+U 5.7 M
+V 1.5 Q
+V 2.6 R
+V 9.9 Y
+W 2.0 T
+X 9.6 K
+X 3.3 S
+X 5.1 T
+X 2.4 V
+Y 1.4 I
+Y 0.8 J
+Y 8.5 T
+Z 7.3 J
+
+16
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+15
+B 4.1 E
+D 6.1 H
+D 3.4 M
+E 9.5 M
+F 6.6 C
+F 0.2 J
+G 3.1 B
+H 8.5 G
+H 0.8 L
+I 1.3 J
+L 9.4 E
+L 6.3 G
+N 1.6 H
+N 7.6 O
+P 5.7 L
+
+10
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+7
+B 9.1 G
+D 4.5 A
+D 6.9 G
+E 1.9 B
+E 8.7 D
+G 2.1 A
+I 8.6 G
+
+11
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+12
+A 6.1 I
+E 8.3 C
+E 3.4 F
+E 1.1 I
+G 5.3 A
+G 4.0 B
+G 9.8 C
+H 8.0 C
+H 6.0 D
+I 2.7 J
+J 1.3 I
+K 4.2 G
+
+23
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+50
+A 4.2 G
+A 3.3 H
+A 8.4 R
+A 2.4 U
+B 6.9 D
+B 6.4 H
+B 7.8 N
+B 8.3 R
+C 5.6 N
+C 8.7 R
+E 7.0 J
+E 5.8 K
+E 6.4 N
+F 4.3 P
+F 1.4 R
+G 4.6 E
+G 3.6 N
+G 3.2 S
+G 4.1 V
+H 8.8 Q
+H 9.3 R
+I 6.6 B
+I 5.0 L
+J 4.9 V
+K 3.3 Q
+L 4.8 P
+L 7.4 S
+L 7.0 V
+M 8.8 F
+M 2.9 P
+M 0.4 U
+N 1.4 A
+N 3.9 D
+N 1.8 V
+O 6.2 S
+O 3.5 V
+P 7.8 M
+Q 8.0 G
+R 8.3 D
+R 7.5 E
+R 2.6 K
+R 1.0 V
+S 8.2 E
+S 7.6 G
+S 5.2 K
+S 9.4 P
+T 3.2 P
+U 8.5 E
+V 8.4 P
+W 10.0 P
+
+22
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+43
+A 4.9 J
+A 6.0 O
+C 8.0 F
+C 3.6 I
+D 4.4 V
+E 7.6 C
+E 9.6 D
+E 2.6 O
+E 0.5 R
+E 3.0 T
+F 8.0 A
+G 3.4 A
+G 9.1 J
+H 5.1 M
+H 8.5 T
+I 9.8 C
+I 7.6 K
+I 7.5 R
+J 2.4 T
+K 7.9 I
+L 1.3 H
+L 7.9 S
+M 4.0 L
+N 2.6 G
+N 5.0 K
+O 3.9 E
+O 8.2 F
+O 5.5 L
+O 5.3 Q
+Q 1.7 D
+Q 0.9 T
+R 7.7 P
+R 0.9 S
+S 10.0 A
+S 2.6 G
+S 3.2 K
+S 9.9 M
+T 8.0 G
+T 1.7 K
+T 5.1 P
+U 3.6 G
+U 4.1 Q
+U 5.9 R
+
+9
+A
+B
+C
+D
+E
+F
+G
+H
+I
+5
+B 8.8 C
+C 1.5 D
+E 4.0 H
+F 1.7 B
+F 1.5 D
+
+15
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+20
+A 7.3 J
+C 8.6 D
+C 7.8 H
+C 9.9 J
+F 6.5 B
+F 5.6 H
+F 2.5 I
+G 4.5 A
+H 4.9 C
+I 7.4 C
+I 6.6 D
+J 7.9 F
+J 1.8 H
+J 1.8 N
+K 5.6 J
+L 8.7 I
+N 5.8 B
+N 7.7 C
+N 8.9 E
+O 1.1 G
+
+15
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+21
+A 0.9 O
+B 6.8 F
+D 3.6 H
+D 3.7 M
+D 6.6 N
+E 4.6 O
+F 9.0 J
+F 4.3 O
+I 1.4 H
+J 8.5 C
+J 8.1 H
+K 3.9 A
+K 2.2 C
+K 8.8 H
+M 3.4 F
+M 9.4 K
+N 7.7 I
+O 2.8 E
+O 8.7 J
+O 1.5 K
+O 7.1 N
+
+15
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+17
+A 3.4 B
+A 3.6 O
+B 7.9 M
+C 6.6 I
+D 1.3 B
+D 8.2 E
+D 8.9 N
+G 1.0 E
+G 1.3 I
+H 4.8 I
+I 6.4 N
+J 2.8 F
+J 6.1 G
+K 1.3 A
+K 6.3 H
+N 7.9 M
+O 3.8 A
+
+4
+A
+B
+C
+D
+0
+
+9
+A
+B
+C
+D
+E
+F
+G
+H
+I
+7
+B 2.1 I
+D 0.9 A
+E 1.9 G
+E 8.9 H
+H 7.3 C
+H 9.0 E
+H 1.3 F
+
+1
+A
+0
+
+15
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+21
+A 7.1 M
+B 5.6 A
+D 7.0 G
+D 2.1 H
+E 3.2 B
+E 7.8 D
+E 6.0 O
+F 9.7 C
+F 4.8 E
+G 9.5 B
+H 8.6 C
+I 2.5 H
+J 0.3 H
+L 2.7 A
+L 8.4 E
+L 8.5 I
+N 5.1 G
+N 7.8 J
+N 8.4 L
+O 8.4 B
+O 9.3 M
+
+14
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+19
+A 9.2 G
+A 6.5 K
+B 9.9 A
+B 5.9 F
+D 1.1 I
+D 7.9 K
+E 7.7 L
+G 6.1 J
+I 9.6 A
+I 8.1 K
+J 1.0 H
+K 1.1 B
+K 1.1 C
+K 1.3 F
+L 9.5 E
+L 4.6 N
+M 8.6 N
+N 0.4 C
+N 6.0 G
+
+11
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+8
+A 2.1 E
+A 7.8 F
+C 2.4 J
+E 5.9 G
+E 9.5 I
+G 4.2 B
+I 5.8 C
+I 5.1 D
+
+24
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+X
+69
+A 9.5 L
+B 5.9 D
+B 2.0 K
+B 3.5 N
+C 6.1 I
+C 0.4 J
+C 2.3 O
+D 2.1 B
+D 5.4 M
+E 1.1 A
+E 8.9 G
+F 5.8 J
+F 0.6 P
+G 3.5 P
+G 6.7 V
+H 5.2 Q
+H 1.9 R
+H 5.2 V
+I 4.5 R
+J 6.2 I
+J 9.0 N
+K 1.3 W
+L 5.4 A
+L 5.3 D
+L 9.6 E
+L 5.0 J
+L 3.2 X
+M 4.2 G
+M 2.8 V
+M 10.0 X
+N 8.9 D
+N 9.2 T
+N 1.1 V
+O 8.8 G
+O 5.3 H
+O 8.2 L
+O 3.2 M
+O 1.8 N
+O 1.3 X
+P 3.9 O
+P 9.9 R
+P 2.9 T
+Q 1.6 F
+Q 1.3 G
+Q 7.5 M
+R 8.2 B
+S 6.7 C
+S 6.7 G
+S 4.7 I
+S 4.6 J
+S 6.7 M
+T 1.5 B
+T 8.2 F
+T 2.4 K
+T 6.7 N
+T 1.9 O
+T 4.1 S
+T 4.9 X
+U 1.2 E
+U 7.7 H
+U 2.5 L
+U 1.1 X
+V 5.5 F
+V 3.6 H
+V 7.3 K
+W 8.9 F
+X 9.1 A
+X 4.8 G
+X 5.5 T
+
+11
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+9
+A 6.6 I
+B 3.1 H
+B 8.7 K
+E 5.6 B
+F 7.3 C
+F 5.3 G
+G 3.0 J
+H 0.6 E
+H 9.7 F
+
+2
+A
+B
+0
+
+21
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+36
+A 5.3 I
+A 0.9 L
+A 3.2 S
+B 7.4 N
+C 5.7 E
+C 6.9 K
+C 1.3 R
+C 6.5 S
+D 7.5 H
+D 4.4 I
+D 6.6 O
+E 10.0 N
+E 4.1 S
+F 4.1 I
+G 9.2 A
+G 6.0 B
+G 1.3 T
+H 4.1 C
+H 9.8 Q
+I 6.7 D
+J 9.9 N
+J 6.7 R
+K 4.0 A
+K 3.9 J
+L 3.3 D
+L 2.8 Q
+L 8.7 R
+M 1.9 F
+N 3.9 B
+N 8.9 S
+P 9.8 B
+Q 5.2 B
+R 9.8 P
+S 5.5 R
+U 1.0 L
+U 9.3 Q
+
+18
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+26
+A 3.3 I
+A 4.7 K
+B 4.6 D
+C 0.5 D
+C 6.7 G
+C 3.7 I
+D 6.7 P
+E 2.2 I
+E 9.8 O
+F 5.5 C
+F 3.2 Q
+G 9.3 H
+H 1.3 N
+H 7.5 O
+H 9.7 Q
+J 10.0 O
+K 4.2 P
+L 5.4 E
+M 2.7 K
+N 4.7 F
+O 8.0 C
+O 9.8 I
+P 7.1 H
+Q 6.8 B
+Q 3.6 L
+Q 4.1 P
+
+18
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+24
+A 8.3 H
+B 2.8 J
+B 1.3 K
+C 9.3 L
+D 7.0 H
+D 4.8 I
+D 3.6 P
+E 9.3 A
+F 6.6 A
+G 6.6 H
+H 7.3 D
+H 5.2 R
+I 2.4 R
+J 9.2 Q
+K 1.3 E
+O 4.1 R
+P 6.3 G
+P 0.5 I
+P 6.1 Q
+Q 9.5 B
+Q 2.4 N
+R 7.6 H
+R 7.2 N
+R 9.4 P
+
+23
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+44
+B 9.4 E
+B 6.9 M
+C 1.9 J
+C 7.4 R
+C 0.5 S
+D 6.1 B
+D 9.3 G
+D 0.1 O
+E 3.0 M
+E 9.6 Q
+F 0.7 G
+F 4.1 T
+G 8.4 C
+G 4.7 P
+G 9.2 W
+H 5.1 F
+H 4.7 I
+H 8.6 L
+H 4.9 T
+H 8.6 W
+I 0.1 K
+J 1.1 C
+J 1.8 H
+J 6.6 P
+J 8.0 Q
+K 6.6 F
+K 7.8 S
+M 8.0 K
+N 3.2 B
+N 7.1 J
+O 7.4 A
+Q 2.7 A
+Q 6.4 C
+Q 6.7 K
+Q 0.7 U
+R 6.2 W
+S 9.5 L
+S 7.4 O
+T 7.9 G
+U 1.4 W
+W 4.7 A
+W 1.8 G
+W 5.3 J
+W 0.1 T
+
+18
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+28
+A 2.1 B
+A 6.2 H
+A 6.7 P
+B 5.8 I
+B 2.4 K
+C 7.2 O
+D 4.0 L
+D 4.3 P
+D 4.4 Q
+E 2.0 C
+E 9.3 R
+F 1.8 I
+H 3.3 A
+H 4.6 K
+H 8.0 Q
+I 5.1 F
+I 6.5 K
+I 1.5 L
+K 7.1 N
+L 7.4 F
+M 6.8 H
+M 5.5 I
+M 1.4 O
+P 8.1 D
+P 7.3 F
+P 9.7 N
+Q 8.1 N
+R 4.0 C
+
+16
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+19
+B 9.3 E
+D 7.2 B
+D 10.0 F
+E 6.5 G
+F 7.0 H
+G 4.5 C
+G 5.4 D
+H 3.6 M
+I 5.0 C
+J 4.5 F
+J 7.0 O
+J 1.0 P
+K 3.5 J
+L 2.1 C
+M 2.1 E
+M 3.1 F
+M 5.8 O
+O 7.2 J
+P 3.7 B
+
+22
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+42
+A 3.1 J
+A 7.4 S
+B 5.1 Q
+C 1.5 D
+C 5.1 I
+C 8.4 L
+C 9.7 S
+D 0.1 V
+F 1.0 L
+F 1.1 V
+G 3.1 D
+G 0.8 R
+H 1.7 E
+H 4.4 T
+I 3.2 D
+I 2.8 S
+I 5.0 U
+J 3.6 U
+K 8.7 A
+K 6.1 J
+K 2.0 O
+L 4.2 E
+L 2.0 J
+L 3.1 S
+M 9.5 C
+M 0.8 G
+M 6.2 T
+N 9.6 B
+N 4.9 F
+N 6.6 M
+N 4.8 S
+O 2.3 C
+O 2.1 R
+P 5.2 N
+Q 8.8 O
+R 6.9 I
+S 9.3 A
+T 7.6 B
+T 8.7 J
+T 7.4 L
+T 9.7 N
+V 5.9 L
+
+24
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+X
+54
+A 5.0 C
+A 9.2 L
+A 5.7 U
+B 5.7 L
+B 8.5 V
+C 4.8 A
+C 6.8 B
+C 7.7 K
+C 5.4 M
+C 7.6 P
+C 3.8 Q
+D 0.7 C
+D 7.4 E
+D 7.4 Q
+E 4.0 D
+F 0.2 O
+G 6.9 A
+H 8.0 A
+I 3.3 K
+I 1.5 M
+I 6.1 Q
+J 0.7 R
+J 4.0 U
+K 1.6 D
+K 2.3 G
+K 5.1 O
+K 0.9 V
+L 4.5 H
+L 6.1 U
+M 8.4 T
+M 0.9 X
+N 0.3 G
+N 9.9 P
+N 1.4 Q
+O 6.3 G
+O 5.4 N
+P 9.2 A
+Q 8.8 H
+Q 3.3 I
+Q 6.2 O
+Q 6.7 X
+R 3.0 C
+R 8.2 K
+R 7.4 L
+T 3.7 C
+T 8.2 K
+V 3.0 G
+V 6.0 J
+V 8.0 K
+V 5.1 T
+W 5.6 O
+X 5.0 M
+X 8.9 N
+X 3.5 P
+
+3
+A
+B
+C
+1
+C 5.9 B
+
+1
+A
+0
+
+3
+A
+B
+C
+0
+
+10
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+9
+C 3.7 B
+C 1.8 E
+C 1.7 H
+F 5.9 B
+F 0.4 I
+G 0.4 C
+H 1.8 E
+H 0.4 G
+J 8.0 C
+
+9
+A
+B
+C
+D
+E
+F
+G
+H
+I
+6
+A 7.4 G
+B 5.2 I
+E 4.0 D
+F 9.9 E
+G 8.5 A
+G 4.9 D
+
+6
+A
+B
+C
+D
+E
+F
+3
+A 5.3 F
+D 3.6 A
+F 2.0 A
+
+10
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+11
+A 9.5 D
+A 4.9 I
+C 6.6 J
+D 6.4 B
+D 3.7 J
+E 4.5 C
+F 6.1 J
+I 7.4 A
+J 2.3 D
+J 3.8 G
+J 6.0 H
+
+19
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+31
+A 4.6 F
+A 4.9 M
+B 4.6 N
+C 3.5 E
+C 5.2 H
+C 7.0 I
+D 4.6 P
+E 1.6 A
+E 0.2 B
+E 7.1 M
+F 9.7 S
+G 6.3 A
+G 0.8 I
+H 8.3 I
+H 8.2 O
+K 5.9 G
+K 10.0 N
+K 1.4 P
+L 1.3 I
+M 6.9 A
+M 1.6 Q
+N 6.6 F
+N 4.5 K
+O 3.1 A
+O 9.3 C
+O 7.4 M
+O 9.0 Q
+O 3.1 R
+P 3.1 O
+R 4.3 M
+R 0.7 O
+
+21
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+51
+A 2.8 M
+B 6.5 E
+B 6.5 L
+C 2.0 M
+C 2.8 S
+D 5.2 J
+D 3.5 K
+E 0.6 I
+E 1.4 K
+E 1.8 N
+E 4.8 U
+F 8.5 A
+F 0.7 E
+F 1.8 M
+F 3.2 Q
+G 0.9 D
+G 6.7 F
+G 0.4 T
+H 7.9 U
+I 0.8 D
+J 0.4 H
+J 8.3 P
+K 7.3 E
+K 8.5 L
+K 5.3 R
+K 9.4 S
+L 1.8 G
+L 0.4 T
+M 8.6 G
+N 5.9 D
+N 1.3 Q
+O 6.5 N
+P 0.8 A
+P 4.9 K
+Q 7.5 G
+Q 5.7 P
+Q 9.5 R
+R 3.2 B
+R 1.5 D
+R 3.1 I
+R 9.5 P
+R 8.8 T
+R 3.2 U
+S 9.2 D
+S 9.5 J
+T 2.0 D
+T 2.1 P
+T 7.6 R
+T 1.5 S
+T 4.0 U
+U 5.7 M
+
+18
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+29
+A 1.5 F
+B 0.6 F
+C 0.8 D
+D 1.2 M
+D 3.7 Q
+E 2.1 J
+F 7.3 G
+F 10.0 M
+G 9.8 E
+H 4.3 F
+H 1.9 P
+J 3.9 G
+J 2.5 I
+K 9.8 E
+L 4.4 E
+L 1.0 H
+L 5.6 O
+N 8.1 C
+N 1.6 K
+O 7.5 A
+O 8.3 B
+O 7.4 F
+O 0.5 G
+O 4.9 I
+P 3.7 F
+P 5.9 G
+P 8.6 R
+Q 7.8 P
+R 2.7 B
+
+17
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+25
+A 0.9 N
+B 6.8 N
+B 1.7 O
+D 1.4 C
+D 4.6 N
+D 8.3 O
+G 0.1 K
+G 5.2 P
+H 2.7 E
+H 5.0 O
+I 4.3 A
+I 5.3 F
+I 4.8 M
+I 6.1 Q
+J 6.2 N
+J 9.1 O
+J 1.5 Q
+K 1.4 J
+K 9.9 M
+K 1.0 P
+L 1.0 I
+L 2.5 O
+O 5.2 A
+O 6.0 H
+O 6.9 J
+
+23
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+54
+A 5.5 L
+A 8.2 U
+A 8.5 V
+B 2.3 J
+B 2.3 M
+B 1.9 V
+C 3.7 F
+C 8.9 I
+C 1.2 P
+D 3.4 Q
+E 9.3 J
+F 2.4 L
+F 6.2 N
+F 4.3 P
+F 1.1 S
+F 0.7 W
+G 5.0 K
+G 6.9 N
+G 10.0 W
+H 8.4 A
+H 7.6 C
+H 7.6 G
+H 9.7 T
+I 2.6 F
+J 9.1 D
+J 6.6 F
+J 1.9 M
+K 9.7 H
+K 3.5 V
+M 1.5 B
+M 1.6 F
+M 2.4 P
+M 9.3 Q
+M 6.8 U
+M 2.3 V
+N 8.0 I
+N 4.9 K
+O 3.1 B
+O 0.3 D
+O 9.5 V
+P 3.8 E
+P 4.4 Q
+P 0.2 U
+Q 9.9 D
+Q 6.0 V
+R 0.7 V
+S 6.2 J
+S 5.3 N
+S 5.1 R
+T 8.0 O
+U 9.1 M
+U 7.7 P
+W 3.8 E
+W 4.6 S
+
+23
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+45
+A 0.1 D
+A 4.1 K
+C 10.0 J
+C 0.6 M
+D 4.6 B
+D 2.3 J
+D 9.5 S
+D 7.8 W
+E 2.1 A
+E 8.7 F
+E 7.9 T
+E 4.8 W
+F 7.3 I
+F 8.4 M
+G 7.4 C
+G 6.4 E
+G 3.7 H
+G 1.6 J
+G 2.6 K
+G 3.5 O
+H 10.0 D
+I 5.9 R
+I 4.3 S
+J 2.5 B
+J 4.6 D
+J 1.6 G
+J 2.2 M
+K 2.5 L
+K 3.1 O
+K 3.9 Q
+L 5.2 G
+L 4.9 V
+M 9.7 U
+N 1.2 G
+N 1.4 H
+P 3.3 M
+P 3.2 R
+P 0.3 W
+Q 1.9 U
+R 2.7 D
+S 7.3 K
+U 1.9 E
+U 5.8 R
+W 5.0 C
+W 2.9 S
+
+16
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+29
+A 8.5 F
+A 4.9 L
+B 4.6 K
+B 4.7 M
+C 9.4 E
+C 0.4 M
+D 7.9 G
+D 5.2 I
+D 1.0 P
+E 0.2 A
+E 8.8 C
+E 2.6 M
+E 7.5 N
+G 4.9 B
+G 7.3 E
+G 2.3 H
+H 7.6 C
+H 9.0 N
+I 9.3 B
+I 8.0 P
+J 3.4 A
+J 1.8 G
+L 3.2 D
+M 2.6 N
+N 4.2 E
+N 9.9 G
+O 2.6 G
+P 6.6 F
+P 8.9 I
+
+11
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+8
+B 2.2 F
+E 7.6 F
+E 9.0 J
+G 2.9 A
+G 1.3 C
+I 2.4 A
+J 5.1 B
+K 6.4 G
+
+8
+A
+B
+C
+D
+E
+F
+G
+H
+6
+A 1.4 E
+A 1.9 F
+C 7.4 A
+D 6.7 A
+E 7.9 B
+F 6.2 G
+
+3
+A
+B
+C
+0
+
+19
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+27
+A 0.9 B
+A 4.9 E
+C 0.1 D
+C 0.8 O
+C 8.1 R
+C 0.3 S
+E 9.4 H
+E 4.4 L
+F 4.7 B
+G 0.5 C
+G 6.6 J
+G 5.1 L
+H 7.2 L
+H 1.4 O
+I 2.0 R
+K 0.2 E
+K 8.4 L
+L 2.3 D
+L 3.7 I
+O 9.6 F
+O 5.3 K
+O 5.4 S
+P 1.3 A
+Q 3.2 A
+Q 3.0 O
+S 2.4 L
+S 2.2 M
+
+19
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+34
+A 6.9 E
+B 3.8 C
+C 4.7 K
+D 7.9 N
+D 8.2 R
+E 10.0 H
+E 8.2 S
+F 3.8 K
+G 0.7 N
+G 4.5 R
+H 0.5 P
+I 7.8 F
+I 0.8 O
+J 4.9 E
+J 3.6 K
+J 1.7 M
+K 5.0 B
+K 5.4 C
+L 4.9 M
+L 9.6 O
+L 6.2 S
+M 5.3 G
+M 7.7 L
+N 4.0 Q
+O 8.1 N
+P 7.2 G
+P 5.7 K
+P 9.6 S
+Q 0.5 S
+R 3.7 H
+R 0.9 K
+R 0.3 O
+S 8.5 A
+S 0.5 E
+
+11
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+14
+A 10.0 J
+C 2.5 F
+D 1.2 C
+E 5.8 G
+F 8.6 K
+G 9.8 D
+H 6.8 J
+I 3.3 A
+I 9.8 F
+I 9.5 H
+J 8.2 E
+J 2.0 F
+K 3.9 H
+K 8.2 I
+
+19
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+43
+A 1.8 F
+A 3.9 K
+B 9.0 E
+C 8.2 I
+D 9.2 A
+D 9.8 E
+D 9.5 M
+E 2.1 D
+E 0.8 G
+E 2.3 P
+E 5.8 Q
+G 9.1 O
+H 8.3 C
+H 2.8 J
+H 8.3 K
+H 9.9 L
+H 3.9 Q
+I 9.2 M
+J 8.0 E
+K 3.7 B
+K 7.5 R
+L 4.0 C
+L 6.1 I
+L 3.1 J
+L 2.7 M
+L 5.1 S
+N 2.2 B
+N 8.4 L
+N 5.7 M
+O 1.2 A
+O 6.5 E
+O 5.6 G
+O 1.2 M
+P 3.1 E
+P 8.6 R
+Q 6.1 H
+Q 3.1 I
+R 4.7 A
+R 5.3 K
+R 6.2 O
+S 5.2 D
+S 7.1 H
+S 4.2 I
+
+12
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+13
+A 9.8 C
+A 6.5 D
+B 1.8 A
+C 6.8 D
+D 0.5 G
+E 2.9 K
+H 8.7 F
+H 3.0 J
+I 6.0 F
+J 9.6 F
+K 6.4 E
+K 3.6 F
+K 5.9 I
+
+20
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+27
+A 5.4 B
+B 9.4 A
+C 6.0 B
+C 3.9 J
+E 0.2 T
+F 9.0 E
+F 9.1 T
+I 5.6 F
+I 8.7 J
+I 2.2 O
+I 7.7 S
+J 7.1 G
+K 5.5 A
+K 9.8 N
+K 2.0 S
+L 5.9 D
+L 4.0 O
+M 1.6 P
+N 2.5 M
+P 6.4 K
+P 0.5 L
+R 0.1 B
+R 3.4 J
+R 7.9 N
+R 0.1 S
+T 5.0 I
+T 8.5 S
+
+9
+A
+B
+C
+D
+E
+F
+G
+H
+I
+9
+B 6.4 G
+C 9.9 A
+D 5.7 F
+E 1.5 C
+E 6.0 D
+F 3.4 B
+H 5.1 A
+I 5.3 D
+I 6.3 G
+
+12
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+13
+A 1.2 F
+B 1.2 G
+B 7.3 H
+B 2.3 J
+B 3.1 K
+C 6.5 B
+E 2.9 G
+F 5.0 B
+G 4.4 D
+G 6.7 I
+I 4.8 H
+J 0.7 A
+L 1.2 I
+
+12
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+12
+A 2.4 E
+A 3.8 K
+B 0.4 A
+B 6.3 C
+B 5.1 G
+D 8.6 G
+D 3.5 J
+D 5.6 K
+F 8.7 C
+G 0.4 D
+L 4.1 D
+L 7.5 H
+
+18
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+36
+A 7.8 I
+A 9.7 N
+A 3.0 P
+B 9.5 A
+B 10.0 E
+B 0.1 J
+B 9.3 O
+B 8.7 Q
+D 5.3 G
+D 9.6 O
+E 0.6 G
+E 7.8 J
+E 5.2 Q
+F 2.2 P
+G 1.5 D
+H 7.6 L
+H 8.2 O
+J 9.3 G
+K 6.1 O
+L 0.2 C
+L 6.9 D
+L 6.1 J
+L 8.6 K
+M 2.5 D
+M 2.5 E
+M 8.2 J
+O 9.3 E
+O 1.3 J
+O 0.3 R
+P 0.4 C
+Q 0.8 E
+Q 1.0 H
+Q 0.1 K
+Q 5.8 O
+Q 1.1 R
+R 6.8 K
+
+23
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+42
+A 8.7 E
+A 9.9 N
+B 7.3 A
+B 7.2 D
+B 7.7 L
+B 7.8 M
+C 6.3 J
+C 9.2 K
+C 1.6 L
+D 5.6 B
+E 8.9 A
+E 8.2 O
+F 5.6 C
+F 5.9 D
+F 6.8 O
+G 9.9 V
+I 2.0 U
+J 8.9 D
+J 2.6 F
+J 5.2 Q
+K 9.9 V
+L 0.1 A
+L 0.7 U
+M 9.8 J
+N 7.1 O
+N 2.4 Q
+N 2.3 R
+O 1.2 F
+Q 8.2 O
+Q 5.0 W
+R 7.9 B
+R 8.3 Q
+S 6.7 L
+S 3.2 Q
+T 6.2 U
+U 3.7 E
+U 1.2 V
+V 2.5 B
+V 2.1 G
+V 5.8 Q
+V 2.3 W
+W 8.2 A
+
+25
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+X
+Y
+62
+A 0.9 G
+A 4.3 M
+B 8.2 A
+C 8.3 I
+C 6.7 M
+D 1.0 B
+D 2.4 E
+D 0.6 H
+E 9.8 C
+E 0.7 V
+F 3.8 B
+F 2.2 H
+G 3.3 K
+G 7.0 U
+H 8.4 Q
+H 3.6 W
+I 1.6 M
+J 2.5 A
+J 3.1 I
+K 0.5 D
+K 0.1 G
+K 6.5 L
+K 5.7 M
+L 0.1 C
+L 5.2 S
+M 8.5 N
+M 6.5 P
+N 4.4 F
+N 0.5 P
+N 7.5 V
+O 8.9 C
+P 1.8 A
+P 1.5 C
+P 1.6 X
+Q 9.9 I
+Q 2.8 N
+Q 5.0 W
+R 8.6 A
+R 7.3 J
+R 9.7 V
+S 6.1 C
+S 8.5 F
+S 1.0 P
+S 2.9 Y
+T 1.8 J
+T 5.3 N
+T 6.2 P
+T 9.8 X
+U 5.3 K
+U 8.7 Q
+V 8.9 F
+V 8.8 Q
+W 3.0 E
+W 6.7 K
+W 6.1 M
+W 0.2 P
+W 5.4 X
+X 3.1 J
+Y 1.2 B
+Y 7.4 L
+Y 1.6 R
+Y 8.5 S
+
+11
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+12
+A 4.6 E
+C 3.8 H
+E 6.4 B
+E 6.9 H
+F 3.7 H
+G 4.6 C
+I 6.2 F
+I 3.1 H
+J 5.4 B
+K 9.1 A
+K 8.4 C
+K 6.8 E
+
+10
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+12
+C 8.0 G
+C 6.7 H
+D 4.4 I
+F 0.2 A
+F 5.6 C
+F 5.7 E
+F 6.7 G
+G 3.6 C
+H 7.5 E
+I 2.6 C
+I 5.4 D
+I 2.9 F
+
+12
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+8
+A 7.7 E
+C 0.7 I
+D 8.9 L
+G 7.4 D
+H 6.2 K
+I 5.4 C
+J 2.3 A
+J 5.7 K
+
+25
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+X
+Y
+63
+A 9.0 D
+A 1.1 P
+C 1.3 G
+C 6.4 L
+D 0.1 B
+E 8.1 L
+E 8.7 Q
+E 6.2 W
+F 9.8 A
+G 4.8 C
+H 7.4 E
+H 6.0 G
+H 4.4 J
+H 9.7 L
+H 4.5 R
+I 7.5 C
+I 6.9 J
+I 2.4 M
+I 8.9 O
+I 6.8 P
+I 7.7 R
+J 9.8 F
+J 4.6 G
+K 6.1 F
+L 1.6 C
+L 8.2 H
+L 1.4 X
+M 9.3 D
+M 0.9 O
+M 0.5 Y
+N 2.7 D
+N 1.8 J
+O 8.0 E
+O 6.4 G
+O 9.6 H
+O 2.9 U
+O 6.6 Y
+P 8.5 A
+P 4.4 E
+P 10.0 L
+P 5.2 N
+Q 3.5 H
+Q 1.9 R
+Q 4.7 Y
+R 4.5 B
+R 0.8 V
+S 2.6 L
+T 5.3 A
+T 2.3 P
+U 4.2 J
+V 3.6 K
+V 9.7 O
+V 8.0 Y
+W 2.6 G
+W 8.4 S
+W 7.3 V
+X 0.9 A
+X 0.5 G
+X 2.4 O
+X 5.7 P
+X 10.0 T
+Y 7.0 B
+Y 4.7 I
+
+11
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+8
+A 9.5 I
+B 7.3 E
+C 4.3 B
+E 2.2 D
+G 6.4 B
+H 7.5 J
+I 7.6 D
+K 8.6 E
+
+3
+A
+B
+C
+0
+
+11
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+14
+A 1.4 K
+B 3.8 I
+B 7.2 K
+C 9.0 A
+C 7.1 B
+C 3.6 K
+F 3.4 D
+G 3.3 A
+G 9.8 D
+G 5.6 J
+G 9.8 K
+H 7.4 K
+J 2.3 C
+K 1.5 D
+
+9
+A
+B
+C
+D
+E
+F
+G
+H
+I
+5
+A 5.3 D
+C 8.7 E
+C 0.2 F
+D 3.6 C
+G 9.4 I
+
+22
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+47
+A 0.1 I
+B 8.9 E
+B 6.2 F
+B 1.6 G
+B 1.5 K
+B 6.0 M
+B 8.8 S
+C 9.0 B
+C 5.8 R
+D 0.1 B
+D 0.7 E
+D 9.1 F
+D 6.0 O
+D 8.5 R
+F 3.0 I
+F 0.7 J
+F 9.2 P
+F 8.0 U
+G 3.1 D
+G 7.3 E
+H 8.0 P
+H 2.2 S
+I 4.4 M
+I 8.4 P
+J 6.1 A
+J 7.4 B
+J 6.6 T
+K 3.3 D
+K 8.1 E
+L 2.5 O
+M 5.5 S
+N 8.3 U
+P 0.4 D
+P 5.1 J
+P 0.5 U
+Q 2.0 U
+R 8.9 M
+R 9.2 Q
+R 7.4 V
+S 7.1 C
+S 5.0 H
+S 1.0 Q
+S 9.3 V
+T 3.6 O
+T 2.6 Q
+U 1.8 G
+V 9.9 K
+
+19
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+29
+A 2.3 O
+C 0.7 F
+C 0.3 J
+D 2.0 H
+D 5.0 O
+D 3.1 P
+F 1.4 O
+G 3.1 S
+H 8.0 A
+H 3.0 J
+H 6.7 P
+I 3.8 D
+I 6.9 Q
+J 1.2 M
+K 3.4 I
+K 5.8 N
+K 3.3 P
+K 4.2 R
+L 7.5 N
+N 9.3 D
+N 1.8 G
+O 7.3 G
+O 2.1 Q
+O 7.8 S
+P 5.6 K
+P 8.5 N
+S 9.4 D
+S 8.0 F
+S 2.1 O
+
+8
+A
+B
+C
+D
+E
+F
+G
+H
+3
+A 6.6 E
+A 3.1 H
+F 7.5 H
+
+0
+
