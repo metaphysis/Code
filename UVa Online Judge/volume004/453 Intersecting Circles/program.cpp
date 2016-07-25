@@ -1,8 +1,8 @@
 // Intersecting Circles
 // UVa ID: 453
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2016-07-26
+// UVa Run Time: 0.020s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
@@ -29,9 +29,7 @@ const double epsilon = 1e-6, epsilon2 = 5.14e-5;
 
 int main(int argc, char *argv[])
 {
-    cin.tie(0);
-    cout.tie(0);
-    ios::sync_with_stdio(false);
+    cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
     cout.precision(3);
 
     double x1, y1, r1, x2, y2, r2;
@@ -45,21 +43,19 @@ int main(int argc, char *argv[])
         double distance2 = r1 + r2;
 
         // same circle
-        if (distance1 <= epsilon)
+        if (distance1 < epsilon)
         {
-            if (fabs(r1 - r2) <= epsilon)
+            if (fabs(r1 - r2) < epsilon)
             {
                 if (r1 > epsilon)
                     cout << "THE CIRCLES ARE THE SAME\n";
                 else
                     cout << '(' << fixed << x1 + epsilon2 << ',' << fixed << y1 + epsilon2 << ")\n";
             }
-            else
-                cout << "NO INTERSECTION\n";
             continue;
         }
 
-        // no intersection, one circle contains within another circle
+        // no intersection
         if (distance1 > distance2 + epsilon || distance1 + r2 + epsilon < r1)
         {
             cout << "NO INTERSECTION\n";
@@ -67,7 +63,7 @@ int main(int argc, char *argv[])
         }
 
         // one intersecion
-        if (fabs(distance1 - distance2) <= epsilon)
+        if (fabs(distance1 - distance2) < epsilon)
         {
             x1 += r1 / (r1 + r2) * (x2 - x1);
             y1 += r1 / (r1 + r2) * (y2 - y1);
@@ -75,10 +71,10 @@ int main(int argc, char *argv[])
             continue;
         }
 
-        if (fabs(distance1 + r2 - r1) <= epsilon)
+        if (fabs(distance1 + r2 - r1) < epsilon)
         {
-            x1 += distance1 / r1 * (x2 - x1);
-            y1 += distance1 / r1 * (y2 - y1);
+            x1 += r1 / distance1 * (x2 - x1);
+            y1 += r1 / distance1 * (y2 - y1);
             cout << '(' << fixed << x1 + epsilon2 << ',' << fixed << y1 + epsilon2 << ")\n";
             continue;
         }
@@ -95,11 +91,11 @@ int main(int argc, char *argv[])
         x5 = x3 - h * (y2 - y1) / distance1;
         y5 = y3 + h * (x2 - x1) / distance1;
 
-        if (fabs(x4 - x5) <= epsilon && y4 > y5) swap(y4, y5);
+        if (fabs(x4 - x5) < epsilon && y4 > y5) swap(y4, y5);
         else if (x4 > x5) swap(x4, x5), swap(y4, y5);
         
-        cout << '(' << fixed << x4 << ',' << fixed << y4 << ")(";
-        cout << fixed << x5 << ',' << fixed << y5 << ")\n";
+        cout << '(' << fixed << x4 + epsilon2 << ',' << fixed << y4 + epsilon2 << ")(";
+        cout << fixed << x5 + epsilon2 << ',' << fixed << y5 + epsilon2 << ")\n";
     }
 
     return 0;
