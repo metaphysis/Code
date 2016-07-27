@@ -107,6 +107,9 @@ bool pointInBox(point p, point a, point b)
 
 int main(int argc, char *argv[])
 {
+    cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
+    cout.precision(1);
+    
     point left_top = (point){0.0, 200.0};
     point right_top = (point){400.0, 200.0};
     point left_bottom = (point){0.0, 0.0};
@@ -235,20 +238,20 @@ int main(int argc, char *argv[])
         if (first_out_found)
         {
             cout << "Left restricted area at point (";
-            cout << fixed << setprecision(1) << (first_out_x + EPSILON);
-            cout << fixed << setprecision(1) << "," << (first_out_y + EPSILON);
+            cout << fixed << (first_out_x + EPSILON);
+            cout << fixed << "," << (first_out_y + EPSILON);
             cout << ") and time ";
-            cout << fixed << setprecision(1) << (first_out_time + EPSILON);
+            cout << fixed << (first_out_time + EPSILON);
             cout << " sec." << endl;
         }
         else
         {
             cout << "No departure from restricted area" << endl;
             cout << "Maximum distance patient traveled from door was ";
-            cout << fixed << setprecision(1) << (maximum_distance + EPSILON) << " feet" << endl;
+            cout << fixed << (maximum_distance + EPSILON) << " feet" << endl;
         }
         cout << "Total distance traveled was ";
-        cout << fixed << setprecision(1) << (total_distance + EPSILON) << " feet" << endl;
+        cout << fixed << (total_distance + EPSILON) << " feet" << endl;
         cout << "***************************************" << endl;
     }
     

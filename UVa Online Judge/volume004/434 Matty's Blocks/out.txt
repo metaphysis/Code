@@ -1,0 +1,62 @@
+  4  4  3  3  0  0
+  3  3  3  3  0  0
+  2  2  2  2  0  0
+  4  4  3  3  0  0
+  3  3  3  3  0  0
+  4  5  3  3  0  0
+Matty needs at least 28 blocks, and can add at most 47 extra blocks.
+  3  0  2  3  3  0  3
+  5  0  2  5  4  0  5
+  3  0  2  3  3  0  3
+  6  0  2  5  4  0  6
+  5  0  2  5  4  0  5
+  6  0  2  5  4  0  6
+  0  0  0  0  0  0  0
+Matty needs at least 39 blocks, and can add at most 77 extra blocks.
+  0  1  0
+  0  0  0
+  0  2  0
+Matty needs at least 3 blocks, and can add at most 0 extra blocks.
+  3  0  2  3  5  6  1
+  0  0  0  0  0  0  0
+  1  0  1  1  1  1  1
+  1  0  1  1  1  1  1
+  3  0  2  3  4  4  1
+  1  0  1  1  1  1  1
+  3  0  2  3  5  8  1
+Matty needs at least 34 blocks, and can add at most 43 extra blocks.
+  5  6  4  3  0  0  2
+  1  1  1  1  0  0  1
+  0  0  0  0  0  0  0
+  3  3  3  3  0  0  2
+  1  1  1  1  0  0  1
+  4  4  4  3  0  0  2
+  5  5  4  3  0  0  2
+Matty needs at least 22 blocks, and can add at most 58 extra blocks.
+  1  1  1  1  1
+  1  1  1  1  1
+  3  3  2  3  3
+  0  0  0  0  0
+  2  2  2  2  2
+Matty needs at least 16 blocks, and can add at most 18 extra blocks.
+  1  0  1  1  1  1
+  2  0  2  1  2  2
+  3  0  4  1  4  2
+  3  0  4  1  4  2
+  1  0  1  1  1  1
+  3  0  5  1  4  2
+Matty needs at least 21 blocks, and can add at most 41 extra blocks.
+  1  0  1  1  1  1  1  0
+  2  0  4  4  1  4  4  0
+  2  0  4  4  1  4  4  0
+  2  0  5  7  1  6  6  0
+  2  0  5  5  1  5  5  0
+  0  0  0  0  0  0  0  0
+  2  0  5  6  1  6  6  0
+  2  0  5  6  1  6  6  0
+Matty needs at least 41 blocks, and can add at most 105 extra blocks.
+  0
+Matty needs at least 0 blocks, and can add at most 0 extra blocks.
+  8  0
+  4  0
+Matty needs at least 12 blocks, and can add at most 0 extra blocks.
