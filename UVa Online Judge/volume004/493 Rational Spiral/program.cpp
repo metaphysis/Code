@@ -1,8 +1,8 @@
 // Rational Spiral
 // UVa ID: 493
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2016-07-29
+// UVa Run Time: 0.580s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
 
     vector<pair<int, int>> offset = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
-    set<string> produced = {"1+1", "0+1"};
+    set<long long> produced = {100001, 1};
     map<int, pair<int, int>> rational = {{0, {1, 1}}, {1, {0, 1}}};
     
     int number, max_number = 0;
@@ -67,10 +67,9 @@ int main(int argc, char *argv[])
             while (a % b) t = a, a = b, b = t % b;
             
             if (b > 0) nexty /= b, nextx /= b;
-            string hash = to_string(sign * nexty) + "+" + to_string(nextx);
-            if (produced.find(hash) == produced.end())
+            if (produced.find(sign * (nexty * 100000 + nextx)) == produced.end())
             {
-                produced.insert(hash);
+                produced.insert(sign * (nexty * 100000 + nextx));
                 rational[counter] = make_pair(sign * nexty, nextx);
                 counter++;
             }
