@@ -12,62 +12,59 @@
 using namespace std;
 
 int main(int argc, char *argv[])
-{
-    // p, the base of number
-    int p;
-    while (cin >> p)
+{         
+    int base;
+    while (cin >> base)
     {
-        // find the number of digits and last digit
-        int d = 2, n, pow = p * p;
-        
+        int n = 2, x, pow = base * base;
+
         while (true)
         {
             bool found = false;
-            for (n = 1; n <= (p - 1); n++)
+            for (x = 1; x <= (base - 1); x++)
             {
-                int m = n * (pow - 1) % (2 * p - 1);
-                if (m == 0)
+                int r = x * (pow - 1) % (2 * base - 1);
+                if (r == 0)
                 {
                     found = true;
                     break;
                 }
             }
-            
+
             if (found)
                 break;
-                
-            pow = (pow * p) % (2 * p - 1);
-            d++;
+
+            pow = (pow * base) % (2 * base - 1);
+            n++;
         }
-        
-        // calculate other digits
-        vector < int > digits(d);
+
+        vector<int> digits(n);
         int carry = 0;
         for (int i = 0; i < digits.size(); i++)
         {
-            int temp = (p - 1) * n + carry;
-            digits[i] = temp % p;
-            carry = temp / p;
+            int temp = (base - 1) * x + carry;
+            digits[i] = temp % base;
+            carry = temp / base;
         }
         if (carry)
             digits.push_back(carry);
-        
+
         int borrow = 0;
         for (int i = digits.size() - 1; i >= 0; i--)
         {
-            int temp = borrow * p + digits[i];
-            digits[i] = temp / (2 * p - 1);
-            borrow = temp % (2 * p - 1);
+            int temp = borrow * base + digits[i];
+            digits[i] = temp / (2 * base - 1);
+            borrow = temp % (2 * base - 1);
         }
-        
-        while (digits.size() > d)
+
+        while (digits.size() > n)
             digits.erase(digits.end() - 1);
-            
-        cout << "For base " << p << " the double-trouble number is" << endl;
+
+        cout << "For base " << base << " the double-trouble number is" << endl;
         for (int i = digits.size() - 1; i >= 0; i--)
             cout << digits[i] << " ";
         cout << endl;
     }
-    
+
 	return 0;
 }

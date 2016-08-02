@@ -1,0 +1,2 @@
+The cheater can win by 2100 seconds with r = 7.00km and k = 0.00km.
+The cheater can win by 1270 seconds with r = 21.53km and k = 78.47km.
