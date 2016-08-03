@@ -30,6 +30,13 @@ const int MAX_INTEGER = numeric_limits<int>::max();
 int dimensions[15];
 int multiplications[15][15], selectedK[15][15];
 
+void initialize(int n)
+{
+    for (int i = 1; i <= n; i++)
+        for (int j = i; j <= n; j++)
+            multiplications[i][j] = MAX_INTEGER;
+}
+
 int findOptimalMultiplication(int i, int j)
 {
     if (multiplications[i][j] < MAX_INTEGER)
@@ -41,13 +48,13 @@ int findOptimalMultiplication(int i, int j)
     {
         for (int k = i; k <= j - 1; k++)
         {
-            int times = findOptimalMultiplication(i, k);
-            times += findOptimalMultiplication(k + 1, j);
-            times += dimensions[i - 1] * dimensions[k] * dimensions[j];
+            int count = findOptimalMultiplication(i, k) +
+                findOptimalMultiplication(k + 1, j) +
+                dimensions[i - 1] * dimensions[k] * dimensions[j];
                 
-            if (times < multiplications[i][j])
+            if (count < multiplications[i][j])
             {
-                multiplications[i][j] = times;
+                multiplications[i][j] = count;
                 selectedK[i][j] = k;
             }
         }
@@ -85,9 +92,7 @@ int main(int argc, char *argv[])
             if (i == n) dimensions[i] = column;
         }
 
-        for (int i = 1; i <= n; i++)
-            for (int j = i; j <= n; j++)
-                multiplications[i][j] = MAX_INTEGER;
+        initialize(n);
         
         findOptimalMultiplication(1, n);
         cout << "Case " << ++cases << ": ";

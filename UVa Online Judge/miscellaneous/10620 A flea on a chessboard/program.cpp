@@ -34,28 +34,16 @@ int main(int argc, char *argv[])
     {
         if (S == 0) break;
         
-        if ((x / S + y / S) % 2 == 1 && (x % S > 0) && (y % S > 0))
-        {
-            cout << "After 0 jumps the flea lands at (" << x << ", " << y << ").\n";
-            continue;
-        }
-        
-        if (((x % S) == 0 && (dx % S) == 0) || ((y % S) == 0 && (dy % S) == 0))
-        {
-            cout << "The flea cannot escape from black squares.\n";
-            continue;
-        }
-        
-        int step = 1;
+        int step = 0;
         while (true)
         {
-            x += dx, y += dy;
             if ((x / S + y / S) % 2 == 1 && (x % S > 0) && (y % S > 0))
             {
                 cout << "After " << step << " jumps the flea lands at (" << x << ", " << y << ").\n";
                 break;
             }
-            step++;
+            
+            step++, x += dx, y += dy;
             
             if (step >= 2 * S)
             {

@@ -31,7 +31,7 @@ void calculate()
         return;
     }
 
-    vector < int >digits;
+    vector <int> digits;
     long long temp = number - 1;
     while (temp)
     {
