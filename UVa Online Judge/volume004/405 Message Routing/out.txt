@@ -1,0 +1,10 @@
+Scenario # 1
+1 -- unable to route at HOUSTON
+2 -- delivered to HOUSTON
+3 -- delivered to NAULINS
+4 -- unable to route at NAULINS
+5 -- circular routing detected by DALLAS
+
+Scenario # 2
+1 -- delivered to SANANTONIO
+
