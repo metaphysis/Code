@@ -15,9 +15,7 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-    cin.tie(0);
-    cout.tie(0);
-    ios::sync_with_stdio(false);
+    cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
 
     vector<set<string>> chordes = {
         {"A"}, {"A#", "Bb"}, {"B", "Cb"}, {"C", "B#"},

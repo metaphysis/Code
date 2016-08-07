@@ -1,0 +1,52 @@
+Score  Time  Description
+-----  ----  -----------
+ 10      1   A
+ 20      4   B
+
+Total score: 30 points
+ Total time: 5 hours
+
+Score  Time  Description
+-----  ----  -----------
+  9      1   A
+
+Total score: 9 points
+ Total time: 1 hours
+
+Score  Time  Description
+-----  ----  -----------
+  9      1     N   
+  7      1     E   
+
+Total score: 16 points
+ Total time: 2 hours
+
+Score  Time  Description
+-----  ----  -----------
+  3      1   A discarded plastic fork at the crime scene
+  1      1   An email the victim sent to his cousin the week before the incident
+  2      2   Bloody sock
+  5      4   Inspector supervising evidence collection at the crime scene
+  3      4   Crime scene photos
+  4      8   411 operator recording
+  3      8   Officer who arrested defendant in a previous incident
+  2      8   Victim's neighbor 2
+  5     16   SCSD Crime Lab technician 1
+  4     16   Taxi cab driver
+  5     24   Officer responsible for making the arrest
+  7     40   The victim's personal physician
+  8     48   The defendant's current housemate
+ 10     60   Coroner's report
+
+Total score: 62 points
+ Total time: 240 hours
+
+Score  Time  Description
+-----  ----  -----------
+ 10      1   A
+ 20      4   B
+
+Total score: 30 points
+ Total time: 5 hours
+
+There is not enough time to present any evidence. Drop the charges.

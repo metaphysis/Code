@@ -1,0 +1,7 @@
+failure on day 2
+failure on day 3
+success on day 2
+failure on day 32
+failure on day 7
+failure on day 6
+success on day 2
