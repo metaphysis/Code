@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
 
-    int primes[MAX_N] = { 0 }, prime_count = 0, factors[16][2], factor_count;
+    int primes[MAX_N + 1] = { 0 }, prime_count = 0, factors[16][2], factor_count;
     
     primes[prime_count++] = 2;
     for (int i = 3; i <= MAX_N; i += 2)
