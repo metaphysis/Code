@@ -1,0 +1,48 @@
+Problem #1
+P=643.20W
+
+Problem #2
+I=1.92A
+
+Problem #3
+U=36.99V
+
+Problem #4
+P=900.00W
+
+Problem #5
+I=0.45A
+
+Problem #6
+U=1250000.00V
+
+Problem #7
+U=1250000.00V
+
+Problem #8
+P=900.00W
+
+Problem #9
+I=0.45A
+
+Problem #10
+P=900.00W
+
+Problem #11
+I=0.45A
+
+Problem #12
+U=1250000.00V
+
+Problem #13
+P=900.00W
+
+Problem #14
+I=0.00A
+
+Problem #15
+I=0.50A
+
+Problem #16
+P=2.00W
+
