@@ -1,0 +1,400 @@
+Map #1
+The treasure is located at (304.111,-325.269).
+The distance to the treasure is 445.290.
+
+Map #2
+The treasure is located at (-1697.310,-1990.310).
+The distance to the treasure is 2615.759.
+
+Map #3
+The treasure is located at (-624.375,220.625).
+The distance to the treasure is 662.208.
+
+Map #4
+The treasure is located at (-1066.362,2454.500).
+The distance to the treasure is 2676.135.
+
+Map #5
+The treasure is located at (-991.479,-102.718).
+The distance to the treasure is 996.785.
+
+Map #6
+The treasure is located at (1282.560,2574.878).
+The distance to the treasure is 2876.622.
+
+Map #7
+The treasure is located at (1078.243,-360.213).
+The distance to the treasure is 1136.821.
+
+Map #8
+The treasure is located at (-108.903,3047.701).
+The distance to the treasure is 3049.646.
+
+Map #9
+The treasure is located at (-997.728,681.432).
+The distance to the treasure is 1208.226.
+
+Map #10
+The treasure is located at (1612.751,2061.166).
+The distance to the treasure is 2617.130.
+
+Map #11
+The treasure is located at (744.268,-635.110).
+The distance to the treasure is 978.417.
+
+Map #12
+The treasure is located at (2926.451,2096.014).
+The distance to the treasure is 3599.637.
+
+Map #13
+The treasure is located at (2187.260,-1587.772).
+The distance to the treasure is 2702.800.
+
+Map #14
+The treasure is located at (-362.807,-665.132).
+The distance to the treasure is 757.648.
+
+Map #15
+The treasure is located at (621.547,621.547).
+The distance to the treasure is 879.000.
+
+Map #16
+The treasure is located at (-948.023,-183.023).
+The distance to the treasure is 965.528.
+
+Map #17
+The treasure is located at (-181.726,1992.445).
+The distance to the treasure is 2000.715.
+
+Map #18
+The treasure is located at (97.825,646.825).
+The distance to the treasure is 654.180.
+
+Map #19
+The treasure is located at (-3453.553,800.605).
+The distance to the treasure is 3545.137.
+
+Map #20
+The treasure is located at (-396.000,0.000).
+The distance to the treasure is 396.000.
+
+Map #21
+The treasure is located at (-332.921,786.921).
+The distance to the treasure is 854.448.
+
+Map #22
+The treasure is located at (-2764.855,-117.763).
+The distance to the treasure is 2767.362.
+
+Map #23
+The treasure is located at (1222.229,264.213).
+The distance to the treasure is 1250.461.
+
+Map #24
+The treasure is located at (-1685.719,229.281).
+The distance to the treasure is 1701.240.
+
+Map #25
+The treasure is located at (2132.412,-889.540).
+The distance to the treasure is 2310.511.
+
+Map #26
+The treasure is located at (381.694,-547.479).
+The distance to the treasure is 667.400.
+
+Map #27
+The treasure is located at (-1375.157,808.150).
+The distance to the treasure is 1595.043.
+
+Map #28
+The treasure is located at (-218.000,0.000).
+The distance to the treasure is 218.000.
+
+Map #29
+The treasure is located at (0.000,326.000).
+The distance to the treasure is 326.000.
+
+Map #30
+The treasure is located at (-327.390,565.390).
+The distance to the treasure is 653.338.
+
+Map #31
+The treasure is located at (-1719.717,632.961).
+The distance to the treasure is 1832.503.
+
+Map #32
+The treasure is located at (4222.429,-4031.632).
+The distance to the treasure is 5838.061.
+
+Map #33
+The treasure is located at (455.377,-265.623).
+The distance to the treasure is 527.185.
+
+Map #34
+The treasure is located at (725.984,773.575).
+The distance to the treasure is 1060.882.
+
+Map #35
+The treasure is located at (-47.376,47.376).
+The distance to the treasure is 67.000.
+
+Map #36
+The treasure is located at (-466.104,1532.417).
+The distance to the treasure is 1601.735.
+
+Map #37
+The treasure is located at (-2290.297,3648.097).
+The distance to the treasure is 4307.444.
+
+Map #38
+The treasure is located at (-73.961,-242.538).
+The distance to the treasure is 253.564.
+
+Map #39
+The treasure is located at (-483.000,0.000).
+The distance to the treasure is 483.000.
+
+Map #40
+The treasure is located at (-302.132,250.477).
+The distance to the treasure is 392.457.
+
+Map #41
+The treasure is located at (2012.407,451.407).
+The distance to the treasure is 2062.414.
+
+Map #42
+The treasure is located at (-727.613,-795.414).
+The distance to the treasure is 1078.009.
+
+Map #43
+The treasure is located at (1340.553,-1491.222).
+The distance to the treasure is 2005.199.
+
+Map #44
+The treasure is located at (836.415,-187.116).
+The distance to the treasure is 857.089.
+
+Map #45
+The treasure is located at (928.431,-1059.953).
+The distance to the treasure is 1409.072.
+
+Map #46
+The treasure is located at (-904.912,-497.912).
+The distance to the treasure is 1032.852.
+
+Map #47
+The treasure is located at (-997.728,-95.459).
+The distance to the treasure is 1002.284.
+
+Map #48
+The treasure is located at (120.058,752.151).
+The distance to the treasure is 761.673.
+
+Map #49
+The treasure is located at (235.266,1166.675).
+The distance to the treasure is 1190.160.
+
+Map #50
+The treasure is located at (-417.900,-43.134).
+The distance to the treasure is 420.120.
+
+Map #51
+The treasure is located at (-833.066,96.167).
+The distance to the treasure is 838.598.
+
+Map #52
+The treasure is located at (628.417,-648.417).
+The distance to the treasure is 902.969.
+
+Map #53
+The treasure is located at (-1371.778,-1614.191).
+The distance to the treasure is 2118.345.
+
+Map #54
+The treasure is located at (-146.599,3431.433).
+The distance to the treasure is 3434.563.
+
+Map #55
+The treasure is located at (-1798.354,2008.853).
+The distance to the treasure is 2696.213.
+
+Map #56
+The treasure is located at (-349.733,-416.267).
+The distance to the treasure is 543.683.
+
+Map #57
+The treasure is located at (34.040,-193.040).
+The distance to the treasure is 196.018.
+
+Map #58
+The treasure is located at (1738.204,3318.600).
+The distance to the treasure is 3746.260.
+
+Map #59
+The treasure is located at (85.707,970.707).
+The distance to the treasure is 974.483.
+
+Map #60
+The treasure is located at (-399.221,-113.714).
+The distance to the treasure is 415.101.
+
+Map #61
+The treasure is located at (-878.177,-1075.111).
+The distance to the treasure is 1388.185.
+
+Map #62
+The treasure is located at (-329.387,-1538.341).
+The distance to the treasure is 1573.209.
+
+Map #63
+The treasure is located at (735.401,510.599).
+The distance to the treasure is 895.280.
+
+Map #64
+The treasure is located at (1298.417,-648.417).
+The distance to the treasure is 1451.320.
+
+Map #65
+The treasure is located at (-65.592,-269.408).
+The distance to the treasure is 277.278.
+
+Map #66
+The treasure is located at (576.292,365.356).
+The distance to the treasure is 682.347.
+
+Map #67
+The treasure is located at (-699.450,3554.829).
+The distance to the treasure is 3622.987.
+
+Map #68
+The treasure is located at (3068.740,-1809.740).
+The distance to the treasure is 3562.629.
+
+Map #69
+The treasure is located at (-960.609,-2636.832).
+The distance to the treasure is 2806.360.
+
+Map #70
+The treasure is located at (-181.726,552.274).
+The distance to the treasure is 581.404.
+
+Map #71
+The treasure is located at (-2133.248,1298.248).
+The distance to the treasure is 2497.238.
+
+Map #72
+The treasure is located at (-415.621,-114.114).
+The distance to the treasure is 431.002.
+
+Map #73
+The treasure is located at (186.942,646.302).
+The distance to the treasure is 672.795.
+
+Map #74
+The treasure is located at (667.698,-639.698).
+The distance to the treasure is 924.680.
+
+Map #75
+The treasure is located at (-689.072,-1278.663).
+The distance to the treasure is 1452.515.
+
+Map #76
+The treasure is located at (744.737,2282.327).
+The distance to the treasure is 2400.760.
+
+Map #77
+The treasure is located at (634.275,634.275).
+The distance to the treasure is 897.000.
+
+Map #78
+The treasure is located at (-458.074,1613.981).
+The distance to the treasure is 1677.727.
+
+Map #79
+The treasure is located at (-1198.327,1431.334).
+The distance to the treasure is 1866.736.
+
+Map #80
+The treasure is located at (605.176,872.332).
+The distance to the treasure is 1061.697.
+
+Map #81
+The treasure is located at (316.090,812.185).
+The distance to the treasure is 871.526.
+
+Map #82
+The treasure is located at (-239.757,766.565).
+The distance to the treasure is 803.184.
+
+Map #83
+The treasure is located at (-331.055,511.945).
+The distance to the treasure is 609.660.
+
+Map #84
+The treasure is located at (-480.509,1117.498).
+The distance to the treasure is 1216.425.
+
+Map #85
+The treasure is located at (421.453,226.316).
+The distance to the treasure is 478.374.
+
+Map #86
+The treasure is located at (3046.745,1883.694).
+The distance to the treasure is 3582.032.
+
+Map #87
+The treasure is located at (968.790,340.063).
+The distance to the treasure is 1026.741.
+
+Map #88
+The treasure is located at (4547.706,-1671.962).
+The distance to the treasure is 4845.316.
+
+Map #89
+The treasure is located at (1464.445,83.161).
+The distance to the treasure is 1466.805.
+
+Map #90
+The treasure is located at (882.256,-2498.628).
+The distance to the treasure is 2649.815.
+
+Map #91
+The treasure is located at (-703.883,211.425).
+The distance to the treasure is 734.950.
+
+Map #92
+The treasure is located at (815.371,-1906.817).
+The distance to the treasure is 2073.833.
+
+Map #93
+The treasure is located at (-1720.456,-2835.326).
+The distance to the treasure is 3316.480.
+
+Map #94
+The treasure is located at (2661.709,-161.070).
+The distance to the treasure is 2666.578.
+
+Map #95
+The treasure is located at (1767.089,-1355.897).
+The distance to the treasure is 2227.343.
+
+Map #96
+The treasure is located at (394.247,724.628).
+The distance to the treasure is 824.934.
+
+Map #97
+The treasure is located at (1274.006,887.043).
+The distance to the treasure is 1552.397.
+
+Map #98
+The treasure is located at (-377.713,-366.287).
+The distance to the treasure is 526.149.
+
+Map #99
+The treasure is located at (45.512,-713.839).
+The distance to the treasure is 715.288.
+
+Map #100
+The treasure is located at (-1207.683,-1669.576).
+The distance to the treasure is 2060.578.
+
