@@ -1,0 +1,1998 @@
+Scenario #1
+Frog Distance = 15.524
+
+Scenario #2
+Frog Distance = 32.558
+
+Scenario #3
+Frog Distance = 20.881
+
+Scenario #4
+Frog Distance = 27.019
+
+Scenario #5
+Frog Distance = 18.788
+
+Scenario #6
+Frog Distance = 31.064
+
+Scenario #7
+Frog Distance = 41.725
+
+Scenario #8
+Frog Distance = 19.105
+
+Scenario #9
+Frog Distance = 59.059
+
+Scenario #10
+Frog Distance = 21.024
+
+Scenario #11
+Frog Distance = 24.166
+
+Scenario #12
+Frog Distance = 19.925
+
+Scenario #13
+Frog Distance = 24.759
+
+Scenario #14
+Frog Distance = 21.840
+
+Scenario #15
+Frog Distance = 23.345
+
+Scenario #16
+Frog Distance = 33.615
+
+Scenario #17
+Frog Distance = 28.178
+
+Scenario #18
+Frog Distance = 28.160
+
+Scenario #19
+Frog Distance = 25.080
+
+Scenario #20
+Frog Distance = 33.061
+
+Scenario #21
+Frog Distance = 48.104
+
+Scenario #22
+Frog Distance = 49.649
+
+Scenario #23
+Frog Distance = 22.204
+
+Scenario #24
+Frog Distance = 24.413
+
+Scenario #25
+Frog Distance = 40.000
+
+Scenario #26
+Frog Distance = 35.468
+
+Scenario #27
+Frog Distance = 38.897
+
+Scenario #28
+Frog Distance = 35.511
+
+Scenario #29
+Frog Distance = 21.633
+
+Scenario #30
+Frog Distance = 38.419
+
+Scenario #31
+Frog Distance = 44.822
+
+Scenario #32
+Frog Distance = 31.016
+
+Scenario #33
+Frog Distance = 23.409
+
+Scenario #34
+Frog Distance = 39.812
+
+Scenario #35
+Frog Distance = 23.259
+
+Scenario #36
+Frog Distance = 44.553
+
+Scenario #37
+Frog Distance = 8.246
+
+Scenario #38
+Frog Distance = 28.601
+
+Scenario #39
+Frog Distance = 56.080
+
+Scenario #40
+Frog Distance = 47.885
+
+Scenario #41
+Frog Distance = 32.311
+
+Scenario #42
+Frog Distance = 93.606
+
+Scenario #43
+Frog Distance = 9.487
+
+Scenario #44
+Frog Distance = 21.095
+
+Scenario #45
+Frog Distance = 14.213
+
+Scenario #46
+Frog Distance = 20.248
+
+Scenario #47
+Frog Distance = 35.000
+
+Scenario #48
+Frog Distance = 24.839
+
+Scenario #49
+Frog Distance = 35.384
+
+Scenario #50
+Frog Distance = 46.239
+
+Scenario #51
+Frog Distance = 30.887
+
+Scenario #52
+Frog Distance = 25.000
+
+Scenario #53
+Frog Distance = 24.166
+
+Scenario #54
+Frog Distance = 23.324
+
+Scenario #55
+Frog Distance = 29.069
+
+Scenario #56
+Frog Distance = 32.280
+
+Scenario #57
+Frog Distance = 22.804
+
+Scenario #58
+Frog Distance = 50.359
+
+Scenario #59
+Frog Distance = 39.560
+
+Scenario #60
+Frog Distance = 25.710
+
+Scenario #61
+Frog Distance = 21.378
+
+Scenario #62
+Frog Distance = 30.000
+
+Scenario #63
+Frog Distance = 37.577
+
+Scenario #64
+Frog Distance = 34.986
+
+Scenario #65
+Frog Distance = 16.031
+
+Scenario #66
+Frog Distance = 28.018
+
+Scenario #67
+Frog Distance = 15.000
+
+Scenario #68
+Frog Distance = 22.023
+
+Scenario #69
+Frog Distance = 7.280
+
+Scenario #70
+Frog Distance = 18.974
+
+Scenario #71
+Frog Distance = 35.735
+
+Scenario #72
+Frog Distance = 54.231
+
+Scenario #73
+Frog Distance = 34.713
+
+Scenario #74
+Frog Distance = 22.804
+
+Scenario #75
+Frog Distance = 10.000
+
+Scenario #76
+Frog Distance = 28.636
+
+Scenario #77
+Frog Distance = 7.810
+
+Scenario #78
+Frog Distance = 41.677
+
+Scenario #79
+Frog Distance = 18.028
+
+Scenario #80
+Frog Distance = 35.114
+
+Scenario #81
+Frog Distance = 26.401
+
+Scenario #82
+Frog Distance = 22.847
+
+Scenario #83
+Frog Distance = 25.962
+
+Scenario #84
+Frog Distance = 5.099
+
+Scenario #85
+Frog Distance = 18.601
+
+Scenario #86
+Frog Distance = 26.173
+
+Scenario #87
+Frog Distance = 35.777
+
+Scenario #88
+Frog Distance = 22.804
+
+Scenario #89
+Frog Distance = 10.050
+
+Scenario #90
+Frog Distance = 34.132
+
+Scenario #91
+Frog Distance = 26.000
+
+Scenario #92
+Frog Distance = 59.641
+
+Scenario #93
+Frog Distance = 49.406
+
+Scenario #94
+Frog Distance = 46.174
+
+Scenario #95
+Frog Distance = 27.459
+
+Scenario #96
+Frog Distance = 35.847
+
+Scenario #97
+Frog Distance = 27.074
+
+Scenario #98
+Frog Distance = 14.560
+
+Scenario #99
+Frog Distance = 36.249
+
+Scenario #100
+Frog Distance = 34.205
+
+Scenario #101
+Frog Distance = 11.180
+
+Scenario #102
+Frog Distance = 34.785
+
+Scenario #103
+Frog Distance = 25.495
+
+Scenario #104
+Frog Distance = 26.306
+
+Scenario #105
+Frog Distance = 20.025
+
+Scenario #106
+Frog Distance = 28.636
+
+Scenario #107
+Frog Distance = 26.077
+
+Scenario #108
+Frog Distance = 28.653
+
+Scenario #109
+Frog Distance = 24.207
+
+Scenario #110
+Frog Distance = 19.105
+
+Scenario #111
+Frog Distance = 48.083
+
+Scenario #112
+Frog Distance = 23.409
+
+Scenario #113
+Frog Distance = 63.640
+
+Scenario #114
+Frog Distance = 37.483
+
+Scenario #115
+Frog Distance = 16.763
+
+Scenario #116
+Frog Distance = 21.095
+
+Scenario #117
+Frog Distance = 34.713
+
+Scenario #118
+Frog Distance = 30.610
+
+Scenario #119
+Frog Distance = 70.831
+
+Scenario #120
+Frog Distance = 22.672
+
+Scenario #121
+Frog Distance = 25.298
+
+Scenario #122
+Frog Distance = 46.615
+
+Scenario #123
+Frog Distance = 25.080
+
+Scenario #124
+Frog Distance = 36.235
+
+Scenario #125
+Frog Distance = 13.342
+
+Scenario #126
+Frog Distance = 26.077
+
+Scenario #127
+Frog Distance = 26.306
+
+Scenario #128
+Frog Distance = 6.708
+
+Scenario #129
+Frog Distance = 8.544
+
+Scenario #130
+Frog Distance = 23.022
+
+Scenario #131
+Frog Distance = 23.854
+
+Scenario #132
+Frog Distance = 26.077
+
+Scenario #133
+Frog Distance = 28.018
+
+Scenario #134
+Frog Distance = 27.659
+
+Scenario #135
+Frog Distance = 53.009
+
+Scenario #136
+Frog Distance = 8.602
+
+Scenario #137
+Frog Distance = 38.588
+
+Scenario #138
+Frog Distance = 23.601
+
+Scenario #139
+Frog Distance = 13.342
+
+Scenario #140
+Frog Distance = 19.799
+
+Scenario #141
+Frog Distance = 16.763
+
+Scenario #142
+Frog Distance = 18.028
+
+Scenario #143
+Frog Distance = 28.302
+
+Scenario #144
+Frog Distance = 31.064
+
+Scenario #145
+Frog Distance = 23.259
+
+Scenario #146
+Frog Distance = 26.019
+
+Scenario #147
+Frog Distance = 15.652
+
+Scenario #148
+Frog Distance = 30.414
+
+Scenario #149
+Frog Distance = 19.313
+
+Scenario #150
+Frog Distance = 28.160
+
+Scenario #151
+Frog Distance = 48.847
+
+Scenario #152
+Frog Distance = 22.204
+
+Scenario #153
+Frog Distance = 19.698
+
+Scenario #154
+Frog Distance = 19.925
+
+Scenario #155
+Frog Distance = 26.019
+
+Scenario #156
+Frog Distance = 40.804
+
+Scenario #157
+Frog Distance = 15.524
+
+Scenario #158
+Frog Distance = 74.330
+
+Scenario #159
+Frog Distance = 19.647
+
+Scenario #160
+Frog Distance = 20.591
+
+Scenario #161
+Frog Distance = 34.059
+
+Scenario #162
+Frog Distance = 33.838
+
+Scenario #163
+Frog Distance = 63.063
+
+Scenario #164
+Frog Distance = 14.036
+
+Scenario #165
+Frog Distance = 26.476
+
+Scenario #166
+Frog Distance = 20.881
+
+Scenario #167
+Frog Distance = 30.083
+
+Scenario #168
+Frog Distance = 42.000
+
+Scenario #169
+Frog Distance = 36.674
+
+Scenario #170
+Frog Distance = 21.633
+
+Scenario #171
+Frog Distance = 15.811
+
+Scenario #172
+Frog Distance = 29.000
+
+Scenario #173
+Frog Distance = 58.078
+
+Scenario #174
+Frog Distance = 36.892
+
+Scenario #175
+Frog Distance = 19.416
+
+Scenario #176
+Frog Distance = 33.377
+
+Scenario #177
+Frog Distance = 24.042
+
+Scenario #178
+Frog Distance = 55.326
+
+Scenario #179
+Frog Distance = 35.228
+
+Scenario #180
+Frog Distance = 94.430
+
+Scenario #181
+Frog Distance = 30.083
+
+Scenario #182
+Frog Distance = 39.000
+
+Scenario #183
+Frog Distance = 14.036
+
+Scenario #184
+Frog Distance = 30.610
+
+Scenario #185
+Frog Distance = 6.708
+
+Scenario #186
+Frog Distance = 24.698
+
+Scenario #187
+Frog Distance = 15.000
+
+Scenario #188
+Frog Distance = 29.155
+
+Scenario #189
+Frog Distance = 36.069
+
+Scenario #190
+Frog Distance = 18.358
+
+Scenario #191
+Frog Distance = 14.036
+
+Scenario #192
+Frog Distance = 12.530
+
+Scenario #193
+Frog Distance = 27.000
+
+Scenario #194
+Frog Distance = 33.601
+
+Scenario #195
+Frog Distance = 30.364
+
+Scenario #196
+Frog Distance = 30.000
+
+Scenario #197
+Frog Distance = 8.062
+
+Scenario #198
+Frog Distance = 22.561
+
+Scenario #199
+Frog Distance = 54.203
+
+Scenario #200
+Frog Distance = 55.082
+
+Scenario #201
+Frog Distance = 35.000
+
+Scenario #202
+Frog Distance = 47.011
+
+Scenario #203
+Frog Distance = 42.202
+
+Scenario #204
+Frog Distance = 57.940
+
+Scenario #205
+Frog Distance = 31.241
+
+Scenario #206
+Frog Distance = 48.600
+
+Scenario #207
+Frog Distance = 21.633
+
+Scenario #208
+Frog Distance = 20.224
+
+Scenario #209
+Frog Distance = 23.259
+
+Scenario #210
+Frog Distance = 11.000
+
+Scenario #211
+Frog Distance = 41.049
+
+Scenario #212
+Frog Distance = 27.785
+
+Scenario #213
+Frog Distance = 26.306
+
+Scenario #214
+Frog Distance = 25.495
+
+Scenario #215
+Frog Distance = 28.844
+
+Scenario #216
+Frog Distance = 45.177
+
+Scenario #217
+Frog Distance = 25.495
+
+Scenario #218
+Frog Distance = 50.931
+
+Scenario #219
+Frog Distance = 62.968
+
+Scenario #220
+Frog Distance = 27.893
+
+Scenario #221
+Frog Distance = 28.443
+
+Scenario #222
+Frog Distance = 77.466
+
+Scenario #223
+Frog Distance = 36.056
+
+Scenario #224
+Frog Distance = 34.713
+
+Scenario #225
+Frog Distance = 25.000
+
+Scenario #226
+Frog Distance = 38.013
+
+Scenario #227
+Frog Distance = 25.080
+
+Scenario #228
+Frog Distance = 31.016
+
+Scenario #229
+Frog Distance = 39.850
+
+Scenario #230
+Frog Distance = 13.038
+
+Scenario #231
+Frog Distance = 33.971
+
+Scenario #232
+Frog Distance = 27.459
+
+Scenario #233
+Frog Distance = 20.881
+
+Scenario #234
+Frog Distance = 61.392
+
+Scenario #235
+Frog Distance = 29.682
+
+Scenario #236
+Frog Distance = 50.990
+
+Scenario #237
+Frog Distance = 38.328
+
+Scenario #238
+Frog Distance = 35.228
+
+Scenario #239
+Frog Distance = 32.527
+
+Scenario #240
+Frog Distance = 6.708
+
+Scenario #241
+Frog Distance = 35.847
+
+Scenario #242
+Frog Distance = 30.594
+
+Scenario #243
+Frog Distance = 12.166
+
+Scenario #244
+Frog Distance = 51.088
+
+Scenario #245
+Frog Distance = 56.851
+
+Scenario #246
+Frog Distance = 23.087
+
+Scenario #247
+Frog Distance = 26.173
+
+Scenario #248
+Frog Distance = 24.413
+
+Scenario #249
+Frog Distance = 21.190
+
+Scenario #250
+Frog Distance = 19.026
+
+Scenario #251
+Frog Distance = 55.462
+
+Scenario #252
+Frog Distance = 19.698
+
+Scenario #253
+Frog Distance = 35.114
+
+Scenario #254
+Frog Distance = 41.629
+
+Scenario #255
+Frog Distance = 39.446
+
+Scenario #256
+Frog Distance = 34.366
+
+Scenario #257
+Frog Distance = 14.142
+
+Scenario #258
+Frog Distance = 29.411
+
+Scenario #259
+Frog Distance = 23.409
+
+Scenario #260
+Frog Distance = 70.682
+
+Scenario #261
+Frog Distance = 47.707
+
+Scenario #262
+Frog Distance = 43.600
+
+Scenario #263
+Frog Distance = 27.000
+
+Scenario #264
+Frog Distance = 58.669
+
+Scenario #265
+Frog Distance = 27.074
+
+Scenario #266
+Frog Distance = 9.849
+
+Scenario #267
+Frog Distance = 24.698
+
+Scenario #268
+Frog Distance = 33.971
+
+Scenario #269
+Frog Distance = 41.629
+
+Scenario #270
+Frog Distance = 18.974
+
+Scenario #271
+Frog Distance = 32.202
+
+Scenario #272
+Frog Distance = 25.318
+
+Scenario #273
+Frog Distance = 20.881
+
+Scenario #274
+Frog Distance = 37.696
+
+Scenario #275
+Frog Distance = 30.265
+
+Scenario #276
+Frog Distance = 25.000
+
+Scenario #277
+Frog Distance = 39.319
+
+Scenario #278
+Frog Distance = 92.962
+
+Scenario #279
+Frog Distance = 21.024
+
+Scenario #280
+Frog Distance = 23.707
+
+Scenario #281
+Frog Distance = 30.887
+
+Scenario #282
+Frog Distance = 37.483
+
+Scenario #283
+Frog Distance = 32.249
+
+Scenario #284
+Frog Distance = 27.074
+
+Scenario #285
+Frog Distance = 52.202
+
+Scenario #286
+Frog Distance = 33.615
+
+Scenario #287
+Frog Distance = 17.464
+
+Scenario #288
+Frog Distance = 26.000
+
+Scenario #289
+Frog Distance = 33.422
+
+Scenario #290
+Frog Distance = 33.242
+
+Scenario #291
+Frog Distance = 36.000
+
+Scenario #292
+Frog Distance = 51.352
+
+Scenario #293
+Frog Distance = 36.125
+
+Scenario #294
+Frog Distance = 31.780
+
+Scenario #295
+Frog Distance = 20.809
+
+Scenario #296
+Frog Distance = 28.231
+
+Scenario #297
+Frog Distance = 40.311
+
+Scenario #298
+Frog Distance = 29.411
+
+Scenario #299
+Frog Distance = 25.080
+
+Scenario #300
+Frog Distance = 43.012
+
+Scenario #301
+Frog Distance = 58.078
+
+Scenario #302
+Frog Distance = 36.620
+
+Scenario #303
+Frog Distance = 14.213
+
+Scenario #304
+Frog Distance = 42.297
+
+Scenario #305
+Frog Distance = 20.881
+
+Scenario #306
+Frog Distance = 32.016
+
+Scenario #307
+Frog Distance = 38.601
+
+Scenario #308
+Frog Distance = 44.944
+
+Scenario #309
+Frog Distance = 24.083
+
+Scenario #310
+Frog Distance = 26.401
+
+Scenario #311
+Frog Distance = 37.054
+
+Scenario #312
+Frog Distance = 27.019
+
+Scenario #313
+Frog Distance = 34.438
+
+Scenario #314
+Frog Distance = 54.129
+
+Scenario #315
+Frog Distance = 20.396
+
+Scenario #316
+Frog Distance = 35.228
+
+Scenario #317
+Frog Distance = 61.984
+
+Scenario #318
+Frog Distance = 36.125
+
+Scenario #319
+Frog Distance = 8.062
+
+Scenario #320
+Frog Distance = 12.369
+
+Scenario #321
+Frog Distance = 25.612
+
+Scenario #322
+Frog Distance = 37.643
+
+Scenario #323
+Frog Distance = 44.000
+
+Scenario #324
+Frog Distance = 27.586
+
+Scenario #325
+Frog Distance = 28.178
+
+Scenario #326
+Frog Distance = 36.346
+
+Scenario #327
+Frog Distance = 29.732
+
+Scenario #328
+Frog Distance = 24.698
+
+Scenario #329
+Frog Distance = 21.213
+
+Scenario #330
+Frog Distance = 10.296
+
+Scenario #331
+Frog Distance = 29.017
+
+Scenario #332
+Frog Distance = 28.071
+
+Scenario #333
+Frog Distance = 7.616
+
+Scenario #334
+Frog Distance = 13.000
+
+Scenario #335
+Frog Distance = 21.932
+
+Scenario #336
+Frog Distance = 24.698
+
+Scenario #337
+Frog Distance = 26.173
+
+Scenario #338
+Frog Distance = 5.385
+
+Scenario #339
+Frog Distance = 22.361
+
+Scenario #340
+Frog Distance = 8.485
+
+Scenario #341
+Frog Distance = 30.232
+
+Scenario #342
+Frog Distance = 26.571
+
+Scenario #343
+Frog Distance = 37.014
+
+Scenario #344
+Frog Distance = 26.907
+
+Scenario #345
+Frog Distance = 23.345
+
+Scenario #346
+Frog Distance = 9.849
+
+Scenario #347
+Frog Distance = 18.385
+
+Scenario #348
+Frog Distance = 12.649
+
+Scenario #349
+Frog Distance = 12.530
+
+Scenario #350
+Frog Distance = 33.838
+
+Scenario #351
+Frog Distance = 17.029
+
+Scenario #352
+Frog Distance = 28.302
+
+Scenario #353
+Frog Distance = 15.000
+
+Scenario #354
+Frog Distance = 22.672
+
+Scenario #355
+Frog Distance = 35.693
+
+Scenario #356
+Frog Distance = 29.530
+
+Scenario #357
+Frog Distance = 21.024
+
+Scenario #358
+Frog Distance = 32.802
+
+Scenario #359
+Frog Distance = 37.643
+
+Scenario #360
+Frog Distance = 25.456
+
+Scenario #361
+Frog Distance = 49.578
+
+Scenario #362
+Frog Distance = 42.059
+
+Scenario #363
+Frog Distance = 35.057
+
+Scenario #364
+Frog Distance = 23.345
+
+Scenario #365
+Frog Distance = 20.248
+
+Scenario #366
+Frog Distance = 37.363
+
+Scenario #367
+Frog Distance = 26.306
+
+Scenario #368
+Frog Distance = 18.439
+
+Scenario #369
+Frog Distance = 41.012
+
+Scenario #370
+Frog Distance = 22.472
+
+Scenario #371
+Frog Distance = 20.125
+
+Scenario #372
+Frog Distance = 20.100
+
+Scenario #373
+Frog Distance = 24.515
+
+Scenario #374
+Frog Distance = 30.676
+
+Scenario #375
+Frog Distance = 45.177
+
+Scenario #376
+Frog Distance = 32.311
+
+Scenario #377
+Frog Distance = 25.710
+
+Scenario #378
+Frog Distance = 19.105
+
+Scenario #379
+Frog Distance = 26.627
+
+Scenario #380
+Frog Distance = 9.220
+
+Scenario #381
+Frog Distance = 31.257
+
+Scenario #382
+Frog Distance = 24.698
+
+Scenario #383
+Frog Distance = 39.319
+
+Scenario #384
+Frog Distance = 29.428
+
+Scenario #385
+Frog Distance = 13.454
+
+Scenario #386
+Frog Distance = 51.313
+
+Scenario #387
+Frog Distance = 36.401
+
+Scenario #388
+Frog Distance = 16.643
+
+Scenario #389
+Frog Distance = 43.046
+
+Scenario #390
+Frog Distance = 20.881
+
+Scenario #391
+Frog Distance = 20.518
+
+Scenario #392
+Frog Distance = 33.541
+
+Scenario #393
+Frog Distance = 21.633
+
+Scenario #394
+Frog Distance = 40.792
+
+Scenario #395
+Frog Distance = 28.284
+
+Scenario #396
+Frog Distance = 15.811
+
+Scenario #397
+Frog Distance = 42.059
+
+Scenario #398
+Frog Distance = 31.305
+
+Scenario #399
+Frog Distance = 15.811
+
+Scenario #400
+Frog Distance = 41.231
+
+Scenario #401
+Frog Distance = 23.854
+
+Scenario #402
+Frog Distance = 26.249
+
+Scenario #403
+Frog Distance = 40.000
+
+Scenario #404
+Frog Distance = 17.692
+
+Scenario #405
+Frog Distance = 28.792
+
+Scenario #406
+Frog Distance = 16.763
+
+Scenario #407
+Frog Distance = 16.155
+
+Scenario #408
+Frog Distance = 11.045
+
+Scenario #409
+Frog Distance = 33.287
+
+Scenario #410
+Frog Distance = 40.447
+
+Scenario #411
+Frog Distance = 15.133
+
+Scenario #412
+Frog Distance = 30.017
+
+Scenario #413
+Frog Distance = 40.000
+
+Scenario #414
+Frog Distance = 33.615
+
+Scenario #415
+Frog Distance = 28.636
+
+Scenario #416
+Frog Distance = 25.000
+
+Scenario #417
+Frog Distance = 57.140
+
+Scenario #418
+Frog Distance = 28.601
+
+Scenario #419
+Frog Distance = 33.242
+
+Scenario #420
+Frog Distance = 28.425
+
+Scenario #421
+Frog Distance = 33.838
+
+Scenario #422
+Frog Distance = 79.712
+
+Scenario #423
+Frog Distance = 33.061
+
+Scenario #424
+Frog Distance = 24.187
+
+Scenario #425
+Frog Distance = 12.728
+
+Scenario #426
+Frog Distance = 22.672
+
+Scenario #427
+Frog Distance = 28.862
+
+Scenario #428
+Frog Distance = 44.204
+
+Scenario #429
+Frog Distance = 26.306
+
+Scenario #430
+Frog Distance = 11.705
+
+Scenario #431
+Frog Distance = 22.825
+
+Scenario #432
+Frog Distance = 15.033
+
+Scenario #433
+Frog Distance = 41.049
+
+Scenario #434
+Frog Distance = 41.037
+
+Scenario #435
+Frog Distance = 23.345
+
+Scenario #436
+Frog Distance = 53.712
+
+Scenario #437
+Frog Distance = 36.056
+
+Scenario #438
+Frog Distance = 25.000
+
+Scenario #439
+Frog Distance = 42.942
+
+Scenario #440
+Frog Distance = 26.173
+
+Scenario #441
+Frog Distance = 23.195
+
+Scenario #442
+Frog Distance = 53.009
+
+Scenario #443
+Frog Distance = 25.179
+
+Scenario #444
+Frog Distance = 23.601
+
+Scenario #445
+Frog Distance = 25.080
+
+Scenario #446
+Frog Distance = 61.984
+
+Scenario #447
+Frog Distance = 17.000
+
+Scenario #448
+Frog Distance = 23.601
+
+Scenario #449
+Frog Distance = 55.172
+
+Scenario #450
+Frog Distance = 30.150
+
+Scenario #451
+Frog Distance = 26.019
+
+Scenario #452
+Frog Distance = 79.246
+
+Scenario #453
+Frog Distance = 23.087
+
+Scenario #454
+Frog Distance = 47.424
+
+Scenario #455
+Frog Distance = 59.464
+
+Scenario #456
+Frog Distance = 57.009
+
+Scenario #457
+Frog Distance = 18.439
+
+Scenario #458
+Frog Distance = 28.460
+
+Scenario #459
+Frog Distance = 21.378
+
+Scenario #460
+Frog Distance = 24.083
+
+Scenario #461
+Frog Distance = 78.492
+
+Scenario #462
+Frog Distance = 45.541
+
+Scenario #463
+Frog Distance = 17.263
+
+Scenario #464
+Frog Distance = 40.200
+
+Scenario #465
+Frog Distance = 7.211
+
+Scenario #466
+Frog Distance = 32.202
+
+Scenario #467
+Frog Distance = 14.866
+
+Scenario #468
+Frog Distance = 37.802
+
+Scenario #469
+Frog Distance = 31.048
+
+Scenario #470
+Frog Distance = 37.121
+
+Scenario #471
+Frog Distance = 21.000
+
+Scenario #472
+Frog Distance = 18.788
+
+Scenario #473
+Frog Distance = 31.305
+
+Scenario #474
+Frog Distance = 18.028
+
+Scenario #475
+Frog Distance = 32.894
+
+Scenario #476
+Frog Distance = 23.087
+
+Scenario #477
+Frog Distance = 27.203
+
+Scenario #478
+Frog Distance = 19.416
+
+Scenario #479
+Frog Distance = 18.358
+
+Scenario #480
+Frog Distance = 16.279
+
+Scenario #481
+Frog Distance = 33.302
+
+Scenario #482
+Frog Distance = 41.012
+
+Scenario #483
+Frog Distance = 38.833
+
+Scenario #484
+Frog Distance = 22.361
+
+Scenario #485
+Frog Distance = 35.384
+
+Scenario #486
+Frog Distance = 32.527
+
+Scenario #487
+Frog Distance = 28.460
+
+Scenario #488
+Frog Distance = 33.287
+
+Scenario #489
+Frog Distance = 31.305
+
+Scenario #490
+Frog Distance = 61.522
+
+Scenario #491
+Frog Distance = 23.854
+
+Scenario #492
+Frog Distance = 26.249
+
+Scenario #493
+Frog Distance = 40.112
+
+Scenario #494
+Frog Distance = 2.000
+
+Scenario #495
+Frog Distance = 33.541
+
+Scenario #496
+Frog Distance = 22.204
+
+Scenario #497
+Frog Distance = 36.249
+
+Scenario #498
+Frog Distance = 16.155
+
+Scenario #499
+Frog Distance = 10.817
+
+Scenario #500
+Frog Distance = 14.866
+
+Scenario #501
+Frog Distance = 17.263
+
+Scenario #502
+Frog Distance = 14.142
+
+Scenario #503
+Frog Distance = 18.358
+
+Scenario #504
+Frog Distance = 21.260
+
+Scenario #505
+Frog Distance = 52.498
+
+Scenario #506
+Frog Distance = 24.352
+
+Scenario #507
+Frog Distance = 26.401
+
+Scenario #508
+Frog Distance = 80.006
+
+Scenario #509
+Frog Distance = 25.020
+
+Scenario #510
+Frog Distance = 30.610
+
+Scenario #511
+Frog Distance = 21.932
+
+Scenario #512
+Frog Distance = 55.946
+
+Scenario #513
+Frog Distance = 49.204
+
+Scenario #514
+Frog Distance = 3.162
+
+Scenario #515
+Frog Distance = 61.008
+
+Scenario #516
+Frog Distance = 21.932
+
+Scenario #517
+Frog Distance = 27.295
+
+Scenario #518
+Frog Distance = 27.203
+
+Scenario #519
+Frog Distance = 35.384
+
+Scenario #520
+Frog Distance = 52.402
+
+Scenario #521
+Frog Distance = 52.326
+
+Scenario #522
+Frog Distance = 21.190
+
+Scenario #523
+Frog Distance = 72.201
+
+Scenario #524
+Frog Distance = 15.232
+
+Scenario #525
+Frog Distance = 22.361
+
+Scenario #526
+Frog Distance = 16.000
+
+Scenario #527
+Frog Distance = 17.720
+
+Scenario #528
+Frog Distance = 32.016
+
+Scenario #529
+Frog Distance = 35.114
+
+Scenario #530
+Frog Distance = 29.833
+
+Scenario #531
+Frog Distance = 26.926
+
+Scenario #532
+Frog Distance = 35.805
+
+Scenario #533
+Frog Distance = 16.492
+
+Scenario #534
+Frog Distance = 30.414
+
+Scenario #535
+Frog Distance = 42.544
+
+Scenario #536
+Frog Distance = 21.840
+
+Scenario #537
+Frog Distance = 35.128
+
+Scenario #538
+Frog Distance = 21.260
+
+Scenario #539
+Frog Distance = 14.866
+
+Scenario #540
+Frog Distance = 13.342
+
+Scenario #541
+Frog Distance = 36.715
+
+Scenario #542
+Frog Distance = 65.069
+
+Scenario #543
+Frog Distance = 34.986
+
+Scenario #544
+Frog Distance = 26.249
+
+Scenario #545
+Frog Distance = 21.095
+
+Scenario #546
+Frog Distance = 25.239
+
+Scenario #547
+Frog Distance = 26.833
+
+Scenario #548
+Frog Distance = 53.038
+
+Scenario #549
+Frog Distance = 38.471
+
+Scenario #550
+Frog Distance = 27.074
+
+Scenario #551
+Frog Distance = 37.643
+
+Scenario #552
+Frog Distance = 38.210
+
+Scenario #553
+Frog Distance = 29.614
+
+Scenario #554
+Frog Distance = 33.242
+
+Scenario #555
+Frog Distance = 19.647
+
+Scenario #556
+Frog Distance = 33.615
+
+Scenario #557
+Frog Distance = 21.024
+
+Scenario #558
+Frog Distance = 57.489
+
+Scenario #559
+Frog Distance = 28.320
+
+Scenario #560
+Frog Distance = 25.807
+
+Scenario #561
+Frog Distance = 93.059
+
+Scenario #562
+Frog Distance = 50.922
+
+Scenario #563
+Frog Distance = 18.028
+
+Scenario #564
+Frog Distance = 33.015
+
+Scenario #565
+Frog Distance = 26.683
+
+Scenario #566
+Frog Distance = 26.401
+
+Scenario #567
+Frog Distance = 32.757
+
+Scenario #568
+Frog Distance = 20.025
+
+Scenario #569
+Frog Distance = 17.029
+
+Scenario #570
+Frog Distance = 26.173
+
+Scenario #571
+Frog Distance = 33.541
+
+Scenario #572
+Frog Distance = 25.020
+
+Scenario #573
+Frog Distance = 20.000
+
+Scenario #574
+Frog Distance = 36.770
+
+Scenario #575
+Frog Distance = 1.414
+
+Scenario #576
+Frog Distance = 33.541
+
+Scenario #577
+Frog Distance = 16.031
+
+Scenario #578
+Frog Distance = 25.942
+
+Scenario #579
+Frog Distance = 28.284
+
+Scenario #580
+Frog Distance = 21.213
+
+Scenario #581
+Frog Distance = 45.541
+
+Scenario #582
+Frog Distance = 16.279
+
+Scenario #583
+Frog Distance = 27.295
+
+Scenario #584
+Frog Distance = 32.802
+
+Scenario #585
+Frog Distance = 21.213
+
+Scenario #586
+Frog Distance = 29.547
+
+Scenario #587
+Frog Distance = 24.515
+
+Scenario #588
+Frog Distance = 22.361
+
+Scenario #589
+Frog Distance = 19.416
+
+Scenario #590
+Frog Distance = 22.804
+
+Scenario #591
+Frog Distance = 23.087
+
+Scenario #592
+Frog Distance = 22.472
+
+Scenario #593
+Frog Distance = 40.361
+
+Scenario #594
+Frog Distance = 19.209
+
+Scenario #595
+Frog Distance = 5.831
+
+Scenario #596
+Frog Distance = 28.460
+
+Scenario #597
+Frog Distance = 40.249
+
+Scenario #598
+Frog Distance = 49.193
+
+Scenario #599
+Frog Distance = 21.932
+
+Scenario #600
+Frog Distance = 18.682
+
+Scenario #601
+Frog Distance = 24.597
+
+Scenario #602
+Frog Distance = 28.862
+
+Scenario #603
+Frog Distance = 17.464
+
+Scenario #604
+Frog Distance = 28.284
+
+Scenario #605
+Frog Distance = 15.133
+
+Scenario #606
+Frog Distance = 23.324
+
+Scenario #607
+Frog Distance = 46.228
+
+Scenario #608
+Frog Distance = 30.806
+
+Scenario #609
+Frog Distance = 16.279
+
+Scenario #610
+Frog Distance = 35.355
+
+Scenario #611
+Frog Distance = 105.209
+
+Scenario #612
+Frog Distance = 16.643
+
+Scenario #613
+Frog Distance = 23.431
+
+Scenario #614
+Frog Distance = 30.806
+
+Scenario #615
+Frog Distance = 28.071
+
+Scenario #616
+Frog Distance = 28.284
+
+Scenario #617
+Frog Distance = 23.770
+
+Scenario #618
+Frog Distance = 22.091
+
+Scenario #619
+Frog Distance = 13.153
+
+Scenario #620
+Frog Distance = 44.553
+
+Scenario #621
+Frog Distance = 27.893
+
+Scenario #622
+Frog Distance = 11.402
+
+Scenario #623
+Frog Distance = 33.526
+
+Scenario #624
+Frog Distance = 43.139
+
+Scenario #625
+Frog Distance = 31.064
+
+Scenario #626
+Frog Distance = 17.117
+
+Scenario #627
+Frog Distance = 32.280
+
+Scenario #628
+Frog Distance = 20.125
+
+Scenario #629
+Frog Distance = 28.284
+
+Scenario #630
+Frog Distance = 26.249
+
+Scenario #631
+Frog Distance = 28.160
+
+Scenario #632
+Frog Distance = 20.616
+
+Scenario #633
+Frog Distance = 25.495
+
+Scenario #634
+Frog Distance = 22.804
+
+Scenario #635
+Frog Distance = 8.602
+
+Scenario #636
+Frog Distance = 21.095
+
+Scenario #637
+Frog Distance = 20.248
+
+Scenario #638
+Frog Distance = 44.822
+
+Scenario #639
+Frog Distance = 38.601
+
+Scenario #640
+Frog Distance = 36.056
+
+Scenario #641
+Frog Distance = 37.121
+
+Scenario #642
+Frog Distance = 14.422
+
+Scenario #643
+Frog Distance = 24.083
+
+Scenario #644
+Frog Distance = 18.788
+
+Scenario #645
+Frog Distance = 28.178
+
+Scenario #646
+Frog Distance = 26.077
+
+Scenario #647
+Frog Distance = 44.922
+
+Scenario #648
+Frog Distance = 22.136
+
+Scenario #649
+Frog Distance = 40.853
+
+Scenario #650
+Frog Distance = 5.385
+
+Scenario #651
+Frog Distance = 26.627
+
+Scenario #652
+Frog Distance = 22.561
+
+Scenario #653
+Frog Distance = 13.038
+
+Scenario #654
+Frog Distance = 53.600
+
+Scenario #655
+Frog Distance = 29.275
+
+Scenario #656
+Frog Distance = 43.966
+
+Scenario #657
+Frog Distance = 24.187
+
+Scenario #658
+Frog Distance = 39.812
+
+Scenario #659
+Frog Distance = 41.773
+
+Scenario #660
+Frog Distance = 72.201
+
+Scenario #661
+Frog Distance = 18.868
+
+Scenario #662
+Frog Distance = 23.854
+
+Scenario #663
+Frog Distance = 10.000
+
+Scenario #664
+Frog Distance = 27.295
+
+Scenario #665
+Frog Distance = 18.868
+
+Scenario #666
+Frog Distance = 32.140
+
