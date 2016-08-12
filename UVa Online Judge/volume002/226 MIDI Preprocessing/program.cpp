@@ -43,13 +43,13 @@ struct command
     }
 };
 
-vector <command> commands;
-map < int, vector <command> > buffer;
-map < int, int > counter;
+vector<command> commands;
+map<int, vector<command>> buffer;
+map<int, int> counter;
 
 void preprocess(vector <command> &program)
 {
-    vector < pair<command, command> > fixed;
+    vector<pair<command, command>> fixed;
     command empty;
 
     // pair the on and off command
@@ -95,8 +95,7 @@ void preprocess(vector <command> &program)
 
 int main(int argc, char *argv[])
 {
-    cin.tie(0);
-    cout.sync_with_stdio(false);
+    cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
 
     string line;
     while (true)

@@ -19,9 +19,9 @@ struct card
     int face, suit;
 };
 
-vector < vector < card > > players;
-vector < card > followerCards;
-vector < int > scores;
+vector<vector<card>> players;
+vector<card> followerCards;
+vector<int> scores;
 string faces = "23456789TJQKA", suits = "CDHS";
 int leader, winner, trump;
 card winnerCard;
