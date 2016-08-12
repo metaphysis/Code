@@ -1,0 +1,4 @@
+There are 4 tree(s) and 4 acorn(s).
+There are 3 tree(s) and 17 acorn(s).
+There are 0 tree(s) and 26 acorn(s).
+There are 3 tree(s) and 0 acorn(s).

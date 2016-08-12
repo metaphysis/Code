@@ -2,11 +2,13 @@
 
 using namespace std;
 
-int parent[100000], ranks[100000];
+const int MAX_N = 100000;
+
+int parent[MAX_N], ranks[MAX_N];
 
 void makeSet()
 {
-    for (int i = 0; i < 100000; i++)
+    for (int i = 0; i < MAX_N; i++)
     {
         parent[i] = i;
         ranks[i] = 0;
