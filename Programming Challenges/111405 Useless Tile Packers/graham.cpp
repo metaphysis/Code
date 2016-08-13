@@ -4,7 +4,7 @@
 // Submission Date: 2011-11-06
 // UVa Run Time: 0.020s
 //
-// 版权所有（C）2015，邱秋。metaphysis # yeah dot net
+// 版权所有（C）2011，邱秋。metaphysis # yeah dot net
 
 #include <iostream>
 #include <algorithm>
@@ -73,7 +73,7 @@ bool ccwOrCollinear(point a, point b, point c)
 	return ccw(a, b, c) || collinear(a, b, c);
 }
 
-// Andrew 凸包扫描算法的预排序，按 y 坐标排序。
+// 凸包扫描算法的预排序，按 y 坐标排序。
 bool lowerLeft(point a, point b)
 {
 	return (a.y == b.y) ? (a.x < b.x) : (a.y < b.y);
