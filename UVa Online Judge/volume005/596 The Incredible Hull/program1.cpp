@@ -78,7 +78,7 @@ int distanceOfPoint(point a, point b)
 void jarvisConvexHull()
 {
     polygon pg;
-    pg.numberOfVertex = 0;
+    pg.vertexNumber = 0;
 
 	// 去掉重合点。
 	// 得到位置处于最左的点，当有共线情况存在时，取y坐标最小的，该顶点定为凸包
@@ -100,12 +100,12 @@ void jarvisConvexHull()
         int next = 0;
         for (int i = 1; i < vertexOfTotal; i++)
         {
-            if (visited[i])
-                continue;
-
-            if (cw(vertex[current], vertex[next], vertex[i]) || distanceOfPoint(vertex[current], vertex[next]) == 0 ||
-                (collinear(vertex[current], vertex[next], vertex[i]) && !visited[i] &&
-                (distanceOfPoint(vertex[current], vertex[i]) < distanceOfPoint(vertex[current], vertex[next]))))
+            if (!visited[i] &&
+                (cw(vertex[current], vertex[next], vertex[i]) ||
+                distanceOfPoint(vertex[current], vertex[next]) == 0 ||
+                (collinear(vertex[current], vertex[next], vertex[i]) &&
+                (distanceOfPoint(vertex[current], vertex[i]) <
+                distanceOfPoint(vertex[current], vertex[next])))))
                 next = i;
         }
         
