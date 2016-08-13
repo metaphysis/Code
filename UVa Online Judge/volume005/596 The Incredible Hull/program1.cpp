@@ -7,33 +7,23 @@
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
 #include <algorithm>
-#include <bitset>
-#include <cassert>
-#include <cmath>
 #include <cstring>
 #include <iomanip>
+#include <cmath>
 #include <iostream>
-#include <limits>
-#include <list>
-#include <map>
-#include <numeric>
-#include <queue>
-#include <set>
-#include <sstream>
-#include <stack>
-#include <vector>
 
 using namespace std;
 
 const int MAX_VERTICES = 500;
+const int EPSILON = 0;
 
 struct point
 {
 	int x, y;
 	
-	bool operator<(const point& another) const
+    bool operator<(const point& another) const
 	{
-	    if (y == another.y)
+	    if (x != another.x)
 	        return x < another.x;
 	    else
 	        return y < another.y;
@@ -51,10 +41,11 @@ struct polygon
 	point vertex[MAX_VERTICES];
 };
 
-point lowerLeftPoint, vertex[MAX_VERTICES];
+point vertex[MAX_VERTICES];
 int vertexPerObject, vertexOfTotal = 0;
 
-// 叉积。
+// 叉积，判断点a，b，c组成的两条线段的转折方向。当叉积大于0，则形成一个右拐，
+// 否则共线（cp = 0）或左拐（cp < 0）。
 int crossProduct(point a, point b, point c)
 {
 	return (c.x - a.x) * (b.y - a.y) - (b.x - a.x) * (c.y - a.y);
@@ -63,64 +54,66 @@ int crossProduct(point a, point b, point c)
 // 从点a向点b望去，点c位于线段ab的右侧，返回true。
 bool cw(point a, point b, point c)
 {
-	return crossProduct(a, b, c) > 0;
+	return crossProduct(a, b, c) > EPSILON;
 }
+
 // 从点a向点b望去，点c位于线段ab的左侧时，返回true。
 bool ccw(point a, point b, point c)
 {
-	return crossProduct(a, b, c) < 0;
+	return crossProduct(a, b, c) < EPSILON;
 }
 
 // 当三点共线时，返回true。
 bool collinear(point a, point b, point c)
 {
-	return fabs(crossProduct(a, b, c)) <= 0;
+	return fabs(crossProduct(a, b, c)) <= EPSILON;
 }
 
-// 判断是否向左转或共线。
-bool ccwOrCollinear(point a, point b, point c)
+int distanceOfPoint(point a, point b)
 {
-	return ccw(a, b, c) || collinear(a, b, c);
+    return pow(a.x - b.x, 2) + pow(a.y - b.y, 2);
 }
 
-// 两点距离的平方值。
-int distanceToLowerLeftPoint(point p)
-{
-    return pow(lowerLeftPoint.x - p.x, 2) + pow(lowerLeftPoint.y - p.y, 2);
-}
-
-// 按相对于参考点的极角大小进行排序。
-bool smallerAngle(point first, point second)
-{
-    if (collinear(lowerLeftPoint, first, second))
-        return distanceToLowerLeftPoint(first) <= distanceToLowerLeftPoint(second);
-    return ccw(lowerLeftPoint, first, second);
-}
-
-// Graham凸包扫描算法。
-void grahamConvexHull()
+// Jarvis步进法求凸包。
+void jarvisConvexHull()
 {
     polygon pg;
+    pg.numberOfVertex = 0;
 
+	// 去掉重合点。
+	// 得到位置处于最左的点，当有共线情况存在时，取y坐标最小的，该顶点定为凸包
+	// 上的顶点。
 	sort(vertex, vertex + vertexOfTotal);
 	vertexOfTotal = unique(vertex, vertex + vertexOfTotal) - vertex;
-    lowerLeftPoint = vertex[0];
-    sort(vertex + 1, vertex + vertexOfTotal, smallerAngle);
 
-	pg.vertex[0] = vertex[0];
-	pg.vertex[1] = vertex[1];
-	vertex[vertexOfTotal] = lowerLeftPoint;
-	
-	int i = 2, top = 1;
-	while (i <= vertexOfTotal)
-	{
-	    if (cw(pg.vertex[top - 1], pg.vertex[top], vertex[i]))
-	        top--;
-	    else
-	        pg.vertex[++top] = vertex[i++];
-	}
-	
-    pg.vertexNumber = top;
+    int current = 0, visited[MAX_VERTICES];
+    memset(visited, 0, sizeof(visited));
+
+    do
+    {
+        // 寻找凸包的下一个候选顶点。
+        // 测试点current，next，i是否构成一个右转，或者共线。
+        // 当构成右转时，说明点i比next相对于current有更小的极角，应该将
+        // 当前的待选凸包点更新为点i。
+        // 当共线时，因为题意要求输出共线的凸包顶点，故选择距离
+        // 当前凸包点current更近的点。
+        int next = 0;
+        for (int i = 1; i < vertexOfTotal; i++)
+        {
+            if (visited[i])
+                continue;
+
+            if (cw(vertex[current], vertex[next], vertex[i]) || distanceOfPoint(vertex[current], vertex[next]) == 0 ||
+                (collinear(vertex[current], vertex[next], vertex[i]) && !visited[i] &&
+                (distanceOfPoint(vertex[current], vertex[i]) < distanceOfPoint(vertex[current], vertex[next]))))
+                next = i;
+        }
+        
+        // 将点next加入凸包。
+        pg.vertex[pg.vertexNumber++] = vertex[next];
+        visited[next] = 1;
+        current = next;
+    } while (current != 0);
     
     int selected = 0;
     for (int i = 0; i < pg.vertexNumber; i++)
@@ -157,7 +150,7 @@ int main(int argc, char *argv[])
             }
         }
 
-        grahamConvexHull();
+        jarvisConvexHull();
 
         cin.putback(start);
     }
