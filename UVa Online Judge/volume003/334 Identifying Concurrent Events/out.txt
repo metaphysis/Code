@@ -1,0 +1,7 @@
+Case 1, 2 concurrent events:
+(e1,e4) (e2,e4) 
+Case 2, 10 concurrent events:
+(two,four) (two,five) 
+Case 3, no concurrent events.
+Case 4, 1 concurrent events:
+(alpha,gamma) 

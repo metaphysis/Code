@@ -5,44 +5,37 @@
 // UVa Run Time: 0.039s
 //
 // 版权所有（C）2011，邱秋。metaphysis # yeah dot net
-//
-// [解题方法]
-// 本题可以归结为数据结构问题。
-//
-// 使用链表来表示树，若是使用数组，可能因为树的深度较大导致数组过大。关键是如何将输入
-// 解析成链表表示的树，本题解利用了 cin.putback() 帮助完成。解析完成，剩下的就是树遍
-// 历的问题了。
 
 #include <iostream>
 
 using namespace std;
 
-struct node
+struct TreeNode
 {
-    int value;
-    node *parent, *leftChild, *rightChild;
+    int weight;
+    TreeNode *parent, *leftChild, *rightChild;
 };
 
 bool haveTargetSum, emptyTree;
 
-// 前序遍历，将路径和保存在叶子节点上。
-void summingTree(node * current)
+// 前序遍历，将路径和保存在叶结点上。
+void summingTree(TreeNode * current)
 {
     if (current->leftChild != NULL)
     {
-        current->leftChild->value += current->value;
+        current->leftChild->weight += current->weight;
         summingTree(current->leftChild);
     }
 
     if (current->rightChild != NULL)
     {
-        current->rightChild->value += current->value;
+        current->rightChild->weight += current->weight;
         summingTree(current->rightChild);
     }
 }
 
 // 利用递归和cin.putback()，将输入解析为链表表示的树。
-void parseTree(node * current)
+void parseTree(TreeNode * current)
 {
     bool isLeaf = false;
 
@@ -67,13 +60,13 @@ void parseTree(node * current)
         }
 
         cin.putback(c);
-        current->value = number * sign;
+        current->weight = number * sign;
     }
     else
     {
         cin.putback(c);
 
-        // 若当前节点为空，则将父节点的相应子节点设为空。
+        // 若当前结点为空，则将父结点的相应子结点设为空。
         if (current->parent != NULL)
         {
             if (current == current->parent->leftChild)
@@ -87,15 +80,15 @@ void parseTree(node * current)
         isLeaf = true;
     }
 
-    // 若不是叶子节点，则继续解析子树。
+    // 若不是叶结点，则继续解析子树。
     if (!isLeaf)
     {
-        node *left = new node;
+        TreeNode *left = new TreeNode;
         current->leftChild = left;
         left->parent = current;
         parseTree(left);
 
-        node *right = new node;
+        TreeNode *right = new TreeNode;
         current->rightChild = right;
         right->parent = current;
         parseTree(right);
@@ -105,32 +98,29 @@ void parseTree(node * current)
         ;
 }
 
-// 遍历树，检查叶子节点保存的路径和是否为目标值。
-void travelTree(node * current, int targetSum)
+// 遍历树，检查叶结点保存的路径和是否为目标值。
+void treeTraversal(TreeNode * current, int targetSum)
 {
     if (haveTargetSum)
         return;
 
     if (current->leftChild == NULL && current->rightChild == NULL)
-        if (current->value == targetSum)
+        if (current->weight == targetSum)
             haveTargetSum = true;
 
     if (current->leftChild != NULL)
-        travelTree(current->leftChild, targetSum);
+        treeTraversal(current->leftChild, targetSum);
 
     if (current->rightChild != NULL)
-        travelTree(current->rightChild, targetSum);
+        treeTraversal(current->rightChild, targetSum);
 }
 
 int main(int argc, char *argv[])
 {
-    cin.tie(0);
-    cout.sync_with_stdio(false);
-    
     int targetSum;
     while (cin >> targetSum)
     {
-        node *root = new node;
+        TreeNode *root = new TreeNode;
 
         emptyTree = false;
         parseTree(root);
@@ -139,7 +129,7 @@ int main(int argc, char *argv[])
 
         haveTargetSum = false;
         if (!emptyTree)
-            travelTree(root, targetSum);
+            treeTraversal(root, targetSum);
 
         cout << (haveTargetSum ? "yes\n" : "no\n");
 
