@@ -40,7 +40,7 @@ bool backtrack(int depth, int current, int length)
 
 int main(int argc, char *argv[])
 {
-    ios::sync_with_stdio(false);
+    cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
     
     while (cin >> n, n)
     {
@@ -55,15 +55,9 @@ int main(int argc, char *argv[])
             totalLength += sticks[i];
             minLength = max(minLength, sticks[i]);
         }
-        
-        if (minLength > 50)
-        {
-            cout << minLength << endl;
-            continue;
-        }
-        
-        sort(sticks.begin(), sticks.end());
-        
+
+        sort(sticks.begin(), sticks.end(), greater<int>());
+
         for (int length = minLength; length <= totalLength; length++)
         {
             if (totalLength % length != 0)
