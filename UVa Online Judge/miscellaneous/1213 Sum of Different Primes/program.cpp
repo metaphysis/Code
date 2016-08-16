@@ -1,51 +1,33 @@
 // Sum of Different Primes
 // UVa ID: 1213
 // Verdict: Accepted
-// Submission Date: 2016-03-02
+// Submission Date: 2016-08-16
 // UVa Run Time: 0.000s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
 #include <iostream>
-#include <vector>
-#include <cmath>
+#include <cstring>
 
 using namespace std;
 
-vector < int > primes;
-
-bool isPrime(unsigned int x)
-{
-    if (x <= 1)
-        return false;
-        
-    if (x == 2)
-        return true;
-        
-    if (x % 2 == 0)
-        return false;
-        
-    unsigned int i = 3;
-    while (i <= (sqrt(x) + 1))
-    {
-        if (x % i == 0)
-            return false;
-        i += 2;
-    }
-    
-    return true;
-}
-
 int main(int argc, char *argv[])
 {
-    unsigned int ways[15][1130] = { 0 };
+    unsigned int ways[15][1130] = { 0 }, primes[1120], prime_count = 0;
     
-    for (int i = 1; i <= 1120; i++)
-        if (isPrime(i))
-            primes.push_back(i);
+    memset(primes, 0, sizeof(primes));
+    
+    primes[prime_count++] = 2;
+    for (int i = 3; i < 1120; i += 2)
+        if (primes[i] == 0)
+        {
+            for (int j = 2 * i; j < 1120; j += i)
+                primes[j] = 1;
+            primes[prime_count++] = i;
+        }
             
     ways[0][0] = 1;
-    for (int i = 0; i < primes.size(); i++)
+    for (int i = 0; i < prime_count; i++)
         for (int k = 14; k >= 1; k--)
             for (int n = 1120; n >= primes[i]; n--)
                     ways[k][n] += ways[k - 1][n - primes[i]];
