@@ -1,0 +1,6236 @@
+Sums of 60:
+NONE
+Sums of 45:
+NONE
+Sums of 51:
+NONE
+Sums of 81:
+60+14+7
+59+22
+35+32+14
+32+27+22
+27+22+14+11+7
+Sums of 69:
+NONE
+Sums of 57:
+NONE
+Sums of 46:
+40+6
+Sums of 31:
+NONE
+Sums of 46:
+NONE
+Sums of 22:
+NONE
+Sums of 5:
+NONE
+Sums of 62:
+NONE
+Sums of 32:
+NONE
+Sums of 70:
+NONE
+Sums of 79:
+NONE
+Sums of 70:
+NONE
+Sums of 99:
+NONE
+Sums of 66:
+NONE
+Sums of 8:
+NONE
+Sums of 23:
+NONE
+Sums of 34:
+NONE
+Sums of 95:
+NONE
+Sums of 53:
+NONE
+Sums of 86:
+86
+Sums of 86:
+NONE
+Sums of 24:
+NONE
+Sums of 62:
+NONE
+Sums of 92:
+NONE
+Sums of 21:
+21
+Sums of 67:
+NONE
+Sums of 20:
+NONE
+Sums of 38:
+NONE
+Sums of 90:
+71+10+9
+Sums of 90:
+90
+Sums of 5:
+NONE
+Sums of 16:
+NONE
+Sums of 6:
+NONE
+Sums of 23:
+NONE
+Sums of 6:
+NONE
+Sums of 73:
+67+4+2
+32+18+17+4+2
+Sums of 41:
+NONE
+Sums of 83:
+NONE
+Sums of 96:
+86+10
+Sums of 52:
+NONE
+Sums of 8:
+NONE
+Sums of 22:
+NONE
+Sums of 71:
+NONE
+Sums of 95:
+56+39
+Sums of 41:
+24+17
+Sums of 82:
+NONE
+Sums of 8:
+NONE
+Sums of 30:
+NONE
+Sums of 84:
+84
+Sums of 27:
+NONE
+Sums of 40:
+NONE
+Sums of 14:
+NONE
+Sums of 80:
+NONE
+Sums of 87:
+NONE
+Sums of 66:
+NONE
+Sums of 80:
+NONE
+Sums of 1:
+NONE
+Sums of 78:
+NONE
+Sums of 13:
+NONE
+Sums of 38:
+38
+Sums of 20:
+NONE
+Sums of 29:
+NONE
+Sums of 19:
+NONE
+Sums of 85:
+85
+Sums of 36:
+NONE
+Sums of 70:
+50+20
+Sums of 71:
+NONE
+Sums of 100:
+43+18+18+15+6
+Sums of 42:
+NONE
+Sums of 43:
+NONE
+Sums of 60:
+NONE
+Sums of 12:
+NONE
+Sums of 2:
+NONE
+Sums of 85:
+72+13
+Sums of 26:
+NONE
+Sums of 43:
+NONE
+Sums of 50:
+NONE
+Sums of 59:
+NONE
+Sums of 99:
+NONE
+Sums of 77:
+77
+Sums of 55:
+NONE
+Sums of 69:
+NONE
+Sums of 9:
+NONE
+Sums of 50:
+NONE
+Sums of 37:
+NONE
+Sums of 66:
+NONE
+Sums of 98:
+NONE
+Sums of 64:
+NONE
+Sums of 81:
+NONE
+Sums of 38:
+NONE
+Sums of 83:
+63+20
+Sums of 95:
+NONE
+Sums of 1:
+NONE
+Sums of 58:
+NONE
+Sums of 75:
+NONE
+Sums of 22:
+NONE
+Sums of 12:
+NONE
+Sums of 45:
+NONE
+Sums of 88:
+NONE
+Sums of 20:
+17+3
+Sums of 99:
+NONE
+Sums of 13:
+NONE
+Sums of 58:
+NONE
+Sums of 84:
+NONE
+Sums of 27:
+NONE
+Sums of 46:
+46
+Sums of 17:
+NONE
+Sums of 42:
+NONE
+Sums of 36:
+NONE
+Sums of 27:
+NONE
+Sums of 86:
+86
+Sums of 32:
+26+6
+Sums of 61:
+NONE
+Sums of 6:
+NONE
+Sums of 14:
+NONE
+Sums of 71:
+31+24+16
+Sums of 25:
+NONE
+Sums of 98:
+98
+Sums of 6:
+NONE
+Sums of 5:
+NONE
+Sums of 99:
+NONE
+Sums of 40:
+NONE
+Sums of 14:
+NONE
+Sums of 37:
+NONE
+Sums of 6:
+NONE
+Sums of 61:
+42+15+4
+Sums of 89:
+NONE
+Sums of 21:
+NONE
+Sums of 6:
+6
+Sums of 7:
+NONE
+Sums of 9:
+NONE
+Sums of 19:
+NONE
+Sums of 65:
+NONE
+Sums of 44:
+NONE
+Sums of 19:
+NONE
+Sums of 63:
+NONE
+Sums of 51:
+NONE
+Sums of 98:
+NONE
+Sums of 94:
+NONE
+Sums of 89:
+NONE
+Sums of 69:
+69
+55+13+1
+55+10+2+2
+51+13+2+2+1
+37+29+2+1
+Sums of 5:
+NONE
+Sums of 77:
+NONE
+Sums of 70:
+NONE
+Sums of 85:
+43+42
+Sums of 52:
+NONE
+Sums of 94:
+NONE
+Sums of 6:
+NONE
+Sums of 51:
+NONE
+Sums of 56:
+56
+46+10
+Sums of 63:
+NONE
+Sums of 52:
+NONE
+Sums of 56:
+NONE
+Sums of 79:
+43+25+11
+Sums of 38:
+NONE
+Sums of 83:
+83
+Sums of 98:
+NONE
+Sums of 48:
+NONE
+Sums of 22:
+NONE
+Sums of 27:
+NONE
+Sums of 31:
+NONE
+Sums of 63:
+NONE
+Sums of 92:
+42+21+15+7+7
+Sums of 51:
+NONE
+Sums of 71:
+71
+Sums of 78:
+49+29
+36+30+12
+36+19+12+7+4
+30+29+19
+30+29+12+7
+Sums of 49:
+NONE
+Sums of 85:
+NONE
+Sums of 16:
+NONE
+Sums of 43:
+NONE
+Sums of 83:
+83
+58+13+12
+Sums of 76:
+NONE
+Sums of 89:
+89
+Sums of 94:
+NONE
+Sums of 9:
+NONE
+Sums of 87:
+NONE
+Sums of 14:
+NONE
+Sums of 89:
+NONE
+Sums of 27:
+NONE
+Sums of 16:
+NONE
+Sums of 74:
+NONE
+Sums of 47:
+NONE
+Sums of 14:
+NONE
+Sums of 80:
+49+25+6
+Sums of 22:
+NONE
+Sums of 13:
+NONE
+Sums of 99:
+60+39
+58+26+15
+39+26+19+15
+Sums of 62:
+44+14+4
+Sums of 61:
+NONE
+Sums of 28:
+NONE
+Sums of 19:
+NONE
+Sums of 19:
+NONE
+Sums of 79:
+79
+Sums of 12:
+NONE
+Sums of 27:
+NONE
+Sums of 92:
+73+9+7+3
+Sums of 53:
+NONE
+Sums of 16:
+NONE
+Sums of 44:
+NONE
+Sums of 6:
+NONE
+Sums of 9:
+NONE
+Sums of 94:
+40+35+19
+Sums of 32:
+NONE
+Sums of 45:
+NONE
+Sums of 100:
+67+33
+50+39+6+5
+42+33+20+5
+39+35+20+6
+Sums of 66:
+40+14+8+4
+24+20+14+8
+24+20+14+4+4
+Sums of 65:
+NONE
+Sums of 31:
+NONE
+Sums of 42:
+NONE
+Sums of 35:
+NONE
+Sums of 16:
+NONE
+Sums of 23:
+NONE
+Sums of 70:
+NONE
+Sums of 88:
+NONE
+Sums of 1:
+1
+Sums of 98:
+NONE
+Sums of 29:
+NONE
+Sums of 31:
+NONE
+Sums of 65:
+NONE
+Sums of 47:
+NONE
+Sums of 89:
+50+39
+39+38+8+4
+Sums of 36:
+NONE
+Sums of 46:
+NONE
+Sums of 32:
+NONE
+Sums of 66:
+NONE
+Sums of 81:
+NONE
+Sums of 60:
+NONE
+Sums of 44:
+NONE
+Sums of 10:
+NONE
+Sums of 38:
+NONE
+Sums of 11:
+NONE
+Sums of 9:
+NONE
+Sums of 81:
+NONE
+Sums of 49:
+32+9+8
+28+9+8+4
+Sums of 98:
+NONE
+Sums of 26:
+NONE
+Sums of 53:
+53
+45+8
+19+17+17
+Sums of 37:
+NONE
+Sums of 39:
+NONE
+Sums of 43:
+NONE
+Sums of 30:
+26+4
+Sums of 59:
+36+23
+Sums of 62:
+NONE
+Sums of 68:
+NONE
+Sums of 90:
+NONE
+Sums of 96:
+NONE
+Sums of 96:
+NONE
+Sums of 98:
+NONE
+Sums of 6:
+NONE
+Sums of 41:
+41
+Sums of 82:
+NONE
+Sums of 79:
+NONE
+Sums of 42:
+NONE
+Sums of 54:
+NONE
+Sums of 6:
+NONE
+Sums of 54:
+NONE
+Sums of 34:
+NONE
+Sums of 72:
+NONE
+Sums of 90:
+NONE
+Sums of 63:
+NONE
+Sums of 77:
+NONE
+Sums of 15:
+NONE
+Sums of 52:
+NONE
+Sums of 43:
+NONE
+Sums of 88:
+33+32+23
+Sums of 98:
+98
+Sums of 43:
+NONE
+Sums of 34:
+NONE
+Sums of 16:
+NONE
+Sums of 21:
+NONE
+Sums of 75:
+39+36
+Sums of 20:
+NONE
+Sums of 30:
+30
+Sums of 71:
+NONE
+Sums of 34:
+NONE
+Sums of 98:
+NONE
+Sums of 65:
+NONE
+Sums of 33:
+NONE
+Sums of 9:
+NONE
+Sums of 31:
+NONE
+Sums of 58:
+24+21+8+5
+Sums of 39:
+31+8
+Sums of 58:
+NONE
+Sums of 24:
+NONE
+Sums of 41:
+31+10
+Sums of 67:
+NONE
+Sums of 93:
+48+45
+48+44+1
+47+46
+47+45+1
+47+44+1+1
+46+45+1+1
+Sums of 66:
+46+17+3
+45+15+6
+31+17+15+3
+27+15+15+6+3
+Sums of 87:
+NONE
+Sums of 51:
+43+8
+Sums of 21:
+NONE
+Sums of 2:
+NONE
+Sums of 97:
+NONE
+Sums of 74:
+NONE
+Sums of 80:
+NONE
+Sums of 99:
+NONE
+Sums of 100:
+100
+Sums of 3:
+NONE
+Sums of 95:
+NONE
+Sums of 52:
+NONE
+Sums of 46:
+46
+Sums of 35:
+35
+Sums of 15:
+NONE
+Sums of 31:
+NONE
+Sums of 38:
+NONE
+Sums of 43:
+NONE
+Sums of 33:
+NONE
+Sums of 72:
+NONE
+Sums of 3:
+NONE
+Sums of 6:
+6
+Sums of 39:
+NONE
+Sums of 7:
+NONE
+Sums of 64:
+NONE
+Sums of 32:
+NONE
+Sums of 8:
+NONE
+Sums of 63:
+48+15
+Sums of 90:
+NONE
+Sums of 40:
+NONE
+Sums of 79:
+NONE
+Sums of 22:
+NONE
+Sums of 12:
+NONE
+Sums of 71:
+NONE
+Sums of 1:
+NONE
+Sums of 41:
+NONE
+Sums of 61:
+NONE
+Sums of 8:
+NONE
+Sums of 66:
+NONE
+Sums of 91:
+NONE
+Sums of 83:
+NONE
+Sums of 16:
+NONE
+Sums of 81:
+66+14+1
+41+26+14
+41+26+13+1
+Sums of 49:
+NONE
+Sums of 41:
+NONE
+Sums of 45:
+NONE
+Sums of 15:
+NONE
+Sums of 43:
+NONE
+Sums of 56:
+46+10
+40+15+1
+23+15+10+7+1
+Sums of 60:
+46+10+4
+27+23+10
+Sums of 50:
+NONE
+Sums of 86:
+NONE
+Sums of 50:
+NONE
+Sums of 97:
+57+35+5
+50+35+7+5
+Sums of 93:
+49+44
+49+23+18+3
+Sums of 21:
+NONE
+Sums of 66:
+NONE
+Sums of 41:
+NONE
+Sums of 98:
+NONE
+Sums of 7:
+NONE
+Sums of 43:
+NONE
+Sums of 63:
+63
+50+13
+Sums of 28:
+NONE
+Sums of 18:
+NONE
+Sums of 25:
+NONE
+Sums of 10:
+NONE
+Sums of 39:
+NONE
+Sums of 35:
+NONE
+Sums of 52:
+NONE
+Sums of 41:
+41
+Sums of 48:
+NONE
+Sums of 51:
+NONE
+Sums of 93:
+NONE
+Sums of 52:
+NONE
+Sums of 22:
+NONE
+Sums of 92:
+77+15
+Sums of 17:
+NONE
+Sums of 69:
+NONE
+Sums of 96:
+NONE
+Sums of 17:
+NONE
+Sums of 80:
+NONE
+Sums of 42:
+NONE
+Sums of 54:
+NONE
+Sums of 49:
+NONE
+Sums of 93:
+71+16+6
+Sums of 71:
+NONE
+Sums of 80:
+NONE
+Sums of 49:
+27+22
+Sums of 95:
+NONE
+Sums of 98:
+82+16
+Sums of 75:
+75
+60+13+2
+60+8+7
+59+13+3
+53+22
+53+13+7+2
+Sums of 1:
+NONE
+Sums of 74:
+48+26
+41+26+7
+39+26+7+2
+Sums of 23:
+NONE
+Sums of 37:
+NONE
+Sums of 61:
+NONE
+Sums of 66:
+NONE
+Sums of 91:
+NONE
+Sums of 7:
+NONE
+Sums of 4:
+NONE
+Sums of 97:
+71+15+11
+68+15+14
+22+22+15+14+13+11
+Sums of 69:
+NONE
+Sums of 51:
+NONE
+Sums of 45:
+NONE
+Sums of 34:
+34
+Sums of 16:
+NONE
+Sums of 29:
+NONE
+Sums of 86:
+NONE
+Sums of 68:
+NONE
+Sums of 63:
+NONE
+Sums of 32:
+NONE
+Sums of 60:
+NONE
+Sums of 96:
+38+30+28
+Sums of 93:
+NONE
+Sums of 70:
+NONE
+Sums of 44:
+NONE
+Sums of 99:
+NONE
+Sums of 93:
+NONE
+Sums of 62:
+NONE
+Sums of 82:
+NONE
+Sums of 87:
+79+8
+Sums of 67:
+NONE
+Sums of 96:
+NONE
+Sums of 8:
+NONE
+Sums of 28:
+NONE
+Sums of 82:
+NONE
+Sums of 76:
+NONE
+Sums of 33:
+NONE
+Sums of 67:
+NONE
+Sums of 43:
+34+9
+Sums of 93:
+NONE
+Sums of 2:
+NONE
+Sums of 26:
+NONE
+Sums of 12:
+NONE
+Sums of 77:
+70+7
+66+7+4
+Sums of 15:
+NONE
+Sums of 25:
+NONE
+Sums of 87:
+NONE
+Sums of 20:
+NONE
+Sums of 18:
+NONE
+Sums of 44:
+32+9+3
+24+20
+Sums of 8:
+NONE
+Sums of 11:
+NONE
+Sums of 39:
+29+10
+Sums of 49:
+NONE
+Sums of 70:
+25+25+20
+Sums of 72:
+72
+54+18
+Sums of 78:
+NONE
+Sums of 71:
+NONE
+Sums of 78:
+NONE
+Sums of 45:
+NONE
+Sums of 34:
+26+8
+Sums of 97:
+NONE
+Sums of 36:
+23+7+6
+Sums of 53:
+NONE
+Sums of 19:
+NONE
+Sums of 74:
+NONE
+Sums of 95:
+NONE
+Sums of 17:
+NONE
+Sums of 78:
+43+32+3
+32+24+22
+Sums of 73:
+NONE
+Sums of 15:
+NONE
+Sums of 54:
+NONE
+Sums of 85:
+NONE
+Sums of 26:
+26
+Sums of 31:
+NONE
+Sums of 50:
+29+21
+Sums of 27:
+NONE
+Sums of 37:
+NONE
+Sums of 83:
+NONE
+Sums of 13:
+NONE
+Sums of 65:
+65
+Sums of 29:
+29
+Sums of 18:
+NONE
+Sums of 15:
+NONE
+Sums of 30:
+23+4+3
+23+4+2+1
+Sums of 44:
+NONE
+Sums of 67:
+NONE
+Sums of 20:
+NONE
+Sums of 17:
+NONE
+Sums of 52:
+50+2
+39+12+1
+26+20+4+2
+Sums of 84:
+NONE
+Sums of 11:
+NONE
+Sums of 32:
+NONE
+Sums of 2:
+NONE
+Sums of 12:
+NONE
+Sums of 79:
+NONE
+Sums of 51:
+21+21+9
+Sums of 78:
+70+8
+Sums of 11:
+NONE
+Sums of 67:
+NONE
+Sums of 10:
+NONE
+Sums of 94:
+NONE
+Sums of 54:
+NONE
+Sums of 90:
+85+5
+64+19+5+2
+31+23+18+18
+Sums of 92:
+39+30+23
+Sums of 6:
+6
+Sums of 45:
+45
+Sums of 81:
+NONE
+Sums of 54:
+44+10
+Sums of 86:
+NONE
+Sums of 27:
+NONE
+Sums of 91:
+NONE
+Sums of 89:
+NONE
+Sums of 32:
+NONE
+Sums of 89:
+NONE
+Sums of 38:
+NONE
+Sums of 71:
+NONE
+Sums of 43:
+43
+Sums of 19:
+NONE
+Sums of 75:
+NONE
+Sums of 27:
+NONE
+Sums of 46:
+NONE
+Sums of 40:
+40
+36+4
+Sums of 64:
+NONE
+Sums of 77:
+NONE
+Sums of 95:
+95
+Sums of 74:
+NONE
+Sums of 68:
+47+13+8
+Sums of 54:
+50+4
+Sums of 84:
+44+32+8
+Sums of 16:
+NONE
+Sums of 33:
+NONE
+Sums of 50:
+NONE
+Sums of 62:
+NONE
+Sums of 83:
+83
+Sums of 85:
+NONE
+Sums of 30:
+NONE
+Sums of 44:
+NONE
+Sums of 57:
+NONE
+Sums of 60:
+NONE
+Sums of 73:
+57+8+8
+Sums of 47:
+NONE
+Sums of 67:
+38+29
+Sums of 37:
+NONE
+Sums of 55:
+NONE
+Sums of 54:
+NONE
+Sums of 24:
+NONE
+Sums of 16:
+NONE
+Sums of 36:
+NONE
+Sums of 41:
+NONE
+Sums of 15:
+15
+Sums of 21:
+NONE
+Sums of 83:
+61+22
+Sums of 48:
+32+16
+31+17
+Sums of 52:
+NONE
+Sums of 32:
+NONE
+Sums of 12:
+NONE
+Sums of 49:
+38+8+2+1
+38+7+4
+38+6+4+1
+34+8+7
+34+8+6+1
+34+8+4+2+1
+34+7+6+2
+33+8+7+1
+33+8+6+2
+33+7+6+2+1
+Sums of 11:
+NONE
+Sums of 99:
+64+29+6
+55+44
+Sums of 2:
+NONE
+Sums of 85:
+NONE
+Sums of 10:
+NONE
+Sums of 60:
+NONE
+Sums of 5:
+NONE
+Sums of 85:
+NONE
+Sums of 99:
+NONE
+Sums of 1:
+NONE
+Sums of 52:
+NONE
+Sums of 39:
+NONE
+Sums of 51:
+NONE
+Sums of 81:
+NONE
+Sums of 71:
+60+9+2
+57+9+5
+Sums of 72:
+NONE
+Sums of 67:
+NONE
+Sums of 32:
+NONE
+Sums of 78:
+45+33
+Sums of 82:
+NONE
+Sums of 1:
+NONE
+Sums of 84:
+66+13+5
+41+39+4
+39+32+13
+Sums of 43:
+NONE
+Sums of 31:
+31
+24+7
+Sums of 84:
+51+33
+Sums of 31:
+NONE
+Sums of 27:
+NONE
+Sums of 2:
+NONE
+Sums of 23:
+NONE
+Sums of 100:
+100
+Sums of 49:
+NONE
+Sums of 27:
+NONE
+Sums of 32:
+NONE
+Sums of 58:
+NONE
+Sums of 15:
+NONE
+Sums of 49:
+NONE
+Sums of 12:
+NONE
+Sums of 37:
+NONE
+Sums of 30:
+NONE
+Sums of 48:
+48
+Sums of 83:
+NONE
+Sums of 47:
+NONE
+Sums of 6:
+NONE
+Sums of 13:
+NONE
+Sums of 60:
+40+18+2
+37+23
+23+18+17+2
+Sums of 23:
+NONE
+Sums of 60:
+NONE
+Sums of 25:
+NONE
+Sums of 52:
+NONE
+Sums of 84:
+NONE
+Sums of 53:
+NONE
+Sums of 30:
+NONE
+Sums of 86:
+NONE
+Sums of 38:
+NONE
+Sums of 73:
+NONE
+Sums of 69:
+NONE
+Sums of 6:
+NONE
+Sums of 61:
+36+23+2
+Sums of 4:
+NONE
+Sums of 21:
+NONE
+Sums of 65:
+NONE
+Sums of 23:
+NONE
+Sums of 58:
+NONE
+Sums of 91:
+83+8
+Sums of 29:
+NONE
+Sums of 30:
+NONE
+Sums of 8:
+NONE
+Sums of 42:
+NONE
+Sums of 16:
+NONE
+Sums of 58:
+NONE
+Sums of 92:
+47+45
+Sums of 37:
+NONE
+Sums of 88:
+NONE
+Sums of 88:
+NONE
+Sums of 90:
+NONE
+Sums of 80:
+NONE
+Sums of 79:
+NONE
+Sums of 49:
+NONE
+Sums of 52:
+35+9+8
+Sums of 100:
+NONE
+Sums of 46:
+NONE
+Sums of 81:
+81
+68+13
+59+13+9
+35+23+13+9+1
+Sums of 27:
+NONE
+Sums of 51:
+NONE
+Sums of 1:
+NONE
+Sums of 25:
+NONE
+Sums of 73:
+NONE
+Sums of 2:
+NONE
+Sums of 51:
+NONE
+Sums of 3:
+3
+Sums of 7:
+NONE
+Sums of 33:
+NONE
+Sums of 74:
+48+26
+Sums of 28:
+NONE
+Sums of 36:
+NONE
+Sums of 49:
+NONE
+Sums of 11:
+NONE
+Sums of 100:
+82+18
+Sums of 68:
+NONE
+Sums of 89:
+NONE
+Sums of 22:
+22
+Sums of 59:
+NONE
+Sums of 47:
+NONE
+Sums of 98:
+67+30+1
+65+30+3
+54+43+1
+50+30+15+3
+Sums of 8:
+NONE
+Sums of 39:
+NONE
+Sums of 29:
+NONE
+Sums of 13:
+NONE
+Sums of 22:
+NONE
+Sums of 61:
+NONE
+Sums of 57:
+NONE
+Sums of 64:
+NONE
+Sums of 1:
+NONE
+Sums of 80:
+NONE
+Sums of 79:
+NONE
+Sums of 50:
+40+10
+Sums of 2:
+NONE
+Sums of 44:
+44
+Sums of 97:
+63+26+8
+63+11+10+8+5
+58+26+11+2
+58+26+8+5
+50+26+11+10
+50+26+11+8+2
+Sums of 23:
+NONE
+Sums of 100:
+NONE
+Sums of 98:
+61+23+14
+Sums of 28:
+28
+Sums of 69:
+NONE
+Sums of 36:
+35+1
+Sums of 93:
+NONE
+Sums of 73:
+NONE
+Sums of 67:
+67
+45+19+3
+Sums of 67:
+NONE
+Sums of 96:
+NONE
+Sums of 5:
+5
+Sums of 66:
+NONE
+Sums of 23:
+NONE
+Sums of 56:
+NONE
+Sums of 29:
+NONE
+Sums of 75:
+40+35
+Sums of 13:
+7+4+2
+Sums of 25:
+NONE
+Sums of 89:
+NONE
+Sums of 14:
+NONE
+Sums of 20:
+NONE
+Sums of 56:
+39+10+7
+Sums of 5:
+NONE
+Sums of 60:
+NONE
+Sums of 49:
+NONE
+Sums of 68:
+NONE
+Sums of 65:
+NONE
+Sums of 30:
+NONE
+Sums of 22:
+NONE
+Sums of 65:
+NONE
+Sums of 25:
+25
+Sums of 31:
+NONE
+Sums of 49:
+NONE
+Sums of 63:
+63
+Sums of 9:
+NONE
+Sums of 15:
+NONE
+Sums of 38:
+NONE
+Sums of 15:
+NONE
+Sums of 45:
+NONE
+Sums of 35:
+NONE
+Sums of 58:
+NONE
+Sums of 88:
+NONE
+Sums of 63:
+NONE
+Sums of 77:
+NONE
+Sums of 98:
+NONE
+Sums of 63:
+NONE
+Sums of 98:
+NONE
+Sums of 20:
+NONE
+Sums of 51:
+NONE
+Sums of 2:
+NONE
+Sums of 71:
+NONE
+Sums of 29:
+NONE
+Sums of 77:
+77
+Sums of 48:
+NONE
+Sums of 43:
+NONE
+Sums of 95:
+NONE
+Sums of 81:
+NONE
+Sums of 26:
+NONE
+Sums of 76:
+NONE
+Sums of 44:
+NONE
+Sums of 99:
+NONE
+Sums of 12:
+NONE
+Sums of 18:
+NONE
+Sums of 51:
+NONE
+Sums of 19:
+NONE
+Sums of 98:
+NONE
+Sums of 39:
+NONE
+Sums of 41:
+NONE
+Sums of 100:
+44+30+26
+Sums of 54:
+NONE
+Sums of 2:
+NONE
+Sums of 25:
+NONE
+Sums of 81:
+NONE
+Sums of 37:
+NONE
+Sums of 16:
+NONE
+Sums of 60:
+37+21+2
+28+21+11
+Sums of 99:
+NONE
+Sums of 63:
+26+22+15
+Sums of 8:
+8
+Sums of 63:
+NONE
+Sums of 39:
+NONE
+Sums of 38:
+NONE
+Sums of 100:
+NONE
+Sums of 83:
+NONE
+Sums of 38:
+NONE
+Sums of 85:
+NONE
+Sums of 16:
+16
+Sums of 30:
+30
+Sums of 19:
+NONE
+Sums of 63:
+NONE
+Sums of 86:
+46+40
+46+34+6
+Sums of 1:
+NONE
+Sums of 40:
+26+11+3
+Sums of 79:
+NONE
+Sums of 94:
+48+46
+Sums of 85:
+NONE
+Sums of 25:
+19+6
+Sums of 79:
+NONE
+Sums of 13:
+13
+Sums of 62:
+38+19+5
+Sums of 8:
+8
+Sums of 13:
+NONE
+Sums of 18:
+NONE
+Sums of 18:
+NONE
+Sums of 90:
+NONE
+Sums of 76:
+55+21
+Sums of 3:
+NONE
+Sums of 37:
+NONE
+Sums of 85:
+NONE
+Sums of 19:
+NONE
+Sums of 16:
+NONE
+Sums of 63:
+NONE
+Sums of 3:
+NONE
+Sums of 2:
+NONE
+Sums of 14:
+NONE
+Sums of 92:
+55+37
+Sums of 39:
+NONE
+Sums of 97:
+NONE
+Sums of 46:
+32+14
+Sums of 33:
+NONE
+Sums of 82:
+NONE
+Sums of 86:
+82+4
+Sums of 95:
+90+5
+63+20+7+5
+Sums of 32:
+NONE
+Sums of 75:
+NONE
+Sums of 57:
+NONE
+Sums of 72:
+NONE
+Sums of 23:
+NONE
+Sums of 49:
+NONE
+Sums of 66:
+NONE
+Sums of 31:
+NONE
+Sums of 5:
+NONE
+Sums of 43:
+NONE
+Sums of 23:
+NONE
+Sums of 7:
+NONE
+Sums of 99:
+NONE
+Sums of 95:
+NONE
+Sums of 75:
+62+7+6
+Sums of 57:
+NONE
+Sums of 81:
+NONE
+Sums of 50:
+50
+22+17+11
+17+14+11+8
+Sums of 54:
+NONE
+Sums of 40:
+24+16
+Sums of 99:
+NONE
+Sums of 61:
+NONE
+Sums of 15:
+NONE
+Sums of 91:
+NONE
+Sums of 1:
+NONE
+Sums of 71:
+NONE
+Sums of 86:
+59+27
+Sums of 3:
+NONE
+Sums of 9:
+NONE
+Sums of 80:
+70+9+1
+Sums of 81:
+NONE
+Sums of 46:
+NONE
+Sums of 49:
+NONE
+Sums of 58:
+NONE
+Sums of 90:
+NONE
+Sums of 83:
+NONE
+Sums of 80:
+NONE
+Sums of 55:
+NONE
+Sums of 59:
+NONE
+Sums of 39:
+NONE
+Sums of 36:
+NONE
+Sums of 1:
+1
+Sums of 99:
+NONE
+Sums of 45:
+NONE
+Sums of 86:
+NONE
+Sums of 9:
+NONE
+Sums of 11:
+NONE
+Sums of 78:
+NONE
+Sums of 65:
+26+24+15
+Sums of 87:
+NONE
+Sums of 30:
+NONE
+Sums of 17:
+NONE
+Sums of 17:
+NONE
+Sums of 70:
+NONE
+Sums of 47:
+NONE
+Sums of 13:
+NONE
+Sums of 86:
+86
+Sums of 54:
+NONE
+Sums of 45:
+NONE
+Sums of 18:
+NONE
+Sums of 32:
+NONE
+Sums of 72:
+NONE
+Sums of 35:
+NONE
+Sums of 52:
+NONE
+Sums of 9:
+NONE
+Sums of 4:
+NONE
+Sums of 27:
+NONE
+Sums of 46:
+NONE
+Sums of 47:
+NONE
+Sums of 16:
+NONE
+Sums of 29:
+NONE
+Sums of 71:
+44+27
+Sums of 81:
+46+24+11
+Sums of 44:
+NONE
+Sums of 59:
+NONE
+Sums of 7:
+NONE
+Sums of 44:
+NONE
+Sums of 5:
+NONE
+Sums of 25:
+NONE
+Sums of 96:
+93+3
+Sums of 12:
+12
+Sums of 95:
+52+34+9
+52+20+14+9
+38+34+14+9
+34+32+20+9
+Sums of 64:
+NONE
+Sums of 25:
+NONE
+Sums of 63:
+63
+53+10
+48+15
+Sums of 76:
+NONE
+Sums of 19:
+NONE
+Sums of 38:
+38
+Sums of 1:
+NONE
+Sums of 80:
+NONE
+Sums of 29:
+29
+Sums of 69:
+NONE
+Sums of 57:
+NONE
+Sums of 25:
+NONE
+Sums of 9:
+NONE
+Sums of 24:
+NONE
+Sums of 58:
+NONE
+Sums of 78:
+39+39
+Sums of 38:
+38
+Sums of 67:
+NONE
+Sums of 15:
+NONE
+Sums of 33:
+NONE
+Sums of 55:
+NONE
+Sums of 19:
+NONE
+Sums of 69:
+NONE
+Sums of 80:
+56+13+11
+52+28
+Sums of 33:
+NONE
+Sums of 90:
+NONE
+Sums of 21:
+NONE
+Sums of 60:
+NONE
+Sums of 39:
+NONE
+Sums of 97:
+NONE
+Sums of 10:
+NONE
+Sums of 26:
+NONE
+Sums of 15:
+NONE
+Sums of 53:
+NONE
+Sums of 73:
+NONE
+Sums of 17:
+NONE
+Sums of 92:
+88+4
+48+44
+44+44+4
+Sums of 34:
+NONE
+Sums of 70:
+56+13+1
+42+15+13
+Sums of 52:
+NONE
+Sums of 1:
+NONE
+Sums of 44:
+NONE
+Sums of 25:
+NONE
+Sums of 85:
+NONE
+Sums of 82:
+NONE
+Sums of 57:
+NONE
+Sums of 40:
+NONE
+Sums of 98:
+NONE
+Sums of 18:
+NONE
+Sums of 2:
+NONE
+Sums of 58:
+NONE
+Sums of 73:
+NONE
+Sums of 59:
+NONE
+Sums of 9:
+NONE
+Sums of 100:
+NONE
+Sums of 89:
+NONE
+Sums of 92:
+53+30+9
+Sums of 76:
+58+18
+41+18+17
+Sums of 60:
+NONE
+Sums of 13:
+NONE
+Sums of 44:
+NONE
+Sums of 99:
+73+26
+29+27+26+16+1
+Sums of 51:
+NONE
+Sums of 54:
+NONE
+Sums of 22:
+NONE
+Sums of 95:
+48+41+6
+Sums of 22:
+NONE
+Sums of 87:
+NONE
+Sums of 80:
+31+26+23
+28+26+26
+Sums of 7:
+NONE
+Sums of 70:
+NONE
+Sums of 69:
+NONE
+Sums of 60:
+NONE
+Sums of 73:
+NONE
+Sums of 28:
+NONE
+Sums of 69:
+NONE
+Sums of 40:
+NONE
+Sums of 60:
+58+2
+Sums of 43:
+NONE
+Sums of 30:
+NONE
+Sums of 12:
+NONE
+Sums of 6:
+NONE
+Sums of 24:
+NONE
+Sums of 99:
+80+17+2
+Sums of 75:
+NONE
+Sums of 29:
+NONE
+Sums of 32:
+NONE
+Sums of 22:
+22
+Sums of 90:
+NONE
+Sums of 78:
+71+7
+Sums of 7:
+NONE
+Sums of 52:
+NONE
+Sums of 76:
+NONE
+Sums of 54:
+NONE
+Sums of 70:
+NONE
+Sums of 57:
+57
+Sums of 99:
+58+30+11
+45+37+17
+42+37+20
+Sums of 79:
+NONE
+Sums of 45:
+NONE
+Sums of 10:
+NONE
+Sums of 20:
+NONE
+Sums of 42:
+NONE
+Sums of 28:
+NONE
+Sums of 36:
+36
+Sums of 39:
+NONE
+Sums of 52:
+NONE
+Sums of 73:
+NONE
+Sums of 10:
+NONE
+Sums of 44:
+NONE
+Sums of 42:
+NONE
+Sums of 10:
+NONE
+Sums of 42:
+NONE
+Sums of 84:
+84
+Sums of 55:
+NONE
+Sums of 6:
+NONE
+Sums of 93:
+NONE
+Sums of 12:
+NONE
+Sums of 69:
+69
+Sums of 37:
+NONE
+Sums of 86:
+NONE
+Sums of 67:
+NONE
+Sums of 91:
+NONE
+Sums of 94:
+53+36+5
+53+32+5+4
+53+30+7+4
+Sums of 53:
+NONE
+Sums of 41:
+NONE
+Sums of 29:
+NONE
+Sums of 90:
+90
+Sums of 83:
+NONE
+Sums of 27:
+NONE
+Sums of 64:
+NONE
+Sums of 3:
+NONE
+Sums of 37:
+NONE
+Sums of 74:
+NONE
+Sums of 20:
+NONE
+Sums of 1:
+NONE
+Sums of 33:
+NONE
+Sums of 4:
+4
+Sums of 58:
+NONE
+Sums of 66:
+NONE
+Sums of 49:
+NONE
+Sums of 86:
+NONE
+Sums of 75:
+46+29
+Sums of 94:
+NONE
+Sums of 18:
+NONE
+Sums of 68:
+NONE
+Sums of 93:
+NONE
+Sums of 74:
+NONE
+Sums of 25:
+NONE
+Sums of 85:
+NONE
+Sums of 83:
+NONE
+Sums of 1:
+NONE
+Sums of 26:
+NONE
+Sums of 64:
+NONE
+Sums of 61:
+NONE
+Sums of 92:
+NONE
+Sums of 95:
+NONE
+Sums of 10:
+10
+Sums of 72:
+44+28
+Sums of 57:
+NONE
+Sums of 89:
+NONE
+Sums of 47:
+NONE
+Sums of 61:
+NONE
+Sums of 68:
+NONE
+Sums of 75:
+NONE
+Sums of 59:
+NONE
+Sums of 90:
+NONE
+Sums of 63:
+NONE
+Sums of 74:
+NONE
+Sums of 10:
+NONE
+Sums of 43:
+NONE
+Sums of 87:
+44+25+17+1
+Sums of 90:
+NONE
+Sums of 80:
+43+37
+Sums of 85:
+NONE
+Sums of 35:
+NONE
+Sums of 3:
+3
+Sums of 58:
+NONE
+Sums of 75:
+NONE
+Sums of 42:
+NONE
+Sums of 7:
+NONE
+Sums of 11:
+NONE
+Sums of 14:
+NONE
+Sums of 19:
+NONE
+Sums of 80:
+NONE
+Sums of 57:
+28+28+1
+Sums of 50:
+NONE
+Sums of 97:
+NONE
+Sums of 35:
+NONE
+Sums of 47:
+NONE
+Sums of 3:
+NONE
+Sums of 31:
+NONE
+Sums of 63:
+22+17+13+11
+Sums of 74:
+NONE
+Sums of 62:
+37+23+2
+37+22+2+1
+36+23+2+1
+23+22+16+1
+Sums of 12:
+NONE
+Sums of 7:
+NONE
+Sums of 24:
+NONE
+Sums of 9:
+9
+Sums of 43:
+NONE
+Sums of 35:
+35
+Sums of 86:
+74+12
+52+25+9
+Sums of 68:
+NONE
+Sums of 90:
+NONE
+Sums of 17:
+NONE
+Sums of 65:
+40+25
+Sums of 65:
+NONE
+Sums of 33:
+NONE
+Sums of 82:
+NONE
+Sums of 76:
+76
+Sums of 15:
+NONE
+Sums of 4:
+NONE
+Sums of 3:
+NONE
+Sums of 25:
+NONE
+Sums of 18:
+NONE
+Sums of 53:
+43+10
+Sums of 85:
+85
+68+17
+43+25+17
+Sums of 78:
+27+26+20+5
+Sums of 58:
+30+28
+Sums of 98:
+56+26+16
+Sums of 56:
+NONE
+Sums of 1:
+NONE
+Sums of 36:
+NONE
+Sums of 43:
+NONE
+Sums of 84:
+35+31+18
+35+23+18+8
+Sums of 97:
+NONE
+Sums of 57:
+NONE
+Sums of 33:
+NONE
+Sums of 6:
+NONE
+Sums of 63:
+NONE
+Sums of 20:
+NONE
+Sums of 91:
+NONE
+Sums of 55:
+NONE
+Sums of 53:
+NONE
+Sums of 57:
+NONE
+Sums of 10:
+NONE
+Sums of 15:
+NONE
+Sums of 7:
+NONE
+Sums of 27:
+NONE
+Sums of 52:
+43+9
+Sums of 89:
+NONE
+Sums of 51:
+26+25
+26+17+8
+25+21+5
+25+16+5+5
+21+17+8+5
+17+16+8+5+5
+Sums of 85:
+48+17+16+3+1
+Sums of 24:
+NONE
+Sums of 82:
+NONE
+Sums of 83:
+NONE
+Sums of 10:
+NONE
+Sums of 28:
+28
+Sums of 42:
+18+13+11
+Sums of 43:
+NONE
+Sums of 41:
+22+19
+Sums of 8:
+NONE
+Sums of 28:
+NONE
+Sums of 98:
+NONE
+Sums of 50:
+NONE
+Sums of 61:
+61
+Sums of 2:
+NONE
+Sums of 91:
+70+21
+Sums of 57:
+53+4
+Sums of 26:
+NONE
+Sums of 83:
+NONE
+Sums of 8:
+NONE
+Sums of 3:
+NONE
+Sums of 43:
+NONE
+Sums of 62:
+NONE
+Sums of 26:
+NONE
+Sums of 16:
+NONE
+Sums of 28:
+NONE
+Sums of 24:
+NONE
+Sums of 5:
+5
+Sums of 36:
+21+15
+Sums of 72:
+NONE
+Sums of 80:
+76+4
+Sums of 46:
+NONE
+Sums of 56:
+NONE
+Sums of 91:
+52+39
+39+34+18
+Sums of 46:
+45+1
+Sums of 1:
+NONE
+Sums of 16:
+NONE
+Sums of 43:
+NONE
+Sums of 60:
+NONE
+Sums of 34:
+NONE
+Sums of 69:
+NONE
+Sums of 25:
+NONE
+Sums of 49:
+NONE
+Sums of 34:
+NONE
+Sums of 76:
+NONE
+Sums of 39:
+28+6+5
+17+16+6
+Sums of 46:
+NONE
+Sums of 49:
+NONE
+Sums of 9:
+NONE
+Sums of 78:
+NONE
+Sums of 50:
+NONE
+Sums of 65:
+NONE
+Sums of 58:
+NONE
+Sums of 60:
+NONE
+Sums of 26:
+NONE
+Sums of 31:
+NONE
+Sums of 2:
+2
+Sums of 75:
+49+20+6
+Sums of 52:
+NONE
+Sums of 63:
+NONE
+Sums of 10:
+10
+Sums of 76:
+41+33+2
+Sums of 39:
+NONE
+Sums of 74:
+NONE
+Sums of 44:
+NONE
+Sums of 39:
+NONE
+Sums of 72:
+NONE
+Sums of 95:
+NONE
+Sums of 88:
+88
+Sums of 59:
+NONE
+Sums of 22:
+NONE
+Sums of 26:
+NONE
+Sums of 65:
+NONE
+Sums of 36:
+NONE
+Sums of 59:
+49+4+3+3
+Sums of 92:
+NONE
+Sums of 43:
+NONE
+Sums of 38:
+20+12+6
+Sums of 10:
+10
+Sums of 1:
+NONE
+Sums of 5:
+NONE
+Sums of 97:
+NONE
+Sums of 8:
+NONE
+Sums of 42:
+42
+Sums of 5:
+NONE
+Sums of 10:
+NONE
+Sums of 21:
+NONE
+Sums of 85:
+NONE
+Sums of 29:
+29
+Sums of 75:
+50+13+12
+29+19+14+13
+Sums of 4:
+NONE
+Sums of 21:
+NONE
+Sums of 43:
+NONE
+Sums of 100:
+64+36
+Sums of 62:
+NONE
+Sums of 69:
+33+28+8
+33+21+15
+Sums of 84:
+NONE
+Sums of 47:
+NONE
+Sums of 28:
+NONE
+Sums of 41:
+NONE
+Sums of 22:
+NONE
+Sums of 21:
+NONE
+Sums of 60:
+NONE
+Sums of 54:
+NONE
+Sums of 96:
+NONE
+Sums of 59:
+59
+Sums of 30:
+NONE
+Sums of 23:
+NONE
+Sums of 27:
+NONE
+Sums of 78:
+48+30
+Sums of 49:
+NONE
+Sums of 96:
+NONE
+Sums of 93:
+NONE
+Sums of 79:
+NONE
+Sums of 36:
+NONE
+Sums of 49:
+42+6+1
+38+11
+32+11+6
+Sums of 40:
+NONE
+Sums of 4:
+NONE
+Sums of 72:
+NONE
+Sums of 36:
+NONE
+Sums of 20:
+NONE
+Sums of 89:
+NONE
+Sums of 78:
+NONE
+Sums of 25:
+NONE
+Sums of 64:
+35+17+12
+Sums of 88:
+NONE
+Sums of 29:
+NONE
+Sums of 49:
+NONE
+Sums of 96:
+NONE
+Sums of 74:
+NONE
+Sums of 25:
+NONE
+Sums of 50:
+NONE
+Sums of 95:
+NONE
+Sums of 46:
+NONE
+Sums of 24:
+NONE
+Sums of 63:
+NONE
+Sums of 28:
+NONE
+Sums of 26:
+NONE
+Sums of 43:
+NONE
+Sums of 81:
+81
+Sums of 1:
+NONE
+Sums of 74:
+NONE
+Sums of 83:
+NONE
+Sums of 1:
+NONE
+Sums of 23:
+NONE
+Sums of 55:
+29+15+7+4
+Sums of 80:
+79+1
+Sums of 37:
+37
+Sums of 54:
+36+18
+Sums of 87:
+NONE
+Sums of 1:
+NONE
+Sums of 30:
+25+5
+12+12+6
+Sums of 40:
+NONE
+Sums of 78:
+NONE
+Sums of 47:
+NONE
+Sums of 9:
+NONE
+Sums of 26:
+NONE
+Sums of 49:
+NONE
+Sums of 69:
+NONE
+Sums of 6:
+NONE
+Sums of 57:
+NONE
+Sums of 58:
+NONE
+Sums of 51:
+NONE
+Sums of 79:
+NONE
+Sums of 61:
+NONE
+Sums of 67:
+NONE
+Sums of 87:
+83+4
+54+17+12+4
+Sums of 31:
+NONE
+Sums of 53:
+NONE
+Sums of 42:
+NONE
+Sums of 26:
+NONE
+Sums of 65:
+NONE
+Sums of 88:
+70+18
+70+14+4
+54+18+14+2
+50+18+14+4+2
+Sums of 14:
+NONE
+Sums of 42:
+NONE
+Sums of 66:
+NONE
+Sums of 97:
+NONE
+Sums of 63:
+NONE
+Sums of 15:
+NONE
+Sums of 19:
+10+9
+Sums of 58:
+NONE
+Sums of 7:
+NONE
+Sums of 28:
+NONE
+Sums of 66:
+NONE
+Sums of 79:
+NONE
+Sums of 74:
+NONE
+Sums of 56:
+NONE
+Sums of 55:
+NONE
+Sums of 7:
+7
+Sums of 75:
+75
+Sums of 46:
+NONE
+Sums of 19:
+NONE
+Sums of 9:
+NONE
+Sums of 85:
+NONE
+Sums of 27:
+NONE
+Sums of 75:
+NONE
+Sums of 78:
+78
+60+18
+Sums of 15:
+NONE
+Sums of 59:
+34+25
+Sums of 98:
+NONE
+Sums of 68:
+NONE
+Sums of 6:
+NONE
+Sums of 32:
+NONE
+Sums of 16:
+NONE
+Sums of 14:
+NONE
+Sums of 14:
+NONE
+Sums of 72:
+44+19+9
+32+19+12+9
+Sums of 79:
+NONE
+Sums of 4:
+NONE
+Sums of 36:
+24+12
+Sums of 95:
+NONE
+Sums of 40:
+21+19
+Sums of 87:
+NONE
+Sums of 21:
+NONE
+Sums of 18:
+NONE
+Sums of 13:
+NONE
+Sums of 24:
+NONE
+Sums of 83:
+NONE
+Sums of 43:
+NONE
+Sums of 26:
+NONE
+Sums of 68:
+NONE
+Sums of 7:
+NONE
+Sums of 100:
+NONE
+Sums of 25:
+NONE
+Sums of 55:
+NONE
+Sums of 49:
+37+12
+Sums of 86:
+72+14
+Sums of 26:
+NONE
+Sums of 18:
+NONE
+Sums of 54:
+NONE
+Sums of 31:
+NONE
+Sums of 85:
+NONE
+Sums of 87:
+NONE
+Sums of 32:
+NONE
+Sums of 84:
+84
+43+34+7
+Sums of 4:
+2+2
+Sums of 17:
+NONE
+Sums of 68:
+NONE
+Sums of 41:
+NONE
+Sums of 58:
+NONE
+Sums of 40:
+28+12
+Sums of 99:
+44+42+8+5
+Sums of 80:
+NONE
+Sums of 73:
+NONE
+Sums of 49:
+NONE
+Sums of 87:
+NONE
+Sums of 66:
+NONE
+Sums of 43:
+24+12+7
+Sums of 30:
+NONE
+Sums of 41:
+24+17
+Sums of 94:
+NONE
+Sums of 34:
+NONE
+Sums of 62:
+NONE
+Sums of 81:
+NONE
+Sums of 32:
+NONE
+Sums of 98:
+NONE
+Sums of 14:
+NONE
+Sums of 74:
+NONE
+Sums of 32:
+30+2
+Sums of 59:
+NONE
+Sums of 21:
+NONE
+Sums of 52:
+NONE
+Sums of 7:
+NONE
+Sums of 49:
+NONE
+Sums of 75:
+42+33
+42+13+10+7+3
+Sums of 80:
+NONE
+Sums of 8:
+NONE
+Sums of 29:
+29
+Sums of 19:
+NONE
+Sums of 25:
+NONE
+Sums of 96:
+96
+Sums of 55:
+55
+Sums of 56:
+56
+Sums of 34:
+NONE
+Sums of 94:
+81+13
+66+14+14
+61+20+13
+Sums of 16:
+NONE
+Sums of 8:
+NONE
+Sums of 1:
+NONE
+Sums of 73:
+NONE
+Sums of 31:
+NONE
+Sums of 68:
+44+24
+Sums of 1:
+NONE
+Sums of 15:
+NONE
+Sums of 22:
+NONE
+Sums of 81:
+NONE
+Sums of 60:
+NONE
+Sums of 11:
+8+3
+Sums of 56:
+NONE
+Sums of 68:
+NONE
+Sums of 54:
+NONE
+Sums of 41:
+NONE
+Sums of 62:
+NONE
+Sums of 57:
+NONE
+Sums of 11:
+NONE
+Sums of 62:
+NONE
+Sums of 69:
+NONE
+Sums of 67:
+NONE
+Sums of 13:
+NONE
+Sums of 88:
+NONE
+Sums of 58:
+NONE
+Sums of 35:
+NONE
+Sums of 80:
+NONE
+Sums of 28:
+NONE
+Sums of 47:
+43+4
+Sums of 24:
+NONE
+Sums of 94:
+NONE
+Sums of 50:
+NONE
+Sums of 23:
+NONE
+Sums of 54:
+NONE
+Sums of 27:
+NONE
+Sums of 27:
+NONE
+Sums of 93:
+NONE
+Sums of 21:
+NONE
+Sums of 36:
+NONE
+Sums of 61:
+NONE
+Sums of 36:
+NONE
+Sums of 41:
+NONE
+Sums of 81:
+81
+Sums of 92:
+NONE
+Sums of 9:
+NONE
+Sums of 50:
+NONE
+Sums of 26:
+NONE
+Sums of 85:
+85
+Sums of 79:
+42+37
+37+23+19
+Sums of 24:
+NONE
+Sums of 62:
+NONE
+Sums of 60:
+60
+Sums of 73:
+NONE
+Sums of 99:
+83+16
+76+16+7
+62+37
+51+45+3
+Sums of 43:
+NONE
+Sums of 73:
+61+7+5
+Sums of 49:
+NONE
+Sums of 68:
+NONE
+Sums of 46:
+46
+Sums of 25:
+NONE
+Sums of 66:
+66
+Sums of 45:
+NONE
+Sums of 13:
+NONE
+Sums of 83:
+NONE
+Sums of 18:
+11+7
+Sums of 77:
+NONE
+Sums of 11:
+NONE
+Sums of 5:
+NONE
+Sums of 51:
+NONE
+Sums of 4:
+4
+Sums of 35:
+NONE
+Sums of 58:
+NONE
+Sums of 93:
+NONE
+Sums of 86:
+NONE
+Sums of 40:
+NONE
+Sums of 30:
+NONE
+Sums of 57:
+NONE
+Sums of 25:
+NONE
+Sums of 38:
+NONE
+Sums of 98:
+39+33+26
+Sums of 34:
+NONE
+Sums of 19:
+NONE
+Sums of 51:
+NONE
+Sums of 39:
+NONE
+Sums of 97:
+51+46
+Sums of 70:
+NONE
+Sums of 81:
+NONE
+Sums of 73:
+47+26
+47+24+2
+26+24+14+9
+Sums of 37:
+NONE
+Sums of 95:
+55+36+4
+36+33+26
+Sums of 18:
+NONE
+Sums of 58:
+40+15+3
+Sums of 60:
+NONE
+Sums of 32:
+NONE
+Sums of 10:
+NONE
+Sums of 6:
+NONE
+Sums of 36:
+NONE
+Sums of 33:
+NONE
+Sums of 60:
+NONE
+Sums of 55:
+NONE
+Sums of 78:
+NONE
+Sums of 51:
+NONE
+Sums of 65:
+NONE
+Sums of 62:
+NONE
+Sums of 75:
+NONE
+Sums of 52:
+NONE
+Sums of 65:
+NONE
+Sums of 76:
+NONE
+Sums of 22:
+NONE
+Sums of 43:
+NONE
+Sums of 32:
+NONE
+Sums of 6:
+NONE
+Sums of 96:
+NONE
+Sums of 74:
+56+14+4
+Sums of 31:
+24+7
+Sums of 25:
+NONE
+Sums of 8:
+NONE
+Sums of 67:
+NONE
+Sums of 72:
+NONE
+Sums of 57:
+40+12+5
+Sums of 22:
+NONE
+Sums of 13:
+NONE
+Sums of 30:
+NONE
+Sums of 29:
+NONE
+Sums of 6:
+NONE
+Sums of 84:
+NONE
+Sums of 22:
+NONE
+Sums of 5:
+NONE
+Sums of 89:
+NONE
+Sums of 15:
+NONE
+Sums of 11:
+NONE
+Sums of 81:
+NONE
+Sums of 7:
+NONE
+Sums of 31:
+NONE
+Sums of 24:
+NONE
+Sums of 47:
+NONE
+Sums of 49:
+49
+29+18+1+1
+26+21+1+1
+26+18+5
+26+18+3+1+1
+21+21+5+1+1
+21+18+5+3+1+1
+Sums of 51:
+NONE
+Sums of 14:
+NONE
+Sums of 72:
+40+19+12+1
+26+19+15+12
+Sums of 64:
+NONE
+Sums of 5:
+NONE
+Sums of 78:
+56+22
+Sums of 60:
+NONE
+Sums of 40:
+NONE
+Sums of 28:
+NONE
+Sums of 85:
+NONE
+Sums of 90:
+83+7
+Sums of 77:
+NONE
+Sums of 49:
+NONE
+Sums of 69:
+NONE
+Sums of 48:
+NONE
+Sums of 15:
+NONE
+Sums of 29:
+NONE
+Sums of 78:
+43+19+16
+Sums of 57:
+NONE
+Sums of 10:
+NONE
+Sums of 81:
+NONE
+Sums of 76:
+43+23+10
+Sums of 98:
+NONE
+Sums of 91:
+NONE
+Sums of 38:
+NONE
+Sums of 70:
+NONE
+Sums of 77:
+NONE
+Sums of 60:
+52+8
+52+5+3
+Sums of 22:
+NONE
+Sums of 66:
+58+8
+Sums of 19:
+NONE
+Sums of 26:
+NONE
+Sums of 82:
+NONE
+Sums of 14:
+NONE
+Sums of 50:
+NONE
+Sums of 86:
+NONE
+Sums of 3:
+NONE
+Sums of 16:
+NONE
+Sums of 1:
+NONE
+Sums of 55:
+NONE
+Sums of 32:
+NONE
+Sums of 51:
+NONE
+Sums of 21:
+NONE
+Sums of 31:
+NONE
+Sums of 62:
+NONE
+Sums of 53:
+27+24+2
+27+17+4+3+2
+Sums of 95:
+NONE
+Sums of 58:
+NONE
+Sums of 16:
+16
+Sums of 18:
+NONE
+Sums of 10:
+NONE
+Sums of 24:
+NONE
+Sums of 81:
+79+2
+Sums of 98:
+NONE
+Sums of 81:
+NONE
+Sums of 72:
+43+16+13
+Sums of 11:
+NONE
+Sums of 86:
+56+30
+Sums of 37:
+30+6+1
+Sums of 52:
+41+11
+Sums of 31:
+NONE
+Sums of 24:
+NONE
+Sums of 97:
+NONE
+Sums of 21:
+NONE
+Sums of 35:
+NONE
+Sums of 39:
+NONE
+Sums of 69:
+NONE
+Sums of 69:
+NONE
+Sums of 86:
+NONE
+Sums of 62:
+NONE
+Sums of 51:
+NONE
+Sums of 51:
+35+16
+34+16+1
+Sums of 91:
+61+23+7
+Sums of 50:
+41+9
+Sums of 27:
+NONE
+Sums of 24:
+NONE
+Sums of 82:
+NONE
+Sums of 64:
+NONE
+Sums of 26:
+NONE
+Sums of 44:
+NONE
+Sums of 39:
+NONE
+Sums of 78:
+NONE
+Sums of 47:
+47
+30+17
+Sums of 92:
+NONE
+Sums of 39:
+NONE
+Sums of 70:
+NONE
+Sums of 29:
+NONE
+Sums of 49:
+NONE
+Sums of 4:
+NONE
+Sums of 79:
+NONE
+Sums of 75:
+NONE
+Sums of 13:
+NONE
+Sums of 37:
+NONE
+Sums of 67:
+NONE
+Sums of 66:
+NONE
+Sums of 73:
+69+4
+60+7+3+3
+Sums of 88:
+NONE
+Sums of 43:
+NONE
+Sums of 77:
+NONE
+Sums of 65:
+65
+Sums of 4:
+NONE
+Sums of 79:
+NONE
+Sums of 18:
+NONE
+Sums of 84:
+44+40
+Sums of 44:
+NONE
+Sums of 35:
+NONE
+Sums of 37:
+NONE
+Sums of 62:
+NONE
+Sums of 35:
+NONE
+Sums of 42:
+NONE
+Sums of 89:
+60+21+5+3
+Sums of 9:
+NONE
+Sums of 87:
+85+2
+78+9
+40+36+9+2
+Sums of 52:
+NONE
+Sums of 36:
+NONE
+Sums of 44:
+44
+40+4
+Sums of 39:
+NONE
+Sums of 51:
+NONE
+Sums of 31:
+NONE
+Sums of 41:
+NONE
+Sums of 52:
+NONE
+Sums of 69:
+NONE
+Sums of 63:
+NONE
+Sums of 15:
+NONE
+Sums of 69:
+NONE
+Sums of 58:
+NONE
+Sums of 19:
+NONE
+Sums of 7:
+NONE
+Sums of 96:
+96
+52+26+18
+52+20+18+6
+Sums of 75:
+NONE
+Sums of 65:
+NONE
+Sums of 30:
+NONE
+Sums of 66:
+NONE
+Sums of 25:
+NONE
+Sums of 97:
+NONE
+Sums of 76:
+NONE
+Sums of 93:
+NONE
+Sums of 92:
+NONE
+Sums of 26:
+26
+Sums of 32:
+NONE
+Sums of 9:
+NONE
+Sums of 37:
+37
+Sums of 22:
+NONE
+Sums of 33:
+NONE
+Sums of 51:
+NONE
+Sums of 17:
+NONE
+Sums of 89:
+42+33+14
+Sums of 13:
+NONE
+Sums of 22:
+NONE
+Sums of 34:
+NONE
+Sums of 38:
+NONE
+Sums of 41:
+NONE
+Sums of 33:
+NONE
+Sums of 97:
+79+16+2
+43+39+15
+43+32+20+2
+43+32+16+4+2
+39+32+26
+39+32+20+4+2
+32+26+20+15+4
+Sums of 75:
+NONE
+Sums of 57:
+NONE
+Sums of 87:
+NONE
+Sums of 23:
+NONE
+Sums of 35:
+19+14+2
+19+12+2+2
+Sums of 18:
+NONE
+Sums of 91:
+68+22+1
+68+18+5
+42+27+22
+33+27+18+13
+33+22+18+13+5
+Sums of 79:
+NONE
+Sums of 34:
+34
+Sums of 40:
+NONE
+Sums of 41:
+NONE
+Sums of 52:
+NONE
+Sums of 11:
+NONE
+Sums of 55:
+33+22
+Sums of 73:
+NONE
+Sums of 76:
+NONE
+Sums of 86:
+NONE
+Sums of 3:
+NONE
+Sums of 64:
+NONE
+Sums of 50:
+NONE
+Sums of 86:
+43+22+21
+Sums of 93:
+52+20+12+9
+Sums of 47:
+NONE
+Sums of 41:
+NONE
+Sums of 30:
+NONE
+Sums of 58:
+NONE
+Sums of 21:
+NONE
+Sums of 72:
+NONE
+Sums of 61:
+41+20
+Sums of 26:
+NONE
+Sums of 84:
+NONE
+Sums of 85:
+NONE
+Sums of 45:
+NONE
+Sums of 35:
+NONE
+Sums of 55:
+55
+Sums of 28:
+NONE
+Sums of 2:
+NONE
+Sums of 30:
+30
+Sums of 33:
+NONE
+Sums of 31:
+NONE
+Sums of 71:
+NONE
+Sums of 90:
+NONE
+Sums of 86:
+NONE
+Sums of 21:
+NONE
+Sums of 84:
+NONE
+Sums of 14:
+NONE
+Sums of 87:
+NONE
+Sums of 64:
+NONE
+Sums of 66:
+NONE
+Sums of 13:
+NONE
+Sums of 24:
+NONE
+Sums of 30:
+NONE
+Sums of 58:
+NONE
+Sums of 27:
+27
+Sums of 98:
+NONE
+Sums of 42:
+NONE
+Sums of 58:
+NONE
+Sums of 76:
+51+25
+Sums of 28:
+NONE
+Sums of 48:
+40+4+4
+34+6+4+4
+19+19+6+4
+Sums of 51:
+42+9
+33+18
+Sums of 97:
+55+42
+Sums of 10:
+NONE
+Sums of 18:
+NONE
+Sums of 76:
+NONE
+Sums of 58:
+NONE
+Sums of 78:
+NONE
+Sums of 85:
+NONE
+Sums of 49:
+NONE
+Sums of 15:
+NONE
+Sums of 89:
+53+36
+Sums of 32:
+NONE
+Sums of 63:
+NONE
+Sums of 47:
+NONE
+Sums of 55:
+NONE
+Sums of 70:
+68+2
+Sums of 37:
+NONE
+Sums of 34:
+NONE
+Sums of 16:
+NONE
+Sums of 85:
+NONE
+Sums of 47:
+NONE
+Sums of 12:
+NONE
+Sums of 50:
+NONE
+Sums of 73:
+NONE
+Sums of 95:
+NONE
+Sums of 59:
+NONE
+Sums of 14:
+NONE
+Sums of 74:
+67+7
+27+21+19+7
+Sums of 37:
+NONE
+Sums of 18:
+NONE
+Sums of 19:
+NONE
+Sums of 51:
+26+25
+Sums of 21:
+NONE
+Sums of 92:
+74+8+6+4
+Sums of 28:
+NONE
+Sums of 90:
+NONE
+Sums of 61:
+33+15+13
+Sums of 77:
+NONE
+Sums of 5:
+NONE
+Sums of 91:
+NONE
+Sums of 62:
+NONE
+Sums of 19:
+NONE
+Sums of 73:
+NONE
+Sums of 6:
+NONE
+Sums of 80:
+NONE
+Sums of 13:
+NONE
+Sums of 82:
+NONE
+Sums of 79:
+NONE
+Sums of 88:
+NONE
+Sums of 60:
+NONE
+Sums of 88:
+NONE
+Sums of 73:
+NONE
+Sums of 35:
+NONE
+Sums of 57:
+NONE
+Sums of 59:
+NONE
+Sums of 25:
+NONE
+Sums of 94:
+NONE
+Sums of 89:
+NONE
+Sums of 47:
+NONE
+Sums of 48:
+NONE
+Sums of 83:
+NONE
+Sums of 8:
+NONE
+Sums of 70:
+70
+Sums of 74:
+NONE
+Sums of 99:
+NONE
+Sums of 46:
+NONE
+Sums of 36:
+NONE
+Sums of 99:
+NONE
+Sums of 44:
+NONE
+Sums of 97:
+NONE
+Sums of 82:
+NONE
+Sums of 50:
+NONE
+Sums of 18:
+18
+Sums of 2:
+NONE
+Sums of 89:
+66+23
+Sums of 42:
+NONE
+Sums of 11:
+NONE
+Sums of 98:
+NONE
+Sums of 93:
+NONE
+Sums of 72:
+NONE
+Sums of 23:
+NONE
+Sums of 54:
+54
+Sums of 71:
+NONE
+Sums of 7:
+NONE
+Sums of 100:
+NONE
+Sums of 85:
+NONE
+Sums of 91:
+NONE
+Sums of 4:
+NONE
+Sums of 95:
+78+17
+Sums of 56:
+NONE
+Sums of 66:
+NONE
+Sums of 66:
+NONE
+Sums of 72:
+NONE
+Sums of 30:
+NONE
+Sums of 28:
+NONE
+Sums of 87:
+NONE
+Sums of 95:
+NONE
+Sums of 60:
+NONE
+Sums of 10:
+NONE
+Sums of 12:
+NONE
+Sums of 4:
+NONE
+Sums of 97:
+76+15+6
+Sums of 36:
+NONE
+Sums of 59:
+NONE
+Sums of 79:
+59+18+2
+Sums of 97:
+NONE
+Sums of 19:
+NONE
+Sums of 19:
+NONE
+Sums of 11:
+NONE
+Sums of 75:
+NONE
+Sums of 50:
+NONE
+Sums of 32:
+29+3
+Sums of 53:
+NONE
+Sums of 38:
+38
+Sums of 92:
+NONE
+Sums of 62:
+NONE
+Sums of 17:
+NONE
+Sums of 84:
+NONE
+Sums of 57:
+NONE
+Sums of 87:
+NONE
+Sums of 42:
+NONE
+Sums of 43:
+NONE
+Sums of 67:
+NONE
+Sums of 53:
+19+18+16
+Sums of 31:
+NONE
+Sums of 92:
+NONE
+Sums of 8:
+NONE
+Sums of 49:
+NONE
+Sums of 60:
+37+23
+Sums of 14:
+NONE
+Sums of 43:
+43
+Sums of 48:
+NONE
+Sums of 25:
+NONE
+Sums of 21:
+21
+Sums of 16:
+NONE
+Sums of 66:
+49+11+6
+32+28+6
+Sums of 44:
+NONE
+Sums of 75:
+NONE
+Sums of 27:
+21+6
+Sums of 29:
+NONE
+Sums of 70:
+70
+37+33
+33+28+9
+Sums of 2:
+NONE
+Sums of 22:
+14+4+4
+Sums of 2:
+NONE
+Sums of 24:
+NONE
+Sums of 42:
+NONE
+Sums of 47:
+NONE
+Sums of 67:
+63+4
+45+16+4+2
+Sums of 31:
+NONE
+Sums of 25:
+NONE
+Sums of 23:
+NONE
+Sums of 68:
+NONE
+Sums of 45:
+NONE
+Sums of 7:
+NONE
+Sums of 21:
+NONE
+Sums of 20:
+NONE
+Sums of 50:
+43+7
+Sums of 67:
+54+13
+39+15+13
+Sums of 69:
+NONE
+Sums of 89:
+NONE
+Sums of 13:
+NONE
+Sums of 72:
+41+31
+Sums of 20:
+NONE
+Sums of 66:
+NONE
+Sums of 42:
+NONE
+Sums of 83:
+NONE
+Sums of 35:
+NONE
+Sums of 79:
+NONE
+Sums of 27:
+20+7
+Sums of 23:
+NONE
+Sums of 24:
+NONE
+Sums of 99:
+NONE
+Sums of 1:
+NONE
+Sums of 84:
+66+14+4
+61+23
+Sums of 71:
+34+22+15
+34+22+8+7
+Sums of 50:
+NONE
+Sums of 53:
+NONE
+Sums of 90:
+NONE
+Sums of 35:
+NONE
+Sums of 7:
+NONE
+Sums of 77:
+65+12
+Sums of 43:
+NONE
+Sums of 74:
+NONE
+Sums of 75:
+NONE
+Sums of 58:
+NONE
+Sums of 72:
+66+6
+57+15
+49+17+6
+Sums of 9:
+NONE
+Sums of 80:
+NONE
+Sums of 21:
+NONE
+Sums of 42:
+NONE
+Sums of 13:
+NONE
+Sums of 42:
+NONE
+Sums of 84:
+NONE
+Sums of 64:
+NONE
+Sums of 29:
+NONE
+Sums of 48:
+25+23
+Sums of 77:
+NONE
+Sums of 28:
+NONE
+Sums of 14:
+NONE
+Sums of 86:
+86
+72+14
+Sums of 87:
+NONE
+Sums of 78:
+NONE
+Sums of 28:
+NONE
+Sums of 63:
+NONE
+Sums of 4:
+NONE
+Sums of 84:
+NONE
+Sums of 33:
+NONE
+Sums of 15:
+NONE
+Sums of 83:
+NONE
+Sums of 26:
+NONE
+Sums of 90:
+84+6
+Sums of 9:
+NONE
+Sums of 11:
+NONE
+Sums of 1:
+NONE
+Sums of 3:
+NONE
+Sums of 5:
+NONE
+Sums of 38:
+NONE
+Sums of 27:
+NONE
+Sums of 66:
+NONE
+Sums of 81:
+43+20+18
+30+21+18+12
+Sums of 48:
+NONE
+Sums of 61:
+NONE
+Sums of 18:
+NONE
+Sums of 37:
+NONE
+Sums of 35:
+NONE
+Sums of 13:
+NONE
+Sums of 76:
+NONE
+Sums of 68:
+NONE
+Sums of 73:
+NONE
+Sums of 32:
+NONE
+Sums of 64:
+NONE
+Sums of 52:
+34+18
+Sums of 38:
+NONE
+Sums of 26:
+19+7
+Sums of 87:
+NONE
+Sums of 95:
+NONE
+Sums of 41:
+41
+Sums of 16:
+NONE
+Sums of 48:
+NONE
+Sums of 31:
+NONE
+Sums of 52:
+29+16+7
+Sums of 38:
+NONE
+Sums of 53:
+NONE
+Sums of 61:
+NONE
+Sums of 62:
+NONE
+Sums of 82:
+NONE
+Sums of 71:
+NONE
+Sums of 3:
+NONE
+Sums of 19:
+NONE
+Sums of 50:
+NONE
+Sums of 45:
+NONE
+Sums of 92:
+NONE
+Sums of 45:
+NONE
+Sums of 13:
+NONE
+Sums of 41:
+41
+Sums of 26:
+NONE
+Sums of 49:
+27+22
+Sums of 72:
+NONE
+Sums of 67:
+NONE
+Sums of 57:
+NONE
+Sums of 74:
+28+24+21+1
+Sums of 44:
+NONE
+Sums of 21:
+NONE
+Sums of 76:
+41+35
+Sums of 96:
+NONE
+Sums of 60:
+NONE
+Sums of 20:
+NONE
+Sums of 8:
+NONE
+Sums of 5:
+5
+Sums of 25:
+NONE
+Sums of 87:
+NONE
+Sums of 22:
+NONE
+Sums of 35:
+NONE
+Sums of 68:
+NONE
+Sums of 97:
+97
+Sums of 56:
+NONE
+Sums of 95:
+NONE
+Sums of 93:
+NONE
+Sums of 28:
+NONE
+Sums of 86:
+42+42+2
+Sums of 63:
+NONE
+Sums of 75:
+48+17+10
+Sums of 18:
+NONE
+Sums of 38:
+NONE
+Sums of 25:
+NONE
+Sums of 93:
+93
+Sums of 14:
+NONE
+Sums of 21:
+NONE
+Sums of 32:
+NONE
+Sums of 75:
+55+20
+41+34
+Sums of 48:
+NONE
+Sums of 71:
+NONE
+Sums of 58:
+NONE
+Sums of 26:
+NONE
+Sums of 56:
+56
+Sums of 73:
+67+6
+Sums of 86:
+NONE
+Sums of 83:
+NONE
+Sums of 54:
+NONE
+Sums of 17:
+NONE
+Sums of 38:
+32+4+2
+27+11
+Sums of 35:
+NONE
+Sums of 14:
+NONE
+Sums of 58:
+NONE
+Sums of 54:
+NONE
+Sums of 15:
+NONE
+Sums of 79:
+NONE
+Sums of 53:
+NONE
+Sums of 20:
+NONE
+Sums of 31:
+31
+Sums of 80:
+NONE
+Sums of 90:
+NONE
+Sums of 56:
+NONE
+Sums of 70:
+70
+58+12
+31+27+12
+Sums of 80:
+NONE
+Sums of 46:
+NONE
+Sums of 80:
+80
+Sums of 71:
+NONE
+Sums of 19:
+NONE
+Sums of 7:
+NONE
+Sums of 3:
+NONE
+Sums of 11:
+NONE
+Sums of 25:
+NONE
+Sums of 89:
+NONE
+Sums of 59:
+NONE
+Sums of 42:
+38+4
+Sums of 46:
+NONE
+Sums of 7:
+NONE
+Sums of 95:
+NONE
+Sums of 42:
+NONE
+Sums of 20:
+NONE
+Sums of 94:
+NONE
+Sums of 79:
+NONE
+Sums of 8:
+NONE
+Sums of 56:
+NONE
+Sums of 50:
+NONE
+Sums of 18:
+NONE
+Sums of 53:
+NONE
+Sums of 18:
+18
+Sums of 10:
+NONE
+Sums of 14:
+NONE
+Sums of 25:
+NONE
+Sums of 30:
+NONE
+Sums of 78:
+NONE
+Sums of 12:
+NONE
+Sums of 40:
+NONE
+Sums of 30:
+NONE
+Sums of 53:
+NONE
+Sums of 98:
+61+37
+Sums of 93:
+52+31+7+3
+46+40+7
+46+31+16
+45+29+16+3
+39+31+16+7
+Sums of 53:
+NONE
+Sums of 91:
+82+9
+Sums of 45:
+NONE
+Sums of 61:
+NONE
+Sums of 33:
+NONE
+Sums of 100:
+NONE
+Sums of 8:
+NONE
+Sums of 78:
+NONE
+Sums of 12:
+NONE
+Sums of 17:
+9+6+2
+Sums of 35:
+NONE
+Sums of 12:
+NONE
+Sums of 26:
+NONE
+Sums of 33:
+33
+Sums of 86:
+NONE
+Sums of 25:
+NONE
+Sums of 80:
+NONE
+Sums of 18:
+NONE
+Sums of 1:
+NONE
+Sums of 47:
+NONE
+Sums of 78:
+NONE
+Sums of 13:
+NONE
+Sums of 77:
+NONE
+Sums of 66:
+53+13
+Sums of 52:
+52
+Sums of 93:
+93
+Sums of 52:
+NONE
+Sums of 26:
+NONE
+Sums of 29:
+NONE
+Sums of 64:
+NONE
+Sums of 24:
+NONE
+Sums of 27:
+27
+Sums of 93:
+44+42+7
+Sums of 35:
+NONE
+Sums of 27:
+NONE
+Sums of 37:
+NONE
+Sums of 84:
+NONE
+Sums of 17:
+10+7
+Sums of 39:
+28+11
+Sums of 68:
+29+21+10+8
+Sums of 25:
+NONE
+Sums of 73:
+NONE
+Sums of 89:
+NONE
+Sums of 14:
+NONE
+Sums of 84:
+60+14+10
+Sums of 88:
+NONE
+Sums of 14:
+NONE
+Sums of 37:
+NONE
+Sums of 8:
+NONE
+Sums of 97:
+49+48
+Sums of 63:
+NONE
+Sums of 95:
+89+6
+71+24
+Sums of 60:
+NONE
+Sums of 9:
+NONE
+Sums of 39:
+NONE
+Sums of 33:
+NONE
+Sums of 69:
+67+2
+Sums of 50:
+NONE
+Sums of 78:
+78
+29+26+23
+Sums of 53:
+NONE
+Sums of 1:
+NONE
+Sums of 16:
+NONE
+Sums of 89:
+53+36
+Sums of 34:
+NONE
+Sums of 58:
+42+16
+Sums of 68:
+35+33
+Sums of 48:
+NONE
+Sums of 20:
+20
+Sums of 91:
+NONE
+Sums of 62:
+NONE
+Sums of 27:
+NONE
+Sums of 80:
+NONE
+Sums of 54:
+NONE
+Sums of 32:
+NONE
+Sums of 80:
+NONE
+Sums of 12:
+NONE
+Sums of 15:
+NONE
+Sums of 12:
+NONE
+Sums of 87:
+NONE
+Sums of 96:
+NONE
+Sums of 18:
+NONE
+Sums of 90:
+NONE
+Sums of 18:
+NONE
+Sums of 15:
+NONE
+Sums of 71:
+NONE
+Sums of 68:
+NONE
+Sums of 43:
+43
+Sums of 79:
+NONE
+Sums of 18:
+NONE
+Sums of 20:
+NONE
+Sums of 91:
+NONE
+Sums of 51:
+NONE
+Sums of 68:
+NONE
+Sums of 96:
+NONE
+Sums of 99:
+NONE
+Sums of 89:
+NONE
+Sums of 17:
+NONE
+Sums of 2:
+NONE
+Sums of 29:
+NONE
+Sums of 18:
+NONE
+Sums of 89:
+61+28
+Sums of 75:
+NONE
+Sums of 50:
+NONE
+Sums of 81:
+NONE
+Sums of 100:
+66+34
+Sums of 11:
+NONE
+Sums of 27:
+NONE
+Sums of 56:
+NONE
+Sums of 45:
+45
+Sums of 74:
+NONE
+Sums of 4:
+NONE
+Sums of 65:
+NONE
+Sums of 61:
+NONE
+Sums of 21:
+NONE
+Sums of 52:
+NONE
+Sums of 68:
+NONE
+Sums of 75:
+NONE
+Sums of 23:
+NONE
+Sums of 19:
+NONE
+Sums of 48:
+NONE
+Sums of 83:
+NONE
+Sums of 57:
+NONE
+Sums of 17:
+17
+Sums of 83:
+69+14
+51+14+10+8
+Sums of 88:
+88
+86+2
+68+18+2
+Sums of 86:
+NONE
+Sums of 57:
+NONE
+Sums of 55:
+NONE
+Sums of 39:
+39
+Sums of 16:
+NONE
+Sums of 83:
+82+1
+68+14+1
+43+39+1
+Sums of 78:
+NONE
+Sums of 67:
+67
+Sums of 65:
+NONE
+Sums of 79:
+58+21
+Sums of 100:
+NONE
+Sums of 25:
+NONE
+Sums of 21:
+NONE
+Sums of 11:
+11
+Sums of 46:
+NONE
+Sums of 63:
+NONE
+Sums of 45:
+NONE
+Sums of 27:
+NONE
+Sums of 92:
+82+6+4
+62+19+7+4
+Sums of 94:
+NONE
+Sums of 30:
+26+4
+Sums of 53:
+NONE
+Sums of 61:
+NONE
+Sums of 60:
+NONE
+Sums of 60:
+NONE
+Sums of 7:
+NONE
+Sums of 27:
+NONE
+Sums of 97:
+47+30+20
+45+30+20+2
+Sums of 34:
+19+14+1
+Sums of 9:
+NONE
+Sums of 55:
+55
+54+1
+26+26+3
+26+16+5+4+3+1
+Sums of 71:
+NONE
+Sums of 49:
+NONE
+Sums of 96:
+NONE
+Sums of 38:
+NONE
+Sums of 13:
+NONE
+Sums of 47:
+NONE
+Sums of 60:
+NONE
+Sums of 81:
+81
+Sums of 82:
+NONE
+Sums of 51:
+NONE
+Sums of 30:
+NONE
+Sums of 56:
+NONE
+Sums of 38:
+NONE
+Sums of 8:
+NONE
+Sums of 6:
+NONE
+Sums of 69:
+NONE
+Sums of 80:
+NONE
+Sums of 18:
+NONE
+Sums of 93:
+NONE
+Sums of 84:
+56+28
+Sums of 8:
+NONE
+Sums of 7:
+NONE
+Sums of 35:
+NONE
+Sums of 73:
+73
+Sums of 89:
+89
+Sums of 10:
+NONE
+Sums of 83:
+NONE
+Sums of 5:
+NONE
+Sums of 56:
+NONE
+Sums of 53:
+NONE
+Sums of 24:
+15+9
+Sums of 92:
+NONE
+Sums of 35:
+NONE
+Sums of 19:
+NONE
+Sums of 10:
+NONE
+Sums of 16:
+16
+Sums of 21:
+NONE
+Sums of 75:
+NONE
+Sums of 3:
+NONE
+Sums of 57:
+NONE
+Sums of 40:
+34+6
+Sums of 28:
+NONE
+Sums of 91:
+82+9
+Sums of 95:
+NONE
+Sums of 100:
+NONE
+Sums of 74:
+NONE
+Sums of 3:
+NONE
+Sums of 24:
+NONE
+Sums of 19:
+NONE
+Sums of 9:
+NONE
+Sums of 53:
+NONE
+Sums of 76:
+NONE
+Sums of 92:
+91+1
+86+6
+Sums of 92:
+NONE
+Sums of 58:
+NONE
+Sums of 68:
+NONE
+Sums of 69:
+NONE
+Sums of 71:
+NONE
+Sums of 3:
+NONE
+Sums of 54:
+NONE
+Sums of 49:
+43+6
+43+4+2
+37+6+4+2
+Sums of 46:
+NONE
+Sums of 50:
+24+14+12
+Sums of 94:
+NONE
+Sums of 84:
+NONE
+Sums of 19:
+NONE
+Sums of 79:
+NONE
+Sums of 59:
+31+25+3
+Sums of 94:
+94
+Sums of 27:
+NONE
+Sums of 7:
+NONE
+Sums of 66:
+50+16
+Sums of 34:
+NONE
+Sums of 1:
+NONE
+Sums of 29:
+NONE
+Sums of 4:
+NONE
+Sums of 17:
+NONE
+Sums of 88:
+47+41
+37+28+23
+Sums of 57:
+NONE
+Sums of 64:
+NONE
+Sums of 55:
+43+12
+Sums of 100:
+NONE
+Sums of 90:
+82+8
+46+44
+Sums of 26:
+NONE
+Sums of 42:
+NONE
+Sums of 68:
+36+32
+Sums of 36:
+NONE
+Sums of 86:
+NONE
+Sums of 4:
+NONE
+Sums of 28:
+18+10
+Sums of 58:
+NONE
+Sums of 12:
+NONE
+Sums of 58:
+33+25
+25+20+13
+Sums of 56:
+NONE
+Sums of 61:
+NONE
+Sums of 100:
+NONE
+Sums of 53:
+NONE
+Sums of 53:
+NONE
+Sums of 56:
+NONE
+Sums of 93:
+88+5
+71+22
+Sums of 60:
+NONE
+Sums of 82:
+NONE
+Sums of 36:
+NONE
+Sums of 59:
+NONE
+Sums of 33:
+33
+Sums of 1:
+NONE
+Sums of 99:
+NONE
+Sums of 27:
+NONE
+Sums of 6:
+NONE
+Sums of 98:
+62+36
+60+36+2
+Sums of 30:
+NONE
+Sums of 81:
+NONE
+Sums of 10:
+NONE
+Sums of 27:
+NONE
+Sums of 35:
+NONE
+Sums of 88:
+NONE
+Sums of 99:
+NONE
+Sums of 61:
+NONE
+Sums of 39:
+NONE
+Sums of 86:
+43+41+2
+43+24+17+2
+Sums of 23:
+NONE
+Sums of 74:
+NONE
+Sums of 88:
+NONE
+Sums of 56:
+54+2
+Sums of 3:
+NONE
+Sums of 92:
+NONE
+Sums of 21:
+NONE
+Sums of 43:
+NONE
+Sums of 77:
+NONE
+Sums of 95:
+NONE
+Sums of 100:
+NONE
+Sums of 37:
+NONE
+Sums of 91:
+91
+Sums of 67:
+NONE
+Sums of 95:
+NONE
+Sums of 8:
+NONE
+Sums of 70:
+NONE
+Sums of 98:
+NONE
+Sums of 26:
+26
+Sums of 29:
+NONE
+Sums of 9:
+NONE
+Sums of 70:
+70
+Sums of 77:
+NONE
+Sums of 13:
+NONE
+Sums of 67:
+NONE
+Sums of 12:
+NONE
+Sums of 22:
+NONE
+Sums of 6:
+NONE
+Sums of 14:
+NONE
+Sums of 47:
+NONE
+Sums of 86:
+NONE
+Sums of 37:
+NONE
+Sums of 6:
+NONE
+Sums of 97:
+97
+72+25
+Sums of 85:
+NONE
+Sums of 27:
+NONE
+Sums of 96:
+70+18+8
+67+21+8
+Sums of 69:
+NONE
+Sums of 22:
+NONE
+Sums of 100:
+NONE
+Sums of 68:
+59+9
+Sums of 5:
+3+2
+Sums of 54:
+NONE
+Sums of 79:
+NONE
+Sums of 74:
+51+23
+49+19+6
+Sums of 77:
+NONE
+Sums of 83:
+NONE
+Sums of 5:
+NONE
+Sums of 14:
+NONE
+Sums of 54:
+NONE
+Sums of 97:
+NONE
+Sums of 64:
+55+9
+Sums of 14:
+NONE
+Sums of 31:
+31
+Sums of 79:
+76+3
+Sums of 19:
+NONE
+Sums of 7:
+NONE
+Sums of 11:
+NONE
+Sums of 88:
+NONE
+Sums of 13:
+NONE
+Sums of 7:
+NONE
+Sums of 82:
+82
+64+18
+36+27+19
+36+20+18+8
+Sums of 16:
+NONE
+Sums of 70:
+NONE
+Sums of 27:
+NONE
+Sums of 70:
+NONE
+Sums of 91:
+70+11+10
+63+13+10+5
+42+34+10+5
+34+30+22+5
+30+22+13+11+10+5
+Sums of 78:
+NONE
+Sums of 75:
+NONE
+Sums of 19:
+14+5
+Sums of 57:
+NONE
+Sums of 67:
+39+28
+Sums of 42:
+NONE
+Sums of 12:
+NONE
+Sums of 81:
+NONE
+Sums of 95:
+NONE
+Sums of 3:
+NONE
+Sums of 99:
+NONE
+Sums of 74:
+NONE
+Sums of 87:
+NONE
+Sums of 90:
+NONE
+Sums of 85:
+NONE
+Sums of 84:
+NONE
+Sums of 39:
+NONE
+Sums of 41:
+28+13
+Sums of 76:
+NONE
+Sums of 94:
+NONE
+Sums of 25:
+NONE
+Sums of 69:
+59+10
+Sums of 61:
+31+30
+Sums of 61:
+NONE
+Sums of 43:
+NONE
+Sums of 92:
+88+4
+85+4+3
+Sums of 85:
+70+15
+57+28
+Sums of 51:
+51
+Sums of 98:
+52+46
+Sums of 55:
+NONE
+Sums of 31:
+NONE
+Sums of 77:
+NONE
+Sums of 23:
+19+4
+Sums of 50:
+50
+Sums of 22:
+NONE
+Sums of 83:
+69+14
+60+14+9
+58+14+9+2
+40+27+14+2
+36+31+14+2
+31+27+14+9+2
+Sums of 29:
+NONE
+Sums of 87:
+87
+Sums of 78:
+NONE
+Sums of 55:
+23+19+13
+Sums of 68:
+42+24+2
+Sums of 4:
+NONE
+Sums of 84:
+51+33
+Sums of 50:
+NONE
+Sums of 47:
+NONE
+Sums of 3:
+NONE
+Sums of 90:
+NONE
+Sums of 98:
+NONE
+Sums of 4:
+NONE
+Sums of 42:
+NONE
+Sums of 38:
+NONE
+Sums of 20:
+NONE
+Sums of 1:
+NONE
+Sums of 94:
+NONE
+Sums of 48:
+NONE
+Sums of 62:
+NONE
+Sums of 42:
+39+3
+Sums of 65:
+NONE
+Sums of 28:
+28
+Sums of 7:
+NONE
+Sums of 70:
+NONE
+Sums of 95:
+NONE
+Sums of 74:
+NONE
+Sums of 63:
+NONE
+Sums of 18:
+NONE
+Sums of 13:
+NONE
+Sums of 14:
+NONE
+Sums of 34:
+NONE
+Sums of 45:
+NONE
+Sums of 43:
+38+5
+Sums of 74:
+NONE
+Sums of 99:
+42+39+16+2
+Sums of 74:
+66+8
+Sums of 55:
+NONE
+Sums of 53:
+NONE
+Sums of 100:
+NONE
+Sums of 7:
+NONE
+Sums of 67:
+NONE
+Sums of 59:
+NONE
+Sums of 91:
+NONE
+Sums of 85:
+74+11
+Sums of 26:
+NONE
+Sums of 32:
+NONE
+Sums of 27:
+NONE
+Sums of 45:
+NONE
+Sums of 1:
+NONE
+Sums of 76:
+NONE
+Sums of 37:
+33+4
+Sums of 96:
+NONE
+Sums of 96:
+NONE
+Sums of 40:
+NONE
+Sums of 84:
+NONE
+Sums of 4:
+NONE
+Sums of 63:
+NONE
+Sums of 56:
+NONE
+Sums of 16:
+NONE
+Sums of 85:
+NONE
+Sums of 94:
+NONE
+Sums of 4:
+NONE
+Sums of 88:
+NONE
+Sums of 71:
+50+21
+36+35
+32+21+18
+Sums of 35:
+NONE
+Sums of 73:
+NONE
+Sums of 38:
+38
+31+7
+Sums of 17:
+10+7
+Sums of 63:
+NONE
+Sums of 32:
+NONE
+Sums of 3:
+3
+Sums of 21:
+NONE
+Sums of 2:
+2
+Sums of 31:
+NONE
+Sums of 64:
+30+28+6
+Sums of 31:
+NONE
+Sums of 49:
+NONE
+Sums of 2:
+NONE
+Sums of 27:
+20+5+2
+Sums of 2:
+NONE
+Sums of 78:
+69+9
+59+12+7
+42+12+9+8+7
+Sums of 60:
+NONE
+Sums of 32:
+NONE
+Sums of 35:
+NONE
+Sums of 59:
+NONE
+Sums of 7:
+NONE
+Sums of 21:
+NONE
+Sums of 13:
+NONE
+Sums of 43:
+NONE
+Sums of 100:
+NONE
+Sums of 22:
+NONE
+Sums of 63:
+NONE
+Sums of 20:
+NONE
+Sums of 35:
+NONE
+Sums of 82:
+NONE
+Sums of 73:
+NONE
+Sums of 88:
+NONE
+Sums of 67:
+39+28
+Sums of 48:
+NONE
+Sums of 13:
+NONE
+Sums of 90:
+NONE
+Sums of 54:
+NONE
+Sums of 19:
+NONE
+Sums of 26:
+NONE
+Sums of 7:
+NONE
+Sums of 70:
+40+30
+Sums of 34:
+32+2
+Sums of 23:
+NONE
+Sums of 74:
+NONE
+Sums of 72:
+67+5
+Sums of 97:
+NONE
+Sums of 62:
+NONE
+Sums of 78:
+78
+Sums of 52:
+NONE
+Sums of 46:
+NONE
+Sums of 40:
+NONE
+Sums of 42:
+39+3
+23+15+3+1
+21+17+3+1
+21+15+3+3
+17+15+9+1
+15+15+9+3
+Sums of 48:
+NONE
+Sums of 9:
+NONE
+Sums of 79:
+NONE
+Sums of 17:
+NONE
+Sums of 4:
+NONE
+Sums of 18:
+NONE
+Sums of 95:
+95
+Sums of 30:
+NONE
+Sums of 93:
+NONE
+Sums of 46:
+NONE
+Sums of 81:
+NONE
+Sums of 91:
+55+18+18
+Sums of 10:
+NONE
+Sums of 51:
+NONE
+Sums of 52:
+NONE
+Sums of 21:
+NONE
+Sums of 90:
+61+20+9
+42+20+19+9
+Sums of 27:
+NONE
+Sums of 45:
+NONE
+Sums of 86:
+NONE
+Sums of 83:
+NONE
+Sums of 73:
+67+6
+54+13+6
+53+13+7
+38+13+9+7+6
+Sums of 99:
+80+14+5
+65+29+5
+43+24+18+14
+Sums of 85:
+78+7
+58+16+7+4
+56+29
+56+25+4
+56+18+7+4
+50+35
+35+25+18+7
+Sums of 65:
+60+4+1
+45+15+4+1
+25+24+15+1
+25+21+15+4
+24+21+15+4+1
+Sums of 23:
+NONE
+Sums of 78:
+NONE
+Sums of 36:
+36
+32+4
+Sums of 39:
+NONE
+Sums of 10:
+NONE
+Sums of 80:
+41+25+14
+41+24+15
+26+25+15+14
+Sums of 55:
+NONE
+Sums of 15:
+11+4
+Sums of 24:
+NONE
+Sums of 30:
+NONE
+Sums of 63:
+NONE
+Sums of 26:
+NONE
+Sums of 35:
+NONE
+Sums of 81:
+NONE
+Sums of 29:
+NONE
+Sums of 20:
+NONE
+Sums of 67:
+NONE
+Sums of 26:
+NONE
+Sums of 69:
+57+12
+46+12+8+3
+Sums of 74:
+NONE
+Sums of 69:
+NONE
+Sums of 11:
+NONE
+Sums of 67:
+NONE
+Sums of 79:
+75+4
+41+38
+Sums of 77:
+77
+Sums of 60:
+NONE
+Sums of 26:
+NONE
+Sums of 35:
+NONE
+Sums of 5:
+NONE
+Sums of 2:
+NONE
+Sums of 34:
+NONE
+Sums of 97:
+NONE
+Sums of 46:
+NONE
+Sums of 8:
+NONE
+Sums of 100:
+NONE
+Sums of 18:
+NONE
+Sums of 23:
+NONE
+Sums of 21:
+NONE
+Sums of 62:
+58+4
+Sums of 45:
+NONE
+Sums of 20:
+NONE
+Sums of 35:
+35
+19+16
+Sums of 23:
+NONE
+Sums of 16:
+NONE
+Sums of 53:
+NONE
+Sums of 24:
+NONE
+Sums of 43:
+NONE
+Sums of 77:
+NONE
+Sums of 21:
+NONE
+Sums of 68:
+NONE
+Sums of 49:
+NONE
+Sums of 42:
+NONE
+Sums of 7:
+NONE
+Sums of 35:
+NONE
+Sums of 86:
+46+33+7
+46+33+4+3
+Sums of 45:
+NONE
+Sums of 67:
+NONE
+Sums of 28:
+NONE
+Sums of 74:
+NONE
+Sums of 77:
+64+13
+53+21+3
+38+21+13+5
+Sums of 27:
+NONE
+Sums of 86:
+NONE
+Sums of 70:
+66+4
+Sums of 81:
+NONE
+Sums of 85:
+NONE
+Sums of 25:
+NONE
+Sums of 71:
+NONE
+Sums of 44:
+NONE
+Sums of 45:
+NONE
+Sums of 71:
+NONE
+Sums of 23:
+NONE
+Sums of 37:
+NONE
+Sums of 44:
+NONE
+Sums of 60:
+NONE
+Sums of 98:
+NONE
+Sums of 70:
+NONE
+Sums of 87:
+59+28
+37+29+21
+Sums of 86:
+86
+47+25+14
+Sums of 6:
+NONE
+Sums of 84:
+NONE
+Sums of 58:
+58
+Sums of 46:
+NONE
+Sums of 92:
+54+33+5
+Sums of 62:
+NONE
+Sums of 28:
+NONE
+Sums of 34:
+NONE
+Sums of 25:
+25
+Sums of 72:
+NONE
+Sums of 14:
+NONE
+Sums of 75:
+NONE
+Sums of 97:
+NONE
+Sums of 10:
+NONE
+Sums of 59:
+36+23
+Sums of 77:
+NONE
+Sums of 44:
+22+22
+Sums of 5:
+NONE
+Sums of 28:
+NONE
+Sums of 90:
+NONE
+Sums of 26:
+NONE
+Sums of 20:
+NONE
+Sums of 25:
+NONE
+Sums of 63:
+NONE
+Sums of 36:
+NONE
+Sums of 5:
+NONE
+Sums of 10:
+NONE
+Sums of 99:
+NONE
+Sums of 45:
+NONE
+Sums of 79:
+NONE
+Sums of 21:
+NONE
+Sums of 62:
+NONE
+Sums of 84:
+65+19
+37+28+19
+Sums of 63:
+NONE
+Sums of 61:
+NONE
+Sums of 15:
+NONE
+Sums of 61:
+NONE
+Sums of 53:
+NONE
+Sums of 67:
+NONE
+Sums of 98:
+64+24+10
+Sums of 40:
+NONE
+Sums of 11:
+NONE
+Sums of 2:
+2
+Sums of 88:
+55+33
+Sums of 87:
+NONE
+Sums of 54:
+48+6
+Sums of 27:
+NONE
+Sums of 11:
+NONE
+Sums of 28:
+NONE
+Sums of 78:
+NONE
+Sums of 98:
+NONE
+Sums of 82:
+NONE
+Sums of 47:
+NONE
+Sums of 51:
+NONE
+Sums of 39:
+39
+Sums of 49:
+NONE
+Sums of 61:
+NONE
+Sums of 47:
+NONE
+Sums of 8:
+8
+Sums of 10:
+NONE
+Sums of 80:
+72+8
+Sums of 42:
+NONE
+Sums of 89:
+NONE
+Sums of 5:
+5
+Sums of 25:
+NONE
+Sums of 91:
+60+31
+Sums of 50:
+NONE
+Sums of 43:
+NONE
+Sums of 50:
+NONE
+Sums of 28:
+NONE
+Sums of 3:
+NONE
+Sums of 5:
+NONE
+Sums of 3:
+3
+Sums of 30:
+NONE
+Sums of 46:
+NONE
+Sums of 88:
+NONE
+Sums of 95:
+61+26+8
+Sums of 4:
+4
+Sums of 40:
+34+4+2
+Sums of 29:
+NONE
+Sums of 95:
+NONE
+Sums of 2:
+NONE
+Sums of 84:
+NONE
+Sums of 86:
+56+26+4
+51+35
+Sums of 22:
+NONE
+Sums of 96:
+85+11
+48+37+11
+Sums of 29:
+NONE
+Sums of 73:
+58+15
+Sums of 71:
+NONE
+Sums of 14:
+NONE
+Sums of 97:
+NONE
+Sums of 51:
+NONE
+Sums of 96:
+NONE
+Sums of 83:
+NONE
+Sums of 39:
+32+7
+31+7+1
+31+5+3
+22+9+7+1
+22+9+5+3
+Sums of 90:
+NONE
+Sums of 75:
+70+5
+32+30+8+5
+Sums of 58:
+NONE
+Sums of 70:
+NONE
+Sums of 27:
+NONE
+Sums of 83:
+83
+51+32
+Sums of 28:
+NONE
+Sums of 10:
+10
+Sums of 11:
+NONE
+Sums of 77:
+NONE
+Sums of 24:
+NONE
+Sums of 2:
+NONE
+Sums of 1:
+NONE
+Sums of 97:
+NONE
+Sums of 87:
+NONE
+Sums of 16:
+NONE
+Sums of 22:
+NONE
+Sums of 90:
+NONE
+Sums of 89:
+89
+Sums of 7:
+NONE
+Sums of 47:
+34+10+3
+Sums of 28:
+28
+Sums of 70:
+NONE
+Sums of 66:
+NONE
+Sums of 10:
+NONE
+Sums of 83:
+NONE
+Sums of 59:
+39+20
+Sums of 57:
+NONE
+Sums of 53:
+NONE
+Sums of 37:
+NONE
+Sums of 61:
+NONE
+Sums of 9:
+NONE
+Sums of 60:
+44+9+7
+Sums of 60:
+NONE
+Sums of 36:
+NONE
+Sums of 24:
+NONE
+Sums of 43:
+NONE
+Sums of 18:
+NONE
+Sums of 46:
+NONE
+Sums of 81:
+NONE
+Sums of 30:
+NONE
+Sums of 6:
+NONE
+Sums of 93:
+NONE
+Sums of 47:
+NONE
+Sums of 72:
+NONE
+Sums of 63:
+49+14
+Sums of 11:
+NONE
+Sums of 17:
+10+7
+Sums of 92:
+92
+Sums of 78:
+NONE
+Sums of 81:
+42+39
+Sums of 5:
+NONE
+Sums of 31:
+NONE
+Sums of 65:
+NONE
+Sums of 85:
+60+25
+Sums of 80:
+70+10
+55+25
+Sums of 81:
+54+24+3
+Sums of 72:
+42+30
+30+24+16+2
+Sums of 45:
+NONE
+Sums of 74:
+43+20+11
+Sums of 17:
+17
+Sums of 35:
+NONE
+Sums of 48:
+NONE
+Sums of 91:
+58+25+8
+Sums of 63:
+NONE
+Sums of 18:
+NONE
+Sums of 4:
+NONE
+Sums of 16:
+NONE
+Sums of 15:
+NONE
+Sums of 34:
+NONE
+Sums of 88:
+NONE
+Sums of 58:
+27+19+12
+Sums of 17:
+NONE
+Sums of 91:
+53+35+3
+Sums of 25:
+NONE
+Sums of 8:
+NONE
+Sums of 29:
+NONE
+Sums of 46:
+NONE
+Sums of 40:
+NONE
+Sums of 82:
+NONE
+Sums of 27:
+NONE
+Sums of 55:
+NONE
+Sums of 64:
+NONE
+Sums of 91:
+31+26+26+8
+Sums of 63:
+NONE
+Sums of 49:
+NONE
+Sums of 63:
+NONE
+Sums of 67:
+NONE
+Sums of 68:
+62+6
+Sums of 48:
+NONE
+Sums of 18:
+NONE
+Sums of 34:
+NONE
+Sums of 32:
+NONE
+Sums of 99:
+62+37
+60+39
+Sums of 93:
+NONE
+Sums of 43:
+NONE
+Sums of 52:
+NONE
+Sums of 12:
+NONE
+Sums of 61:
+NONE
+Sums of 77:
+NONE
+Sums of 28:
+NONE
+Sums of 62:
+NONE
+Sums of 11:
+NONE
+Sums of 81:
+NONE
+Sums of 53:
+NONE
+Sums of 93:
+NONE
+Sums of 11:
+NONE
+Sums of 94:
+NONE
+Sums of 45:
+NONE
+Sums of 30:
+NONE
+Sums of 21:
+NONE
+Sums of 31:
+NONE
+Sums of 55:
+51+4
+Sums of 99:
+86+12+1
+Sums of 63:
+NONE
+Sums of 48:
+NONE
+Sums of 49:
+29+20
+Sums of 41:
+NONE
+Sums of 90:
+NONE
+Sums of 70:
+NONE
+Sums of 46:
+39+7
+27+19
+20+19+7
+Sums of 16:
+NONE
+Sums of 67:
+NONE
+Sums of 29:
+NONE
+Sums of 9:
+NONE
+Sums of 42:
+31+11
+22+20
+22+11+9
+Sums of 34:
+NONE
+Sums of 54:
+NONE
+Sums of 19:
+NONE
+Sums of 34:
+NONE
+Sums of 86:
+NONE
+Sums of 24:
+NONE
+Sums of 38:
+24+14
+Sums of 31:
+NONE
+Sums of 97:
+53+41+3
+53+40+3+1
+Sums of 5:
+NONE
+Sums of 56:
+NONE
+Sums of 53:
+NONE
+Sums of 31:
+NONE
+Sums of 77:
+NONE
+Sums of 45:
+NONE
+Sums of 96:
+NONE
+Sums of 60:
+NONE
+Sums of 82:
+NONE
+Sums of 95:
+NONE
+Sums of 52:
+NONE
+Sums of 61:
+NONE
+Sums of 36:
+36
+Sums of 31:
+NONE
+Sums of 48:
+NONE
+Sums of 82:
+NONE
+Sums of 7:
+NONE
+Sums of 99:
+NONE
+Sums of 13:
+NONE
+Sums of 80:
+NONE
+Sums of 39:
+NONE
+Sums of 54:
+NONE
+Sums of 94:
+NONE
+Sums of 1:
+NONE
+Sums of 33:
+NONE
+Sums of 41:
+NONE
+Sums of 25:
+NONE
+Sums of 93:
+46+31+16
+Sums of 40:
+NONE
+Sums of 71:
+NONE
+Sums of 68:
+NONE
+Sums of 5:
+NONE
+Sums of 65:
+31+26+6+2
+Sums of 36:
+NONE
+Sums of 30:
+NONE
+Sums of 29:
+NONE
+Sums of 100:
+NONE
+Sums of 36:
+NONE
+Sums of 61:
+NONE
+Sums of 9:
+NONE
+Sums of 95:
+NONE
+Sums of 42:
+NONE
+Sums of 20:
+NONE
+Sums of 58:
+NONE
+Sums of 7:
+NONE
+Sums of 16:
+NONE
+Sums of 65:
+NONE
+Sums of 41:
+NONE
+Sums of 49:
+NONE
+Sums of 16:
+NONE
+Sums of 72:
+72
+Sums of 35:
+NONE
+Sums of 92:
+NONE
+Sums of 38:
+NONE
+Sums of 66:
+NONE
+Sums of 34:
+NONE
+Sums of 87:
+52+16+11+8
+Sums of 47:
+NONE
+Sums of 37:
+NONE
+Sums of 67:
+NONE

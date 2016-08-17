@@ -8,13 +8,11 @@ int primes[MAX_N + 1] = { 0 }, prime_count = 0;
 
 void filter()
 {
-    primes[prime_count++] = 2;
-
-    for (int i = 3; i <= MAX_N; i += 2)
-        if (primes[i] == 0)
+    for (int i = 2; i <= MAX_N; i++)
+        if (!primes[i])
         {
             for (int j = 2 * i; j <= MAX_N; j += i)
-                primes[j] = -1;
+                primes[j] = 1;
             primes[prime_count++] = i;
         }
 }
