@@ -1,0 +1,22 @@
+Ulm - Philadelphia
+6536 km
+Ulm - SanJose
+9367 km
+Freiburg - Philadelphia
+6519 km
+Freiburg - SanJose
+9412 km
+Ulm - Freiburg
+134 km
+SanJose - Philadelphia
+4023 km
+Ulm - LasVegas
+Unknown
+Ulm - Ulm
+0 km
+Ulm - NorthPole
+4597 km
+Ulm - SouthPole
+15440 km
+NorthPole - SouthPole
+20037 km

@@ -1,0 +1,19 @@
+Ulm 48.700 10.500
+Freiburg 47.700 9.500
+Philadelphia 39.883 -75.250
+SanJose 37.366 -121.933
+NorthPole 90 0
+SouthPole -90 0
+#
+Ulm Philadelphia
+Ulm SanJose
+Freiburg Philadelphia
+Freiburg SanJose
+Ulm Freiburg
+SanJose Philadelphia
+Ulm LasVegas
+Ulm Ulm
+Ulm NorthPole
+Ulm SouthPole
+NorthPole SouthPole
+# #

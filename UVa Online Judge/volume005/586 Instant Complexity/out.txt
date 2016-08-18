@@ -1,0 +1,300 @@
+Program #1
+Runtime = 5*n
+
+Program #2
+Runtime = 660*n^7+4752*n^6+192*n^2+22*n
+
+Program #3
+Runtime = 6480*n^7+14076*n^6+756*n^5+1080*n^4+1944*n^3+428*n^2+48*n+8
+
+Program #4
+Runtime = 788*n^2+17*n+13
+
+Program #5
+Runtime = 10*n+17
+
+Program #6
+Runtime = 2800*n^8+2760*n^7+46*n^6+9*n^5+7*n^4+9*n^3+8*n^2+17
+
+Program #7
+Runtime = 259*n^9+35*n^6+63*n^5+322*n^4+18*n^2+7*n+121
+
+Program #8
+Runtime = 45*n^8+1500*n^7+155*n^6+80*n^5+90*n^4+21*n^3+7*n^2
+
+Program #9
+Runtime = 236*n
+
+Program #10
+Runtime = 336*n^7+840*n^6+1470*n^5+252*n^4+462*n^3+1494*n^2+138*n+65
+
+Program #11
+Runtime = 504*n^6+3248*n^5+1008*n^4+1036*n^3+3*n^2+45
+
+Program #12
+Runtime = 6
+
+Program #13
+Runtime = 588*n^8+5824*n^7+784*n^6+504*n^4+1064*n^3+1968*n^2+2
+
+Program #14
+Runtime = 2*n^4+18*n^2+7*n
+
+Program #15
+Runtime = 167040*n^5+201600*n^4+7680*n^2+6272*n+464
+
+Program #16
+Runtime = 10*n^2+2*n
+
+Program #17
+Runtime = 324*n^8+3555*n^7+9*n^2+485*n
+
+Program #18
+Runtime = 1920*n^7+648*n^6+336*n^5+5*n^2+5*n+44
+
+Program #19
+Runtime = 152*n^9+804*n^8+2340*n^7+40*n^6
+
+Program #20
+Runtime = 69552*n^6+8064*n^5+648*n^4+216*n^3+8*n^2
+
+Program #21
+Runtime = 171*n^9+282*n^8+24*n^6+2*n^3+7*n^2+6*n+53
+
+Program #22
+Runtime = 1104*n^7+2952*n^6+48*n^5+9048*n^4+456*n^2+168*n
+
+Program #23
+Runtime = 18*n^7+252*n^6+85*n^5+26*n^4+8*n+21
+
+Program #24
+Runtime = 3*n^6+7*n^5+10*n^4+17*n^2+6*n
+
+Program #25
+Runtime = 61560*n^5+183600*n^4+4482*n^3+558*n+545
+
+Program #26
+Runtime = 2400*n^6+6400*n^5+1824*n^4+128*n^3+176*n^2+1
+
+Program #27
+Runtime = 60*n^9+846*n^8+3942*n^7+246*n^4+57*n^3+13*n^2+15*n+9
+
+Program #28
+Runtime = 0
+
+Program #29
+Runtime = 126*n^7+87192*n^5+43692*n^4+72*n^3+12*n+5
+
+Program #30
+Runtime = 5103*n^8+12231*n^7+405*n^6+81*n^5+54*n^4+81*n^2+16
+
+Program #31
+Runtime = 2176*n^7+3072*n^6+1280*n^4+2816*n^3+1280*n^2+19*n+30
+
+Program #32
+Runtime = 22680*n^6+40986*n^5+72*n^4+7*n^2+20
+
+Program #33
+Runtime = 460*n^8+5070*n^7+80*n^6+100*n^5+10*n^4+80*n^3+80*n^2+26*n
+
+Program #34
+Runtime = 48762*n^6+104076*n^5+756*n^3+39*n^2+633*n+34
+
+Program #35
+Runtime = 1728*n^4+11376*n^3+134928*n^2+2832*n+402
+
+Program #36
+Runtime = 11520*n^5+18912*n^4+768*n^3+666*n^2+4
+
+Program #37
+Runtime = 68*n^10+12*n^9+25*n^8+91*n^6+15*n^4+9*n^2+8*n+8
+
+Program #38
+Runtime = 329*n^9+4543*n^8+504*n^6+16*n
+
+Program #39
+Runtime = 268*n^8+188*n^7+28*n^6+720*n^4+24*n^3+19
+
+Program #40
+Runtime = 805*n^8+8505*n^7+1680*n^6+490*n^5+280*n^4+125*n^3+45*n+65
+
+Program #41
+Runtime = 39744*n^6+5184*n^5+12960*n^4+6660*n^2+1548*n+468
+
+Program #42
+Runtime = 68*n^8+687*n^7+163*n^6+3*n^5+12*n^3+43*n^2+8
+
+Program #43
+Runtime = 20979*n^7+80514*n^6+5103*n^5+729*n^2+1981*n
+
+Program #44
+Runtime = 144*n^9+1035*n^8+891*n^7+162*n^6+36*n^3+72*n+9
+
+Program #45
+Runtime = 2
+
+Program #46
+Runtime = 0
+
+Program #47
+Runtime = 11040*n^6+7360*n^5+1760*n^4+120*n^3+100*n^2+18*n+120
+
+Program #48
+Runtime = 8*n^9+103*n^8+183*n^7+126*n^6+9*n^5+5*n^4+6*n^2
+
+Program #49
+Runtime = 38448*n^6+30456*n^5+1080*n^4+2214*n^2+630*n
+
+Program #50
+Runtime = 15120*n^7+4032*n^6+133392*n^5+1008*n^4+168*n^3+9*n+4
+
+Program #51
+Runtime = 1519*n^3+567*n^2+191*n+12
+
+Program #52
+Runtime = 125*n+9
+
+Program #53
+Runtime = 36288*n^5+403200*n^4+196560*n^3+4368*n^2+357*n+434
+
+Program #54
+Runtime = 8*n^3+8*n^2+79*n
+
+Program #55
+Runtime = 567*n^4+1872*n^3+8*n^2+9*n+9
+
+Program #56
+Runtime = 3456*n^6+6288*n^5+2*n+4
+
+Program #57
+Runtime = 1152*n^6+66384*n^5+16384*n^4+48*n^3+22
+
+Program #58
+Runtime = 30
+
+Program #59
+Runtime = 11205*n^7+41715*n^6+648*n^5+1350*n^4+18*n^2+117*n
+
+Program #60
+Runtime = 6*n+11
+
+Program #61
+Runtime = 1404*n^7+7128*n^6+5508*n^5+19764*n^4+1080*n^3+612*n+67
+
+Program #62
+Runtime = 800*n^8+14160*n^7+2640*n^6+1200*n^3+20*n+87
+
+Program #63
+Runtime = 0
+
+Program #64
+Runtime = 1368*n^6+1728*n^5+675*n^4+9*n^2+9*n+29
+
+Program #65
+Runtime = 450*n^7+7128*n^6+66*n^5+40*n^4+204*n^3+4*n^2+26
+
+Program #66
+Runtime = 2380*n^8+1610*n^7+35*n^4+163*n^2+31*n+24
+
+Program #67
+Runtime = 84*n^9+68*n^8+164*n^7+4*n^6+36*n^5+56*n^4+6
+
+Program #68
+Runtime = 10*n^2+231*n+69
+
+Program #69
+Runtime = 7080*n^7+20280*n^6+6120*n^5+72*n^3+171*n^2
+
+Program #70
+Runtime = 52254720*n^3+30881088*n^2+252*n+1461
+
+Program #71
+Runtime = 3150*n^7+5250*n^5+2100*n^4+105*n^3
+
+Program #72
+Runtime = 97440*n^6+72240*n^5+3360*n^3+151200*n+56224
+
+Program #73
+Runtime = 14848*n^5+233600*n^4+4*n^3+312
+
+Program #74
+Runtime = 3643200*n^4+449920*n^3+2400*n^2
+
+Program #75
+Runtime = 480*n^7+24800*n^6+100800*n^5+2400*n^4+2160*n^3
+
+Program #76
+Runtime = 600*n^6+560*n^5+59340*n^4+1080*n^3+52*n^2+4*n+11
+
+Program #77
+Runtime = 9
+
+Program #78
+Runtime = 1804680*n^5+2148120*n^4+25920*n^3+11
+
+Program #79
+Runtime = 1536*n^7+2784*n^6+624*n^5+1111*n^4+118*n^3+858*n^2+2
+
+Program #80
+Runtime = 35280*n^5+639240*n^4+23940*n^3+1680*n^2+24360*n+195
+
+Program #81
+Runtime = 68
+
+Program #82
+Runtime = 567*n^8+3924*n^7+n^2+17*n+8
+
+Program #83
+Runtime = 268128*n^5+42336*n^4+1728*n^3+2592*n^2+1458*n+625
+
+Program #84
+Runtime = 88*n^3+61*n^2+9
+
+Program #85
+Runtime = 45*n^3+295*n^2+125*n
+
+Program #86
+Runtime = 1400*n^6+9150*n^5+100*n^4+130*n^3+394
+
+Program #87
+Runtime = 3552*n^7+1920*n^6+3264*n^5+3792*n^4+60*n
+
+Program #88
+Runtime = 294*n^9+2142*n^8+66*n^6+54*n^5+30*n^4+9*n+7
+
+Program #89
+Runtime = 24*n+19
+
+Program #90
+Runtime = 2744*n^7+44800*n^6+35*n^5+119*n^4+3*n^2+9*n+15
+
+Program #91
+Runtime = 132*n^7+7344*n^6+18*n^5+8*n^3+9*n+9
+
+Program #92
+Runtime = 49520*n^4+3280*n^3+1680*n^2+64*n+9
+
+Program #93
+Runtime = 8640*n^6+47160*n^5+32808*n^4+8*n^3+4
+
+Program #94
+Runtime = 468*n^9+444*n^8+120*n^7+96*n^6+8*n^5+11*n^4+6*n^3+21*n^2+24
+
+Program #95
+Runtime = 3150*n^8+336*n^6+219*n^3+54*n^2+115*n+9
+
+Program #96
+Runtime = 6*n^2+15*n+225
+
+Program #97
+Runtime = 24696*n^6+218736*n^5+12936*n^4+8631*n+7082
+
+Program #98
+Runtime = 1440*n^6+22680*n^5+13140*n^4+5*n^2+1146*n+26
+
+Program #99
+Runtime = 44688*n^6+455112*n^5+98*n^2+63*n
+
+Program #100
+Runtime = 4368*n^6+6888*n^5+129528*n^4+4158*n^2+84*n+91
+
