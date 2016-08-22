@@ -1,0 +1,72 @@
+Sequence 1
+Fuse was not blown.
+Maximal power consumption was 17 amperes.
+
+Sequence 2
+Fuse was not blown.
+Maximal power consumption was 41 amperes.
+
+Sequence 3
+Fuse was not blown.
+Maximal power consumption was 77 amperes.
+
+Sequence 4
+Fuse was not blown.
+Maximal power consumption was 23 amperes.
+
+Sequence 5
+Fuse was not blown.
+Maximal power consumption was 65 amperes.
+
+Sequence 6
+Fuse was not blown.
+Maximal power consumption was 66 amperes.
+
+Sequence 7
+Fuse was blown.
+
+Sequence 8
+Fuse was blown.
+
+Sequence 9
+Fuse was not blown.
+Maximal power consumption was 10 amperes.
+
+Sequence 10
+Fuse was blown.
+
+Sequence 11
+Fuse was not blown.
+Maximal power consumption was 18 amperes.
+
+Sequence 12
+Fuse was blown.
+
+Sequence 13
+Fuse was not blown.
+Maximal power consumption was 49 amperes.
+
+Sequence 14
+Fuse was not blown.
+Maximal power consumption was 54 amperes.
+
+Sequence 15
+Fuse was not blown.
+Maximal power consumption was 29 amperes.
+
+Sequence 16
+Fuse was blown.
+
+Sequence 17
+Fuse was blown.
+
+Sequence 18
+Fuse was blown.
+
+Sequence 19
+Fuse was not blown.
+Maximal power consumption was 13 amperes.
+
+Sequence 20
+Fuse was blown.
+
