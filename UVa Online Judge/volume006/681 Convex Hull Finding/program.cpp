@@ -1,19 +1,18 @@
-// Useless Tile Packers （没用的瓷砖打包公司）
-// PC/UVa IDs: 111405/10065, Popularity: C, Success rate: average Level: 3
+// Convex Hull Finding
+// UVa ID: 681
 // Verdict: Accepted
-// Submission Date: 2016-08-13
-// UVa Run Time: 0.000s
+// Submission Date: 2016-08-27
+// UVa Run Time: 0.020s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
 #include <algorithm>
-#include <iomanip>
 #include <cmath>
 #include <iostream>
 
 using namespace std;
 
-const int MAX_VERTICES = 105;
+const int MAX_VERTICES = 520;
 const int EPSILON = 0;
 
 struct point
@@ -39,21 +38,6 @@ struct polygon
 	int numberOfVertex;
 	point vertex[MAX_VERTICES];
 };
-
-// 利用有向面积计算多边形的面积，注意最后结果取绝对值，因为顶点顺序可能并不是按
-// 逆时针方向给出。
-double area(point vertex[], int numberOfVertex)
-{
-	double areaOfPolygon = 0.0;
-
-	for (int i = 0; i < numberOfVertex; i++)
-	{
-		int j = (i + 1) % numberOfVertex;
-		areaOfPolygon += (vertex[i].x * vertex[j].y - vertex[j].x * vertex[i].y);
-	}
-
-	return fabs(areaOfPolygon / 2.0);
-}
 
 // 叉积。
 int crossProduct(point a, point b, point c)
@@ -88,7 +72,7 @@ bool ccwOrCollinear(point a, point b, point c)
 polygon andrewConvexHull(point vertex[], int numberOfVertex)
 {
     polygon pg;
-    
+
     // 点数小于等于3个，认为所有的点均在凸包上。
 	if (numberOfVertex <= 3)
 	{
@@ -97,7 +81,7 @@ polygon andrewConvexHull(point vertex[], int numberOfVertex)
 		pg.numberOfVertex = numberOfVertex;
 		return pg;
 	}
-	
+    
 	// 排序并去除重复点。
 	sort(vertex, vertex + numberOfVertex);
     numberOfVertex = unique(vertex, vertex + numberOfVertex) - vertex;
@@ -146,28 +130,43 @@ polygon andrewConvexHull(point vertex[], int numberOfVertex)
 	return pg;
 }
 
-int main(int ac, char *av[])
+int main(int argc, char *argv[])
 {
+    cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
+    
 	point tile[MAX_VERTICES];
-	int numberOfVertex, currentCase = 1;
+	int numberOfVertex;
 
-	cout.precision(2);
-	cout.setf(ios::fixed | ios::showpoint);
+    int k, delimiter;
+    cin >> k;
+    cout << k << '\n';
 
-	while (cin >> numberOfVertex, numberOfVertex)
-	{
-		for (int i = 0; i < numberOfVertex; i++)
-			cin >> tile[i].x >> tile[i].y;
+    for (int i = 1; i <= k; i++)
+    {
+        if (i > 1)
+            cout << -1 << '\n';
+            
+	    cin >> numberOfVertex;
 
-		double used = area(tile, numberOfVertex);
-
+		for (int j = 0; j < numberOfVertex; j++)
+			cin >> tile[j].x >> tile[j].y;
+        cin >> delimiter;
+        
 		polygon container = andrewConvexHull(tile, numberOfVertex);
 
-		cout << "Tile #" << currentCase++ << endl;
-		double all = area(container.vertex, container.numberOfVertex);
-		double rate = (1.0 - used / all) * 100.0;
-		cout << "Wasted Space = " << rate << " %" << endl;
-		cout << endl;
+        int lowx = container.vertex[0].x, lowy = container.vertex[0].y, lowi = 0;
+        for (int j = 1; j < container.numberOfVertex; j++)
+            if (container.vertex[j].y < lowy ||
+                (container.vertex[j].y == lowy && container.vertex[j].x < lowx))
+                lowx = container.vertex[j].x, lowy = container.vertex[j].y, lowi = j;
+		cout << container.numberOfVertex + 1 << '\n';
+		for (int j = lowi; j > lowi - container.numberOfVertex; j--)
+		{
+		    cout << container.vertex[(j + container.numberOfVertex) % container.numberOfVertex].x;
+		    cout << ' ' << container.vertex[(j + container.numberOfVertex) % container.numberOfVertex].y << '\n';
+	    }
+	    cout << container.vertex[lowi].x;
+	    cout << ' ' << container.vertex[lowi].y << '\n';
 	}
 
 	return 0;

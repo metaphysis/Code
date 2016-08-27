@@ -1,8 +1,8 @@
 // The Falling Leaves
 // UVa ID: 699
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2016-08-27
+// UVa Run Time: 0.010s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
@@ -55,27 +55,6 @@ int main(int argc, char *argv[])
         int length = 0;
         for (auto pile : piles)
         {
-            //string number = to_string(pile.second);
-            
-            //int next_length = length;
-            //if (next_length > 0)
-            //    next_length += 1 + number.length();
-            //else
-            //    next_length += number.length();
-            //    
-            //if (next_length > 80)
-            //{
-            //    cout << '\n';
-            //    cout << number;
-            //    length = number.length();
-            //}
-            //else
-            //{
-            //    if (length > 0)
-            //        cout << ' ';
-            //    cout << number;
-            //    length = next_length;
-            //}
             if (length++ > 0)
                 cout << ' ';
             cout << pile.second;

@@ -85,8 +85,19 @@ bool ccwOrCollinear(point a, point b, point c)
 }
 
 // Melkman凸包算法。
-void melkmanConvexHull(point vertex[], int numberOfVertex, polygon& pg)
+polygon melkmanConvexHull(point vertex[], int numberOfVertex)
 {
+    polygon pg;
+    
+    // 点数小于等于3个，认为所有的点均在凸包上。
+	if (numberOfVertex <= 3)
+	{
+		for (int i = 0; i < numberOfVertex; i++)
+			pg.vertex[i] = vertex[i];
+		pg.numberOfVertex = numberOfVertex;
+		return pg;
+	}
+	
     // 使用数组实现双端队列。
     point deque[2 * numberOfVertex + 1];
     int bottom = numberOfVertex, top = bottom - 1;
@@ -120,14 +131,15 @@ void melkmanConvexHull(point vertex[], int numberOfVertex, polygon& pg)
     }
 	
 	pg.numberOfVertex = 0;
-	for (int i = bottom; i < top; i++)
-	   pg.vertex[pg.numberOfVertex++] = deque[i];
+	for (int j = bottom; j < top; j++)
+	   pg.vertex[pg.numberOfVertex++] = deque[j];
+    
+    return pg;
 }
 
 int main(int ac, char *av[])
 {
 	point tile[MAX_VERTICES];
-	polygon container;
 	int numberOfVertex, currentCase = 1;
 
 	cout.precision(2);
@@ -140,7 +152,7 @@ int main(int ac, char *av[])
 
 		double used = area(tile, numberOfVertex);
 
-		melkmanConvexHull(tile, numberOfVertex, container);
+		polygon container = melkmanConvexHull(tile, numberOfVertex);
 
 		cout << "Tile #" << currentCase++ << endl;
 		double all = area(container.vertex, container.numberOfVertex);

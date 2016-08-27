@@ -1,0 +1,18 @@
+Throw 1
+1 1 1 1 2
+
+Throw 2
+2
+
+Throw 3
+1 1
+
+Throw 4
+2
+
+Throw 5
+1 1 1 2
+
+Throw 6
+1 2 2 4
+

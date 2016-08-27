@@ -101,15 +101,17 @@ bool smallerAngle(point first, point second)
 }
 
 // Graham凸包扫描算法。
-void grahamConvexHull(point vertex[], int numberOfVertex, polygon& pg)
+polygon grahamConvexHull(point vertex[], int numberOfVertex)
 {
-    // 点数小于等于3个，所有的均在凸包上。
+    polygon pg;
+
+    // 点数小于等于3个，认为所有的点均在凸包上。
 	if (numberOfVertex <= 3)
 	{
 		for (int i = 0; i < numberOfVertex; i++)
 			pg.vertex[i] = vertex[i];
 		pg.numberOfVertex = numberOfVertex;
-		return;
+		return pg;
 	}
 
 	// 按横坐标和纵坐标排序，移除重复点。
@@ -139,12 +141,13 @@ void grahamConvexHull(point vertex[], int numberOfVertex, polygon& pg)
 	}
 	
     pg.numberOfVertex = top;
+    
+    return pg;
 }
 
 int main(int ac, char *av[])
 {
 	point tile[MAX_VERTICES];
-	polygon container;
 	int numberOfVertex, currentCase = 1;
 
 	cout.precision(2);
@@ -160,7 +163,7 @@ int main(int ac, char *av[])
 
 		double used = area(tile, numberOfVertex);
 
-		grahamConvexHull(tile, numberOfVertex, container);
+		polygon container = grahamConvexHull(tile, numberOfVertex);
 
 		cout << "Tile #" << currentCase++ << endl;
 		double all = area(container.vertex, container.numberOfVertex);

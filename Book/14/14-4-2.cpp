@@ -84,8 +84,19 @@ double distanceOfPoint(point a, point b)
 }
 
 // Jarvis步进法求凸包。
-void jarvisConvexHull(point vertex[], int numberOfVertex, polygon& pg)
+polygon jarvisConvexHull(point vertex[], int numberOfVertex)
 {
+    polygon pg;
+
+    // 点数小于等于3个，认为所有的点均在凸包上。
+	if (numberOfVertex <= 3)
+	{
+		for (int i = 0; i < numberOfVertex; i++)
+			pg.vertex[i] = vertex[i];
+		pg.numberOfVertex = numberOfVertex;
+		return pg;
+	}
+	
 	// 排序得到位置处于最左且最下的点，当有共线情况存在时，取y坐标最小的点。
 	// 去除重复点。 
     sort(vertex, vertex + numberOfVertex);
@@ -112,14 +123,15 @@ void jarvisConvexHull(point vertex[], int numberOfVertex, polygon& pg)
         pg.vertex[pg.numberOfVertex++] = vertex[next];
         current = next;
     } while (current != 0);
+    
+    return pg;
 }
 
 int main(int ac, char *av[])
 {
 	point tile[MAX_VERTICES];
-	polygon container;
 	int numberOfVertex, currentCase = 1;
-
+	
 	cout.precision(2);
 	cout.setf(ios::fixed | ios::showpoint);
 
@@ -130,7 +142,7 @@ int main(int ac, char *av[])
 
 		double used = area(tile, numberOfVertex);
 
-		jarvisConvexHull(tile, numberOfVertex, container);
+		polygon container = jarvisConvexHull(tile, numberOfVertex, container);
 
 		cout << "Tile #" << currentCase++ << endl;
 		double all = area(container.vertex, container.numberOfVertex);
