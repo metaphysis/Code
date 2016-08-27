@@ -1,0 +1,6 @@
+Set 1 is immediately decodable
+Set 2 is not immediately decodable
+Set 3 is not immediately decodable
+Set 4 is not immediately decodable
+Set 5 is not immediately decodable
+Set 6 is not immediately decodable

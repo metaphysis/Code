@@ -1,0 +1,16 @@
+Case 1 is a tree.
+Case 2 is not a tree.
+Case 3 is a tree.
+Case 4 is not a tree.
+Case 5 is not a tree.
+Case 6 is a tree.
+Case 7 is not a tree.
+Case 8 is not a tree.
+Case 9 is a tree.
+Case 10 is not a tree.
+Case 11 is not a tree.
+Case 12 is not a tree.
+Case 13 is a tree.
+Case 14 is a tree.
+Case 15 is not a tree.
+Case 16 is not a tree.
