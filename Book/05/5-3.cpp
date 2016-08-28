@@ -40,7 +40,7 @@ public:
 private:
     void zeroJustify(void);
 
-    // 采用 10000 作为基数。数位宽度为 4。
+    // 采用10000作为基数。数位宽度为4。
     static const int base = 10000;
     static const int width = 4;
 
@@ -134,7 +134,7 @@ void BigInteger::zeroJustify(void)
 }
 
 // 比较两个高精度整数的大小。
-// x 大于 y，返回 1，x 小于 y，返回 -1，x 等于 y，返回 0。
+// x大于y，返回1，x小于y，返回-1，x等于y，返回0。
 // 为了除法的需要，对未经前导零调整的整数也能正确处理。
 int compare(const BigInteger& x, const BigInteger& y)
 {
@@ -143,7 +143,7 @@ int compare(const BigInteger& x, const BigInteger& y)
             x.sign == NEGATIVE && y.sign == POSITIVE)
         return (x.sign == POSITIVE ? 1 : -1);
 
-    // 确定 x 和 y 的有效数位，即前导零不计入有效数位。
+    // 确定x和y的有效数位，即前导零不计入有效数位。
     int xDigitNumber = x.digits.size() - 1;
     for (; xDigitNumber && x.digits[xDigitNumber] == 0; xDigitNumber--)
         ;
@@ -210,7 +210,7 @@ BigInteger operator+(const BigInteger& x, const BigInteger& y)
         return (x - z);
     }
 
-    // 确保 x 的位数比 y 的位数多，便于计算。
+    // 确保x的位数比y的位数多，便于计算。
     if (x.digits.size() < y.digits.size())
         return (y + x);
 
@@ -249,7 +249,7 @@ BigInteger operator-(const BigInteger& x, const BigInteger& y)
 {
     BigInteger z;
 
-    // 当 x 和 y 至少有一个是负数，转换为加法运算。
+    // 当x和y至少有一个是负数，转换为加法运算。
     if (x.sign == NEGATIVE || y.sign == NEGATIVE)
     {
         z = y;
@@ -257,7 +257,7 @@ BigInteger operator-(const BigInteger& x, const BigInteger& y)
         return x + z;
     }
 
-    // 都为正数，确保 x 大于 y，便于计算。
+    // 都为正数，确保x大于y，便于计算。
     if (x < y)
     {
         z = y - x;
@@ -345,14 +345,14 @@ BigInteger operator*(const BigInteger& x, const BigInteger& y)
 // 高精度整数除法，为整除运算。
 BigInteger operator/(const BigInteger& x, const BigInteger& y)
 {
-    // z 表示整除得到的商，r 表示每次试除时的被除数。
+    // z表示整除得到的商，r表示每次试除时的被除数。
     BigInteger z, r;
 
     // 设置商和被除数的符号位。
     z.sign = x.sign * y.sign;
     r.sign = POSITIVE;
 
-    // 为商 z 和表示被除数的 r 预先分配存储空间。
+    // 为商z和表示被除数的r预先分配存储空间。
     z.digits.resize(x.digits.size() - y.digits.size() + 1);
     r.digits.resize(y.digits.size() + 1);
 
@@ -377,7 +377,7 @@ BigInteger operator/(const BigInteger& x, const BigInteger& y)
             middle = (high + low + 1) >> 1;
         }
 
-        // 执行减法，从被除数中减去指定数量的 y。
+        // 执行减法，从被除数中减去指定数量的y。
         for (int index = 0; index < y.digits.size(); index++)
         {
             int difference = r.digits[index] - middle * y.digits[index];
