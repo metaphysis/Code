@@ -1,7 +1,7 @@
 // UVa Problem 12016 - Herbicide
 // Verdict: Accepted
-// Submission Date: 2016-06-18
-// UVa Run Time: 2.250s
+// Submission Date: 2016-08-28
+// UVa Run Time: 2.000s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 //
@@ -97,7 +97,7 @@ int countWeeds(polygon & polygons)
 
 int main(int ac, char *av[])
 {
-    ios::sync_with_stdio(false);
+    cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
     
 	int cases, currentCase = 1;
 	int tmpIndex;
@@ -149,9 +149,9 @@ int main(int ac, char *av[])
 		}
 
 		// 判断多边形内有多少杂草，在多边形边界上的亦算在内，多边形可能为凹多边形。
-		cout << "Case #" << currentCase++ << ":" << endl;
+		cout << "Case #" << currentCase++ << ":" << '\n';
 		for (int i = 0; i < polygonCount; i++)
-			cout << countWeeds(herbicide[i]) << endl;
+			cout << countWeeds(herbicide[i]) << '\n';
 	}
 
 	return 0;
