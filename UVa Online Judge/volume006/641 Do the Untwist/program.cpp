@@ -46,14 +46,14 @@ int main(int argc, char *argv[])
         
         for (int i = 0; i < ciphertext.length(); i++)
         {
-            plaintext[(k * i) % n] = letters[(code[ciphertext[i]] + i) % 28];
-            //int m = code[ciphertext[i]];
-            //for (int j = 0; j <= 27; j++)
-            //    if ((j - i + 28) % 28 == m)
-            //    {
-            //        plaintext[(k * i) % n] = letters[j];
-            //        break;
-            //    }
+            //plaintext[(k * i) % n] = letters[(code[ciphertext[i]] + i) % 28];
+            int m = code[ciphertext[i]];
+            for (int j = 0; j <= 27; j++)
+                if ((j - i + 84) % 28 == m)
+                {
+                    plaintext[(k * i) % n] = letters[j];
+                    break;
+                }
         }
         
         cout << plaintext << '\n';
