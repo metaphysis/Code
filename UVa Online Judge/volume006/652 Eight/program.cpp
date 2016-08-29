@@ -1,8 +1,8 @@
 // Eight
 // UVa ID: 652
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2016-08-30
+// UVa Run Time: 0.300s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
@@ -25,9 +25,11 @@
 
 using namespace std;
 
+const int HASH = 101347;
+
 struct state
 {
-    string grid, moves;
+    string matrix, moves;
     int i, j;
 };
 
@@ -35,9 +37,42 @@ int main(int argc, char *argv[])
 {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
 
-    int cases, offset[4][2] = {{-1, 0}, {1, 0}, {0, 1}, {0, -1}};
-    string move = "udrl";
+    int offset[4][2] = {{-1, 0}, {1, 0}, {0, 1}, {0, -1}};
+    string matrix = "123456789", move = "dulr", empty;
     
+    set<int> visited[HASH];
+    map<int, string> solutions[HASH];
+
+    queue<state> unvisited;
+    unvisited.push((state){matrix, empty, 2, 2});
+
+    while (!unvisited.empty())
+    {
+        state current = unvisited.front();
+        unvisited.pop();
+        
+        int tag = stoi(current.matrix), hash = tag % HASH;
+        if (visited[hash].find(tag) == visited[hash].end())
+        {
+            visited[hash].insert(tag);
+            solutions[hash][tag] = current.moves;
+
+            for (int k = 0; k < 4; k++)
+            {
+                int nexti = current.i + offset[k][0];
+                int nextj = current.j + offset[k][1];
+                
+                if (nexti >= 0 && nexti < 3 && nextj >= 0 && nextj < 3)
+                {
+                    string next = current.matrix;
+                    swap(next[current.i * 3 + current.j], next[nexti * 3 + nextj]);
+                    unvisited.push((state){next, current.moves + move[k], nexti, nextj});
+                }
+            }
+        }
+    }
+    
+    int cases;
     cin >> cases;
     
     for (int c = 1; c <= cases; c++)
@@ -45,60 +80,23 @@ int main(int argc, char *argv[])
         if (c > 1)
             cout << '\n';
         
-        string grid(9, 0);
-        int location = 0;
+        string matrix(9, '0');
         for (int i = 0; i < 9; i++)
         {
-            cin >> grid[i];
-            if (grid[i] == 'x')
-            {
-                location = i;
-                grid[i] = '9';
-            }
+            cin >> matrix[i];
+            if (matrix[i] == 'x')
+                matrix[i] = '9';
         }
         
-        string target = "123456789", start;
-        queue<state> unvisited;
-        unvisited.push((state){grid, start, location / 3, location % 3});
-        set<int> visited;
-        
-        bool unsolvable = true;
-        while (!unvisited.empty())
-        {
-            state current = unvisited.front();
-            unvisited.pop();
-            
-            if (current.grid == target)
-            {
-                cout << current.moves << '\n';
-                unsolvable = false;
-                break;
-            }
-            
-            int tag = 0;
-            for (int i = 0; i < current.grid.length(); i++)
-                tag = tag * 10 + current.grid[i] - '0';
-
-            if (visited.find(tag) == visited.end())
-            {
-                visited.insert(tag);
-                for (int k = 0; k < 4; k++)
-                {
-                    int nexti = current.i + offset[k][0];
-                    int nextj = current.j + offset[k][1];
-                    
-                    if (nexti >= 0 && nexti < 3 && nextj >= 0 && nextj < 3)
-                    {
-                        string next_grid = current.grid;
-                        swap(next_grid[current.i * 3 + current.j], next_grid[nexti * 3 + nextj]);
-                        unvisited.push((state){next_grid, current.moves + move[k], nexti, nextj});
-                    }
-                }
-            }
-        }
-        
-        if (unsolvable)
+        int tag = stoi(matrix), hash = tag % HASH;
+        if (solutions[hash].find(tag) == solutions[hash].end())
             cout << "unsolvable\n";
+        else
+        {
+            string answer = solutions[hash][tag];
+            reverse(answer.begin(), answer.end());
+            cout << answer << '\n';
+        }
     }
     
 	return 0;
