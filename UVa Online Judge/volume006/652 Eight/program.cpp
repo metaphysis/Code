@@ -2,7 +2,7 @@
 // UVa ID: 652
 // Verdict: Accepted
 // Submission Date: 2016-08-30
-// UVa Run Time: 0.300s
+// UVa Run Time: 0.220s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
@@ -25,7 +25,7 @@
 
 using namespace std;
 
-const int HASH = 101347;
+const int HASH = 201599;
 
 struct state
 {
@@ -39,8 +39,7 @@ int main(int argc, char *argv[])
 
     int offset[4][2] = {{-1, 0}, {1, 0}, {0, 1}, {0, -1}};
     string matrix = "123456789", move = "dulr", empty;
-    
-    set<int> visited[HASH];
+
     map<int, string> solutions[HASH];
 
     queue<state> unvisited;
@@ -50,11 +49,10 @@ int main(int argc, char *argv[])
     {
         state current = unvisited.front();
         unvisited.pop();
-        
+
         int tag = stoi(current.matrix), hash = tag % HASH;
-        if (visited[hash].find(tag) == visited[hash].end())
+        if (solutions[hash].find(tag) == solutions[hash].end())
         {
-            visited[hash].insert(tag);
             solutions[hash][tag] = current.moves;
 
             for (int k = 0; k < 4; k++)
@@ -71,15 +69,15 @@ int main(int argc, char *argv[])
             }
         }
     }
-    
+
     int cases;
     cin >> cases;
-    
+
     for (int c = 1; c <= cases; c++)
     {
         if (c > 1)
             cout << '\n';
-        
+
         string matrix(9, '0');
         for (int i = 0; i < 9; i++)
         {
@@ -87,7 +85,7 @@ int main(int argc, char *argv[])
             if (matrix[i] == 'x')
                 matrix[i] = '9';
         }
-        
+
         int tag = stoi(matrix), hash = tag % HASH;
         if (solutions[hash].find(tag) == solutions[hash].end())
             cout << "unsolvable\n";
@@ -98,6 +96,6 @@ int main(int argc, char *argv[])
             cout << answer << '\n';
         }
     }
-    
+
 	return 0;
 }
