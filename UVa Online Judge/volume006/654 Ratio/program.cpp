@@ -1,7 +1,7 @@
 // Ratio
 // UVa ID: 654
-// Verdict: Wrong Answer
-// Submission Date: 2016-08-30
+// Verdict: Accepted
+// Submission Date: 2016-08-31
 // UVa Run Time: 0.000s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
@@ -37,7 +37,7 @@ bool better(pair<int, int> a, pair<int, int> b, pair<int, int> c)
     pair<int, int> e1(abs(a.first * c.second - a.second * c.first), a.second);
     pair<int, int> e2(abs(b.first * c.second - b.second * c.first), b.second);
     
-    return e1.first * e2.second <= e2.first * e1.second;
+    return e1.first * e2.second < e2.first * e1.second;
 }
 
 int main(int argc, char *argv[])
@@ -58,21 +58,21 @@ int main(int argc, char *argv[])
         pair<int, int> exact(m, n), last(m / n, 1);
         pair<int, int> low(last.first, 1), up(last.first + 1, 1);
 
-        if (better(up, low, exact))
+        if (!better(low, up, exact))
             last.first += 1;
         cout << last.first << '/' << 1 << '\n';
 
         for (int i = 2; i < n; i++)
         {
-            int top = (double)(i * m) / (double)(n);
-            int lower = max(0, top - 20), upper = top + 20;
+            int nearest = (double)(i * m) / (double)(n);
+            int lower = nearest - 1, upper = nearest + 1;
             
             pair<int, int> best = last;
             bool updated = false;
             
-            for (int start = lower; start <= upper; start++)
+            for (int k = lower; k <= upper; k++)
             {
-                pair<int, int> candidate(start, i);
+                pair<int, int> candidate(k, i);
                 if (better(candidate, best, exact))
                 {
                     best = candidate;
@@ -80,14 +80,14 @@ int main(int argc, char *argv[])
                 }
             }
 
-            if (updated && gcd(best.first, best.second) == 1)
+            if (updated)
             {
                 cout << best.first << '/' << best.second << '\n';
                 last = best;
             }
         }
 
-        if (m != n)
+        if (n != 1)
             cout << m << '/' << n << '\n';
     }
     

@@ -1,0 +1,9 @@
+777777777 can not be classified after 15 iterations
+97 enters an inventory loop of length 2
+1719 enters an inventory loop of length 2
+12345678901234567890123456789012345678901234567890123456789012345678901234567890 is self-inventorying after 4 steps
+1 is self-inventorying after 12 steps
+0 is self-inventorying after 10 steps
+8999 can not be classified after 15 iterations
+11111111111111111111111111111111111111111111111111111111111111111111111111111111 can not be classified after 15 iterations
+801 enters an inventory loop of length 2

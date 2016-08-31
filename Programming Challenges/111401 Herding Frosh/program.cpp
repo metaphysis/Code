@@ -22,13 +22,12 @@
 
 using namespace std;
 
-#define MAXPOLY 1010
-#define EPSILON (1E-10)
+const int MAXPOLY = 1010;
+const double EPSILON = 1E-7;
 
 struct point
 {
-	double x;
-	double y;
+	double x, y;
 };
 
 point origin = (point) { 0.0, 0.0 };
@@ -166,7 +165,7 @@ bool cmpPoint(point a, point b)
 }
 
 // 当原点在凸包内部时，按题意求最小的丝带长度。
-double minConvexHullLength(point students[], int& n)
+double minConvexHullLength(point students[], int &n)
 {
 	double length = 1e20;
 
@@ -213,17 +212,18 @@ double minConvexHullLength(point students[], int& n)
 
 int main(int ac, char *av[])
 {
+    cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
+    
 	point frosh[MAXPOLY];
 	polygon silk;
 	int cases, vertexNumber, froshNumber;
-	bool printBlankLine = false;
-
-	cout.precision(2);
-	cout.setf(ios::fixed | ios::showpoint);
 
 	cin >> cases;
-	while (cases--)
+	for (int c = 1; c <= cases; c++)
 	{
+	    if (c > 1)
+	        cout << '\n';
+	        
 		cin >> froshNumber;
 		frosh[0] = origin;
 		for (int i = 1; i <= froshNumber; i++)
@@ -251,13 +251,8 @@ int main(int ac, char *av[])
 		// 原点在凸包内。
 		if (!onPolygon)
 			minLength = minConvexHullLength(frosh, froshNumber) + 2.0;
-		
-		if (printBlankLine)
-			cout << endl;
-		else
-			printBlankLine = true;
 
-		cout << minLength << endl;
+		cout << fixed << setprecision(2) << minLength << '\n';
 	}
 
 	return 0;
