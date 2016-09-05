@@ -5,7 +5,7 @@
 
 using namespace std;
 
-// 记录顶点的父顶点。
+// 记录顶点的父域。
 vector<int> parent;
 
 // 标记顶点是否已经发现。

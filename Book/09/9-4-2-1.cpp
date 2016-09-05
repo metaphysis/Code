@@ -53,7 +53,7 @@ int getCutVertices()
         int u = (v - 1 > 0 ? v - 1 : v + 1);
         
         // 设置移除的顶点和起始顶点为已访问状态，后续检查连通时不考虑这两个顶点。
-        visited[v] = (visited[u] = true);
+        visited[v] = visited[u] = true;
 
         // 深度优先遍历。
         dfs(u, v);
