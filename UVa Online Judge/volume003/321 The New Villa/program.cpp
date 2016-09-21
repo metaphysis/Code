@@ -45,7 +45,8 @@ struct state
 void buildGraph()
 {
     // 重置门及开关数据。
-    memset(connected, 0, sizeof(connected)), memset(switchs, 0, sizeof(switchs));
+    memset(connected, 0, sizeof(connected));
+    memset(switchs, 0, sizeof(switchs));
 
     // 读入门数据。
     for (int i = 1; i <= d; connected[from][to] = connected[to][from] = 1, i++)
@@ -54,7 +55,6 @@ void buildGraph()
     // 读入开关数据。
     for (int i = 1; i <= s; switchs[from][to] = 1, i++)
         cin >> from >> to;
-
 
     // 重置相关变量。
     edges.clear(), memset(visited, 0, sizeof(visited));
@@ -68,14 +68,14 @@ void buildGraph()
     {
         state current = unvisited.front(); unvisited.pop();
         int room = current.room; bitset<10> light = current.light;
-        int status = (room << SHIFTS) | (int)light.to_ulong();
+        int status = (room << SHIFTS) | light.to_ulong();
        
         for (int next_room = 1; next_room <= r; next_room++)
         {
             // 查看是否可以进入亮灯的房间。
             if (light.test(next_room - 1) && connected[room][next_room])
             {
-                int next_status = (next_room << SHIFTS) | (int)light.to_ulong();
+                int next_status = (next_room << SHIFTS) | light.to_ulong();
                 edges[status].insert(next_status);
                 if (!visited[next_status])
                 {
@@ -91,7 +91,7 @@ void buildGraph()
                 bitset<10> next_light(light); next_light.flip(next_room - 1);
 
                 // 添加边并将未访问的顶点添加到队列中。
-                int next_status = (room << SHIFTS) | (int)next_light.to_ulong();
+                int next_status = (room << SHIFTS) | next_light.to_ulong();
                 edges[status].insert(next_status);
                 if (!visited[next_status])
                 {
