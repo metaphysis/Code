@@ -1,0 +1,16 @@
+Brazil     p=8.54%
+Chile      p=1.60%
+Nigeria    p=8.06%
+Denmark    p=2.79%
+Holland    p=4.51%
+Yugoslavia p=7.50%
+Argentina  p=8.38%
+England    p=1.56%
+Italy      p=9.05%
+Norway     p=3.23%
+France     p=13.72%
+Paraguay   p=3.09%
+Germany    p=13.79%
+Mexico     p=3.11%
+Romania    p=5.53%
+Croatia    p=5.53%
