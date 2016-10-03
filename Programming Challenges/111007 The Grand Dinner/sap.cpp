@@ -22,9 +22,9 @@ int arc[MAXV][MAXV];
 int residual[MAXV][MAXV];
 int currentNode[MAXV];
 int numbers[MAXV];
-int prevoius[MAXV];	// 前向顶点。
-int nVertices；		// 图的顶点数。
-int nArcs;		// 图的边数。
+int prevoius[MAXV];	    // 前向顶点。
+int nVertices；		    // 图的顶点数。
+int nArcs;		        // 图的边数。
 
 // 从汇点开始进行宽度优先遍历为每个顶点设定初始距离值。
 void init(int sink)

@@ -54,15 +54,16 @@
 // [解题方法]
 // 此题有两种解法，一种是简单的贪心法，一种是较复杂的图论网络最大流法。
 //
-// 贪心法采用如下策略：先将人数按降序排列，从编号为 1 的桌子开始安排座位，安排完后，安排下一队。若
-// 能安排完所有人，则输出 1 和安排方案，若不能安排则输出 0，其中明显不能安排的，如某队人数大于桌子
-// 数，参赛队伍数或桌子数为 0 等特殊情况，可以预先处理（虽然可以得到正确答案，但是贪心法的正确性如
-// 何证明？可以通过网络最大流来证明吗？）。
+// 贪心法采用如下策略：先将人数按降序排列，从编号为 1 的桌子开始安排座位，安排完后，
+// 安排下一队。若能安排完所有人，则输出 1 和安排方案，若不能安排则输出 0，其中明显不
+// 能安排的，如某队人数大于桌子数，参赛队伍数或桌子数为 0 等特殊情况，可以预先处理（
+// 虽然可以得到正确答案，但是贪心法的正确性如何证明？可以通过网络最大流来证明吗？）。
 //
-// 网络流解法：源点 source 和每支参赛队伍之间边的容量为参赛队伍人数，每支队伍到桌子之间边的容量为
-// 1，每张桌子到汇点 sink 边的容量为桌子的座位数，然后使用网络流算法求最大流，如果最大流等于参赛队
-// 伍总人数，则满足条件，输出方案，否则不满足条件，输出 0。可以使用宽度优先遍历的 Ford-Fullerson
-// 增广路方法，又名 Edmonds-Karp 算法，算法效率为 O（V*E*E），后续博文会给出。
+// 网络流解法：源点 source 和每支参赛队伍之间边的容量为参赛队伍人数，每支队伍到桌子之
+// 间边的容量为1，每张桌子到汇点 sink 边的容量为桌子的座位数，然后使用网络流算法求最
+// 大流，如果最大流等于参赛队伍总人数，则满足条件，输出方案，否则不满足条件，输出 0。
+// 可以使用宽度优先遍历的 Ford-Fullerson增广路方法，又名 Edmonds-Karp 算法，算法效
+// 率为 O（V*E*E），后续博文会给出。
 
 #include <iostream>
 #include <algorithm>
@@ -70,7 +71,7 @@
 
 using namespace std;
 
-#define MAXTEAMS 70		// 最大参赛队伍数。
+#define MAXTEAMS 70		    // 最大参赛队伍数。
 #define MAXTABLES 50		// 桌子最大数。
 
 #define UNSOLVABLE 0
@@ -78,8 +79,8 @@ using namespace std;
 
 struct team
 {
-	int number;		// 参赛队伍编号。
-	int nmembers;		// 参赛队伍人数。
+	int number;		        // 参赛队伍编号。
+	int nmembers;		    // 参赛队伍人数。
 };
 
 // 比较函数，参数队伍人数多的排前面。
@@ -90,9 +91,9 @@ bool cmp(team x, team y)
 
 int main(int ac, char *av[])
 {
-	team teams[MAXTEAMS];		// 各参赛队编号，人数。
-	int capacity[MAXTABLES];	// 桌子的座位数。
-	int nteams, ntables, ntemp;	// 队伍数，桌子数，总人数。
+	team teams[MAXTEAMS];		    // 各参赛队编号，人数。
+	int capacity[MAXTABLES];	    // 桌子的座位数。
+	int nteams, ntables, ntemp;	    // 队伍数，桌子数，总人数。
 	bool seat[MAXTABLES][MAXTEAMS];	// 记录座位安排方案。
 
 	while (cin >> nteams >> ntables, nteams || ntables)

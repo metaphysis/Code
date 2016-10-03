@@ -91,9 +91,9 @@
 // 0
 //
 // [解题方法]
-// 此题和 UVa 100249 类似，可以建模成求最大流问题。设立源点 source，从源点到每道题目之间弧的
-// 容量为 1，每道题目到各个类别之间弧的容量为 1，题目类别到汇点 sink 之间弧的容量为该类别所要
-// 求的题目数，然后求此图的最大流能否达到题目要求数。
+// 此题和 UVa 100249 类似，可以建模成求最大流问题。设立源点 source，从源点到每道题目
+// 之间弧的容量为 1，每道题目到各个类别之间弧的容量为 1，题目类别到汇点 sink 之间弧的
+// 容量为该类别所要求的题目数，然后求此图的最大流能否达到题目要求数。
 
 #include <iostream>
 #include <cstring>
@@ -103,27 +103,28 @@ using namespace std;
 
 #define MAXCATEGORY 21
 #define MAXPROBLEM 1001
-#define MAXV 1030	// 最大顶点数。
+#define MAXV 1030	    // 最大顶点数。
 #define UNSOLVABLE 0	// 无安排方案。
-#define SOLVABLE 1	// 存在安排方案。
-#define DUMMY (-1)	// 表示顶点无父亲顶点。
+#define SOLVABLE 1	    // 存在安排方案。
+#define DUMMY (-1)	    // 表示顶点无父亲顶点。
 
 struct edge
 {
-	int vertex;	// 相连的顶点。
-	int capacity;	// 容量。
-	int flow;	// 流量。
-	int residual;	// 残余流量。
+	int vertex;	        // 相连的顶点。
+	int capacity;	    // 容量。
+	int flow;	        // 流量。
+	int residual;	    // 残余流量。
 };
 
 edge edges[MAXV][MAXV];		// 有向图的边。
-int degree[MAXV];		// 有向图中顶点的度。
-int parents[MAXV];		// 遍历标记，当前顶点的父亲顶点。
+int degree[MAXV];		    // 有向图中顶点的度。
+int parents[MAXV];		    // 遍历标记，当前顶点的父亲顶点。
 bool discovered[MAXV];		// 遍历标记，是否已发现。
 
-// 使用宽度优先遍历找到一条从源点到汇点的剩余流量为正的通路。从源到汇的任意增广路都能增加总流量，因
-// 此可以借用宽度优先遍历，需要注意的是，只能沿着“还能增广”（即残余容量为正数）的边走，因此需要在
-// 遍历过程中判断残余容量是否为正，以帮助宽度优先遍历区分开饱和边和非饱和边。
+// 使用宽度优先遍历找到一条从源点到汇点的剩余流量为正的通路。从源到汇的任意增广路都能
+// 增加总流量，因此可以借用宽度优先遍历，需要注意的是，只能沿着“还能增广”（即残余容量
+// 为正数）的边走，因此需要在遍历过程中判断残余容量是否为正，以帮助宽度优先遍历区分开
+// 饱和边和非饱和边。
 void breadthFirstSearch(int source, int sink)
 {
 	queue < int > vertices;
@@ -176,8 +177,9 @@ void augmentPath(int source, int sink, int volume)
 	augmentPath(source, parents[sink], volume);
 }
 
-// 根据 BFS 的结果，从汇点 sink 到源点 source 计算通路的容量。增广的过程把尽量多的残余流量转
-// 化为正流量。增广路的容量等于整条路中残余容量的最小值，正如车流的速度取决于最拥挤的路段。
+// 根据 BFS 的结果，从汇点 sink 到源点 source 计算通路的容量。增广的过程把尽量多的
+// 残余流量转化为正流量。增广路的容量等于整条路中残余容量的最小值，正如车流的速度取
+// 决于最拥挤的路段。
 int pathVolume(int source, int sink)
 {
 	if (parents[sink] == DUMMY)
@@ -197,10 +199,11 @@ void initializeSearch()
 	memset(parents, DUMMY, sizeof(parents));
 }
 
-// 网络流解题。每次从源到汇寻找一条可以增加总流量的路径，并且用它增广。当没有增广路存在时，算法终
-// 止，此时的流就是最大流。注意需要将每条有向边 e = （i，j） 拆分成两条弧 （i，j） 和 （j，i），
-// 其中 （i，j） 的初始残余容量为 e 的容量，（j，i） 的残余容量为 0，所有的弧的初始流均设为 0。
-// 事实上，任意可行的流都可以作为算法的初始流，快速构造接近最大流的可行流能大大提高算法效率。
+// 网络流解题。每次从源到汇寻找一条可以增加总流量的路径，并且用它增广。当没有增广路
+// 存在时，算法终止，此时的流就是最大流。注意需要将每条有向边 e = （i，j） 拆分成两
+// 条弧 （i，j） 和 （j，i），其中 （i，j） 的初始残余容量为 e 的容量，（j，i） 的残
+// 余容量为 0，所有的弧的初始流均设为 0。事实上，任意可行的流都可以作为算法的初始流，
+// 快速构造接近最大流的可行流能大大提高算法效率。
 bool netflow(int source, int sink, int nTotal)
 {
 	int maxFlow = 0, volume;
