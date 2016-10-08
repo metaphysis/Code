@@ -4,13 +4,13 @@
 // Submission Date: 2016-10-03
 // UVa Run Time: 1.570s
 //
-// 版权所有（C）2011，邱秋。metaphysis # yeah dot net
+// 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 //
 // 网络流解法：源点 source 和每支参赛队伍之间弧的容量为参赛队伍人数，每支队伍到桌子
-// 之间弧的容量为1，每张桌子到汇点 sink 弧的容量为桌子的座位数，然后使用网络流算法求
+// 之间弧的容量为 1，每张桌子到汇点 sink 弧的容量为桌子的座位数，然后使用网络流算法求
 // 最大流，如果最大流等于参赛队伍总人数，则满足条件，输出方案，否则不满足条件，输出
-// 0。此处使用宽度优先遍历的 Ford-Fullerson增广路方法，又名 Edmonds-Karp 算法，算法
-// 效率为 O（V*E*E），对于顶点数和边数增加的题目，可以使用最短扩增路 （Shortest
+// 0。此处使用宽度优先遍历的 Ford-Fullerson 增广路方法，又名 Edmonds-Karp 算法，算法
+// 效率为 O（V*E*E），对于顶点数和边数较多的题目，可以使用最短扩增路 （Shortest
 // Augment Path，SAP） 算法。
 
 #include <iostream>
@@ -24,7 +24,7 @@ const int MAXTABLES = 51;
 const int UNSOLVABLE = 0;	// 无安排方案。
 const int SOLVABLE = 1;	    // 存在安排方案。
 const int MAXV = 130;	    // 最大顶点数。
-const int DUMMY = -1;	    // 表示顶点无父域。
+const int UNDEFINED = -1;	// 表示顶点无父域。
 
 struct arc
 {
@@ -34,10 +34,10 @@ struct arc
 	int residual;	        // 弧的残余容量。
 };
 
-arc arcs[MAXV][MAXV];		// 有向图的边。
-int degree[MAXV];		    // 有向图中顶点的度。
-int parents[MAXV];		    // 遍历标记，当前顶点的父域。
-bool discovered[MAXV];		// 遍历标记，是否已发现。
+arc arcs[MAXV][MAXV];		// 各顶点的出边。
+int degree[MAXV];		    // 各顶点的出度。
+int parents[MAXV];		    // 顶点的父域。
+bool discovered[MAXV];		// 标记顶点是否已遍历。
 
 // 使用宽度优先遍历找到一条从源点到汇点的剩余流量为正的通路。从源到汇的任意增广路都能
 // 增加总流量，因此可以借用宽度优先遍历，需要注意的是，只能沿着“还能增广”（即残余容量
@@ -46,7 +46,7 @@ bool discovered[MAXV];		// 遍历标记，是否已发现。
 void bfs(int source, int sink)
 {
     memset(discovered, false, sizeof(discovered));
-	memset(parents, DUMMY, sizeof(parents));
+	memset(parents, UNDEFINED, sizeof(parents));
 
 	queue<int> vertices;
 
@@ -58,7 +58,7 @@ void bfs(int source, int sink)
 		int v = vertices.front();
 		vertices.pop();
 		for (int i = 0; i < degree[v]; i++)
-			// 检查是否为饱和边。
+			// 沿着残余容量为正的弧进行图遍历，检查是否为饱和边。
 			if (arcs[v][i].residual > 0)
 				if (discovered[arcs[v][i].v] == false)
 				{
@@ -73,7 +73,7 @@ void bfs(int source, int sink)
 	}
 }
 
-// 找到顶点 x 与顶点 y 之间的有向边。
+// 在残留网络中找到从顶点 x 到顶点 y 的有向弧。
 arc *findArc(int x, int y)
 {
 	for (int i = 0; i < degree[x]; i++)
@@ -102,10 +102,10 @@ void augmentPath(int source, int sink, int volume)
 // 最拥挤的路段。
 int pathVolume(int source, int sink)
 {
-	if (parents[sink] == DUMMY)
+	if (parents[sink] == UNDEFINED)
 		return 0;
 
-	arc *e = findarc(parents[sink], sink);
+	arc *e = findArc(parents[sink], sink);
 	if (source == parents[sink])
 		return (e->residual);
 	else
