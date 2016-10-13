@@ -1,8 +1,8 @@
 // Crimewave
 // UVa ID: 563
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2016-10-13
+// UVa Run Time: 0.090s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
