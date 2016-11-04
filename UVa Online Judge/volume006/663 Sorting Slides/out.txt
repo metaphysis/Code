@@ -1,12 +1,33 @@
 Heap 1
-none
+(A,4) (B,2) (C,1) (D,3) (E,5)
 
 Heap 2
-(A,4) (B,3) (C,1) (D,5) (E,2)
+(C,3)
 
 Heap 3
-(A,5) (B,4) (C,2) (D,3) (E,1)
+(A,4) (B,3) (C,1) (D,5) (E,2)
 
 Heap 4
+(A,5) (B,4) (C,2) (D,3) (E,1)
+
+Heap 5
+none
+
+Heap 6
+(A,4) (B,1) (C,2) (D,3)
+
+Heap 7
+none
+
+Heap 8
+(C,3)
+
+Heap 9
+(A,4) (B,3) (C,1) (D,5) (E,2)
+
+Heap 10
+(A,5) (B,4) (C,2) (D,3) (E,1)
+
+Heap 11
 none
 

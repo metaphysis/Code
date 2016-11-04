@@ -1,8 +1,8 @@
 // Crimewave
 // UVa ID: 563
 // Verdict: Accepted
-// Submission Date: 2016-10-13
-// UVa Run Time: 0.090s
+// Submission Date: 2016-10-17
+// UVa Run Time: 0.070s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
@@ -29,15 +29,15 @@ const int MAXV = 5100, MAXA = 31000;
 
 struct arc
 {
-    int u, v, capacity, flow, residual, next;
+    int u, v, capacity, residual, next;
 };
 
 arc arcs[MAXA];
-int source, sink, path[MAXV], visited[MAXV];
+int source, sink, first[MAXV], path[MAXV], visited[MAXV];
 
 int edmondsKarp()
 {
-    int flows = 0;
+    int maxFlow = 0;
 
 	while (true)
 	{
@@ -51,54 +51,52 @@ int edmondsKarp()
 
 	    while (!unvisited.empty())
 	    {
-		    int x = unvisited.front();
+		    int u = unvisited.front();
 		    unvisited.pop();
 		    
 		    // 遍历以当前顶点为起点的有向弧，沿着残留容量为正的弧进行图遍历。
-		    for (; x != -1; x = arcs[x].next)
+		    for (int x = first[u]; x != -1; x = arcs[x].next)
 			    if (!visited[arcs[x].v] && arcs[x].residual > 0)
 			    {
 				    unvisited.push(arcs[x].v);
 				    visited[arcs[x].v] = 1;
-				    path[arcs[x].v] = u;
+
+				    // 注意路径记录的是有向弧的编号。
+				    path[arcs[x].v] = x;
 			    }
 	    }
-	    
-	    // 遍历未能到达汇点，表明不存在增广路。
+
+	    // 遍历未能到达汇点，表明不存在增广路，当前可行流已经为最大流。
 	    if (!visited[sink])
 	        break;
 
-	    int flow = arcs[x].residual;
-        for (x = path[x]; x != -1; x = path[x])
-            flow = min(flow, arcs[x].residual);
-        
-        // 更新可行流的流量及残留网络。
-        flows += flow[sink];
+        // 确定增广路的流量。
+	    int minFlow = 1000000;
+        for (int x = path[sink]; x != -1; x = path[arcs[x].u])
+            minFlow = min(minFlow, arcs[x].residual);
 
-        for (int x = sink; x != -1; x = path[x])
+        // 更新可行流的流量及残留网络。
+        maxFlow += minFlow;
+
+        for (int x = path[sink]; x != -1; x = path[arcs[x].u])
         {
-            arcs[x].flow += flow[sink];
-            arcs[x].residual -= flow[sink];
-            arcs[x ^ 1].residual += flow[sink];
+            arcs[x].residual -= minFlow;
+            arcs[x ^ 1].residual += minFlow;
         }
 	}
 
-	return flows;
+	return maxFlow;
 }
 
-int problem, streets, avenues, banks, indexer, last[MAXV];
+int problem, streets, avenues, banks, indexer;
 
 void addArc(int u, int v, int capacity)
 {
-    arcs[indexer].u = u, arcs[indexer].v = v;
-    arcs[indexer].capacity = capacity, arcs[indexer].flow = 0;
-    arcs[indexer].residual = capacity, arcs[indexer].next = -1;
-    arcs[last[u]].next = indexer, last[u] = indexer++;
+    arcs[indexer] = (arc){u, v, capacity, capacity, -1};
+    arcs[indexer].next = first[u], first[u] = indexer++;
     
-    arcs[indexer].u = v, arcs[indexer].v = u;
-    arcs[indexer].capacity = capacity, arcs[indexer].flow = 0;
-    arcs[indexer].residual = 0, arcs[indexer].next = -1;
-    arcs[last[v]].next = indexer, last[v] = indexer++;
+    arcs[indexer] = (arc){v, u, capacity, 0, -1};
+    arcs[indexer].next = first[v], first[v] = indexer++;
 }
 
 void buildGraph()
@@ -108,7 +106,7 @@ void buildGraph()
     
     // 初始化有向弧计数器，源点和汇点编号，顶点在链表中的最后序号。
     indexer = 0, source = 0, sink = 2 * streets * avenues + 1;
-    memset(last, 0, sizeof(last));
+    memset(first, -1, sizeof(first));
     
     // 在源点和银行之间建立有向弧。
     for (int b = 1, x, y; b <= banks; b++)
@@ -152,8 +150,8 @@ int main(int argc, char *argv[])
     {
         cin >> streets >> avenues >> banks;
         buildGraph();
-        bool possible = (edmondsKarp() == banks);
-        cout << (possible ? "possible" : "not possible") << '\n';
+        int maxFlow = edmondsKarp();
+        cout << (maxFlow == banks ? "possible" : "not possible") << '\n';
     }
 
 	return 0;

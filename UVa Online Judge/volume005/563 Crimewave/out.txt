@@ -1,10 +1,20 @@
+maxFlow = 26
 not possible
+maxFlow = 66
 not possible
+maxFlow = 6
 possible
+maxFlow = 39
 not possible
+maxFlow = 36
 not possible
+maxFlow = 58
 not possible
+maxFlow = 39
 not possible
+maxFlow = 20
 not possible
+maxFlow = 8
 possible
+maxFlow = 25
 not possible
