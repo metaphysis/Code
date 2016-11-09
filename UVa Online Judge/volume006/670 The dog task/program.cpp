@@ -1,8 +1,8 @@
 // The dog task
 // UVa ID: 670
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2016-11-09
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
@@ -26,7 +26,9 @@
 using namespace std;
 
 const int MAXV = 110;
-const double EPSILON = 1e-20;   // wired epsilon
+
+// 非常怪异的误差控制，尝试了1e-7，1e-10，1e-15均为Wrong Answer。
+const double EPSILON = 1e-20;
 
 struct point
 {
@@ -36,14 +38,24 @@ struct point
 point bob[MAXV], dog[MAXV];
 int g[MAXV][MAXV], visited[MAXV], cx[MAXV], cy[MAXV], L, N, M;
 
-// 判断点是否在矩形内。
-bool arrived(point a, point b, point c)
+// 判断兴趣点是否可到达。
+bool accessible(point a, point b, point c)
 {
     double distAB = sqrt(pow(a.x - b.x, 2) + pow(a.y - b.y, 2));
     double distAC = sqrt(pow(a.x - c.x, 2) + pow(a.y - c.y, 2));
     double distBC = sqrt(pow(b.x - c.x, 2) + pow(b.y - c.y, 2));
     
     return distAC + distBC < 2.0 * distAB - EPSILON;
+}
+
+// 完全不涉及浮点数运算亦为Wrong Answer。
+bool accessible1(point a, point b, point c)
+{
+    int C = (a.x - b.x) * (a.x - b.x) + (a.y - b.y) * (a.y - b.y);
+    int A = (a.x - c.x) * (a.x - c.x) + (a.y - c.y) * (a.y - c.y);
+    int B = (b.x - c.x) * (b.x - c.x) + (b.y - c.y) * (b.y - c.y);
+    
+    return 4 * A * B < (4 * C - A - B) * (4 * C - A - B);
 }
 
 // 使用深度优先搜索寻找增广路，一次搜索只能使当前的匹配数增加1。
@@ -102,7 +114,7 @@ int main(int argc, char *argv[])
         memset(g, 0, sizeof(g));
         for (int i = 0; i < N - 1; i++)
             for (int j = 0; j < M; j++)
-                if (arrived(bob[i], bob[i + 1], dog[j]))
+                if (accessible(bob[i], bob[i + 1], dog[j]))
                     g[i][j] = 1;
 
         // 使用匈牙利算法求最大匹配数。
