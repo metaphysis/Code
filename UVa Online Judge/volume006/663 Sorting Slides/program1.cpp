@@ -2,7 +2,7 @@
 // UVa ID: 663
 // Verdict: Accepted
 // Submission Date: 2016-11-05
-// UVa Run Time: 0.000s
+// UVa Run Time: 0.010s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
@@ -50,15 +50,17 @@ struct flag
 
 rectangle rectangles[MAXV];
 point points[MAXV];
-arc arcs[MAXV][MAXV], backup[MAXV][MAXV], edge[MAXV][MAXV];
+arc arcs[MAXV][MAXV];
 flag flags[MAXV];
 int source, sink;
 
+// 判断点是否在矩形内。
 bool pointInBox(point p, rectangle r)
 {
     return p.x > r.xmin && p.x < r.xmax && p.y > r.ymin && p.y < r.ymax;
 }
 
+// 使用标号法求容量网络的最大流。
 int fordFulkerson()
 {
     // 反复进行标号过程直到不存在改进路。
@@ -79,7 +81,7 @@ int fordFulkerson()
 	    {
 	        // 取出位于队列首的顶点u。
 		    int u = unchecked.front(); unchecked.pop();
-		    
+
 		    // 检查与顶点u正向或反向连接的其他顶点v。
 		    for (int v = source; v <= sink; v++)
 		    {
@@ -102,11 +104,11 @@ int fordFulkerson()
 		            }
 		        }
 		    }
-		    
+
 		    // 顶点u已经标号且已经检查完毕。
 		    flags[u].status = CHECKED;
 	    }
-        
+
 	    // 当标号过程未能到达汇点或者汇点的调整量为0，表明已经不存在改进路。
 	    if (flags[sink].status == UNLABELED || flags[sink].alpha == 0)
 	        break;
@@ -129,19 +131,16 @@ int fordFulkerson()
     for (int u = source; u <= sink; u++)
         if (arcs[source][u].flow < INF)
             maxFlow += arcs[source][u].flow;
-        
+
 	return maxFlow;
 }
 
 int main(int argc, char *argv[])
 {
-    cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
-
     int heap, cases = 0;
     while (cin >> heap, heap > 0)
-    { 
-        cout << "Heap " << ++cases << '\n';
-        
+    {
+        // 读入矩形和点的位置数据。
         for (int i = 1; i <= heap; i++)
         {
             cin >> rectangles[i].xmin >> rectangles[i].xmax;
@@ -150,63 +149,64 @@ int main(int argc, char *argv[])
         
         for (int i = 1; i <= heap; i++)
             cin >> points[i].x >> points[i].y;
-        
+
+        // 初始化容量网络。
         for (int i = 0; i <= 2 * heap + 1; i++)
             for (int j = 0; j <= 2 * heap + 1; j++)
                 arcs[i][j].capacity = arcs[i][j].flow = INF;
 
+        // 在源点和数字间建立有向边，在矩形和汇点间建立有向边。
         source = 0, sink = 2 * heap + 1;
         for (int i = 1; i <= heap; i++)
             arcs[source][i].capacity = 1, arcs[source][i].flow = 0;
         for (int i = heap + 1; i <= 2 * heap; i++)
             arcs[i][sink].capacity = 1, arcs[i][sink].flow = 0;
 
+        // 根据数字是否在某个矩形内，建立有向边。
         for (int i = 1; i <= heap; i++)
             for (int j = 1; j <= heap; j++)
                 if (pointInBox(points[i], rectangles[j]))
                     arcs[i][j + heap].capacity = 1, arcs[i][j + heap].flow = 0;
 
-        for (int i = 0; i < MAXV; i++)
-            for (int j = 0; j < MAXV; j++)
-            {
-                backup[i][j].capacity = arcs[i][j].capacity;
-                backup[i][j].flow = arcs[i][j].flow;
-            }
-
+        // 使用标号法求最大流从而得到最大匹配数。
         int maxMatch = fordFulkerson();
-
-        for (int i = 0; i < MAXV; i++)
-            for (int j = 0; j < MAXV; j++)
-            {
-                edge[i][j].capacity = arcs[i][j].capacity;
-                edge[i][j].flow = arcs[i][j].flow;
-            }
-            
+        
+        // 将任意一条有向边移除，再次求最大匹配数，检查最大匹配数是否减少，以此
+        // 判定有向边是否唯一可确定。
+        cout << "Heap " << ++cases << '\n';
         bool outputed = false;
+
         for (int i = 1; i <= heap; i++)
             for (int j = 1; j <= heap; j++)
-                if (edge[j][i + heap].flow == 1)
+                if (arcs[j][i + heap].capacity == 1)
                 {
+                    // 将容量网络恢复到初始状态。
                     for (int ii = 0; ii < MAXV; ii++)
                         for (int jj = 0; jj < MAXV; jj++)
-                        {
-                            arcs[ii][jj].capacity = backup[ii][jj].capacity;
-                            arcs[ii][jj].flow = backup[ii][jj].flow;
-                        }
+                            if (arcs[ii][jj].capacity == 1)
+                                arcs[ii][jj].flow = 0;
+
+                    // 移除有向边。
                     arcs[j][i + heap].capacity = arcs[j][i + heap].flow = INF;
                     
+                    // 再次求最大匹配数。
                     int nextMatch = fordFulkerson();
                     
+                    // 比较最大匹配数是否减小，减小表明移除的有向边为唯一可确定
+                    // 的关联边。
                     if (nextMatch < maxMatch)
                     {
                         if (outputed) cout << ' ';
                         else outputed = true;
                         cout << '(' << (char)('A' + i - 1) << ',' << j << ')';
-                        break;
                     }
+
+                    // 恢复有向边。
+                    arcs[j][i + heap].capacity = 1, arcs[j][i + heap].flow = 0;
                 }
 
-        if (!outputed) cout << "none";      
+        if (!outputed) cout << "none";
+
         cout << "\n\n";
     }
     

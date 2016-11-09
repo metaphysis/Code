@@ -1,8 +1,8 @@
-// Sorting Slides
-// UVa ID: 663
+// Gopher II
+// UVa ID: 10080
 // Verdict: Accepted
-// Submission Date: 2016-11-05
-// UVa Run Time: 0.000s
+// Submission Date: 2016-11-09
+// UVa Run Time: 0.100s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
@@ -25,17 +25,13 @@
 
 using namespace std;
 
-const int MAXV = 60, INF = 100000;
+const int MAXV = 210, INF = 100000;
+const double EPSILON = 1E-6;
 const int UNLABELED = -1, UNCHECKED = 0, CHECKED = 1;
 
 struct point
 {
-    int x, y;
-};
-
-struct rectangle
-{
-    int xmin, xmax, ymin, ymax;
+    double x, y;
 };
 
 struct arc
@@ -48,15 +44,14 @@ struct flag
     int status, parent, alpha;
 };
 
-rectangle rectangles[MAXV];
-point points[MAXV];
-arc arcs[MAXV][MAXV], backup[MAXV][MAXV], edge[MAXV][MAXV];
+point gophers[MAXV], holes[MAXV];
+arc arcs[MAXV][MAXV];
 flag flags[MAXV];
-int source, sink;
+int source, sink, n, m, s, v;
 
-bool pointInBox(point p, rectangle r)
+bool escaped(point gopher, point hole)
 {
-    return p.x > r.xmin && p.x < r.xmax && p.y > r.ymin && p.y < r.ymax;
+    return pow(gopher.x - hole.x, 2) + pow(gopher.y - hole.y, 2) < pow(s * v, 2) - EPSILON;
 }
 
 int fordFulkerson()
@@ -137,77 +132,31 @@ int main(int argc, char *argv[])
 {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
 
-    int heap, cases = 0;
-    while (cin >> heap, heap > 0)
-    { 
-        cout << "Heap " << ++cases << '\n';
+    while (cin >> n)
+    {
+        cin >> m >> s >> v;
         
-        for (int i = 1; i <= heap; i++)
-        {
-            cin >> rectangles[i].xmin >> rectangles[i].xmax;
-            cin >> rectangles[i].ymin >> rectangles[i].ymax;
-        }
-        
-        for (int i = 1; i <= heap; i++)
-            cin >> points[i].x >> points[i].y;
-        
-        for (int i = 0; i <= 2 * heap + 1; i++)
-            for (int j = 0; j <= 2 * heap + 1; j++)
+        for (int i = 1; i <= n; i++)
+            cin >> gophers[i].x >> gophers[i].y;
+        for (int i = 1; i <= m; i++)
+            cin >> holes[i].x >> holes[i].y;
+            
+        source = 0, sink = n + m + 1;
+        for (int i = source; i <= sink; i++)
+            for (int j = source; j <= sink; j++)
                 arcs[i][j].capacity = arcs[i][j].flow = INF;
 
-        source = 0, sink = 2 * heap + 1;
-        for (int i = 1; i <= heap; i++)
+        for (int i = 1; i <= n; i++)
             arcs[source][i].capacity = 1, arcs[source][i].flow = 0;
-        for (int i = heap + 1; i <= 2 * heap; i++)
+        for (int i = n + 1; i < sink; i++)
             arcs[i][sink].capacity = 1, arcs[i][sink].flow = 0;
 
-        for (int i = 1; i <= heap; i++)
-            for (int j = 1; j <= heap; j++)
-                if (pointInBox(points[i], rectangles[j]))
-                    arcs[i][j + heap].capacity = 1, arcs[i][j + heap].flow = 0;
+        for (int i = 1; i <= n; i++)
+            for (int j = 1; j <= m; j++)
+                if (escaped(gophers[i], holes[j]))
+                    arcs[i][j + n].capacity = 1, arcs[i][j + n].flow = 0;
 
-        for (int i = 0; i < MAXV; i++)
-            for (int j = 0; j < MAXV; j++)
-            {
-                backup[i][j].capacity = arcs[i][j].capacity;
-                backup[i][j].flow = arcs[i][j].flow;
-            }
-
-        int maxMatch = fordFulkerson();
-
-        for (int i = 0; i < MAXV; i++)
-            for (int j = 0; j < MAXV; j++)
-            {
-                edge[i][j].capacity = arcs[i][j].capacity;
-                edge[i][j].flow = arcs[i][j].flow;
-            }
-            
-        bool outputed = false;
-        for (int i = 1; i <= heap; i++)
-            for (int j = 1; j <= heap; j++)
-                if (edge[j][i + heap].flow == 1)
-                {
-                    for (int ii = 0; ii < MAXV; ii++)
-                        for (int jj = 0; jj < MAXV; jj++)
-                        {
-                            arcs[ii][jj].capacity = backup[ii][jj].capacity;
-                            arcs[ii][jj].flow = backup[ii][jj].flow;
-                        }
-                    arcs[j][i + heap].capacity = arcs[j][i + heap].flow = INF;
-                    
-                    int nextMatch = fordFulkerson();
-                    
-                    if (nextMatch < maxMatch)
-                    {
-                        if (outputed) cout << ' ';
-                        else outputed = true;
-                        cout << '(' << (char)('A' + i - 1) << ',' << j << ')';
-                        break;
-                    }
-                }
-
-        if (!outputed) cout << "none";      
-        cout << "\n\n";
+        cout << (n - fordFulkerson()) << '\n';
     }
     
 	return 0;
