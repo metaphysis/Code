@@ -1,7 +1,7 @@
 // Sorting Slides
 // UVa ID: 663
 // Verdict: Accepted
-// Submission Date: 2016-11-07
+// Submission Date: 2016-11-09
 // UVa Run Time: 0.000s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
@@ -25,7 +25,7 @@
 
 using namespace std;
 
-const int MAXV = 60;
+const int MAXV = 60, INF = 0x3f3f3f3f;
 
 struct point
 {
@@ -39,7 +39,8 @@ struct rectangle
 
 rectangle rectangles[MAXV];
 point points[MAXV];
-int g[MAXV][MAXV], visited[MAXV], cx[MAXV], cy[MAXV], heap, cases = 0;
+int g[MAXV][MAXV], visited[MAXV], cx[MAXV], cy[MAXV], dx[MAXV], dy[MAXV];
+int dist, heap, cases = 0;
 
 // 判断点是否在矩形内。
 bool pointInBox(point p, rectangle r)
@@ -47,46 +48,78 @@ bool pointInBox(point p, rectangle r)
     return p.x > r.xmin && p.x < r.xmax && p.y > r.ymin && p.y < r.ymax;
 }
 
-// 使用深度优先搜索寻找增广路，一次搜索只能使当前的匹配数增加1。
-int dfs(int u)
+int bfs()
 {
-    // 考虑所有与u邻接且尚未访问的顶点v。
-    for (int v = 0; v < heap; v++)
-        if (g[u][v] && !visited[v])
-        {
-            // 如果v尚未匹配或者v已经匹配但是从v出发可以找到增广路则匹配成功。
-            visited[v] = 1;
-            if (cy[v] == -1 || dfs(cy[v]))
-            {
-                cx[u] = v;
-                cy[v] = u;
-                return 1;
-            }
-        }
-        
-    // 未能找到增广路，已经是最大匹配。
-    return 0;
-}
+    queue<int> q;
 
-// 匈牙利算法求最大匹配数。
-int hungarian()
-{
-    // 初始化匹配标记。
-    memset(cx, -1, sizeof(cx)); memset(cy, -1, sizeof(cy));
-    
-    // 从每个非饱和点出发寻找增广路。
-    int matches = 0;
+    dist = INF;
+
+    memset(dx, -1, sizeof(dx));
+    memset(dy, -1, sizeof(dy));
+
     for (int i = 0; i < heap; i++)
         if (cx[i] == -1)
         {
-            // 注意寻找之前需要将访问标记置为初始状态。
-            memset(visited, 0, sizeof(visited));
-            
-            // 每找到一条增广路，可使得匹配数增加1。
-            matches += dfs(i);
+            q.push(i);
+            dx[i] = 0;
         }
     
-    // 返回匹配数。
+    while (!q.empty())
+    {
+        int u = q.front(); q.pop();
+        
+        if (dx[u] > dist) break;
+
+        for (int v = 0; v < heap; v++)
+            if (g[u][v] && dy[v] == -1)
+            {
+                dy[v] = dx[u] + 1;
+
+                if (cy[v] == -1)
+                    dist = dy[v];
+                else
+                {
+                    dx[cy[v]] = dy[v] + 1;
+                    q.push(cy[v]);
+                }
+            }
+    }
+
+    return dist != INF;
+}
+
+int dfs(int u)
+{
+    for (int v = 0; v < heap; v++)
+        if (g[u][v] && !visited[v] && dy[v] == (dx[u] + 1))
+        {
+            visited[v] = 1;
+            if (cy[v] != -1 && dy[v] == dist) continue;
+
+            if (cy[v] == -1 || dfs(cy[v]))
+            {
+                cx[u] = v, cy[v] = u;
+                return 1;
+            }
+        }
+
+    return 0;
+}
+
+int hopcroftKarp()
+{
+    memset(cx, -1, sizeof(cx));
+    memset(cy, -1, sizeof(cy));
+    
+    int matches = 0;
+    while (bfs())
+    {
+        memset(visited, 0, sizeof(visited));
+        for (int i = 0; i < heap; i++)
+            if (cx[i] == -1)
+                matches += dfs(i);
+    }
+
     return matches;
 }
 
@@ -112,7 +145,7 @@ int main(int argc, char *argv[])
                     g[i][j] = 1;
 
         // 使用匈牙利算法求最大匹配数。
-        int maxMatch = hungarian();
+        int maxMatch = hopcroftKarp();
         
         // 将任意一条有向边移除，再次求最大匹配数，检查最大匹配数是否减少，以此
         // 判定有向边是否唯一可确定。
@@ -127,7 +160,7 @@ int main(int argc, char *argv[])
                     g[j][i] = 0;
                     
                     // 再次求最大匹配数。
-                    int nextMatch = hungarian();
+                    int nextMatch = hopcroftKarp();
                     
                     // 比较最大匹配数是否减小，减小表明移除的有向边为唯一可确定
                     // 的关联边。

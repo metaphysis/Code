@@ -1,8 +1,8 @@
 // FORCAL
 // UVa ID: 309
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2016-11-10
+// UVa Run Time: 0.010s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
@@ -26,74 +26,100 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-    ios::sync_with_stdio(false);
+    cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
 
     bool error = false;
+
     string line;
     while (getline(cin, line))
     {
         if (line.length() == 0)
         {
-            cout << endl;
+            cout << '\n';
             error = false;
             continue;
         }
-        
-        if (error) continue;
-        
+
+        if (error)
+            continue;
+
         int position = 0;
         while (position < line.length())
         {
-            if (line[position] == '(' || line[position] == ')' ||
-                line[position] == '+' || line[position] == ';' ||
-                line[position] == ',')
+            if (line[position] == '(' || line[position] == ')' || line[position] == '+'
+                || line[position] == ';' || line[position] == ',')
             {
-                cout << line[position] << endl;
+                cout << line[position] << '\n';
+                position++;
             }
-            else if (line[position] == '-' && position + 1 < line.length() && line[position + 1] == '-')
+            else if (line[position] == '-' && position + 1 < line.length()
+                && line[position + 1] == '-')
             {
                 break;
             }
             else if (line[position] == '-')
             {
-                cout << line[position] << endl;
+                cout << line[position] << '\n';
+                position++;
             }
             else if (line[position] == ':')
             {
                 if (position + 1 < line.length() && line[position + 1] == '=')
-                    cout << ":=" << endl;
+                {
+                    cout << ":=" << '\n';
+                    position += 2;
+                }
                 else
                 {
-                    cout << "TOKEN ERROR" << endl;
                     error = true;
-                    break;
                 }
             }
-            else if (isblank(line[position]) == false)
+            else if (isalpha(line[position]) || isdigit(line[position]) || line[position] == '_')
             {
-                string block, lower_block;
+                string block;
+                bool all_are_digits = true;
                 while (position < line.length())
                 {
                     if (isalpha(line[position]) || isdigit(line[position]) || line[position] == '_')
                     {
                         block += line[position];
-                        lower_block += tolower(line[position]);
+                        if (all_are_digits)
+                            all_are_digits = isdigit(line[position]);
                     }
                     else
                     {
-                        position--;
                         break;
                     }
+
+                    position++;
                 }
-                if (lower_block == "begin" || lower_block == "end" ||
-                    lower_block == "read" || lower_block == "write"}
+
+                if ((!all_are_digits && block.length() > 32) || (all_are_digits
+                        && block.length() > 8))
                 {
+                    error = true;
+                }
+                else
+                {
+                    cout << block << '\n';
                 }
             }
-            
-            position++;
+            else if (!isblank(line[position]))
+            {
+                error = true;
+            }
+            else
+            {
+                position++;
+            }
+
+            if (error)
+            {
+                cout << "TOKEN ERROR\n";
+                break;
+            }
         }
     }
-    
-	return 0;
+
+    return 0;
 }

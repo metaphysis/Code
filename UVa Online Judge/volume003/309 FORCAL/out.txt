@@ -1,0 +1,22 @@
+A1
+:=
+A
++
+(
+-
+B
+)
+;
+
+A123
+A123
+)
+01
+TOKEN ERROR
+
+:=
+A
+beGIn
+
+TOKEN ERROR
+

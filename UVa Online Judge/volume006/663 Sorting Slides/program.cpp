@@ -173,7 +173,7 @@ int main(int argc, char *argv[])
                 backup[i][j].flow = arcs[i][j].flow;
             }
 
-        int maxMatch = fordFulkerson();
+        int maxMatches = fordFulkerson();
 
         for (int i = 0; i < MAXV; i++)
             for (int j = 0; j < MAXV; j++)
@@ -195,9 +195,9 @@ int main(int argc, char *argv[])
                         }
                     arcs[j][i + heap].capacity = arcs[j][i + heap].flow = INF;
                     
-                    int nextMatch = fordFulkerson();
+                    int nextMatches = fordFulkerson();
                     
-                    if (nextMatch < maxMatch)
+                    if (nextMatches < maxMatches)
                     {
                         if (outputed) cout << ' ';
                         else outputed = true;
