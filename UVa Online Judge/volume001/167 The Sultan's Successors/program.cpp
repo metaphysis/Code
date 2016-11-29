@@ -15,11 +15,12 @@ using namespace std;
 
 int number[64];
 int chessboard[8][8];
-vector < int > column;
-vector< vector < int > > positions;
-int steps[4][2] = { {1, 1}, {-1, -1}, {1, -1}, {-1, 1} };
+vector<int> column;
+vector<vector<int>> positions;
+int offset[4][2] = { {1, 1}, {-1, -1}, {1, -1}, {-1, 1} };
 
-bool isSolution()
+// 判断皇后在对角线上是否会互相攻击。
+bool is_solution()
 {
     fill(chessboard[0], chessboard[0] + 64, false);
     
@@ -34,16 +35,16 @@ bool isSolution()
                 {
                     int ii = i, jj = j;
                     
-                    ii += steps[k][0];
-                    jj += steps[k][1];
+                    ii += offset[k][0];
+                    jj += offset[k][1];
                     
                     while (0 <= ii && ii <= 7 && 0 <= jj && jj <= 7)
                     {
                         if (chessboard[ii][jj])
                             return false;
                             
-                        ii += steps[k][0];
-                        jj += steps[k][1];
+                        ii += offset[k][0];
+                        jj += offset[k][1];
                     }
                 }
             }
@@ -51,15 +52,16 @@ bool isSolution()
     return true;
 }
 
+// 回溯查找所有可能排列。
 void backtrack()
 {
     for (int i = 0; i < 8; i++)
         column.push_back(i);
     do
     {
-        if (isSolution())
+        if (is_solution())
         {
-            vector < int > solution;
+            vector<int> solution;
             for (int i = 0; i < 8; i++)
                 for (int j = 0; j < 8; j++)
                     if (chessboard[i][j])
@@ -70,7 +72,8 @@ void backtrack()
     } while (next_permutation(column.begin(), column.end()));
 }
 
-int findMaxSum()
+// 对符合要求的放置方案求数值和。
+int find_max_sum()
 {
     int maxSum = 0;
     for (int i = 0; i < positions.size(); i++)
@@ -83,6 +86,7 @@ int findMaxSum()
     return maxSum;
 }
 
+// 读入数据，查找最大值并输出。
 int main(int argc, char* argv[])
 {
     int k;
@@ -95,7 +99,7 @@ int main(int argc, char* argv[])
         for (int i = 0; i < 8; i++)
             for (int j = 0; j < 8; j++)
                 cin >> number[i * 8 + j];
-        cout << setw(5) << right << findMaxSum() << endl;
+        cout << setw(5) << right << find_max_sum() << endl;
     }
     
 	return 0;
