@@ -1,0 +1,14 @@
+ car matches car with 1 mismatch
+ca matches car with 1 mismatch
+car matches car
+care matches car with 1 mismatch
+ar matches car with 1 mismatch
+carp matches car with 1 mismatch
+car. matches car with 1 mismatch
+
+AB matches BC with 2 mismatches
+ABC matches BC with 1 mismatch
+B matches BC with 1 mismatch
+BC matches BC
+C matches BC with 1 mismatch
+

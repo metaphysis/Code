@@ -18,10 +18,10 @@ using namespace std;
 const int MAXN = 100;
 const double EPSICON = 1e-8;
 
-// 不考虑其他节点影响时，两个节点间的电阻。
+// 不考虑其他连接点影响时，两个连接点间的阻值。
 double resistor[MAXN][MAXN];
 
-// 两个节点间的电势。
+// 各个连接点的电势。
 double voltage[MAXN];
 
 // 列主元高斯消元法求解线性方程组Ax=b。
@@ -85,7 +85,7 @@ int main(int argc, char *argv[])
 
         int C = indexer.size();
 
-        // 求出两个连接点之间直接相连的并联电阻的等效电阻。
+        // 求出两个连接点之间直接相连的并联电阻的等效阻值。
         for (int i = 0; i < C; i++)
             for (int j = 0; j < C; j++)
                 resistor[i][j] = 1.0 / resistor[i][j];
@@ -97,7 +97,7 @@ int main(int argc, char *argv[])
         voltage[indexer[A]] = 1000.0;
         voltage[indexer[B]] = 0.0;
 
-        // 由于起点和终点的电势为已知预设值，构建方程使得方程组所对应的矩阵为方阵。
+        // 由于起点和终点的电势为已知预设值，构建方程使得方程组所对应的系数矩阵为方阵。
         matrix[indexer[A]][indexer[A]] = matrix[indexer[B]][indexer[B]] = 1.0;
 
         // 构建由电势未知元形成的方程组。
@@ -119,7 +119,7 @@ int main(int argc, char *argv[])
                 }
         }
 
-        // 使用列主元高斯消除法求解各节点的电势。
+        // 使用列主元高斯消元法求解各节点的电势。
         gaussianElimination(matrix, voltage);
 
         // 计算终点流入的电流之和。

@@ -7,6 +7,7 @@ using namespace std;
 
 void lcs(string& s, string& t)
 {
+    // 备忘数组，记录最长公共子序列的长度。
     int memo[s.length() + 1][t.length() + 1][2];
 
     memset(memo, 0, sizeof(memo));
@@ -38,6 +39,8 @@ void lcs(string& s, string& t)
 
     cout << "LCS: length = " << memo[s.length()][t.length()][0];
 
+    // 根据备忘数组回溯得到最长公共子序列的组成，如果最长公共子序列不唯一，
+    // 此处所得到的组成只是其中的一种。
     string subsequence;
     int endi = s.length(), endj = t.length();
     while (memo[endi][endj][1] > 0)
@@ -60,8 +63,7 @@ void lcs(string& s, string& t)
 int main(int argc, char *argv[])
 {
     string s, t;
-    while (cin >> s >> t)
-        lcs(s, t);
+    while (cin >> s >> t) lcs(s, t);
 
     return 0;
 }

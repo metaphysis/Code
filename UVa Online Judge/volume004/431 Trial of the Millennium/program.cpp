@@ -97,7 +97,7 @@ int main(int argc, char *argv[])
         vector<int> selected;
         int last_index = n, pre_time_limit = time_limit;
         int used_hours = 0, max_points = 0;
-        while (last_index > 1)
+        while (last_index > 0)
         {
             if (choices[last_index][pre_time_limit] == 1)
             {

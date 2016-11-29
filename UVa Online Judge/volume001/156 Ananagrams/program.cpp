@@ -7,6 +7,7 @@
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
 #include <iostream>
+#include <cstring>
 #include <vector>
 #include <algorithm>
 #include <set>
@@ -17,15 +18,14 @@ using namespace std;
 string toLower(string line)
 {
     for (int i = 0; i < line.length(); i++)
-        if (isupper(line[i]))
-            line[i] += 32;
+        line[i] = tolower(line[i]);
     return line;
 }
 
 int main(int argc, char *argv[])
 {
-    vector < string > allWords;
-    multiset < string > lowerCase;
+    vector<string> allWords;
+    multiset<string> lowerCase;
 
     string line;
     while (cin >> line, line != "#")
@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
         lowerCase.insert(line);
     }
 
-    vector < string > ananagrams;
+    vector<string> ananagrams;
     for (int i = 0; i < allWords.size(); i++)
     {
         string word = toLower(allWords[i]);

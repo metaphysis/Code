@@ -4,17 +4,16 @@ using namespace std;
 
 union
 {
-    unsigned int byte1;
-    unsigned char byte2;           
+    unsigned int word;
+    unsigned char byte;           
 } block;
 
 int main(int argc, char *argv[])
 {
-    // 由于union的存放顺序是所有成员都从低地址开始存放，利用该特性就即可
-    // 获得CPU对内存是采用Little-endian还是Big-endian模式读写。
-
-    block.byte1 = 1;
-    cout << ((block.byte2 == 1) ? "Little-endian\n" : "Big-endian\n");
+    // 利用联合的特性，将联合的第一个成员赋值为1，然后获取内存低位字节的值，
+    // 如果是小端序，则低位字节存储的值为1，若为大端序，则值为0。
+    block.word = 1;
+    cout << (block.byte ? "little-endian\n" : "big-endian\n");
 
     return 0;
 }

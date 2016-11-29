@@ -10,9 +10,9 @@ struct edge
     int index, weight;
 };
 
-vector< vector < edge > > edges;
-vector< int > parent, distances;
-vector< bool > visited;
+vector<vector<edge>> edges;
+vector<int> parent, distances;
+vector<bool> visited;
 
 void mooreDijkstra(int start)
 {

@@ -21,11 +21,8 @@ int main(int argc, char *argv[])
     };
 
     string literal =
-        "    cout << setw(24) << right << [$:] << "
-        "setw(3) << right << sizeof($) << [B, ] << "
-        "setw(20) << right << #numeric_limits<$>::min()"
-        " << [ ~ ] << "
-        "left << #numeric_limits<$>::max() << endl;";
+        "    cout << [$: ] << sizeof($) << [B, ] << #numeric_limits<$>::min()"
+        " << [ ~ ] << #numeric_limits<$>::max() << endl;";
 
     for (auto t : dataTypes)
     {
