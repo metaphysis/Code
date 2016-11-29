@@ -28,7 +28,7 @@ using namespace std;
 const int MATRIX_SIZE = 8;
 
 int column_selected[8] = {0}, column_used[8] = {0};
-int offset[4][2] = { {1, 1}, {1, -1}, {-1, 1}, {-1, -1} };
+int offset[4][2] = {{1, 1}, {1, -1}, {-1, 1}, {-1, -1}};
 int matrix[100][8][8] = {0}, solutions;
 
 // 检查是否满足对角线规则。

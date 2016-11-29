@@ -1,7 +1,27 @@
+// Equation
+// UVa ID: 727
+// Verdict: Accepted
+// Submission Date: 2016-11-29
+// UVa Run Time: 0.000s
+//
+// 版权所有（C）2016，邱秋。metaphysis # yeah dot net
+
+#include <algorithm>
+#include <bitset>
+#include <cassert>
+#include <cmath>
+#include <cstring>
+#include <iomanip>
 #include <iostream>
-#include <stack>
-#include <string>
+#include <limits>
+#include <list>
 #include <map>
+#include <numeric>
+#include <queue>
+#include <set>
+#include <sstream>
+#include <stack>
+#include <vector>
 
 using namespace std;
 
@@ -10,36 +30,8 @@ map<char, int> priority = {
     {'+', 1}, {'-', 1}, {'*', 2}, {'/', 2}, {'(', 0}, {')', 0}
 };
 
-// 使用栈来计算后缀表达式的值。从左至右扫描后缀表达式，如果是数字，则压入结果栈，
-// 如果是运算符，则取出结果栈栈顶的两个元素进行运算符所指定的运算，然后将运算结果
-// 压入结果栈中，直到后缀表达式处理完毕，结果栈的栈顶元素即为表达式的值。
-int calculate(string postfix)
-{
-    stack<int> result;
-    for (auto c : postfix)
-    {
-        // 如果为数字，将其压入结果栈。
-        if (isdigit(c))
-        {
-            result.push(c - '0');
-        }
-        else
-        {
-            // 注意出栈时运算数的先后顺序。
-            int second = result.top(); result.pop();
-            int first = result.top(); result.pop();
-
-            if (c == '+') result.push(first + second);
-            if (c == '-') result.push(first - second);
-            if (c == '*') result.push(first * second);
-            if (c == '/') result.push(first / second);
-        }
-    }
-    return result.top();
-}
-
 // 比较运算符在栈中的优先级顺序。
-bool less_priority(char previous, char next)
+bool lessPriority(char previous, char next)
 {
     return priority[previous] <= priority[next];
 }
@@ -85,7 +77,7 @@ string to_postfix(string infix)
         // 为左括号，或者比运算符堆栈栈顶运算符的优先级高，将当前运算符
         // 压入运算符堆栈。
         if (operators.empty() || operators.top() == '(' ||
-            !less_priority(c, operators.top()))
+            !lessPriority(c, operators.top()))
         {
             operators.push(c);
         }
@@ -94,7 +86,7 @@ string to_postfix(string infix)
             // 当运算符的优先级比运算符堆栈栈顶元素的优先级低或相等时，
             // 弹出运算符堆栈栈顶元素，直到运算符堆栈为空，或者遇到比
             // 当前运算符优先级低的运算符时结束。
-            while (!operators.empty() && less_priority(c, operators.top()))
+            while (!operators.empty() && lessPriority(c, operators.top()))
             {
                 operands.push(operators.top());
                 operators.pop();
@@ -126,9 +118,26 @@ string to_postfix(string infix)
 
 int main(int argc, char *argv[])
 {
-    string infix;
-    while (getline(cin, infix), infix.length() > 0)
-        cout << calculate(to_postfix(infix)) << endl;
+    cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
 
-    return 0;
+    int cases = 0;
+
+    cin >> cases;
+    cin.ignore(1024, '\n');
+    
+    string line;
+    getline(cin, line);
+    
+    for (int c = 1; c <= cases; c++)
+    {
+        if (c > 1) cout << '\n';
+        
+        string infix;
+        while (getline(cin, line), line.length() > 0)
+            infix += line;
+
+        cout << to_postfix(infix) << '\n';
+    }
+    
+	return 0;
 }
