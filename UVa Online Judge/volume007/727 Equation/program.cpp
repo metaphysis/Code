@@ -31,7 +31,7 @@ map<char, int> priority = {
 };
 
 // 比较运算符在栈中的优先级顺序。
-bool lessPriority(char previous, char next)
+bool less_priority(char previous, char next)
 {
     return priority[previous] <= priority[next];
 }
@@ -77,7 +77,7 @@ string to_postfix(string infix)
         // 为左括号，或者比运算符堆栈栈顶运算符的优先级高，将当前运算符
         // 压入运算符堆栈。
         if (operators.empty() || operators.top() == '(' ||
-            !lessPriority(c, operators.top()))
+            !less_priority(c, operators.top()))
         {
             operators.push(c);
         }
@@ -86,7 +86,7 @@ string to_postfix(string infix)
             // 当运算符的优先级比运算符堆栈栈顶元素的优先级低或相等时，
             // 弹出运算符堆栈栈顶元素，直到运算符堆栈为空，或者遇到比
             // 当前运算符优先级低的运算符时结束。
-            while (!operators.empty() && lessPriority(c, operators.top()))
+            while (!operators.empty() && less_priority(c, operators.top()))
             {
                 operands.push(operators.top());
                 operators.pop();
@@ -118,8 +118,6 @@ string to_postfix(string infix)
 
 int main(int argc, char *argv[])
 {
-    cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
-
     int cases = 0;
 
     cin >> cases;

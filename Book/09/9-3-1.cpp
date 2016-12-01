@@ -1,93 +1,87 @@
 #include <algorithm>
+#include <cstring>
 #include <iomanip>
 #include <iostream>
 #include <queue>
 
 using namespace std;
 
-// 记录顶点的父域。
-vector<int> parent;
+const int MAX_V = 1000;
 
-// 标记顶点是否已经发现。
-vector<bool> discovered;
-
-// 记录从起始顶点到各顶点的最短距离，即经过的最少边数量。
-vector<int> distances;
+// parent：记录顶点的父域；
+// visited：标记顶点是否已经发现；
+// dist：记录从起始顶点到各顶点的最短距离，即经过的最少边数量。
+int parent[MAX_V], visited[MAX_V], dist[MAX_V];
 
 // 以邻接表方式来表示图。
-vector<vector<int>> edges;
+vector<int> edges[MAX_V];
 
 // 广度优先遍历。
-void bfs(int start)
+void bfs(int u)
 {
     // 初始化。
-    parent.resize(edges.size());
-    discovered.resize(edges.size());
-    distances.resize(edges.size());
-    
-    fill(parent.begin(), parent.end(), -1);
-    fill(discovered.begin(), discovered.end(), false);
-    fill(distances.begin(), distances.end(), -1);
-       
+    memset(parent, -1, sizeof(parent));
+    memset(visited, 0, sizeof(visited));
+    memset(dist, -1, sizeof(dist));
+
     // 存储未访问顶点的队列，将起始顶点放入队列中。
-    queue<int> unvisited;
-    unvisited.push(start);
-    discovered[start] = true;
-    distances[start] = 0;
-    
+    queue<int> unvisited; unvisited.push(u);
+    visited[u] = 1; dist[u] = 0;
+
     // 当队列不为空时继续处理。
     while (!unvisited.empty())
     {
         // 取出尚未访问的顶点
-        int current = unvisited.front();
-        unvisited.pop();
-        
+        int v = unvisited.front(); unvisited.pop();
+
         // 遍历与当前顶点相连接的其他顶点，如果其他顶点未发现，则将其加入到队列中，
         // 并将后继顶点的父顶点设置为当前顶点。
-        for (int i = 0; i < edges[current].size(); i++)
-        {
-            int next = edges[current][i];
-            if (!discovered[next])
+        for (auto next : edges[v])
+            if (!visited[next])
             {
                 unvisited.push(next);
-                discovered[next] = true;
-                parent[next] = current;
-                distances[next] = distances[current] + 1;
+                visited[next] = 1, parent[next] = v, dist[next] = dist[v] + 1;
             }
-        }
     }
 }
 
 int main(int argc, char *argv[])
 {
-    // 读入图数据。
-    int count_of_vertices, count_of_edges, next_vertex;
-    
-    cin >> count_of_vertices;
-    edges.resize(count_of_vertices + 1);
+    // 读入图数据，顶点从1开始编号。
+    // number_of_vertices：图中顶点的数目；
+    // number_of_edges：与某个顶点相连接的其他顶点数目；
+    // next_v：与某个顶点相连接的其他顶点编号。
+    int number_of_vertices, number_of_edges, next_v;
 
-    for (int vertex = 1; vertex <= count_of_vertices; vertex++)
+    while (cin >> number_of_vertices)
     {
-        cin >> count_of_edges;
-        for (int i = 1; i <= count_of_edges; i++)
+        for (int v = 1; v <= number_of_vertices; v++)
         {
-            cin >> next_vertex;
-            edges[vertex].push_back(next_vertex);
-            edges[next_vertex].push_back(vertex);
+            edges[v].clear();
+
+            cin >> number_of_edges;
+
+            // 读入相连接的其他顶点，构建图。
+            for (int i = 1; i <= number_of_edges; i++)
+            {
+                cin >> next_v;
+                edges[v].push_back(next_v);
+                edges[next_v].push_back(v);
+            }
         }
-    }
-    
-    // 使用广度优先遍历从第一个顶点开始遍历图。
-    bfs(1);
-    
-    // 输出各顶点的父顶点以及和起始顶点间的最短距离。
-    cout << "vertex  parent  distance" << endl;
-    for (int i = 1; i <= count_of_vertices; i++)
-    {
-        cout << setw(6) << right << i;
-        cout << setw(8) << right << parent[i];
-        cout << setw(10) << right << distances[i];
-        cout << endl;
+
+        // 使用广度优先遍历从第1个顶点开始遍历图。
+        bfs(1);
+
+        // 输出各顶点的父顶点以及和起始顶点间的最短距离。
+        cout << "vertex  parent  distance\n";
+        for (int i = 1; i <= number_of_vertices; i++)
+        {
+            cout << setw(3) << right << i;
+            cout << setw(8) << right << parent[i];
+            cout << setw(9) << right << dist[i];
+            cout << '\n';
+        }
     }
 
     return 0;

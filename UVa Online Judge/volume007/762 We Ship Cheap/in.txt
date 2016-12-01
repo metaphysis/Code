@@ -1,0 +1,37 @@
+1
+AR AB
+EX AB
+
+1
+EX AB
+EX AB
+
+1
+AB AC
+AC DC
+
+1
+DC CF
+BD CD
+
+1
+CF AC
+DC DX
+
+3
+JV PT
+KA PT
+KA HP
+JV HP
+
+2
+JV PT
+KA HP
+JV HP
+
+0
+AA BB
+
+1
+AA BB
+AA CC

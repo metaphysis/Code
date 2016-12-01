@@ -46,18 +46,15 @@ int dfn[MAX_V], low[MAX_V], visited[MAX_V];
 
 void dfs(int u, int parent, int depth)
 {
-    visited[u] = 1;
-    dfn[u] = low[u] = depth;
+    visited[u] = 1; dfn[u] = low[u] = depth;
     for (auto v : edges[u])
     {
-        if (v != parent && visited[v] == 1)
-            low[u] = min(low[u], dfn[v]);
+        if (v != parent && visited[v] == 1) low[u] = min(low[u], dfn[v]);
         if (!visited[v])
         {
             dfs(v, u, depth + 1);
             low[u] = min(low[u], low[v]);
-            if (dfn[u] < low[v])
-                bridge.push_back((edge){u, v});
+            if (dfn[u] < low[v]) bridge.push_back((edge){u, v});
         }
     }
     visited[u] = 2;

@@ -26,19 +26,19 @@ using namespace std;
 
 char matrix[30][30];
 int n;
-    
-void floodFill(int i, int j)
+
+void flood_fill(int i, int j)
 {
     if (i < 1 || i > n || j < 1 || j > n)
         return;
-    
+
     if (matrix[i][j] == '1')
     {
         matrix[i][j] = '0';
     
         for (int m = -1; m <= 1; m++)
             for (int n = -1; n <= 1; n++)
-                floodFill(i + m, j + n);
+                flood_fill(i + m, j + n);
     }
 }
 
@@ -48,30 +48,30 @@ int main(int argc, char *argv[])
     while (cin >> n)
     {
         memset(matrix, 0, sizeof(matrix));
-        
+
         for (int i = 1; i <= n; i++)
             for (int j = 1; j <= n; j++)
                 cin >> matrix[i][j];
-        
+
         int eagles = 0;
         bool updated = false;
         do
         {
             updated = false;
-            
+
             for (int i = 1; i <= n; i++)
                 for (int j = 1; j <= n; j++)
                     if (matrix[i][j] == '1')
                     {
-                        floodFill(i, j);
+                        flood_fill(i, j);
                         updated = true;
                         eagles++;
-                    }
-                        
+                    }      
         } while (updated);
-        
-        cout << "Image number " << ++cases << " contains " << eagles << " war eagles." << endl;
+
+        cout << "Image number " << ++cases;
+        cout << " contains " << eagles << " war eagles." << endl;
     }
-    
+
 	return 0;
 }
