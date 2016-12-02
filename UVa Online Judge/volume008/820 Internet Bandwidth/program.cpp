@@ -1,8 +1,8 @@
-// Crimewave
-// UVa ID: 563
-// Verdict: TLE
-// Submission Date: 2016-10-17
-// UVa Run Time: 3.000s
+// Internet Bandwidth
+// UVa ID: 820
+// Verdict: Accepted
+// Submission Date: 2016-12-02
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
@@ -25,7 +25,7 @@
 
 using namespace std;
 
-const int MAXV = 5100, INF = 100000;
+const int MAXV = 110, INF = 1000000;
 const int UNLABELED = -1, UNCHECKED = 0, CHECKED = 1;
 
 struct arc
@@ -40,7 +40,7 @@ struct flag
 
 arc arcs[MAXV][MAXV];
 flag flags[MAXV];
-int source, sink;
+int source, sink, nodes, connections;
 
 int fordFulkerson()
 {
@@ -64,7 +64,7 @@ int fordFulkerson()
 		    int u = unchecked.front(); unchecked.pop();
 		    
 		    // 检查与顶点u正向或反向连接的其他顶点v。
-		    for (int v = source; v <= sink; v++)
+		    for (int v = 1; v <= nodes; v++)
 		    {
 		        // 如果顶点v尚未被标号则予以标号。
 		        if (flags[v].status == UNLABELED)
@@ -102,83 +102,60 @@ int fordFulkerson()
             else arcs[v][u].flow -= offset;
             
             // 调整到汇点，退出。
-            if (u == source)break;
+            if (u == source) break;
             v = u, u = abs(flags[u].parent);
         }
 	}
 
     // 统计从源点流出的总流量。
     int maxFlow = 0;
-    for (int u = source; u <= sink; u++)
+    for (int u = 1; u <= nodes; u++)
         if (arcs[source][u].flow < INF)
             maxFlow += arcs[source][u].flow;
 	return maxFlow;
 }
 
-int problem, streets, avenues, banks;
-
-void addArc(int u, int v, int capacity)
-{
-    arcs[u][v].capacity = capacity, arcs[u][v].flow = 0;
-}
-
 void buildGraph()
 {
-    // 上下左右四个顶点的坐标偏移量。
-    int offset[4][2] = {{1, 0}, {0, -1}, {-1, 0}, {0, 1}};
-
-    // 初始化有向弧计数器，源点和汇点编号，顶点在链表中的最后序号。
-    source = 0, sink = 2 * streets * avenues + 1;
-
     // 初始化有向弧。
-    for (int i = source; i <= sink; i++)
-        for (int j = source; j <= sink; j++)
+    for (int i = 1; i <= nodes; i++)
+        for (int j = 1; j <= nodes; j++)
             arcs[i][j].capacity = arcs[i][j].flow = INF;
-            
-    // 在源点和银行之间建立有向弧。
-    for (int b = 1, x, y; b <= banks; b++)
+
+    cin >> source >> sink >> connections;
+
+    int from, to, capacity;
+    for (int c = 1; c <= connections; c++)
     {
-        cin >> x >> y;
-        addArc(source, (x - 1) * avenues + y, 1);
-    }
+        cin >> from >> to >> capacity;
 
-    // 在交叉路口之间和交叉路口与汇点间建立有向弧。
-    int base = streets * avenues;
-    for (int s = 1; s <= streets; s++)
-        for (int a = 1; a <= avenues; a++)
+        if (arcs[from][to].flow == INF)
         {
-            int index = (s - 1) * avenues + a;
- 
-            // 将交叉路口拆分为前点和后点并建立有向弧。
-            addArc(index, base + index, 1);
-
-            // 如果交叉路口不位于城镇的边界上，则每个交叉路口的后点向上下左右四个
-            // 交叉路口的前点建立有向弧，否则在交叉路口的后点和汇点间建立有向弧。
-            if (s > 1 && s < streets && a > 1 && a < avenues)
-            {
-                for (int f = 0; f < 4; f++)
-                {
-                    int ss = s + offset[f][0], aa = a + offset[f][1];
-                    if (ss >= 1 && ss <= streets && aa >= 1 && aa <= avenues)
-                        addArc(base + index, (ss - 1) * avenues + aa, 1);
-                }
-            }
-            else
-                addArc(base + index, sink, 1);
+            arcs[from][to].capacity = 0;
+            arcs[from][to].flow = 0;
+            arcs[to][from].capacity = 0;
+            arcs[to][from].flow = 0;
         }
+        
+        arcs[from][to].capacity += capacity;
+        arcs[to][from].capacity += capacity;
+    }
 }
 
 int main(int argc, char *argv[])
 {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
 
-    cin >> problem;
-    for (int p = 1; p <= problem; p++)
+    int cases = 0;
+    
+    while (cin >> nodes, nodes > 0)
     {
-        cin >> streets >> avenues >> banks;
         buildGraph();
+
         int maxFlow = fordFulkerson();
-        cout << (maxFlow == banks ? "possible" : "not possible") << '\n';
+
+        cout << "Network " << ++cases << '\n';
+        cout << "The bandwidth is " << maxFlow << ".\n\n";
     }
 
 	return 0;

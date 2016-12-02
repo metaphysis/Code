@@ -1,0 +1,9 @@
+Network 1
+The bandwidth is 17928.
+
+Network 2
+The bandwidth is 17154.
+
+Network 3
+The bandwidth is 17928.
+
