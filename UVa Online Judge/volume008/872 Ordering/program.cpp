@@ -1,7 +1,7 @@
-// Following Orders
-// UVa ID: 124
+// Ordering
+// UVa ID: 872
 // Verdict: Accepted
-// Submission Date: 2015-11-27
+// Submission Date: 2016-12-04
 // UVa Run Time: 0.000s
 //
 // 版权所有（C）2015，邱秋。metaphysis # yeah dot net
@@ -14,33 +14,35 @@
 
 using namespace std;
 
-#define MAXN 20
+const int MAXN = 20;
 
-bool visited[MAXN];
-int nChar, value[2 * MAXN], nLimit;
+int visited[MAXN], nChar, value[2 * MAXN], nLimit;
 char output[MAXN], input[MAXN], limit[MAXN][2];
+bool outputed = false;
 
 void print()
 {
+    outputed = true;
+
     for (int i = 0; i < nChar; i++)
-        cout << output[i];
-    cout << endl;
+    {
+        if (i > 0) cout << ' ';
+        cout << (char)(output[i] + 'A');
+    }
+    cout << '\n';
 }
 
-bool isValid()
+bool is_valid()
 {
     for (int i = 0; i < nLimit; i++)
-        if (value[limit[i][0] - 'a'] >= 0 &&
-            value[limit[i][1] - 'a'] >= 0 &&
-            value[limit[i][0] - 'a'] > value[limit[i][1] - 'a'])
+        if (value[limit[i][0]] >= 0 && value[limit[i][1]] >= 0 && value[limit[i][0]] > value[limit[i][1]])
             return false;
     return true;
 }
 
 void lexicographical(int current)
 {
-    if (current >= 2 && !isValid())
-        return;
+    if (current >= 2 && !is_valid()) return;
         
     if (current == nChar)
     {
@@ -51,12 +53,14 @@ void lexicographical(int current)
     for (int i = 0; i < nChar; i++)
         if (!visited[i])
         {
-            visited[i] = true;
+            visited[i] = 1;
             output[current] = input[i];
-            value[input[i] - 'a'] = current;
+            value[input[i]] = current;
+
             lexicographical(current + 1);
-            value[input[i] - 'a'] = -1;
-            visited[i] = false;
+
+            value[input[i]] = -1;
+            visited[i] = 0;
         }
 }
 
@@ -70,20 +74,24 @@ int main(int ac, char *av[])
     string line;
     int cases = 0;
     
-    while (getline(cin, line), line.length() > 0)
+    getline(cin, line);
+    cases = stoi(line);
+
+    for (int c = 1; c <= cases; c++)
     {
-        // 输出间隔空行。
-        if (cases > 0)
-            cout << endl;
-            
-        // 读取字符，初始化相关变量。
+        getline(cin, line);
+
+        if (c > 1) cout << '\n';
+        
+        getline(cin, line);
         istringstream first(line);
         
         nChar = 0;
         while (first >> input[nChar])
         {
+            input[nChar] -= 'A';
             output[nChar] = 0;
-            visited[nChar] = false;
+            visited[nChar] = 0;
             nChar++;
         }
         
@@ -95,15 +103,24 @@ int main(int ac, char *av[])
         // 读取限制。
         nLimit = 0;
         getline(cin, line);
+        for (int i = 0; i < line.length(); i++)
+            if (line[i] == '<')
+                line[i] = ' ';
+
         istringstream next(line);
-        while (next >> limit[nLimit][0])
-            next >> limit[nLimit++][1];
+        while (next >> limit[nLimit][0] >> limit[nLimit][1])
+        {
+            limit[nLimit][0] -= 'A';
+            limit[nLimit][1] -= 'A';
+            nLimit++;
+        }
         
         // 使用回溯生成字典序排列然后检查是否符合限制条件。
+        outputed = false;
         lexicographical(0);
         
-        cases++;
+        if (!outputed) cout << "NO\n";
     }
-    
+
 	return 0;
 }

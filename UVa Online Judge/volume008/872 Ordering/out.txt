@@ -1,0 +1,27 @@
+NO
+
+NO
+
+A B F G
+A B G F
+A G B F
+G A B F
+
+B A C F D E
+B A F C D E
+B A F D C E
+B A F D E C
+B C A F D E
+B C F A D E
+B F A C D E
+B F A D C E
+B F A D E C
+B F C A D E
+C B A F D E
+C B F A D E
+C F B A D E
+F B A C D E
+F B A D C E
+F B A D E C
+F B C A D E
+F C B A D E
