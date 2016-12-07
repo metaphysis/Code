@@ -1,8 +1,8 @@
 // Light and Transparencies
 // UVa ID: 837
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2016-12-08
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
@@ -104,7 +104,7 @@ int main(int argc, char *argv[])
             cout << output[i].start.x << ' ' << output[i].end.x << ' ';
             cout << output[i].transparency << '\n';
         }
-        cout << output.back().start.x << " +inf 1.000\n";
+        cout << output.back().end.x << " +inf 1.000\n";
     }
     
 	return 0;
