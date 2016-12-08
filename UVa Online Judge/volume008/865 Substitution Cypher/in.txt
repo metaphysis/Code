@@ -1,14 +1,5 @@
 1
 
-abcdefghijklmnopqrstuvwxyz
-zyxwvutsrqponmlkjihgfedcba
-Shar's Birthday:
-The birthday is October 6th, but the party will be Saturday,
-October 5. It's my 24th birthday and the first one in some
-years for which I've been employed. Plus, I have new clothes.
-So I have cause to celebrate. More importantly, though,
-we've cleaned the house! The address is 506-D Albert Street.
-Extra enticement for CS geeks: there are several systems in
-the house, and the party is conveniently scheduled for 3 hours
-after the second CSC programming contest ends (not to mention,
-within easy walking distance)!
+abc,-= y89
+1234567890
+This is a test.,-=
