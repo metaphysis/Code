@@ -1,8 +1,8 @@
 // Trade on Verweggistan
 // UVa ID: 812
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2016-12-12
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
@@ -25,24 +25,17 @@
 
 using namespace std;
 
-set<int> boxes;
-
-void backtrack(int total, int i, int j)
-{
-
-}
-
 int main(int argc, char *argv[])
 {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
 
     int profit[60][30], w, b[30], cases = 0;
-    vector<vector<int>> prul;
+    vector<vector<int>> pruls;
 
     while (cin >> w, w > 0)
     {
         memset(profit, 0, sizeof(profit));
-        prul.clear();
+        pruls.clear();
         
         int maxProfit = 0;
         for (int i = 0; i < w; i++)
@@ -60,15 +53,18 @@ int main(int argc, char *argv[])
                 profit[i][0] = profit[i][1];
                 for (int j = 1; j <= b[i]; j++)
                     profit[i][0] = max(profit[i][0], profit[i][j]);
-                    
-                if (profit[i][0] > 0)
+
+                if (profit[i][0] >= 0)
                 {
-                    maxProfit += profit[i][0];
                     vector<int> number;
+                    if (profit[i][0] == 0) number.push_back(0);
+                    
+                    maxProfit += profit[i][0];
                     for (int j = 1; j <= b[i]; j++)
                         if (profit[i][j] == profit[i][0])
                             number.push_back(j);
-                    prul.push_back(number);
+
+                    pruls.push_back(number);
                 }
             }
         }
@@ -79,13 +75,29 @@ int main(int argc, char *argv[])
         cout << "Maximum profit is " << maxProfit << ".\n";
         cout << "Number of pruls to buy:";
         
-        if (prul.size() == 0) cout << " 0\n";
+        if (pruls.size() == 0) cout << " 0\n";
         else
         {
-            boxes.clear();
-            total = 0;
-            backtrack(0, 0);
-            for (auto box : boxes) cout << ' ' << box;
+            int minimum = 0;
+            for (auto group : pruls)
+                minimum += group.front();
+
+            if (maxProfit == 0) minimum = 0;
+
+            set<int> boxes = {0};
+            for (auto group : pruls)
+            {
+                set<int> next(boxes);
+                boxes.clear();
+                for (auto box : next)
+                    for (auto single : group)
+                        boxes.insert(box + single);
+            }
+
+            int outputed = 0;
+            for (auto box : boxes)
+                if (box >= minimum && outputed++ < 10)
+                    cout << ' ' << box;
             cout << '\n';
         }
     }
