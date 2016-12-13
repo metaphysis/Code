@@ -12,12 +12,13 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-    cin.tie(0);
-    cin.sync_with_stdio(false);
+    cin.tie(0); cin.sync_with_stdio(false);
     
     char input;
     bool firstQuote = false;
+
     cin.unsetf(ios::skipws);
+
     while (cin >> input)
     {
         if (input == '\"')
@@ -25,8 +26,7 @@ int main(int argc, char *argv[])
             cout << (firstQuote ? "''" : "``");
             firstQuote = !firstQuote;
         }
-        else
-            cout << input;
+        else cout << input;
     }
         
 	return 0;

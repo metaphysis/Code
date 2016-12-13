@@ -21,7 +21,7 @@ double direction(point a, point b, point c)
     return (c.x - a.x) * (b.y - a.y) - (b.x - a.x) * (c.y - a.y);
 }
 
-// 包围盒测试。测试点 p 是否在线段 ab 上。
+// 包围盒测试。测试点p是否在线段 ab 上。
 bool pointInBox(point p, point a, point b)
 {
     return ((p.x >= min(a.x, b.x)) && (p.x <= max(a.x, b.x)) &&
