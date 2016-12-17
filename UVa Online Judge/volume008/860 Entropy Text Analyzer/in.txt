@@ -1,0 +1,17 @@
+Midnight, not a sound from the pavement
+Has the moon lost her memory?
+She is smiling alone
+In the lamplight, the withered leaves collect at my feet
+And the wind begins to moan
+****END_OF_TEXT****
+Memory, all alone in the moonlight
+I can dream of the old days
+Life was beautiful then
+I remember the time I knew what happiness was
+Let the memory live again
+****END_OF_TEXT****
+word1 word2
+
+word3
+****END_OF_TEXT****
+****END_OF_INPUT****

@@ -13,7 +13,7 @@
 
 using namespace std;
 
-const int MAX_VERTICES = 105;
+const int MAXV = 105;
 const int EPSILON = 0;
 
 struct point
@@ -36,21 +36,21 @@ struct point
 
 struct polygon
 {
-	int numberOfVertex;
-	point vertex[MAX_VERTICES];
+	int number;
+	point vertex[MAXV];
 };
 
 point lowerLeftPoint;
 
 // 利用有向面积计算多边形的面积，注意最后结果取绝对值，因为顶点顺序可能并不是按
 // 逆时针方向给出。
-double area(point vertex[], int numberOfVertex)
+double area(point vertex[], int number)
 {
 	double areaOfPolygon = 0.0;
 
-	for (int i = 0; i < numberOfVertex; i++)
+	for (int i = 0; i < number; i++)
 	{
-		int j = (i + 1) % numberOfVertex;
+		int j = (i + 1) % number;
 		areaOfPolygon += (vertex[i].x * vertex[j].y - vertex[j].x * vertex[i].y);
 	}
 
@@ -101,36 +101,36 @@ bool smallerAngle(point first, point second)
 }
 
 // Graham凸包扫描算法。
-polygon grahamConvexHull(point vertex[], int numberOfVertex)
+polygon grahamConvexHull(point vertex[], int number)
 {
     polygon pg;
 
     // 点数小于等于3个，认为所有的点均在凸包上。
-	if (numberOfVertex <= 3)
+	if (number <= 3)
 	{
-		for (int i = 0; i < numberOfVertex; i++)
+		for (int i = 0; i < number; i++)
 			pg.vertex[i] = vertex[i];
-		pg.numberOfVertex = numberOfVertex;
+		pg.number = number;
 		return pg;
 	}
 
 	// 按横坐标和纵坐标排序，移除重复点。
-	sort(vertex, vertex + numberOfVertex);
-    numberOfVertex = unique(vertex, vertex + numberOfVertex) - vertex;
+	sort(vertex, vertex + number);
+    number = unique(vertex, vertex + number) - vertex;
 
     // 按极角排序。
     lowerLeftPoint = vertex[0];
-    sort(vertex + 1, vertex + numberOfVertex, smallerAngle);
+    sort(vertex + 1, vertex + number, smallerAngle);
 
     // 将初始的两点放入凸包。
 	pg.vertex[0] = vertex[0];
 	pg.vertex[1] = vertex[1];
 	
 	// 设置哨兵元素，将最左最低点设置为最后一个元素以便扫描时能回到参考点。
-	vertex[numberOfVertex] = lowerLeftPoint;
+	vertex[number] = lowerLeftPoint;
 	
 	int i = 2, top = 1;
-	while (i <= numberOfVertex)
+	while (i <= number)
 	{
 	    if (cw(pg.vertex[top - 1], pg.vertex[top], vertex[i]))
 	        top--;
@@ -140,33 +140,33 @@ polygon grahamConvexHull(point vertex[], int numberOfVertex)
 	        pg.vertex[++top] = vertex[i++];
 	}
 	
-    pg.numberOfVertex = top;
+    pg.number = top;
     
     return pg;
 }
 
 int main(int ac, char *av[])
 {
-	point tile[MAX_VERTICES];
-	int numberOfVertex, currentCase = 1;
+	point tile[MAXV];
+	int number, currentCase = 1;
 
 	cout.precision(2);
 	cout.setf(ios::fixed | ios::showpoint);
 
-	while (cin >> numberOfVertex, numberOfVertex)
+	while (cin >> number, number)
 	{
-		for (int i = 0; i < numberOfVertex; i++)
+		for (int i = 0; i < number; i++)
 		{
 			cin >> tile[i].x;
 			cin >> tile[i].y;
 		}
 
-		double used = area(tile, numberOfVertex);
+		double used = area(tile, number);
 
-		polygon container = grahamConvexHull(tile, numberOfVertex);
+		polygon container = grahamConvexHull(tile, number);
 
 		cout << "Tile #" << currentCase++ << endl;
-		double all = area(container.vertex, container.numberOfVertex);
+		double all = area(container.vertex, container.number);
 		double rate = (1.0 - used / all) * 100.0;
 		cout << "Wasted Space = " << rate << " %" << endl;
 		cout << endl;
