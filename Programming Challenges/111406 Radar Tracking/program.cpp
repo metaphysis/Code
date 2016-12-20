@@ -7,7 +7,7 @@
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 //
 // 一道不是非常完善的题目。测试数据对应的输出和评判程序可能有问题，不过好在测试数据
-// 应该比较简单，不然很难 AC。截止 AC 时，只有 22 人通过。
+// 应该比较简单，不然很难AC。截止AC时，只有22人通过。
 
 #include <iostream>
 #include <algorithm>

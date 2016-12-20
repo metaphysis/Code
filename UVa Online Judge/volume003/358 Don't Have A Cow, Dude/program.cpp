@@ -30,8 +30,8 @@ int main(int argc, char *argv[])
         double r = stod(R), p = stod(P);
         double low = 0.0, up = 2.0 * r;
         
-        int times = 0;
-        while (fabs(low - up) >= 1e-7 && times <= 40)
+        int iterations = 0;
+        while (fabs(low - up) >= 1e-7 && iterations++ <= 40)
         {
             double middle = (low + up) / 2.0;
             double a1 = acos((2.0 * r * r - middle * middle) / (2.0 * r * r));
