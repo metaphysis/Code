@@ -25,13 +25,9 @@
 
 using namespace std;
 
-double p, q, r, s, t, u;
+#define v(x) (p * exp(-x) + q * sin(x) + r * cos(x) + s * tan(x) + t * x * x + u)
 
-// 得到方程的值。
-double getValue(double x)
-{
-    return p * exp(-x) + q * sin(x) + r * cos(x) + s * tan(x) + t * x * x + u;
-}
+double p, q, r, s, t, u;
 
 int main(int argc, char *argv[])
 {
@@ -45,12 +41,13 @@ int main(int argc, char *argv[])
         for (int i = 1; i <= 40; i++)
         {
             middle = (left + right) / 2.0;
-            if (getValue(middle) > 0.0) left = middle;
+
+            if (v(middle) > 0.0) left = middle;
             else right = middle;
         }
 
         // 检查解是否满足精度要求。
-        if (fabs(getValue(middle)) > 1e-8) cout << "No solution\n";
+        if (fabs(v(middle)) > 1e-8) cout << "No solution\n";
         else cout << fixed << setprecision(4) << middle << '\n';
     }
 

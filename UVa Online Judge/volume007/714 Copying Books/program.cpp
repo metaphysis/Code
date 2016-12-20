@@ -25,6 +25,42 @@
 
 using namespace std;
 
+long long partition(long long data[], long long n, long long k)
+{
+    long long left = 0, right = 0;
+
+    for (int i = 0; i < n; i++) right += data[i];
+    
+    while (left <= right)
+    {
+        long long middle = (left + right) / 2;
+        long long j = 0, p = 0, sum = 0, ok = 1;
+
+        while (j < n && p <= k)
+        {
+            if (sum + data[j] <= middle)
+            {
+                sum += data[j];
+                j++;
+            }
+            else
+            {
+                sum = 0;
+                p++;
+            }
+        }
+
+        if (sum > 0) p++;
+
+        if (p <= k)
+            right = middle - 1;
+        else
+            left = middle + 1;
+    }
+    
+    return left;
+}
+
 int main(int argc, char *argv[])
 {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
@@ -37,53 +73,16 @@ int main(int argc, char *argv[])
     {
         cin >> M >> K;
 
-        low = 0, high = 0;
-        for (int i = 0; i < M; i++)
-        {
-            cin >> pages[i];
-            low = max(low, pages[i]);
-            high += pages[i];
-        }
+        for (int i = 0; i < M; i++) cin >> pages[i];
         
-        long long middle, j, k, partition;
-        bool successed;
-
-        while (low <= high)
-        {
-            middle = (low + high) / 2;
-            j = 0, k = 0, partition = 0;
-            successed = true;
-            
-            while (j < M)
-            {
-                if (partition + pages[j] <= middle)
-                {
-                    partition += pages[j];
-                    j++;
-                }
-                else
-                {
-                    k++;
-                    partition = 0;
-                }
-                
-                if (k > K) break;
-            }
-            
-            if (partition > middle) successed = false;
-            if (partition > 0) k++;
-            if (k > K) successed = false;
-            
-            if (successed)
-                high = middle - 1;
-            else
-                low = middle + 1;
-        }
+        // 二分查找确定和的最小值。
+        long long low = partition(pages, M, K);
         
+        // 贪心策略，从后往前划分，注意特殊情况的处理。
         vector<string> output;
         string buffer;
         
-        j = M - 1, k = 1, partition = 0;
+        long long j = M - 1, k = 1, sum = 0;
         while (j >= 0)
         {
             if ((K - k) == (j + 1))
@@ -106,9 +105,9 @@ int main(int argc, char *argv[])
                 break;
             }
             
-            if (partition + pages[j] <= low)
+            if (sum + pages[j] <= low)
             {
-                partition += pages[j];
+                sum += pages[j];
                 if (buffer.length() > 0) buffer.insert(buffer.begin(), ' ');
                 buffer.insert(0, to_string(pages[j]));
                 j--;
@@ -126,7 +125,7 @@ int main(int argc, char *argv[])
                 output.push_back(buffer);
                 buffer.clear();
 
-                partition = 0;
+                sum = 0;
                 output.push_back(" / ");
             }
         }
