@@ -1,0 +1,29 @@
+2 1
+Donald
+Dagobert
+Donald Dagobert 15
+4 4
+John
+Mary
+Cindy
+Arnold
+John Mary 100
+John Cindy 200
+Cindy Mary 40
+Cindy Arnold 150
+2 1
+Donald
+Dagobert
+Donald Dagobert 15
+2 4
+Donald
+Dagobert
+Donald Dagobert 15
+Dagobert Donald  15
+Dagobert Donald  5
+Donald Dagobert 5
+2 1
+Donald
+Dagobert
+Donald Dagobert 15
+0 0
