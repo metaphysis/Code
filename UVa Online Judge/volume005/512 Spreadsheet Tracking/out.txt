@@ -1,0 +1,2149 @@
+Spreadsheet #1
+Cell data in (1,1) moved to (1,2)
+
+Spreadsheet #2
+Cell data in (1,1) moved to (1,2)
+Cell data in (2,2) moved to (2,3)
+Cell data in (1,2) moved to (1,3)
+Cell data in (2,1) moved to (2,2)
+
+Spreadsheet #3
+Cell data in (2,3) moved to (4,6)
+Cell data in (1,3) moved to (2,6)
+Cell data in (1,1) moved to (2,2)
+Cell data in (3,1) moved to (6,2)
+Cell data in (3,3) moved to (6,6)
+Cell data in (1,2) moved to (2,4)
+Cell data in (2,1) moved to (4,2)
+Cell data in (2,2) moved to (4,4)
+Cell data in (3,2) moved to (4,5)
+
+Spreadsheet #4
+Cell data in (4,4) GONE
+Cell data in (3,3) moved to (6,2)
+Cell data in (1,3) moved to (2,2)
+Cell data in (2,1) GONE
+Cell data in (2,3) moved to (4,2)
+Cell data in (4,2) GONE
+Cell data in (4,3) moved to (8,2)
+Cell data in (4,1) GONE
+Cell data in (3,1) GONE
+Cell data in (3,2) GONE
+Cell data in (2,2) GONE
+Cell data in (2,4) GONE
+Cell data in (1,4) GONE
+Cell data in (1,1) GONE
+Cell data in (1,2) GONE
+Cell data in (3,4) GONE
+
+Spreadsheet #5
+Cell data in (3,1) moved to (3,1)
+Cell data in (5,1) moved to (5,1)
+Cell data in (5,4) GONE
+Cell data in (2,5) GONE
+Cell data in (3,3) GONE
+Cell data in (3,2) GONE
+Cell data in (1,3) GONE
+Cell data in (4,2) GONE
+Cell data in (5,2) GONE
+Cell data in (5,3) GONE
+Cell data in (1,1) moved to (1,1)
+Cell data in (2,1) moved to (2,1)
+Cell data in (4,4) GONE
+Cell data in (5,5) GONE
+Cell data in (1,4) GONE
+Cell data in (2,4) GONE
+Cell data in (3,5) GONE
+Cell data in (2,3) GONE
+Cell data in (3,4) GONE
+Cell data in (1,2) GONE
+
+Spreadsheet #6
+Cell data in (2,5) GONE
+Cell data in (5,2) moved to (5,1)
+Cell data in (6,3) moved to (6,5)
+Cell data in (5,4) moved to (5,5)
+Cell data in (2,1) GONE
+Cell data in (1,4) moved to (1,5)
+Cell data in (6,2) moved to (6,1)
+Cell data in (1,3) moved to (1,3)
+Cell data in (4,1) GONE
+Cell data in (1,6) moved to (1,6)
+Cell data in (1,5) GONE
+Cell data in (6,5) moved to (4,1)
+Cell data in (6,4) moved to (6,3)
+Cell data in (3,1) GONE
+Cell data in (5,3) moved to (5,3)
+Cell data in (3,5) GONE
+Cell data in (5,5) GONE
+Cell data in (4,5) GONE
+Cell data in (4,3) moved to (4,3)
+Cell data in (2,6) moved to (3,4)
+
+Spreadsheet #7
+Cell data in (7,4) GONE
+Cell data in (6,4) GONE
+Cell data in (5,5) moved to (5,6)
+Cell data in (3,2) GONE
+Cell data in (2,7) GONE
+Cell data in (7,6) moved to (8,9)
+Cell data in (7,2) GONE
+Cell data in (1,2) GONE
+Cell data in (7,5) moved to (8,6)
+Cell data in (3,6) GONE
+Cell data in (1,3) moved to (1,3)
+Cell data in (6,7) GONE
+Cell data in (5,2) GONE
+Cell data in (6,3) moved to (5,10)
+Cell data in (4,6) moved to (7,9)
+Cell data in (3,1) GONE
+Cell data in (5,4) GONE
+Cell data in (4,4) GONE
+Cell data in (3,5) GONE
+Cell data in (6,5) moved to (7,6)
+
+Spreadsheet #8
+Cell data in (2,4) GONE
+Cell data in (8,2) moved to (18,5)
+Cell data in (7,3) GONE
+Cell data in (3,3) moved to (9,6)
+Cell data in (7,2) GONE
+Cell data in (4,3) moved to (12,6)
+Cell data in (4,4) moved to (12,8)
+Cell data in (1,5) moved to (4,10)
+Cell data in (3,1) moved to (9,3)
+Cell data in (7,6) GONE
+Cell data in (1,4) moved to (4,8)
+Cell data in (6,4) moved to (17,8)
+Cell data in (8,3) moved to (18,6)
+Cell data in (1,8) moved to (4,15)
+Cell data in (8,5) moved to (18,10)
+Cell data in (7,7) GONE
+Cell data in (5,1) moved to (14,3)
+Cell data in (4,1) moved to (12,3)
+Cell data in (8,1) moved to (18,3)
+Cell data in (6,5) moved to (17,10)
+
+Spreadsheet #9
+Cell data in (8,2) GONE
+Cell data in (4,2) GONE
+Cell data in (2,5) GONE
+Cell data in (7,3) GONE
+Cell data in (4,7) GONE
+Cell data in (9,2) GONE
+Cell data in (5,7) GONE
+Cell data in (4,6) GONE
+Cell data in (6,1) moved to (11,1)
+Cell data in (2,8) GONE
+Cell data in (7,6) GONE
+Cell data in (5,8) GONE
+Cell data in (1,5) GONE
+Cell data in (1,9) GONE
+Cell data in (2,6) GONE
+Cell data in (6,5) GONE
+Cell data in (7,4) GONE
+Cell data in (1,1) moved to (1,1)
+Cell data in (8,9) GONE
+Cell data in (7,7) GONE
+
+Spreadsheet #10
+Cell data in (7,8) moved to (6,11)
+Cell data in (3,8) moved to (3,11)
+Cell data in (5,2) GONE
+Cell data in (1,3) moved to (1,5)
+Cell data in (10,7) GONE
+Cell data in (10,2) GONE
+Cell data in (5,4) GONE
+Cell data in (1,10) GONE
+Cell data in (8,6) GONE
+Cell data in (3,1) moved to (3,2)
+Cell data in (4,5) GONE
+Cell data in (5,6) GONE
+Cell data in (7,2) GONE
+Cell data in (10,6) GONE
+Cell data in (3,9) moved to (3,12)
+Cell data in (1,5) GONE
+Cell data in (8,4) GONE
+Cell data in (9,8) moved to (8,11)
+Cell data in (9,1) moved to (8,2)
+Cell data in (6,7) GONE
+
+Spreadsheet #11
+Cell data in (4,2) GONE
+Cell data in (3,6) GONE
+Cell data in (4,8) GONE
+Cell data in (1,1) moved to (2,1)
+Cell data in (11,1) GONE
+Cell data in (4,9) GONE
+Cell data in (2,1) moved to (4,1)
+Cell data in (2,5) moved to (4,6)
+Cell data in (8,11) GONE
+Cell data in (1,2) moved to (2,2)
+Cell data in (8,1) moved to (7,1)
+Cell data in (5,11) GONE
+Cell data in (8,6) moved to (7,7)
+Cell data in (5,4) moved to (6,5)
+Cell data in (11,7) GONE
+Cell data in (6,7) GONE
+Cell data in (9,3) GONE
+Cell data in (4,10) GONE
+Cell data in (8,9) moved to (7,11)
+Cell data in (10,4) GONE
+
+Spreadsheet #12
+Cell data in (7,9) GONE
+Cell data in (2,5) GONE
+Cell data in (2,10) moved to (2,18)
+Cell data in (6,9) GONE
+Cell data in (12,1) GONE
+Cell data in (5,4) moved to (6,9)
+Cell data in (10,5) GONE
+Cell data in (7,1) moved to (8,3)
+Cell data in (4,9) GONE
+Cell data in (4,6) moved to (5,13)
+Cell data in (9,1) GONE
+Cell data in (10,2) GONE
+Cell data in (3,2) GONE
+Cell data in (2,6) moved to (2,13)
+Cell data in (3,1) GONE
+Cell data in (12,4) GONE
+Cell data in (5,6) moved to (6,13)
+Cell data in (4,8) moved to (5,17)
+Cell data in (9,6) GONE
+Cell data in (11,7) moved to (9,15)
+
+Spreadsheet #13
+Cell data in (13,13) GONE
+Cell data in (2,9) GONE
+Cell data in (5,5) moved to (4,15)
+Cell data in (1,11) GONE
+Cell data in (1,4) GONE
+Cell data in (8,7) GONE
+Cell data in (3,10) GONE
+Cell data in (12,5) GONE
+Cell data in (11,1) moved to (2,15)
+Cell data in (9,7) GONE
+Cell data in (4,10) GONE
+Cell data in (11,13) GONE
+Cell data in (2,10) GONE
+Cell data in (7,7) GONE
+Cell data in (2,5) GONE
+Cell data in (10,2) GONE
+Cell data in (3,2) GONE
+Cell data in (3,5) GONE
+Cell data in (4,5) GONE
+Cell data in (13,3) GONE
+
+Spreadsheet #14
+Cell data in (13,5) GONE
+Cell data in (2,7) GONE
+Cell data in (2,9) GONE
+Cell data in (7,8) GONE
+Cell data in (3,11) GONE
+Cell data in (5,11) moved to (4,12)
+Cell data in (9,7) GONE
+Cell data in (3,9) GONE
+Cell data in (5,6) GONE
+Cell data in (13,8) GONE
+Cell data in (6,9) GONE
+Cell data in (3,2) GONE
+Cell data in (11,14) GONE
+Cell data in (7,11) moved to (8,12)
+Cell data in (8,4) GONE
+Cell data in (4,14) GONE
+Cell data in (7,14) GONE
+Cell data in (5,1) GONE
+Cell data in (2,14) GONE
+Cell data in (2,10) GONE
+
+Spreadsheet #15
+Cell data in (4,13) GONE
+Cell data in (5,7) GONE
+Cell data in (8,2) GONE
+Cell data in (11,5) GONE
+Cell data in (11,9) GONE
+Cell data in (15,7) GONE
+Cell data in (1,12) GONE
+Cell data in (4,12) GONE
+Cell data in (14,1) GONE
+Cell data in (4,11) GONE
+Cell data in (1,4) GONE
+Cell data in (8,14) GONE
+Cell data in (11,10) GONE
+Cell data in (6,11) GONE
+Cell data in (3,6) GONE
+Cell data in (14,3) GONE
+Cell data in (8,6) GONE
+Cell data in (8,3) GONE
+Cell data in (2,10) GONE
+Cell data in (9,10) GONE
+
+Spreadsheet #16
+Cell data in (9,4) GONE
+Cell data in (12,16) GONE
+Cell data in (10,9) moved to (19,5)
+Cell data in (10,14) GONE
+Cell data in (12,4) moved to (23,1)
+Cell data in (13,7) GONE
+Cell data in (4,2) GONE
+Cell data in (1,6) GONE
+Cell data in (14,11) GONE
+Cell data in (5,12) GONE
+Cell data in (12,13) GONE
+Cell data in (10,8) GONE
+Cell data in (6,7) GONE
+Cell data in (3,5) moved to (2,4)
+Cell data in (1,12) GONE
+Cell data in (8,6) GONE
+Cell data in (3,3) GONE
+Cell data in (13,1) GONE
+Cell data in (15,8) GONE
+Cell data in (14,9) GONE
+
+Spreadsheet #17
+Cell data in (5,3) GONE
+Cell data in (8,15) GONE
+Cell data in (17,14) GONE
+Cell data in (17,10) GONE
+Cell data in (6,13) GONE
+Cell data in (11,7) GONE
+Cell data in (16,16) GONE
+Cell data in (12,5) GONE
+Cell data in (15,1) GONE
+Cell data in (14,17) GONE
+Cell data in (5,4) GONE
+Cell data in (10,5) GONE
+Cell data in (13,5) GONE
+Cell data in (3,3) GONE
+Cell data in (2,7) GONE
+Cell data in (17,12) GONE
+Cell data in (5,2) GONE
+Cell data in (6,1) GONE
+Cell data in (7,8) GONE
+Cell data in (11,5) GONE
+
+Spreadsheet #18
+Cell data in (9,16) GONE
+Cell data in (6,16) GONE
+Cell data in (10,12) GONE
+Cell data in (11,14) GONE
+Cell data in (7,1) GONE
+Cell data in (10,7) GONE
+Cell data in (11,8) GONE
+Cell data in (10,2) GONE
+Cell data in (14,13) GONE
+Cell data in (17,17) GONE
+Cell data in (11,10) GONE
+Cell data in (6,3) GONE
+Cell data in (2,2) GONE
+Cell data in (3,14) GONE
+Cell data in (11,11) GONE
+Cell data in (9,2) GONE
+Cell data in (7,13) GONE
+Cell data in (16,7) GONE
+Cell data in (4,3) GONE
+Cell data in (16,4) GONE
+
+Spreadsheet #19
+Cell data in (8,18) GONE
+Cell data in (7,9) GONE
+Cell data in (2,19) GONE
+Cell data in (10,12) GONE
+Cell data in (6,1) GONE
+Cell data in (7,3) GONE
+Cell data in (7,16) GONE
+Cell data in (6,2) moved to (11,6)
+Cell data in (15,11) GONE
+Cell data in (11,7) moved to (14,19)
+Cell data in (7,4) GONE
+Cell data in (5,17) GONE
+Cell data in (16,3) GONE
+Cell data in (3,8) moved to (7,20)
+Cell data in (9,8) GONE
+Cell data in (16,8) GONE
+Cell data in (19,7) GONE
+Cell data in (5,14) GONE
+Cell data in (6,3) moved to (11,7)
+Cell data in (17,19) GONE
+
+Spreadsheet #20
+Cell data in (8,19) GONE
+Cell data in (18,5) GONE
+Cell data in (3,11) GONE
+Cell data in (13,9) GONE
+Cell data in (17,10) GONE
+Cell data in (1,2) moved to (4,3)
+Cell data in (4,2) GONE
+Cell data in (15,10) GONE
+Cell data in (3,9) GONE
+Cell data in (17,12) GONE
+Cell data in (6,19) GONE
+Cell data in (18,1) GONE
+Cell data in (18,7) GONE
+Cell data in (4,13) GONE
+Cell data in (13,8) GONE
+Cell data in (18,17) GONE
+Cell data in (3,15) GONE
+Cell data in (5,1) GONE
+Cell data in (12,20) GONE
+Cell data in (9,3) GONE
+
+Spreadsheet #21
+Cell data in (13,5) GONE
+Cell data in (14,6) GONE
+Cell data in (10,8) GONE
+Cell data in (19,13) GONE
+Cell data in (12,8) GONE
+Cell data in (9,9) GONE
+Cell data in (4,7) GONE
+Cell data in (17,3) GONE
+Cell data in (5,19) GONE
+Cell data in (3,10) GONE
+Cell data in (8,6) GONE
+Cell data in (11,8) GONE
+Cell data in (5,4) GONE
+Cell data in (11,7) GONE
+Cell data in (10,9) GONE
+Cell data in (3,3) GONE
+Cell data in (14,16) GONE
+Cell data in (6,12) GONE
+Cell data in (18,18) GONE
+Cell data in (5,20) GONE
+
+Spreadsheet #22
+Cell data in (4,9) GONE
+Cell data in (11,3) GONE
+Cell data in (2,20) GONE
+Cell data in (3,8) GONE
+Cell data in (20,9) GONE
+Cell data in (2,2) GONE
+Cell data in (18,5) moved to (7,5)
+Cell data in (10,6) moved to (2,7)
+Cell data in (4,16) moved to (9,14)
+Cell data in (19,8) GONE
+Cell data in (19,10) GONE
+Cell data in (4,14) GONE
+Cell data in (12,19) GONE
+Cell data in (5,6) GONE
+Cell data in (7,3) GONE
+Cell data in (20,12) GONE
+Cell data in (2,13) GONE
+Cell data in (16,14) GONE
+Cell data in (19,3) moved to (9,4)
+Cell data in (6,13) GONE
+
+Spreadsheet #23
+Cell data in (4,1) GONE
+Cell data in (15,3) GONE
+Cell data in (16,8) GONE
+Cell data in (1,10) GONE
+Cell data in (10,12) GONE
+Cell data in (3,17) GONE
+Cell data in (20,8) GONE
+Cell data in (4,16) GONE
+Cell data in (7,6) GONE
+Cell data in (19,16) GONE
+Cell data in (10,3) GONE
+Cell data in (4,14) GONE
+Cell data in (14,6) GONE
+Cell data in (10,5) GONE
+Cell data in (1,5) GONE
+Cell data in (14,7) moved to (22,3)
+Cell data in (2,3) GONE
+Cell data in (11,15) GONE
+Cell data in (18,17) GONE
+Cell data in (12,16) GONE
+
+Spreadsheet #24
+Cell data in (14,15) GONE
+Cell data in (12,1) GONE
+Cell data in (11,20) GONE
+Cell data in (15,9) GONE
+Cell data in (19,7) GONE
+Cell data in (18,10) GONE
+Cell data in (20,2) moved to (11,3)
+Cell data in (17,15) GONE
+Cell data in (20,19) GONE
+Cell data in (5,7) GONE
+Cell data in (14,11) GONE
+Cell data in (6,5) GONE
+Cell data in (8,19) GONE
+Cell data in (11,5) GONE
+Cell data in (20,14) GONE
+Cell data in (7,12) GONE
+Cell data in (17,12) GONE
+Cell data in (5,6) GONE
+Cell data in (1,4) GONE
+Cell data in (14,2) moved to (7,3)
+
+Spreadsheet #25
+Cell data in (4,20) GONE
+Cell data in (11,9) GONE
+Cell data in (10,10) moved to (13,5)
+Cell data in (16,17) GONE
+Cell data in (6,7) GONE
+Cell data in (10,7) GONE
+Cell data in (14,19) GONE
+Cell data in (13,20) GONE
+Cell data in (12,20) GONE
+Cell data in (9,9) GONE
+Cell data in (3,2) GONE
+Cell data in (5,16) GONE
+Cell data in (10,18) GONE
+Cell data in (9,20) GONE
+Cell data in (11,3) GONE
+Cell data in (12,4) GONE
+Cell data in (17,12) GONE
+Cell data in (13,4) GONE
+Cell data in (14,5) GONE
+Cell data in (18,12) GONE
+
+Spreadsheet #26
+Cell data in (19,10) moved to (27,14)
+Cell data in (7,2) GONE
+Cell data in (1,16) GONE
+Cell data in (18,1) GONE
+Cell data in (4,4) GONE
+Cell data in (2,11) GONE
+Cell data in (14,4) GONE
+Cell data in (7,3) GONE
+Cell data in (14,5) GONE
+Cell data in (1,12) GONE
+Cell data in (1,5) GONE
+Cell data in (2,2) GONE
+Cell data in (19,6) GONE
+Cell data in (6,8) GONE
+Cell data in (5,7) moved to (9,6)
+Cell data in (13,7) moved to (19,6)
+Cell data in (8,17) GONE
+Cell data in (8,9) GONE
+Cell data in (3,12) GONE
+Cell data in (1,14) GONE
+
+Spreadsheet #27
+Cell data in (11,20) GONE
+Cell data in (10,16) GONE
+Cell data in (17,17) GONE
+Cell data in (11,8) GONE
+Cell data in (8,20) GONE
+Cell data in (19,9) GONE
+Cell data in (12,15) GONE
+Cell data in (3,17) GONE
+Cell data in (6,9) GONE
+Cell data in (12,1) GONE
+Cell data in (11,9) GONE
+Cell data in (17,20) GONE
+Cell data in (12,10) GONE
+Cell data in (4,17) moved to (8,4)
+Cell data in (11,6) GONE
+Cell data in (12,14) GONE
+Cell data in (3,16) GONE
+Cell data in (5,4) GONE
+Cell data in (9,11) GONE
+Cell data in (17,14) GONE
+
+Spreadsheet #28
+Cell data in (7,17) GONE
+Cell data in (4,4) GONE
+Cell data in (5,6) GONE
+Cell data in (4,8) GONE
+Cell data in (16,5) GONE
+Cell data in (16,8) GONE
+Cell data in (18,18) moved to (18,16)
+Cell data in (9,3) GONE
+Cell data in (15,10) moved to (13,10)
+Cell data in (12,18) moved to (11,16)
+Cell data in (20,7) GONE
+Cell data in (6,6) GONE
+Cell data in (11,5) GONE
+Cell data in (9,6) GONE
+Cell data in (3,2) GONE
+Cell data in (6,10) GONE
+Cell data in (14,18) GONE
+Cell data in (1,7) GONE
+Cell data in (2,15) GONE
+Cell data in (1,9) GONE
+
+Spreadsheet #29
+Cell data in (6,11) GONE
+Cell data in (6,4) GONE
+Cell data in (8,4) GONE
+Cell data in (4,14) GONE
+Cell data in (8,17) GONE
+Cell data in (7,4) GONE
+Cell data in (11,20) GONE
+Cell data in (14,12) GONE
+Cell data in (9,16) GONE
+Cell data in (17,12) GONE
+Cell data in (16,7) GONE
+Cell data in (3,4) GONE
+Cell data in (17,2) GONE
+Cell data in (5,14) GONE
+Cell data in (3,7) GONE
+Cell data in (15,16) GONE
+Cell data in (16,9) GONE
+Cell data in (12,6) GONE
+Cell data in (3,17) GONE
+Cell data in (18,3) GONE
+
+Spreadsheet #30
+Cell data in (5,13) GONE
+Cell data in (20,2) GONE
+Cell data in (19,15) GONE
+Cell data in (14,6) GONE
+Cell data in (9,17) GONE
+Cell data in (10,18) GONE
+Cell data in (15,2) GONE
+Cell data in (11,14) GONE
+Cell data in (4,14) GONE
+Cell data in (1,12) GONE
+Cell data in (8,15) GONE
+Cell data in (13,12) GONE
+Cell data in (13,17) GONE
+Cell data in (11,3) GONE
+Cell data in (6,20) GONE
+Cell data in (13,14) GONE
+Cell data in (13,10) GONE
+Cell data in (7,10) GONE
+Cell data in (13,16) GONE
+Cell data in (6,9) GONE
+
+Spreadsheet #31
+Cell data in (16,14) GONE
+Cell data in (6,13) GONE
+Cell data in (4,6) GONE
+Cell data in (14,15) GONE
+Cell data in (13,20) GONE
+Cell data in (3,7) GONE
+Cell data in (10,14) GONE
+Cell data in (12,13) GONE
+Cell data in (6,8) GONE
+Cell data in (11,4) GONE
+Cell data in (5,14) GONE
+Cell data in (5,5) GONE
+Cell data in (17,20) GONE
+Cell data in (5,4) GONE
+Cell data in (6,4) GONE
+Cell data in (4,12) GONE
+Cell data in (10,6) GONE
+Cell data in (13,1) GONE
+Cell data in (11,20) GONE
+Cell data in (11,6) GONE
+
+Spreadsheet #32
+Cell data in (5,13) GONE
+Cell data in (11,11) GONE
+Cell data in (7,5) GONE
+Cell data in (3,10) GONE
+Cell data in (1,10) GONE
+Cell data in (6,16) GONE
+Cell data in (15,19) GONE
+Cell data in (12,5) GONE
+Cell data in (11,9) GONE
+Cell data in (1,15) GONE
+Cell data in (18,14) GONE
+Cell data in (14,7) GONE
+Cell data in (16,15) GONE
+Cell data in (6,4) GONE
+Cell data in (2,14) GONE
+Cell data in (16,5) GONE
+Cell data in (4,17) GONE
+Cell data in (14,1) moved to (17,2)
+Cell data in (6,14) moved to (5,9)
+Cell data in (17,14) GONE
+
+Spreadsheet #33
+Cell data in (5,15) GONE
+Cell data in (11,8) GONE
+Cell data in (11,3) GONE
+Cell data in (17,6) GONE
+Cell data in (8,19) GONE
+Cell data in (3,7) GONE
+Cell data in (14,1) GONE
+Cell data in (10,19) GONE
+Cell data in (17,9) GONE
+Cell data in (10,10) GONE
+Cell data in (12,8) GONE
+Cell data in (10,17) GONE
+Cell data in (19,20) GONE
+Cell data in (12,10) GONE
+Cell data in (20,3) GONE
+Cell data in (5,9) GONE
+Cell data in (13,6) GONE
+Cell data in (14,10) GONE
+Cell data in (17,12) GONE
+Cell data in (12,2) GONE
+
+Spreadsheet #34
+Cell data in (4,11) GONE
+Cell data in (3,6) GONE
+Cell data in (12,7) GONE
+Cell data in (3,17) GONE
+Cell data in (2,4) GONE
+Cell data in (9,19) GONE
+Cell data in (20,3) GONE
+Cell data in (11,10) GONE
+Cell data in (1,20) GONE
+Cell data in (14,8) GONE
+Cell data in (6,14) GONE
+Cell data in (5,14) GONE
+Cell data in (7,13) GONE
+Cell data in (16,7) GONE
+Cell data in (4,13) GONE
+Cell data in (19,2) GONE
+Cell data in (12,20) GONE
+Cell data in (16,3) GONE
+Cell data in (1,3) GONE
+Cell data in (8,16) GONE
+
+Spreadsheet #35
+Cell data in (19,1) GONE
+Cell data in (6,1) GONE
+Cell data in (11,14) moved to (15,19)
+Cell data in (19,10) GONE
+Cell data in (18,4) GONE
+Cell data in (5,3) GONE
+Cell data in (14,7) moved to (17,10)
+Cell data in (16,1) moved to (18,1)
+Cell data in (2,15) GONE
+Cell data in (10,20) moved to (12,32)
+Cell data in (20,20) GONE
+Cell data in (18,11) GONE
+Cell data in (1,14) GONE
+Cell data in (17,9) moved to (21,14)
+Cell data in (17,11) GONE
+Cell data in (19,14) GONE
+Cell data in (16,13) moved to (18,18)
+Cell data in (1,18) GONE
+Cell data in (7,9) GONE
+Cell data in (11,5) GONE
+
+Spreadsheet #36
+Cell data in (14,1) GONE
+Cell data in (17,6) moved to (2,12)
+Cell data in (17,18) moved to (2,20)
+Cell data in (17,9) GONE
+Cell data in (5,3) GONE
+Cell data in (16,7) GONE
+Cell data in (1,4) GONE
+Cell data in (18,12) GONE
+Cell data in (19,16) GONE
+Cell data in (3,3) GONE
+Cell data in (10,5) GONE
+Cell data in (5,10) GONE
+Cell data in (12,1) GONE
+Cell data in (8,4) GONE
+Cell data in (15,19) GONE
+Cell data in (13,17) GONE
+Cell data in (20,10) GONE
+Cell data in (11,16) GONE
+Cell data in (6,19) GONE
+Cell data in (9,12) GONE
+
+Spreadsheet #37
+Cell data in (16,10) GONE
+Cell data in (7,10) GONE
+Cell data in (2,1) moved to (4,1)
+Cell data in (15,4) GONE
+Cell data in (2,6) GONE
+Cell data in (19,17) GONE
+Cell data in (18,7) GONE
+Cell data in (3,14) GONE
+Cell data in (10,9) moved to (11,8)
+Cell data in (5,4) GONE
+Cell data in (15,3) GONE
+Cell data in (13,5) GONE
+Cell data in (9,5) moved to (10,5)
+Cell data in (10,2) moved to (11,3)
+Cell data in (16,12) moved to (15,10)
+Cell data in (7,15) GONE
+Cell data in (2,13) GONE
+Cell data in (14,12) moved to (14,10)
+Cell data in (20,6) GONE
+Cell data in (11,9) moved to (12,8)
+
+Spreadsheet #38
+Cell data in (10,11) GONE
+Cell data in (11,9) GONE
+Cell data in (6,6) GONE
+Cell data in (8,18) GONE
+Cell data in (13,13) GONE
+Cell data in (17,6) GONE
+Cell data in (3,4) GONE
+Cell data in (1,17) GONE
+Cell data in (15,18) moved to (21,2)
+Cell data in (12,4) GONE
+Cell data in (11,15) GONE
+Cell data in (15,14) GONE
+Cell data in (9,12) GONE
+Cell data in (12,19) GONE
+Cell data in (5,6) GONE
+Cell data in (5,11) GONE
+Cell data in (20,3) GONE
+Cell data in (6,20) GONE
+Cell data in (18,6) GONE
+Cell data in (16,19) GONE
+
+Spreadsheet #39
+Cell data in (8,11) moved to (11,7)
+Cell data in (19,6) GONE
+Cell data in (19,5) moved to (25,2)
+Cell data in (10,3) GONE
+Cell data in (15,20) GONE
+Cell data in (5,14) GONE
+Cell data in (14,17) GONE
+Cell data in (13,15) GONE
+Cell data in (15,6) GONE
+Cell data in (10,20) GONE
+Cell data in (13,11) GONE
+Cell data in (10,12) GONE
+Cell data in (6,18) GONE
+Cell data in (9,13) GONE
+Cell data in (14,13) GONE
+Cell data in (15,15) GONE
+Cell data in (9,12) GONE
+Cell data in (7,20) GONE
+Cell data in (20,18) GONE
+Cell data in (19,18) moved to (25,14)
+
+Spreadsheet #40
+Cell data in (4,14) GONE
+Cell data in (17,6) GONE
+Cell data in (7,11) GONE
+Cell data in (6,6) GONE
+Cell data in (4,11) GONE
+Cell data in (16,20) GONE
+Cell data in (4,5) GONE
+Cell data in (12,16) GONE
+Cell data in (14,14) GONE
+Cell data in (7,13) GONE
+Cell data in (6,5) GONE
+Cell data in (4,8) GONE
+Cell data in (12,9) GONE
+Cell data in (7,19) GONE
+Cell data in (8,14) GONE
+Cell data in (16,3) GONE
+Cell data in (17,10) GONE
+Cell data in (5,17) GONE
+Cell data in (12,18) GONE
+Cell data in (11,6) GONE
+
+Spreadsheet #41
+Cell data in (7,11) GONE
+Cell data in (3,8) moved to (5,8)
+Cell data in (20,16) moved to (22,17)
+Cell data in (16,4) GONE
+Cell data in (11,5) GONE
+Cell data in (5,9) GONE
+Cell data in (11,13) GONE
+Cell data in (20,10) moved to (22,10)
+Cell data in (10,3) GONE
+Cell data in (15,2) GONE
+Cell data in (18,13) GONE
+Cell data in (5,4) GONE
+Cell data in (7,15) GONE
+Cell data in (9,4) GONE
+Cell data in (10,4) GONE
+Cell data in (14,14) moved to (18,16)
+Cell data in (10,15) GONE
+Cell data in (15,13) GONE
+Cell data in (14,1) moved to (18,1)
+Cell data in (19,15) GONE
+
+Spreadsheet #42
+Cell data in (17,10) GONE
+Cell data in (13,16) GONE
+Cell data in (7,18) GONE
+Cell data in (4,19) moved to (7,24)
+Cell data in (5,9) moved to (8,14)
+Cell data in (15,2) moved to (19,4)
+Cell data in (13,1) moved to (15,3)
+Cell data in (6,9) moved to (9,14)
+Cell data in (6,19) moved to (9,24)
+Cell data in (2,20) moved to (4,27)
+Cell data in (5,2) moved to (8,4)
+Cell data in (3,9) moved to (6,14)
+Cell data in (3,17) moved to (6,23)
+Cell data in (17,7) moved to (22,10)
+Cell data in (12,11) moved to (14,15)
+Cell data in (20,15) moved to (26,21)
+Cell data in (17,18) GONE
+Cell data in (2,12) moved to (4,16)
+Cell data in (2,5) moved to (4,6)
+Cell data in (19,7) moved to (24,10)
+
+Spreadsheet #43
+Cell data in (11,1) GONE
+Cell data in (9,1) GONE
+Cell data in (5,20) GONE
+Cell data in (19,18) GONE
+Cell data in (7,2) GONE
+Cell data in (6,1) GONE
+Cell data in (18,15) GONE
+Cell data in (3,16) moved to (8,5)
+Cell data in (4,15) GONE
+Cell data in (18,7) GONE
+Cell data in (4,13) GONE
+Cell data in (5,9) GONE
+Cell data in (6,16) moved to (15,5)
+Cell data in (15,5) GONE
+Cell data in (16,2) GONE
+Cell data in (15,7) GONE
+Cell data in (3,4) GONE
+Cell data in (3,6) GONE
+Cell data in (19,6) GONE
+Cell data in (17,8) GONE
+
+Spreadsheet #44
+Cell data in (7,10) GONE
+Cell data in (13,20) GONE
+Cell data in (6,4) GONE
+Cell data in (14,14) GONE
+Cell data in (2,10) GONE
+Cell data in (13,13) GONE
+Cell data in (20,5) GONE
+Cell data in (5,6) GONE
+Cell data in (10,19) GONE
+Cell data in (15,9) GONE
+Cell data in (1,10) GONE
+Cell data in (15,19) GONE
+Cell data in (6,13) GONE
+Cell data in (3,19) GONE
+Cell data in (8,11) GONE
+Cell data in (11,16) GONE
+Cell data in (18,11) GONE
+Cell data in (3,9) GONE
+Cell data in (20,6) GONE
+Cell data in (13,16) GONE
+
+Spreadsheet #45
+Cell data in (2,18) moved to (1,25)
+Cell data in (1,18) GONE
+Cell data in (4,12) GONE
+Cell data in (2,4) GONE
+Cell data in (17,13) GONE
+Cell data in (1,5) GONE
+Cell data in (13,20) GONE
+Cell data in (19,17) moved to (19,24)
+Cell data in (14,3) GONE
+Cell data in (6,19) GONE
+Cell data in (11,10) GONE
+Cell data in (9,10) GONE
+Cell data in (6,6) GONE
+Cell data in (7,7) moved to (4,9)
+Cell data in (5,17) GONE
+Cell data in (6,3) GONE
+Cell data in (1,12) GONE
+Cell data in (5,5) GONE
+Cell data in (5,8) GONE
+Cell data in (5,20) GONE
+
+Spreadsheet #46
+Cell data in (7,15) GONE
+Cell data in (1,20) GONE
+Cell data in (7,1) GONE
+Cell data in (16,8) GONE
+Cell data in (11,4) GONE
+Cell data in (15,1) GONE
+Cell data in (17,12) GONE
+Cell data in (10,1) GONE
+Cell data in (12,7) GONE
+Cell data in (19,15) GONE
+Cell data in (10,19) GONE
+Cell data in (4,13) GONE
+Cell data in (15,17) GONE
+Cell data in (14,1) GONE
+Cell data in (11,9) GONE
+Cell data in (19,20) GONE
+Cell data in (9,7) GONE
+Cell data in (10,4) GONE
+Cell data in (17,13) GONE
+Cell data in (7,12) GONE
+
+Spreadsheet #47
+Cell data in (1,20) moved to (3,23)
+Cell data in (5,3) GONE
+Cell data in (15,9) moved to (14,9)
+Cell data in (20,11) GONE
+Cell data in (2,5) GONE
+Cell data in (2,17) GONE
+Cell data in (11,17) GONE
+Cell data in (12,18) GONE
+Cell data in (15,2) moved to (14,2)
+Cell data in (19,11) GONE
+Cell data in (17,4) GONE
+Cell data in (8,14) GONE
+Cell data in (4,1) GONE
+Cell data in (2,18) moved to (4,21)
+Cell data in (13,9) GONE
+Cell data in (5,9) GONE
+Cell data in (4,15) GONE
+Cell data in (6,18) GONE
+Cell data in (15,6) moved to (14,6)
+Cell data in (8,2) GONE
+
+Spreadsheet #48
+Cell data in (8,7) GONE
+Cell data in (4,18) GONE
+Cell data in (10,1) GONE
+Cell data in (4,8) GONE
+Cell data in (10,7) GONE
+Cell data in (4,14) GONE
+Cell data in (12,9) GONE
+Cell data in (14,2) GONE
+Cell data in (2,9) GONE
+Cell data in (11,5) GONE
+Cell data in (9,15) GONE
+Cell data in (20,11) GONE
+Cell data in (2,12) GONE
+Cell data in (14,7) GONE
+Cell data in (4,4) GONE
+Cell data in (7,5) GONE
+Cell data in (13,2) GONE
+Cell data in (9,11) GONE
+Cell data in (2,18) GONE
+Cell data in (17,12) moved to (18,5)
+
+Spreadsheet #49
+Cell data in (14,18) GONE
+Cell data in (13,8) moved to (15,11)
+Cell data in (10,8) moved to (11,11)
+Cell data in (13,11) moved to (15,12)
+Cell data in (3,12) GONE
+Cell data in (17,1) moved to (18,3)
+Cell data in (5,13) moved to (6,15)
+Cell data in (12,12) GONE
+Cell data in (1,2) moved to (1,6)
+Cell data in (1,11) moved to (1,12)
+Cell data in (18,7) GONE
+Cell data in (2,15) GONE
+Cell data in (12,13) moved to (14,15)
+Cell data in (2,7) GONE
+Cell data in (3,14) GONE
+Cell data in (3,2) GONE
+Cell data in (18,13) GONE
+Cell data in (10,11) moved to (11,12)
+Cell data in (13,5) moved to (15,10)
+Cell data in (6,13) moved to (8,15)
+
+Spreadsheet #50
+Cell data in (20,7) GONE
+Cell data in (3,13) GONE
+Cell data in (15,13) GONE
+Cell data in (3,3) GONE
+Cell data in (13,4) GONE
+Cell data in (20,16) GONE
+Cell data in (6,6) GONE
+Cell data in (13,20) GONE
+Cell data in (2,7) GONE
+Cell data in (12,14) GONE
+Cell data in (19,2) GONE
+Cell data in (8,2) GONE
+Cell data in (19,14) GONE
+Cell data in (10,5) GONE
+Cell data in (12,10) GONE
+Cell data in (16,8) GONE
+Cell data in (11,16) GONE
+Cell data in (11,17) GONE
+Cell data in (9,6) GONE
+Cell data in (12,8) GONE
+
+Spreadsheet #51
+Cell data in (4,10) GONE
+Cell data in (2,19) GONE
+Cell data in (8,19) moved to (12,6)
+Cell data in (3,13) GONE
+Cell data in (8,11) GONE
+Cell data in (2,8) GONE
+Cell data in (18,16) GONE
+Cell data in (20,15) GONE
+Cell data in (19,19) moved to (26,6)
+Cell data in (5,10) GONE
+Cell data in (20,18) GONE
+Cell data in (7,11) GONE
+Cell data in (11,2) GONE
+Cell data in (3,4) GONE
+Cell data in (12,15) GONE
+Cell data in (18,4) GONE
+Cell data in (5,14) GONE
+Cell data in (9,11) GONE
+Cell data in (6,14) GONE
+Cell data in (12,14) GONE
+
+Spreadsheet #52
+Cell data in (7,15) GONE
+Cell data in (8,3) moved to (12,3)
+Cell data in (11,6) moved to (18,5)
+Cell data in (5,12) moved to (5,19)
+Cell data in (8,9) moved to (12,11)
+Cell data in (4,9) moved to (4,11)
+Cell data in (12,20) GONE
+Cell data in (14,11) GONE
+Cell data in (8,14) GONE
+Cell data in (15,8) moved to (21,8)
+Cell data in (16,18) GONE
+Cell data in (17,4) GONE
+Cell data in (19,20) GONE
+Cell data in (12,11) GONE
+Cell data in (6,12) GONE
+Cell data in (4,16) GONE
+Cell data in (5,3) moved to (5,3)
+Cell data in (14,15) GONE
+Cell data in (9,9) GONE
+Cell data in (3,2) GONE
+
+Spreadsheet #53
+Cell data in (18,16) GONE
+Cell data in (11,12) GONE
+Cell data in (10,3) GONE
+Cell data in (17,4) GONE
+Cell data in (16,9) GONE
+Cell data in (10,6) GONE
+Cell data in (4,9) GONE
+Cell data in (9,9) GONE
+Cell data in (19,7) moved to (24,8)
+Cell data in (5,18) moved to (6,16)
+Cell data in (19,17) moved to (24,14)
+Cell data in (4,15) GONE
+Cell data in (7,11) GONE
+Cell data in (20,17) GONE
+Cell data in (16,16) GONE
+Cell data in (10,13) GONE
+Cell data in (15,11) GONE
+Cell data in (20,7) GONE
+Cell data in (15,10) GONE
+Cell data in (10,16) GONE
+
+Spreadsheet #54
+Cell data in (5,3) GONE
+Cell data in (14,6) GONE
+Cell data in (11,6) GONE
+Cell data in (3,3) moved to (3,5)
+Cell data in (19,19) GONE
+Cell data in (20,2) GONE
+Cell data in (10,14) GONE
+Cell data in (9,2) GONE
+Cell data in (4,5) GONE
+Cell data in (19,5) GONE
+Cell data in (8,15) GONE
+Cell data in (16,20) GONE
+Cell data in (11,2) GONE
+Cell data in (6,13) GONE
+Cell data in (13,2) GONE
+Cell data in (18,2) GONE
+Cell data in (11,16) GONE
+Cell data in (3,10) moved to (3,9)
+Cell data in (12,11) GONE
+Cell data in (1,17) GONE
+
+Spreadsheet #55
+Cell data in (10,4) GONE
+Cell data in (6,11) GONE
+Cell data in (1,11) GONE
+Cell data in (13,8) GONE
+Cell data in (5,14) GONE
+Cell data in (12,4) GONE
+Cell data in (8,3) GONE
+Cell data in (14,1) GONE
+Cell data in (17,17) GONE
+Cell data in (16,6) GONE
+Cell data in (4,10) GONE
+Cell data in (5,10) GONE
+Cell data in (11,3) GONE
+Cell data in (6,14) GONE
+Cell data in (4,18) GONE
+Cell data in (4,2) GONE
+Cell data in (3,20) GONE
+Cell data in (7,15) GONE
+Cell data in (20,9) GONE
+Cell data in (17,19) GONE
+
+Spreadsheet #56
+Cell data in (16,8) GONE
+Cell data in (1,8) GONE
+Cell data in (20,1) GONE
+Cell data in (14,7) GONE
+Cell data in (15,4) GONE
+Cell data in (15,10) GONE
+Cell data in (18,14) moved to (4,9)
+Cell data in (13,12) GONE
+Cell data in (17,9) GONE
+Cell data in (5,4) GONE
+Cell data in (2,3) GONE
+Cell data in (4,14) GONE
+Cell data in (17,16) GONE
+Cell data in (2,6) GONE
+Cell data in (18,17) moved to (4,10)
+Cell data in (18,11) GONE
+Cell data in (1,18) GONE
+Cell data in (12,2) GONE
+Cell data in (3,14) GONE
+Cell data in (12,16) GONE
+
+Spreadsheet #57
+Cell data in (15,11) GONE
+Cell data in (15,13) GONE
+Cell data in (4,13) GONE
+Cell data in (16,9) moved to (12,14)
+Cell data in (6,14) moved to (8,19)
+Cell data in (19,5) GONE
+Cell data in (12,5) GONE
+Cell data in (7,9) GONE
+Cell data in (7,17) GONE
+Cell data in (2,14) GONE
+Cell data in (12,20) GONE
+Cell data in (12,2) GONE
+Cell data in (9,5) GONE
+Cell data in (5,3) GONE
+Cell data in (12,10) GONE
+Cell data in (6,2) moved to (8,3)
+Cell data in (10,2) moved to (14,20)
+Cell data in (3,14) GONE
+Cell data in (7,1) GONE
+Cell data in (1,8) GONE
+
+Spreadsheet #58
+Cell data in (16,19) GONE
+Cell data in (11,16) GONE
+Cell data in (18,3) GONE
+Cell data in (11,6) GONE
+Cell data in (17,10) GONE
+Cell data in (16,2) GONE
+Cell data in (12,2) GONE
+Cell data in (6,5) GONE
+Cell data in (16,3) GONE
+Cell data in (13,12) GONE
+Cell data in (5,9) GONE
+Cell data in (14,9) GONE
+Cell data in (7,18) GONE
+Cell data in (9,2) GONE
+Cell data in (8,17) GONE
+Cell data in (5,15) GONE
+Cell data in (12,5) GONE
+Cell data in (12,14) GONE
+Cell data in (7,3) GONE
+Cell data in (18,13) GONE
+
+Spreadsheet #59
+Cell data in (11,2) GONE
+Cell data in (8,16) GONE
+Cell data in (1,13) GONE
+Cell data in (17,5) GONE
+Cell data in (19,6) moved to (16,5)
+Cell data in (16,20) GONE
+Cell data in (15,11) GONE
+Cell data in (9,12) GONE
+Cell data in (2,12) GONE
+Cell data in (11,13) GONE
+Cell data in (2,10) GONE
+Cell data in (6,13) GONE
+Cell data in (6,6) GONE
+Cell data in (19,2) GONE
+Cell data in (9,4) GONE
+Cell data in (8,9) GONE
+Cell data in (1,10) GONE
+Cell data in (20,6) GONE
+Cell data in (11,11) GONE
+Cell data in (15,17) GONE
+
+Spreadsheet #60
+Cell data in (2,10) GONE
+Cell data in (18,1) GONE
+Cell data in (15,13) GONE
+Cell data in (7,7) GONE
+Cell data in (5,16) GONE
+Cell data in (10,1) GONE
+Cell data in (7,13) GONE
+Cell data in (13,1) GONE
+Cell data in (3,12) GONE
+Cell data in (12,11) GONE
+Cell data in (2,20) GONE
+Cell data in (19,12) GONE
+Cell data in (3,7) GONE
+Cell data in (6,2) GONE
+Cell data in (10,18) GONE
+Cell data in (1,1) GONE
+Cell data in (1,6) GONE
+Cell data in (1,5) GONE
+Cell data in (11,3) GONE
+Cell data in (16,20) GONE
+
+Spreadsheet #61
+Cell data in (3,18) GONE
+Cell data in (8,4) GONE
+Cell data in (7,6) GONE
+Cell data in (20,20) GONE
+Cell data in (20,18) GONE
+Cell data in (5,9) GONE
+Cell data in (8,1) GONE
+Cell data in (9,20) GONE
+Cell data in (6,8) GONE
+Cell data in (1,10) GONE
+Cell data in (18,13) GONE
+Cell data in (9,3) GONE
+Cell data in (14,7) GONE
+Cell data in (16,15) GONE
+Cell data in (16,1) GONE
+Cell data in (7,13) GONE
+Cell data in (2,10) GONE
+Cell data in (10,4) GONE
+Cell data in (6,1) GONE
+Cell data in (14,15) GONE
+
+Spreadsheet #62
+Cell data in (8,6) GONE
+Cell data in (19,12) GONE
+Cell data in (7,12) GONE
+Cell data in (6,9) GONE
+Cell data in (8,20) GONE
+Cell data in (18,18) GONE
+Cell data in (13,7) GONE
+Cell data in (1,3) GONE
+Cell data in (8,8) GONE
+Cell data in (20,15) GONE
+Cell data in (20,14) GONE
+Cell data in (19,5) GONE
+Cell data in (8,2) GONE
+Cell data in (9,2) GONE
+Cell data in (11,13) GONE
+Cell data in (4,14) GONE
+Cell data in (9,7) GONE
+Cell data in (20,4) GONE
+Cell data in (13,4) GONE
+Cell data in (12,6) GONE
+
+Spreadsheet #63
+Cell data in (16,18) GONE
+Cell data in (16,10) GONE
+Cell data in (15,14) GONE
+Cell data in (17,5) GONE
+Cell data in (17,7) GONE
+Cell data in (3,11) GONE
+Cell data in (3,20) GONE
+Cell data in (12,16) GONE
+Cell data in (17,15) GONE
+Cell data in (2,1) GONE
+Cell data in (16,9) GONE
+Cell data in (8,16) GONE
+Cell data in (8,10) GONE
+Cell data in (10,5) GONE
+Cell data in (9,6) GONE
+Cell data in (1,15) GONE
+Cell data in (19,10) GONE
+Cell data in (17,2) GONE
+Cell data in (3,19) GONE
+Cell data in (20,20) GONE
+
+Spreadsheet #64
+Cell data in (17,6) GONE
+Cell data in (5,9) GONE
+Cell data in (8,10) GONE
+Cell data in (15,15) GONE
+Cell data in (8,12) GONE
+Cell data in (14,16) GONE
+Cell data in (4,17) GONE
+Cell data in (15,9) GONE
+Cell data in (8,1) GONE
+Cell data in (20,12) moved to (21,21)
+Cell data in (11,16) GONE
+Cell data in (4,8) GONE
+Cell data in (16,12) GONE
+Cell data in (3,13) GONE
+Cell data in (1,4) GONE
+Cell data in (6,5) GONE
+Cell data in (14,15) GONE
+Cell data in (14,2) GONE
+Cell data in (5,14) GONE
+Cell data in (3,17) GONE
+
+Spreadsheet #65
+Cell data in (17,7) moved to (14,9)
+Cell data in (16,11) GONE
+Cell data in (11,11) GONE
+Cell data in (13,15) moved to (10,19)
+Cell data in (20,18) GONE
+Cell data in (3,8) GONE
+Cell data in (15,13) GONE
+Cell data in (8,5) GONE
+Cell data in (12,8) GONE
+Cell data in (3,6) GONE
+Cell data in (9,6) moved to (3,8)
+Cell data in (17,17) GONE
+Cell data in (10,10) GONE
+Cell data in (19,11) GONE
+Cell data in (15,2) GONE
+Cell data in (20,2) moved to (22,2)
+Cell data in (1,12) GONE
+Cell data in (5,3) GONE
+Cell data in (8,3) GONE
+Cell data in (2,11) GONE
+
+Spreadsheet #66
+Cell data in (10,8) GONE
+Cell data in (1,9) GONE
+Cell data in (11,3) GONE
+Cell data in (8,13) GONE
+Cell data in (3,10) GONE
+Cell data in (19,16) GONE
+Cell data in (18,6) GONE
+Cell data in (13,9) GONE
+Cell data in (1,14) GONE
+Cell data in (8,2) moved to (4,2)
+Cell data in (8,20) moved to (3,1)
+Cell data in (1,1) moved to (2,1)
+Cell data in (13,17) GONE
+Cell data in (2,1) GONE
+Cell data in (19,10) GONE
+Cell data in (14,19) GONE
+Cell data in (20,14) GONE
+Cell data in (9,3) GONE
+Cell data in (5,11) GONE
+Cell data in (14,17) GONE
+
+Spreadsheet #67
+Cell data in (16,20) moved to (21,27)
+Cell data in (6,1) GONE
+Cell data in (20,5) GONE
+Cell data in (6,16) GONE
+Cell data in (10,19) moved to (15,25)
+Cell data in (2,6) GONE
+Cell data in (1,9) GONE
+Cell data in (1,2) GONE
+Cell data in (8,4) GONE
+Cell data in (20,18) GONE
+Cell data in (9,10) GONE
+Cell data in (6,9) GONE
+Cell data in (9,19) GONE
+Cell data in (3,18) moved to (8,23)
+Cell data in (7,18) GONE
+Cell data in (10,10) GONE
+Cell data in (9,3) GONE
+Cell data in (13,13) GONE
+Cell data in (18,20) GONE
+Cell data in (4,4) GONE
+
+Spreadsheet #68
+Cell data in (5,11) GONE
+Cell data in (20,4) GONE
+Cell data in (4,11) GONE
+Cell data in (18,16) GONE
+Cell data in (3,16) GONE
+Cell data in (10,9) GONE
+Cell data in (6,20) moved to (11,10)
+Cell data in (11,4) moved to (19,3)
+Cell data in (7,9) GONE
+Cell data in (3,2) GONE
+Cell data in (1,7) GONE
+Cell data in (20,13) GONE
+Cell data in (18,11) GONE
+Cell data in (9,15) GONE
+Cell data in (13,12) GONE
+Cell data in (13,2) GONE
+Cell data in (19,3) GONE
+Cell data in (9,6) GONE
+Cell data in (7,1) GONE
+Cell data in (19,14) GONE
+
+Spreadsheet #69
+Cell data in (9,7) GONE
+Cell data in (16,9) GONE
+Cell data in (2,15) moved to (4,23)
+Cell data in (19,15) GONE
+Cell data in (14,20) GONE
+Cell data in (7,15) moved to (6,23)
+Cell data in (10,18) GONE
+Cell data in (14,9) GONE
+Cell data in (7,16) moved to (6,24)
+Cell data in (11,8) GONE
+Cell data in (8,5) GONE
+Cell data in (17,6) GONE
+Cell data in (8,14) GONE
+Cell data in (15,19) GONE
+Cell data in (5,8) GONE
+Cell data in (8,17) GONE
+Cell data in (12,1) GONE
+Cell data in (12,16) moved to (10,24)
+Cell data in (8,10) moved to (8,14)
+Cell data in (14,8) GONE
+
+Spreadsheet #70
+Cell data in (7,12) GONE
+Cell data in (8,12) GONE
+Cell data in (18,4) GONE
+Cell data in (7,19) GONE
+Cell data in (6,19) GONE
+Cell data in (6,2) GONE
+Cell data in (18,8) GONE
+Cell data in (5,12) GONE
+Cell data in (16,8) GONE
+Cell data in (5,15) GONE
+Cell data in (4,2) GONE
+Cell data in (13,3) GONE
+Cell data in (5,8) GONE
+Cell data in (20,12) GONE
+Cell data in (3,16) moved to (5,11)
+Cell data in (17,3) GONE
+Cell data in (17,13) GONE
+Cell data in (11,16) moved to (8,11)
+Cell data in (7,11) GONE
+Cell data in (13,10) moved to (11,6)
+
+Spreadsheet #71
+Cell data in (5,3) moved to (13,1)
+Cell data in (18,17) GONE
+Cell data in (4,14) moved to (9,10)
+Cell data in (4,6) GONE
+Cell data in (7,5) GONE
+Cell data in (17,8) GONE
+Cell data in (3,3) GONE
+Cell data in (18,4) GONE
+Cell data in (9,5) GONE
+Cell data in (1,17) GONE
+Cell data in (3,11) GONE
+Cell data in (2,18) moved to (2,13)
+Cell data in (10,4) GONE
+Cell data in (6,12) GONE
+Cell data in (18,7) GONE
+Cell data in (14,12) GONE
+Cell data in (18,18) GONE
+Cell data in (11,17) GONE
+Cell data in (18,3) GONE
+Cell data in (11,1) GONE
+
+Spreadsheet #72
+Cell data in (15,7) moved to (8,15)
+Cell data in (2,19) GONE
+Cell data in (19,8) moved to (13,18)
+Cell data in (12,5) GONE
+Cell data in (16,19) GONE
+Cell data in (17,1) GONE
+Cell data in (12,11) GONE
+Cell data in (13,3) GONE
+Cell data in (5,10) moved to (4,22)
+Cell data in (6,12) GONE
+Cell data in (1,20) GONE
+Cell data in (17,16) GONE
+Cell data in (18,4) GONE
+Cell data in (12,20) GONE
+Cell data in (7,6) GONE
+Cell data in (4,8) GONE
+Cell data in (13,12) GONE
+Cell data in (9,19) GONE
+Cell data in (18,18) GONE
+Cell data in (14,12) GONE
+
+Spreadsheet #73
+Cell data in (8,18) GONE
+Cell data in (17,17) GONE
+Cell data in (9,14) GONE
+Cell data in (19,15) GONE
+Cell data in (14,13) GONE
+Cell data in (15,8) GONE
+Cell data in (9,9) GONE
+Cell data in (9,13) GONE
+Cell data in (16,6) GONE
+Cell data in (7,4) GONE
+Cell data in (9,11) GONE
+Cell data in (5,5) GONE
+Cell data in (4,15) GONE
+Cell data in (20,11) GONE
+Cell data in (8,15) GONE
+Cell data in (7,17) GONE
+Cell data in (3,17) GONE
+Cell data in (8,19) GONE
+Cell data in (19,18) GONE
+Cell data in (6,19) GONE
+
+Spreadsheet #74
+Cell data in (6,5) GONE
+Cell data in (5,4) GONE
+Cell data in (20,15) GONE
+Cell data in (12,9) GONE
+Cell data in (9,18) GONE
+Cell data in (14,6) GONE
+Cell data in (11,15) GONE
+Cell data in (2,17) GONE
+Cell data in (20,9) GONE
+Cell data in (13,3) GONE
+Cell data in (8,15) GONE
+Cell data in (12,6) GONE
+Cell data in (3,12) GONE
+Cell data in (8,18) GONE
+Cell data in (17,4) GONE
+Cell data in (17,8) GONE
+Cell data in (1,3) GONE
+Cell data in (5,5) GONE
+Cell data in (17,6) GONE
+Cell data in (12,20) GONE
+
+Spreadsheet #75
+Cell data in (20,6) GONE
+Cell data in (2,4) GONE
+Cell data in (6,4) GONE
+Cell data in (8,3) GONE
+Cell data in (14,9) GONE
+Cell data in (10,15) GONE
+Cell data in (19,15) GONE
+Cell data in (5,12) GONE
+Cell data in (11,4) GONE
+Cell data in (8,8) GONE
+Cell data in (13,4) GONE
+Cell data in (3,9) GONE
+Cell data in (11,20) GONE
+Cell data in (1,2) GONE
+Cell data in (15,11) GONE
+Cell data in (9,12) GONE
+Cell data in (16,19) GONE
+Cell data in (13,3) GONE
+Cell data in (5,11) GONE
+Cell data in (11,14) GONE
+
+Spreadsheet #76
+Cell data in (15,14) GONE
+Cell data in (17,11) moved to (21,14)
+Cell data in (3,20) moved to (5,32)
+Cell data in (13,17) GONE
+Cell data in (5,7) moved to (6,6)
+Cell data in (13,18) moved to (14,23)
+Cell data in (20,20) GONE
+Cell data in (14,8) GONE
+Cell data in (6,17) GONE
+Cell data in (16,18) moved to (20,23)
+Cell data in (7,9) GONE
+Cell data in (18,16) moved to (22,21)
+Cell data in (14,20) GONE
+Cell data in (1,5) GONE
+Cell data in (8,19) moved to (10,24)
+Cell data in (17,1) GONE
+Cell data in (8,3) GONE
+Cell data in (14,4) GONE
+Cell data in (20,9) GONE
+Cell data in (13,5) GONE
+
+Spreadsheet #77
+Cell data in (12,2) GONE
+Cell data in (18,9) GONE
+Cell data in (4,10) GONE
+Cell data in (10,12) GONE
+Cell data in (5,15) GONE
+Cell data in (8,17) GONE
+Cell data in (17,20) GONE
+Cell data in (13,13) GONE
+Cell data in (12,14) GONE
+Cell data in (14,7) GONE
+Cell data in (20,3) GONE
+Cell data in (11,13) moved to (15,15)
+Cell data in (18,3) GONE
+Cell data in (8,4) GONE
+Cell data in (16,13) GONE
+Cell data in (3,5) moved to (5,9)
+Cell data in (2,10) GONE
+Cell data in (13,1) GONE
+Cell data in (5,13) moved to (7,15)
+Cell data in (15,19) GONE
+
+Spreadsheet #78
+Cell data in (11,16) GONE
+Cell data in (7,8) GONE
+Cell data in (10,11) GONE
+Cell data in (16,10) GONE
+Cell data in (17,4) GONE
+Cell data in (12,14) GONE
+Cell data in (7,9) GONE
+Cell data in (15,6) GONE
+Cell data in (19,3) GONE
+Cell data in (17,9) GONE
+Cell data in (12,2) GONE
+Cell data in (20,3) GONE
+Cell data in (16,8) GONE
+Cell data in (1,20) GONE
+Cell data in (16,17) GONE
+Cell data in (17,14) GONE
+Cell data in (7,5) GONE
+Cell data in (5,2) GONE
+Cell data in (12,7) GONE
+Cell data in (14,4) GONE
+
+Spreadsheet #79
+Cell data in (8,20) moved to (11,17)
+Cell data in (4,6) GONE
+Cell data in (17,2) GONE
+Cell data in (9,14) GONE
+Cell data in (11,4) GONE
+Cell data in (11,14) GONE
+Cell data in (3,14) GONE
+Cell data in (10,8) GONE
+Cell data in (14,13) moved to (18,12)
+Cell data in (18,6) GONE
+Cell data in (6,10) GONE
+Cell data in (12,1) GONE
+Cell data in (3,7) moved to (6,6)
+Cell data in (5,15) GONE
+Cell data in (10,20) moved to (13,17)
+Cell data in (5,16) GONE
+Cell data in (3,9) moved to (6,8)
+Cell data in (2,14) GONE
+Cell data in (13,13) moved to (17,12)
+Cell data in (14,19) GONE
+
+Spreadsheet #80
+Cell data in (6,16) GONE
+Cell data in (2,1) moved to (5,7)
+Cell data in (7,18) GONE
+Cell data in (18,20) moved to (2,7)
+Cell data in (18,2) GONE
+Cell data in (14,5) GONE
+Cell data in (9,20) moved to (11,33)
+Cell data in (18,19) GONE
+Cell data in (13,5) GONE
+Cell data in (7,1) moved to (9,7)
+Cell data in (9,12) moved to (11,24)
+Cell data in (13,12) GONE
+Cell data in (8,12) GONE
+Cell data in (11,3) moved to (17,8)
+Cell data in (8,2) GONE
+Cell data in (1,8) moved to (4,15)
+Cell data in (3,13) GONE
+Cell data in (11,13) GONE
+Cell data in (9,8) moved to (11,15)
+Cell data in (16,1) GONE
+
+Spreadsheet #81
+Cell data in (9,16) moved to (9,16)
+Cell data in (9,5) GONE
+Cell data in (8,7) GONE
+Cell data in (3,4) GONE
+Cell data in (7,9) GONE
+Cell data in (6,2) GONE
+Cell data in (16,14) GONE
+Cell data in (9,4) GONE
+Cell data in (10,3) moved to (10,4)
+Cell data in (16,5) GONE
+Cell data in (3,5) GONE
+Cell data in (1,16) moved to (1,16)
+Cell data in (7,16) GONE
+Cell data in (14,7) GONE
+Cell data in (3,9) GONE
+Cell data in (16,6) moved to (15,7)
+Cell data in (15,10) GONE
+Cell data in (14,19) GONE
+Cell data in (6,11) GONE
+Cell data in (6,8) GONE
+
+Spreadsheet #82
+Cell data in (15,11) GONE
+Cell data in (8,18) GONE
+Cell data in (18,7) GONE
+Cell data in (16,6) GONE
+Cell data in (4,19) GONE
+Cell data in (15,15) GONE
+Cell data in (17,18) GONE
+Cell data in (20,18) GONE
+Cell data in (17,14) GONE
+Cell data in (2,18) GONE
+Cell data in (10,17) GONE
+Cell data in (1,16) GONE
+Cell data in (15,10) GONE
+Cell data in (13,19) GONE
+Cell data in (13,3) GONE
+Cell data in (16,9) GONE
+Cell data in (13,6) GONE
+Cell data in (4,1) GONE
+Cell data in (19,17) GONE
+Cell data in (6,12) GONE
+
+Spreadsheet #83
+Cell data in (4,19) GONE
+Cell data in (2,14) moved to (1,15)
+Cell data in (13,19) GONE
+Cell data in (5,19) GONE
+Cell data in (12,1) GONE
+Cell data in (8,19) GONE
+Cell data in (8,12) GONE
+Cell data in (9,3) GONE
+Cell data in (6,16) GONE
+Cell data in (10,14) moved to (14,15)
+Cell data in (15,5) GONE
+Cell data in (19,19) GONE
+Cell data in (6,15) GONE
+Cell data in (5,3) GONE
+Cell data in (12,15) GONE
+Cell data in (12,6) GONE
+Cell data in (19,2) GONE
+Cell data in (12,16) GONE
+Cell data in (6,11) moved to (12,12)
+Cell data in (11,11) GONE
+
+Spreadsheet #84
+Cell data in (19,4) GONE
+Cell data in (7,5) GONE
+Cell data in (16,16) GONE
+Cell data in (14,8) GONE
+Cell data in (8,4) GONE
+Cell data in (15,15) GONE
+Cell data in (2,16) GONE
+Cell data in (20,20) GONE
+Cell data in (6,15) GONE
+Cell data in (16,18) GONE
+Cell data in (3,3) GONE
+Cell data in (3,5) GONE
+Cell data in (9,13) GONE
+Cell data in (7,18) GONE
+Cell data in (19,12) GONE
+Cell data in (20,6) GONE
+Cell data in (14,4) GONE
+Cell data in (9,20) GONE
+Cell data in (2,17) GONE
+Cell data in (8,9) GONE
+
+Spreadsheet #85
+Cell data in (14,20) GONE
+Cell data in (1,13) GONE
+Cell data in (4,16) GONE
+Cell data in (14,8) GONE
+Cell data in (5,17) moved to (5,23)
+Cell data in (5,3) GONE
+Cell data in (11,7) moved to (10,9)
+Cell data in (15,5) GONE
+Cell data in (14,19) GONE
+Cell data in (18,16) moved to (20,22)
+Cell data in (1,9) GONE
+Cell data in (1,8) GONE
+Cell data in (19,1) GONE
+Cell data in (4,6) GONE
+Cell data in (17,6) moved to (17,6)
+Cell data in (14,4) GONE
+Cell data in (13,5) moved to (12,5)
+Cell data in (8,10) GONE
+Cell data in (1,10) GONE
+Cell data in (19,14) GONE
+
+Spreadsheet #86
+Cell data in (14,12) GONE
+Cell data in (18,18) GONE
+Cell data in (15,2) GONE
+Cell data in (4,9) GONE
+Cell data in (8,14) GONE
+Cell data in (12,8) GONE
+Cell data in (8,19) GONE
+Cell data in (12,9) GONE
+Cell data in (15,9) GONE
+Cell data in (14,7) GONE
+Cell data in (1,10) GONE
+Cell data in (5,6) GONE
+Cell data in (12,7) GONE
+Cell data in (17,13) GONE
+Cell data in (3,16) GONE
+Cell data in (5,19) GONE
+Cell data in (17,18) GONE
+Cell data in (19,4) GONE
+Cell data in (12,20) GONE
+Cell data in (20,8) GONE
+
+Spreadsheet #87
+Cell data in (3,18) GONE
+Cell data in (3,7) GONE
+Cell data in (4,11) GONE
+Cell data in (1,11) GONE
+Cell data in (12,5) GONE
+Cell data in (7,12) GONE
+Cell data in (14,7) GONE
+Cell data in (5,10) GONE
+Cell data in (2,13) GONE
+Cell data in (16,9) GONE
+Cell data in (14,9) GONE
+Cell data in (12,16) GONE
+Cell data in (10,6) GONE
+Cell data in (8,6) GONE
+Cell data in (19,17) GONE
+Cell data in (15,12) GONE
+Cell data in (7,15) GONE
+Cell data in (12,15) GONE
+Cell data in (15,1) GONE
+Cell data in (17,2) GONE
+
+Spreadsheet #88
+Cell data in (7,11) GONE
+Cell data in (6,3) GONE
+Cell data in (4,20) GONE
+Cell data in (8,6) GONE
+Cell data in (20,16) GONE
+Cell data in (1,8) GONE
+Cell data in (13,17) GONE
+Cell data in (6,18) GONE
+Cell data in (11,11) GONE
+Cell data in (11,7) GONE
+Cell data in (7,17) GONE
+Cell data in (4,16) GONE
+Cell data in (12,15) GONE
+Cell data in (7,5) GONE
+Cell data in (2,17) GONE
+Cell data in (7,13) GONE
+Cell data in (17,13) GONE
+Cell data in (11,5) GONE
+Cell data in (18,18) GONE
+Cell data in (9,19) GONE
+
+Spreadsheet #89
+Cell data in (15,14) GONE
+Cell data in (5,1) GONE
+Cell data in (15,2) GONE
+Cell data in (8,19) GONE
+Cell data in (4,13) GONE
+Cell data in (14,7) GONE
+Cell data in (7,2) GONE
+Cell data in (10,14) GONE
+Cell data in (17,7) GONE
+Cell data in (18,14) GONE
+Cell data in (15,12) GONE
+Cell data in (16,14) GONE
+Cell data in (9,12) GONE
+Cell data in (15,6) GONE
+Cell data in (16,17) GONE
+Cell data in (3,15) GONE
+Cell data in (4,18) GONE
+Cell data in (3,13) GONE
+Cell data in (5,4) GONE
+Cell data in (18,16) GONE
+
+Spreadsheet #90
+Cell data in (8,7) GONE
+Cell data in (8,8) GONE
+Cell data in (7,3) GONE
+Cell data in (5,10) GONE
+Cell data in (19,6) GONE
+Cell data in (10,12) GONE
+Cell data in (18,1) GONE
+Cell data in (3,18) GONE
+Cell data in (13,8) GONE
+Cell data in (20,10) GONE
+Cell data in (20,20) GONE
+Cell data in (16,5) GONE
+Cell data in (16,7) GONE
+Cell data in (2,17) GONE
+Cell data in (12,1) GONE
+Cell data in (3,19) GONE
+Cell data in (1,6) GONE
+Cell data in (11,3) GONE
+Cell data in (7,8) GONE
+Cell data in (11,9) GONE
+
+Spreadsheet #91
+Cell data in (15,4) GONE
+Cell data in (18,13) GONE
+Cell data in (14,5) GONE
+Cell data in (19,20) GONE
+Cell data in (9,5) GONE
+Cell data in (16,3) GONE
+Cell data in (19,17) GONE
+Cell data in (8,3) GONE
+Cell data in (10,4) GONE
+Cell data in (14,15) moved to (14,13)
+Cell data in (20,3) GONE
+Cell data in (15,6) GONE
+Cell data in (18,19) GONE
+Cell data in (5,16) GONE
+Cell data in (8,4) GONE
+Cell data in (4,10) GONE
+Cell data in (3,15) GONE
+Cell data in (8,1) moved to (10,1)
+Cell data in (1,17) GONE
+Cell data in (5,10) GONE
+
+Spreadsheet #92
+Cell data in (12,8) GONE
+Cell data in (13,8) GONE
+Cell data in (15,2) GONE
+Cell data in (18,12) GONE
+Cell data in (1,20) GONE
+Cell data in (12,3) GONE
+Cell data in (14,11) GONE
+Cell data in (7,17) GONE
+Cell data in (14,2) GONE
+Cell data in (7,1) GONE
+Cell data in (5,3) GONE
+Cell data in (4,4) GONE
+Cell data in (19,7) GONE
+Cell data in (16,12) GONE
+Cell data in (7,13) GONE
+Cell data in (6,5) GONE
+Cell data in (10,11) GONE
+Cell data in (7,11) GONE
+Cell data in (18,5) GONE
+Cell data in (8,13) GONE
+
+Spreadsheet #93
+Cell data in (18,6) GONE
+Cell data in (14,4) moved to (24,4)
+Cell data in (17,19) moved to (28,25)
+Cell data in (3,8) GONE
+Cell data in (10,11) GONE
+Cell data in (8,6) GONE
+Cell data in (18,20) GONE
+Cell data in (16,5) moved to (26,5)
+Cell data in (14,7) moved to (24,7)
+Cell data in (1,7) GONE
+Cell data in (10,14) GONE
+Cell data in (20,5) moved to (29,5)
+Cell data in (1,18) GONE
+Cell data in (5,10) moved to (5,13)
+Cell data in (13,5) GONE
+Cell data in (13,13) GONE
+Cell data in (4,16) GONE
+Cell data in (8,4) moved to (16,4)
+Cell data in (15,1) GONE
+Cell data in (5,15) GONE
+
+Spreadsheet #94
+Cell data in (4,11) GONE
+Cell data in (5,11) GONE
+Cell data in (14,7) moved to (19,7)
+Cell data in (8,12) GONE
+Cell data in (7,6) GONE
+Cell data in (7,16) GONE
+Cell data in (2,5) moved to (5,6)
+Cell data in (10,10) GONE
+Cell data in (2,13) GONE
+Cell data in (12,16) GONE
+Cell data in (13,7) GONE
+Cell data in (10,1) GONE
+Cell data in (18,9) GONE
+Cell data in (17,3) GONE
+Cell data in (6,2) GONE
+Cell data in (5,14) GONE
+Cell data in (3,11) GONE
+Cell data in (11,7) moved to (16,7)
+Cell data in (6,6) GONE
+Cell data in (13,13) GONE
+
+Spreadsheet #95
+Cell data in (1,15) GONE
+Cell data in (15,1) GONE
+Cell data in (7,16) moved to (12,4)
+Cell data in (14,3) GONE
+Cell data in (13,17) GONE
+Cell data in (18,17) GONE
+Cell data in (16,8) GONE
+Cell data in (5,18) GONE
+Cell data in (17,6) GONE
+Cell data in (16,14) GONE
+Cell data in (20,10) GONE
+Cell data in (9,6) GONE
+Cell data in (10,2) GONE
+Cell data in (17,18) GONE
+Cell data in (3,13) GONE
+Cell data in (6,16) GONE
+Cell data in (7,9) GONE
+Cell data in (19,5) GONE
+Cell data in (8,5) GONE
+Cell data in (1,17) GONE
+
+Spreadsheet #96
+Cell data in (8,3) GONE
+Cell data in (5,10) GONE
+Cell data in (11,8) GONE
+Cell data in (3,3) GONE
+Cell data in (11,2) GONE
+Cell data in (7,11) GONE
+Cell data in (10,15) GONE
+Cell data in (18,9) GONE
+Cell data in (6,6) GONE
+Cell data in (19,1) GONE
+Cell data in (5,11) GONE
+Cell data in (9,5) GONE
+Cell data in (18,6) GONE
+Cell data in (16,10) GONE
+Cell data in (7,15) GONE
+Cell data in (5,2) GONE
+Cell data in (4,3) GONE
+Cell data in (20,3) GONE
+Cell data in (10,8) GONE
+Cell data in (15,17) GONE
+
+Spreadsheet #97
+Cell data in (19,6) GONE
+Cell data in (20,13) GONE
+Cell data in (18,14) GONE
+Cell data in (14,2) GONE
+Cell data in (10,9) GONE
+Cell data in (6,19) GONE
+Cell data in (11,16) GONE
+Cell data in (10,11) GONE
+Cell data in (9,14) GONE
+Cell data in (10,15) GONE
+Cell data in (8,6) moved to (9,11)
+Cell data in (12,9) GONE
+Cell data in (7,3) moved to (6,6)
+Cell data in (14,1) GONE
+Cell data in (16,8) GONE
+Cell data in (1,3) GONE
+Cell data in (2,1) GONE
+Cell data in (7,14) moved to (6,13)
+Cell data in (1,2) GONE
+Cell data in (3,19) GONE
+
+Spreadsheet #98
+Cell data in (14,7) GONE
+Cell data in (6,6) GONE
+Cell data in (19,7) GONE
+Cell data in (16,3) GONE
+Cell data in (4,15) GONE
+Cell data in (4,17) GONE
+Cell data in (18,10) GONE
+Cell data in (19,16) GONE
+Cell data in (17,12) GONE
+Cell data in (17,7) GONE
+Cell data in (8,8) moved to (9,3)
+Cell data in (7,19) GONE
+Cell data in (13,3) GONE
+Cell data in (5,4) GONE
+Cell data in (7,12) GONE
+Cell data in (2,11) GONE
+Cell data in (8,19) GONE
+Cell data in (13,9) GONE
+Cell data in (6,18) GONE
+Cell data in (3,14) GONE
+
+Spreadsheet #99
+Cell data in (7,3) GONE
+Cell data in (11,8) GONE
+Cell data in (12,20) GONE
+Cell data in (9,17) GONE
+Cell data in (14,3) GONE
+Cell data in (12,16) GONE
+Cell data in (10,19) GONE
+Cell data in (14,6) GONE
+Cell data in (7,18) GONE
+Cell data in (11,17) GONE
+Cell data in (14,18) GONE
+Cell data in (1,7) GONE
+Cell data in (3,4) GONE
+Cell data in (1,3) GONE
+Cell data in (6,8) GONE
+Cell data in (5,7) GONE
+Cell data in (14,7) GONE
+Cell data in (9,10) GONE
+Cell data in (14,13) GONE
+Cell data in (5,17) GONE
+
+Spreadsheet #100
+Cell data in (1,3) GONE
+Cell data in (5,6) GONE
+Cell data in (8,16) GONE
+Cell data in (8,8) GONE
+Cell data in (9,1) GONE
+Cell data in (3,3) GONE
+Cell data in (13,18) GONE
+Cell data in (20,18) GONE
+Cell data in (5,17) GONE
+Cell data in (6,20) GONE
+Cell data in (20,4) GONE
+Cell data in (10,20) GONE
+Cell data in (2,9) GONE
+Cell data in (1,10) GONE
+Cell data in (13,10) GONE
+Cell data in (2,5) GONE
+Cell data in (11,6) GONE
+Cell data in (4,19) GONE
+Cell data in (13,20) GONE
+Cell data in (2,13) GONE
