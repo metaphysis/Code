@@ -61,31 +61,25 @@ void fill_rect(vector < vector < char > > &matrix, int x1, int y1,
 			matrix[i][j] = c;
 }
 	
-// 填充包含点（x，y）的区域为颜色 new_color。
-void fill_region(vector < vector < char > > &matrix, int x, int y, 
-	char old_color, char new_color)
+// 填充包含点（x，y）的区域为颜色newColor。
+void fillRegion(vector<vector<char>> &matrix, int x, int y, char oldColor, char newColor)
 {
 	// 当新旧颜色相同时需要结束递归，否则会形成无限循环。
-	if (old_color == new_color)
-		return;
+	if (oldColor == newColor) return;
 	
-	matrix[y][x] = new_color;
+	matrix[y][x] = newColor;
 	
-	if (x > 0)
-		if (matrix[y][x - 1] == old_color)
-			fill_region(matrix, x - 1, y, old_color, new_color);
+	if (x > 0 && matrix[y][x - 1] == oldColor)
+		fillRegion(matrix, x - 1, y, oldColor, newColor);
 	
-	if (x < matrix[y].size() - 1)
-		if (matrix[y][x + 1] == old_color)
-			fill_region(matrix, x + 1, y, old_color, new_color);
+	if (x < matrix[y].size() - 1 && matrix[y][x + 1] == oldColor)
+		fillRegion(matrix, x + 1, y, oldColor, newColor);
 	
-	if (y > 0)
-		if (matrix[y - 1][x] == old_color)
-			fill_region(matrix, x, y - 1, old_color, new_color);
+	if (y > 0 && matrix[y - 1][x] == oldColor)
+		fillRegion(matrix, x, y - 1, oldColor, newColor);
 	
-	if (y < matrix.size() - 1)
-		if (matrix[y + 1][x] == old_color)
-			fill_region(matrix, x, y + 1, old_color, new_color);
+	if (y < matrix.size() - 1 && matrix[y + 1][x] == oldColor)
+	    fillRegion(matrix, x, y + 1, oldColor, newColor);
 }
 	
 int main(int argc, char *argv[])

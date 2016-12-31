@@ -22,8 +22,7 @@ bool checkP (int x, int y, int kingX, int kingY)
 // 检查坐标为（kingX，kingY）的王是否在坐标为（x，y）的马攻击范围内。
 bool checkN (int x, int y, int kingX, int kingY)
 {
-	return (abs(x - kingX) == 2 && abs(y - kingY) == 1) ||
-			(abs(x - kingX) == 1 && abs(y - kingY) == 2);
+	return (abs(x - kingX) == 2 && abs(y - kingY) == 1) || (abs(x - kingX) == 1 && abs(y - kingY) == 2);
 }
 	
 // 检查坐标为（kingX，kingY）的王是否在坐标为（x，y）的象攻击范围内。

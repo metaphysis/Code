@@ -1,56 +1,42 @@
+// How Many Pieces of Land?
+// UVa ID: 10213
+// Verdict: Accepted
+// Submission Date: 2016-12-24
+// UVa Run Time: 0.220s
+//
+// 版权所有（C）2016，邱秋。metaphysis # yeah dot net
+
 import java.io.*;
 import java.math.BigInteger;
 
 public class Main
 {
-	public static void main(String[] args) throws IOException
-	{
-	    //initialize();
-	    
-	    BufferedReader stdin = new BufferedReader(new InputStreamReader(System.in));
-        String line;
-        
-        line = stdin.readLine();
-        
-        int cases = Integer.parseInt(line);
-        
-	    while (cases > 0)
-	    {
-	        line = stdin.readLine();
-		    System.out.println(getPieces(line));
-		    cases--;
-	    }
-	}
-
-	public static BigInteger getPieces(String line)
-	{
-	    BigInteger numberOfLine = new BigInteger(line);
-	    
-	    BigInteger pieces = numberOfLine.pow(4);
-	    pieces = pieces.subtract(new BigInteger("6").multiply(numberOfLine.pow(3)));
-	    pieces = pieces.add(new BigInteger("23").multiply(numberOfLine.pow(2)));
-	    pieces = pieces.subtract(new BigInteger("18").multiply(numberOfLine));
-	    pieces = pieces.add(new BigInteger("24"));
-	    pieces = pieces.divide(new BigInteger("24"));
-	    
-	    return pieces;  
-	}
-	
-    public static void initialize()
+    public static void main(String[]args) throws IOException
     {
-        int MAXM = 150, MAXD = 150;
-        BigInteger result[][] = new BigInteger[MAXM][MAXD];
+        BufferedReader stdin = new BufferedReader(new InputStreamReader(System.in));
+        String line;
 
-        for (int m = 0; m < MAXM; m++)
-            for (int d = 0; d < MAXD; d++)
-                result[m][d] = new BigInteger("0");
+        line = stdin.readLine();
+        int cases = Integer.parseInt(line);
 
-        for (int d = 0; d < MAXD; d++)
-            result[0][d] = new BigInteger("1");
+        while (cases > 0)
+        {
+            line = stdin.readLine();
+            System.out.println(getPieces(line));
+            cases--;
+        }
+    }
 
-        for (int m = 1; m < MAXM; m++)
-            for (int d = 1; d < MAXD; d++)
-                for (int k = 0; k <= m - 1; k++)
-                    result[m][d] = result[m][d].add(result[k][d - 1].multiply(result[m - k - 1][d]));
+    public static BigInteger getPieces(String line)
+    {
+        BigInteger n = new BigInteger(line);
+
+        BigInteger pieces = n.pow(4);
+        pieces = pieces.subtract(n.pow(3).multiply(BigInteger.valueOf(6)));
+        pieces = pieces.add(n.pow(2).multiply(BigInteger.valueOf(23)));
+        pieces = pieces.subtract(n.multiply(BigInteger.valueOf(18)));
+        pieces = pieces.add(BigInteger.valueOf(24)).divide(BigInteger.valueOf(24));
+
+        return pieces;
     }
 }

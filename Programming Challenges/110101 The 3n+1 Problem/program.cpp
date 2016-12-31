@@ -75,23 +75,31 @@ using namespace std;
 	
 int cache[MAXSIZE];
 
+int cycle1(int n)
+{
+    long long int nn = n;
+    int length = 1;
+    while (nn > 1)
+    {
+        nn = (nn & 1) ? (nn + (nn << 1) + 1) : (nn >> 1);
+        length += 1;
+    }
+    return length;
+}
+
 // 计算循环节长度。
 int cycle(long long number)
 {
-	if (number == 1)
-		return 1;
+	if (number == 1) return 1;
 	
 	// 模 2 计算可用与计算代替，除 2 计算可用右移计算代替。
-	if (number & 1)
-		number += (number << 1) + 1;
-	else
-		number >>= 1;
+	if (number & 1) number += (number << 1) + 1;
+	else number >>= 1;
 	
 	// 若 number 在缓存范围内则根据情况取用。
 	if (number < MAXSIZE )
 	{
-		if (!cache[number])
-			cache[number] = cycle(number);
+		if (!cache[number]) cache[number] = cycle(number);
 		return 1 + cache[number];
 	}
 	

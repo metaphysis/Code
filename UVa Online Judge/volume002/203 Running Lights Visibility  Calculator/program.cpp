@@ -26,7 +26,7 @@ struct ship
 };
 
 string scenario;
-vector < ship > ships;
+vector<ship> ships;
 
 string roundedBearing(double bearing)
 {
@@ -34,8 +34,7 @@ string roundedBearing(double bearing)
     ss << fixed << setprecision(2) << (bearing + EPSILON);
     string number;
     ss >> number;
-    if (number == "360.00")
-        number = "0.00";
+    if (number == "360.00") number = "0.00";
     return number;
 }
 

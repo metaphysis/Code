@@ -1,46 +1,16 @@
-before subtract: row = 99999999 after subtract row = 0 quotient = 00000001
-10 9
-0 1036985222222222222222159999
-before subtract: row = 1 after subtract row = 0 quotient = 1
-10 0
-0 0
-before subtract: row = 29 after subtract row = 3 quotient = 01
-before subtract: row = 36 after subtract row = 10 quotient = 011
-before subtract: row = 109 after subtract row = 83 quotient = 0111
-before subtract: row = 83 after subtract row = 57 quotient = 0112
-before subtract: row = 57 after subtract row = 31 quotient = 0113
-before subtract: row = 31 after subtract row = 5 quotient = 0114
-before subtract: row = 57 after subtract row = 31 quotient = 01141
-before subtract: row = 31 after subtract row = 5 quotient = 01142
-before subtract: row = 56 after subtract row = 30 quotient = 011421
-before subtract: row = 30 after subtract row = 4 quotient = 011422
-before subtract: row = 48 after subtract row = 22 quotient = 0114221
-before subtract: row = 224 after subtract row = 198 quotient = 01142211
-before subtract: row = 198 after subtract row = 172 quotient = 01142212
-before subtract: row = 172 after subtract row = 46 quotient = 01142213
-before subtract: row = 46 after subtract row = 20 quotient = 01142214
-before subtract: row = 202 after subtract row = 176 quotient = 011422141
-before subtract: row = 176 after subtract row = 150 quotient = 011422142
-before subtract: row = 150 after subtract row = 24 quotient = 011422143
-before subtract: row = 248 after subtract row = 222 quotient = 0114221431
-before subtract: row = 222 after subtract row = 196 quotient = 0114221432
-before subtract: row = 196 after subtract row = 170 quotient = 0114221433
-before subtract: row = 170 after subtract row = 44 quotient = 0114221434
-before subtract: row = 44 after subtract row = 18 quotient = 0114221435
-before subtract: row = 182 after subtract row = 56 quotient = 01142214351
-before subtract: row = 56 after subtract row = 30 quotient = 01142214352
-before subtract: row = 30 after subtract row = 4 quotient = 01142214353
-before subtract: row = 49 after subtract row = 23 quotient = 011422143531
-before subtract: row = 239 after subtract row = 213 quotient = 0114221435311
-before subtract: row = 213 after subtract row = 187 quotient = 0114221435312
-before subtract: row = 187 after subtract row = 161 quotient = 0114221435313
-before subtract: row = 161 after subtract row = 35 quotient = 0114221435314
-before subtract: row = 35 after subtract row = 9 quotient = 0114221435315
-before subtract: row = 93 after subtract row = 67 quotient = 01142214353151
-before subtract: row = 67 after subtract row = 41 quotient = 01142214353152
-before subtract: row = 41 after subtract row = 15 quotient = 01142214353153
-1142214353153 15
-before subtract: row = 83 after subtract row = 57 quotient = 01
-before subtract: row = 57 after subtract row = 31 quotient = 02
-before subtract: row = 31 after subtract row = 5 quotient = 03
-3 5
+1
+2
+4
+8
+16
+31
+57
+99
+163
+256
+9388878
+62869211463388
+1273349720807526029
+6297962398022464051576
+562
+31931

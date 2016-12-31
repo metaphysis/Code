@@ -1,22 +1,24 @@
 #include <iostream>
+
 using namespace std;
+
 #define min(a, b) (((a) < (b)) ? (a) : (b))
 #define max(a, b) (((a) > (b)) ? (a) : (b))
-#define MAX_SIZE 1000000
-int lengthCache[MAX_SIZE];
 
-int cycleLength(long long n)
+const int MAX_SIZE = 1000000;
+
+int cache[MAX_SIZE];
+
+int cycle(long long int n)
 {
     if (n == 1) return 1;
     n = (n & 1) ? (n + (n << 1) + 1) : (n >> 1);
     if (n < MAX_SIZE)
     {
-        if (!lengthCache[n])
-            lengthCache[n] = cycleLength(n);
-        return (1 + lengthCache[n]);
+        if (!cache[n]) cache[n] = cycle(n);
+        return (1 + cache[n]);
     }
-    
-    return (1 + cycleLength(n));
+    return (1 + cycle(n));
 }
 
 string space(int number)
@@ -35,7 +37,7 @@ int main(int ac, char *av[])
     cout << space(4) << "int cln[1000000] = {0\n";
     for (int i = 1; i < 1000000; i++)
     {
-        cout << "," << cycleLength(i);
+        cout << "," << cycle(i);
         if (i % 1000 == 0)
         {
             cout << "\n";
