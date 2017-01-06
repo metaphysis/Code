@@ -4,7 +4,7 @@
 // Submission Date: 
 // UVa Run Time: s
 //
-// 版权所有（C）2016，邱秋。metaphysis # yeah dot net
+// 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
 #include <algorithm>
 #include <bitset>
