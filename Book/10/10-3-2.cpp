@@ -7,72 +7,67 @@ using namespace std;
 
 struct edge
 {
-    int start, end, weight;
+    int from, to, weight;
+    
+    bool operator<(const edge& x) const
+    {
+        return weight < x.weight;
+    }
 };
 
-vector < edge > edges;
-vector < int > parent, ranks;
+vector<edge> edges;
+vector<int> parent, ranks;
 
-bool cmp(edge x, edge y)
+void make_set()
 {
-    return x.weight < y.weight;
-}
-
-void makeSet()
-{
-    parent.resize(edges.size());
-    ranks.resize(edges.size());
+    parent.resize(edges.size()); ranks.resize(edges.size());
     
     for (int i = 0; i < edges.size(); i++)
     {
-        parent[i] = i;
-        ranks[i] = 0;
+        parent[i] = i; ranks[i] = 0;
     }
 }
 
-int findSet(int x)
+int find_set(int x)
 {
-    return (parent[x] == x ? x : parent[x] = findSet(parent[x]));
+    return (parent[x] == x ? x : parent[x] = find_set(parent[x]));
 }
 
-void unionSet(int x, int y)
+void union_set(int x, int y)
 {
-    x = findSet(x);
-    y = findSet(y);
+    x = find_set(x);
+    y = find_set(y);
     
     if (x != y)
     {
-        if (ranks[x] > ranks[y])
-            parent[y] = x;
+        if (ranks[x] > ranks[y]) parent[y] = x;
         else
         {
             parent[x] = y;
-            if (ranks[x] == ranks[y])
-                ranks[y]++;
+            if (ranks[x] == ranks[y]) ranks[y]++;
         }
     }
 }
 
 int kruskal()
 {
-    int minWeightSum = 0;
+    int min_weight_sum = 0;
     
-    makeSet();
-    sort(edges.begin(), edges.end(), cmp);
+    make_set();
+    sort(edges.begin(), edges.end());
     
     for (int i = 0; i < edges.size(); i++)
     {
-        int x = findSet(edges[i].start);
-        int y = findSet(edges[i].end);
+        int x = find_set(edges[i].from), y = find_set(edges[i].to);
         
         if (x != y)
         {
-            unionSet(x, y);
-            minWeightSum += edges[i].weight;
+            union_set(x, y);
+            min_weight_sum += edges[i].weight;
         }
     }
     
-    return minWeightSum;
+    return min_weight_sum;
 }
 
 int main(int argc, char *argv[])

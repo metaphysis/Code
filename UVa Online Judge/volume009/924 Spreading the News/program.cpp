@@ -25,19 +25,16 @@
 
 using namespace std;
 
-struct pack
+struct employee
 {
-    int index, day;
+    int id, dayElapsed;
 };
 
 int main(int argc, char *argv[])
 {
-    cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
-
     vector<int> edges[2600];
     int visited[2600], boom[2600];
-
-    int employees, friends, cases, index, source;
+    int employees, friends, cases, id, source;
 
     while (cin >> employees)
     {
@@ -49,11 +46,11 @@ int main(int argc, char *argv[])
             cin >> friends;
             for (int j = 1; j <= friends; j++)
             {
-                cin >> index;
-                edges[i].push_back(index);
+                cin >> id;
+                edges[i].push_back(id);
             }
         }
-        
+
         cin >> cases;
         for (int c = 1; c <= cases; c++)
         {
@@ -62,22 +59,22 @@ int main(int argc, char *argv[])
             memset(visited, 0, sizeof(visited));
             memset(boom, 0, sizeof(boom));
             
-            queue<pack> unvisited;
-            unvisited.push((pack){source, 0});
+            queue<employee> unvisited;
+            unvisited.push((employee){source, 0});
             visited[source] = 1;
 
             while (!unvisited.empty())
             {
-                pack current = unvisited.front();
+                employee current = unvisited.front();
                 unvisited.pop();
 
-                boom[current.day]++;
+                boom[current.dayElapsed]++;
                 
-                for (auto next : edges[current.index])
+                for (auto next : edges[current.id])
                     if (!visited[next])
                     {
                         visited[next] = 1;
-                        unvisited.push((pack){next, current.day + 1});
+                        unvisited.push((employee){next, current.dayElapsed + 1});
                     }
             }
             

@@ -35,7 +35,7 @@ typedef long long unsigned LLUINT;
 
 bool finish;
 int minimum;
-vector < LLUINT > edge;
+vector<LLUINT> edge;
 LLUINT target_tag, origin_tag;
 
 // 检查顶点集合是否为支配集。

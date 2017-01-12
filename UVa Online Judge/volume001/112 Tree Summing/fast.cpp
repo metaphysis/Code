@@ -57,8 +57,7 @@ void parseTree(node *current)
     bool isLeaf = false;
 
     char c;
-    while (cin >> c, c != '(')
-        ;
+    while (cin >> c, c != '(') { }
 
     // 需要考虑负数的情况。
     cin >> c;

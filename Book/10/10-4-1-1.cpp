@@ -1,60 +1,59 @@
 #include <iostream>
+#include <limits>
 #include <vector>
 
 using namespace std;
 
-const int MAX_INT = 100000;
+const int MAX_INT = numeric_limits<int>::max();
 
 struct edge
 {
-    int index, weight;
+    int idx, weight;
 };
 
 vector<vector<edge>> edges;
-vector<int> parent, distances;
-vector<bool> visited;
+vector<int> parent, dist, visited;
 
-void mooreDijkstra(int start)
+void moore_dijkstra(int u)
 {
     parent.clear();
     visited.clear();
-    distances.clear();
+    dist.clear();
 
     for (int i = 0; i < edges.size(); i++)
     {
         parent.push_back(-1);
-        visited.push_back(false);
-        distances.push_back(MAX_INT);
+        visited.push_back(0);
+        dist.push_back(MAX_INT);
     }
 
-    distances[start] = 0;
-    while (visited[start] == false)
+    dist[u] = 0;
+    while (!visited[u])
     {
-        visited[start] = true;
-        for (int i = 0; i < edges[start].size(); i++)
+        visited[u] = 1;
+        for (int i = 0; i < edges[u].size(); i++)
         {
-            edge current = edges[start][i];
-            if (visited[current.index] == false &&
-                distances[start] + current.weight < distances[current.index])
+            edge v = edges[u][i];
+            if (!visited[v.idx] && dist[u] + v.weight < dist[v.idx])
             {
-                distances[current.index] = distances[start] + current.weight;
-                parent[current.index] = start;
+                dist[v.idx] = dist[u] + v.weight;
+                parent[v.idx] = u;
             }
         }
 
-        int minDistance = MAX_INT;
+        int min_dist = MAX_INT;
         for (int i = 0; i < edges.size(); i++)
-            if (visited[i] == false && minDistance > distances[i])
+            if (!visited[i] && min_dist > dist[i])
             {
-                minDistance = distances[i];
-                start = i;
+                min_dist = dist[i];
+                u = i;
             }
     }
 }
 
 int main(int argc, char *argv[])
 {
-    mooreDijkstra(0);
+    moore_dijkstra(0);
     
     return 0;
 }

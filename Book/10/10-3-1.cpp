@@ -1,65 +1,114 @@
+#include <algorithm>
+#include <bitset>
+#include <cassert>
+#include <cmath>
+#include <cstring>
+#include <iomanip>
 #include <iostream>
-#include <vector>
 #include <limits>
+#include <list>
+#include <map>
+#include <numeric>
+#include <queue>
+#include <set>
+#include <sstream>
+#include <stack>
+#include <vector>
 
 using namespace std;
 
+const int MAX_DIST = 1000000, MAXV = 1010;
+
 struct edge
 {
-    int index, weight;
+    int idx, weight;
+    
+    bool operator<(const edge& x) const
+    {
+        return weight > x.weight;
+    }
 };
 
-vector< vector < edge > > edges;
-vector< int > parent, distances;
-vector< bool > intree;
+vector<edge> edges[MAXV];
+int parent[MAXV], dist_to_tree[MAXV], intree[MAXV];
 
-int prim(int start)
+int prim(int u)
 {
-    int minWeightSum = 0;
-    
-    parent.clear();
-    intree.clear();
-    distances.clear();
+    int min_weight_sum = 0;
 
-    for (int i = 0; i < edges.size(); i++)
+    for (int i = 0; i < MAXV; i++)
     {
-        parent.push_back(-1);
-        intree.push_back(false);
-        distances.push_back(numeric_limits< int >::max());
+        parent[i] = -1; intree[i] = 0; dist_to_tree[i] = MAX_DIST;
     }
 
-    distances[start] = 0;
-    while (intree[start] == false)
+    dist_to_tree[u] = 0;
+    while (!intree[u])
     {
-        intree[start] = true;
-        for (int i = 0; i < edges[start].size(); i++)
+        intree[u] = 1;
+        min_weight_sum += dist_to_tree[u];
+
+        for (int i = 0; i < edges[u].size(); i++)
         {
-            edge current = edges[start][i];
-            if (intree[current.index] == false &&
-                current.weight < distances[current.index])
+            edge v = edges[u][i];
+            if (!intree[v.idx] && dist_to_tree[v.idx] > v.weight)
             {
-                    distances[current.index] = current.weight;
-                    parent[current.index] = start;
+                dist_to_tree[v.idx] = v.weight;
+                parent[v.idx] = u;
             }
         }
 
-        int minDistance = numeric_limits< int >::max();
-        for (int i = 0; i < edges.size(); i++)
-            if (intree[i] == false && minDistance > distances[i])
+        int min_dist_to_tree = MAX_DIST;
+        for (int i = 0; i < MAXV; i++)
+        {
+            if (!intree[i] && min_dist_to_tree > dist_to_tree[i])
             {
-                minDistance = distances[i];
-                start = i;
+                min_dist_to_tree = dist_to_tree[i];
+                u = i;
             }
-            
-        minWeightSum += distances[start];
+        }
     }
-    
-    return minWeightSum;
+
+    return min_weight_sum;
+}
+
+int prim1(int u)
+{
+    int min_weight_sum = 0;
+
+    for (int i = 0; i < MAXV; i++)
+    {
+        parent[i] = -1; intree[i] = 0; dist_to_tree[i] = MAX_DIST;
+    }
+
+    priority_queue<edge> unvisited;
+    unvisited.push((edge){u, 0});
+
+    while (!unvisited.empty())
+    {
+        edge v = unvisited.top(); unvisited.pop();
+
+        if (intree[v.idx]) continue;
+        intree[v.idx] = 1;
+        min_weight_sum += v.weight;
+
+        for (int i = 0; i < edges[v.idx].size(); i++)
+        {
+            edge e = edges[v.idx][i];
+            if (!intree[e.idx] && dist_to_tree[e.idx] > e.weight)
+            {
+                dist_to_tree[e.idx] = e.weight;
+                parent[e.idx] = v.idx;
+            }
+        }
+    }
+
+    return min_weight_sum;
 }
 
 int main(int argc, char *argv[])
 {
     prim(0);
-    
+    prim1(0);
+
     return 0;
 }

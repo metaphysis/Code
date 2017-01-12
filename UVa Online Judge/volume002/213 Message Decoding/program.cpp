@@ -12,7 +12,7 @@
 
 using namespace std;
 
-map < string, int > indexer;
+map<string, int> indexer;
 
 int main(int argc, char *argv[])
 {
@@ -22,9 +22,8 @@ int main(int argc, char *argv[])
     for (int i = 2, index = 0, length = 1; length < 8; i *= 2, length++)
         for (int j = 0; j < (i - 1); j++)
         {
-            bitset < 8 > number(j);
-            indexer.insert(make_pair(number.to_string().substr(8 - length,
-                        length), index));
+            bitset<8> n(j);
+            indexer.insert(make_pair(n.to_string().substr(8 - length, length), index));
             index++;
         }
 
