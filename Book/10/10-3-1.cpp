@@ -17,51 +17,45 @@
 
 using namespace std;
 
-const int MAX_DIST = 1000000, MAXV = 1010;
+const int MAXV = 1010, MAX_DIST = 1000000;
 
 struct edge
 {
     int idx, weight;
     
-    bool operator<(const edge& x) const
-    {
+    bool operator<(const edge& x) const {
         return weight > x.weight;
     }
 };
 
 vector<edge> edges[MAXV];
 int parent[MAXV], dist_to_tree[MAXV], intree[MAXV];
+int number_of_vertices;
 
 int prim(int u)
 {
     int min_weight_sum = 0;
 
-    for (int i = 0; i < MAXV; i++)
-    {
+    for (int i = 0; i < number_of_vertices; i++) {
         parent[i] = -1; intree[i] = 0; dist_to_tree[i] = MAX_DIST;
     }
 
     dist_to_tree[u] = 0;
-    while (!intree[u])
-    {
+    while (!intree[u]) {
         intree[u] = 1;
         min_weight_sum += dist_to_tree[u];
 
-        for (int i = 0; i < edges[u].size(); i++)
-        {
+        for (int i = 0; i < edges[u].size(); i++) {
             edge v = edges[u][i];
-            if (!intree[v.idx] && dist_to_tree[v.idx] > v.weight)
-            {
+            if (!intree[v.idx] && dist_to_tree[v.idx] > v.weight) {
                 dist_to_tree[v.idx] = v.weight;
                 parent[v.idx] = u;
             }
         }
 
         int min_dist_to_tree = MAX_DIST;
-        for (int i = 0; i < MAXV; i++)
-        {
-            if (!intree[i] && min_dist_to_tree > dist_to_tree[i])
-            {
+        for (int i = 0; i < number_of_vertices; i++) {
+            if (!intree[i] && min_dist_to_tree > dist_to_tree[i]) {
                 min_dist_to_tree = dist_to_tree[i];
                 u = i;
             }
@@ -75,27 +69,23 @@ int prim1(int u)
 {
     int min_weight_sum = 0;
 
-    for (int i = 0; i < MAXV; i++)
-    {
+    for (int i = 0; i < number_of_vertices; i++) {
         parent[i] = -1; intree[i] = 0; dist_to_tree[i] = MAX_DIST;
     }
 
     priority_queue<edge> unvisited;
     unvisited.push((edge){u, 0});
 
-    while (!unvisited.empty())
-    {
+    while (!unvisited.empty()) {
         edge v = unvisited.top(); unvisited.pop();
 
         if (intree[v.idx]) continue;
         intree[v.idx] = 1;
         min_weight_sum += v.weight;
 
-        for (int i = 0; i < edges[v.idx].size(); i++)
-        {
+        for (int i = 0; i < edges[v.idx].size(); i++) {
             edge e = edges[v.idx][i];
-            if (!intree[e.idx] && dist_to_tree[e.idx] > e.weight)
-            {
+            if (!intree[e.idx] && dist_to_tree[e.idx] > e.weight) {
                 dist_to_tree[e.idx] = e.weight;
                 parent[e.idx] = v.idx;
             }
