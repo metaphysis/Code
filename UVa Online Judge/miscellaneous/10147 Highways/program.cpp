@@ -48,10 +48,7 @@ point towns[MAXV];
 
 void make_set()
 {
-    for (int i = 0; i <= N; i++)
-    {
-        parent[i] = i; ranks[i] = 0;
-    }
+    for (int i = 0; i <= N; i++) parent[i] = i, ranks[i] = 0;
 }
 
 int find_set(int x)
