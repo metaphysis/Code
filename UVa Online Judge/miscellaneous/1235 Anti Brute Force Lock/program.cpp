@@ -25,7 +25,7 @@
 
 using namespace std;
 
-const int MAX_DIST = 1000000, MAXV = 510;
+const int MAXV = 510, MAX_DIST = 1000000;
 
 int edges[MAXV][MAXV], n, dist_to_tree[MAXV], intree[MAXV];
 string password[MAXV];

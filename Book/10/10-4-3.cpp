@@ -1,12 +1,10 @@
-const int MAXN = 1000;
+const int MAXV = 1000;
 
-int weight[MAXN][MAXN], n;
+int weight[MAXV][MAXV], n;
 
 for (int k = 1; k <= n; k++)
 	for (int i = 1; i <= n; i++)
-		for (int j = 1; j <= n; j++)
-		{
+		for (int j = 1; j <= n; j++) {
 			int through = weight[i][k] + weight[k][j];
-			if (through < weight[i][j])
-				weight[i][j] = through;
+			if (weight[i][j] > through) weight[i][j] = through;
 		}

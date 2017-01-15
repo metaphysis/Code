@@ -34,7 +34,7 @@ void moore_dijkstra(int u)
         for (int i = 0; i < edges[u].size(); i++)
         {
             edge v = edges[u][i];
-            if (!visited[v.idx] && dist[u] + v.weight < dist[v.idx])
+            if (!visited[v.idx] && dist[v.idx] > dist[u] + v.weight)
             {
                 dist[v.idx] = dist[u] + v.weight;
                 parent[v.idx] = u;

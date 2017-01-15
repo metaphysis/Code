@@ -23,7 +23,7 @@ vector<vector<edge>> edges(N + 1);
 vector<long long int> distances(N + 1);
 vector<int> parent(N + 1);
 
-void mooreDijkstra(int start)
+void moore_dijkstra(int start)
 {
     fill(parent.begin(), parent.end(), 0);
     fill(distances.begin(), distances.end(), MAX_DISTANCE);
@@ -39,7 +39,7 @@ void mooreDijkstra(int start)
         unvisited.pop();
         
         for (auto e : edges[v.to])
-            if (distances[v.to] + e.weight < distances[e.to])
+            if (distances[e.to] > distances[v.to] + e.weight)
             {
                 distances[e.to] = distances[v.to] + e.weight;
                 parent[e.to] = v.to;
@@ -50,7 +50,7 @@ void mooreDijkstra(int start)
 
 int main(int argc, char *argv[])
 {
-    mooreDijkstra(0);
+    moore_dijkstra(0);
     
     return 0;
 }
