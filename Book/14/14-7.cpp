@@ -1,90 +1,183 @@
-const double MAX_DISTANCE = 1e20;
+// The Closest Pair Problem （最近点对问题）
+// PC/UVa IDs: 111402/10245, Popularity: A, Success rate: low Level: 2
+// Verdict: Accepted
+// Submission Date: 2017-01-16
+// UVa Run Time: 0.100s
+//
+// 版权所有（C）2017，邱秋。metaphysis # yeah dot net
+
+#include <algorithm>
+#include <bitset>
+#include <cassert>
+#include <cmath>
+#include <cstring>
+#include <iomanip>
+#include <iostream>
+#include <limits>
+#include <list>
+#include <map>
+#include <numeric>
+#include <queue>
+#include <set>
+#include <sstream>
+#include <stack>
+#include <vector>
+
+using namespace std;
+
+// 点的最大数量。
+const int MAXV = 10010;
+
+// “无限大” 距离值，需要根据具体应用设置。
+const double MAX_DIST = 1E20;
+
+struct point
+{
+    double x, y;
+
+    double distanceTo(const point & p)
+    {
+        return (x - p.x) * (x - p.x) + (y - p.y) * (y - p.y);
+    }
+};
+
+// 记录点的坐标数据。
+point points[MAXV];
+
+// 点的总个数。
+int number_of_points;
 
 // 分治法求最近点对距离。
-double closestDistance(int P[], int Pn, int X[], int Xn, int Y[], int Yn)
+double closestDistance(int *P, int Pn, int *X, int Xn, int *Y, int Yn)
 {
-	// 递归调用的出口，当拆分后点数小于等于3个时，使用穷举法计算最近距离。注意初始距
-	// 离应设为“无限大”，“无限大”的具体值应该根据具体应用设置。
-	if (Pn <= 3)
-	{
-		double distance = MAX_DISTANCE;
-		for (int i = 0; i < Pn - 1; i++)
-			for (int j = i + 1; j < Pn; j++)
-			{
-				double tmp = distanceOfPoint(points[P[i]], points[P[j]]);
-				distance = min(distance, tmp);
-			}
-			
-		return distance;
-	}
+    // 递归调用的出口，当拆分后点数小于等于3个时，使用穷举法计算最近距离。注意初始距
+    // 离应设为“无限大”，“无限大”的具体值应该根据具体应用设置。
+    if (Pn <= 3)
+    {
+        double dist = MAX_DIST;
+        for (int i = 0; i < Pn - 1; i++)
+            for (int j = i + 1; j < Pn; j++)
+                dist = min(dist, points[P[i]].distanceTo(points[P[j]]));
+        return dist;
+    }
 
-	// 分解：把点集P划分为两个集合Pl和Pr。并得到相应的Xl，Xr，Yl，Yr。
-	int Pl[MAXN], Pln, Pr[MAXN], Prn;
-	int Xl[MAXN], Xln, Xr[MAXN], Xrn;
-	int Yl[MAXN], Yln, Yr[MAXN], Yrn;
+    // 分解：把点集P划分为两个集合Pl和Pr。并得到相应的Xl，Xr，Yl，Yr。
+    int Pl[MAXV], Pln, Pr[MAXV], Prn;
+    int Xl[MAXV], Xln, Xr[MAXV], Xrn;
+    int Yl[MAXV], Yln, Yr[MAXV], Yrn;
 
-	// 标记某点是否在划分的集合Pl中。初始时，所有点不在集合Pl中。
-	bool inPl[MAXN];
-	memset(inPl, false, sizeof(inPl));
+    // 标记某点是否在划分的集合Pl中。初始时，所有点不在集合Pl中。
+    bool inPl[MAXV];
+    memset(inPl, false, sizeof(inPl));
 
-	// 将数组P划分为两个数量接近的集合Pl和Pr。Pl中的所有点在线l上或在l的左侧，Pr中
-	// 的所有点在线l上或在l的右侧。数组X被划分为两个数组Xl和Xr，分别包含Pl和Pr中的
-	// 点，并按x坐标单调递增的顺序排序。类似的，数组Y被划分为两个数组Yl和Yr，分别包
-	// 含Pl和Pr中的点，并按y坐标单调递增的顺序进行排序。对于Xl，Xr，Yl，Yr，由于参
-	// 数X和Y均已排序，只需从中拆分出相应的点即可，并不需要再次排序，拆分后的数组仍
-	// 保持排序的性质不变，这是获得O（nlog2n）运行时间的关键，否则若再次排序，运行
-	// 时间将为O（n（log2n）^2）。
-	int middle = Pn / 2;
-	Pln = Xln = middle;
-	for (int i = 0; i < Pln; i++)
-	{
-		Pl[i] = Xl[i] = X[i];
-		inPl[X[i]] = true;
-	}
-	Prn = Xrn = (Pn - middle);
-	for (int i = 0; i < Prn; i++)
-		Pr[i] = Xr[i] = X[i + middle];
+    // 将数组P划分为两个数量接近的集合Pl和Pr。Pl中的所有点在线l上或在l的左侧，Pr中
+    // 的所有点在线l上或在l的右侧。数组X被划分为两个数组Xl和Xr，分别包含Pl和Pr中的
+    // 点，并按x坐标单调递增的顺序排序。类似的，数组Y被划分为两个数组Yl和Yr，分别包
+    // 含Pl和Pr中的点，并按y坐标单调递增的顺序进行排序。对于Xl，Xr，Yl，Yr，由于参
+    // 数X和Y均已排序，只需从中拆分出相应的点即可，并不需要再次排序，拆分后的数组仍
+    // 保持排序的性质不变，这是获得O（nlog2n）运行时间的关键，否则若再次排序，运行
+    // 时间将为O（n（log2n）^2）。
+    int middle = Pn / 2;
+    Pln = Xln = middle;
+    for (int i = 0; i < Pln; i++)
+    {
+        Pl[i] = Xl[i] = X[i];
+        inPl[X[i]] = true;
+    }
 
-	// 根据某点所属集合，划分Yl和Yr。
-	Yln = Yrn = 0;
-	for (int i = 0; i < Yn; i++)
-		if (inPl[Y[i]])
-			Yl[Yln++] = Y[i];
-		else
-			Yr[Yrn++] = Y[i];
+    Prn = Xrn = (Pn - middle);
+    for (int i = 0; i < Prn; i++)
+        Pr[i] = Xr[i] = X[i + middle];
 
-	// 解决：把P划分为Pl和Pr后，再进行两次递归调用，一次找出Pl中的最近点对，另一次
-	// 找出Pr中的最近点对。
-	double distanceL = closestDistance(Pl, Pln, Xl, Xln, Yl, Yln);
-	double distanceR = closestDistance(Pr, Prn, Xr, Xrn, Yr, Yrn);
+    // 根据某点所属集合，划分Yl和Yr。
+    Yln = Yrn = 0;
+    for (int i = 0; i < Yn; i++)
+    {
+        if (inPl[Y[i]])
+            Yl[Yln++] = Y[i];
+        else
+            Yr[Yrn++] = Y[i];
+    }
 
-	// 合并：最近点对要么是某次递归调用找出的距离为distance的点对，要么是Pl中的一个
-	// 点与Pr中的一个点组成的点对，算法确定是否存在其距离小于distance的一个点对。
-	double minDistance = min(distanceL, distanceR);
+    // 解决：把P划分为Pl和Pr后，再进行两次递归调用，一次找出Pl中的最近点对，另一次
+    // 找出Pr中的最近点对。
+    double distanceL = closestDistance(Pl, Pln, Xl, Xln, Yl, Yln);
+    double distanceR = closestDistance(Pr, Prn, Xr, Xrn, Yr, Yrn);
 
-	// 建立一个数组Y'，它是把数组Y中所有不在宽度为2*minDistance的垂直带形区域内去掉
-	// 后所得的数组。数组Y'与Y一样，是按y坐标顺序排序的。
-	int tmpY[MAXN], tmpYn = 0;
-	for (int i = 0; i < Yn; i++)
-		if (fabs(points[Y[i]].x - points[X[middle]].x) <= minDistance)
-			tmpY[tmpYn++] = Y[i];
+    // 合并：最近点对要么是某次递归调用找出的距离为minDist的点对，要么是Pl中的一个
+    // 点与Pr中的一个点组成的点对，算法确定是否存在其距离小于minDist的一个点对。
+    double minDist = min(distanceL, distanceR);
 
-	// 对数组Y'中的每个点p，算法试图找出Y'中距离p在minDistance单位以内的点。仅
-	// 需要考虑在Y'中紧随p后的7个点。算法计算出从p到这7个点的距离，并记录下Y'
-	// 的所有点对中，最近点对的距离tmpDistance。
-	double tmpDistance = MAXDISTANCE;
-	for (int i = 0; i < tmpYn; i++)
-	{
-		int top = ((i + 7) < tmpYn ? (i + 7) : (tmpYn - 1));
-		for (int j = i + 1; j <= top; j++)
-		{
-			double tmp = calDistance(points[tmpY[i]], points[tmpY[j]]);
-			tmpDistance = min(tmpDistance, tmp);
-		}	
-	}
+    // 建立一个数组Y'，它是把数组Y中所有不在宽度为2*minDist的垂直带形区域内去掉后
+    // 所得的数组。数组Y'与Y一样，是按y坐标顺序排序的。
+    int tmpY[MAXV], tmpYn = 0;
+    for (int i = 0; i < Yn; i++)
+        if (fabs(points[Y[i]].x - points[X[middle]].x) <= minDist)
+            tmpY[tmpYn++] = Y[i];
 
-	// 如果tmpDistance小于minDistance，则垂直带形区域内，的确包含比根据递归调用所找
-	// 出的最近距离更近的点对，于是返回该点对及其距离tmpDistance。否则，就返回递归
-	// 调用中发现的最近点对及其距离minDistance。
-	return min(minDistance, tmpDistance);
+    // 对数组Y'中的每个点p，算法试图找出Y'中距离p在minDist单位以内的点。仅需要考虑
+    // 在Y'中紧随p后的7个点。算法计算出从p到这7个点的距离，并记录下Y'的所有点对中，
+    // 最近点对的距离tmpDist。
+    double tmpDist = MAX_DIST;
+    for (int i = 0; i < tmpYn; i++)
+    {
+        int top = ((i + 7) < tmpYn ? (i + 7) : (tmpYn - 1));
+        for (int j = i + 1; j <= top; j++)
+            tmpDist = min(tmpDist, points[tmpY[i]].distanceTo(points[tmpY[j]]));
+    }
+
+    // 如果tmpDist小于minDist，则垂直带形区域内，的确包含比根据递归调用所找出的
+    // 最近距离更近的点对，于是返回该点对及其距离tmpDist。否则，就返回递归调用中
+    // 发现的最近点对及其距离minDist。
+    return min(minDist, tmpDist);
+}
+
+bool cmpX(int a, int b)
+{
+    return points[a].x < points[b].x;
+}
+
+bool cmpY(int a, int b)
+{
+    return points[a].y < points[b].y;
+}
+
+double getClosestDistance()
+{
+    // 准备初始条件，注意，数组中保存的只是各个点的序号而已，并不是点的坐标，这样
+    // 可以减少一些数据复制的时间，同时不影响算法的实现。
+    int P[MAXV], Pn, X[MAXV], Xn, Y[MAXV], Yn;
+
+    // 初始化。
+    Pn = Xn = Yn = number_of_points;
+    for (int i = 0; i < number_of_points; i++)
+        P[i] = X[i] = Y[i] = i;
+
+    // 预排序，按 x 坐标和 y 坐标分别排序。
+    sort(X, X + Xn, cmpX);
+    sort(Y, Y + Yn, cmpY);
+
+    // 调用分治算法。
+    return closestDistance(P, Pn, X, Xn, Y, Yn);
+}
+
+int main(int ac, char *av[])
+{
+    cout.precision(4);
+    cout.setf(ios::fixed | ios::showpoint);
+
+    while (cin >> number_of_points, number_of_points)
+    {
+        for (int i = 0; i < number_of_points; i++)
+            cin >> points[i].x >> points[i].y;
+
+        double minDist = sqrt(getClosestDistance());
+
+        if (minDist > 10000.0)
+            cout << "INFINITY" << endl;
+        else
+            cout << minDist << endl;
+    }
+
+    return 0;
 }
