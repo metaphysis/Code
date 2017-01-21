@@ -67,7 +67,7 @@ void prim(int u)
             }
         }
 
-        // 将顶点加入最小生成数并累加边权和。
+        // 将顶点加入最小生成树并累加边权和。
         intree[u] = 1;
         min_weight_sum += dist_to_tree[u];
 
