@@ -1,8 +1,8 @@
 // Bond
 // UVa ID: 11354
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2017-01-24
+// UVa Run Time: 2.410s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
@@ -25,72 +25,138 @@
 
 using namespace std;
 
-const int MAXV = 50010, MAXE = 100010, MAX_DIST = 1000000;
+const int MAXV = 50010, MAXE = 100010;
 
-struct edge {
-    int from, to, weight, next;
+struct edge
+{
+    int idx;
+    int from, to, weight;
+    int in_tree, in_path;
+    int next;
+
+    bool operator<(const edge & x) const
+    {
+        return weight < x.weight;
+    }
 };
 
-struct node
+edge edges_of_input[MAXE], edges_of_query[MAXE], edges_of_path[MAXV], edges_of_used[MAXE];
+int first_of_input[MAXV], first_of_query[MAXV];
+int number_of_vertices, number_of_edges, number_of_queries;
+int parent[MAXV], ranks[MAXV], ancestor[MAXV], visited[MAXV];
+int max_edge[MAXV];
+
+void make_set()
 {
-    int from, dist;
+    for (int i = 0; i < number_of_vertices; i++) parent[i] = i, ranks[i] = 0;
+}
+
+// 带路径压缩的查找，使用递归实现。
+int find_set(int x)
+{
+    return (x == parent[x] ? x : parent[x] = find_set(parent[x]));
+}
+
+//  集合的按秩合并。
+bool union_set(int x, int y)
+{
+    x = find_set(x), y = find_set(y);
+
+    if (x != y)
+    {
+        if (ranks[x] > ranks[y])
+            parent[y] = x;
+        else
+        {
+            parent[x] = y;
+            if (ranks[x] == ranks[y])
+                ranks[y]++;
+        }
+        return true;
+    }
+    return false;
+}
+
+void kruskal()
+{
+    for (int i = 0; i < number_of_edges; i++)
+        edges_of_used[i] = edges_of_input[i];
     
-    bool operator<(const node& x) const {
-        return dist > x.dist;
-    }
-};
+    sort(edges_of_used, edges_of_used + number_of_edges);
+    
+    for (int i = 0; i < number_of_edges; i++)
+        if (union_set(edges_of_used[i].from, edges_of_used[i].to))
+        {
+            edges_of_input[edges_of_used[i].idx].in_tree = 1;
 
-edge edges[MAXE];
-int first[MAXV], N, M, E, Q;
-int dist_to_tree[MAXV], intree[MAXV], parent[MAXV];
-map<int, int> idx, max_edge;
+            if (edges_of_used[i].idx & 1 == 1)
+                edges_of_input[edges_of_used[i].idx - 1].in_tree = 1;
+            else
+                edges_of_input[edges_of_used[i].idx + 1].in_tree = 1;
+        }
+}
 
-void prim(int u)
+void dfs(int u)
 {
-    // 初始化。
-    for (int i = 0; i < N; i++) {
-        dist_to_tree[i] = MAX_DIST, intree[i] = 0, parent[i] = -1;
-        for (int j = 0; j < N; j++) max_edge[i * N + j] = 0;
-    }
+    visited[u] = 1;
 
-    // 将指定的顶点置为已在树中。
-    dist_to_tree[u] = 0;
-    priority_queue<node> unvisited;
-    unvisited.push((node){u, 0});
+    for (int i = first_of_input[u]; i != -1; i = edges_of_input[i].next)
+        if (edges_of_input[i].in_tree)
+        {
+            int v = edges_of_input[i].to;
+            if (!visited[v])
+            {
+                edges_of_input[i].in_path = 1;
 
-    while (!unvisited.empty()) {
-        node current = unvisited.top();
-        unvisited.pop();
+                edges_of_path[v].from = u;
+                edges_of_path[v].weight = edges_of_input[i].weight;
 
-        u = current.from;
-        if (intree[u]) continue;
-
-        // 更新树中顶点与拟加入顶点间通路上的最大边权。
-        for (int i = 0; i < N; i++) {
-            if (intree[i]) {
-                int weight = edges[idx[parent[u] * N + u]].weight;
-
-                if (i != parent[u])
-                    max_edge[i * N + u] = max(max_edge[i * N + parent[u]], weight);
-                else
-                    max_edge[i * N + u] = weight;
-
-                // 根据对称性更新最大边权。
-                max_edge[u * N + i] = max_edge[i * N + u];
+                dfs(v);
             }
         }
+}
 
-        // 将顶点加入最小生成树。
-        intree[u] = 1;
 
-        // 更新尚未进入树中的顶点与树的距离。
-        for (int i = first[u]; i != -1; i = edges[i].next) {
-            edge v = edges[i];
-            if (!intree[v.to] && dist_to_tree[v.to] > v.weight) {
-                dist_to_tree[v.to] = v.weight;
-                parent[v.to] = u;
-                unvisited.push((node){v.to, dist_to_tree[v.to]});
+void lca(int u)
+{
+    ancestor[find_set(u)] = u;
+
+    for (int i = first_of_input[u]; i != -1; i = edges_of_input[i].next)
+        if (edges_of_input[i].in_path)
+        {
+            int v = edges_of_input[i].to;
+
+            lca(v);
+
+            union_set(u, v);
+            ancestor[find_set(u)] = u;
+        }
+
+    visited[u] = 1;
+
+    for (int i = first_of_query[u]; i != -1; i = edges_of_query[i].next)
+    {
+        int v = edges_of_query[i].to;
+
+        if (visited[v])
+        {
+            int forebear = ancestor[find_set(v)];
+
+            int max_edge1 = -1, uu = u;
+            while (uu != forebear)
+            {
+                max_edge1 = max(max_edge1, edges_of_path[uu].weight);
+                uu = edges_of_path[uu].from;
             }
+
+            int max_edge2 = -1, vv = v;
+            while (vv != forebear)
+            {
+                max_edge2 = max(max_edge2, edges_of_path[vv].weight);
+                vv = edges_of_path[vv].from;
+            }
+
+            max_edge[edges_of_query[i].idx] = max(max_edge1, max_edge2);
         }
     }
 }
@@ -99,37 +165,56 @@ int main(int argc, char *argv[])
 {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
 
-    int cases = 0, s, t, w;
+    int cases = 0, idx, from, to, weight;
 
-    while (cin >> N >> M) {
-        for (int i = 0; i < N; i++) {
-            first[i] = -1;
-            for (int j = i; j < N; j++) idx[i * N + j] = idx[j * N + i] = -1;
-        }
+    while (cin >> number_of_vertices >> number_of_edges)
+    {
+        fill(first_of_input, first_of_input + number_of_vertices, -1);
+        fill(first_of_query, first_of_query + number_of_vertices, -1);
 
-        E = 0;
-        for (int i = 0; i < M; i++)
+        idx = 0;
+        for (int i = 0; i < number_of_edges; i++)
         {
-            cin >> s >> t >> w;
+            cin >> from >> to >> weight;
+            from--, to--;
 
-            s--, t--;
-            edges[E] = (edge){s, t, w, first[s]}, first[s] = E++;
-            edges[E] = (edge){t, s, w, first[t]}, first[t] = E++;
+            edges_of_input[idx] = (edge){idx, from, to, weight, 0, 0, first_of_input[from]};
+            first_of_input[from] = idx++;
 
-            if (idx[s * N + t] == -1 || w < edges[idx[s * N + t]].weight)
-                idx[s * N + t] = first[s], idx[t * N + s] = first[t];
+            edges_of_input[idx] = (edge){idx, to, from, weight, 0, 0, first_of_input[to]};
+            first_of_input[to] = idx++;
         }
+        number_of_edges = idx;
 
-        prim(0);
+        make_set();
+        kruskal();
 
-        if (cases++ > 0) cout << '\n';
-        cin >> Q;
-        for (int i = 1; i <= Q; i++)
+        fill(visited, visited + number_of_vertices, 0);
+        dfs(0);
+        
+        cin >> number_of_queries;
+
+        idx = 0;
+        for (int i = 0; i < number_of_queries; i++)
         {
-            cin >> s >> t;
-            s--, t--;
-            cout << max_edge[s * N + t] << '\n';
+            cin >> from >> to;
+            from--, to--;
+
+            edges_of_query[idx] = (edge){i, from, to, weight, 0, 0, first_of_query[from]};
+            first_of_query[from] = idx++;
+            
+            edges_of_query[idx] = (edge){i, to, from, weight, 0, 0, first_of_query[to]};
+            first_of_query[to] = idx++;
         }
+
+        fill(visited, visited + number_of_vertices, 0);
+        make_set();
+        lca(0);
+
+        if (cases++ > 0)
+            cout << '\n';
+        for (int i = 0; i < number_of_queries; i++)
+            cout << max_edge[i] << '\n';
     }
 
     return 0;
