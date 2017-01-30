@@ -16,20 +16,17 @@ map<string, int> indexer;
 
 int main(int argc, char *argv[])
 {
-    cin.tie(0);
-    cin.sync_with_stdio(false);
-
-    for (int i = 2, index = 0, length = 1; length < 8; i *= 2, length++)
+    for (int i = 2, idx = 0, length = 1; length < 8; i *= 2, length++)
         for (int j = 0; j < (i - 1); j++)
         {
             bitset<8> n(j);
-            indexer.insert(make_pair(n.to_string().substr(8 - length, length), index));
-            index++;
+            indexer.insert(make_pair(n.to_string().substr(8 - length, length), idx));
+            idx++;
         }
 
     string line, header, buffer;
     bool headerReaded = false;
-    bool currentReadEnded = false, keyLengthReaded = false;
+    bool segmentEnded = false, segmentStarterReaded = false;
     int keyLength;
 
     while (getline(cin, line))
@@ -45,7 +42,7 @@ int main(int argc, char *argv[])
 
           next:
 
-            if (keyLengthReaded == false)
+            if (segmentStarterReaded == false)
             {
                 if (buffer.length() >= 3)
                 {
@@ -53,28 +50,28 @@ int main(int argc, char *argv[])
                     if (keyLength == 0)
                     {
                         headerReaded = false;
-                        keyLengthReaded = false;
+                        segmentStarterReaded = false;
                         buffer.clear();
                         cout << "\n";
                     }
                     else
                     {
                         buffer.erase(0, 3);
-                        keyLengthReaded = true;
-                        currentReadEnded = false;
+                        segmentStarterReaded = true;
+                        segmentEnded = false;
                     }
                 }
             }
 
-            if (currentReadEnded == false)
+            if (segmentEnded == false)
             {
                 while (buffer.length() >= keyLength)
                 {
                     string key = buffer.substr(0, keyLength);
                     if (key == string(keyLength, '1'))
                     {
-                        currentReadEnded = true;
-                        keyLengthReaded = false;
+                        segmentEnded = true;
+                        segmentStarterReaded = false;
                         buffer.erase(0, keyLength);
                         goto next;
                     }
