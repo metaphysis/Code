@@ -7,21 +7,7 @@
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
 #include <algorithm>
-#include <bitset>
-#include <cassert>
-#include <cmath>
-#include <cstring>
-#include <iomanip>
 #include <iostream>
-#include <limits>
-#include <list>
-#include <map>
-#include <numeric>
-#include <queue>
-#include <set>
-#include <sstream>
-#include <stack>
-#include <vector>
 
 using namespace std;
 
@@ -33,14 +19,19 @@ struct edge
     int from, to, weight;
     int in_tree, in_path;
     int next;
-
-    bool operator<(const edge & x) const
-    {
-        return weight < x.weight;
-    }
 };
 
-edge edges_of_input[MAXE], edges_of_query[MAXE], edges_of_path[MAXV], edges_of_used[MAXE];
+bool cmp1(const edge& x, const edge& y)
+{
+    return x.weight < y.weight;
+}
+
+bool cmp2(const edge& x, const edge& y)
+{
+    return x.idx < y.idx;
+}
+
+edge edges_of_input[MAXE], edges_of_query[MAXE], edges_of_path[MAXV];
 int first_of_input[MAXV], first_of_query[MAXV];
 int number_of_vertices, number_of_edges, number_of_queries;
 int parent[MAXV], ranks[MAXV], ancestor[MAXV], visited[MAXV];
@@ -78,22 +69,17 @@ bool union_set(int x, int y)
 }
 
 void kruskal()
-{
-    for (int i = 0; i < number_of_edges; i++)
-        edges_of_used[i] = edges_of_input[i];
+{ 
+    stable_sort(edges_of_input, edges_of_input + number_of_edges, cmp1);
     
-    sort(edges_of_used, edges_of_used + number_of_edges);
-    
-    for (int i = 0; i < number_of_edges; i++)
-        if (union_set(edges_of_used[i].from, edges_of_used[i].to))
+    for (int i = 0; i < number_of_edges; i += 2)
+        if (union_set(edges_of_input[i].from, edges_of_input[i].to))
         {
-            edges_of_input[edges_of_used[i].idx].in_tree = 1;
-
-            if (edges_of_used[i].idx & 1 == 1)
-                edges_of_input[edges_of_used[i].idx - 1].in_tree = 1;
-            else
-                edges_of_input[edges_of_used[i].idx + 1].in_tree = 1;
+            edges_of_input[i].in_tree = 1;
+            edges_of_input[i + 1].in_tree = 1;
         }
+        
+    sort(edges_of_input, edges_of_input + number_of_edges, cmp2);
 }
 
 void dfs(int u)

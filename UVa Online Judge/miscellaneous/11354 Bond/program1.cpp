@@ -116,48 +116,25 @@ void dfs(int u)
         }
 }
 
-void lca(int u)
+int lca1(int u, int v)
 {
-    ancestor[find_set(u)] = u;
+    map<int, int> ancestors;
 
-    for (int i = first_of_input[u]; i != -1; i = edges_of_input[i].next)
-        if (edges_of_input[i].in_path)
-        {
-            int v = edges_of_input[i].to;
-
-            lca(v);
-
-            union_set(u, v);
-            ancestor[find_set(u)] = u;
-        }
-
-    visited[u] = 1;
-
-    for (int i = first_of_query[u]; i != -1; i = edges_of_query[i].next)
-    {
-        int v = edges_of_query[i].to;
-
-        if (visited[v])
-        {
-            int forebear = ancestor[find_set(v)];
-
-            int max_edge1 = -1, uu = u;
-            while (uu != forebear)
-            {
-                max_edge1 = max(max_edge1, edges_of_path[uu].weight);
-                uu = edges_of_path[uu].from;
-            }
-
-            int max_edge2 = -1, vv = v;
-            while (vv != forebear)
-            {
-                max_edge2 = max(max_edge2, edges_of_path[vv].weight);
-                vv = edges_of_path[vv].from;
-            }
-
-            max_edge[edges_of_query[i].idx] = max(max_edge1, max_edge2);
-        }
+    int uu = u, max_edge1 = 0;
+    while (uu != -1) {
+        ancestors[uu] = max_edge1;
+        max_edge1 = max(max_edge1, edges_of_path[uu].weight);
+        uu = edges_of_path[uu].from;
     }
+
+    int vv = v, max_edge2 = 0;
+    while (vv != -1) {
+        if (ancestors.find(vv) != ancestors.end()) break;
+        max_edge2 = max(max_edge2, edges_of_path[vv].weight);
+        vv = edges_of_path[vv].from;
+    }
+
+    return max(ancestors[vv], max_edge2);
 }
 
 int main(int argc, char *argv[])
@@ -188,32 +165,22 @@ int main(int argc, char *argv[])
         make_set();
         kruskal();
 
+        for (int i = 0; i < number_of_vertices; i++)
+            edges_of_path[i].from = -1;
+
         fill(visited, visited + number_of_vertices, 0);
         dfs(0);
         
+        if (cases++ > 0) cout << '\n';
+        
         cin >> number_of_queries;
-
-        idx = 0;
         for (int i = 0; i < number_of_queries; i++)
         {
             cin >> from >> to;
             from--, to--;
 
-            edges_of_query[idx] = (edge){i, from, to, weight, 0, 0, first_of_query[from]};
-            first_of_query[from] = idx++;
-            
-            edges_of_query[idx] = (edge){i, to, from, weight, 0, 0, first_of_query[to]};
-            first_of_query[to] = idx++;
+            cout << lca1(from, to) << '\n';
         }
-
-        fill(visited, visited + number_of_vertices, 0);
-        make_set();
-        lca(0);
-
-        if (cases++ > 0)
-            cout << '\n';
-        for (int i = 0; i < number_of_queries; i++)
-            cout << max_edge[i] << '\n';
     }
 
     return 0;
