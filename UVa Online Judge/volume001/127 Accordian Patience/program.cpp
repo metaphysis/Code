@@ -19,14 +19,14 @@ void print()
 {
     cout << piles.size();
     cout << (piles.size() > 1 ? " piles" : " pile") <<" remaining:";
-    for (int i = 0; i < piles.size(); i++)
-        cout << " " << piles[i].size();
+    for (int i = 0; i < piles.size(); i++) cout << " " << piles[i].size();
     cout << endl;
 }
 
 void getCards(string line)
 {
     istringstream iss(line);
+
     string card;
     while (iss >> card)
     {
@@ -38,16 +38,14 @@ void getCards(string line)
 
 bool canMoveToLeft(int index)
 {
-    return (index > 0 &&
-            (piles[index].back()[0] == piles[index - 1].back()[0] ||
-                piles[index].back()[1] == piles[index - 1].back()[1]));
+    return (index > 0 && (piles[index].back()[0] == piles[index - 1].back()[0] ||
+        piles[index].back()[1] == piles[index - 1].back()[1]));
 }
 
 bool canMoveToThirdLeft(int index)
 {
-    return (index > 2 &&
-            (piles[index].back()[0] == piles[index - 3].back()[0] ||
-                piles[index].back()[1] == piles[index - 3].back()[1]));
+    return (index > 2 && (piles[index].back()[0] == piles[index - 3].back()[0] ||
+        piles[index].back()[1] == piles[index - 3].back()[1]));
 }
 
 void play()
@@ -62,8 +60,7 @@ void play()
         bool moved = false;
         while (index >= 0 && index < piles.size())
         {
-            if (piles[index].size() == 0)
-                break;
+            if (piles[index].size() == 0) break;
                 
             if (canMoveToThirdLeft(index))
             {
@@ -86,22 +83,26 @@ void play()
             index++;
         }
         
-        if (!moved)
-            break;
+        if (!moved) break;
     }
 }
 
-int main(int ac, char *av[])
+int main(int argc, char *argv[])
 {
     string line1, line2;
-    while (getline(cin, line1), line1[0] != '#')
+    while (true)
     {
         piles.clear();
+
+        getline(cin, line1);
+        if (line1.front() == '#') break;
         getCards(line1);
+        
         getline(cin, line2);
         getCards(line2);
         
         play();
+
         print();
     }
     
