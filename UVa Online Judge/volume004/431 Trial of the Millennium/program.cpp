@@ -46,7 +46,8 @@ int main(int argc, char *argv[])
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
 
     string line;
-    
+    int scores[110][250], choices[110][250], n;
+        
     getline(cin, line);
     int cases = stoi(line);
     
@@ -72,34 +73,34 @@ int main(int argc, char *argv[])
             evidences.push_back(data);
         }
         
-        if (c > 1)
-            cout << '\n';
+        if (c > 1) cout << '\n';
 
         sort(evidences.begin(), evidences.end());
         evidence empty;
         evidences.insert(evidences.begin(), empty);
 
-        int scores[110][250] = { 0 }, choices[110][250] = { 0 };
-        int n = evidences.size() - 1;
+        memset(scores, 0, sizeof(scores));
+        memset(choices, 0, sizeof(choices));
+        n = evidences.size() - 1;
 
         for (int i = 1; i <= n; i++)
-            for (int j = evidences[i].hour; j <= time_limit; j++)
+            for (int j = 1; j <= time_limit; j++)
             {
-                if (scores[i - 1][j - evidences[i].hour] + evidences[i].score > scores[i - 1][j])
+                if (j >= evidences[i].hour && scores[i - 1][j - evidences[i].hour] + evidences[i].score > scores[i - 1][j])
                 {
                     choices[i][j] = 1;
                     scores[i][j] = scores[i - 1][j - evidences[i].hour] + evidences[i].score;
                 }
-                else
-                    scores[i][j] = scores[i - 1][j];
+                else scores[i][j] = scores[i - 1][j];
             }
         
         vector<int> selected;
         int last_index = n, pre_time_limit = time_limit;
         int used_hours = 0, max_points = 0;
+
         while (last_index > 0)
         {
-            if (choices[last_index][pre_time_limit] == 1)
+            if (choices[last_index][pre_time_limit])
             {
                 selected.push_back(last_index);
                 pre_time_limit -= evidences[last_index].hour;

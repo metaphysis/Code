@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
 
     int coins[110], cents[25010], n, m;
-    
+
     cin >> n;
     for (int c = 1; c <= n; c++)
     {
@@ -42,21 +42,21 @@ int main(int argc, char *argv[])
             cin >> coins[i];
             total += coins[i];
         }
-        
+
         if (m <= 1)
         {
             cout << total << '\n';
             continue;
         }
-        
+
         int half = total / 2;
-        
-        memset(cents, 0, sizeof(cents));
-        
+
+        memset(cents, 0, sizeof(cents)); 
+
         for (int i = 1; i <= m; i++)
             for (int j = half; j >= coins[i]; j--)
                 cents[j] = max(cents[j], cents[j - coins[i]] + coins[i]);
-            
+
         for (int i = half; i >= 1; i--)
             if (cents[i])
             {
@@ -64,6 +64,6 @@ int main(int argc, char *argv[])
                 break;
             }
     }
-    
+
 	return 0;
 }
