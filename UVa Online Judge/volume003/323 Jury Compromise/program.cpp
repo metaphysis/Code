@@ -57,7 +57,7 @@ void knapsack()
             diff_now += candidates[i].prosecution - candidates[i].defence;
             int diff_best = memo[i - 1][j].sum_of_prosecution - memo[i - 1][j].sum_of_defence;
             
-            if (abs(diff_now) < abs(diff_best) || (abs(diff_now) == abs(diff_best)))
+            if (abs(diff_now) <= abs(diff_best))
             {
                 choosed[i][j] = 1;
                 memo[i][j].sum_of_prosecution = memo[i - 1][j - 1].sum_of_prosecution + candidates[i].prosecution;
