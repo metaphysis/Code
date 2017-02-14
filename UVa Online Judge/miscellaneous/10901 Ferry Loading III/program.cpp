@@ -52,18 +52,17 @@ int main(int argc, char *argv[])
             else right_bank.push((car){j, arrived_time});
         }
         
-        int current_time = 0, left = 1;
+        int current_time = 0, at_left = 1;
         while (true)
         {
             if (left_bank.empty() && right_bank.empty()) break;
 
-            if (left)
+            if (at_left)
             {
                 int loaded = 0;
                 while (!left_bank.empty() && left_bank.front().arrived_time <= current_time && loaded < n)
                 {
                     unloaded_time[left_bank.front().idx] = current_time + t;
-                    //cout << "left->right " << (left_bank.front().idx + 1) << "=" << current_time + t << endl;
                     left_bank.pop();
                     loaded += 1;
                 }
@@ -81,13 +80,13 @@ int main(int argc, char *argv[])
                             current_time = right_bank.front().arrived_time + t;
                         else
                             current_time += t;
-                        left = 0;
+                        at_left = 0;
                     }
                 }
                 else
                 {
                     current_time += t;
-                    left = 0;
+                    at_left = 0;
                 }
             }
             else
@@ -96,7 +95,6 @@ int main(int argc, char *argv[])
                 while (!right_bank.empty() && right_bank.front().arrived_time <= current_time && loaded < n)
                 {
                     unloaded_time[right_bank.front().idx] = current_time + t;
-                    //cout << "right->left " << (right_bank.front().idx + 1) << "=" << current_time + t << endl;
                     right_bank.pop();
                     loaded += 1;
                 }
@@ -114,13 +112,13 @@ int main(int argc, char *argv[])
                             current_time = left_bank.front().arrived_time + t;
                         else
                             current_time += t;
-                        left = 1;
+                        at_left = 1;
                     }
                 }
                 else
                 {
                     current_time += t;
-                    left = 1;
+                    at_left = 1;
                 }
             }
         }
