@@ -27,7 +27,7 @@ struct statement
     int variableValue;      // 变量值
 };
 
-typedef deque < statement > program;
+typedef deque<statement> program;
 
 int timeNeeded[END + 1];    // 每种语句执行所需时间
 int timeQuantum;            // 时间片包含单位时间数
@@ -37,7 +37,7 @@ int valueSetted[26];        // 存储变量的值
 // 模拟程序执行过程
 void execute(deque < program > ready)
 {
-    deque < program > blocked;  // 阻塞队列
+    deque<program> blocked;  // 阻塞队列
 
     while (!ready.empty())
     {
@@ -71,8 +71,7 @@ void execute(deque < program > ready)
                         timeRemain = 0;
                         intoBlockedQueue = true;
                     }
-                    else
-                        isLocked = true;
+                    else isLocked = true;
                     break;
                     
                 case UNLOCK:
@@ -107,11 +106,10 @@ statement parseToStatement(string line, int programId)
     if (line.find('=') != line.npos)
     {
         istringstream iss(line);
-        s.statementType = ASSIGNMENT;
-        iss >> s.variableName;
         string blank;
-        iss >> blank;
-        iss >> s.variableValue;
+        
+        s.statementType = ASSIGNMENT;
+        iss >> s.variableName >> blank >> s.variableValue;
     }
     else if (line == "end")
     {
