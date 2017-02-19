@@ -34,52 +34,30 @@ int main(int argc, char *argv[])
 
     while (cin >> line, line != "end")
     {
-        int stacks = 0, containers = line.length();
+        vector<string> stacks;
+        string empty;
         
-        while (line.length() > 0)
+        for (int i = 0; i < line.length(); i++)
         {
-            vector<char> last(line.length());
-            vector<int> lis(line.length(), 1);
-            vector<vector<int>> sequences(line.length());
-            
-            for (int i = 0; i < line.length(); i++)
+            bool placed = false;
+            for (int j = 0; j < stacks.size(); j++)
             {
-                last[i] = line[i];
-                sequences[i].push_back(i);
-            }
-
-            for (int i = 1; i < line.length(); i++)
-            {
-                for (int j = 0; j < i; j++)
+                if (line[i] <= stacks[j].back())
                 {
-                    if (last[j] >= line[i] && (lis[j] + 1) > lis[i])
-                    {
-                        lis[i] = lis[j] + 1;
-                        sequences[i].assign(sequences[j].begin(), sequences[j].end());
-                        sequences[i].push_back(i);
-                    }
+                    stacks[j].push_back(line[i]);
+                    placed = true;
+                    break;
                 }
             }
             
-            stacks++;
-            
-            int maxLength = 1, maxSequences = 0;
-            for (int i = 1; i < line.length(); i++)
+            if (!placed)
             {
-                if (lis[i] > maxLength)
-                {
-                    maxLength = lis[i];
-                    maxSequences = i;
-                }
+                stacks.push_back(empty);
+                stacks.back().push_back(line[i]);
             }
-            
-            //cout << "maxLength = " << maxLength << '\n';
-            
-            for (int i = sequences[maxSequences].size() - 1; i >= 0; i--)
-                line.erase(line.begin() + sequences[maxSequences][i]);
         }
-        
-        cout << "Case " << ++cases << ": " << stacks << '\n';
+
+        cout << "Case " << ++cases << ": " << stacks.size() << '\n';
     }
     
     return 0;
