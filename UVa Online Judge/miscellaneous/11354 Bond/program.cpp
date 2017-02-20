@@ -29,22 +29,19 @@ const int MAXV = 50010, MAXE = 100010;
 
 struct edge
 {
-    int idx;
-    int from, to, weight;
-    int in_tree, in_path;
-    int next;
+    int id, u, v, weight, enabled, next;
 
-    bool operator<(const edge & x) const
+    bool operator<(const edge& x) const
     {
         return weight < x.weight;
     }
 };
 
-edge edges_of_input[MAXE], edges_of_query[MAXE], edges_of_path[MAXV], edges_of_used[MAXE];
-int first_of_input[MAXV], first_of_query[MAXV];
+edge input[MAXE], query[MAXV], tree[MAXV], path[MAXV];
+int idx, first_input[MAXV], first_query[MAXV], first_tree[MAXV];
 int number_of_vertices, number_of_edges, number_of_queries;
 int parent[MAXV], ranks[MAXV], ancestor[MAXV], visited[MAXV];
-int max_edge[MAXV];
+int risk[MAXV];
 
 void make_set()
 {
@@ -79,20 +76,21 @@ bool union_set(int x, int y)
 
 void kruskal()
 {
-    for (int i = 0; i < number_of_edges; i++)
-        edges_of_used[i] = edges_of_input[i];
-    
-    sort(edges_of_used, edges_of_used + number_of_edges);
-    
-    for (int i = 0; i < number_of_edges; i++)
-        if (union_set(edges_of_used[i].from, edges_of_used[i].to))
-        {
-            edges_of_input[edges_of_used[i].idx].in_tree = 1;
+    idx = 0;
+    fill(first_tree, first_tree + number_of_vertices, -1);
 
-            if (edges_of_used[i].idx & 1 == 1)
-                edges_of_input[edges_of_used[i].idx - 1].in_tree = 1;
-            else
-                edges_of_input[edges_of_used[i].idx + 1].in_tree = 1;
+    make_set();
+    sort(input, input + number_of_edges);
+
+    for (int i = 0; i < number_of_edges; i++)
+        if (union_set(input[i].u, input[i].v))
+        {
+            edge e = input[i];
+            tree[idx] = (edge){idx, e.u, e.v, e.weight, 0, first_tree[e.u]};
+            first_tree[e.u] = idx++;
+
+            tree[idx] = (edge){idx, e.v, e.u, e.weight, 0, first_tree[e.v]};
+            first_tree[e.v] = idx++;
         }
 }
 
@@ -100,30 +98,29 @@ void dfs(int u)
 {
     visited[u] = 1;
 
-    for (int i = first_of_input[u]; i != -1; i = edges_of_input[i].next)
-        if (edges_of_input[i].in_tree)
+    for (int i = first_tree[u]; i != -1; i = tree[i].next)
+    {
+        int v = tree[i].v;
+        if (!visited[v])
         {
-            int v = edges_of_input[i].to;
-            if (!visited[v])
-            {
-                edges_of_input[i].in_path = 1;
+            tree[i].enabled = 1;
 
-                edges_of_path[v].from = u;
-                edges_of_path[v].weight = edges_of_input[i].weight;
+            path[v].u = u;
+            path[v].weight = tree[i].weight;
 
-                dfs(v);
-            }
+            dfs(v);
         }
+    }
 }
 
 void lca(int u)
 {
     ancestor[find_set(u)] = u;
 
-    for (int i = first_of_input[u]; i != -1; i = edges_of_input[i].next)
-        if (edges_of_input[i].in_path)
+    for (int i = first_tree[u]; i != -1; i = tree[i].next)
+        if (tree[i].enabled) 
         {
-            int v = edges_of_input[i].to;
+            int v = tree[i].v;
 
             lca(v);
 
@@ -133,29 +130,29 @@ void lca(int u)
 
     visited[u] = 1;
 
-    for (int i = first_of_query[u]; i != -1; i = edges_of_query[i].next)
+    for (int i = first_query[u]; i != -1; i = query[i].next)
     {
-        int v = edges_of_query[i].to;
+        int v = query[i].v;
 
         if (visited[v])
         {
             int forebear = ancestor[find_set(v)];
 
-            int max_edge1 = -1, uu = u;
-            while (uu != forebear)
+            int risk1 = -1, from = u;
+            while (from != forebear)
             {
-                max_edge1 = max(max_edge1, edges_of_path[uu].weight);
-                uu = edges_of_path[uu].from;
+                risk1 = max(risk1, path[from].weight);
+                from = path[from].u;
             }
 
-            int max_edge2 = -1, vv = v;
-            while (vv != forebear)
+            int risk2 = -1, to = v;
+            while (to != forebear)
             {
-                max_edge2 = max(max_edge2, edges_of_path[vv].weight);
-                vv = edges_of_path[vv].from;
+                risk2 = max(risk2, path[to].weight);
+                to = path[to].u;
             }
 
-            max_edge[edges_of_query[i].idx] = max(max_edge1, max_edge2);
+            risk[query[i].id] = max(risk1, risk2);
         }
     }
 }
@@ -164,56 +161,54 @@ int main(int argc, char *argv[])
 {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
 
-    int cases = 0, idx, from, to, weight;
+    int cases = 0, u, v, weight;
 
-    while (cin >> number_of_vertices >> number_of_edges)
+    while (cin >> number_of_vertices)
     {
-        fill(first_of_input, first_of_input + number_of_vertices, -1);
-        fill(first_of_query, first_of_query + number_of_vertices, -1);
-
         idx = 0;
+        fill(first_input, first_input + number_of_vertices, -1);
+
+        cin >> number_of_edges;
         for (int i = 0; i < number_of_edges; i++)
         {
-            cin >> from >> to >> weight;
-            from--, to--;
+            cin >> u >> v >> weight;
+            u--, v--;
 
-            edges_of_input[idx] = (edge){idx, from, to, weight, 0, 0, first_of_input[from]};
-            first_of_input[from] = idx++;
+            input[idx] = (edge){idx, u, v, weight, 0, first_input[u]};
+            first_input[u] = idx++;
 
-            edges_of_input[idx] = (edge){idx, to, from, weight, 0, 0, first_of_input[to]};
-            first_of_input[to] = idx++;
+            input[idx] = (edge){idx, v, u, weight, 0, first_input[v]};
+            first_input[v] = idx++;
         }
         number_of_edges = idx;
 
-        make_set();
         kruskal();
 
         fill(visited, visited + number_of_vertices, 0);
         dfs(0);
-        
-        cin >> number_of_queries;
 
         idx = 0;
+        fill(first_query, first_query + number_of_vertices, -1);
+
+        cin >> number_of_queries;
         for (int i = 0; i < number_of_queries; i++)
         {
-            cin >> from >> to;
-            from--, to--;
+            cin >> u >> v;
+            u--, v--;
 
-            edges_of_query[idx] = (edge){i, from, to, weight, 0, 0, first_of_query[from]};
-            first_of_query[from] = idx++;
+            query[idx] = (edge){i, u, v, 0, 0, first_query[u]};
+            first_query[u] = idx++;
             
-            edges_of_query[idx] = (edge){i, to, from, weight, 0, 0, first_of_query[to]};
-            first_of_query[to] = idx++;
+            query[idx] = (edge){i, v, u, 0, 0, first_query[v]};
+            first_query[v] = idx++;
         }
 
         fill(visited, visited + number_of_vertices, 0);
         make_set();
         lca(0);
 
-        if (cases++ > 0)
-            cout << '\n';
-        for (int i = 0; i < number_of_queries; i++)
-            cout << max_edge[i] << '\n';
+        if (cases++ > 0) cout << '\n';
+        for (int i = 0; i < number_of_queries; i++) cout << risk[i] << '\n';
     }
 
     return 0;

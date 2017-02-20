@@ -1,0 +1,30 @@
+7
+2 2 4
+0 left
+1 left
+2 right
+3 left
+3 5 7
+0 left
+1 left
+2 left
+3 left
+5 left
+5 right
+11 right
+1 5 2
+0 left
+0 left
+2 1 2
+3 right
+4 left
+1 10 3
+0 left
+10 right
+30 left
+1113 1072 2
+8631 left
+12526 left
+1113 1072 2
+8631 right
+12526 right

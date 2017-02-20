@@ -62,7 +62,7 @@ int main(int argc, char *argv[])
         }
 
         int indexer = n, capacity = t;
-        vector < int >boxes;
+        vector<int> boxes;
 
         while (indexer > 0)
         {

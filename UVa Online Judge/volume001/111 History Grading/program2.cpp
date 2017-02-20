@@ -17,7 +17,7 @@ vector < int > order, events;
 
 int getScores()
 {
-    vector < int > length;
+    vector<int> length;
     
     length.push_back(events.front());
 
