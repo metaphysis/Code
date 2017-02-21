@@ -8,7 +8,6 @@ struct TreeNode
     TreeNode *parent, *leftChild, *rightChild;
 };
 
-// 使用指向根的指针进行中序遍历。
 void preorderTraversal(TreeNode* root)
 {
     if (root == NULL)
@@ -19,7 +18,6 @@ void preorderTraversal(TreeNode* root)
     preorderTraversal(root->rightChild);
 }
 
-// 使用指向根的指针进行中序遍历。
 void inorderTraversal(TreeNode* root)
 {
     if (root == NULL)
@@ -30,7 +28,6 @@ void inorderTraversal(TreeNode* root)
     inorderTraversal(root->rightChild);
 }
 
-// 使用指向根的指针进行中序遍历。
 void postorderTraversal(TreeNode* root)
 {
     if (root == NULL)
