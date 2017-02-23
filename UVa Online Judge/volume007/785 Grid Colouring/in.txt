@@ -2,13 +2,11 @@
 
   XXXXXXXXXXXXXXXXXXXX                                                             
   X      X           X                                                                    
-  X * *  XXXXXXXX .  X
+  X # #  XXXXXXXX /  X
   X             X    X                                                       
   XXXXXXXXXXXXXXXXXXXX
 
-
-
-_____________________________
+________________
 
 
    XXXXXXXXXXXX       XXXXXX
@@ -20,7 +18,6 @@ _____________________________
    XX     XXXX  X  X  /   X
     X           X  X    / X
     XXXXXXXXXXXXX  XXXXXXXX
-
 
 __________________________
   AAAAAAAAAAAAAAAAAAAA
