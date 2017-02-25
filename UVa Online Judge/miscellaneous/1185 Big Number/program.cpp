@@ -1,8 +1,8 @@
 // Big Number
 // UVa ID: 1185
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2016-05-22
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
@@ -13,8 +13,7 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-    cin.tie(0);
-    cout.sync_with_stdio(false);
+    cin.tie(0); cout.tie(0); ios_base::sync_with_stdio(false);
     
     int cases, n;
     cin >> cases;

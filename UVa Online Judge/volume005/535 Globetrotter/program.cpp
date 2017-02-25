@@ -1,8 +1,8 @@
 // Globetrotter
 // UVa ID: 535
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2016-08-18
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
@@ -25,12 +25,12 @@
 
 using namespace std;
 
-double greatCircleDistance(double R, double plat, double plong, double qlat, double qlong)
+double great_circle_distance(double R, double plat, double plong, double qlat, double qlong)
 {
     return R * acos(sin(plat) * sin(qlat) + cos(plat) * cos(qlat) * cos(plong - qlong));
 }
 
-double haversineFormula(double R, double plat, double plong, double qlat, double qlong)
+double haversine_formula(double R, double plat, double plong, double qlat, double qlong)
 {
     double dlon = qlong - plong;
     double dlat = qlat - plat;
@@ -66,15 +66,7 @@ int main(int argc, char *argv[])
         }
         else
         {
-            //if (from == to)
-            //{
-            //    cout << "0 km\n";
-            //    continue;
-            //}
-            //double D = greatCircleDistance(R, location[from].first, location[from].second, location[to].first, location[to].second);
-            //cout << fixed << setprecision(0) << D << " km\n";
-            
-            double D = haversineFormula(R, location[from].first, location[from].second, location[to].first, location[to].second);
+            double D = haversine_formula(R, location[from].first, location[from].second, location[to].first, location[to].second);
             cout << fixed << setprecision(0) << D << " km\n";
         }
     }
