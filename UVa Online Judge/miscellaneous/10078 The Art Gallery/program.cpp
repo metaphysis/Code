@@ -1,10 +1,10 @@
-// Useless Tile Packers （没用的瓷砖打包公司）
-// PC/UVa IDs: 111405/10065, Popularity: C, Success rate: average Level: 3
+// The Art Gallery
+// UVa ID: 10078
 // Verdict: Accepted
-// Submission Date: 2016-08-13
+// Submission Date: 2017-02-25
 // UVa Run Time: 0.000s
 //
-// 版权所有（C）2016，邱秋。metaphysis # yeah dot net
+// 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
 #include <algorithm>
 #include <iomanip>
@@ -38,21 +38,6 @@ struct polygon
 	int numberOfVertex;
 	point vertex[MAX_VERTICES];
 };
-
-// 利用有向面积计算多边形的面积，注意最后结果取绝对值，因为顶点顺序可能并不是按
-// 逆时针方向给出。
-double area(point vertex[], int numberOfVertex)
-{
-	double areaOfPolygon = 0.0;
-
-	for (int i = 0; i < numberOfVertex; i++)
-	{
-		int j = (i + 1) % numberOfVertex;
-		areaOfPolygon += (vertex[i].x * vertex[j].y - vertex[j].x * vertex[i].y);
-	}
-
-	return fabs(areaOfPolygon / 2.0);
-}
 
 // 叉积，判断点a，b，c组成的两条线段的转折方向。当叉积大于0，则形成一个右拐，
 // 否则共线（cp = 0）或左拐（cp < 0）。
@@ -131,25 +116,19 @@ polygon jarvisConvexHull(point vertex[], int numberOfVertex)
 int main(int ac, char *av[])
 {
 	point tile[MAX_VERTICES];
-	int numberOfVertex, currentCase = 1;
-	
-	cout.precision(2);
-	cout.setf(ios::fixed | ios::showpoint);
+	int numberOfVertex;
 
 	while (cin >> numberOfVertex, numberOfVertex)
 	{
 		for (int i = 0; i < numberOfVertex; i++)
 			cin >> tile[i].x >> tile[i].y;
 
-		double used = area(tile, numberOfVertex);
-
 		polygon container = jarvisConvexHull(tile, numberOfVertex);
 
-		cout << "Tile #" << currentCase++ << endl;
-		double all = area(container.vertex, container.numberOfVertex);
-		double rate = (1.0 - used / all) * 100.0;
-		cout << "Wasted Space = " << rate << " %" << endl;
-		cout << endl;
+		if (container.numberOfVertex == numberOfVertex)
+            cout << "No\n";
+        else
+            cout << "Yes\n";
 	}
 
 	return 0;

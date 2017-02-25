@@ -168,9 +168,7 @@ int main(int argc, char *argv[])
         for (int i = n - 1; i >= 0; i--)
         {
             cin >> x >> y;
-            vertices[i] = (point)
-            {
-            x, y};
+            vertices[i] = (point){x, y};
         }
 
         for (int i = 0; i < n; i++)
