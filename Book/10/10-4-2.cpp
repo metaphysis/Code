@@ -22,7 +22,7 @@ edge edges[EDGES];
 
 // edges为边列表，predecessor保存各顶点的前驱，n顶点数目，m为边的数目，
 // source为起始顶点的序号。
-bool bellman_ford(edge edges[], int predecessor[], int n, int m, int source)
+bool bellmanFord(edge edges[], int predecessor[], int n, int m, int source)
 {
     // 初始化距离为无限大。各顶点的前驱顶点为未定义。
     for (int i = 0; i <= n; i++)
@@ -81,7 +81,7 @@ int main(int argc, char *argv[])
             edges[i] = (edge){x, y, t};
         }
         
-        bellman_ford(edges, predecessor, n, m, 0);
+        bellmanFord(edges, predecessor, n, m, 0);
     }
     
 	return 0;
