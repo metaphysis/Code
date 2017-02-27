@@ -78,7 +78,6 @@ void dfs(int u)
         if (!visited[input[i].v])
         {
             father[input[i].v] = u;
-
             dfs(input[i].v);
             union_set(u, input[i].v);
             ancestor[find_set(u)] = u;

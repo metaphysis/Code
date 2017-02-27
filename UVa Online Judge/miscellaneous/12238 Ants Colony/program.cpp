@@ -1,3 +1,11 @@
+// Ants Colony
+// UVa ID: 12238
+// Verdict: Accepted
+// Submission Date: 2017-02-27
+// UVa Run Time: 0.290s
+//
+// 版权所有（C）2017，邱秋。metaphysis # yeah dot net
+
 #include <algorithm>
 #include <bitset>
 #include <cassert>
@@ -19,11 +27,11 @@
 
 using namespace std;
 
-const int MAXV = 5010, MAXE = 10010;
+const int MAXV = 100010, MAXE = 200010;
 
 struct edge
 {
-    int id, u, v, next;
+    int id, u, v, weight, next;
 };
 
 edge input[MAXE], query[MAXE];
@@ -31,6 +39,7 @@ int idx, head_input[MAXV], head_query[MAXV];
 int number_of_vertices, number_of_queries;
 int parent[MAXV], ranks[MAXV], ancestor[MAXV], visited[MAXV];
 int father[MAXV], colored[MAXV], lca[MAXV];
+long long int dist[MAXV];
 
 void make_set()
 {
@@ -70,8 +79,10 @@ void dfs(int u)
         if (!visited[input[i].v])
         {
             father[input[i].v] = u;
+            dist[input[i].v] = dist[u] + input[i].weight;
 
             dfs(input[i].v);
+
             union_set(u, input[i].v);
             ancestor[find_set(u)] = u;
         }
@@ -87,20 +98,20 @@ int main(int argc, char *argv[])
 {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
     
-    int u, v;
+    int u, v, weight;
     while (cin >> number_of_vertices, number_of_vertices)
     {
         idx = 0;
         memset(head_input, -1, sizeof(head_input));
 
-        for (int i = 0; i < number_of_vertices - 1; i++)
+        for (int from = 1; from <= number_of_vertices - 1; from++)
         {
-            cin >> u >> v;
+            cin >> v >> weight;
 
-            input[idx] = (edge){idx, u, v, head_input[u]};
-            head_input[u] = idx++;
+            input[idx] = (edge){idx, from, v, weight, head_input[from]};
+            head_input[from] = idx++;
 
-            input[idx] = (edge){idx, v, u, head_input[v]};
+            input[idx] = (edge){idx, v, from, weight, head_input[v]};
             head_input[v] = idx++;
         }
 
@@ -112,22 +123,28 @@ int main(int argc, char *argv[])
         {
             cin >> u >> v;
 
-            query[idx] = (edge){i, u, v, head_query[u]};
+            query[idx] = (edge){i, u, v, 0, head_query[u]};
             head_query[u] = idx++;
             
-            query[idx] = (edge){i, v, u, head_query[v]};
+            query[idx] = (edge){i, v, u, 0, head_query[v]};
             head_query[v] = idx++;
         }
 
         memset(visited, 0, sizeof(visited));
         memset(colored, 0, sizeof(colored));
         memset(father, -1, sizeof(father));
+        memset(dist, 0, sizeof(dist));
         make_set();
         
-        dfs(1);
-        
+        dfs(0);
+
         for (int i = 0; i < number_of_queries; i++)
-            cout << lca[i] << '\n';
+        {
+            int aa = lca[i], uu = query[2 * i].u, vv = query[2 * i].v;
+            if (i > 0) cout << ' ';
+            cout << (dist[uu] + dist[vv] - 2 * dist[aa]);
+        }
+        cout << '\n';
     }
 
     return 0;
