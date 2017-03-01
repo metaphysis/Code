@@ -13,6 +13,8 @@
 #include <set>
 #include <sstream>
 #include <stack>
+#include <unordered_map>
+#include <unordered_set>
 #include <vector>
 
 using namespace std;
@@ -22,29 +24,10 @@ const int MAXV = 10000;
 vector<int> edges[MAXV];
 int parent[MAXV], visited[MAXV];
 
-int lca(int u, int v)
-{
-    set<int> ancestors;
-
-    int uu = u;
-    while (uu != -1) {
-        ancestors.insert(uu);
-        uu = parent[uu];
-    }
-
-    int vv = v;
-    while (vv != -1) {
-        if (ancestors.find(vv) != ancestors.end()) return vv;
-        vv = parent[vv];
-    }
-
-    return -1;
-}
-
 void dfs(int u)
 {
     visited[u] = 1;
-    
+
     for (auto v : edges[u])
         if (!visited[v])
         {
@@ -53,35 +36,54 @@ void dfs(int u)
         }
 }
 
+int lca(int u, int v)
+{
+    unordered_set<int> ancestors;
+
+    while (u != -1) {
+        ancestors.insert(u);
+        u = parent[u];
+    }
+
+    while (v != -1) {
+        if (ancestors.find(v) != ancestors.end())
+            return v;
+        v = parent[v];
+    }
+}
+
 int main(int argc, char *argv[])
 {
-    int n, m, u, v;
+    int n;
 
     while (cin >> n)
     {
-        for (int i = 0; i < n; i++)
+        for (int u = 0; u < n; u++)
+            edges[u].clear();
+
+        for (int u = 0, m; u < n; u++)
         {
-            edges[i].clear();
             cin >> m;
-            for (int j = 0, k = 0; j < m; j++)
+            for (int j = 0, v; j < m; j++)
             {
-                cin >> k;
-                k--;
-                edges[i].push_back(k);
+                cin >> v;
+                v--;
+                edges[u].push_back(v);
+                edges[v].push_back(u);
             }
         }
 
-        fill(parent, parent + n, -1);
-        fill(visited, visited + n, 0);
+        memset(parent, -1, sizeof(parent));
+        memset(visited, 0, sizeof(visited));
+
         dfs(0);
 
         cin >> n;
-        for (int i = 0; i < n; i++)
+        for (int i = 0, u, v; i < n; i++)
         {
             cin >> u >> v;
-            u--, v--;
             cout << "LCA of " << u << " and " << v << " is ";
-            cout << lca(u, v) << '\n';
+            cout << (lca(--u, --v) + 1) << '\n';
         }
     }
 }
