@@ -1,8 +1,8 @@
 // Ecosystem
 // UVa ID: 626
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2017-03-02
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
@@ -45,12 +45,18 @@ int main(int argc, char *argv[])
         for (int i = 1; i <= n; i++)
             for (int j = 1; j <= n; j++)
                 for (int k = 1; k <= n; k++)
+                {
+                    if (i == j || j == k || k == i) continue;
+                    
                     if (grid[i][j] && grid[j][k] && grid[k][i])
                      {
-                        if (i == j || j == k || k == i) continue;
-                        cout << i << ' ' << j << ' ' << k << '\n';
-                        total++;
+                        if ((i < j && j < k) || (i > j && j > k))
+                        {
+                            cout << i << ' ' << j << ' ' << k << '\n';
+                            total++;
+                        }
                      }
+                 }
         cout << "total:" << total << "\n\n";
     }
     

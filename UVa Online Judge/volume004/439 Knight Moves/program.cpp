@@ -57,7 +57,6 @@ int main(int argc, char *argv[])
         }
         
         cout << "To get from " << from << " to " << to << " takes " << moves[end_row][end_column] << " knight moves." << endl;
-
     }
     
 	return 0;
