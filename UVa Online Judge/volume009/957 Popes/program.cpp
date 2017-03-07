@@ -27,57 +27,60 @@
 
 using namespace std;
 
-int Y, P, L;
-
 int main(int argc, char *argv[])
 {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
-    
-    while (cin >> Y)
-    {
-        cin >> P;
-        
-        deque<int> popes;
-        int maxCount = 0, maxStart = 0, maxEnd = 0;
-        
-        cin >> L;
-        popes.push_back(L);
 
-        maxCount = 1, maxStart = L, maxEnd = L;
-        
-        for (int i = 2; i <= P; i++)
+    int period, popes, year;
+
+    while (cin >> period)
+    {
+        cin >> popes;
+
+        deque < int >years;
+        int maxCount = 0, maxStart = 0, maxEnd = 0;
+
+        cin >> year;
+        years.push_back(year);
+        maxCount = 1, maxStart = year, maxEnd = year;
+
+        for (int i = 2; i <= popes; i++)
         {
-            cin >> L;
-            if (L - popes.front() < Y)
+            cin >> year;
+            if (year - years.front() < period)
             {
-                popes.push_back(L);
+                years.push_back(year);
             }
             else
             {
-                if (popes.size() > maxCount)
+                if (years.size() > maxCount)
                 {
-                    maxCount = popes.size(), maxStart = popes.front(), maxEnd = popes.back();
+                    maxCount = years.size();
+                    maxStart = years.front();
+                    maxEnd = years.back();
                 }
 
-                while (!popes.empty())
+                while (!years.empty())
                 {
-                    if (L - popes.front() < Y)
+                    if (year - years.front() < period)
                     {
-                        popes.push_back(L);
+                        years.push_back(year);
                         break;
                     }
-                    popes.pop_front();
+                    years.pop_front();
                 }
             }
         }
 
-        if (popes.size() > maxCount)
+        if (years.size() > maxCount)
         {
-            maxCount = popes.size(), maxStart = popes.front(), maxEnd = popes.back();
+            maxCount = years.size();
+            maxStart = years.front();
+            maxEnd = years.back();
         }
-      
+
         cout << maxCount << ' ' << maxStart << ' ' << maxEnd << '\n';
     }
-    
+
     return 0;
 }
