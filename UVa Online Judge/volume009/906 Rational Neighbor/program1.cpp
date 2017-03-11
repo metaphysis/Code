@@ -31,24 +31,18 @@ int main(int argc, char *argv[])
 {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
 
-    long long a, b, c, d, e, f;
-    string epsilon;
+    long long a, b;
+    double epsilon;
     
     while (cin >> a >> b >> epsilon)
     {
-        while (epsilon.back() == '0') epsilon.erase(epsilon.end() - 1);
-        while (epsilon.front() != '.') epsilon.erase(epsilon.begin());
-        if (epsilon.front() == '.') epsilon.erase(epsilon.begin());
-        
-        e = 0, f = 1;
-        for (int i = 0; i < epsilon.length(); i++)
-            e = e * 10 + epsilon[i] - '0', f *= 10;
-
-        for (d = 1; ; d++)
+        long double r1 = (long double)a / b, r2;
+        for (long long d = 1, c; ; d++)
         {
-            c = a * d / b;
+            c = (long long)(r1 * d);
             while (a * d >= b * c) c++;
-            if ((b * c - a * d) * f - b * d * e <= 0)
+            r2 = (long double)c / d;
+            if (r2 - r1 <= epsilon)
             {
                 cout << c << ' ' << d << '\n';
                 break;
