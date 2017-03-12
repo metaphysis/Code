@@ -150,6 +150,19 @@ pair<string, string> divide(string number1, string number2)
     return make_pair(quotient, remainder);
 }
 
+int mod(string number1, int number2)
+{
+    int remainder = 0;
+
+    for (int i = 0; i < number1.length(); i++)
+    {
+        remainder = remainder * BASE + (number1[i] - '0');
+        remainder %= number2;
+    }
+
+    return remainder;
+}
+
 int main(int argc, char *argv[])
 {
     string number1, number2;
