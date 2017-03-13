@@ -1,10 +1,36 @@
-#include <iostream>
+// Show the Sequence
+// UVa ID: 997
+// Verdict: Accepted
+// Submission Date: 2017-03-13
+// UVa Run Time: 0.000s
+//
+// 版权所有（C）2017，邱秋。metaphysis # yeah dot net
+
 #include <algorithm>
+#include <bitset>
+#include <cassert>
+#include <cmath>
+#include <cstring>
+#include <iomanip>
+#include <iostream>
+#include <limits>
+#include <list>
+#include <map>
+#include <numeric>
+#include <queue>
+#include <set>
+#include <sstream>
+#include <stack>
+#include <unordered_map>
+#include <unordered_set>
+#include <vector>
 
 using namespace std;
 
 string add(string, string);
 string subtract(string, string);
+
+vector<string> result;
 
 // 十进制下的四则运算。
 const int BASE = 10;
@@ -151,61 +177,68 @@ string multiplicate(string number1, string number2)
     return number3;
 }
 
-// 非负整数的除法。
-pair<string, string> divide(string number1, string number2)
+void dfs(string sequence, int terms)
 {
-    string row, quotient, remainder;
-    for (int i = 0; i < number1.length(); i++)
-    {
-        // 将试除数不断左移，加上被除数的对应位。
-        row.push_back(number1[i]);
-        quotient.push_back('0');
-        
-        // 去除未除尽数的前导零。
-        zeroJustify(row);
-        
-        // 当试除数大于除数时，将对应位的商加1然后减去除数，重复此步骤直到试除数
-        // 小于除数。
-        while (greaterOrEqual(row, number2))
+    if (sequence.front() == '[') sequence.erase(sequence.begin());
+    if (sequence.back() == ']') sequence.erase(sequence.end() - 1);
+    
+    string number, remainder;
+    char operators;
+    
+    for (int i = 0; i < sequence.length(); i++)
+        if (sequence[i] != '+' && sequence[i] != '*')
+            number += sequence[i];
+        else
         {
-            quotient.back() += 1;
-            row = subtract(row, number2);
+            remainder = sequence.substr(i + 1);
+            operators = sequence[i];
+            break;
+        }   
+
+    if (operators == '+' || operators == '*')
+    {
+        dfs(remainder, terms);
+        
+        if (operators == '+')
+        {
+            result.insert(result.begin(), number);
+            for (int i = 1; i < terms; i++)
+                result[i] = add(result[i], result[i - 1]);
+        }
+        else
+        {
+            result.front() = multiplicate(number, result.front());
+            for (int i = 1; i < terms; i++)
+                result[i] = multiplicate(result[i], result[i - 1]);
         }
     }
-
-    // 获取余数。
-    remainder = row;
-
-    // 去除前导零。
-    zeroJustify(quotient);
-    zeroJustify(remainder);
-
-    return make_pair(quotient, remainder);
-}
-
-int mod(string number1, int number2)
-{
-    int remainder = 0;
-
-    for (int i = 0; i < number1.length(); i++)
-    {
-        remainder = remainder * BASE + (number1[i] - '0');
-        remainder %= number2;
+    else
+    {        
+        for (int i = 0; i < terms; i++)
+            result.push_back(number);
     }
-
-    return remainder;
 }
 
 int main(int argc, char *argv[])
 {
-    string number1, number2;
-
-    while (cin >> number1 >> number2)
+    cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
+    
+    string sequence;
+    int terms;
+    
+    while (cin >> sequence >> terms)
     {
-        //pair<string, string> result = divide(number1, number2);
-        //cout << result.first << ' ' << result.second << '\n';
-        cout << subtract(number1, number2) << '\n';
+        result.clear();
+        
+        dfs(sequence, terms);
+        
+        for (int i = 0; i < terms; i++)
+        {
+            if (i > 0) cout << ' ';
+            cout << result[i];
+        }
+        cout << '\n';
     }
-
+    
     return 0;
 }
