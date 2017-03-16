@@ -1,0 +1,260 @@
+NO
+
+NO
+
+NO
+
+NO
+
+NO
+
+NO
+
+YES
+1 C
+3 D
+5 C
+6 D
+7 D
+
+NO
+
+NO
+
+NO
+
+YES
+2 B
+7 C
+
+YES
+7 A
+
+YES
+1 C
+
+YES
+
+NO
+
+YES
+4 B
+
+NO
+
+NO
+
+NO
+
+NO
+
+YES
+6 D
+
+NO
+
+NO
+
+NO
+
+NO
+
+NO
+
+NO
+
+NO
+
+YES
+7 D
+
+YES
+1 D
+4 D
+5 D
+
+NO
+
+NO
+
+NO
+
+NO
+
+NO
+
+YES
+4 B
+9 B
+
+NO
+
+YES
+4 B
+6 C
+
+NO
+
+YES
+5 A
+
+YES
+2 D
+
+NO
+
+NO
+
+NO
+
+NO
+
+YES
+2 C
+
+NO
+
+NO
+
+NO
+
+NO
+
+YES
+2 B
+4 A
+9 D
+
+YES
+5 A
+6 A
+
+NO
+
+NO
+
+YES
+8 A
+
+NO
+
+NO
+
+NO
+
+NO
+
+NO
+
+YES
+1 B
+3 D
+
+NO
+
+NO
+
+NO
+
+YES
+3 B
+4 D
+6 B
+7 B
+
+NO
+
+YES
+
+NO
+
+YES
+1 A
+4 A
+5 A
+8 A
+
+NO
+
+YES
+1 D
+3 C
+5 D
+6 D
+7 D
+
+YES
+5 A
+7 B
+9 B
+
+NO
+
+NO
+
+NO
+
+NO
+
+NO
+
+NO
+
+YES
+2 A
+6 A
+9 A
+
+NO
+
+NO
+
+NO
+
+NO
+
+NO
+
+NO
+
+NO
+
+NO
+
+NO
+
+YES
+2 D
+4 D
+5 D
+6 D
+
+NO
+
+NO
+
+NO
+
+YES
+1 B
+8 C
+
+NO
+
+YES
+1 D
+6 C
+
+NO
+
+NO
+
+YES
+3 A
+6 A
+7 B
+9 A
+
+NO
+
+NO

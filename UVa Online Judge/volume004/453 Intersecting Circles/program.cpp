@@ -71,7 +71,7 @@ int main(int argc, char *argv[])
             continue;
         }
 
-        if (fabs(distance1 + r2 - r1) < epsilon)
+        if (fabs(distance1 - fabs(r1 - r2)) < epsilon)
         {
             x1 += r1 / distance1 * (x2 - x1);
             y1 += r1 / distance1 * (y2 - y1);

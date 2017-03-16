@@ -28,7 +28,7 @@ double calWidth(double radius[], int m, int used[])
 	double width = 0.0;
 	cycle packedCycles[MAXN];
 
-	packedCycles[0] = (cycle){radius[used[0]], radius[used[0]], radius[used[0]]};
+	packedCycles[0] = cycle{radius[used[0]], radius[used[0]], radius[used[0]]};
 	for (int i = 1; i < m; i++)
 	{
 		for (int j = i - 1; j >= 0; j--)
