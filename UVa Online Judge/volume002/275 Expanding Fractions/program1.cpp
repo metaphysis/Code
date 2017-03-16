@@ -17,21 +17,18 @@ vector < bool > appeared(1001);
 
 int main(int argc, char *argv[])
 {
-    cin.tie(0);
-    cout.sync_with_stdio(false);
+    cin.tie(0); cout.tie(0); cout.sync_with_stdio(false);
     
     while (cin >> n >> m, n && m)
     {
         fill(appeared.begin(), appeared.end(), false);
         
         int index = 0;
-        while (appeared[n] == false && n > 0)
+        while (!appeared[n] && n > 0)
         {
             appeared[n] = true;
             digits[index] = 10 * n / m;
-            position[n] = index;
-            
-            index++;
+            position[n] = index++;
             n = 10 * n % m;
         }
 

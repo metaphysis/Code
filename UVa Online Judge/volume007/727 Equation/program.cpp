@@ -31,13 +31,13 @@ map<char, int> priority = {
 };
 
 // 比较运算符在栈中的优先级顺序。
-bool less_priority(char previous, char next)
+bool lessPriority(char previous, char next)
 {
     return priority[previous] <= priority[next];
 }
 
 // 将中缀表达式转换为后缀表达式。
-string to_postfix(string infix)
+string toPostfix(string infix)
 {
     stack<char> operands;     // 操作数栈
     stack<char> operators;    // 运算符栈
@@ -77,7 +77,7 @@ string to_postfix(string infix)
         // 为左括号，或者比运算符堆栈栈顶运算符的优先级高，将当前运算符
         // 压入运算符堆栈。
         if (operators.empty() || operators.top() == '(' ||
-            !less_priority(c, operators.top()))
+            !lessPriority(c, operators.top()))
         {
             operators.push(c);
         }
@@ -86,7 +86,7 @@ string to_postfix(string infix)
             // 当运算符的优先级比运算符堆栈栈顶元素的优先级低或相等时，
             // 弹出运算符堆栈栈顶元素，直到运算符堆栈为空，或者遇到比
             // 当前运算符优先级低的运算符时结束。
-            while (!operators.empty() && less_priority(c, operators.top()))
+            while (!operators.empty() && lessPriority(c, operators.top()))
             {
                 operands.push(operators.top());
                 operators.pop();
@@ -131,10 +131,9 @@ int main(int argc, char *argv[])
         if (c > 1) cout << '\n';
         
         string infix;
-        while (getline(cin, line), line.length() > 0)
-            infix += line;
+        while (getline(cin, line), line.length() > 0) infix += line;
 
-        cout << to_postfix(infix) << '\n';
+        cout << toPostfix(infix) << '\n';
     }
     
 	return 0;
