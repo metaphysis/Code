@@ -1,0 +1,56 @@
+PUSH 12345  
+POP x
+PUSH 0
+PUSH 1
+PUSH 0
+PUSH 0
+POP abdvdhsjashgdhgasdhgajdgashdgjasghdajdgh
+JUMPZERO 10
+JUMP 9
+PUSH 1
+WRITE
+JUMPPOS 5
+#
+#
+PUSH 12345
+POP x
+PUSH 1
+PUSH 0
+PUSH 0
+POP abdvdhsjashgdhgasdhgajdgashdgjasghdajdgh
+JUMPZERO 9
+JUMP 8
+PUSH 1
+WRITE
+JUMPPOS 4
+#
+     1
+#
+PUSH 1
+JUMPZERO abcde
+PUSH 1
+WRITE
+#
+#
+PUSH 1
+JUMPZERO abcde
+PUSH 1
+WRITE
+WRITE
+#
+#
+READ
+#
+#
+PUSH 0
+JUMPZERO abcde
+PUSH 1
+WRITE
+#
+#
+JUMPZERO 1
+#
+#
+JUMPPOS 1
+#
+#
