@@ -22,8 +22,8 @@ using namespace std;
 int gcd1(int a, int b)
 {
     int t;
-    while (a % b) t = a, a = b, b = t % b;
-    return b;
+    while (b != 0) t = a, a = b, b = t % b;
+    return a;
 }
 
 int gcd2(int a, int b)
