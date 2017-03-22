@@ -1,8 +1,8 @@
-// GCD Extreme (I)
-// UVa ID: 11424
-// Verdict: Accepted
-// Submission Date: 2017-03-23
-// UVa Run Time: 0.180s
+// GCD Extreme (II)
+// UVa ID: 11426
+// Verdict: 
+// Submission Date: 
+// UVa Run Time: s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
@@ -25,7 +25,7 @@
 
 using namespace std;
 
-const int MAXN = 200001;
+const int MAXN = 4000001;
 
 int primes[MAXN], phi[MAXN] = {0, 1}, counter = 0;
 long long sum[MAXN] = {0};
