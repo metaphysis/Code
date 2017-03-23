@@ -58,7 +58,7 @@ int main(int argc, char *argv[])
 {
     sieve(primes, MAXN, counter);
     
-    for (int i = 0; i <= 100; i++) cout << primes[i] << ' ' << phi[i] << '\n';
+    for (int i = 0; i <= 10000; i++) cout << primes[i] << ' ' << phi[i] << '\n';
         
     return 0;
 }
