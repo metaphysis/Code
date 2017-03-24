@@ -26,12 +26,11 @@ int primes[MAXN], phi[MAXN] = {0, 1}, counter = 0;
 void sieve(int *primes, int n, int &counter)
 {
     // 初始时假定所有数为素数，从最小的素数开始筛除。
-    counter = 0;
-    memset(primes, -1, n * sizeof(int));
+    counter = 0; iota(primes, primes + n, 0);
 
     for (int i = 2; i < n; i++)
     {
-        if (primes[i] == -1)
+        if (primes[i] == i)
         {
             // 素数的欧拉函数值为值减去一。
             phi[i] = i - 1;
@@ -42,7 +41,7 @@ void sieve(int *primes, int n, int &counter)
             // 如果i为素数则将其倍数标记为非素数。标记的方式是i的倍数所对应的元素值
             // 设置为它的最小素因子，即i。
             for (int j = i + i; j < n; j += i)
-                if (primes[j] == -1) primes[j] = i;
+                if (primes[j] == j) primes[j] = i;
         }
         else
         {
