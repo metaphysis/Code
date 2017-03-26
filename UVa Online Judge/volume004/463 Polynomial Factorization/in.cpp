@@ -36,9 +36,9 @@ polynominal multiple(polynominal p1, polynominal p2)
 {
     polynominal r;
     r.coefficients.assign(p1.coefficients.size() + p2.coefficients.size() - 1, 0);
-        for (int i = 0; i < p1.coefficients.size(); i++)
-            for (int j = 0; j < p2.coefficients.size(); j++)
-                r.coefficients[i + j] += p1.coefficients[i] * p2.coefficients[j];
+    for (int i = 0; i < p1.coefficients.size(); i++)
+        for (int j = 0; j < p2.coefficients.size(); j++)
+            r.coefficients[i + j] += p1.coefficients[i] * p2.coefficients[j];
     return r;
 }
 
