@@ -1,8 +1,8 @@
 // Polynomial GCD
 // UVa ID: 10951
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2017-03-27
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
@@ -41,14 +41,12 @@ bool bigger(vector<int> &a, vector<int> &b)
 int findInverse(int a, int b)
 {
     for (int i = 1; i < n; i++)
-        if ((a * i) % n == b)
+        if ((b * i) % n == a)
             return i;
 }
 
 vector<int> mod(vector<int> a, vector<int> b)
 {
-    if (!bigger(a, b)) a.swap(b);
-
     int c = findInverse(a[0], b[0]);
     for (int i = 0; i < b.size(); i++)
     {
@@ -63,6 +61,7 @@ vector<int> mod(vector<int> a, vector<int> b)
 
 vector<int> gcd1(vector<int> a, vector<int> b)
 {
+    if (!bigger(a, b)) a.swap(b);
     if (b.size() == 0) return a;
     else return gcd1(b, mod(a, b));
 }
@@ -94,7 +93,7 @@ int main(int argc, char *argv[])
         
         vector<int> gcd = gcd1(poly1, poly2);
 
-        int c = findInverse(gcd[0], 1);
+        int c = findInverse(1, gcd[0]);
         
         cout << ' ' << (gcd.size() - 1);
         for (int i = 0; i < gcd.size(); i++)
