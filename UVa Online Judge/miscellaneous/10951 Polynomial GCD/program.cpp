@@ -93,7 +93,7 @@ int main(int argc, char *argv[])
         }
         
         vector<int> gcd = gcd1(poly1, poly2);
-        
+
         int c = findInverse(gcd[0], 1);
         
         cout << ' ' << (gcd.size() - 1);
