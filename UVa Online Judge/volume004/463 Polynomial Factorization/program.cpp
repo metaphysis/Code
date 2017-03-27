@@ -27,20 +27,20 @@
 
 using namespace std;
 
-struct polynominal
+struct polynomial
 {
     vector<long long> coefficients;
 
-    polynominal() {}
+    polynomial() {}
 
-    polynominal(int a1, int a0)
+    polynomial(int a1, int a0)
     {
         coefficients.clear();
         coefficients.push_back(a1);
         coefficients.push_back(a0);
     }
 
-    bool operator<(const polynominal &poly) const
+    bool operator<(const polynomial &poly) const
     {
         if (coefficients.size() != poly.coefficients.size())
             return coefficients.size() < poly.coefficients.size();
@@ -57,7 +57,7 @@ int gcd(int a, int b)
     else return gcd(b, a % b);
 }
 
-bool isRoot(polynominal &poly, pair<int, int> &root)
+bool isRoot(polynomial &poly, pair<int, int> &root)
 {
     //int size = poly.coefficients.size();
     //vector <long long> ps(size + 1, 1), qs(size + 1, 1);
@@ -85,7 +85,7 @@ bool isRoot(polynominal &poly, pair<int, int> &root)
 }
 
 // 根据有理数根定理找到方程的解。
-void findRoots(polynominal &poly, vector<pair<int, int>> &roots)
+void findRoots(polynomial &poly, vector<pair<int, int>> &roots)
 {
     if (poly.coefficients.back() == 0)
     {
@@ -129,7 +129,7 @@ int main(int argc, char *argv[])
     string line;
     while (getline(cin, line))
     {
-        polynominal poly;
+        polynomial poly;
 
         int number;
         istringstream iss(line);
@@ -138,7 +138,7 @@ int main(int argc, char *argv[])
         
         //for (int i = 1; i <= 5; i++) getline(cin, line);
         
-        vector<polynominal> polys;
+        vector<polynomial> polys;
 
         int highestDegree = 4;
 
@@ -166,13 +166,13 @@ int main(int argc, char *argv[])
                 
                 pair<int, int> root = roots[i];
 
-                polys.push_back(polynominal{root.second, -root.first});
+                polys.push_back(polynomial{root.second, -root.first});
 
                 int c1 = root.second, c2 = -root.first;
 
                 //cout << "root: " << c1 << ' ' << c2 << '\n';
                 
-                polynominal quotient;
+                polynomial quotient;
 
                 for (int j = 0; j < poly.coefficients.size() - 1; j++)
                 {
