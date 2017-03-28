@@ -29,7 +29,7 @@ using namespace std;
 
 struct polynomial
 {
-    vector<long long> coefficients;
+    vector<int> coefficients;
 
     polynomial() {}
 
@@ -85,27 +85,20 @@ bool isRoot(polynomial &poly, pair<int, int> &root)
 }
 
 // 根据有理数根定理找到方程的解。
-void findRoots(polynomial &poly, vector<pair<int, int>> &roots)
+vector<pair<int, int>> findRoots(polynomial &poly)
 {
-    if (poly.coefficients.back() == 0)
-    {
-        int q = 1;
-        if (poly.coefficients.size() == 2) q = poly.coefficients.front();
-        roots.push_back(make_pair(0, q));
-        return;
-    }
-
+    vector<pair<int, int>> roots;
     vector<int> p, q;
 
     int pp = abs(poly.coefficients.back());
     int qq = abs(poly.coefficients.front());
 
     for (int i = 1; i <= pp; i++)
-        if (pp % i == 0)
+        if ((pp % i) == 0)
             p.push_back(i);
 
     for (int i = 1; i <= qq; i++)
-        if (qq % i == 0)
+        if ((qq % i) == 0)
             q.push_back(i);
 
     for (int j = 0; j < q.size(); j++)
@@ -120,6 +113,8 @@ void findRoots(polynomial &poly, vector<pair<int, int>> &roots)
                 if (isRoot(poly, root2))
                     roots.push_back(root2);
             }
+            
+    return roots;
 }
 
 int main(int argc, char *argv[])
@@ -131,70 +126,47 @@ int main(int argc, char *argv[])
     {
         polynomial poly;
 
-        int number;
+        int c;
         istringstream iss(line);
-        while (iss >> number)
-            poly.coefficients.push_back(number);
-        
-        //for (int i = 1; i <= 5; i++) getline(cin, line);
+        while (iss >> c) poly.coefficients.push_back(c);
         
         vector<polynomial> polys;
-
-        int highestDegree = 4;
-
-        while (true)
+        
+        while (poly.coefficients.size() > 2 && poly.coefficients.back() == 0)
         {
-            vector<pair<int, int>> roots;
-
-            findRoots(poly, roots);
-
-            if (roots.size() == 0)
-            {
-                polys.push_back(poly);
-                break;
-            }
-            
-            // 多项式的长除法。
-            for (int i = 0; i < roots.size(); i++)
-            {
-                if (poly.coefficients.size() == 2)
-                {
-                    polys.push_back(poly);
-                    highestDegree = 0;
-                    break;
-                }
-                
-                pair<int, int> root = roots[i];
-
-                polys.push_back(polynomial{root.second, -root.first});
-
-                int c1 = root.second, c2 = -root.first;
-
-                //cout << "root: " << c1 << ' ' << c2 << '\n';
-                
-                polynomial quotient;
-
-                for (int j = 0; j < poly.coefficients.size() - 1; j++)
-                {
-                    int factor = poly.coefficients[j] / c1;
-                    quotient.coefficients.push_back(factor);
-                    poly.coefficients[j + 1] -= factor * c2;
-                }
-
-                poly.coefficients.swap(quotient.coefficients);
-                
-                //for (int j = 0; j < poly.coefficients.size(); j++)
-                //{
-                //    if (j > 0) cout << ' ';
-                //    cout << poly.coefficients[j];
-                //}
-                //cout << '\n';
-                
-                highestDegree--;
-            }
-
-            if (highestDegree == 0) break;
+            polys.push_back(polynomial{1, 0});
+            poly.coefficients.erase(poly.coefficients.end() - 1);
         }
+        
+        if (poly.coefficients.size() > 2)
+        {
+            vector<pair<int, int>> roots = findRoots(poly);
+            
+            if (roots.size() > 0)
+            {
+                for (int i = 0; i < roots.size(); i++)
+                {
+                    if (poly.coefficients.size() <= 2) break;
+                    
+                    pair<int, int> root = roots[i];
+                    polys.push_back(polynomial{root.second, -root.first});
+                    int c1 = root.second, c2 = -root.first;
+                    polynomial quotient;
+
+                    for (int j = 0; j < poly.coefficients.size() - 1; j++)
+                    {
+                        int factor = poly.coefficients[j] / c1;
+                        quotient.coefficients.push_back(factor);
+                        poly.coefficients[j + 1] -= factor * c2;
+                    }
+                    
+                    if (quotient.coefficients.front() == 0) { while (true) {} }
+                    
+                    poly.coefficients.swap(quotient.coefficients);
+                }
+            }
+        }
+        polys.push_back(poly);
 
         sort(polys.begin(), polys.end());
 
@@ -202,8 +174,7 @@ int main(int argc, char *argv[])
         {
             for (int j = 0; j < polys[i].coefficients.size(); j++)
             {
-                if (j > 0)
-                    cout << ' ';
+                if (j > 0) cout << ' ';
                 cout << polys[i].coefficients[j];
             }
             cout << '\n';
