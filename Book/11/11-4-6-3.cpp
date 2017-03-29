@@ -15,7 +15,7 @@ bool manacher(string word)
 
     cout << word << endl;
     
-    vector < int > P (word.size());
+    vector<int> P(word.size());
     
     cout << P[0];
     

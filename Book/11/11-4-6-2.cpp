@@ -4,17 +4,13 @@
 
 using namespace std;
 
-bool manacher(string word)
+void manacher(string word)
 {
     for (int i = word.length() - 1; i >= 0; i--)
         word.insert(word.begin() + i, '#');
     word.push_back('#');
-
-    cout << word << endl;
     
-    vector < int > P(word.size());
-    
-    cout << P[0];
+    vector<int> P(word.size());
     
     int center = 0, rightmost = 0, low = 0, high = 0;
     for (int i = 1; i < word.length(); i++)
@@ -53,13 +49,7 @@ bool manacher(string word)
             center = i;
             rightmost = i + P[i];
         }
-        
-        cout << P[i];
     }
-
-    cout << endl;
-    
-    return false;
 }
 
 int main(int argc, char *argv[])
