@@ -4,11 +4,15 @@
 
 using namespace std;
 
-void manacher(string word)
+void manacher(string &line)
 {
-    for (int i = word.length() - 1; i >= 0; i--)
-        word.insert(word.begin() + i, '#');
+    string word;
     word.push_back('#');
+    for (int i = 0; i < line.length(); i++)
+    {
+        word.push_back(line[i]);
+        word.push_back('#');
+    }
     
     vector<int> P(word.size());
     

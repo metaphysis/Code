@@ -5,19 +5,18 @@
 
 using namespace std;
 
-bool manacher(string word)
+void manacher(string &line)
 {
-    for (int i = word.length() - 1; i >= 0; i--)
-        word.insert(word.begin() + i, '#');
-        
-    word.push_back('|');
-    word.front() = '$';
-
-    cout << word << endl;
+    string word;
+    word.push_back('$');
+    for (int i = 0; i < line.length(); i++)
+    {
+        word.push_back(line[i]);
+        word.push_back('#');
+    }
+    word.back() = '|';
     
     vector<int> P(word.size());
-    
-    cout << P[0];
     
     int rightmost = 0, center = 0;
     for (int i = 1; i < word.size(); i++)
@@ -32,13 +31,7 @@ bool manacher(string word)
             rightmost = i + P[i] - 1;
             center = i;
         }
-
-        cout << P[i];
     }
-
-    cout << endl;
-    
-    return false;
 }
 
 int main(int argc, char *argv[])

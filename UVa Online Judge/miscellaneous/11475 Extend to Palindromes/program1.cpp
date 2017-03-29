@@ -2,7 +2,7 @@
 // UVa ID: 11475
 // Verdict: Accepted
 // Submission Date: 2017-03-29
-// UVa Run Time: 2.070s
+// UVa Run Time: 0.020s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
@@ -29,10 +29,13 @@ using namespace std;
 
 void manacher(string &line)
 {
-    string word(line);
-    for (int i = word.length() - 1; i >= 0; i--)
-        word.insert(word.begin() + i, '#');
+    string word;
     word.push_back('#');
+    for (int i = 0; i < line.length(); i++)
+    {
+        word.push_back(line[i]);
+        word.push_back('#');
+    }
     
     vector<int> P(word.size());
     
@@ -84,7 +87,7 @@ void manacher(string &line)
     {
         cout << line;
         for (int i = 0; i < P.size(); i++)
-            if ((i + P[i]) == P.size() )
+            if ((i + P[i]) == (P.size() - 1) )
             {
                 for (int j = i - P[i] - 1; j >= 0; j--)
                     if (word[j] != '#')
