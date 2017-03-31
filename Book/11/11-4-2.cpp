@@ -5,7 +5,7 @@
 
 using namespace std;
 
-void lcs(string& s, string& t)
+void lcs(string &s, string &t)
 {
     // 备忘数组，记录最长公共子序列的长度。
     int memo[s.length() + 1][t.length() + 1][2];
