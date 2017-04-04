@@ -20,18 +20,18 @@ struct edge
 };
 
 vector<vector<edge>> edges(N + 1);
-vector<long long int> distances(N + 1);
+vector<long long int> dist(N + 1);
 vector<int> parent(N + 1);
 
 void moore_dijkstra(int start)
 {
     fill(parent.begin(), parent.end(), 0);
-    fill(distances.begin(), distances.end(), MAX_DISTANCE);
+    fill(dist.begin(), dist.end(), MAX_DISTANCE);
 
-    distances[start] = 0;
+    dist[start] = 0;
     
     priority_queue<edge> unvisited;
-    unvisited.push((edge){start, distances[start]});
+    unvisited.push((edge){start, dist[start]});
 
     while (!unvisited.empty())
     {
@@ -39,11 +39,11 @@ void moore_dijkstra(int start)
         unvisited.pop();
         
         for (auto e : edges[v.to])
-            if (distances[e.to] > distances[v.to] + e.weight)
+            if (dist[e.to] > dist[v.to] + e.weight)
             {
-                distances[e.to] = distances[v.to] + e.weight;
+                dist[e.to] = dist[v.to] + e.weight;
                 parent[e.to] = v.to;
-                unvisited.push((edge){e.to, distances[e.to]});
+                unvisited.push((edge){e.to, dist[e.to]});
             }
     }
 }
