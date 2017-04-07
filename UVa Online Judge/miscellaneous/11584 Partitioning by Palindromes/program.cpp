@@ -1,8 +1,8 @@
 // Partitioning by Palindromes
 // UVa ID: 11584
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2017-04-07
+// UVa Run Time: 0.100s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
@@ -27,18 +27,8 @@
 
 using namespace std;
 
-struct edge
-{
-    int from, weight;
-    
-    bool operator<(edge another) const
-    {
-        return weight > another.weight;
-    }
-};
-
 string line;
-int weights[1010][1010], dist[1010];
+int palindrome[1010][1010], dp[1010];
 
 int main(int argc, char *argv[])
 {
@@ -46,45 +36,40 @@ int main(int argc, char *argv[])
 
     int cases;
     cin >> cases;
-    
+
     for (int c = 1; c <= cases; c++)
     {
         cin >> line;
         
-        for (int i = 0; i < line.length(); i++)
-            for (int j = i; j < line.length(); j++)
+        line.insert(line.begin(), '#');
+        memset(palindrome, 0, sizeof(palindrome));
+        
+        for (int i = 1; i < line.length(); i++)
+        {
+            for (int x = i, y = i; x >= 1 && y < line.length(); x--, y++)
             {
-                weights[i][j] = j - i + 1;
-                bool isPalindrome = true;
-                for (int x = i, y = j; x <= y; x++, y--)
-                    if (line[x] != line[y])
-                    {
-                        isPalindrome = false;
-                        break;
-                    }
-                if (isPalindrome) weights[i][j] = 1;
+                if (line[x] != line[y]) break;
+                palindrome[x][y] = 1;
             }
 
-        fill(dist, dist + line.length(), 10000);
-        
-        priority_queue<edge> unvisited;
-        dist[0] = 0;
-        unvisited.push((edge){0, dist[0]});
-
-        while (!unvisited.empty())
-        {
-            edge v = unvisited.top();
-            unvisited.pop();
-            
-            for (int i = v.from + 1; i < line.length(); i++)
-                if (dist[i] > dist[v.from] + weights[v.from][i])
+            if (i < line.length() - 1 && line[i] == line[i + 1])
+            {
+                for (int x = i, y = i + 1; x >= 1 && y < line.length(); x--, y++)
                 {
-                    dist[i] = dist[v.from] + weights[v.from][i];
-                    unvisited.push((edge){i, dist[i]});
+                    if (line[x] != line[y]) break;
+                    palindrome[x][y] = 1;
                 }
+            }
         }
+            
+        iota(dp, dp + 1010, 0);
         
-        cout << dist[line.length() - 1] << '\n';
+        for (int i = 1; i <= line.length(); i++)
+            for (int j = 0; j < i; j++)
+                if (palindrome[j + 1][i])
+                    dp[i] = min(dp[i], dp[j] + 1);
+
+        cout << dp[line.length() - 1] << '\n';
     }
     
     return 0;
