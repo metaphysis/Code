@@ -1,8 +1,8 @@
 // Creating Palindrome
 // UVa ID: 11753
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2017-04-08
+// UVa Run Time: 0.060s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
@@ -27,38 +27,30 @@
 
 using namespace std;
 
-int T, N, K;
-bool finished = false;
+int T, N, K, minK;
 vector<int> numbers(10000, 0);
-map<long long, int> cache;
+map<pair<int, int>, int> cache;
 
-int findK(int i, int j, int maxK)
+void findK(int i, int j, int maxK)
 {
-    if (finished)
-        return 0;
-        
-    if (maxK > K)
+    if (i >= j || maxK > K)
     {
-        finished = true;
-        return 0;
+        minK = min(minK, maxK);
+        return;
     }
-    
-    if (i >= j) return 0;
-    
-    long long interval = i * 100000 + j;
-    if (cache.find(interval) != cache.end())
+
+    int &k = cache[make_pair(i, j)];
+    if (k == 0 || maxK < k)
     {
-        return cache[interval];
+        k = maxK;
+        if (numbers[i] == numbers[j])
+            findK(i + 1, j - 1, maxK);
+        else
+        {
+            findK(i + 1, j, maxK + 1);
+            findK(i, j - 1, maxK + 1);
+        }
     }
-    
-    int k = 20000;
-    if (numbers[i] == numbers[j])
-        k = findK(i + 1, j - 1, maxK);
-    else
-        k = min(2 + findK(i + 1, j - 1, maxK + 1), 1 + min(findK(i + 1, j, maxK + 1), findK(i, j - 1, maxK + 1)));
-    
-    cache[interval] = k;
-    return k;
 }
 
 int main(int argc, char *argv[])
@@ -89,14 +81,14 @@ int main(int argc, char *argv[])
             continue;
         }
         
-        finished = false;
         cache.clear();
-        int k = findK(0, N - 1, 0);
+        minK = 20000;
+        findK(0, N - 1, 0);
         
-        if (finished)
+        if (minK > K)
             cout << "Too difficult\n";
         else
-            cout << k << '\n';
+            cout << minK << '\n';
     }
     
     return 0;
