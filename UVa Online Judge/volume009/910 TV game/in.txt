@@ -1,0 +1,528 @@
+9
+A F I -
+B H G -
+C F C -
+D A F -
+E G I -
+F F D x
+G H H -
+H H D -
+I G I -
+9
+
+3
+A B B -
+B B A x
+C C C -
+4
+
+6
+A A E -
+B E F -
+C B C -
+D D A -
+E F C x
+F D F -
+2
+
+4
+A B C -
+B A A -
+C D D -
+D A C x
+10
+
+7
+A D E x
+B D E x
+C D A -
+D D G x
+E A E x
+F B C -
+G F E x
+7
+
+10
+A A C x
+B C I -
+C F G -
+D E H -
+E I D -
+F E C -
+G D C -
+H F D -
+I I H -
+J J I -
+3
+
+3
+A C B x
+B A B -
+C A B -
+9
+
+5
+A B C -
+B C B -
+C A D -
+D D E -
+E B D x
+9
+
+1
+A A A -
+8
+
+4
+A D A -
+B B B -
+C B A -
+D B D -
+7
+
+1
+A A A x
+10
+
+4
+A D C -
+B C B x
+C A B x
+D D C -
+3
+
+9
+A B F -
+B H B -
+C I G x
+D H E -
+E E H -
+F H F -
+G B I -
+H H I -
+I A F -
+3
+
+2
+A A B -
+B B B x
+9
+
+8
+A H F x
+B H B x
+C C G x
+D B D -
+E D A -
+F H H -
+G E D x
+H C B -
+2
+
+8
+A B C -
+B F G x
+C G F x
+D A E -
+E A H -
+F H A x
+G H D -
+H B C -
+7
+
+8
+A B F -
+B G H -
+C H A -
+D F F -
+E E D -
+F B E -
+G C E -
+H D D x
+4
+
+9
+A F D -
+B D E x
+C A C -
+D H D x
+E A F -
+F B A -
+G A E x
+H C H -
+I G I -
+7
+
+10
+A D H -
+B G J -
+C E J -
+D H G x
+E E J -
+F D E x
+G C D x
+H E G -
+I J G -
+J I J -
+10
+
+1
+A A A x
+6
+
+8
+A H A -
+B C C -
+C A D x
+D A A -
+E E B -
+F A G -
+G B C x
+H C E -
+2
+
+10
+A G E x
+B I H x
+C I G -
+D G C -
+E B C -
+F A I -
+G C A -
+H J F -
+I I I -
+J H E x
+6
+
+9
+A I F x
+B E F -
+C D E -
+D I F -
+E G B -
+F H F x
+G B A x
+H D C -
+I B D -
+9
+
+6
+A E C x
+B A B -
+C C A -
+D E D -
+E B A x
+F C E -
+8
+
+8
+A B H x
+B G D -
+C D C -
+D D B -
+E H E -
+F F C x
+G B F x
+H E F -
+4
+
+7
+A C F x
+B F D -
+C A F -
+D C B -
+E G E -
+F E E -
+G E B -
+9
+
+4
+A B C x
+B B D x
+C C C x
+D D A -
+3
+
+2
+A A B -
+B B A -
+3
+
+9
+A A A x
+B E B x
+C B A x
+D F C -
+E C I -
+F E A x
+G H C x
+H I H x
+I H C x
+9
+
+5
+A A E x
+B E E -
+C D D -
+D B A x
+E D B -
+2
+
+2
+A B B -
+B A A x
+9
+
+4
+A A B -
+B D D -
+C B D -
+D C A x
+2
+
+6
+A D C -
+B B A -
+C C F x
+D F F -
+E D B -
+F A C -
+10
+
+6
+A A B -
+B D E x
+C E F x
+D A E -
+E C B x
+F A C -
+1
+
+7
+A C B x
+B A F -
+C B C -
+D E C -
+E G G x
+F E C -
+G F A -
+3
+
+1
+A A A -
+2
+
+1
+A A A -
+8
+
+8
+A D H x
+B H B x
+C A C x
+D F H -
+E A C x
+F G E -
+G D G x
+H B B -
+9
+
+7
+A F G x
+B A E x
+C G B x
+D C B x
+E G A x
+F D E -
+G B F -
+5
+
+6
+A C B -
+B F C x
+C D A x
+D B D x
+E B B -
+F F D -
+3
+
+1
+A A A x
+10
+
+5
+A A C -
+B A E -
+C B A -
+D B D -
+E A A -
+9
+
+2
+A B A x
+B B A -
+3
+
+2
+A B A -
+B B A -
+1
+
+9
+A G E x
+B G A -
+C C F x
+D B H -
+E I B -
+F E F x
+G H H x
+H E C x
+I E I x
+6
+
+10
+A B E -
+B G F x
+C E B x
+D G C -
+E F I -
+F F J x
+G F C -
+H I H -
+I D B -
+J E E -
+2
+
+5
+A B A -
+B C D -
+C E C x
+D E A x
+E C B -
+4
+
+1
+A A A -
+9
+
+10
+A F J -
+B J C x
+C E H -
+D C E -
+E E I -
+F D F -
+G J B x
+H B E -
+I H C x
+J I I -
+3
+
+4
+A B D -
+B D A -
+C A D x
+D B D -
+6
+
+6
+A B E -
+B F B -
+C A B -
+D D A x
+E F C -
+F C B -
+5
+
+4
+A A D -
+B A C x
+C B C -
+D D C x
+7
+
+2
+A A A -
+B B A -
+6
+
+9
+A H B -
+B G C -
+C F E -
+D F C -
+E C F -
+F B A -
+G A I x
+H B H -
+I A E x
+3
+
+3
+A C B -
+B C A x
+C B B -
+1
+
+3
+A B C x
+B A A -
+C B A x
+4
+
+7
+A B F -
+B D C x
+C C G -
+D D F x
+E E B -
+F C A -
+G C F -
+5
+
+1
+A A A x
+10
+
+2
+A B B x
+B A A -
+6
+
+1
+A A A -
+4
+
+9
+A H H x
+B I H -
+C E D x
+D A C x
+E G D -
+F H F -
+G I E -
+H A C -
+I C E x
+2
+
+2
+A A A x
+B B A -
+4
+
+10
+A E C -
+B J I x
+C G G x
+D B G -
+E G E -
+F J I x
+G H F -
+H F B -
+I F B -
+J G G x
+3
+
+1
+A A A -
+8
