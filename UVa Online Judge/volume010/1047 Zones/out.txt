@@ -1,0 +1,24 @@
+Case Number  1
+Number of Customers: 792649
+Locations recommended: 2 3 4
+
+Case Number  2
+Number of Customers: 1469100
+Locations recommended: 1 2 3
+
+Case Number  3
+Number of Customers: 2160565
+Locations recommended: 1 2 3 4
+
+Case Number  4
+Number of Customers: 886009
+Locations recommended: 2
+
+Case Number  5
+Number of Customers: 960305
+Locations recommended: 4
+
+Case Number  6
+Number of Customers: 1304298
+Locations recommended: 1 3 4
+

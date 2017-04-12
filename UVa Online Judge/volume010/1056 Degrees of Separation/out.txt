@@ -1,0 +1,200 @@
+Network 1: 10
+
+Network 2: DISCONNECTED
+
+Network 3: 3
+
+Network 4: DISCONNECTED
+
+Network 5: 10
+
+Network 6: 2
+
+Network 7: 9
+
+Network 8: 5
+
+Network 9: 2
+
+Network 10: 2
+
+Network 11: 5
+
+Network 12: 1
+
+Network 13: DISCONNECTED
+
+Network 14: 2
+
+Network 15: 3
+
+Network 16: 3
+
+Network 17: DISCONNECTED
+
+Network 18: 11
+
+Network 19: 10
+
+Network 20: 3
+
+Network 21: 2
+
+Network 22: DISCONNECTED
+
+Network 23: 3
+
+Network 24: 3
+
+Network 25: DISCONNECTED
+
+Network 26: DISCONNECTED
+
+Network 27: 1
+
+Network 28: DISCONNECTED
+
+Network 29: 3
+
+Network 30: DISCONNECTED
+
+Network 31: 4
+
+Network 32: 3
+
+Network 33: 2
+
+Network 34: 2
+
+Network 35: 3
+
+Network 36: 4
+
+Network 37: 3
+
+Network 38: 2
+
+Network 39: 2
+
+Network 40: 4
+
+Network 41: 5
+
+Network 42: 3
+
+Network 43: 5
+
+Network 44: 3
+
+Network 45: DISCONNECTED
+
+Network 46: 3
+
+Network 47: 4
+
+Network 48: 1
+
+Network 49: DISCONNECTED
+
+Network 50: DISCONNECTED
+
+Network 51: 3
+
+Network 52: 4
+
+Network 53: 6
+
+Network 54: 2
+
+Network 55: 1
+
+Network 56: 4
+
+Network 57: 4
+
+Network 58: 3
+
+Network 59: 4
+
+Network 60: 5
+
+Network 61: 4
+
+Network 62: 8
+
+Network 63: 4
+
+Network 64: 2
+
+Network 65: DISCONNECTED
+
+Network 66: 9
+
+Network 67: 3
+
+Network 68: 3
+
+Network 69: 4
+
+Network 70: 3
+
+Network 71: 1
+
+Network 72: 3
+
+Network 73: 5
+
+Network 74: 2
+
+Network 75: 4
+
+Network 76: 7
+
+Network 77: DISCONNECTED
+
+Network 78: 4
+
+Network 79: 3
+
+Network 80: DISCONNECTED
+
+Network 81: 5
+
+Network 82: 3
+
+Network 83: 4
+
+Network 84: 4
+
+Network 85: 4
+
+Network 86: 2
+
+Network 87: 3
+
+Network 88: 4
+
+Network 89: DISCONNECTED
+
+Network 90: 2
+
+Network 91: 2
+
+Network 92: 5
+
+Network 93: 5
+
+Network 94: DISCONNECTED
+
+Network 95: DISCONNECTED
+
+Network 96: DISCONNECTED
+
+Network 97: 5
+
+Network 98: 2
+
+Network 99: 5
+
+Network 100: 5
+

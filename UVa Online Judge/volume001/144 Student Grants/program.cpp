@@ -24,12 +24,12 @@ int main(int argc, char *argv[])
     {
         queue<student> students;
         for (int i = 1; i <= n; i++)
-            students.push((student){ i, 0 });
+            students.push((student){i, 0});
         
-        int store = 0, remain = 0;
+        int coins = 0, remain = 0;
         while (true)
         {
-            int current = (remain > 0) ? remain : ((++store) > k ? (store = 1) : store);
+            int current = (remain > 0) ? remain : ((++coins) > k ? (coins = 1) : coins);
 
             if (students.empty()) break;
                 
