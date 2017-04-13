@@ -25,33 +25,33 @@
 
 using namespace std;
 
-const unsigned char separator = (unsigned char)(179), right_line_separator = (unsigned char)(180),
-    top_right_corner = (unsigned char)(191), bottom_left_corner = (unsigned char)(192),
-    bottom_line_separator = (unsigned char)(193), top_line_separator = (unsigned char)(194),
-    left_line_separator = (unsigned char)(195), link = (unsigned char)(196),
-    middle_line_separator = (unsigned char)(197), bottom_right_corner = (unsigned char)(217),
-    top_left_corner = (unsigned char)(218);
+const char separator = (char)(179), right_line_separator = (char)(180),
+    top_right_corner = (char)(191), bottom_left_corner = (char)(192),
+    bottom_line_separator = (char)(193), top_line_separator = (char)(194),
+    left_line_separator = (char)(195), link = (char)(196),
+    middle_line_separator = (char)(197), bottom_right_corner = (char)(217),
+    top_left_corner = (char)(218);
 
 struct row
 {
     vector<vector<string>> lines;
 };
 
-void process(vector<string> tables)
+void process(vector<string> table)
 {
     istringstream iss;
     
     vector<row> rows;
-    for (int i = 0; i < tables.size(); i++)
+    for (int i = 0; i < table.size(); i++)
     {
-        if ((unsigned char)tables[i].front() == separator)
+        if (table[i].front() == separator)
         {
             row single_row;
-            while ((unsigned char)tables[i].front() == separator)
+            while (table[i].front() == separator)
             {
-                string input = tables[i].substr(1, tables[i].length() - 2);
+                string input = table[i].substr(1, table[i].length() - 2);
                 for (int i = 0; i < input.length(); i++)
-                    if ((unsigned char)input[i] == separator)
+                    if (input[i] == separator)
                         input[i] = '|';
                 
                 iss.clear(); iss.str(input);
@@ -144,8 +144,9 @@ void process(vector<string> tables)
 int main(int argc, char *argv[])
 {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
-
+    
     int M;
+
     cin >> M;
     cin.ignore(1024, '\n');
     
@@ -154,17 +155,13 @@ int main(int argc, char *argv[])
     
     for (int c = 1; c <= M; c++)
     {
-        if (c > 1)
-            cout << '\n';
+        if (c > 1) cout << '\n';
             
-        vector<string> tables;
+        vector<string> table;
         while (getline(cin, line), line.length() > 0)
-        {
-            assert(line.find('|') == line.npos);
-            tables.push_back(line);
-        }
-        
-        process(tables);
+            table.push_back(line);
+
+        process(table);
     }
     
 	return 0;

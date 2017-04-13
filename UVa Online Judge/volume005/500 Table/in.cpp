@@ -4,12 +4,12 @@
 
 using namespace std;
 
-const unsigned char separator = (unsigned char)(179), right_line_separator = (unsigned char)(180),
-    top_right_corner = (unsigned char)(191), bottom_left_corner = (unsigned char)(192),
-    bottom_line_separator = (unsigned char)(193), top_line_separator = (unsigned char)(194),
-    left_line_separator = (unsigned char)(195), link = (unsigned char)(196),
-    middle_line_separator = (unsigned char)(197), bottom_right_corner = (unsigned char)(217),
-    top_left_corner = (unsigned char)(218);
+const char separator = (char)(179), right_line_separator = (char)(180),
+    top_right_corner = (char)(191), bottom_left_corner = (char)(192),
+    bottom_line_separator = (char)(193), top_line_separator = (char)(194),
+    left_line_separator = (char)(195), link = (char)(196),
+    middle_line_separator = (char)(197), bottom_right_corner = (char)(217),
+    top_left_corner = (char)(218);
     
 int main(int argc, char *argv[])
 {
