@@ -34,14 +34,14 @@ const char separator = (char)(179), right_line_separator = (char)(180),
 
 struct row
 {
-    vector<vector<string>> lines;
+    vector < vector < string >> lines;
 };
 
-void process(vector<string> table)
+void process(vector < string > table)
 {
     istringstream iss;
-    
-    vector<row> rows;
+
+    vector < row > rows;
     for (int i = 0; i < table.size(); i++)
     {
         if (table[i].front() == separator)
@@ -53,10 +53,11 @@ void process(vector<string> table)
                 for (int i = 0; i < input.length(); i++)
                     if (input[i] == separator)
                         input[i] = '|';
-                
-                iss.clear(); iss.str(input);
 
-                vector<string> cells;
+                iss.clear();
+                iss.str(input);
+
+                vector < string > cells;
                 string block;
                 while (getline(iss, block, '|'))
                 {
@@ -71,15 +72,15 @@ void process(vector<string> table)
                         cells.push_back("");
                 }
                 single_row.lines.push_back(cells);
-                
+
                 i++;
             }
             rows.push_back(single_row);
         }
     }
-    
+
     int cells_per_line = (int)rows[0].lines[0].size();
-    vector<int> max_length_of_cell(cells_per_line, 0);
+    vector < int >max_length_of_cell(cells_per_line, 0);
     for (auto single_row : rows)
         for (auto single_line : single_row.lines)
         {
@@ -101,7 +102,7 @@ void process(vector<string> table)
             cout << link;
     }
     cout << top_right_corner << '\n';
-    
+
     for (int i = 0; i < rows.size(); i++)
     {
         if (i > 0)
@@ -117,7 +118,7 @@ void process(vector<string> table)
             }
             cout << right_line_separator << '\n';
         }
-        
+
         for (int j = 0; j < rows[i].lines.size(); j++)
         {
             for (int k = 0; k < rows[i].lines[j].size(); k++)
@@ -128,7 +129,7 @@ void process(vector<string> table)
             cout << separator << '\n';
         }
     }
-    
+
     cout << bottom_left_corner;
     for (int i = 0; i < cells_per_line; i++)
     {
@@ -143,26 +144,29 @@ void process(vector<string> table)
 
 int main(int argc, char *argv[])
 {
-    cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
-    
+    cin.tie(0);
+    cout.tie(0);
+    ios::sync_with_stdio(false);
+
     int M;
 
     cin >> M;
     cin.ignore(1024, '\n');
-    
+
     string line;
     getline(cin, line);
-    
+
     for (int c = 1; c <= M; c++)
     {
-        if (c > 1) cout << '\n';
-            
-        vector<string> table;
+        if (c > 1)
+            cout << '\n';
+
+        vector < string > table;
         while (getline(cin, line), line.length() > 0)
             table.push_back(line);
 
         process(table);
     }
-    
-	return 0;
+
+    return 0;
 }
