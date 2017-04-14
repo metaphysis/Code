@@ -34,134 +34,108 @@ const char separator = (char)(179), right_line_separator = (char)(180),
 
 struct row
 {
-    vector < vector < string >> lines;
+    vector<vector<string>> lines;
 };
 
-void process(vector < string > table)
+void drawLine(int cells, vector<int> &columnWidth, char left, char middle, char right)
+{
+    cout << left;
+    for (int i = 0; i < cells; i++)
+    {
+        if (i > 0) cout << middle;
+        for (int j = 0; j < columnWidth[i] + 2; j++) cout << link;
+    }
+    cout << right << '\n';    
+}
+
+void process(vector<string> table)
 {
     istringstream iss;
 
-    vector < row > rows;
+    vector<int> columnWidth(200, 0);
+    vector<row> rows;
+    int columns = 0;
+
     for (int i = 0; i < table.size(); i++)
     {
         if (table[i].front() == separator)
         {
             row single_row;
+            bool empty_row = true;
             while (table[i].front() == separator)
             {
-                string input = table[i].substr(1, table[i].length() - 2);
-                for (int i = 0; i < input.length(); i++)
-                    if (input[i] == separator)
-                        input[i] = '|';
-
-                iss.clear();
-                iss.str(input);
-
-                vector < string > cells;
+                iss.clear(); iss.str(table[i].substr(1, table[i].length() - 2));
+                vector<string> cells;
                 string block;
-                while (getline(iss, block, '|'))
+                bool empty_line = true;
+                columns = 0;
+
+                while (getline(iss, block, separator))
                 {
-                    int i = 0, j = block.length() - 1;
-                    while (i < block.length() && isblank(block[i]))
-                        i++;
-                    while (j >= 0 && isblank(block[j]))
-                        j--;
-                    if (i <= j)
-                        cells.push_back(block.substr(i, j - i + 1));
+                    int ii = 0, jj = block.length() - 1;
+                    while (ii < block.length() && isblank(block[ii]))
+                        ii++;
+                    while (jj >= 0 && isblank(block[jj]))
+                        jj--;
+                    if (ii <= jj)
+                    {
+                        cells.push_back(block.substr(ii, jj - ii + 1));
+                        columnWidth[columns] = max(columnWidth[columns], jj - ii + 1);
+                        empty_line = false;
+                    }
                     else
                         cells.push_back("");
+                    columns++;
                 }
-                single_row.lines.push_back(cells);
-
+                
+                if (!empty_line)
+                {
+                    empty_row = false;
+                    single_row.lines.push_back(cells);
+                }
                 i++;
             }
-            rows.push_back(single_row);
+            if (!empty_row) rows.push_back(single_row);
         }
     }
 
-    int cells_per_line = (int)rows[0].lines[0].size();
-    vector < int >max_length_of_cell(cells_per_line, 0);
-    for (auto single_row : rows)
-        for (auto single_line : single_row.lines)
-        {
-            int i = 0;
-            for (auto single_word : single_line)
-            {
-                max_length_of_cell[i] = max(max_length_of_cell[i], (int)single_word.length());
-                i++;
-            }
-        }
-
-    cout << top_left_corner;
-    for (int i = 0; i < cells_per_line; i++)
-    {
-        if (i > 0)
-            cout << top_line_separator;
-        int link_count = max_length_of_cell[i] + 2;
-        for (int j = 0; j < link_count; j++)
-            cout << link;
-    }
-    cout << top_right_corner << '\n';
+    drawLine(columns, columnWidth, top_left_corner, top_line_separator, top_right_corner);
 
     for (int i = 0; i < rows.size(); i++)
     {
         if (i > 0)
-        {
-            cout << left_line_separator;
-            for (int j = 0; j < cells_per_line; j++)
-            {
-                if (j > 0)
-                    cout << middle_line_separator;
-                int link_count = max_length_of_cell[j] + 2;
-                for (int k = 0; k < link_count; k++)
-                    cout << link;
-            }
-            cout << right_line_separator << '\n';
-        }
+            drawLine(columns, columnWidth, left_line_separator, middle_line_separator, right_line_separator);
 
         for (int j = 0; j < rows[i].lines.size(); j++)
         {
             for (int k = 0; k < rows[i].lines[j].size(); k++)
             {
                 cout << separator << ' ' << rows[i].lines[j][k];
-                cout << string(max_length_of_cell[k] + 1 - rows[i].lines[j][k].length(), ' ');
+                int spaces = columnWidth[k] + 1 - rows[i].lines[j][k].length();
+                for (int c = 0; c < spaces; c++) cout << ' ';
             }
             cout << separator << '\n';
         }
     }
 
-    cout << bottom_left_corner;
-    for (int i = 0; i < cells_per_line; i++)
-    {
-        if (i > 0)
-            cout << bottom_line_separator;
-        int link_count = max_length_of_cell[i] + 2;
-        for (int j = 0; j < link_count; j++)
-            cout << link;
-    }
-    cout << bottom_right_corner << '\n';
+    drawLine(columns, columnWidth, bottom_left_corner, bottom_line_separator, bottom_right_corner);
 }
 
 int main(int argc, char *argv[])
 {
-    cin.tie(0);
-    cout.tie(0);
-    ios::sync_with_stdio(false);
-
-    int M;
-
-    cin >> M;
-    cin.ignore(1024, '\n');
+    cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
 
     string line;
     getline(cin, line);
+    
+    int M = stoi(line);
 
+    getline(cin, line);
     for (int c = 1; c <= M; c++)
     {
-        if (c > 1)
-            cout << '\n';
+        if (c > 1) cout << '\n';
 
-        vector < string > table;
+        vector<string> table;
         while (getline(cin, line), line.length() > 0)
             table.push_back(line);
 
