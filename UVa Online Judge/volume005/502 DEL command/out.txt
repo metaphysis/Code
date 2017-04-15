@@ -1,0 +1,15 @@
+IMPOSSIBLE
+
+DEL A?.
+
+DEL ?B.
+
+IMPOSSIBLE
+
+DEL X.A?
+
+DEL X.?B
+
+DEL *.A*
+
+DEL *.AA*
