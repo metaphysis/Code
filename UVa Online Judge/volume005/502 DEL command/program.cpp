@@ -1,10 +1,12 @@
 // DEL command
 // UVa ID: 502
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2017-04-16
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
+//
+// Easy but error-prone, WA 9 times.
 
 #include <algorithm>
 #include <bitset>
@@ -33,102 +35,85 @@ struct file
 };
 
 vector<file> deleted, reserved;
-string longestName, longestExtension, wildcard, mask;
+string mask_name, mask_extension;
 
-bool matched(string &a, string &b)
+bool matched(string mask, string text)
 {
-    if (b.find('*') != b.npos)
+    if (mask.back() == '*')
     {
-        for (int i = 0; i < b.length(); i++)
-        {
-            if (b[i] == '*')
-                break;
-            if (i >= a.length())
+        if ((mask.length() - 1) > text.length())
+            return false;
+            
+        for (int i = 0; i < mask.length() - 1; i++)
+            if (mask[i] != '?' && mask[i] != text[i])
                 return false;
-            if (b[i] != '?' && a[i] != b[i])
-                return false;
-        }
     }
     else
     {
-        if (a.length() != b.length())
+        if (mask.length() != text.length())
             return false;
-        for (int i = 0; i < b.length(); i++)
-            if (b[i] != '?' && a[i] != b[i])
+
+        for (int i = 0; i < mask.length(); i++)
+            if (mask[i] != '?' && mask[i] != text[i])
                 return false;
     }
     
-    return true;
+    return matched;
 }
 
 bool validate()
 {
-    mask = wildcard;
-    
-    //cout << "mask = " << mask << '\n';
-    
-    int dot = mask.find('.');
-    string name = mask.substr(0, dot);
-    string extension = mask.substr(dot + 1);
-    
-    for (int i = 0; i < deleted.size(); i++)
-        if (!matched(deleted[i].name, name) || !matched(deleted[i].extension, extension))
+    for (auto f : reserved)
+        if (matched(mask_name, f.name) && matched(mask_extension, f.extension))
             return false;
-    
-    for (int i = 0; i < reserved.size(); i++)
-        if (matched(reserved[i].name, name) && matched(reserved[i].extension, extension))
-            return false;
-
     return true;
 }
 
 bool findWildcard()
 {
-    unordered_set<string> visited;
-    queue<string> unvisited;
+    mask_name.clear(), mask_extension.clear();
+
+    int max_name_length = 0, min_name_length = 8;
+    int max_extension_length = 0, min_extension_length = 3;
     
-    string pattern;
-    for (int i = 0; i < longestName.length(); i++)
-        for (int j = 0; j < longestExtension.length(); j++)
+    for (auto f : deleted)
+    {
+        if (max_name_length < f.name.length())
         {
-            pattern = longestName.substr(0, i) + "." + longestExtension.substr(0, j) + "*";
-            unvisited.push(pattern);
-            visited.insert(pattern);
-            
-            pattern = longestName.substr(0, i) + "*." + longestExtension.substr(0, j);
-            unvisited.push(pattern);
-            visited.insert(pattern);
-            
-            pattern = longestName.substr(0, i) + "*." + longestExtension.substr(0, j) + "*";
-            unvisited.push(pattern);
-            visited.insert(pattern);
+            mask_name = f.name;
+            max_name_length = f.name.length();
         }
         
-    pattern = longestName + "." + longestExtension;
-    unvisited.push(pattern);
-    visited.insert(pattern);
-    
-    while(!unvisited.empty())
-    {
-        wildcard = unvisited.front();
-        unvisited.pop();
-
-        if (validate()) return true;
+        if (min_name_length > f.name.length())
+            min_name_length = f.name.length();
+            
+        if (max_extension_length < f.extension.length())
+        {
+            mask_extension = f.extension;
+            max_extension_length = f.extension.length();
+        }
         
-        for (int i = 0; i < wildcard.length(); i++)
-            if (wildcard[i] != '.' && wildcard[i] != '*' && wildcard[i] != '?')
-            {
-                string next(wildcard);
-                next[i] = '?';
-                if (visited.find(next) == visited.end())
-                {
-                    unvisited.push(next);
-                    visited.insert(next);
-                }
-            }
+        if (min_extension_length > f.extension.length())
+            min_extension_length = f.extension.length();
     }
 
-    return false;
+    for (auto f : deleted)
+    {
+        for (int i = 0; i < f.name.length(); i++)
+            if (mask_name[i] != '?' && f.name[i] != mask_name[i])
+                mask_name[i] = '?';
+        for (int i = 0; i < f.extension.length(); i++)
+            if (mask_extension[i] != '?' && f.extension[i] != mask_extension[i])
+                mask_extension[i] = '?';
+    }
+    
+    if (min_name_length < max_name_length)
+        mask_name = mask_name.substr(0, min_name_length) + "*";
+        
+    if (min_extension_length < max_extension_length)
+        mask_extension = mask_extension.substr(0, min_extension_length) + "*";
+        
+    return validate();
 }
 
 int main(int argc, char *argv[])
@@ -137,49 +122,37 @@ int main(int argc, char *argv[])
 
     string line;
     getline(cin, line);
-    int M = stoi(line);
+
+    int cases = stoi(line);
     
     getline(cin, line);
-    for (int c = 1; c <= M; c++)
+    for (int c = 1; c <= cases; c++)
     {
         if (c > 1) cout << '\n';
         
-        deleted.clear(); reserved.clear();
-        longestName.clear(); longestExtension.clear();
-        
+        deleted.clear(), reserved.clear();
+
         while (getline(cin, line), line.length() > 0)
         {
             string name = line.substr(1), extension;
             
-            int dot = (int)line.find('.');
-            if (dot != (int)line.npos)
+            int point = name.find('.');
+            if (point != name.npos)
             {
-                name = line.substr(1, dot - 1);
-                extension = line.substr(dot + 1);
+                extension = name.substr(point + 1);
+                name = name.substr(0, point);
             }
-            file f = file{name, extension};
             
             if (line.front() == '-')
-            {
-                if (name.length() > longestName.length())
-                    longestName = name;
-                if (extension.length() > longestExtension.length())
-                    longestExtension = extension;
-                deleted.push_back(f);
-            }
+                deleted.push_back(file{name, extension});
             else
-                reserved.push_back(f);
+                reserved.push_back(file{name, extension});
         }
 
-        if (reserved.size() == 0)
-            cout << "DEL *.*\n";
+        if (findWildcard())
+            cout << "DEL " << mask_name << '.' << mask_extension << '\n';
         else
-        {
-            if (findWildcard())
-                cout << "DEL " << mask << '\n';
-            else
-                cout << "IMPOSSIBLE\n";
-        }
+            cout << "IMPOSSIBLE\n";
     }
     
     return 0;
