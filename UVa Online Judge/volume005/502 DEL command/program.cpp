@@ -6,7 +6,7 @@
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 //
-// Easy but error-prone, WA 9 times.
+// Easy but error-prone, WA 9 times, focus detail!
 
 #include <algorithm>
 #include <bitset>

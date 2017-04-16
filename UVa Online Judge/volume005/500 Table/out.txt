@@ -1,307 +1,87 @@
-зддддддддддддбддддддддддддбддддддддддддбддддддддддддбдддддддддддд©
-Ё LMN OPQRST Ё KLMN OPQRS Ё QRST UVWXY Ё UVWXYZ     Ё HIJKLMN OP Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё WXYZ       Ё RST UVWXYZ Ё EFG HIJKLM Ё BCDEFG HIJ Ё N OPQRST U Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё OPQRST UVW Ё N OPQRST U Ё ST UVWXYZ  Ё CDEFG HIJK Ё JKLMN OPQR Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё CDEFG HIJK Ё MN OPQRST  Ё FG HIJKLMN Ё OPQRST UVW Ё JKLMN OPQR Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё FG HIJKLMN Ё UVWXYZ     Ё IJKLMN OPQ Ё HIJKLMN O  Ё EFG HIJKLM Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё RST UVWXYZ Ё JKLMN OPQR Ё IJKLMN OPQ Ё VWXYZ      Ё KLMN OPQRS Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё EFG HIJKLM Ё JKLMN OPQR Ё VWXYZ      Ё VWXYZ      Ё G HIJKLMN  Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё HIJKLMN OP Ё UVWXYZ     Ё ABCDEFG HI Ё N OPQRST U Ё ABCDEFG HI Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё OPQRST UVW Ё EFG HIJKLM Ё OPQRST UVW Ё LMN OPQRST Ё HIJKLMN OP Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё CDEFG HIJK Ё N OPQRST U Ё UVWXYZ     Ё HIJKLMN O  Ё G HIJKLMN  Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё G HIJKLMN  Ё N OPQRST U Ё DEFG HIJKL Ё OPQRST UV  Ё VWXYZ      Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё HIJKLMN O  Ё HIJKLMN OP Ё HIJKLMN OP Ё RST UVWXYZ Ё HIJKLMN O  Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё T UVWXYZ   Ё WXYZ       Ё PQRST UVWX Ё T UVWXYZ   Ё UVWXYZ     Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё ABCDEFG HI Ё DEFG HIJKL Ё UVWXYZ     Ё CDEFG HIJK Ё PQRST UVWX Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё VWXYZ      Ё QRST UVWXY Ё VWXYZ      Ё OPQRST UVW Ё G HIJKLMN  Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё G HIJKLMN  Ё QRST UVWXY Ё ST UVWXYZ  Ё EFG HIJKLM Ё BCDEFG HIJ Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё DEFG HIJKL Ё JKLMN OPQR Ё OPQRST UV  Ё HIJKLMN OP Ё WXYZ       Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё MN OPQRST  Ё QRST UVWXY Ё JKLMN OPQR Ё VWXYZ      Ё KLMN OPQRS Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё PQRST UVWX Ё T UVWXYZ   Ё LMN OPQRST Ё JKLMN OPQR Ё PQRST UVWX Ё
-юддддддддддддаддддддддддддаддддддддддддаддддддддддддадддддддддддды
+зддддддддддддбдддддддддддд©
+цддддддддддддедддддддддддд╢
+цддддддддддддедддддддддддд╢
+Ё IJKLMN OPQ Ё BCDEFG HIJ Ё
+Ё            Ё            Ё
+цддддддддддддедддддддддддд╢
+Ё PQRST UVWX Ё RST UVWXYZ Ё
+цддддддддддддедддддддддддд╢
+Ё WXYZ       Ё G HIJKLMN  Ё
+Ё            Ё            Ё
+цддддддддддддедддддддддддд╢
+Ё WXYZ       Ё CDEFG HIJK Ё
+Ё            Ё            Ё
+цддддддддддддедддддддддддд╢
+Ё PQRST UVWX Ё DEFG HIJKL Ё
+Ё            Ё            Ё
+цддддддддддддедддддддддддд╢
+Ё FG HIJKLMN Ё VWXYZ      Ё
+цддддддддддддедддддддддддд╢
+Ё QRST UVWXY Ё T UVWXYZ   Ё
+цддддддддддддедддддддддддд╢
+Ё PQRST UVWX Ё CDEFG HIJK Ё
+цддддддддддддедддддддддддд╢
+Ё QRST UVWXY Ё RST UVWXYZ Ё
+цддддддддддддедддддддддддд╢
+Ё HIJKLMN OP Ё LMN OPQRST Ё
+Ё            Ё            Ё
+цддддддддддддедддддддддддд╢
+Ё G HIJKLMN  Ё ABCDEFG HI Ё
+Ё            Ё            Ё
+цддддддддддддедддддддддддд╢
+Ё CDEFG HIJK Ё LMN OPQRST Ё
+Ё            Ё            Ё
+цддддддддддддедддддддддддд╢
+Ё RST UVWXYZ Ё CDEFG HIJK Ё
+цддддддддддддедддддддддддд╢
+Ё MN OPQRST  Ё IJKLMN OPQ Ё
+цддддддддддддедддддддддддд╢
+Ё CDEFG HIJK Ё BCDEFG HIJ Ё
+Ё            Ё            Ё
+юддддддддддддадддддддддддды
 
-зддддддддддддбддддддддддддбддддддддддддбддддддддддддбдддддддддддд©
-Ё HIJKLMN OP Ё N OPQRST U Ё T UVWXYZ   Ё N OPQRST U Ё UVWXYZ     Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё OPQRST UV  Ё KLMN OPQRS Ё BCDEFG HIJ Ё OPQRST UVW Ё OPQRST UVW Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё MN OPQRST  Ё HIJKLMN O  Ё VWXYZ      Ё OPQRST UV  Ё UVWXYZ     Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё OPQRST UVW Ё WXYZ       Ё T UVWXYZ   Ё DEFG HIJKL Ё QRST UVWXY Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё OPQRST UVW Ё OPQRST UV  Ё EFG HIJKLM Ё IJKLMN OPQ Ё ABCDEFG HI Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё PQRST UVWX Ё EFG HIJKLM Ё HIJKLMN O  Ё HIJKLMN O  Ё ST UVWXYZ  Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё LMN OPQRST Ё QRST UVWXY Ё JKLMN OPQR Ё IJKLMN OPQ Ё G HIJKLMN  Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё HIJKLMN OP Ё ABCDEFG HI Ё RST UVWXYZ Ё IJKLMN OPQ Ё OPQRST UVW Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё KLMN OPQRS Ё WXYZ       Ё ABCDEFG HI Ё JKLMN OPQR Ё N OPQRST U Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё UVWXYZ     Ё CDEFG HIJK Ё MN OPQRST  Ё ST UVWXYZ  Ё G HIJKLMN  Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё FG HIJKLMN Ё LMN OPQRST Ё T UVWXYZ   Ё KLMN OPQRS Ё UVWXYZ     Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё VWXYZ      Ё CDEFG HIJK Ё CDEFG HIJK Ё FG HIJKLMN Ё LMN OPQRST Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё VWXYZ      Ё ST UVWXYZ  Ё EFG HIJKLM Ё HIJKLMN OP Ё FG HIJKLMN Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё LMN OPQRST Ё OPQRST UVW Ё G HIJKLMN  Ё G HIJKLMN  Ё CDEFG HIJK Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё VWXYZ      Ё PQRST UVWX Ё BCDEFG HIJ Ё VWXYZ      Ё DEFG HIJKL Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё PQRST UVWX Ё UVWXYZ     Ё G HIJKLMN  Ё EFG HIJKLM Ё PQRST UVWX Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё N OPQRST U Ё KLMN OPQRS Ё G HIJKLMN  Ё KLMN OPQRS Ё UVWXYZ     Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё EFG HIJKLM Ё IJKLMN OPQ Ё BCDEFG HIJ Ё G HIJKLMN  Ё OPQRST UV  Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё MN OPQRST  Ё G HIJKLMN  Ё IJKLMN OPQ Ё PQRST UVWX Ё N OPQRST U Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё OPQRST UVW Ё DEFG HIJKL Ё G HIJKLMN  Ё UVWXYZ     Ё KLMN OPQRS Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё JKLMN OPQR Ё T UVWXYZ   Ё FG HIJKLMN Ё MN OPQRST  Ё RST UVWXYZ Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё JKLMN OPQR Ё EFG HIJKLM Ё RST UVWXYZ Ё QRST UVWXY Ё JKLMN OPQR Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё LMN OPQRST Ё G HIJKLMN  Ё T UVWXYZ   Ё QRST UVWXY Ё QRST UVWXY Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё ST UVWXYZ  Ё UVWXYZ     Ё DEFG HIJKL Ё T UVWXYZ   Ё EFG HIJKLM Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё QRST UVWXY Ё HIJKLMN OP Ё JKLMN OPQR Ё DEFG HIJKL Ё BCDEFG HIJ Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё ABCDEFG HI Ё ST UVWXYZ  Ё G HIJKLMN  Ё IJKLMN OPQ Ё QRST UVWXY Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё QRST UVWXY Ё T UVWXYZ   Ё MN OPQRST  Ё WXYZ       Ё IJKLMN OPQ Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё IJKLMN OPQ Ё IJKLMN OPQ Ё OPQRST UV  Ё CDEFG HIJK Ё CDEFG HIJK Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё ABCDEFG HI Ё N OPQRST U Ё JKLMN OPQR Ё UVWXYZ     Ё IJKLMN OPQ Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё CDEFG HIJK Ё PQRST UVWX Ё HIJKLMN O  Ё HIJKLMN OP Ё LMN OPQRST Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё LMN OPQRST Ё ABCDEFG HI Ё UVWXYZ     Ё VWXYZ      Ё G HIJKLMN  Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё UVWXYZ     Ё BCDEFG HIJ Ё CDEFG HIJK Ё EFG HIJKLM Ё JKLMN OPQR Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё ST UVWXYZ  Ё VWXYZ      Ё HIJKLMN O  Ё JKLMN OPQR Ё UVWXYZ     Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё QRST UVWXY Ё RST UVWXYZ Ё HIJKLMN OP Ё HIJKLMN OP Ё T UVWXYZ   Ё
-юддддддддддддаддддддддддддаддддддддддддаддддддддддддадддддддддддды
+зддддддддддддбддддддддддддбддддддддддддбддддддддддддбддддддддддддбддддддддддддбдддддддддддд©
+Ё OPQRST UV  Ё EFG HIJKLM Ё WXYZ       Ё OPQRST UV  Ё UVWXYZ     Ё BCDEFG HIJ Ё PQRST UVWX Ё
+Ё            Ё            Ё            Ё            Ё            Ё            Ё            Ё
+цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
+Ё IJKLMN OPQ Ё DEFG HIJKL Ё BCDEFG HIJ Ё LMN OPQRST Ё QRST UVWXY Ё HIJKLMN O  Ё HIJKLMN O  Ё
+цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
+Ё WXYZ       Ё UVWXYZ     Ё ABCDEFG HI Ё VWXYZ      Ё ST UVWXYZ  Ё BCDEFG HIJ Ё UVWXYZ     Ё
+цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
+Ё OPQRST UVW Ё DEFG HIJKL Ё RST UVWXYZ Ё FG HIJKLMN Ё ABCDEFG HI Ё UVWXYZ     Ё UVWXYZ     Ё
+Ё            Ё            Ё            Ё            Ё            Ё            Ё            Ё
+цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
+Ё EFG HIJKLM Ё OPQRST UV  Ё CDEFG HIJK Ё OPQRST UVW Ё IJKLMN OPQ Ё KLMN OPQRS Ё ABCDEFG HI Ё
+Ё            Ё            Ё            Ё            Ё            Ё            Ё            Ё
+цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
+Ё MN OPQRST  Ё LMN OPQRST Ё JKLMN OPQR Ё HIJKLMN OP Ё PQRST UVWX Ё KLMN OPQRS Ё G HIJKLMN  Ё
+Ё            Ё            Ё            Ё            Ё            Ё            Ё            Ё
+цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
+Ё VWXYZ      Ё HIJKLMN O  Ё EFG HIJKLM Ё BCDEFG HIJ Ё ABCDEFG HI Ё MN OPQRST  Ё LMN OPQRST Ё
+цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
+Ё HIJKLMN OP Ё WXYZ       Ё WXYZ       Ё DEFG HIJKL Ё JKLMN OPQR Ё OPQRST UVW Ё BCDEFG HIJ Ё
+юддддддддддддаддддддддддддаддддддддддддаддддддддддддаддддддддддддаддддддддддддадддддддддддды
 
-зддддддддддддбддддддддддддбддддддддддддбддддддддддддбдддддддддддд©
-Ё WXYZ       Ё CDEFG HIJK Ё HIJKLMN O  Ё KLMN OPQRS Ё OPQRST UVW Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё JKLMN OPQR Ё HIJKLMN OP Ё N OPQRST U Ё QRST UVWXY Ё HIJKLMN O  Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё PQRST UVWX Ё UVWXYZ     Ё MN OPQRST  Ё DEFG HIJKL Ё OPQRST UVW Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё KLMN OPQRS Ё KLMN OPQRS Ё ABCDEFG HI Ё JKLMN OPQR Ё DEFG HIJKL Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё T UVWXYZ   Ё RST UVWXYZ Ё KLMN OPQRS Ё QRST UVWXY Ё FG HIJKLMN Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё T UVWXYZ   Ё EFG HIJKLM Ё CDEFG HIJK Ё DEFG HIJKL Ё VWXYZ      Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё EFG HIJKLM Ё CDEFG HIJK Ё CDEFG HIJK Ё MN OPQRST  Ё OPQRST UV  Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё QRST UVWXY Ё UVWXYZ     Ё WXYZ       Ё IJKLMN OPQ Ё PQRST UVWX Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё HIJKLMN O  Ё ABCDEFG HI Ё MN OPQRST  Ё UVWXYZ     Ё EFG HIJKLM Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё G HIJKLMN  Ё HIJKLMN OP Ё OPQRST UV  Ё G HIJKLMN  Ё ST UVWXYZ  Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё ST UVWXYZ  Ё EFG HIJKLM Ё MN OPQRST  Ё G HIJKLMN  Ё UVWXYZ     Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё T UVWXYZ   Ё DEFG HIJKL Ё ABCDEFG HI Ё UVWXYZ     Ё HIJKLMN OP Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё BCDEFG HIJ Ё DEFG HIJKL Ё LMN OPQRST Ё FG HIJKLMN Ё PQRST UVWX Ё
-юддддддддддддаддддддддддддаддддддддддддаддддддддддддадддддддддддды
-
-зддддддддддддбддддддддддддбддддддддддддбддддддддддддбддддддддддддбддддддддддддбддддддддддддбддддддддддддбдддддддддддд©
-Ё BCDEFG HIJ Ё PQRST UVWX Ё G HIJKLMN  Ё JKLMN OPQR Ё KLMN OPQRS Ё BCDEFG HIJ Ё N OPQRST U Ё BCDEFG HIJ Ё IJKLMN OPQ Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё JKLMN OPQR Ё VWXYZ      Ё LMN OPQRST Ё MN OPQRST  Ё T UVWXYZ   Ё UVWXYZ     Ё OPQRST UVW Ё WXYZ       Ё IJKLMN OPQ Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё T UVWXYZ   Ё QRST UVWXY Ё KLMN OPQRS Ё T UVWXYZ   Ё G HIJKLMN  Ё OPQRST UV  Ё EFG HIJKLM Ё OPQRST UVW Ё BCDEFG HIJ Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё OPQRST UVW Ё LMN OPQRST Ё JKLMN OPQR Ё FG HIJKLMN Ё MN OPQRST  Ё DEFG HIJKL Ё N OPQRST U Ё UVWXYZ     Ё OPQRST UV  Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё PQRST UVWX Ё MN OPQRST  Ё QRST UVWXY Ё ABCDEFG HI Ё ABCDEFG HI Ё OPQRST UVW Ё N OPQRST U Ё MN OPQRST  Ё MN OPQRST  Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё KLMN OPQRS Ё DEFG HIJKL Ё N OPQRST U Ё T UVWXYZ   Ё ABCDEFG HI Ё G HIJKLMN  Ё HIJKLMN OP Ё UVWXYZ     Ё OPQRST UV  Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё UVWXYZ     Ё CDEFG HIJK Ё FG HIJKLMN Ё BCDEFG HIJ Ё QRST UVWXY Ё PQRST UVWX Ё KLMN OPQRS Ё ABCDEFG HI Ё HIJKLMN O  Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё PQRST UVWX Ё N OPQRST U Ё G HIJKLMN  Ё HIJKLMN OP Ё FG HIJKLMN Ё ST UVWXYZ  Ё ABCDEFG HI Ё HIJKLMN O  Ё ST UVWXYZ  Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё QRST UVWXY Ё T UVWXYZ   Ё IJKLMN OPQ Ё FG HIJKLMN Ё IJKLMN OPQ Ё N OPQRST U Ё UVWXYZ     Ё EFG HIJKLM Ё N OPQRST U Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё CDEFG HIJK Ё N OPQRST U Ё LMN OPQRST Ё PQRST UVWX Ё N OPQRST U Ё OPQRST UV  Ё WXYZ       Ё OPQRST UV  Ё HIJKLMN O  Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё QRST UVWXY Ё CDEFG HIJK Ё HIJKLMN O  Ё WXYZ       Ё RST UVWXYZ Ё UVWXYZ     Ё G HIJKLMN  Ё BCDEFG HIJ Ё EFG HIJKLM Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё CDEFG HIJK Ё DEFG HIJKL Ё MN OPQRST  Ё VWXYZ      Ё T UVWXYZ   Ё IJKLMN OPQ Ё HIJKLMN O  Ё DEFG HIJKL Ё ST UVWXYZ  Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё T UVWXYZ   Ё WXYZ       Ё ABCDEFG HI Ё KLMN OPQRS Ё BCDEFG HIJ Ё N OPQRST U Ё VWXYZ      Ё T UVWXYZ   Ё CDEFG HIJK Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё MN OPQRST  Ё UVWXYZ     Ё PQRST UVWX Ё ST UVWXYZ  Ё N OPQRST U Ё UVWXYZ     Ё EFG HIJKLM Ё N OPQRST U Ё OPQRST UV  Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё DEFG HIJKL Ё UVWXYZ     Ё RST UVWXYZ Ё JKLMN OPQR Ё ABCDEFG HI Ё UVWXYZ     Ё UVWXYZ     Ё VWXYZ      Ё ST UVWXYZ  Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё HIJKLMN OP Ё HIJKLMN O  Ё UVWXYZ     Ё CDEFG HIJK Ё CDEFG HIJK Ё UVWXYZ     Ё EFG HIJKLM Ё OPQRST UV  Ё WXYZ       Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё RST UVWXYZ Ё MN OPQRST  Ё ST UVWXYZ  Ё T UVWXYZ   Ё CDEFG HIJK Ё OPQRST UVW Ё OPQRST UV  Ё WXYZ       Ё HIJKLMN O  Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё KLMN OPQRS Ё FG HIJKLMN Ё UVWXYZ     Ё CDEFG HIJK Ё HIJKLMN OP Ё RST UVWXYZ Ё T UVWXYZ   Ё ST UVWXYZ  Ё T UVWXYZ   Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё ST UVWXYZ  Ё QRST UVWXY Ё RST UVWXYZ Ё N OPQRST U Ё CDEFG HIJK Ё ABCDEFG HI Ё KLMN OPQRS Ё HIJKLMN O  Ё EFG HIJKLM Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё IJKLMN OPQ Ё KLMN OPQRS Ё RST UVWXYZ Ё HIJKLMN OP Ё EFG HIJKLM Ё IJKLMN OPQ Ё DEFG HIJKL Ё CDEFG HIJK Ё KLMN OPQRS Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё T UVWXYZ   Ё RST UVWXYZ Ё JKLMN OPQR Ё CDEFG HIJK Ё G HIJKLMN  Ё OPQRST UV  Ё WXYZ       Ё HIJKLMN OP Ё ABCDEFG HI Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё ST UVWXYZ  Ё G HIJKLMN  Ё ST UVWXYZ  Ё OPQRST UV  Ё CDEFG HIJK Ё N OPQRST U Ё JKLMN OPQR Ё OPQRST UVW Ё RST UVWXYZ Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё JKLMN OPQR Ё DEFG HIJKL Ё ABCDEFG HI Ё N OPQRST U Ё LMN OPQRST Ё KLMN OPQRS Ё JKLMN OPQR Ё ST UVWXYZ  Ё QRST UVWXY Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё RST UVWXYZ Ё WXYZ       Ё UVWXYZ     Ё G HIJKLMN  Ё T UVWXYZ   Ё OPQRST UV  Ё RST UVWXYZ Ё WXYZ       Ё T UVWXYZ   Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё HIJKLMN OP Ё BCDEFG HIJ Ё FG HIJKLMN Ё JKLMN OPQR Ё UVWXYZ     Ё KLMN OPQRS Ё HIJKLMN O  Ё OPQRST UV  Ё MN OPQRST  Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё UVWXYZ     Ё WXYZ       Ё FG HIJKLMN Ё OPQRST UVW Ё LMN OPQRST Ё HIJKLMN OP Ё OPQRST UVW Ё CDEFG HIJK Ё UVWXYZ     Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё EFG HIJKLM Ё LMN OPQRST Ё PQRST UVWX Ё VWXYZ      Ё HIJKLMN O  Ё OPQRST UVW Ё ST UVWXYZ  Ё N OPQRST U Ё MN OPQRST  Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё IJKLMN OPQ Ё HIJKLMN O  Ё OPQRST UV  Ё G HIJKLMN  Ё PQRST UVWX Ё QRST UVWXY Ё KLMN OPQRS Ё EFG HIJKLM Ё OPQRST UV  Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё WXYZ       Ё KLMN OPQRS Ё EFG HIJKLM Ё N OPQRST U Ё HIJKLMN OP Ё G HIJKLMN  Ё ST UVWXYZ  Ё BCDEFG HIJ Ё QRST UVWXY Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё EFG HIJKLM Ё PQRST UVWX Ё ST UVWXYZ  Ё BCDEFG HIJ Ё UVWXYZ     Ё HIJKLMN O  Ё ST UVWXYZ  Ё T UVWXYZ   Ё OPQRST UVW Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё LMN OPQRST Ё PQRST UVWX Ё G HIJKLMN  Ё ABCDEFG HI Ё ABCDEFG HI Ё MN OPQRST  Ё PQRST UVWX Ё HIJKLMN OP Ё HIJKLMN O  Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё IJKLMN OPQ Ё ST UVWXYZ  Ё KLMN OPQRS Ё ABCDEFG HI Ё RST UVWXYZ Ё VWXYZ      Ё FG HIJKLMN Ё IJKLMN OPQ Ё G HIJKLMN  Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё MN OPQRST  Ё DEFG HIJKL Ё HIJKLMN O  Ё FG HIJKLMN Ё HIJKLMN OP Ё BCDEFG HIJ Ё WXYZ       Ё KLMN OPQRS Ё ABCDEFG HI Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё HIJKLMN OP Ё FG HIJKLMN Ё UVWXYZ     Ё WXYZ       Ё PQRST UVWX Ё MN OPQRST  Ё FG HIJKLMN Ё RST UVWXYZ Ё OPQRST UVW Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё T UVWXYZ   Ё JKLMN OPQR Ё VWXYZ      Ё EFG HIJKLM Ё T UVWXYZ   Ё ST UVWXYZ  Ё OPQRST UV  Ё UVWXYZ     Ё OPQRST UV  Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё OPQRST UV  Ё DEFG HIJKL Ё WXYZ       Ё T UVWXYZ   Ё OPQRST UVW Ё EFG HIJKLM Ё FG HIJKLMN Ё UVWXYZ     Ё N OPQRST U Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё HIJKLMN OP Ё UVWXYZ     Ё WXYZ       Ё HIJKLMN OP Ё HIJKLMN O  Ё G HIJKLMN  Ё G HIJKLMN  Ё HIJKLMN OP Ё VWXYZ      Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё UVWXYZ     Ё OPQRST UV  Ё RST UVWXYZ Ё LMN OPQRST Ё LMN OPQRST Ё G HIJKLMN  Ё LMN OPQRST Ё OPQRST UVW Ё BCDEFG HIJ Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё IJKLMN OPQ Ё HIJKLMN O  Ё UVWXYZ     Ё VWXYZ      Ё UVWXYZ     Ё CDEFG HIJK Ё WXYZ       Ё ST UVWXYZ  Ё QRST UVWXY Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё EFG HIJKLM Ё BCDEFG HIJ Ё OPQRST UV  Ё QRST UVWXY Ё IJKLMN OPQ Ё N OPQRST U Ё ST UVWXYZ  Ё RST UVWXYZ Ё UVWXYZ     Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё ABCDEFG HI Ё CDEFG HIJK Ё HIJKLMN O  Ё ABCDEFG HI Ё VWXYZ      Ё UVWXYZ     Ё UVWXYZ     Ё LMN OPQRST Ё KLMN OPQRS Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё CDEFG HIJK Ё VWXYZ      Ё BCDEFG HIJ Ё DEFG HIJKL Ё HIJKLMN O  Ё KLMN OPQRS Ё DEFG HIJKL Ё HIJKLMN OP Ё HIJKLMN O  Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё FG HIJKLMN Ё IJKLMN OPQ Ё DEFG HIJKL Ё ABCDEFG HI Ё MN OPQRST  Ё EFG HIJKLM Ё PQRST UVWX Ё HIJKLMN OP Ё OPQRST UV  Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё FG HIJKLMN Ё CDEFG HIJK Ё KLMN OPQRS Ё EFG HIJKLM Ё EFG HIJKLM Ё MN OPQRST  Ё KLMN OPQRS Ё HIJKLMN O  Ё KLMN OPQRS Ё
-цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё HIJKLMN OP Ё DEFG HIJKL Ё UVWXYZ     Ё T UVWXYZ   Ё FG HIJKLMN Ё UVWXYZ     Ё UVWXYZ     Ё JKLMN OPQR Ё HIJKLMN O  Ё
-юддддддддддддаддддддддддддаддддддддддддаддддддддддддаддддддддддддаддддддддддддаддддддддддддаддддддддддддадддддддддддды
-
-зддддддддддддбддддддддддддбддддддддддддбдддддддддддд©
-Ё UVWXYZ     Ё T UVWXYZ   Ё N OPQRST U Ё DEFG HIJKL Ё
-цддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё LMN OPQRST Ё VWXYZ      Ё ST UVWXYZ  Ё ST UVWXYZ  Ё
-цддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё CDEFG HIJK Ё FG HIJKLMN Ё VWXYZ      Ё G HIJKLMN  Ё
-цддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё QRST UVWXY Ё JKLMN OPQR Ё MN OPQRST  Ё FG HIJKLMN Ё
-цддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё ST UVWXYZ  Ё OPQRST UVW Ё CDEFG HIJK Ё OPQRST UV  Ё
-цддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё UVWXYZ     Ё CDEFG HIJK Ё MN OPQRST  Ё HIJKLMN OP Ё
-цддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё IJKLMN OPQ Ё UVWXYZ     Ё T UVWXYZ   Ё ABCDEFG HI Ё
-цддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё OPQRST UVW Ё OPQRST UVW Ё CDEFG HIJK Ё N OPQRST U Ё
-цддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё MN OPQRST  Ё QRST UVWXY Ё PQRST UVWX Ё ABCDEFG HI Ё
-цддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё OPQRST UVW Ё N OPQRST U Ё ST UVWXYZ  Ё QRST UVWXY Ё
-цддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё RST UVWXYZ Ё QRST UVWXY Ё BCDEFG HIJ Ё LMN OPQRST Ё
-цддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё EFG HIJKLM Ё N OPQRST U Ё RST UVWXYZ Ё VWXYZ      Ё
-цддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё HIJKLMN O  Ё VWXYZ      Ё MN OPQRST  Ё G HIJKLMN  Ё
-цддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё ABCDEFG HI Ё DEFG HIJKL Ё N OPQRST U Ё KLMN OPQRS Ё
-цддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё ABCDEFG HI Ё LMN OPQRST Ё MN OPQRST  Ё QRST UVWXY Ё
-цддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё EFG HIJKLM Ё OPQRST UV  Ё HIJKLMN OP Ё QRST UVWXY Ё
-цддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё HIJKLMN OP Ё CDEFG HIJK Ё QRST UVWXY Ё ABCDEFG HI Ё
-цддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё OPQRST UVW Ё LMN OPQRST Ё RST UVWXYZ Ё IJKLMN OPQ Ё
-цддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё G HIJKLMN  Ё ST UVWXYZ  Ё UVWXYZ     Ё KLMN OPQRS Ё
-цддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё JKLMN OPQR Ё PQRST UVWX Ё KLMN OPQRS Ё RST UVWXYZ Ё
-цддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё OPQRST UV  Ё BCDEFG HIJ Ё ABCDEFG HI Ё PQRST UVWX Ё
-цддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё EFG HIJKLM Ё OPQRST UVW Ё EFG HIJKLM Ё G HIJKLMN  Ё
-цддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё EFG HIJKLM Ё PQRST UVWX Ё VWXYZ      Ё IJKLMN OPQ Ё
-цддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё HIJKLMN OP Ё G HIJKLMN  Ё BCDEFG HIJ Ё OPQRST UVW Ё
-цддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё HIJKLMN OP Ё T UVWXYZ   Ё PQRST UVWX Ё VWXYZ      Ё
-цддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё IJKLMN OPQ Ё LMN OPQRST Ё JKLMN OPQR Ё OPQRST UV  Ё
-цддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё HIJKLMN OP Ё HIJKLMN O  Ё CDEFG HIJK Ё QRST UVWXY Ё
-цддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё ABCDEFG HI Ё N OPQRST U Ё N OPQRST U Ё PQRST UVWX Ё
-цддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё OPQRST UV  Ё OPQRST UVW Ё HIJKLMN OP Ё T UVWXYZ   Ё
-цддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё G HIJKLMN  Ё LMN OPQRST Ё BCDEFG HIJ Ё KLMN OPQRS Ё
-цддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё FG HIJKLMN Ё BCDEFG HIJ Ё UVWXYZ     Ё N OPQRST U Ё
-цддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё IJKLMN OPQ Ё WXYZ       Ё G HIJKLMN  Ё QRST UVWXY Ё
-цддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё ST UVWXYZ  Ё WXYZ       Ё QRST UVWXY Ё DEFG HIJKL Ё
-цддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё KLMN OPQRS Ё EFG HIJKLM Ё ST UVWXYZ  Ё T UVWXYZ   Ё
-цддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё N OPQRST U Ё WXYZ       Ё OPQRST UVW Ё N OPQRST U Ё
-цддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё MN OPQRST  Ё EFG HIJKLM Ё G HIJKLMN  Ё EFG HIJKLM Ё
-цддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё UVWXYZ     Ё OPQRST UVW Ё WXYZ       Ё EFG HIJKLM Ё
-цддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
-Ё FG HIJKLMN Ё CDEFG HIJK Ё OPQRST UV  Ё JKLMN OPQR Ё
-юддддддддддддаддддддддддддаддддддддддддадддддддддддды
+зддддддддддддбддддддддддддбддддддддддддбддддддддддддбддддддддддддбддддддддддддбддддддддддддбдддддддддддд©
+Ё G HIJKLMN  Ё OPQRST UVW Ё MN OPQRST  Ё IJKLMN OPQ Ё FG HIJKLMN Ё LMN OPQRST Ё RST UVWXYZ Ё IJKLMN OPQ Ё
+цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
+Ё T UVWXYZ   Ё UVWXYZ     Ё BCDEFG HIJ Ё UVWXYZ     Ё FG HIJKLMN Ё CDEFG HIJK Ё UVWXYZ     Ё JKLMN OPQR Ё
+цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
+Ё N OPQRST U Ё LMN OPQRST Ё EFG HIJKLM Ё ST UVWXYZ  Ё BCDEFG HIJ Ё JKLMN OPQR Ё HIJKLMN O  Ё HIJKLMN OP Ё
+цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
+Ё BCDEFG HIJ Ё FG HIJKLMN Ё PQRST UVWX Ё RST UVWXYZ Ё MN OPQRST  Ё HIJKLMN O  Ё HIJKLMN O  Ё WXYZ       Ё
+цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
+Ё T UVWXYZ   Ё QRST UVWXY Ё UVWXYZ     Ё LMN OPQRST Ё OPQRST UV  Ё ST UVWXYZ  Ё OPQRST UV  Ё LMN OPQRST Ё
+цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
+Ё QRST UVWXY Ё HIJKLMN OP Ё KLMN OPQRS Ё EFG HIJKLM Ё VWXYZ      Ё WXYZ       Ё JKLMN OPQR Ё QRST UVWXY Ё
+Ё            Ё            Ё            Ё            Ё            Ё            Ё            Ё            Ё
+цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
+Ё EFG HIJKLM Ё UVWXYZ     Ё HIJKLMN OP Ё DEFG HIJKL Ё KLMN OPQRS Ё DEFG HIJKL Ё UVWXYZ     Ё JKLMN OPQR Ё
+цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
+Ё LMN OPQRST Ё EFG HIJKLM Ё G HIJKLMN  Ё ABCDEFG HI Ё HIJKLMN O  Ё VWXYZ      Ё HIJKLMN OP Ё RST UVWXYZ Ё
+цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
+Ё HIJKLMN OP Ё ST UVWXYZ  Ё OPQRST UV  Ё BCDEFG HIJ Ё T UVWXYZ   Ё JKLMN OPQR Ё FG HIJKLMN Ё G HIJKLMN  Ё
+Ё            Ё            Ё            Ё            Ё            Ё            Ё            Ё            Ё
+цддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддеддддддддддддедддддддддддд╢
+Ё G HIJKLMN  Ё UVWXYZ     Ё HIJKLMN O  Ё OPQRST UVW Ё MN OPQRST  Ё T UVWXYZ   Ё UVWXYZ     Ё ST UVWXYZ  Ё
+юддддддддддддаддддддддддддаддддддддддддаддддддддддддаддддддддддддаддддддддддддаддддддддддддадддддддддддды

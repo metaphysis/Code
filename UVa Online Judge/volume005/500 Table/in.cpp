@@ -33,12 +33,14 @@ int main(int argc, char *argv[])
             length_of_cell[i] = rand() % 10 + 6;
 
         cout << top_left_corner;
-        for (int i = 0; i < columns; i++)
+        for (int i = 0; i < columns - 1; i++)
         {
             for (int j = 0; j < length_of_cell[i] + 2; j++)
                 cout << link;
             cout << top_line_separator;
         }
+        for (int j = 0; j < length_of_cell[columns - 1]; j++)
+            cout << link;
         cout << top_right_corner << '\n';
         
         string content = "ABCDEFG HIJKLMN OPQRST UVWXYZ";
@@ -47,12 +49,14 @@ int main(int argc, char *argv[])
             if (i > 1)
             {
                 cout << left_line_separator;
-                for (int j = 0; j < columns; j++)
+                for (int j = 0; j < columns - 1; j++)
                 {
-                    for (int k = 0; k < length_of_cell[j] + 2; k++)
+                    for (int k = 0; k < length_of_cell[j] + 1; k++)
                         cout << link;
                     cout << middle_line_separator;
                 }
+                for (int k = 0; k < length_of_cell[columns - 1]; k++)
+                    cout << link;
                 cout << right_line_separator << '\n';
             }
             
@@ -64,15 +68,30 @@ int main(int argc, char *argv[])
                 cout << ' ' << content.substr(rand() % 26, 10) << ' ';
             }
             cout << separator << '\n';
+            
+            // empty line.
+            if (rand() % 10 > 5)
+            {
+                cout << separator;
+                for (int j = 0; j < columns; j++)
+                {
+                    if (j > 0)
+                        cout << separator;
+                    cout << ' ' << string(rand() % 30, ' ') << ' ';
+                }
+                cout << separator << '\n';
+            }
         }
         
         cout << bottom_left_corner;
-        for (int i = 0; i < columns; i++)
+        for (int i = 0; i < columns - 1; i++)
         {
-            for (int j = 0; j < length_of_cell[i] + 2; j++)
+            for (int j = 0; j < length_of_cell[i] + 1; j++)
                 cout << link;
             cout << bottom_line_separator;
         }
+        for (int j = 0; j < length_of_cell[columns - 1]; j++)
+            cout << link;
         cout << bottom_right_corner << '\n';
     }
     
