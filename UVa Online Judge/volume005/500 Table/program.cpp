@@ -1,10 +1,10 @@
 // Table
 // UVa ID: 500
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2017-04-17
+// UVa Run Time: 0.100s
 //
-// 版权所有（C）2016，邱秋。metaphysis # yeah dot net
+// 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
 #include <algorithm>
 #include <bitset>
@@ -53,7 +53,7 @@ void process(vector< string> table)
     for (int i = 0; i < table.size(); i++)
         if (table[i].front() == separator)
         {
-            istringstream iss(table[i].substr(1, table[i].length() - 2));
+            istringstream iss(table[i].substr(1, table[i].length() - 1));
             string block;
 
             int c = 0;
@@ -76,14 +76,13 @@ void process(vector< string> table)
         if (table[i].front() == top_left_corner)
             drawLine(columns, columnWidth, top_left_corner, top_line_separator, top_right_corner);
         if (table[i].front() == bottom_left_corner)
-            drawLine(columns, columnWidth, bottom_left_corner, bottom_line_separator,
-                bottom_right_corner);
+            drawLine(columns, columnWidth, bottom_left_corner, bottom_line_separator, bottom_right_corner);
         if (table[i].front() == left_line_separator)
-            drawLine(columns, columnWidth, left_line_separator, middle_line_separator,
-                right_line_separator);
+            drawLine(columns, columnWidth, left_line_separator, middle_line_separator, right_line_separator);
+
         if (table[i].front() == separator)
         {
-            istringstream iss(table[i].substr(1, table[i].length() - 2));
+            istringstream iss(table[i].substr(1, table[i].length() - 1));
 
             string block;
             int c = 0;
