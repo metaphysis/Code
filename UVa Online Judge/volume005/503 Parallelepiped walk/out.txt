@@ -1,0 +1,7 @@
+Top Right = 36
+Top Bottom = 36
+36
+Top Front = 1440000
+Top Bottom = 1090000
+Front Back = 810000
+810000

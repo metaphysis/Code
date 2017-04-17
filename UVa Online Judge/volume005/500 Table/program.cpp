@@ -32,20 +32,20 @@ const char separator = (char)(179), right_line_separator = (char)(180),
     middle_line_separator = (char)(197), bottom_right_corner = (char)(217),
     top_left_corner = (char)(218);
 
-void drawLine(int cells, vector<int> &columnWidth, char left, char middle, char right)
+void drawLine(int columns, vector<int> &columnWidth, char leftChar, char middleChar, char rightChar)
 {
-    cout << left;
-    for (int i = 0; i < cells; i++)
+    cout << leftChar;
+    for (int i = 0; i < columns; i++)
     {
         if (i > 0)
-            cout << middle;
+            cout << middleChar;
         for (int j = 0; j < columnWidth[i] + 2; j++)
             cout << link;
     }
-    cout << right << '\n';
+    cout << rightChar << '\n';
 }
 
-void process(vector< string> table)
+void process(vector<string> &table)
 {
     vector<int> columnWidth(256, 0);
 
@@ -108,6 +108,8 @@ void process(vector< string> table)
 
 int main(int argc, char *argv[])
 {
+    cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
+    
     string line;
     getline(cin, line);
 
