@@ -27,14 +27,23 @@
 
 using namespace std;
 
+bool debug = true;
+
 int main(int argc, char *argv[])
 {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
 
+    int cases = 0;
+    cin >> cases;
+    
     int L, W, H, x1, y1, z1, x2, y2, z2;
     
-    while (cin >> L >> W >> H >> x1 >> y1 >> z1 >> x2 >> y2 >> z2)
+    for (int c = 1; c <= cases; c++)
     {
+        cin >> L >> W >> H >> x1 >> y1 >> z1 >> x2 >> y2 >> z2;
+        
+        if (debug) cout << L << ' ' << W << ' ' << H << ' ' << x1 << ' ' << y1 << ' ' << z1 << ' ' << x2 << ' ' << y2 << ' ' << z2 << '\n';
+        
         int dist = 100000000;
         
         if (L == 0 || W == 0 || H == 0 ||
@@ -57,7 +66,7 @@ int main(int argc, char *argv[])
                 zz2 = H + y2;
             dist = min(dist, (x1 - x2) * (x1 - x2) + (zz1 - zz2) * (zz1 - zz2));
             
-            cout << "Top Left = " << dist << endl;
+            if (debug) cout << "Top Left = " << dist << endl;
         }
         
         // top plane, right plane
@@ -70,7 +79,7 @@ int main(int argc, char *argv[])
                 yy2 = W + (H - z2);
             dist = min(dist, (x1 - x2) * (x1 - x2) + (yy1 - yy2) * (yy1 - yy2));
             
-            cout << "Top Right = " << dist << endl;
+            if (debug) cout << "Top Right = " << dist << endl;
         }
         
         // top plane, front plane
@@ -80,10 +89,10 @@ int main(int argc, char *argv[])
             if (xx1 == L)
                 xx1 = L + (H - z1);
             else
-                xx2 = L + (H - z1);
-            dist = min(dist, (xx1 - xx2) * (xx1 - xx2) + (y1 - y2) * (y2 - y2));
+                xx2 = L + (H - z2);
+            dist = min(dist, (xx1 - xx2) * (xx1 - xx2) + (y1 - y2) * (y1 - y2));
             
-            cout << "Top Front = " << dist << endl;
+            if (debug) cout << "Top Front = " << dist << endl;
         }
         
         // top plane, back plane
@@ -96,7 +105,7 @@ int main(int argc, char *argv[])
                 zz2 = H + x2;
             dist = min(dist, (y1 - y2) * (y1 - y2) + (zz1 - zz2) * (zz1 - zz2));
             
-            cout << "Top Back = " << dist << endl;
+            if (debug) cout << "Top Back = " << dist << endl;
         }
         
         // top plane, bottom plane
@@ -130,7 +139,7 @@ int main(int argc, char *argv[])
                 xx2 = -(H + x2);
             dist = min(dist, (xx1 - xx2) * (xx1 - xx2) + (y1 - y2) * (y1 - y2));
             
-            cout << "Top Bottom = " << dist << endl;
+            if (debug) cout << "Top Bottom = " << dist << endl;
         }
         
         // right plane, front plane
@@ -143,7 +152,7 @@ int main(int argc, char *argv[])
                 yy2 = W + (L - x2);
             dist = min(dist, (yy1 - yy2) * (yy1 - yy2) + (z1 - z2) * (z1 - z2));
             
-            cout << "Right Front = " << dist << endl;
+            if (debug) cout << "Right Front = " << dist << endl;
         }
         
         // right plane, back plane
@@ -156,7 +165,7 @@ int main(int argc, char *argv[])
                 yy2 = W + x2;
             dist = min(dist, (yy1 - yy2) * (yy1 - yy2) + (z1 - z2) * (z1 - z2));
             
-            cout << "Right Back = " << dist << endl;
+            if (debug) cout << "Right Back = " << dist << endl;
         }
         
         // right plane, bottom plane
@@ -169,7 +178,7 @@ int main(int argc, char *argv[])
                 yy2 = W + z2;
             dist = min(dist, (x1 - x2) * (x1 - x2) + (yy1 - yy2) * (yy1 - yy2));
             
-            cout << "Right Bottom = " << dist << endl;
+            if (debug) cout << "Right Bottom = " << dist << endl;
         }
         
         // right plane, left plane
@@ -204,7 +213,7 @@ int main(int argc, char *argv[])
                 xx2 = -(W + x2);
             dist = min(dist, (xx1 - xx2) * (xx1 - xx2) + (z1 - z2) * (z1 - z2));
             
-            cout << "Right Left = " << dist << endl;
+            if (debug) cout << "Right Left = " << dist << endl;
         }
         
         // front plane, left plane
@@ -217,11 +226,11 @@ int main(int argc, char *argv[])
                 xx2 = L + y2;
             dist = min(dist, (xx1 - xx2) * (xx1 - xx2) + (z1 - z2) * (z1 - z2));
             
-            cout << "Front Left = " << dist << endl;
+            if (debug) cout << "Front Left = " << dist << endl;
         }
         
         // front plane, bottom plane
-        if ((x1 == L && z2 == 0) && (x2 == L && z1 == 0))
+        if ((x1 == L && z2 == 0) || (x2 == L && z1 == 0))
         {
             int xx1 = x1, xx2 = x2;
             if (x1 == L)
@@ -230,7 +239,7 @@ int main(int argc, char *argv[])
                 xx2 = L + z2;
             dist = min(dist, (xx1 - xx2) * (xx1 - xx2) + (y1 - y2) * (y1 - y2));
             
-            cout << "Front Bottom = " << dist << endl;
+            if (debug) cout << "Front Bottom = " << dist << endl;
         }
         
         // front plane, back plane
@@ -238,9 +247,9 @@ int main(int argc, char *argv[])
         {
             int zz1 = z1, zz2 = z2;
             if (x1 == L)
-                zz1 = H + L + (H - x1);
+                zz1 = H + L + (H - z1);
             else
-                zz2 = H + L + (H - x2);
+                zz2 = H + L + (H - z2);
             dist = min(dist, (y1 - y2) * (y1 - y2) + (zz1 - zz2) * (zz1 - zz2));
             
             zz1 = z1, zz2 = z2;
@@ -255,16 +264,16 @@ int main(int argc, char *argv[])
                 yy1 = W + L + (W - y1);
             else
                 yy2 = W + L + (W - y2);
-            dist = min(dist, (yy1 - yy2) * (yy2 - yy2) + (z1 - z2) * (z1 - z2));
+            dist = min(dist, (yy1 - yy2) * (yy1 - yy2) + (z1 - z2) * (z1 - z2));
             
             yy1 = y1, yy2 = y2;
             if (x1 == L)
                 yy1 = -(L + y1);
             else
                 yy2 = -(L + y2);
-            dist = min(dist, (yy1 - yy2) * (yy2 - yy2) + (z1 - z2) * (z1 - z2));
+            dist = min(dist, (yy1 - yy2) * (yy1 - yy2) + (z1 - z2) * (z1 - z2));
             
-            cout << "Front Back = " << dist << endl;
+            if (debug) cout << "Front Back = " << dist << endl;
         }
         
         // left plane, back plane
@@ -277,7 +286,7 @@ int main(int argc, char *argv[])
                 yy2 = -x2;
             dist = min(dist, (yy1 - yy2) * (yy1 - yy2) + (z1 - z2) * (z1 - z2));
             
-            cout << "Left Back = " << dist << endl;
+            if (debug) cout << "Left Back = " << dist << endl;
         }
         
         // left plane, bottom plaen
@@ -290,11 +299,11 @@ int main(int argc, char *argv[])
                 yy2 = -z2;
             dist = min(dist, (x1 - x2) * (x1 - x2) + (yy1 - yy2) * (yy1 - yy2));
             
-            cout << "Left Bottom = " << dist << endl;  
+            if (debug) cout << "Left Bottom = " << dist << endl;  
         }
         
         // back plane, bottom plane
-        if ((x1 == 0 && z2 == 0) && (x2 == 0 && z1 == 0))
+        if ((x1 == 0 && z2 == 0) || (x2 == 0 && z1 == 0))
         {
             int xx1 = x1, xx2 = x2;
             if (x1 == 0)
@@ -303,7 +312,7 @@ int main(int argc, char *argv[])
                 xx2 = -z2;
             dist = min(dist, (xx1 - xx2) * (xx1 - xx2) + (y1 - y2) * (y1 - y2));
             
-            cout << "Back Bottom = " << dist << endl;
+            if (debug) cout << "Back Bottom = " << dist << endl;
         }
         
         cout << dist << '\n';
