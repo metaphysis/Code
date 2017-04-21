@@ -88,8 +88,3 @@ int main(int argc, char *argv[])
     
     return 0;
 }
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 0070ff72a5e944aa9876788eb3144e2545a171b3

@@ -72,12 +72,13 @@ int main(int argc, char *argv[])
             // empty line.
             if (rand() % 10 > 5)
             {
+                bool drawGap = (rand() % 2) > 0;
                 cout << separator;
                 for (int j = 0; j < columns; j++)
                 {
                     if (j > 0)
                         cout << separator;
-                    cout << ' ' << string(rand() % 30, ' ') << ' ';
+                    if (drawGap) cout << ' ' << string(rand() % 30, ' ') << ' ';
                 }
                 cout << separator << '\n';
             }
