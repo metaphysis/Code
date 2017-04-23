@@ -30,16 +30,13 @@ vector<string> statements;
 const int DAY = 1, NIGHT = 2;
 const int DIVINE = 1, EVIL = 2, HUMAN = 3;
 
-int facts[8] = { 0 }, presented[8] =
-
-{
-0};
+int facts[8] = { 0 }, presented[8] = { 0 };
 int result[8] = { 0 }, accepted;
 string kinds[] = { "divine", "evil", "human", "lying" };
 
 bool matched()
 {
-  for (auto s:statements)
+    for (auto s : statements)
     {
         int someone = s.front() - 'A' + 1, other = s[3] - 'A' + 1;
 

@@ -1,8 +1,8 @@
 // Squares (II)
 // UVa ID: 559
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2017-04-23
+// UVa Run Time: 0.880s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
@@ -32,7 +32,6 @@ void findMaximumSquare(int &r, int &c, int &s, bool largest)
     s = 0;
     for (int i = 1; i <= h; i++)
         for (int j = w; j >= 1; j--)
-        {
             if (grid[i][j])
             {
                 if (j <= (w - 1))
@@ -50,11 +49,9 @@ void findMaximumSquare(int &r, int &c, int &s, bool largest)
                 }
                 else
                 {
-                    if (i == r && j == c)
-                        break;
+                    if (i == r && j == c) break;
                 }
             }
-        }
         
     if (!largest) s = grid[r][c];
 }
