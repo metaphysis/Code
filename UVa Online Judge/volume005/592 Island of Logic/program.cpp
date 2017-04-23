@@ -4,7 +4,7 @@
 // Submission Date: 2017-04-23
 // UVa Run Time: 0.000s
 //
-// 版权所有（C）2016，邱秋。metaphysis # yeah dot net
+// 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
 #include <algorithm>
 #include <bitset>
@@ -186,6 +186,7 @@ void backtrack(int depth)
             }
             else
             {
+                // get the union of two possible answer.
                 for (int i = 0; i < 6; i++)
                     if (result[i] > 0 && facts[i] > 0 && result[i] != facts[i])
                         result[i] = 0;

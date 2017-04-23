@@ -4,7 +4,7 @@
 // Submission Date: 
 // UVa Run Time: s
 //
-// 版权所有（C）2016，邱秋。metaphysis # yeah dot net
+// 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
 #include <algorithm>
 #include <bitset>
@@ -25,100 +25,77 @@
 
 using namespace std;
 
-int games, h, w, m, grid[1100][1100];
+int games, h, w, m, grid[1100][1100] = {0};
 
-int findMaximumSquare(int r, int c, int smallest)
+void findMaximumSquare(int &r, int &c, int &s, bool largest)
 {
-    int size = smallest;
-    while (true)
-    {
-        bool valid = true;
-        int nextr = r + size, nextc = c;
-        for (int s = 1; s <= size + 1; s++)
+    s = 0;
+    for (int i = 1; i <= h; i++)
+        for (int j = w; j >= 1; j--)
         {
-            if (nextr > h || nextc > w || grid[nextr][nextc])
+            if (grid[i][j])
             {
-                valid = false;
-                break;
+                if (j <= (w - 1))
+                    grid[i][j] = min(grid[i - 1][j], min(grid[i - 1][j + 1], grid[i][j + 1])) + 1;
+                else
+                    grid[i][j] = 1;
+                
+                if (largest)
+                {
+                    if (s < grid[i][j] || (s == grid[i][j] && (i > r || j < c)))
+                    {
+                        s = grid[i][j];
+                        r = i, c = j;
+                    }
+                }
+                else
+                {
+                    if (i == r && j == c)
+                        break;
+                }
             }
-            nextc += 1;
         }
         
-        if (!valid)
-            break;
-
-        nextc = c + size;
-        for (int s = 1; s <= size + 1; s++)
-        {
-            if (nextr < r || grid[nextr][nextc])
-            {
-                valid = false;
-                break;
-            }
-            nextr -= 1;
-        }
-        
-        if (!valid)
-            break;
-          
-        size++;  
-    }
-            
-    return size;
+    if (!largest) s = grid[r][c];
 }
 
 int main(int argc, char *argv[])
 {
-    cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
+    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
     cin >> games;
     
-    int r, c;
+    int r, c, s;
     for (int g = 1; g <= games; g++)
     {
         cin >> h >> w >> m;
         
         for (int y = 1; y <= h; y++)
             for (int x = 1; x <= w; x++)
-                grid[y][x] = 0;
+                grid[y][x] = 1;
 
         for (int i = 1; i <= m; i++)
         {
             cin >> r >> c;
-            int size = findMaximumSquare(r, c, 0);
-            
-            //cout << "r = " << r << " c = " << c << " size = " << size << '\n';
 
-            for (int y = 0; y < size; y++)
-                for (int x = 0; x < size; x++)
-                    grid[r + y][c + x] = 1;
-                    
-            //for (int y = 1; y <= h; y++)
-            //{
-            //    for (int x = 1; x <= w; x++)
-            //        cout << grid[y][x];
-            //    cout << '\n';
-            //}
+            r = h - r + 1;
+            findMaximumSquare(r, c, s, false);
+
+            // fill the occupied cell.
+            for (int y = 0; y < s; y++)
+                for (int x = 0; x < s; x++)
+                    grid[r - y][c + x] = 0;
         }
         
-        int max_size = 0, max_x, max_y;
-        for (int y = 1; y <= h; y++)
-            for (int x = 1; x <= w; x++)
-                if (!grid[y][x])
-                {
-                    int next_size = findMaximumSquare(y, x, max_size);
-                    if (next_size > max_size)
-                    {
-                        max_size = next_size;
-                        max_y = y;
-                        max_x = x;
-                    }
-                }
+        findMaximumSquare(r, c, s, true);
         
-        if (max_size == 0)
+        if (s == 0)
             cout << "game over\n";
         else
-            cout << max_y << ' ' << max_x << ' ' << max_size << '\n';
+        {
+            r = h - r + 1;
+            cout << r << ' ' << c << ' ' << s << '\n';
+        }
     }
     
 	return 0;
