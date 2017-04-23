@@ -1,0 +1,48 @@
+Conversation #1
+A is human.
+B is divine.
+C is evil.
+It is night.
+
+Conversation #2
+A is evil.
+B is human.
+It is day.
+
+Conversation #3
+It is day.
+
+Conversation #4
+This is impossible.
+
+Conversation #5
+No facts are deducible.
+
+Conversation #6
+A is evil.
+B is divine.
+C is evil.
+It is day.
+
+Conversation #7
+A is evil.
+B is divine.
+C is evil.
+It is day.
+
+Conversation #8
+No facts are deducible.
+
+Conversation #9
+This is impossible.
+
+Conversation #10
+E is human.
+It is night.
+
+Conversation #11
+A is evil.
+C is evil.
+E is evil.
+It is day.
+
