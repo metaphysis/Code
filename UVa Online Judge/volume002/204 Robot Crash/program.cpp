@@ -15,7 +15,7 @@
 
 using namespace std;
 
-const double PI = 3.14159265358979323846, EPSILON = 1E-7;
+double PI = 2.0 * acos(0.0), EPSILON = 1E-7;
 
 struct robot
 {
