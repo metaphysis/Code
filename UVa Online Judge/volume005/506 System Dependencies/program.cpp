@@ -1,8 +1,8 @@
-// System Dependencies
+// System referredencies
 // UVa ID: 506
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2017-04-25
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
@@ -27,60 +27,62 @@
 
 using namespace std;
 
-int counter = 0;
-set<string> explicitly;
-map<string, int> installed;
-map<int, string> indexer;
-map<string, set<string>> depend;
-map<string, int> refered;
-vector<string> deleted;
+int indexer = 0;                            // index of item
+set<string> explicitly;                     // explicitly installed item
+map<string, int> installed;                 // installed items
+map<int, string> sequence;                  // installed items with order
+map<string, vector<string>> referred;       // item1 referred item2, item3, ...
+map<string, set<string>> referencedBy;      // item1 referenced by item2, item3, ...
 
-void install(string component)
+void install(string software, bool topmost)
 {
-    for (auto d : depend[component])
+    for (auto component : referred[software])
     {
-        install(d);
+        referencedBy[component].insert(software);
+        install(component, false);
+    }
+        
+    if (installed.find(software) == installed.end())
+    {
+        cout << "   Installing " << software << '\n';
+        installed.insert(make_pair(software, indexer));
+        sequence.insert(make_pair(indexer, software));
+        indexer++;
 
-        refered[d]++;
-
-        if (installed.find(d) == installed.end())
-        {
-            installed.insert(make_pair(d, counter));
-            indexer.insert(make_pair(counter, d));
-            counter++;
-            cout << "   Installing " << d << '\n';
-        }
+        if (topmost) explicitly.insert(software);
     }
 }
 
-void derefer(string component)
+void remove(string software, bool topmost)
 {
-    for (auto d : depend[component])
+    if ((topmost || explicitly.find(software) == explicitly.end()) && referencedBy[software].size() == 0)
     {
-        derefer(d);
+        cout << "   Removing " << software << '\n';
+        sequence.erase(installed[software]);
+        installed.erase(software);
+        referencedBy.erase(software);
         
-        refered[d]--;
-        if (refered[d] == 0 && explicitly.find(d) == explicitly.end())
-            deleted.push_back(d);
+        if (topmost) explicitly.erase(software);
+        
+        for (auto component : referred[software])
+        {
+            referencedBy[component].erase(software);
+            if (referencedBy[software].size() == 0 && explicitly.find(software) == explicitly.end())
+                remove(component, false);
+        }
     }
 }
 
 void parse(string line)
 {
-    string action, component;
+    string action, component, next;
     istringstream iss(line);
 
     iss >> action;
     if (action == "DEPEND")
     {
         iss >> component;
-        string next;
-        while (iss >> next) 
-        {
-            depend[component].insert(next);
-            if (depend.find(next) == depend.end())
-                depend.insert(make_pair(next, set<string>()));
-        }
+        while (iss >> next) referred[component].push_back(next);
     }
     else if (action == "INSTALL")
     {
@@ -88,17 +90,7 @@ void parse(string line)
         if (installed.find(component) != installed.end())
             cout << "   " << component << " is already installed.\n";
         else
-        {
-            install(component);
-
-            cout << "   Installing " << component << '\n';
-
-            installed.insert(make_pair(component, counter));
-            indexer.insert(make_pair(counter, component));
-            counter++;
-            refered[component] = 0;
-            explicitly.insert(component);
-        }
+            install(component, true);
     }
     else if (action == "REMOVE")
     {
@@ -107,31 +99,16 @@ void parse(string line)
             cout << "   " << component << " is not installed.\n";
         else
         {
-            if (refered[component] > 0)
+            if (referencedBy[component].size() > 0)
                 cout << "   " << component << " is still needed.\n";
             else
-            {
-                deleted.clear();
-                deleted.push_back(component);
-
-                derefer(component);
-    
-                for (auto d : deleted)
-                {
-                    cout << "   Removing " << d << '\n';
-                    indexer.erase(installed[d]);
-                    installed.erase(d);
-                    refered.erase(d);
-                }
-
-                explicitly.erase(component);
-            }
+                remove(component, true);
         }
     }
-    else
+    else if (action == "LIST")
     {
-        for (auto i : indexer)
-            cout << "   " << i.second << '\n';
+        for (auto s : sequence)
+            cout << "   " << s.second << '\n';
     }
 }
 
@@ -142,22 +119,22 @@ int main(int argc, char *argv[])
     string line;
     while (getline(cin, line))
     {
-        cout << line << '\n';
-        parse(line);
-
-        while (getline(cin, line), line != "END")
+        if (line != "END")
         {
-            cout << line << '\n';
-            parse(line);
+            do
+            {
+                cout << line << '\n';
+                if (line == "END") break;
+                parse(line);
+            } while (getline(cin, line));
         }
-        cout << line << '\n';
 
-        counter = 0;
+        indexer = 0;
         explicitly.clear();
         installed.clear();
-        indexer.clear();
-        depend.clear();
-        refered.clear();
+        sequence.clear();
+        referred.clear();
+        referencedBy.clear();
     }
 
     return 0;

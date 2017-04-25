@@ -54,8 +54,8 @@ int main(int argc, char *argv[])
     {
         vector<string> perfectly;
         string flawed = word.front();
-        size_t minDiff = 102400;
-
+        int minDiff = 102400;
+        
         for (int i = 0; i < word.size(); i++)
         {
             size_t matched = 0;
@@ -71,7 +71,7 @@ int main(int argc, char *argv[])
             {
                 if (matched == min(context[i].size(), field.size()))
                 {
-                    size_t diff = max(context[i].size(), field.size()) - min(context[i].size(), field.size());
+                    int diff = abs((int)context[i].size() - (int)field.size());
                     if (diff < minDiff)
                     {
                         minDiff = diff;
