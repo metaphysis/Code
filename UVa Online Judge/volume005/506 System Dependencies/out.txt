@@ -1,0 +1,28 @@
+DEPEND TCPIP NETCARD
+DEPEND  BROWSER TCPIP  HTML
+INSTALL NETCARD
+   Installing NETCARD
+INSTALL BROWSER
+   Installing HTML
+   Installing TCPIP
+   Installing BROWSER
+REMOVE BROWSER
+   Removing BROWSER
+   Removing HTML
+   Removing TCPIP
+LIST
+   NETCARD
+REMOVE NETCARD
+   Removing NETCARD
+INSTALL BROWSER
+   Installing HTML
+   Installing NETCARD
+   Installing TCPIP
+   Installing BROWSER
+REMOVE BROWSER
+   Removing BROWSER
+   Removing HTML
+   Removing NETCARD
+   Removing TCPIP
+LIST
+END
