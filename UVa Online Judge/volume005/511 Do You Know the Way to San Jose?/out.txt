@@ -1,0 +1,7 @@
+SanJose at detail level 3 using SanJoseRegion
+SanFrancisco at detail level 2 using BayArea
+Fresno at detail level 2 no map at that detail level; using NCalif
+Stockton at detail level 1 unknown location
+SanDiego at detail level 2 no map contains that location
+SanJose at detail level 4 using SantaClara
+SantaCruz at detail level 3 no map at that detail level; using CenterCoast
