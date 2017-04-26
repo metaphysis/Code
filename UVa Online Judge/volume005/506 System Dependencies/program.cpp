@@ -27,16 +27,16 @@
 
 using namespace std;
 
-int indexer = 0;                            // index of item
-set<string> explicitly;                     // explicitly installed item
-map<string, int> installed;                 // installed items
+int indexer = 0;                            // index of items
+map<string, bool> explicitly;               // explicitly installed items
+map<string, int> installed;                 // installed items include explicitly and implicitly
 map<int, string> sequence;                  // installed items with order
-map<string, vector<string>> referred;       // item1 referred item2, item3, ...
+map<string, vector<string>> depend;         // item1 depends item2, item3, ...
 map<string, set<string>> referencedBy;      // item1 referenced by item2, item3, ...
 
 void install(string software, bool topmost)
 {
-    for (auto component : referred[software])
+    for (auto component : depend[software])
     {
         referencedBy[component].insert(software);
         install(component, false);
@@ -49,25 +49,25 @@ void install(string software, bool topmost)
         sequence.insert(make_pair(indexer, software));
         indexer++;
 
-        if (topmost) explicitly.insert(software);
+        if (topmost) explicitly[software] = true;
     }
 }
 
 void remove(string software, bool topmost)
 {
-    if ((topmost || explicitly.find(software) == explicitly.end()) && referencedBy[software].size() == 0)
+    if ((topmost || !explicitly[software]) && referencedBy[software].size() == 0)
     {
         cout << "   Removing " << software << '\n';
         sequence.erase(installed[software]);
         installed.erase(software);
         referencedBy.erase(software);
         
-        if (topmost) explicitly.erase(software);
+        if (topmost) explicitly[software] = false;
         
-        for (auto component : referred[software])
+        for (auto component : depend[software])
         {
             referencedBy[component].erase(software);
-            if (referencedBy[software].size() == 0 && explicitly.find(software) == explicitly.end())
+            if (referencedBy[software].size() == 0 && !explicitly[software])
                 remove(component, false);
         }
     }
@@ -75,34 +75,34 @@ void remove(string software, bool topmost)
 
 void parse(string line)
 {
-    string action, component, next;
+    string action, software, component;
     istringstream iss(line);
 
     iss >> action;
     if (action == "DEPEND")
     {
-        iss >> component;
-        while (iss >> next) referred[component].push_back(next);
+        iss >> software;
+        while (iss >> component) depend[software].push_back(component);
     }
     else if (action == "INSTALL")
     {
-        iss >> component;
-        if (installed.find(component) != installed.end())
-            cout << "   " << component << " is already installed.\n";
+        iss >> software;
+        if (installed.find(software) != installed.end())
+            cout << "   " << software << " is already installed.\n";
         else
-            install(component, true);
+            install(software, true);
     }
     else if (action == "REMOVE")
     {
-        iss >> component;
-        if (installed.find(component) == installed.end())
-            cout << "   " << component << " is not installed.\n";
+        iss >> software;
+        if (installed.find(software) == installed.end())
+            cout << "   " << software << " is not installed.\n";
         else
         {
-            if (referencedBy[component].size() > 0)
-                cout << "   " << component << " is still needed.\n";
+            if (referencedBy[software].size() > 0)
+                cout << "   " << software << " is still needed.\n";
             else
-                remove(component, true);
+                remove(software, true);
         }
     }
     else if (action == "LIST")
@@ -133,7 +133,7 @@ int main(int argc, char *argv[])
         explicitly.clear();
         installed.clear();
         sequence.clear();
-        referred.clear();
+        depend.clear();
         referencedBy.clear();
     }
 
