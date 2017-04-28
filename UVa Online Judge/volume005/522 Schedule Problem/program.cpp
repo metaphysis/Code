@@ -1,13 +1,10 @@
-// King
-// UVa ID: 515
+// Schedule Problem
+// UVa ID: 522
 // Verdict: Accepted
 // Submission Date: 2017-04-28
-// UVa Run Time: 0.040s
+// UVa Run Time: 0.170s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
-//
-// System of difference constraints, Bellman-Ford algorithm.
-//
 
 #include <algorithm>
 #include <bitset>
@@ -35,9 +32,10 @@ struct edge
     int u, v, weight;
 };
 
-edge edges[1024];
-int nedges, dist[1024], n, m, si, ni, ki;
-string oi;
+edge edges[20480];
+int nedges, days[10240], n, part1, part2, cases = 0;
+int dist[10240];
+string constrain;
 
 void addEdge(int u, int v, int weight)
 {
@@ -49,25 +47,29 @@ int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    while (cin >> n, n > 0)
+    while (cin >> n)
     {
-        cin >> m;
+        cout << "Case " << ++cases << ":\n";
+        
+        for (int i = 1; i <= n; i++)
+            cin >> days[i];
 
         nedges = 0;
-        for (int i = 1; i <= m; i++)
+        while (cin >> constrain, constrain != "#")
         {
-            cin >> si >> ni >> oi >> ki;
-
-            if (oi.front() == 'g')
-                addEdge(si + ni + 1, si, -ki - 1);
-            else
-                addEdge(si, si + ni + 1, ki - 1);
+            cin >> part1 >> part2;
+            
+            if (constrain == "FAS") addEdge(part2, part1, days[part2]);
+            else if (constrain == "FAF") addEdge(part2, part1, days[part2] - days[part1]);
+            else if (constrain == "SAF") addEdge(part2, part1, -days[part1]);
+            else addEdge(part2, part1, 0);
         }
 
-        n += 2;
+        // add a vertex represent the day all parts done.
+        n += 1;
         for (int i = 1; i < n; i++)
-            addEdge(0, i, 0);
-
+            addEdge(0, i, -days[i]);
+        
         dist[0] = 0;
         for (int i = 1; i < n; i++)
             dist[i] = (1 << 30);
@@ -84,8 +86,18 @@ int main(int argc, char *argv[])
             }
         }
         while (updated && iterations++ < n);
-
-        cout << (updated ? "successful conspiracy\n" : "lamentable kingdom\n");
+    
+        if (updated)
+            cout << "impossible\n\n";
+        else
+        {
+            int minDays = dist[1];
+            for (int i = 2; i < n; i++)
+                minDays = min(minDays, dist[i]);
+            for (int i = 1; i < n; i++)
+                cout << i << ' ' << (dist[i] - minDays) << '\n';
+            cout << '\n';
+        }
     }
 
     return 0;
