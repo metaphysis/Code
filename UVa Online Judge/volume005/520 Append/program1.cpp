@@ -31,56 +31,51 @@ int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    int p, r;
-    string ri;
-    vector<pair<int, int>> pairs;
-    vector<int> indexer;
-    istringstream iss;
-    string line;
+    int pi, ri, total, tail, head, current, idx;
+    vector<int> cache;
 
     while (getline(cin, line))
     {
+        total = tail = head = 0;
+
         do
         {
-            iss.clear(), iss.str(line);
-            iss >> p >> ri;
+            pi = ri = 0;
             
-            if (p == 0) r = 1;
-            else  r = stoi(ri);
-
-            pairs.push_back(make_pair(p, r));
-            if (p == 0) indexer.push_back(pairs.size() - 1);
-        }
-        while (getline(cin, line), line.length() > 0);
-        
-        int total = 0, lastCheckPoint = pairs.size();
-        for (auto it = indexer.rbegin(); it != indexer.rend(); it++)
-        {
-            int start = *it, end = lastCheckPoint, length = 0;
-
-            if (start == 0) continue;
-
-            for (int i = start; i < end; i++)
+            idx = 0;
+            while (!isblank(line[idx]))
             {
-                if (pairs[i].first <= length)
-                    length += pairs[i].second;
-                else
+                pi = pi * 10 + (line[idx] - '0');
+                idx++;
+            }
+
+            if (pi == 0) ri = 1;
+            else
+            {
+                idx++;
+                while (idx < line.length())
                 {
-                    length = -1;
-                    break;
+                    ri = ri * 10 + (line[idx] - '0');
+                    idx++;
                 }
             }
             
-            if (length >= 0)
+            if (pi == 0)
             {
-                lastCheckPoint = start;
-                total++;
+                cache.push_back(current);
+            }
+            else
+            {
+                
             }
         }
+        while (getline(cin, line), line.length() > 0);
 
+        total += (tail - head) - 1;
         cout << total << '\n';
 
-        pairs.clear(), indexer.clear();
+        total = tail = head = current = 0;
+        cache.clear();
     }
     
     return 0;

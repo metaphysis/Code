@@ -31,25 +31,37 @@ int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    int p, r;
-    string ri;
+    int pi, ri;
     vector<pair<int, int>> pairs;
     vector<int> indexer;
-    istringstream iss;
     string line;
 
     while (getline(cin, line))
     {
         do
         {
-            iss.clear(), iss.str(line);
-            iss >> p >> ri;
+            pi = ri = 0;
             
-            if (p == 0) r = 1;
-            else  r = stoi(ri);
+            int idx = 0;
+            while (!isblank(line[idx]))
+            {
+                pi = pi * 10 + (line[idx] - '0');
+                idx++;
+            }
 
-            pairs.push_back(make_pair(p, r));
-            if (p == 0) indexer.push_back(pairs.size() - 1);
+            if (pi == 0) ri = 1;
+            else
+            {
+                idx++;
+                while (idx < line.length())
+                {
+                    ri = ri * 10 + (line[idx] - '0');
+                    idx++;
+                }
+            }
+
+            pairs.push_back(make_pair(pi, ri));
+            if (pi == 0) indexer.push_back(pairs.size() - 1);
         }
         while (getline(cin, line), line.length() > 0);
         
