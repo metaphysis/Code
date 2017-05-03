@@ -29,15 +29,11 @@ using namespace std;
 
 struct driver
 {
-    int from, to, stop;
-    
-    bool operator < (const driver &d) const
-    {
-        if (from != d.from) return from < d.from;
-        else return to < d.to;
-    }
+    int line, start;
 };
 
+vector<vector<int>> busLines(40, vector<int>());
+vector<set<int>> busStops(40, set<int>());
 driver drivers[40];
 bool connected[40][40];
 int n, d, s;
@@ -48,31 +44,37 @@ string line;
 
 bool exchanged(int a, int b)
 {
-    vector<int> stop1;
-    for (int i = drivers[a].stop; i < drivers[a].to; i++)
-        stop1.push_back(i);
-    while (stop1.size() <= 2000)
+    if (a == b) return true;
+
+    int aline = drivers[a].line, bline = drivers[b].line;
+    int total = 4 * busLines[aline].size() * busLines[bline].size();
+    
+    vector<int> s1;
+    while (s1.size() < total)
     {
-        for (int i = drivers[a].to; i > drivers[a].from; i--)
-            stop1.push_back(i);
-        for (int i = drivers[a].from; i < drivers[a].to; i++)
-            stop1.push_back(i);
+        for (int i = drivers[a].start; i < busLines[aline].size(); i++)
+            s1.push_back(busLines[aline][i]);
+        for (int i = busLines[aline].size() - 2; i > 0; i--)
+            s1.push_back(busLines[aline][i]);
+        for (int i = 0; i <= drivers[a].start; i++)
+            s1.push_back(busLines[aline][i]);
     }
     
-    vector<int> stop2;
-    for (int i = drivers[b].stop; i < drivers[b].to; i++)
-        stop2.push_back(i);
-    while (stop2.size() <= 2000)
+    vector<int> s2;
+    while (s2.size() < total)
     {
-        for (int i = drivers[b].to; i > drivers[b].from; i--)
-            stop2.push_back(i);
-        for (int i = drivers[b].from; i < drivers[b].to; i++)
-            stop2.push_back(i);
+        for (int i = drivers[b].start; i < busLines[bline].size(); i++)
+            s2.push_back(busLines[bline][i]);
+        for (int i = busLines[bline].size() - 2; i > 0; i--)
+            s2.push_back(busLines[bline][i]);
+        for (int i = 0; i <= drivers[b].start; i++)
+            s2.push_back(busLines[bline][i]);
     }
     
-    for (int i = 0; i <= 2000; i++)
-        if (stop1[i] == stop2[i])
+    for (int i = 0; i < total; i++)
+        if (s1[i] == s2[i] && busStops[aline].count(s1[i]) && busStops[bline].count(s2[i]))
             return true;
+
     return false;
 }
 
@@ -91,18 +93,26 @@ int main(int argc, char *argv[])
 
         for (int i = 1; i <= n; i++)
         {
+            busLines[i].clear();
+
             getline(cin, line);
             iss.clear(); iss.str(line);
-            iss >> from;
-            while (iss >> stop) to = stop;
+            while (iss >> stop)
+                busLines[i].push_back(stop), busStops[i].insert(stop);
 
             getline(cin, line);
             iss.clear(); iss.str(line);
             while (iss >> si >> di)
-                drivers[di] = driver{from, to, si};
+            {
+                for (int j = 0; j < busLines[i].size(); j++)
+                    if (busLines[i][j] == si)
+                    {
+                    
+                        drivers[di] = driver{i, j};
+                        break;
+                    }
+            }
         }
-
-        sort(drivers, drivers + d);
 
         for (int i = 1; i <= d; i++)
             for (int j = i; j <= d; j++)
