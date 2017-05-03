@@ -29,38 +29,51 @@ using namespace std;
 
 struct driver
 {
-    int stopi, stopj, start;
+    int from, to, stop;
     
     bool operator < (const driver &d) const
     {
-        if (stopi != d.stopi) return stopi < d.stopi;
-        else return stopj < d.stopj;
+        if (from != d.from) return from < d.from;
+        else return to < d.to;
     }
 };
 
 driver drivers[40];
 bool connected[40][40];
 int n, d, s;
-int stopi, stopj, tempj;
+int from, to, stop;
 int si, di;
 istringstream iss;
 string line;
 
-bool exchanged(int i, int j)
+bool exchanged(int a, int b)
 {
-    if (i > j) swap(i, j);
-
-    if (i == j) return true;
-    else
+    vector<int> stop1;
+    for (int i = drivers[a].stop; i < drivers[a].to; i++)
+        stop1.push_back(i);
+    while (stop1.size() <= 2000)
     {
-        if (drivers[i].stopj < drivers[j].stopi) return false;
-        if (drivers[i].stopi == drivers[j].stopi && drivers[i].stopj == drivers[j].stopj)
-            return abs(drivers[i].start - drivers[j].start) % 2 == 1;
-        if (drivers[i].stopj >= drivers[j].stopi && drivers[i].stopi <= drivers[j].stopi)
-            if (drivers[i].stopj - drivers[i].stopi == drivers[j].stopj - drivers[j].stopi)
-                return (drivers[i].start - drivers[i].stopi) == (drivers[j].start - drivers[j].stopi);
-        return true;
+        for (int i = drivers[a].to; i > drivers[a].from; i--)
+            stop1.push_back(i);
+        for (int i = drivers[a].from; i < drivers[a].to; i++)
+            stop1.push_back(i);
     }
+    
+    vector<int> stop2;
+    for (int i = drivers[b].stop; i < drivers[b].to; i++)
+        stop2.push_back(i);
+    while (stop2.size() <= 2000)
+    {
+        for (int i = drivers[b].to; i > drivers[b].from; i--)
+            stop2.push_back(i);
+        for (int i = drivers[b].from; i < drivers[b].to; i++)
+            stop2.push_back(i);
+    }
+    
+    for (int i = 0; i <= 2000; i++)
+        if (stop1[i] == stop2[i])
+            return true;
+    return false;
 }
 
 int main(int argc, char *argv[])
@@ -80,13 +93,13 @@ int main(int argc, char *argv[])
         {
             getline(cin, line);
             iss.clear(); iss.str(line);
-            iss >> stopi;
-            while (iss >> tempj) stopj = tempj;
+            iss >> from;
+            while (iss >> stop) to = stop;
 
             getline(cin, line);
             iss.clear(); iss.str(line);
             while (iss >> si >> di)
-                drivers[di] = driver{stopi, stopj, si};
+                drivers[di] = driver{from, to, si};
         }
 
         sort(drivers, drivers + d);
