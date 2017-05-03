@@ -1,8 +1,8 @@
 // Append
 // UVa ID: 520
 // Verdict: Accepted
-// Submission Date: 2017-05-02
-// UVa Run Time: 0.020s
+// Submission Date: 2017-05-03
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
@@ -31,18 +31,19 @@ int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    int pi, ri, total, tail, head, current, idx;
-    vector<int> cache;
+    int pi, ri;
+    string line;
 
     while (getline(cin, line))
     {
-        total = tail = head = 0;
+        int current = 0;
+        list<int> cache;
 
         do
         {
             pi = ri = 0;
             
-            idx = 0;
+            int idx = 0;
             while (!isblank(line[idx]))
             {
                 pi = pi * 10 + (line[idx] - '0');
@@ -60,22 +61,17 @@ int main(int argc, char *argv[])
                 }
             }
             
-            if (pi == 0)
-            {
-                cache.push_back(current);
-            }
+            if (pi == 0) cache.push_back(current++);
             else
             {
-                
+                while (current - cache.back() < pi)
+                    cache.pop_back();
+                current += ri;
             }
         }
         while (getline(cin, line), line.length() > 0);
 
-        total += (tail - head) - 1;
-        cout << total << '\n';
-
-        total = tail = head = current = 0;
-        cache.clear();
+        cout << (cache.size() - 1) << '\n';
     }
     
     return 0;
