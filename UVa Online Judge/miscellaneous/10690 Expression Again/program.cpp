@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
             minNumber = min(minNumber, number[i]);
         }
 
-        // adjust all number to make sure number[i] >= 0
+        // adjust all numbers to make sure number[i] >= 0
         for (int i = 1; i <= T; i++)
             number[i] -= minNumber;
 

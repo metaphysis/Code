@@ -61,12 +61,6 @@ bool cmpAngle(line line1, line line2)
     return fabs(line1.angle - line2.angle) <= EPSILON;
 }
 
-// 重复点比较函数。
-bool cmpPoint(point p1, point p2)
-{
-    return fabs(p1.x - p2.x) <= EPSILON && fabs(p1.y - p2.y) <= EPSILON;
-}
-
 // 两条直线是否平行。
 bool paralleLine(line line1, line line2)
 {
@@ -146,10 +140,6 @@ polygon halfPlaneIntersection(line * edgeLine, int nLine)
     if (bottom < (top + 1))
         pg.vertex[pg.numberOfVertex++] =
             intersectionPoint(dequeLine[bottom], dequeLine[top]);
-
-    // 去除重复的顶点。
-    pg.numberOfVertex =
-        unique(pg.vertex, pg.vertex + pg.numberOfVertex, cmpPoint) - pg.vertex;
 
     return pg;
 }

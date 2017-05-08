@@ -99,11 +99,11 @@ bool smallerAngle(point first, point second)
     return ccw(lowerLeftPoint, first, second);
 }
 
-// Graham 凸包扫描算法。
+// Graham凸包扫描算法。
 void grahamConvexHull(point vertex[], int number, polygon& hull)
 {
-    // 点数小于等于 3 个，所有的均在凸包上。
-	if (number <= 3)
+    // 点数小于3个，不构成凸包。
+	if (number < 3)
 	{
 		for (int i = 0; i < number; i++)
 			hull.vertex[i] = vertex[i];

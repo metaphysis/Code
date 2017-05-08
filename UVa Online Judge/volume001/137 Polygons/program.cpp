@@ -1,10 +1,10 @@
 // Polygons
 // UVa ID: 137
 // Verdict: Accepted
-// Submission Date: 
-// UVa Run Time: s
+// Submission Date: 2017-05-08
+// UVa Run Time: 0.000s
 //
-// 版权所有（C）2016，邱秋。metaphysis # yeah dot net
+// 版权所有（C）2016 - 2017，邱秋。metaphysis # yeah dot net
 
 #include <iostream>
 #include <algorithm>
@@ -74,12 +74,6 @@ bool cmpHalfPlane(line f, line s)
     if (fabs(f.angle - s.angle) <= EPSILON)
         return crossProduct(s.a, s.b, f.a) < 0.0;
     return f.angle < s.angle;
-}
-
-// 点比较函数。
-bool cmpPoint(point a, point b)
-{
-    return fabs(a.x - b.x) <= EPSILON && fabs(a.y - b.y) <= EPSILON;
 }
 
 // 两条直线是否平行。
@@ -157,9 +151,6 @@ polygon halfPlaneIntersection(line * edgeLine, int nLine)
     if (bottom < (top + 1))
         pg.vertex[pg.number++] = intersectionPoint(deque[bottom], deque[top]);
 
-    // 去除重复的顶点。
-    pg.number = unique(pg.vertex, pg.vertex + pg.number, cmpPoint) - pg.vertex;
-
     return pg;
 }
 
@@ -213,9 +204,7 @@ int main(int argc, char *argv[])
         for (int i = 1; i <= number; i++)
         {
             cin >> x >> y;
-            a.vertex[a.number++] = (point)
-            {
-            x, y};
+            a.vertex[a.number++] = (point){x, y};
         }
 
         cin >> number;
@@ -223,9 +212,7 @@ int main(int argc, char *argv[])
         for (int i = 1; i <= number; i++)
         {
             cin >> x >> y;
-            b.vertex[b.number++] = (point)
-            {
-            x, y};
+            b.vertex[b.number++] = (point){x, y};
         }
 
         exclusiveOr(a, b);

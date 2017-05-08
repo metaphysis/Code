@@ -4,7 +4,7 @@
 
 using namespace std;
 
-const int MAX_VERTICES = 1100;
+const int MAXV = 1100;
 const double EPSILON = 1E-7;
 
 // 点。
@@ -23,8 +23,8 @@ struct line
 // 多边形。
 struct polygon
 {
-    int numberOfVertex;
-    point vertex[MAX_VERTICES];
+    int number;
+    point vertex[MAXV];
 };
 
 // 叉积。
@@ -40,7 +40,7 @@ bool cw(point p1, point p2, point p3)
 }
 
 // 将直线按照极角进行排序。若极角相同，选择位于极角逆时针方向的直线。
-bool cmpHalfPlaneLine(line line1, line line2)
+bool cmpLine(line line1, line line2)
 {
     if (fabs(line1.angle - line2.angle) <= EPSILON)
         return crossProduct(line2.a, line2.b, line1.a) < EPSILON;
@@ -53,21 +53,15 @@ bool cmpAngle(line line1, line line2)
     return fabs(line1.angle - line2.angle) <= EPSILON;
 }
 
-// 重复点比较函数。
-bool cmpPoint(point p1, point p2)
-{
-    return fabs(p1.x - p2.x) <= EPSILON && fabs(p1.y - p2.y) <= EPSILON;
-}
-
 // 两条直线是否平行。
-bool paralleLine(line line1, line line2)
+bool paralle(line line1, line line2)
 {
     return fabs((line1.a.x - line1.b.x) * (line2.a.y - line2.b.y) -
         (line2.a.x - line2.b.x) * (line1.a.y - line1.b.y)) <= EPSILON;
 }
 
 // 求两条直线的交点。
-point intersectionPoint(line line1, line line2)
+point intersection(line line1, line line2)
 {
     point p = line1.a;
     double scale = ((line1.a.x - line2.a.x) * (line2.a.y - line2.b.y) -
@@ -80,68 +74,62 @@ point intersectionPoint(line line1, line line2)
 }
 
 // 由两点得到对应的直线方程。
-void pointsToLine(point a, point b, line & l)
+line pointsToLine(point a, point b)
 {
+    line l;
     l.a = a;
     l.b = b;
     l.angle = atan2(b.y - a.y, b.x - a.x);
+    return l;
 }
 
 // 给定一组直线，求直线的交点得到多边形的顶点。直线按逆时针顺序排列。
-polygon halfPlaneIntersection(line * edgeLine, int nLine)
+polygon halfPlaneIntersection(line * edges, int n)
 {
     polygon pg;
-    line dequeLine[MAX_VERTICES];
-
-    pg.numberOfVertex = 0;
-    sort(edgeLine, edgeLine + nLine, cmpHalfPlaneLine);
-    nLine = unique(edgeLine, edgeLine + nLine, cmpAngle) - edgeLine;
+    line deques[MAXV];
+    
+    pg.number = 0;
+    sort(edges, edges + n, cmpLine);
+    n = unique(edges, edges + n, cmpAngle) - edges;
 
     int bottom = 0, top = 1;
-    dequeLine[0] = edgeLine[0];
-    dequeLine[1] = edgeLine[1];
+    deques[0] = edges[0], deques[1] = edges[1];
 
-    for (int i = 2; i < nLine; i++)
+    for (int i = 2; i < n; i++)
     {
-        if (paralleLine(dequeLine[top], dequeLine[top - 1])
-            || paralleLine(dequeLine[bottom], dequeLine[bottom + 1]))
+        if (paralle(deques[top], deques[top - 1])
+            || paralle(deques[bottom], deques[bottom + 1]))
             return pg;
 
-        while (bottom < top && cw(edgeLine[i].a, edgeLine[i].b,
-                intersectionPoint(dequeLine[top], dequeLine[top - 1])))
+        while (bottom < top && cw(edges[i].a, edges[i].b,
+            intersection(deques[top], deques[top - 1])))
             top--;
 
-        while (bottom < top && cw(edgeLine[i].a, edgeLine[i].b,
-                intersectionPoint(dequeLine[bottom], dequeLine[bottom + 1])))
+        while (bottom < top && cw(edges[i].a, edges[i].b,
+            intersection(deques[bottom], deques[bottom + 1])))
             bottom++;
 
-        dequeLine[++top] = edgeLine[i];
+        deques[++top] = edges[i];
     }
 
-    while (bottom < top && cw(dequeLine[bottom].a, dequeLine[bottom].b,
-            intersectionPoint(dequeLine[top], dequeLine[top - 1])))
+    while (bottom < top && cw(deques[bottom].a, deques[bottom].b,
+        intersection(deques[top], deques[top - 1])))
         top--;
 
-    while (bottom < top && cw(dequeLine[top].a, dequeLine[top].b,
-            intersectionPoint(dequeLine[bottom], dequeLine[bottom + 1])))
+    while (bottom < top && cw(deques[top].a, deques[top].b,
+        intersection(deques[bottom], deques[bottom + 1])))
         bottom++;
 
-    if (top <= (bottom + 1))
-        return pg;
+    if (top <= (bottom + 1)) return pg;
 
     // 求相邻两条凸包边的交点获取顶点坐标。
     for (int i = bottom; i < top; i++)
-        pg.vertex[pg.numberOfVertex++] =
-            intersectionPoint(dequeLine[i], dequeLine[i + 1]);
+        pg.vertex[pg.number++] = intersection(deques[i], deques[i + 1]);
 
     // 首尾两条直线的交点也是顶点。
     if (bottom < (top + 1))
-        pg.vertex[pg.numberOfVertex++] =
-            intersectionPoint(dequeLine[bottom], dequeLine[top]);
-
-    // 去除重复的顶点。
-    pg.numberOfVertex =
-        unique(pg.vertex, pg.vertex + pg.numberOfVertex, cmpPoint) - pg.vertex;
+        pg.vertex[pg.number++] = intersection(deques[bottom], deques[top]);
 
     return pg;
 }

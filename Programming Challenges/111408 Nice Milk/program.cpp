@@ -1,10 +1,10 @@
 // Nice Milk （美味的牛奶）
 // PC/UVa IDs: 111408/10117, Popularity: C, Success rate: low Level: 4
 // Verdict: Accepted
-// Submission Date: 2015-11-25
-// UVa Run Time: 0.456s
+// Submission Date: 2017-05-08
+// UVa Run Time: 0.160s
 //
-// 版权所有（C）2015，邱秋。metaphysis # yeah dot net
+// 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
 #include <iostream>
 #include <algorithm>
@@ -29,9 +29,9 @@ struct line
     double angle;
 };
 
-// edgeLine 直线组指的是凸多边形相邻顶点之间的直线，innerLine 直线组指的是 edgeLine
+// edges 直线组指的是凸多边形相邻顶点之间的直线，innerLine 直线组指的是 edges
 // 向凸多边形中心靠近 h 距离后的直线。
-line edgeLine[MAXN], innerLine[MAXN], deque[MAXN], tmpLine[MAXN];
+line edges[MAXN], innerLine[MAXN], deque[MAXN], tmpLine[MAXN];
 point bread[MAXN], innerBread[MAXN];
 int innerN;
 double minArea;
@@ -68,7 +68,7 @@ bool cmpAngle(line a, line b)
 }
 
 // 半平面比较函数。
-bool cmpHalfPlane(line f, line s)
+bool cmpLine(line f, line s)
 {
     if (fabs(f.angle - s.angle) <= EPSILON)
         return crossProduct(s.a, s.b, f.a) < 0.0;
@@ -76,17 +76,10 @@ bool cmpHalfPlane(line f, line s)
     return f.angle < s.angle;
 }
 
-// 点比较函数。
-bool cmpPoint(point a, point b)
-{
-    return fabs(a.x - b.x) <= EPSILON && fabs(a.y - b.y) <= EPSILON;
-}
-
 // 两条直线是否平行。
-bool paralleLine(line f, line s)
+bool paralle(line f, line s)
 {
-    return fabs((f.a.x - f.b.x) * (s.a.y - s.b.y) -
-        (s.a.x - s.b.x) * (f.a.y - f.b.y)) <= EPSILON;
+    return fabs((f.a.x - f.b.x) * (s.a.y - s.b.y) - (s.a.x - s.b.x) * (f.a.y - f.b.y)) <= EPSILON;
 }
 
 // 计算两点间距离。
@@ -118,7 +111,7 @@ double area(point p[], int n)
     return fabs(total / 2.0);
 }
 
-point intersectionPoint(line f, line s)
+point intersection(line f, line s)
 {
     point p = f.a;
     double tmp =
@@ -131,39 +124,37 @@ point intersectionPoint(line f, line s)
 }
 
 // 给定一组直线，求直线的交点得到多边形的顶点。
-void halfPlaneIntersection(line * edgeLine, int nLine, point * vertex, int &nPoint)
+void halfPlaneIntersection(line * edges, int n, point * vertex, int &nPoint)
 {
     nPoint = 0;
-    sort(edgeLine, edgeLine + nLine, cmpHalfPlane);
-    nLine = unique(edgeLine, edgeLine + nLine, cmpAngle) - edgeLine;
+    sort(edges, edges + n, cmpLine);
+    n = unique(edges, edges + n, cmpAngle) - edges;
 
     int bottom = 0, top = 1;
-    deque[0] = tmpLine[0];
-    deque[1] = tmpLine[1];
+    deque[0] = tmpLine[0], deque[1] = tmpLine[1];
 
-    for (int i = 2; i < nLine; i++)
+    for (int i = 2; i < n; i++)
     {
-        if (paralleLine(deque[top], deque[top - 1])
-            || paralleLine(deque[bottom], deque[bottom + 1]))
+        if (paralle(deque[top], deque[top - 1]) || paralle(deque[bottom], deque[bottom + 1]))
             return;
 
         while (bottom < top && cw(tmpLine[i].a, tmpLine[i].b,
-                intersectionPoint(deque[top], deque[top - 1])))
+                intersection(deque[top], deque[top - 1])))
             top--;
 
         while (bottom < top && cw(tmpLine[i].a, tmpLine[i].b,
-                intersectionPoint(deque[bottom], deque[bottom + 1])))
+                intersection(deque[bottom], deque[bottom + 1])))
             bottom++;
 
         deque[++top] = tmpLine[i];
     }
 
     while (bottom < top && cw(deque[bottom].a, deque[bottom].b,
-            intersectionPoint(deque[top], deque[top - 1])))
+            intersection(deque[top], deque[top - 1])))
         top--;
 
     while (bottom < top && cw(deque[top].a, deque[top].b,
-            intersectionPoint(deque[bottom], deque[bottom + 1])))
+            intersection(deque[bottom], deque[bottom + 1])))
         bottom++;
 
     if (top <= (bottom + 1))
@@ -171,14 +162,11 @@ void halfPlaneIntersection(line * edgeLine, int nLine, point * vertex, int &nPoi
 
     // 求相邻两条凸包边的交点获取顶点坐标。
     for (int i = bottom; i < top; i++)
-        vertex[nPoint++] = intersectionPoint(deque[i], deque[i + 1]);
+        vertex[nPoint++] = intersection(deque[i], deque[i + 1]);
 
     // 首尾两条直线的交点也是顶点。
     if (bottom < (top + 1))
-        vertex[nPoint++] = intersectionPoint(deque[bottom], deque[top]);
-
-    // 去除重复的顶点。
-    nPoint = unique(vertex, vertex + nPoint, cmpPoint) - vertex;
+        vertex[nPoint++] = intersection(deque[bottom], deque[top]);
 }
 
 // 回溯以遍历可能的蘸牛奶方案。
@@ -189,7 +177,7 @@ void backtrack(int choice, int current, int target, int n)
 
     if (current == target)
     {
-        memcpy(tmpLine, edgeLine, sizeof(edgeLine));
+        memcpy(tmpLine, edges, sizeof(edges));
         for (int i = 0; i < n; i++)
             if (dipped[i])
                 tmpLine[i] = innerLine[i];
@@ -231,11 +219,11 @@ int main(int argc, char const *argv[])
             continue;
         }
 
-        // 求预设的直线组 edgeLine 和 innerLine，直线组 innerLine 中直线由直线
-        // 组 edgeLine 移动 h 距离而来。
+        // 求预设的直线组 edges 和 innerLine，直线组 innerLine 中直线由直线
+        // 组 edges 移动 h 距离而来。
         for (int i = 0, j = (i + 1) % n; i < n; i++, j = (i + 1) % n)
         {
-            pointsToLine(bread[i], bread[j], edgeLine[i]);
+            pointsToLine(bread[i], bread[j], edges[i]);
             point c, d;
             shiftPoint(bread[i], bread[j], c, d, (double)(h));
             pointsToLine(c, d, innerLine[i]);

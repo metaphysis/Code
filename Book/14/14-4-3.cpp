@@ -89,8 +89,8 @@ polygon andrewConvexHull(point vertex[], int numberOfVertex)
 {
     polygon pg;
     
-    // 点数小于等于3个，认为所有的点均在凸包上。
-	if (numberOfVertex <= 3)
+    // 点数小于3个，不构成凸包。
+	if (numberOfVertex < 3)
 	{
 		for (int i = 0; i < numberOfVertex; i++)
 			pg.vertex[i] = vertex[i];
