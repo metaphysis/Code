@@ -20,50 +20,48 @@ int main(int argc, char *argv[])
         for (int j = 0; j < (i - 1); j++)
         {
             bitset<8> n(j);
-            indexer.insert(make_pair(n.to_string().substr(8 - length, length), idx));
-            idx++;
+            indexer[n.to_string().substr(8 - length, length)] = idx++;
         }
 
-    string line, header, buffer;
-    bool headerReaded = false;
-    bool segmentEnded = false, segmentStarterReaded = false;
+    string line, head, buffer;
+    bool headReaded = false;
+    bool segmentEnded = false, segmentStartReaded = false;
     int keyLength;
 
     while (getline(cin, line))
     {
-        if (headerReaded == false)
+        if (!headReaded)
         {
-            header = line;
-            headerReaded = true;
+            head = line;
+            headReaded = true;
         }
         else
         {
             buffer += line;
 
-          next:
-
-            if (segmentStarterReaded == false)
+            nextReading:
+            if (!segmentStartReaded)
             {
                 if (buffer.length() >= 3)
                 {
                     keyLength = stoi(buffer.substr(0, 3), NULL, 2);
                     if (keyLength == 0)
                     {
-                        headerReaded = false;
-                        segmentStarterReaded = false;
+                        headReaded = false;
+                        segmentStartReaded = false;
                         buffer.clear();
                         cout << "\n";
                     }
                     else
                     {
                         buffer.erase(0, 3);
-                        segmentStarterReaded = true;
+                        segmentStartReaded = true;
                         segmentEnded = false;
                     }
                 }
             }
 
-            if (segmentEnded == false)
+            if (!segmentEnded)
             {
                 while (buffer.length() >= keyLength)
                 {
@@ -71,13 +69,13 @@ int main(int argc, char *argv[])
                     if (key == string(keyLength, '1'))
                     {
                         segmentEnded = true;
-                        segmentStarterReaded = false;
+                        segmentStartReaded = false;
                         buffer.erase(0, keyLength);
-                        goto next;
+                        goto nextReading;
                     }
                     else
                     {
-                        cout << header[indexer[key]];
+                        cout << head[indexer[key]];
                         buffer.erase(0, keyLength);
                     }
                 }

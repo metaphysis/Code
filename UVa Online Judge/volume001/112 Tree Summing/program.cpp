@@ -1,8 +1,8 @@
 // Tree Summing
 // UVa ID: 112
 // Verdict: Accepted
-// Submission Date: 2016-04-04
-// UVa Run Time: 0.039s
+// Submission Date: 2017-05-08
+// UVa Run Time: 0.030s
 //
 // 版权所有（C）2011，邱秋。metaphysis # yeah dot net
 
@@ -16,7 +16,7 @@ struct TreeNode
     TreeNode *parent, *leftChild, *rightChild;
 };
 
-bool haveTargetSum, emptyTree;
+bool targetSumExist, emptyTree;
 
 // 前序遍历，将路径和保存在叶结点上。
 void summingTree(TreeNode * current)
@@ -46,7 +46,7 @@ void parseTree(TreeNode * current)
     cin >> c;
     if (isdigit(c) || c == '-')
     {
-        int sign = c == '-' ? (-1) : 1;
+        int sign = (c == '-' ? (-1) : 1);
         int number = 0;
 
         if (isdigit(c))
@@ -93,44 +93,38 @@ void parseTree(TreeNode * current)
         parseTree(right);
     }
 
-    while (cin >> c, c != ')')
-        ;
+    while (cin >> c, c != ')') { }
 }
 
 // 遍历树，检查叶结点保存的路径和是否为目标值。
 void treeTraversal(TreeNode * current, int targetSum)
 {
-    if (haveTargetSum)
-        return;
+    if (targetSumExist) return;
 
     if (current->leftChild == NULL && current->rightChild == NULL)
         if (current->weight == targetSum)
-            haveTargetSum = true;
+            targetSumExist = true;
 
-    if (current->leftChild != NULL)
-        treeTraversal(current->leftChild, targetSum);
-
-    if (current->rightChild != NULL)
-        treeTraversal(current->rightChild, targetSum);
+    if (current->leftChild != NULL) treeTraversal(current->leftChild, targetSum);
+    if (current->rightChild != NULL) treeTraversal(current->rightChild, targetSum);
 }
 
 int main(int argc, char *argv[])
 {
+    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
+
     int targetSum;
     while (cin >> targetSum)
     {
-        TreeNode *root = new TreeNode;
-
         emptyTree = false;
+        targetSumExist = false;
+        
+        TreeNode *root = new TreeNode;
         parseTree(root);
-
         summingTree(root);
+        if (!emptyTree) treeTraversal(root, targetSum);
 
-        haveTargetSum = false;
-        if (!emptyTree)
-            treeTraversal(root, targetSum);
-
-        cout << (haveTargetSum ? "yes\n" : "no\n");
+        cout << (targetSumExist ? "yes" : "no") << '\n';
 
         delete root;
     }
