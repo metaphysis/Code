@@ -1,0 +1,99 @@
+// Wormholes
+// UVa ID: 558
+// Verdict: Accepted
+// Submission Date: 2017-05-10
+// UVa Run Time: 0.020s
+//
+// 版权所有（C）2017，邱秋。metaphysis # yeah dot net
+
+#include <iostream>
+#include <queue>
+
+using namespace std;
+
+const int NODES = 1100, INFINITY = 100000000;
+
+struct edge
+{
+    int from, to, weight;
+    edge *next;
+};
+
+edge *edges[NODES];
+int n, dist[NODES], predecessor[NODES], inqueue[NODES], counter[NODES];
+
+// source为起始顶点的序号。
+bool spfa(int source)
+{
+    for (int i = 0; i < n; i++)
+    {
+        dist[i] = INFINITY, predecessor[i] = -1;
+        inqueue[i] = 0, counter[i] = 0;
+    }
+
+    dist[source] = 0, inqueue[source]++;
+    
+    queue<int> unvisited; unvisited.push(source);
+    
+    while (!unvisited.empty())
+    {
+        int u = unvisited.front(); unvisited.pop(); inqueue[u]--;
+ 
+        if (counter[u] > n) return true;
+        
+        edge *e = edges[u];
+        while (e != NULL)
+        {
+            int v = e->to;
+            if (dist[v] > dist[u] + e->weight)
+            {
+                dist[v] = dist[u] + e->weight; predecessor[v] = u;
+                if (!inqueue[v])
+                {
+                    unvisited.push(v); inqueue[v]++; counter[v]++;
+                }
+            }
+            e = e->next;
+        }
+    }
+
+    return false;
+}
+
+int main(int argc, char *argv[])
+{
+    cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
+
+    int cases, m, x, y, t;
+
+    cin >> cases;
+    for (int c = 1; c <= cases; c++)
+    {
+        cin >> n >> m;
+        for (int i = 1; i <= m; i++)
+        {
+            cin >> x >> y >> t;
+            
+            edge *e = new edge;
+            e->to = y, e->weight = t, e->next = NULL;
+
+            if (edges[x] == NULL)
+                edges[x] = e;
+            else
+                e->next = edges[x], edges[x] = e;
+        }
+
+        cout << (spfa(0) ? "possible\n" : "not possible\n");
+        
+        for (int i = 0; i < n; i++)
+        {
+            edge *e = edges[i];
+            while (e != NULL)
+            {
+                edges[i] = e->next; delete e; e = edges[i];
+            }
+        }
+    }
+    
+	return 0;
+}

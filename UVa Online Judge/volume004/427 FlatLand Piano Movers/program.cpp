@@ -25,7 +25,7 @@
 
 using namespace std;
 
-const double epsilon = 1e-6;
+const double EPSILON = 1e-6;
 
 double l, w, a, b;
 char comma;
@@ -46,8 +46,7 @@ int main(int argc, char *argv[])
 
         iss >> l >> comma >> w;
 
-        if (l < w)
-            swap(l, w);
+        if (l < w) swap(l, w);
 
         while (iss >> a >> comma >> b)
         {
@@ -55,12 +54,12 @@ int main(int argc, char *argv[])
             do
             {
                 double mid = (left + right) / 2, midmid = (right + mid) / 2;
+
                 if (f(mid) > f(midmid))
                     left = mid;
                 else
                     right = mid;
-                
-            } while (fabs(left - right) > epsilon);
+            } while (fabs(left - right) > EPSILON);
             
             cout << (f(left) >= 0 ? 'Y' : 'N');
         }

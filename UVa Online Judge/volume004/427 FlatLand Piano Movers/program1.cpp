@@ -13,7 +13,7 @@
 
 using namespace std;
 
-const double epsilon = 1e-6;
+const double EPSILON = 1e-6;
 
 double L, W, W1, W2;
 char comma;
@@ -38,8 +38,7 @@ int main(int argc, char *argv[])
         while (iss >> W1 >> comma >> W2)
         {
             double left = 0, right = L;
-            do
-            {
+            do {
                 double leftThird = left + (right - left) / 3;
                 double rightThird = right - (right - left) / 3;
 
@@ -47,8 +46,7 @@ int main(int argc, char *argv[])
                     left = leftThird;
                 else
                     right = rightThird;
-                
-            } while (fabs(left - right) > epsilon);
+            } while (fabs(left - right) > EPSILON);
 
             cout << (f(left) >= 0 ? 'Y' : 'N');
         }

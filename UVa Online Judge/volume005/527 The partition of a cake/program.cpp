@@ -34,7 +34,7 @@ struct point
 {
     double x, y;
 
-    bool operator<(const point & p) const
+    bool operator<(const point &p) const
     {
         if (fabs(x - p.x) > EPSILON)
             return x < p.x;
@@ -42,7 +42,7 @@ struct point
             return y < p.y;
     }
 
-    bool operator==(const point & p)const
+    bool operator==(const point &p) const
     {
         return fabs(x - p.x) <= EPSILON && fabs(y - p.y) <= EPSILON;
     }
@@ -59,7 +59,7 @@ struct line
 struct polygon
 {
     int number;
-    point vertex[MAXN];
+    point vertices[MAXN];
 };
 
 double crossProduct(point p1, point p2, point p3)
@@ -117,7 +117,7 @@ bool smallerAngle(point first, point second)
     return ccw(lowerLeftPoint, first, second);
 }
 
-polygon grahamConvexHull(point vertex[], int number)
+polygon grahamConvexHull(point vertices[], int number)
 {
     polygon pg;
     pg.number = 0;
@@ -125,31 +125,31 @@ polygon grahamConvexHull(point vertex[], int number)
     if (number < 3)
     {
         for (int i = 0; i < number; i++)
-            pg.vertex[i] = vertex[i];
+            pg.vertices[i] = vertices[i];
         pg.number = number;
         return pg;
     }
 
-    sort(vertex, vertex + number);
-    number = unique(vertex, vertex + number) - vertex;
+    sort(vertices, vertices + number);
+    number = unique(vertices, vertices + number) - vertices;
 
-    lowerLeftPoint = vertex[0];
-    sort(vertex + 1, vertex + number, smallerAngle);
+    lowerLeftPoint = vertices[0];
+    sort(vertices + 1, vertices + number, smallerAngle);
 
-    pg.vertex[0] = vertex[0];
-    pg.vertex[1] = vertex[1];
+    pg.vertices[0] = vertices[0];
+    pg.vertices[1] = vertices[1];
 
-    vertex[number] = lowerLeftPoint;
+    vertices[number] = lowerLeftPoint;
 
     int i = 2, top = 1;
     while (i <= number)
     {
-        if (cw(pg.vertex[top - 1], pg.vertex[top], vertex[i]))
+        if (cw(pg.vertices[top - 1], pg.vertices[top], vertices[i]))
             top--;
-        else if (collinear(pg.vertex[top - 1], pg.vertex[top], vertex[i]))
-            pg.vertex[top] = vertex[i++];
+        else if (collinear(pg.vertices[top - 1], pg.vertices[top], vertices[i]))
+            pg.vertices[top] = vertices[i++];
         else
-            pg.vertex[++top] = vertex[i++];
+            pg.vertices[++top] = vertices[i++];
     }
 
     pg.number = top;
@@ -219,10 +219,10 @@ polygon halfPlaneIntersection(line * edges, int n)
         return pg;
 
     for (int i = bottom; i < top; i++)
-        pg.vertex[pg.number++] = intersection(deques[i], deques[i + 1]);
+        pg.vertices[pg.number++] = intersection(deques[i], deques[i + 1]);
 
     if (bottom < (top + 1))
-        pg.vertex[pg.number++] = intersection(deques[bottom], deques[top]);
+        pg.vertices[pg.number++] = intersection(deques[bottom], deques[top]);
 
     return pg;
 }
@@ -242,14 +242,14 @@ int main(int argc, char *argv[])
         int cuts;
         cin >> cuts;
 
-        vector < polygon > pgs, next;
+        vector<polygon> pgs, next;
 
         polygon pg;
         pg.number = 4;
-        pg.vertex[0] = point{0, 0};
-        pg.vertex[1] = point{1000, 0};
-        pg.vertex[2] = point{1000, 1000};
-        pg.vertex[3] = point{0, 1000};
+        pg.vertices[0] = point{0, 0};
+        pg.vertices[1] = point{1000, 0};
+        pg.vertices[2] = point{1000, 1000};
+        pg.vertices[3] = point{0, 1000};
         pgs.push_back(pg);
 
         line edges1[MAXN], edges2[MAXN];
@@ -268,8 +268,8 @@ int main(int argc, char *argv[])
                 int lines = 0;
                 for (int k = 0; k < somePg.number; k++)
                 {
-                    point start = somePg.vertex[k];
-                    point end = somePg.vertex[(k + 1) % somePg.number];
+                    point start = somePg.vertices[k];
+                    point end = somePg.vertices[(k + 1) % somePg.number];
 
                     edges1[lines] = pointsToLine(start, end);
                     edges2[lines] = pointsToLine(start, end);
@@ -283,8 +283,8 @@ int main(int argc, char *argv[])
                 edges2[lines] = pointsToLine(cutpoint2, cutpoint1);
                 polygon pg2 = halfPlaneIntersection(edges2, lines + 1);
 
-                polygon pg3 = grahamConvexHull(pg1.vertex, pg1.number);
-                polygon pg4 = grahamConvexHull(pg2.vertex, pg2.number);
+                polygon pg3 = grahamConvexHull(pg1.vertices, pg1.number);
+                polygon pg4 = grahamConvexHull(pg2.vertices, pg2.number);
 
                 if (pg3.number < 3 || pg4.number < 3)
                     next.push_back(somePg);

@@ -17,18 +17,17 @@ struct edge
     int from, to, weight;
 };
 
-int dist[NODES], predecessor[NODES];
 edge edges[EDGES];
+int dist[NODES], predecessor[NODES];
 
-// edges为边列表，predecessor保存各顶点的前驱，n顶点数目，m为边的数目，
+// edges为边列表，predecessor保存各顶点的前驱，n为顶点数目，m为边的数目，
 // source为起始顶点的序号。
 bool bellmanFord(edge edges[], int predecessor[], int n, int m, int source)
 {
     // 初始化距离为无限大。各顶点的前驱顶点为未定义。
     for (int i = 0; i <= n; i++)
     {
-        dist[i] = INFINITY;
-        predecessor[i] = -1;
+        dist[i] = INFINITY; predecessor[i] = -1;
     }
 
     // 起始顶点的距离为0。
@@ -47,8 +46,7 @@ bool bellmanFord(edge edges[], int predecessor[], int n, int m, int source)
             }
             
         // 若距离未更新，退出迭代。
-        if (!updated)
-            break;
+        if (!updated) break;
     }
 
     // 检查是否存在权和为负值的环。
@@ -59,8 +57,6 @@ bool bellmanFord(edge edges[], int predecessor[], int n, int m, int source)
             cycled = true;
             break;
         }
-
-    cout << (cycled ? "possible\n" : "not possible\n");
     
     // 返回是否存在权和为负值的环。
     return cycled;
@@ -81,7 +77,9 @@ int main(int argc, char *argv[])
             edges[i] = (edge){x, y, t};
         }
         
-        bellmanFord(edges, predecessor, n, m, 0);
+        bool cycled = bellmanFord(edges, predecessor, n, m, 0);
+        
+        cout << (cycled ? "possible\n" : "not possible\n");
     }
     
 	return 0;
