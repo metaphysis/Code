@@ -1,8 +1,8 @@
 // Intervals
 // UVa ID: 1723
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: TLE
+// Submission Date: 2017-05-10
+// UVa Run Time: 3.000s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
@@ -11,6 +11,7 @@
 #include <cassert>
 #include <cmath>
 #include <cstring>
+#include <ctime>
 #include <iomanip>
 #include <iostream>
 #include <limits>
@@ -27,7 +28,7 @@
 
 using namespace std;
 
-const int INF = 1000000, MAXN = 50001;
+const int INF = 1000000, MAXN = 50002;
 
 struct edge
 {
@@ -37,8 +38,10 @@ struct edge
 edge edges[MAXN];
 int n, dist[MAXN], mn, mx;
 
-void bellmanFor()
+void bellmanFord()
 {
+    memset(dist, 0, sizeof(dist));
+
     bool updated = true;
     
     while (updated)
@@ -49,19 +52,28 @@ void bellmanFor()
         {
             int t = dist[edges[i].u] + edges[i].w;
             if (dist[edges[i].v] > t)
-                dist[edges[i].v] = t, updated = true;
+            {
+                dist[edges[i].v] = t;
+                updated = true;
+            }
         }
         
         for (int i = mn; i <= mx; i++)
         {
             int t = dist[i - 1] + 1;
             if (dist[i] > t)
-                dist[i] = t, updated = true;
+            {
+                dist[i] = t;
+                updated = true;
+            }
         }
         
         for (int i = mx; i >= mn; i--)
             if (dist[i - 1] > dist[i])
-                dist[i - 1] = dist[i], updated = true;
+            {
+                dist[i - 1] = dist[i];
+                updated = true;
+            }
     }
 }
 
@@ -69,22 +81,22 @@ int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    while (cin >> n)
+    cin >> n;
+
+    mx = 0, mn = INF;
+
+    int u, v, w;
+    for (int i = 0; i < n; i++)
     {
-        memset(dist, 0, sizeof(dist));
-        mx = 1, mn = INF;
-        
-        int u, v, w;
-        for (int i = 0; i < n; i++)
-        {
-            cin >> u >> v >> w;
-            edges[i].u = v, edges[i].v = u - 1, edges[i].w = -w;
-            mn = min(mn, u), mx = max(mx, v);
-        }
-        
-        bellmanFor();
-        cout << (dist[mx] - dist[mn - 1]) << '\n';
+        cin >> u >> v >> w;
+        assert(u > 0);
+        edges[i].u = v, edges[i].v = u - 1, edges[i].w = -w;
+        mn = min(mn, u), mx = max(mx, v);
     }
-    
+
+    bellmanFord();
+ 
+    cout << (dist[mx] - dist[mn - 1]) << '\n';
+
     return 0;
 }

@@ -1,8 +1,8 @@
 // Wormholes
 // UVa ID: 558
 // Verdict: Accepted
-// Submission Date: 2017-05-09
-// UVa Run Time: 0.000s
+// Submission Date: 2017-05-10
+// UVa Run Time: 0.020s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
@@ -20,7 +20,7 @@ struct edge
 };
 
 edge *edges[NODES];
-int n, dist[NODES], predecessor[NODES], inqueue[NODES], counter[NODES];
+int n, dist[NODES], predecessor[NODES], visited[NODES], counter[NODES];
 
 // source为起始顶点的序号。
 bool spfa(int source)
@@ -28,16 +28,16 @@ bool spfa(int source)
     for (int i = 0; i < n; i++)
     {
         dist[i] = INFINITY, predecessor[i] = -1;
-        inqueue[i] = 0, counter[i] = 0;
+        visited[i] = 0, counter[i] = 0;
     }
 
-    dist[source] = 0, inqueue[source]++;
+    dist[source] = 0, visited[source]++;
     
     queue<int> unvisited; unvisited.push(source);
     
     while (!unvisited.empty())
     {
-        int u = unvisited.front(); unvisited.pop(); inqueue[u]--;
+        int u = unvisited.front(); unvisited.pop(); visited[u]--;
  
         if (counter[u] > n) return true;
         
@@ -48,9 +48,9 @@ bool spfa(int source)
             if (dist[v] > dist[u] + e->weight)
             {
                 dist[v] = dist[u] + e->weight; predecessor[v] = u;
-                if (!inqueue[v])
+                if (!visited[v])
                 {
-                    unvisited.push(v); inqueue[v]++; counter[v]++;
+                    unvisited.push(v); visited[v]++; counter[v]++;
                 }
             }
             e = e->next;
