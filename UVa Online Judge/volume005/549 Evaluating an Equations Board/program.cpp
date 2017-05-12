@@ -1,8 +1,8 @@
 // Evaluating an Equations Board
 // UVa ID: 549
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Wrong Answer
+// Submission Date: 2017-05-12
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
