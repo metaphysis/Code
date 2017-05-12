@@ -27,84 +27,93 @@
 
 using namespace std;
 
-int usedOperands[20], usedOperators[20];
-string resource, goal;
-string operands, operators;
-char operandsChosen[20], operatorsChosen[20];
-int nOperands, nOperators, nGoal;
-bool found = false;
+int usedOperands[20], usedOperators[20], nGoal, exist, debug = 0;
+string resource, goal, operands, operators;
+char expression[20];
 
-int evaluate()
+int evaluate(int nChosen)
 {
     stack<int> result;
-    for (int i = 0; i < nOperands; i++)
-        result.push(operandsChosen[i] - '0');
 
-    for (int i = 0; i < nOperators; i++)
+    for (int i = 0; i < nChosen; i++)
     {
-        int a = result.top(); result.pop();
-        int b = result.top(); result.pop();
-        switch (operatorsChosen[i])
+        if (isdigit(expression[i]))
+            result.push(expression[i] - '0');
+        else
         {
-            case '+': result.push(a + b); break;
-            case '-': result.push(b - a); break;
-            case 'x': result.push(a * b); break;
+            int a = result.top(); result.pop();
+            int b = result.top(); result.pop();
+            switch (expression[i])
+            {
+                case '+': result.push(a + b); break;
+                case '-': result.push(b - a); break;
+                case 'x': result.push(a * b); break;
+            }
         }
     }
     return result.top();
 }
 
-void backtrackOperators(int i)
+void backtrack(int nChosen, int nNumber, int nOperators)
 {
-    if (found) return;
+    if (exist) return;
 
-    if (i == nOperators)
+    if (nNumber == 1)
     {
-        found = (evaluate() == nGoal);
-        return;
+        if (evaluate(nChosen) == nGoal)
+        {
+            exist = 1;
+            if (debug)
+            {
+                for (int i = 0; i < nChosen; i++)
+                    cout << expression[i];
+                cout << '\n';
+            }
+            return;
+        }
     }
     
-    for (int j = 0; j < operators.length(); j++)
-        if (!usedOperators[j] && operators[j] != operatorsChosen[i])
-        {
-            usedOperators[j] = 1;
-            operatorsChosen[i] = operators[j];
-            backtrackOperators(i + 1);
-            if (found) return;
-            usedOperators[j] = 0;
-        }
-}
-
-void backtrackOperands(int i)
-{
-    if (found) return;
-    
-    if (i == nOperands)
+    if (nChosen == 0 || nOperators >= nNumber)
     {
-        nOperators = nOperands - 1;
-        memset(usedOperators, 0, sizeof(usedOperators));
-        memset(operatorsChosen, 0, sizeof(operatorsChosen));
-        backtrackOperators(0);
-        return;
-    }
-    
-    for (int j = 0; j < operands.length(); j++)
-        if (!usedOperands[j] && operands[j] != operandsChosen[i])
+        for (int i = 0; i < operands.length(); i++)
         {
-            usedOperands[j] = 1;
-            operandsChosen[i] = operands[j];
-            backtrackOperands(i + 1);
-            if (found) return;
-            usedOperands[j] = 0;
+            if (!usedOperands[i] && operands[i] != expression[nChosen])
+            {
+                usedOperands[i] = 1;
+                expression[nChosen] = operands[i];
+                backtrack(nChosen + 1, nNumber + 1, nOperators);
+                if (exist) return;
+                usedOperands[i] = 0;
+            }
         }
+    }
+
+    if (nNumber >= 2)
+    {
+        for (int i = 0; i < operators.length(); i++)
+        {
+            if (!usedOperators[i] && operators[i] != expression[nChosen])
+            {
+                usedOperators[i] = 1;
+                expression[nChosen] = operators[i];
+                backtrack(nChosen + 1, nNumber - 1, nOperators - 1);
+                if (exist) return;
+                usedOperators[i] = 0;
+            }
+        }
+    }
 }
 
 int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
+    int cases = 0;
+
     while (cin >> resource >> goal)
     {
+        cases++;
+
         nGoal = stoi(goal);
 
         operands.clear(), operators.clear();
@@ -117,22 +126,14 @@ int main(int argc, char *argv[])
             else operators += c;
         }
         
-        found = false;
+        exist = 0;
+        memset(usedOperands, 0, sizeof(usedOperands));
+        memset(usedOperators, 0, sizeof(usedOperators));
+        memset(expression, 0, sizeof(expression));
 
-        for (int i = 1; i <= operands.length(); i++)
-        {
-            if ((i - 1) > operators.length()) continue;
-
-            memset(usedOperands, 0, sizeof(usedOperands));
-            memset(operandsChosen, 0, sizeof(operandsChosen));
-            
-            nOperands = i;
-            backtrackOperands(0);
-            
-            if (found) break;
-        }
+        backtrack(0, 0, operators.size());
         
-        cout << (found ? "solution" : "no solution") << '\n';
+        cout << (exist ? "solution" : "no solution") << '\n';
     }
     
     return 0;
