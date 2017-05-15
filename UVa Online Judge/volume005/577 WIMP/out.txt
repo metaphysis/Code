@@ -1,0 +1,17 @@
+Created window 0 at 0, 0, 200, 200
+Created window 1 at 50, 50, 250, 250
+Window 0 at 0, 0, 200, 200
+Window 1 at 50, 50, 250, 250
+Selected window 0
+Resized window 0 to 0, 0, 1023, 1023
+Selected window 0
+Resized window 0 to 0, 0, 200, 200
+Window 1 at 50, 50, 250, 250
+Window 0 at 0, 0, 200, 200
+Selected window 0
+Selected window 0
+Moved window 0 to 20, 60, 220, 260
+Moved window 0 to 50, 90, 250, 290
+Selected window 1
+Closed window 1
+Window 0 at 50, 90, 250, 290
