@@ -58,17 +58,12 @@ vector<int> zOrder;
 
 void findMouse(int x, int y, int &mouseId, int &mouseArea, int &idx)
 {
-    mouseId = EMPTY, mouseArea = EMPTY, windowIdex = -1;
+    mouseId = EMPTY, mouseArea = EMPTY, idx = -1;
 
     for (int i = 0; i < zOrder.size(); i++)
         for (int area = CLOSE_BOX; area <= DATA_AREA; area++)
             if (windows[zOrder[i]].contains(area, x, y))
                 mouseId = zOrder[i], idx = i, mouseArea = area;
-}
-
-bool isFullscreen(window w)
-{
-    return w.left == 0 && w.top == 0 && w.right == 1023 && w.bottom == 1023;
 }
 
 void displayWindow(int id)
@@ -94,10 +89,8 @@ void createWindow()
     int left, top, right, bottom;
 
     cin >> left >> top >> right >> bottom;
-    
-    window w = window{windowId, left, top, right, bottom, 0};
-    w.fullscreen = isFullscreen(w);
-    windows[windowId] = w;
+
+    windows[windowId] = window{windowId, left, top, right, bottom, 0};
     zOrder.push_back(windowId);
 
     cout << "Created window " << windowId << " at ";
