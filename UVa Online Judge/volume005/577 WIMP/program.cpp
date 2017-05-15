@@ -49,10 +49,8 @@ struct window
 
 int windowId = 0;
 int mouseX, mouseY, lastMouseX, lastMouseY;
-int isMouseDown = 0, isWindowMoving = 0;
 int mouseDownArea, mouseDownWindowId;
-int mouseUpArea, mouseUpWindowId;
-int windowIndex = -1;
+int isMouseDown = 0, isWindowMoving = 0;
 map<int, window > windows;
 vector<int> zOrder;
 
@@ -113,6 +111,7 @@ void mouseDown()
 {
     cin >> mouseX >> mouseY;
 
+    int windowIndex = -1;
     findMouse(mouseX, mouseY, mouseDownWindowId, mouseDownArea, windowIndex);
 
     if (mouseDownWindowId != EMPTY)
@@ -137,29 +136,33 @@ void mouseUp()
     }
     else
     {
+        int mouseUpArea, mouseUpWindowId, windowIndex = -1;
         findMouse(mouseX, mouseY, mouseUpWindowId, mouseUpArea, windowIndex);
 
-        if (mouseDownWindowId == mouseUpWindowId && mouseDownWindowId != EMPTY && mouseDownArea == mouseUpArea)
+        if (mouseDownWindowId == mouseUpWindowId && mouseDownWindowId != EMPTY)
         {
-            if (mouseUpArea == CLOSE_BOX)
+            if (mouseDownArea == mouseUpArea)
             {
-                windows.erase(mouseUpWindowId);
-                zOrder.erase(zOrder.begin() + windowIndex);
-                cout << "Closed window " << mouseUpWindowId << '\n';
-            }
-            else if (mouseUpArea == ZOOM_BOX)
-            {
-                if (windows[mouseUpWindowId].fullscreen)
+                if (mouseUpArea == CLOSE_BOX)
                 {
-                    windows[mouseUpWindowId].fullscreen = 0;
-                    cout << "Resized window " << mouseUpWindowId << " to ";
-                    displayWindow(mouseUpWindowId);
+                    windows.erase(mouseUpWindowId);
+                    zOrder.erase(zOrder.begin() + windowIndex);
+                    cout << "Closed window " << mouseUpWindowId << '\n';
                 }
-                else
+                else if (mouseUpArea == ZOOM_BOX)
                 {
-                    windows[mouseUpWindowId].fullscreen = 1;
-                    cout << "Resized window " << mouseUpWindowId << " to ";
-                    cout << "0, 0, 1023, 1023\n";
+                    if (windows[mouseUpWindowId].fullscreen)
+                    {
+                        windows[mouseUpWindowId].fullscreen = 0;
+                        cout << "Resized window " << mouseUpWindowId << " to ";
+                        displayWindow(mouseUpWindowId);
+                    }
+                    else
+                    {
+                        windows[mouseUpWindowId].fullscreen = 1;
+                        cout << "Resized window " << mouseUpWindowId << " to ";
+                        cout << "0, 0, 1023, 1023\n";
+                    }
                 }
             }
         }
@@ -172,10 +175,13 @@ void mouseMove()
 {
     cin >> mouseX >> mouseY;
 
-    if (isMouseDown && mouseDownArea == MOTION_BAR && !windows[mouseDownWindowId].fullscreen)
+    if (isMouseDown && mouseDownArea == MOTION_BAR)
     {
-        moveWindow(mouseDownWindowId, mouseX - lastMouseX, mouseY - lastMouseY);
-        isWindowMoving = 1;
+        if (!windows[mouseDownWindowId].fullscreen)
+        {
+            moveWindow(mouseDownWindowId, mouseX - lastMouseX, mouseY - lastMouseY);
+            isWindowMoving = 1;
+        }
     }
 
     lastMouseX = mouseX, lastMouseY = mouseY;
