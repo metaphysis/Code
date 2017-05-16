@@ -118,7 +118,7 @@ void mouseDown()
     {
         zOrder.erase(zOrder.begin() + windowIndex);
         zOrder.push_back(mouseDownWindowId);
-        cout << "Selected window " << windows[mouseDownWindowId].id << '\n';
+        cout << "Selected window " << mouseDownWindowId << '\n';
     }
 
     isMouseDown = 1;
@@ -136,32 +136,40 @@ void mouseUp()
     }
     else
     {
-        int mouseUpArea, mouseUpWindowId, windowIndex = -1;
-        findMouse(mouseX, mouseY, mouseUpWindowId, mouseUpArea, windowIndex);
-
-        if (mouseDownWindowId == mouseUpWindowId && mouseDownWindowId != EMPTY)
+        if (mouseDownArea == MOTION_BAR)
         {
-            if (mouseDownArea == mouseUpArea)
+            if (!windows[mouseDownWindowId].fullscreen)
+                moveWindow(mouseDownWindowId, mouseX - lastMouseX, mouseY - lastMouseY);
+        }
+        else
+        {
+            int mouseUpArea, mouseUpWindowId, windowIndex = -1;
+            findMouse(mouseX, mouseY, mouseUpWindowId, mouseUpArea, windowIndex);
+
+            if (mouseDownWindowId == mouseUpWindowId && mouseDownWindowId != EMPTY)
             {
-                if (mouseUpArea == CLOSE_BOX)
+                if (mouseDownArea == mouseUpArea)
                 {
-                    windows.erase(mouseUpWindowId);
-                    zOrder.erase(zOrder.begin() + windowIndex);
-                    cout << "Closed window " << mouseUpWindowId << '\n';
-                }
-                else if (mouseUpArea == ZOOM_BOX)
-                {
-                    if (windows[mouseUpWindowId].fullscreen)
+                    if (mouseUpArea == CLOSE_BOX)
                     {
-                        windows[mouseUpWindowId].fullscreen = 0;
-                        cout << "Resized window " << mouseUpWindowId << " to ";
-                        displayWindow(mouseUpWindowId);
+                        windows.erase(mouseUpWindowId);
+                        zOrder.erase(zOrder.begin() + windowIndex);
+                        cout << "Closed window " << mouseUpWindowId << '\n';
                     }
-                    else
+                    else if (mouseUpArea == ZOOM_BOX)
                     {
-                        windows[mouseUpWindowId].fullscreen = 1;
-                        cout << "Resized window " << mouseUpWindowId << " to ";
-                        cout << "0, 0, 1023, 1023\n";
+                        if (windows[mouseUpWindowId].fullscreen)
+                        {
+                            windows[mouseUpWindowId].fullscreen = 0;
+                            cout << "Resized window " << mouseUpWindowId << " to ";
+                            displayWindow(mouseUpWindowId);
+                        }
+                        else
+                        {
+                            windows[mouseUpWindowId].fullscreen = 1;
+                            cout << "Resized window " << mouseUpWindowId << " to ";
+                            cout << "0, 0, 1023, 1023\n";
+                        }
                     }
                 }
             }
