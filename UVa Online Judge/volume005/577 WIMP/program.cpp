@@ -1,8 +1,8 @@
 // WIMP
 // UVa ID: 577
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2017-05-17
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
@@ -103,7 +103,10 @@ void redraw()
     {
         window w = windows[*it];
         cout << "Window " << w.id << " at ";
-        cout << w.left << ", " << w.top << ", " << w.right << ", " << w.bottom << '\n';
+        if (w.fullscreen)
+            cout << "0, 0, 1023, 1023\n";
+        else
+            cout << w.left << ", " << w.top << ", " << w.right << ", " << w.bottom << '\n';
     }
 }
 
