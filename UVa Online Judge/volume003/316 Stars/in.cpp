@@ -10,12 +10,12 @@ int main(int argc, char *argv[])
 {
     srand(time(NULL));
 
-    int cases = 20;
+    int cases = 5;
     set<long long int> produced;
     
     for (int c = 1; c <= cases; c++)
     {
-        int n = rand() % 1000 + 1;
+        int n = rand() % 100 + 1;
         cout << n << '\n';
 
         produced.clear();
@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
         {
             long long int x = rand() % 1000;
             long long int y = rand() % 1000;
-            int brightness = rand() % 100;
+            int brightness = rand() % 1000;
             long long int hash = x * 10000 + y;
             if (produced.find(hash) == produced.end())
             {

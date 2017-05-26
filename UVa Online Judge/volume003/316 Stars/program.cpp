@@ -1,8 +1,8 @@
 // Stars
 // UVa ID: 316
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2017-05-27
+// UVa Run Time: 0.270s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
@@ -27,236 +27,168 @@
 
 using namespace std;
 
-struct point
-{
-    int x, y;
-
-    point (int x = 0, int y = 0) : x(x) , y(y) {}
-
-    point operator - (point p) { return point(x - p.x, y - p.y); }
-};
+const double EPSILON = 1e-6;
 
 struct star
 {
-    point p;
-    int brightness;
+    int x, y, brightness;
 };
 
-int cases = 0;
-int n, m, si, x, y, brightness;
-long long int d1[1024][1024], d2[64][64];
-string name;
-vector<star> stars, backup;
-vector<point> constellation;
-int times = 0, maxBrightness = 0;
-vector<int> brightest;
-
+vector<star> stars1, stars2, constellation1;
+map<int, map<int, int>> starsIdx1, starsIdx2;
+    
 bool cmpXY(int i, int j)
 {
-    if (stars[i].p.x != stars[j].p.x) return stars[i].p.x < stars[j].p.x;
-    else return stars[i].p.y < stars[j].p.y;
+    if (stars1[i].x != stars1[j].x) return stars1[i].x < stars1[j].x;
+    return stars1[i].y < stars1[j].y;
 }
 
 bool cmpBrightness(const star &s1, const star &s2)
 {
     if (s1.brightness != s2.brightness) return s1.brightness > s2.brightness;
-    else if (s1.p.x != s2.p.x) return s1.p.x < s2.p.x;
-    else return s1.p.y < s2.p.y;
+    if (s1.x != s2.x) return s1.x < s2.x;
+    return s1.y < s2.y;
 }
 
-void findPoint()
+int findPolygon(vector<star> &stars, map<int, map<int, int>> &starsIdx, vector<star> &constellation, vector<int> &brightest)
 {
-    sort(stars.begin(), stars.end(), cmpBrightness);
+    int maxBrightness = 0, times = 0;
+    int n = stars.size(), m = constellation.size();
 
-    cout << name << " occurs " << n << " time(s) in the map.\n";
-    cout << "Brightest occurrence:";
-    cout << " (" << stars[0].p.x << ',' << stars[0].p.y << ")\n";
-}
-
-void findLine()
-{
-    sort(stars.begin(), stars.end(), cmpBrightness);
-
-    times = n * (n - 1) / 2;
-    cout << name << " occurs " << times << " time(s) in the map.\n";
-
-    if (times > 0)
-    {
-        cout << "Brightest occurrence:";
-        cout << " (" << stars[0].p.x << ',' << stars[0].p.y << ")";
-        cout << " (" << stars[1].p.x << ',' << stars[1].p.y << ")\n";
-    }
-}
-
-long long int getDist(point &p1, point &p2)
-{
-    int offsetx = p1.x - p2.x, offsety = p1.y - p2.y;
-    return offsetx * offsetx + offsety * offsety;
-}
-
-long long int norm(point &p0)
-{
-    return p0.x * p0.x + p0.y * p0.y;
-}
-
-long long int dotProduct(point &p0, point &p1)
-{
-    return p0.x * p1.x + p0.y * p1.y;
-}
-
-long long int crossProduct(point &p0, point &p1, point &p2)
-{
-    return (p1.x - p0.x) * (p2.y - p0.y) - (p2.x - p0.x) * (p1.y - p0.y);
-}
-
-bool isSameAngle(point &pi, point &pj, point &pk, point &pii, point &pjj, point &pkk)
-{
-    point v1, v2, v3, v4;
-
-    v1 = pk - pj, v2 = pj - pi, v3 = pkk - pjj, v4 = pii - pjj;
-
-    long long int dp1 = dotProduct(v1, v2);
-    long long int dp2 = dotProduct(v3, v4);
-    long long int cosa1 = dp1 * dp1 * norm(v3) * norm(v4);
-    long long int cosa2 = dp2 * dp2 * norm(v1) * norm(v2);
-    if (cosa1 != cosa2) return false;
-
-    long long int cp1 = crossProduct(pi, pj, pk);
-    long long int cp2 = crossProduct(pii, pjj, pkk);
-    if (cp1 * cp2 < 0) return false;
-
-    return true;
-}
-
-bool similarToEnd(int i, int j, vector<int> &selected)
-{
-    int used[1024] = {0};
-
-    selected.push_back(i), selected.push_back(j);
-    used[i] = used[j] = 1;
-
-    int idx = 0, size = constellation.size() - 2;
-    while (idx < size)
-    {
-        int updated = 0;
-        for (int k = 0; k < stars.size(); k++)
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
         {
-            if (used[k]) continue;
+            if (i == j) continue;
+            
+            double theta1 = atan2(stars[j].y - stars[i].y, stars[j].x - stars[i].x);
+            double theta2 = atan2(constellation[1].y - constellation[0].y, constellation[1].x - constellation[0].x);
+            double rtheta = theta1 - theta2;
+            double dist1 = pow(stars[j].x - stars[i].x, 2) + pow(stars[j].y - stars[i].y, 2);
+            double dist2 = pow(constellation[1].x - constellation[0].x, 2) + pow(constellation[1].y - constellation[0].y, 2);
+            double scaling = sqrt(dist1 / dist2);
 
-            // 相邻顶点间的距离等比例。
-            if (d1[j][k] * d2[idx][idx + 1] != d2[idx + 1][idx + 2] * d1[i][j]) continue;
+            int k = 0, sumOfBrightness = 0;
+            vector<int> similar;
 
-            // 多边形邻边的夹角相等。
-            if (!isSameAngle(stars[i].p, stars[j].p, stars[k].p, constellation[idx], constellation[idx + 1], constellation[idx + 2])) continue;
+            for (k = 0; k < m; k++) 
+            {
+                double tx = constellation[k].x - constellation[0].x, ty = constellation[k].y - constellation[0].y;
 
-            selected.push_back(k);
-            updated = 1, used[k] = 1, i = j, j = k;
-            break;
-        }
+                // rotate
+                double rx = tx * cos(rtheta) - ty * sin(rtheta);
+                double ry = tx * sin(rtheta) + ty * cos(rtheta);
+                
+                // scale
+                rx *= scaling, ry *= scaling;
+                
+                // translate
+                rx += stars[i].x,  ry += stars[i].y;
+                
+                // check the coordinate is integer or not
+                int ix = (int)floor(rx + EPSILON), iy = (int)floor(ry + EPSILON);
+                
+                if(fabs(rx - ix) > EPSILON || fabs(ry - iy) > EPSILON) break;
+                
+                // check the point if exist or not
+                if (starsIdx.find(ix) == starsIdx.end()) break;
+                if (starsIdx[ix].find(iy) == starsIdx[ix].end()) break;
+                
+                int idx = starsIdx[ix][iy];
+                similar.push_back(idx);
+                sumOfBrightness += stars[idx].brightness;
+            }
 
-        if (!updated) break;
-
-        idx++;
-    }
-
-    return idx >= size;
-}
-
-void findPolygon()
-{
-    for (int i = 0; i < constellation.size(); i++)
-        for (int j = i + 1; j < constellation.size(); j++)
-            d2[i][j] = d2[j][i] = getDist(constellation[i], constellation[j]);
-
-    times = 0, maxBrightness = 0, brightest.clear();
-
-    for (int i = 0; i < stars.size(); i++)
-        for (int j = 0; j < stars.size(); j++)
-        {
-            if (d1[i][j] == 0) continue;
-            //if ((d1[i][j] % d2[0][1]) != 0 && (d2[0][1] % d1[i][j]) != 0) continue;
-
-            vector<int> selected;
-            if (similarToEnd(i, j, selected))
+            if (k == m)
             {
                 times++;
-                int sumOfBrightness = 0;
-                for (auto starIdx : selected) sumOfBrightness += stars[starIdx].brightness;
                 if (sumOfBrightness > maxBrightness)
                 {
                     maxBrightness = sumOfBrightness;
-                    brightest.swap(selected);
+                    brightest.swap(similar);
                 }
             }
         }
+        
+        return times;
 }
 
 int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
+    int cases = 0, n, m, si, x1, y1, brightness;
+    string name;
+
     while (cin >> n, n > 0)
     {
-        stars.clear(), backup.clear();
+        stars1.clear(), starsIdx1.clear();
 
         for (int i = 0; i < n; i++)
         {
-            cin >> x >> y >> brightness;
-            stars.push_back(star{point{x, y}, brightness});
+            cin >> x1 >> y1 >> brightness;
+            stars1.push_back(star{x1, y1, brightness});
+            starsIdx1[x1][y1] = i;
         }
 
-        for (int i = 0; i < stars.size(); i++)
-            for (int j = i; j < stars.size(); j++)
-                d1[i][j] = d1[j][i] = getDist(stars[i].p, stars[j].p);
-
         cout << "Map #" << ++cases << '\n';
-
+                    
         cin >> m;
-        for (int i = 0; i < m; i++)
+        for (int c = 0; c < m; c++)
         {
             cin >> si >> name;
 
-            constellation.clear();
-            for (int j = 0; j < si; j++)
+            constellation1.clear();
+            stars2.clear(), starsIdx2.clear();
+
+            for (int i = 0; i < si; i++)
             {
-                cin >> x >> y;
-                constellation.push_back(point{x, y});
-                backup.push_back(star{point{x, y}, 0});
+                cin >> x1 >> y1;
+                constellation1.push_back(star{x1, y1, 0});
+                stars2.push_back(star{x1, y1, 0});
+                starsIdx2[x1][y1] = i;
             }
 
             cout << '\n';
 
-            if (si == 1) { findPoint(); continue; }
-            if (si == 2) { findLine(); continue; }
-            if (si > n) { cout << name << " occurs 0 time(s) in the map.\n"; continue; }
+            if (si > n)
+            {
+                cout << name << " occurs 0 time(stars) in the map.\n";
+                continue;
+            }
+            
+            if (si == 1 || si == 2)
+            {
+                sort(stars1.begin(), stars1.end(), cmpBrightness);
 
-            backup.swap(stars);
+                int times = stars1.size();
+                if (si == 2) times = times * (times - 1) / 2;
 
-            for (int i = 0; i < stars.size(); i++)
-                for (int j = i; j < stars.size(); j++)
-                    d1[i][j] = d1[j][i] = getDist(stars[i].p, stars[j].p);
-  
-            findPolygon();
+                cout << name << " occurs " << times << " time(stars) in the map.\n";
 
-            int degreeOfDuplication = times;
+                if (times > 0)
+                {
+                    cout << "Brightest occurrence:";
+                    for (int i = 0; i < si; i++)
+                        cout << " (" << stars1[i].x << ',' << stars1[i].y << ")";
+                    cout << '\n';
+                }
+                
+                continue;
+            }
 
-            stars.swap(backup);
-
-            for (int i = 0; i < backup.size(); i++)
-                for (int j = i; j < backup.size(); j++)
-                    d1[i][j] = d1[j][i] = getDist(stars[i].p, stars[j].p);
-
-            findPolygon();
-
-            times /= degreeOfDuplication;
+            vector<int> brightest;
+            int times2 = findPolygon(stars2, starsIdx2, constellation1, brightest);
+            int times1 = findPolygon(stars1, starsIdx1, constellation1, brightest);
+            if (times2 > 0) times1 /= times2;
 
             sort(brightest.begin(), brightest.end(), cmpXY);
-            cout << name << " occurs " << times << " time(s) in the map.\n";
-            if (times > 0)
+            cout << name << " occurs " << times1 << " time(stars) in the map.\n";
+
+            if (times1 > 0)
             {
                 cout << "Brightest occurrence:";
                 for (auto starIdx : brightest)
-                    cout << " (" << stars[starIdx].p.x << ',' << stars[starIdx].p.y << ")";
+                    cout << " (" << stars1[starIdx].x << ',' << stars1[starIdx].y << ")";
                 cout << '\n';
             }
         }
