@@ -2,7 +2,7 @@
 // UVa ID: 316
 // Verdict: Accepted
 // Submission Date: 2017-05-27
-// UVa Run Time: 0.270s
+// UVa Run Time: 0.220s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
@@ -150,12 +150,14 @@ int main(int argc, char *argv[])
 
             cout << '\n';
 
+            // special case
             if (si > n)
             {
-                cout << name << " occurs 0 time(stars) in the map.\n";
+                cout << name << " occurs 0 time(s) in the map.\n";
                 continue;
             }
             
+            // special case
             if (si == 1 || si == 2)
             {
                 sort(stars1.begin(), stars1.end(), cmpBrightness);
@@ -163,7 +165,7 @@ int main(int argc, char *argv[])
                 int times = stars1.size();
                 if (si == 2) times = times * (times - 1) / 2;
 
-                cout << name << " occurs " << times << " time(stars) in the map.\n";
+                cout << name << " occurs " << times << " time(s) in the map.\n";
 
                 if (times > 0)
                 {
@@ -176,19 +178,21 @@ int main(int argc, char *argv[])
                 continue;
             }
 
+            // common case
             vector<int> brightest;
             int times2 = findPolygon(stars2, starsIdx2, constellation1, brightest);
             int times1 = findPolygon(stars1, starsIdx1, constellation1, brightest);
+
             if (times2 > 0) times1 /= times2;
 
             sort(brightest.begin(), brightest.end(), cmpXY);
-            cout << name << " occurs " << times1 << " time(stars) in the map.\n";
+            cout << name << " occurs " << times1 << " time(s) in the map.\n";
 
             if (times1 > 0)
             {
                 cout << "Brightest occurrence:";
-                for (auto starIdx : brightest)
-                    cout << " (" << stars1[starIdx].x << ',' << stars1[starIdx].y << ")";
+                for (auto idx : brightest)
+                    cout << " (" << stars1[idx].x << ',' << stars1[idx].y << ")";
                 cout << '\n';
             }
         }
