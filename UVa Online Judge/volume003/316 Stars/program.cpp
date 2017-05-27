@@ -180,6 +180,7 @@ int main(int argc, char *argv[])
 
             // common case
             vector<int> brightest;
+
             int times2 = findPolygon(stars2, starsIdx2, constellation1, brightest);
             int times1 = findPolygon(stars1, starsIdx1, constellation1, brightest);
 
