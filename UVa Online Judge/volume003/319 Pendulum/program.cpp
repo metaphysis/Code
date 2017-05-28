@@ -1,7 +1,7 @@
 // Pendulum
 // UVa ID: 319
 // Verdict: Accepted
-// Submission Date: 201705-29
+// Submission Date: 2017-05-29
 // UVa Run Time: 0.000s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
@@ -32,19 +32,19 @@ struct point
     double x, y;
 };
 
-double getDist(const point &p1, const point &p2)
+double getDist(const point & p1, const point & p2)
 {
     return sqrt(pow(p1.x - p2.x, 2) + pow(p1.y - p2.y, 2));
 }
 
-double crossProduct(const point &a, const point &b, const point &c)
+double crossProduct(const point & a, const point & b, const point & c)
 {
     return (c.x - a.x) * (b.y - a.y) - (b.x - a.x) * (c.y - a.y);
 }
 
 int main(int argc, char *argv[])
 {
-    cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
+    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
     int n, cases = 0;
     double x1, y1, lengthOfString;
@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
     {
         cout << "Pendulum #" << ++cases << '\n';
 
-        vector<point> hooks;
+        vector < point > hooks;
         hooks.push_back(point{0.0, 0.0});
 
         for (int i = 0; i < n; i++)
@@ -67,8 +67,9 @@ int main(int argc, char *argv[])
         }
 
         int lastHookIdx = 0, nextHookIdx;
-        double lastTheta = -PI, nextTheta, orbit = 0.0, rightmostAngle;
-        
+        double lastTheta = -PI, nextTheta, rightmostAngle;
+        double orbit = 0.0;
+
         while (true)
         {
             nextHookIdx = -1;
@@ -81,7 +82,8 @@ int main(int argc, char *argv[])
                 double currentDist = getDist(hooks[i], hooks[lastHookIdx]);
                 if (lengthOfString + EPSILON < currentDist) continue;
 
-                double theta = atan2(hooks[i].y - hooks[lastHookIdx].y, hooks[i].x - hooks[lastHookIdx].x);
+                double theta =
+                    atan2(hooks[i].y - hooks[lastHookIdx].y, hooks[i].x - hooks[lastHookIdx].x);
                 if (theta - rightmostAngle > EPSILON || theta + EPSILON < lastTheta)
                 {
                     if (fabs(hooks[lastHookIdx].y) < lengthOfString + EPSILON) continue;
@@ -95,7 +97,7 @@ int main(int argc, char *argv[])
                 else
                 {
                     double cp = crossProduct(hooks[lastHookIdx], hooks[nextHookIdx], hooks[i]);
-                    if (fabs(cp) < EPSILON )
+                    if (fabs(cp) < EPSILON)
                     {
                         double lastDist = getDist(hooks[nextHookIdx], hooks[lastHookIdx]);
                         if (lastDist + EPSILON < currentDist)
@@ -118,9 +120,7 @@ int main(int argc, char *argv[])
             if (nextHookIdx == -1)
             {
                 if (lengthOfString < fabs(hooks[lastHookIdx].y) + EPSILON)
-                {
                     orbit = 2.0 * PI * lengthOfString;
-                }
                 else
                 {
                     orbit += lengthOfString * (rightmostAngle - lastTheta);
@@ -137,6 +137,6 @@ int main(int argc, char *argv[])
             lastHookIdx = nextHookIdx, lastTheta = nextTheta;
         }
     }
-    
+
     return 0;
 }
