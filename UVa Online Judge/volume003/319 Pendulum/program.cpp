@@ -1,8 +1,8 @@
 // Pendulum
 // UVa ID: 319
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 201705-29
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
@@ -67,39 +67,24 @@ int main(int argc, char *argv[])
         }
 
         int lastHookIdx = 0, nextHookIdx;
-        double lastTheta = -PI, nextTheta, orbit = 0.0;
-
-        if (hooks.size() == 1)
-        {
-            orbit = 2.0 * PI * lengthOfString;
-            cout << "Length of periodic orbit = ";
-            cout << fixed << setprecision(2) << orbit << "\n\n";
-            continue;
-        }
-
+        double lastTheta = -PI, nextTheta, orbit = 0.0, rightmostAngle;
+        
         while (true)
         {
             nextHookIdx = -1;
+            rightmostAngle = asin(fabs(hooks[lastHookIdx].y) / lengthOfString);
 
             for (int i = 0; i < hooks.size(); i++)
             {
-                if (i == 0 || i == lastHookIdx) continue;
+                if (i == lastHookIdx) continue;
 
                 double currentDist = getDist(hooks[i], hooks[lastHookIdx]);
                 if (lengthOfString + EPSILON < currentDist) continue;
 
                 double theta = atan2(hooks[i].y - hooks[lastHookIdx].y, hooks[i].x - hooks[lastHookIdx].x);
-                if (hooks[lastHookIdx].y <= hooks[i].y)
+                if (theta - rightmostAngle > EPSILON || theta + EPSILON < lastTheta)
                 {
-                    if (hooks[lastHookIdx].x < hooks[i].x)
-                    {
-                        double nexty1 = -lengthOfString * sin(theta + PI) + hooks[lastHookIdx].y;
-                        if (EPSILON < nexty1) continue;
-                    }
-                    else
-                    {
-                        if (fabs(hooks[lastHookIdx].y) + EPSILON < lengthOfString) continue;
-                    }
+                    if (fabs(hooks[lastHookIdx].y) < lengthOfString + EPSILON) continue;
                 }
 
                 if (nextHookIdx == -1)
@@ -132,11 +117,13 @@ int main(int argc, char *argv[])
 
             if (nextHookIdx == -1)
             {
-                if (lengthOfString <= fabs(hooks[lastHookIdx].y))
+                if (lengthOfString < fabs(hooks[lastHookIdx].y) + EPSILON)
+                {
                     orbit = 2.0 * PI * lengthOfString;
+                }
                 else
                 {
-                    orbit += lengthOfString * (asin(fabs(hooks[lastHookIdx].y) / lengthOfString) - lastTheta);
+                    orbit += lengthOfString * (rightmostAngle - lastTheta);
                     orbit *= 2.0;
                 }
 
@@ -147,8 +134,7 @@ int main(int argc, char *argv[])
 
             orbit += lengthOfString * fabs(nextTheta - lastTheta);
             lengthOfString -= getDist(hooks[nextHookIdx], hooks[lastHookIdx]);
-            lastHookIdx = nextHookIdx;
-            lastTheta = nextTheta;
+            lastHookIdx = nextHookIdx, lastTheta = nextTheta;
         }
     }
     
