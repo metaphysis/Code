@@ -4,18 +4,32 @@
 // Submission Date: 
 // UVa Run Time: s
 //
-// 版权所有（C）2016，邱秋。metaphysis # yeah dot net
+// 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
-#include <iostream>
-#include <iomanip>
-#include <sstream>
-#include <vector>
 #include <algorithm>
+#include <bitset>
+#include <cassert>
+#include <cmath>
+#include <cstring>
+#include <iomanip>
+#include <iostream>
+#include <limits>
+#include <list>
+#include <map>
+#include <numeric>
+#include <queue>
+#include <set>
+#include <sstream>
+#include <stack>
+#include <unordered_map>
+#include <unordered_set>
+#include <vector>
 
 using namespace std;
 
 int main(int argc, char *argv[])
 {
+    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-	return 0;
+    return 0;
 }
