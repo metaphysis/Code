@@ -1,8 +1,8 @@
 // Microzoft Calendar
 // UVa ID: 631
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2017-06-03
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
@@ -61,36 +61,23 @@ void toDate(int dayOfStart, int dayOfCurrent)
     int yyyy = 1, dayDiff = abs(dayOfCurrent - dayOfStart);
 
     // calculate the year and elpased days since the start of a year.
-    if (dayOfCurrent >= dayOfStart)
-    {
-        dayDiff += 1;
-        
-        while (true)
-        {
-            int dayOfYear = isLeapYear(yyyy) ? 366 : 365;
-            if (dayDiff > dayOfYear)
-            {
-                yyyy += 1;
-                dayDiff -= dayOfYear;
-            }
-            else break;
-        }
+    if (dayOfCurrent >= dayOfStart) dayDiff += 1;
 
-        dayDiff -= 1;
+    while (true)
+    {
+        int dayOfYear = isLeapYear(yyyy) ? 366 : 365;
+        if (dayDiff > dayOfYear)
+        {
+            yyyy += 1;
+            dayDiff -= dayOfYear;
+        }
+        else break;
     }
+
+    if (dayOfCurrent >= dayOfStart)
+        dayDiff -= 1;
     else
     {
-        while (true)
-        {
-            int dayOfYear = isLeapYear(yyyy) ? 366 : 365;
-            if (dayDiff > dayOfYear)
-            {
-                yyyy += 1;
-                dayDiff -= dayOfYear;
-            }
-            else break;
-        }
-        
         int dayOfYear = isLeapYear(yyyy) ? 366 : 365;
         dayDiff = dayOfYear - dayDiff;
     }
@@ -105,7 +92,7 @@ void toDate(int dayOfStart, int dayOfCurrent)
         cout << "Feast " << (dayToYearStart - 359);
     else
     {
-        if (dayToYearStart > 180) cout << "Bates"; else cout << "Gill";
+        if (dayToYearStart >= 180) cout << "Bates"; else cout << "Gill";
         dayToYearStart %= 180;
         cout << '-' << monthNames[dayToYearStart / 36];
         dayToYearStart %= 36;
