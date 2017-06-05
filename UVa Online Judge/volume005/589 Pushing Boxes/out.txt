@@ -1,0 +1,75 @@
+Maze #1
+neeSnwwsseEseN
+
+Maze #2
+seeennwSesswwnEseN
+
+Maze #3
+neeSnwwsseEseN
+
+Maze #4
+neeSnwwsseEseN
+
+Maze #5
+eeeesssWWWswNNNNNNsseeennnwwWWW
+
+Maze #6
+nWswNNNNNNenWWWWWWWWW
+
+Maze #7
+nWWWWWWWswNNNNNNsseeennnwwWWW
+
+Maze #8
+eeeeeesessWWWeennnwwwwwwssseeseNNNsseeennnwwWWWeessswwwnnN
+
+Maze #9
+Impossible.
+
+Maze #10
+eesssswWWswNNNNwnEEneSS
+
+Maze #11
+eesssswWWswNNNNwnEEwwnneeesSS
+
+Maze #12
+Impossible.
+
+Maze #13
+eneeennnwwwswwssEEEEseNNNenWWWnwSesWWennwwsS
+
+Maze #14
+eneeeennwwwwwwssEEEEEseNNenWWWWWWennwwsS
+
+Maze #15
+eessWWsswwnnEwsseenN
+
+Maze #16
+WWnwSS
+
+Maze #17
+EEneSS
+
+Maze #18
+WWswNN
+
+Maze #19
+EEseNN
+
+Maze #20
+NNwnEE
+
+Maze #21
+SSwsEE
+
+Maze #22
+SSesWW
+
+Maze #23
+NNenWW
+
+Maze #24
+nNNNNseennwWWWWswNN
+
+Maze #25
+eeeeeeeeennnnnnnwwssssswwwwwwWWWWswNNNNNN
+
