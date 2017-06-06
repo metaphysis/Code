@@ -11,49 +11,49 @@ Maze #4
 neeSnwwsseEseN
 
 Maze #5
-eeeesssWWWswNNNNNNsseeennnwwWWW
+sssseeeNNNenWWWeessswwwnnNNNsseeennnwwWWW
 
 Maze #6
-nWswNNNNNNenWWWWWWWWW
+wNNNNNenWswNenWWWWWWWWW
 
 Maze #7
-nWWWWWWWswNNNNNNsseeennnwwWWW
+wNNNenWWWWeessswwwnnNNNsseeennnwwWWWWWW
 
 Maze #8
-eeeeeesessWWWeennnwwwwwwssseeseNNNsseeennnwwWWWeessswwwnnN
+eeeeeessesWWWeennnwwwwwwssseeseNNNsseeennnwwWWWeessswwwnnN
 
 Maze #9
 Impossible.
 
 Maze #10
-eesssswWWswNNNNwnEEneSS
+sseesswWWswNNNNwnEEneSS
 
 Maze #11
-eesssswWWswNNNNwnEEwwnneeesSS
+sseesswWWswNNNNwnEEwwnneeesSS
 
 Maze #12
 Impossible.
 
 Maze #13
-eneeennnwwwswwssEEEEseNNNenWWWnwSesWWennwwsS
+eneeennnwwswwwssEEEEseNNNenWWWnwSesWWennwwsS
 
 Maze #14
 eneeeennwwwwwwssEEEEEseNNenWWWWWWennwwsS
 
 Maze #15
-eessWWsswwnnEwsseenN
+eessWennwwsSwwsseeNN
 
 Maze #16
-WWnwSS
+nwSSneesswWW
 
 Maze #17
-EEneSS
+neSSnwwsseEE
 
 Maze #18
-WWswNN
+swNNseennwWW
 
 Maze #19
-EEseNN
+seNNswwnneEE
 
 Maze #20
 NNwnEE
@@ -71,5 +71,8 @@ Maze #24
 nNNNNseennwWWWWswNN
 
 Maze #25
-eeeeeeeeennnnnnnwwssssswwwwwwWWWWswNNNNNN
+nNNNNseeeeennnnneeeeeeeennwwwwwwwwwwnnnwwwwwwwsseeeeessssesswWWWWswNN
+
+Maze #26
+eeeeennnnneessssssswwwwwwwwwnNNNNseennwWWWWswNN
 
