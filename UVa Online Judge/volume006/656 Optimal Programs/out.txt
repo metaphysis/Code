@@ -1,0 +1,9 @@
+Program 1
+DUP DUP MUL SUB
+
+Program 2
+Impossible
+
+Program 3
+Empty sequence
+
