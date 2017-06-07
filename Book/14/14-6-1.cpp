@@ -28,15 +28,20 @@ struct polygon
 };
 
 // 叉积。
-double crossProduct(point p1, point p2, point p3)
+int crossProduct(point a, point b, point c)
 {
-    return (p3.x - p1.x) * (p2.y - p1.y) - (p2.x - p1.x) * (p3.y - p1.y);
+	return (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x);
 }
 
-// 顺时针转向。从点p1向点p2望去，点p3位于线段p1p2的右侧，返回true。
-bool cw(point p1, point p2, point p3)
+// 从点a向点b望去，点c位于线段ab的右侧，返回true。
+bool cw(point a, point b, point c)
 {
-    return crossProduct(p1, p2, p3) > EPSILON;
+	return crossProduct(a, b, c) < -EPSILON;
+}
+// 从点a向点b望去，点c位于线段ab的左侧时，返回true。
+bool ccw(point a, point b, point c)
+{
+	return crossProduct(a, b, c) > EPSILON;
 }
 
 // 将直线按照极角进行排序。若极角相同，选择位于极角逆时针方向的直线。

@@ -56,19 +56,19 @@ double area(point vertex[], int numberOfVertex)
 // 否则共线（cp = 0）或左拐（cp < 0）。
 int crossProduct(point a, point b, point c)
 {
-	return (c.x - a.x) * (b.y - a.y) - (b.x - a.x) * (c.y - a.y);
+	return (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x);
 }
 
 // 从点a向点b望去，点c位于线段ab的右侧，返回true。
 bool cw(point a, point b, point c)
 {
-	return crossProduct(a, b, c) > 0;
+	return crossProduct(a, b, c) < 0;
 }
 
 // 从点a向点b望去，点c位于线段ab的左侧时，返回true。
 bool ccw(point a, point b, point c)
 {
-	return crossProduct(a, b, c) < 0;
+	return crossProduct(a, b, c) > 0;
 }
 
 // 当三点共线时，返回true。

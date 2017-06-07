@@ -22,10 +22,21 @@ struct polygon
     point vertex[MAX_VERTICES];
 };
 
-// 使用叉积来表示线段的相对方向。
-double crossProduct(point a, point b, point c)
+// 叉积。
+int crossProduct(point a, point b, point c)
 {
-    return (c.x - a.x) * (b.y - a.y) - (b.x - a.x) * (c.y - a.y);
+	return (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x);
+}
+
+// 从点a向点b望去，点c位于线段ab的右侧，返回true。
+bool cw(point a, point b, point c)
+{
+	return crossProduct(a, b, c) < -EPSILON;
+}
+// 从点a向点b望去，点c位于线段ab的左侧时，返回true。
+bool ccw(point a, point b, point c)
+{
+	return crossProduct(a, b, c) > EPSILON;
 }
 
 // 判断多边形的边是否在射线上方。
