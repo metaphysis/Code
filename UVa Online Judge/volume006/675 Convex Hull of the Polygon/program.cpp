@@ -116,49 +116,30 @@ polygon jarvisConvexHull(polygon &vertices)
 // Andrew 凸包扫描算法。
 polygon andrewConvexHull(polygon &vertices)
 {
-    polygon pg;
-
 	sort(vertices.begin(), vertices.end());
 
-	point upper[MAX_VERTICES], lower[MAX_VERTICES];
-	int top;
+	point ch[MAX_VERTICES];
 
 	// 求上凸包。
-	upper[0] = vertices[0];
-	upper[1] = vertices[1];
-	top = 2;
-	for (int i = 2; i < vertices.size(); i++)
+	int top = 0;
+	for (int i = 0; i < vertices.size(); i++)
 	{
-		upper[top] = vertices[i];
-		while (top >= 2 && ccwOrCollinear(upper[top - 2], upper[top - 1], upper[top]))
-		{
-			upper[top - 1] = upper[top];
+		while (top >= 2 && ccwOrCollinear(ch[top - 2], ch[top - 1], vertices[i]))
 			top--;
-		}
-		top++;
+		ch[top++] = vertices[i];
 	}
-
-	for (int i = 0; i < top; i++)
-		pg.push_back(upper[i]);
 
 	// 求下凸包。
-	lower[0] = vertices[vertices.size() - 1];
-	lower[1] = vertices[vertices.size() - 2];
-	top = 2;
-	for (int i = vertices.size() - 3; i >= 0; i--)
+	for (int i = vertices.size() - 1, upper = top + 1; i >= 0; i--)
 	{
-		lower[top] = vertices[i];
-		while (top >= 2 && ccwOrCollinear(lower[top - 2], lower[top - 1], lower[top]))
-		{
-			lower[top - 1] = lower[top];
+		while (top >= upper && ccwOrCollinear(ch[top - 2], ch[top - 1], vertices[i]))
 			top--;
-		}
-		top++;
+		ch[top++] = vertices[i];
 	}
 
-	// 合并下凸包。
-	for (int i = 1; i < top - 1; i++)
-		pg.push_back(lower[i]);
+    polygon pg;
+    
+	for (int i = 0; i < top - 1; i++) pg.push_back(ch[i]);
 		
 	return pg;
 }
@@ -185,27 +166,7 @@ int main(int argc, char *argv[])
         }
         while (getline(cin, line), line.length() > 0);
 
-        polygon convexHull = jarvisConvexHull(vertices);
-
-        int start = -1;
-        for (int i = 0; i < source.size() && start == -1; i++)
-            for (int j = 0; j < convexHull.size(); j++)
-                if (source[i] == convexHull[j])
-                {
-                    start = j;
-                    break;
-                }
-
-        if (cases++ > 0) cout << '\n';
-        int total = convexHull.size();
-        for (int i = 0; i < total; i++)
-        {
-            int j = (start + i) % total;
-            cout << convexHull[j].x << ", " << convexHull[j].y << '\n';
-        }
-        cout << convexHull[start].x << ", " << convexHull[start].y << '\n';
-        
-        //polygon convexHull = andrewConvexHull(vertices);
+        //polygon convexHull = jarvisConvexHull(vertices);
 
         //int start = -1;
         //for (int i = 0; i < source.size() && start == -1; i++)
@@ -220,10 +181,30 @@ int main(int argc, char *argv[])
         //int total = convexHull.size();
         //for (int i = 0; i < total; i++)
         //{
-        //    int j = (total + start - i) % total;
+        //    int j = (start + i) % total;
         //    cout << convexHull[j].x << ", " << convexHull[j].y << '\n';
         //}
         //cout << convexHull[start].x << ", " << convexHull[start].y << '\n';
+        
+        polygon convexHull = andrewConvexHull(vertices);
+
+        int start = -1;
+        for (int i = 0; i < source.size() && start == -1; i++)
+            for (int j = 0; j < convexHull.size(); j++)
+                if (source[i] == convexHull[j])
+                {
+                    start = j;
+                    break;
+                }
+
+        if (cases++ > 0) cout << '\n';
+        int total = convexHull.size();
+        for (int i = 0; i < total; i++)
+        {
+            int j = (total + start - i) % total;
+            cout << convexHull[j].x << ", " << convexHull[j].y << '\n';
+        }
+        cout << convexHull[start].x << ", " << convexHull[start].y << '\n';
     }
     
     return 0;
