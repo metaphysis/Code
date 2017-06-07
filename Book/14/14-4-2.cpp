@@ -19,17 +19,15 @@ struct point
 {
 	int x, y;
 	
-	bool operator<(const point& another) const
+	bool operator<(const point &p) const
 	{
-	    if (y == another.y)
-	        return x < another.x;
-	    else
-	        return y < another.y;
+	    if (y == p.y) return x < p.x;
+	    return y < p.y;
 	}
 	
-	bool operator==(const point& another) const
+	bool operator==(const point& p) const
 	{
-	    return x == another.x && y == another.y;
+	    return x == p.x && y == p.y;
 	}
 };
 
