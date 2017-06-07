@@ -11,13 +11,13 @@ Maze #4
 neeSnwwsseEseN
 
 Maze #5
-sssseeeNNNenWWWeessswwwnnNNNsseeennnwwWWW
+sssseeeNNNenWWWWWWeessswwwnnNNN
 
 Maze #6
 wNNNNNenWswNenWWWWWWWWW
 
 Maze #7
-wNNNenWWWWeessswwwnnNNNsseeennnwwWWWWWW
+nWWWWWWWswNNNNNNsseeennnwwWWW
 
 Maze #8
 eeeeeessesWWWeennnwwwwwwssseeseNNNsseeennnwwWWWeessswwwnnN
@@ -41,19 +41,19 @@ Maze #14
 eneeeennwwwwwwssEEEEEseNNenWWWWWWennwwsS
 
 Maze #15
-eessWennwwsSwwsseeNN
+eessWWsswwnnEwsseenN
 
 Maze #16
-nwSSneesswWW
+WWnwSS
 
 Maze #17
-neSSnwwsseEE
+EEneSS
 
 Maze #18
-swNNseennwWW
+WWswNN
 
 Maze #19
-seNNswwnneEE
+EEseNN
 
 Maze #20
 NNwnEE
@@ -71,8 +71,8 @@ Maze #24
 nNNNNseennwWWWWswNN
 
 Maze #25
-nNNNNseeeeennnnneeeeeeeennwwwwwwwwwwnnnwwwwwwwsseeeeessssesswWWWWswNN
+eeeeeeeeennnnnnnwwssssswwwwwwWWWWswNNNNNN
 
 Maze #26
-eeeeennnnneessssssswwwwwwwwwnNNNNseennwWWWWswNN
+wWWWWswNNNNNN
 

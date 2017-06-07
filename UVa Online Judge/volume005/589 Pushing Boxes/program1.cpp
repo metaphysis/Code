@@ -1,35 +1,10 @@
 // Pushing Boxes
 // UVa ID: 589
 // Verdict: Accepted
-// Submission Date: 2017-06-06
-// UVa Run Time: 0.000s
+// Submission Date: 2017-06-07
+// UVa Run Time: 0.460s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
-//
-// CAUTION: ALTHOUGH ACCEPTED, THIS SOLUTION IS BUGGY.
-// For some special test data, it gives wrong answer, for example:
-// 15 18
-// ##################
-// ##################
-// ##################
-// ##################
-// ##################
-// ##################
-// T#################
-// .##########...####
-// .......####.#.####
-// ..##.#.####.#.####
-// .###...####.#.####
-// .###.######.#.####
-// ....B.S.....#.####
-// ..##.########.####
-// ####..........####
-// it gives wrong answer: eeeeennnnneessssssswwwwwwwwwnNNNNseennwWWWWswNN.
-// the right answer is: wWWWWswNNNNNN.
-// The test data on UVa Online Judge may be weak or special judge program buggy,
-// special judge program may just check if the pushes are miniminal or not, 
-// but not compare the number of total moves.
-// Please refer to program1.cpp, it is an improved solution.
 
 #include <algorithm>
 #include <bitset>
@@ -54,8 +29,14 @@ using namespace std;
 
 struct state
 {
-    int boxx, boxy, personx, persony;
+    int boxx, boxy, personx, persony, pushes;
     string moves;
+    
+    bool operator<(const state &s) const
+    {
+        if (pushes != s.pushes) return pushes > s.pushes;
+        else return moves.size() > s.moves.size();
+    }
 };
 
 struct person
@@ -66,7 +47,7 @@ struct person
 
 int r, c;
 char maze[24][24], direction[8] = {'n', 's', 'w', 'e', 'N', 'S', 'W', 'E'};
-int pushed[24][24][4], visited[24][24];
+int pushed[24][24][4][400], visited[24][24];
 int startx, starty, endx, endy, boxx, boxy;
 int offset1[4][2] = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
 int offset2[4][2] = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
@@ -135,21 +116,21 @@ int main(int argc, char *argv[])
         if (r == 0 || c == 0) possible = false;
 
         string bestMoves;
+        
         if (possible)
         {
             possible = false;
             memset(pushed, 0, sizeof(pushed));
 
-            state start = state{boxx, boxy, startx, starty, empty};
-            queue<state> unvisited;
-            unvisited.push(start);
+            priority_queue<state> unvisited;
+            unvisited.push(state{boxx, boxy, startx, starty, 0, empty});
 
             int nextx, nexty, previousx, previousy;
             while (!unvisited.empty())
             {
-                state current = unvisited.front();
+                state current = unvisited.top();
                 unvisited.pop();
-
+                
                 if (current.boxx == endx && current.boxy == endy)
                 {
                     bestMoves = current.moves;
@@ -157,7 +138,6 @@ int main(int argc, char *argv[])
                     break;
                 }
 
-                // up, down, left, right, other sequence may lead to Wrong Answer.
                 for (int i = 0; i < 4; i++)
                 {
                     nextx = current.boxx + offset1[i][0], nexty = current.boxy + offset1[i][1];
@@ -166,11 +146,11 @@ int main(int argc, char *argv[])
                     if (nextx < 0 || nextx >= r || nexty < 0 || nexty >= c) continue;
                     if (previousx < 0 || previousx >= r || previousy < 0 || previousy >= c) continue;
                     if (maze[nextx][nexty] == '#' || maze[previousx][previousy] == '#') continue;
-                    if (pushed[current.boxx][current.boxy][i]) continue;
+                    if (pushed[current.boxx][current.boxy][i][current.pushes]) continue;
                     if (!bfs(current.personx, current.persony, previousx, previousy, current.boxx, current.boxy)) continue;
                     
-                    pushed[current.boxx][current.boxy][i] = 1;
-                    unvisited.push(state{nextx, nexty, current.boxx, current.boxy, current.moves + shortest_walks + direction[i + 4]});
+                    pushed[current.boxx][current.boxy][i][current.pushes] = 1;
+                    unvisited.push(state{nextx, nexty, current.boxx, current.boxy, current.pushes + 1, current.moves + shortest_walks + direction[i + 4]});
                 }
             }
         }
