@@ -4,7 +4,7 @@
 // Submission Date: 2017-06-09
 // UVa Run Time: 0.000s
 //
-// 版权所有（C）2016，邱秋。metaphysis # yeah dot net
+// 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
 #include <algorithm>
 #include <iomanip>
@@ -30,14 +30,17 @@ struct point
 	{
 	    return fabs(x - p.x) <= EPSILON && fabs(y - p.y) <= EPSILON;
 	}
+	
+	int distTo(const point &p)
+	{
+	    return pow(x - p.x, 2) + pow(y - p.y, 2);
+	}
 };
 
 typedef vector<point> polygon;
 
 point lowerLeftPoint;
 
-// 利用有向面积计算多边形的面积，注意最后结果取绝对值，因为顶点顺序可能并不是按
-// 逆时针方向给出。
 double area(polygon pg)
 {
 	double areaOfPolygon = 0.0;
@@ -58,48 +61,19 @@ int crossProduct(point a, point b, point c)
 	return (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x);
 }
 
-// 从点a向点b望去，点c位于线段ab的右侧，返回true。
-bool cw(point a, point b, point c)
-{
-	return crossProduct(a, b, c) < -EPSILON;
-}
-
-// 从点a向点b望去，点c位于线段ab的左侧时，返回true。
-bool ccw(point a, point b, point c)
-{
-	return crossProduct(a, b, c) > EPSILON;
-}
-
-// 当三点共线时，返回true。
-bool collinear(point a, point b, point c)
-{
-	return fabs(crossProduct(a, b, c)) <= EPSILON;
-}
-
-// 判断是否向左转或共线。
-bool ccwOrCollinear(point a, point b, point c)
-{
-	return ccw(a, b, c) || collinear(a, b, c);
-}
-
-// 两点距离的平方值。
-double distanceToLowerLeftPoint(point &p)
-{
-    return pow(lowerLeftPoint.x - p.x, 2) + pow(lowerLeftPoint.y - p.y, 2);
-}
-
 // 按相对于参考点的极角大小进行排序。
 bool smallerAngle(point &p1, point &p2)
 {
-    if (collinear(lowerLeftPoint, p1, p2))
-        return distanceToLowerLeftPoint(p1) <= distanceToLowerLeftPoint(p2);
-    return ccw(lowerLeftPoint, p1, p2);
+    int cp = crossProduct(lowerLeftPoint, p1, p2);
+    if (fabs(cp) <= EPSILON)
+        return lowerLeftPoint.distTo(p1) <= lowerLeftPoint.distTo(p2);
+    return cp > EPSILON;
 }
 
 // Graham凸包扫描算法。
-polygon grahamConvexHull(polygon &vertices)
+polygon grahamConvexHull(polygon &pg)
 {
-    polygon ch(vertices);
+    polygon ch(pg);
 
 	sort(ch.begin(), ch.end());
     ch.erase(unique(ch.begin(), ch.end()), ch.end());
@@ -112,14 +86,12 @@ polygon grahamConvexHull(polygon &vertices)
 	int top = 2, candidate = 2, total = ch.size() - 1;
 	while (candidate <= total)
 	{
-	    if (cw(ch[top - 2], ch[top - 1], ch[candidate]))
-	        top--;
+	    int cp = crossProduct(ch[top - 2], ch[top - 1], ch[candidate]);
+	    if (cp < -EPSILON) top--;
 	    else 
 	    {
-	        if (collinear(ch[top - 2], ch[top - 1], ch[candidate]))
-	            ch[top - 1] = ch[candidate++];
-	        else
-	            ch[top++] = ch[candidate++];
+	        if (fabs(cp) <= EPSILON) ch[top - 1] = ch[candidate++];
+	        else ch[top++] = ch[candidate++];
         }
 	}
 	ch.erase(ch.begin() + top, ch.end());
@@ -127,7 +99,7 @@ polygon grahamConvexHull(polygon &vertices)
 	return ch;
 }
 
-int main(int ac, char *av[])
+int main(int argc, char *argv[])
 {
 	cout.precision(2);
 	cout.setf(ios::fixed | ios::showpoint);

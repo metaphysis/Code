@@ -1,173 +1,111 @@
 // Useless Tile Packers （没用的瓷砖打包公司）
 // PC/UVa IDs: 111405/10065, Popularity: C, Success rate: average Level: 3
 // Verdict: Accepted
-// Submission Date: 2016-08-13
+// Submission Date: 2017-06-10
 // UVa Run Time: 0.000s
 //
-// 版权所有（C）2016，邱秋。metaphysis # yeah dot net
+// 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
 #include <algorithm>
 #include <iomanip>
 #include <cmath>
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
-const int MAX_VERTICES = 105;
 const int EPSILON = 0;
 
 struct point
 {
 	int x, y;
 	
-	bool operator<(const point& another) const
+	bool operator<(const point &p) const
 	{
-	    if (fabs(x - another.x) > EPSILON)
-	        return x < another.x;
-	    else
-	        return y < another.y;
+	    if (fabs(x - p.x) > EPSILON) return x < p.x;
+	    return y < p.y;
 	}
 	
-	bool operator==(const point& another) const
+	bool operator==(const point &p) const
 	{
-	    return fabs(x - another.x) <= EPSILON && fabs(y - another.y) <= EPSILON;
+	    return fabs(x - p.x) <= EPSILON && fabs(y - p.y) <= EPSILON;
 	}
 };
 
-struct polygon
-{
-	int numberOfVertex;
-	point vertex[MAX_VERTICES];
-};
+typedef vector<point> polygon;
 
-// 利用有向面积计算多边形的面积，注意最后结果取绝对值，因为顶点顺序可能并不是按
-// 逆时针方向给出。
-double area(point vertex[], int numberOfVertex)
+double area(polygon pg)
 {
 	double areaOfPolygon = 0.0;
 
-	for (int i = 0; i < numberOfVertex; i++)
+    int n = pg.size();
+	for (int i = 0; i < n; i++)
 	{
-		int j = (i + 1) % numberOfVertex;
-		areaOfPolygon += (vertex[i].x * vertex[j].y - vertex[j].x * vertex[i].y);
+		int j = (i + 1) % n;
+		areaOfPolygon += (pg[i].x * pg[j].y - pg[j].x * pg[i].y);
 	}
 
 	return fabs(areaOfPolygon / 2.0);
 }
 
 // 叉积。
-int crossProduct(point a, point b, point c)
+int crossProduct(point &a, point &b, point &c)
 {
 	return (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x);
 }
 
-// 从点a向点b望去，点c位于线段ab的右侧，返回true。
-bool cw(point a, point b, point c)
-{
-	return crossProduct(a, b, c) < -EPSILON;
-}
-// 从点a向点b望去，点c位于线段ab的左侧时，返回true。
-bool ccw(point a, point b, point c)
-{
-	return crossProduct(a, b, c) > EPSILON;
-}
-
-// 当三点共线时，返回true。
-bool collinear(point a, point b, point c)
-{
-	return fabs(crossProduct(a, b, c)) <= EPSILON;
-}
-
 // 判断是否向左转或共线。
-bool ccwOrCollinear(point a, point b, point c)
+bool ccwOrCollinear(point &a, point &b, point &c)
 {
-	return ccw(a, b, c) || collinear(a, b, c);
+    int cp = crossProduct(a, b, c);
+	return cp > EPSILON || fabs(crossProduct(a, b, c)) <= EPSILON;
 }
 
 // Andrew 凸包扫描算法。
-polygon andrewConvexHull(point vertex[], int numberOfVertex)
+polygon andrewConvexHull(polygon &pg)
 {
-    polygon pg;
-    
-    // 点数小于3个，不构成凸包。
-	if (numberOfVertex < 3)
-	{
-		for (int i = 0; i < numberOfVertex; i++)
-			pg.vertex[i] = vertex[i];
-		pg.numberOfVertex = numberOfVertex;
-		return pg;
-	}
-	
-	// 排序并去除重复点。
-	sort(vertex, vertex + numberOfVertex);
-    numberOfVertex = unique(vertex, vertex + numberOfVertex) - vertex;
+	sort(pg.begin(), pg.end());
 
-	point upper[MAX_VERTICES], lower[MAX_VERTICES];
-	int top;
+	polygon ch;
 
 	// 求上凸包。
-	upper[0] = vertex[0];
-	upper[1] = vertex[1];
-	top = 2;
-	for (int i = 2; i < numberOfVertex; i++)
+	for (int i = 0; i < pg.size(); i++)
 	{
-		upper[top] = vertex[i];
-		while (top >= 2 && ccwOrCollinear(upper[top - 2], upper[top - 1], upper[top]))
-		{
-			upper[top - 1] = upper[top];
-			top--;
-		}
-		top++;
+		while (ch.size() >= 2 &&
+		    ccwOrCollinear(ch[ch.size() - 2], ch[ch.size() - 1], pg[i]))
+			ch.pop_back();
+		ch.push_back(pg[i]);
 	}
-
-	pg.numberOfVertex = 0;
-	for (int i = 0; i < top; i++)
-		pg.vertex[pg.numberOfVertex++] = upper[i];
 
 	// 求下凸包。
-	lower[0] = vertex[numberOfVertex - 1];
-	lower[1] = vertex[numberOfVertex - 2];
-	top = 2;
-	for (int i = numberOfVertex - 3; i >= 0; i--)
+	for (int i = pg.size() - 1, upper = ch.size() + 1; i >= 0; i--)
 	{
-		lower[top] = vertex[i];
-		while (top >= 2 && ccwOrCollinear(lower[top - 2], lower[top - 1], lower[top]))
-		{
-			lower[top - 1] = lower[top];
-			top--;
-		}
-		top++;
+		while (ch.size() >= upper &&
+		    ccwOrCollinear(ch[ch.size() - 2], ch[ch.size() - 1], pg[i]))
+			ch.pop_back();
+		ch.push_back(pg[i]);
 	}
 
-	// 合并下凸包。
-	for (int i = 1; i < top - 1; i++)
-		pg.vertex[pg.numberOfVertex++] = lower[i];
-		
-	return pg;
+    ch.pop_back();
+
+	return ch;
 }
 
-int main(int ac, char *av[])
+int main(int argc, char *argv[])
 {
-	point tile[MAX_VERTICES];
-	int numberOfVertex, currentCase = 1;
-
 	cout.precision(2);
 	cout.setf(ios::fixed | ios::showpoint);
 
-	while (cin >> numberOfVertex, numberOfVertex)
+	int number, cases = 1;
+	while (cin >> number, number)
 	{
-		for (int i = 0; i < numberOfVertex; i++)
+	    polygon tile(number);
+		for (int i = 0; i < number; i++)
 			cin >> tile[i].x >> tile[i].y;
-
-		double used = area(tile, numberOfVertex);
-
-		polygon container = andrewConvexHull(tile, numberOfVertex);
-
-		cout << "Tile #" << currentCase++ << endl;
-		double all = area(container.vertex, container.numberOfVertex);
-		double rate = (1.0 - used / all) * 100.0;
-		cout << "Wasted Space = " << rate << " %" << endl;
-		cout << endl;
+		double used = area(tile);
+		double all = area(andrewConvexHull(tile));
+		cout << "Tile #" << cases++ << '\n';
+		cout << "Wasted Space = " << (1.0 - used / all) * 100.0 << " %\n\n";
 	}
 
 	return 0;
