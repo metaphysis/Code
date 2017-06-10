@@ -53,11 +53,34 @@ double area(polygon pg)
 	return fabs(areaOfPolygon / 2.0);
 }
 
-// 叉积，判断点a，b，c组成的两条线段的转折方向。当叉积大于0，则形成一个右拐，
-// 否则共线（cp = 0）或左拐（cp < 0）。
+// 叉积，判断点a，b，c组成的两条线段的转折方向。当叉积小于0，则形成一个右拐，
+// 否则共线（cp = 0）或左拐（cp > 0）。
 int crossProduct(point a, point b, point c)
 {
 	return (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x);
+}
+
+// 从点a向点b望去，点c位于线段ab的右侧，返回true。
+bool cw(point a, point b, point c)
+{
+	return crossProduct(a, b, c) < -EPSILON;
+}
+// 从点a向点b望去，点c位于线段ab的左侧时，返回true。
+bool ccw(point a, point b, point c)
+{
+	return crossProduct(a, b, c) > EPSILON;
+}
+
+// 当三点共线时，返回true。
+bool collinear(point a, point b, point c)
+{
+	return fabs(crossProduct(a, b, c)) <= EPSILON;
+}
+
+// 判断是否向左转或共线。
+bool ccwOrCollinear(point a, point b, point c)
+{
+	return ccw(a, b, c) || collinear(a, b, c);
 }
 
 // Jarvis步进法求凸包。
@@ -81,8 +104,8 @@ polygon jarvisConvexHull(polygon &pg)
         int next = 0;
         for (int i = 1; i < pg.size(); i++)
         {
-            int cp = crossProduct(pg[current], pg[next], pg[i]);
-            if (cp < -EPSILON || (fabs(cp) <= EPSILON &&
+            if (cw(pg[current], pg[next], pg[i]) ||
+                (collinear(pg[current], pg[next], pg[i]) &&
                 pg[current].distTo(pg[i]) > pg[current].distTo(pg[next])))
                 next = i;
         }

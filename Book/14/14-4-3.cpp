@@ -58,7 +58,7 @@ int crossProduct(point &a, point &b, point &c)
 bool ccwOrCollinear(point &a, point &b, point &c)
 {
     int cp = crossProduct(a, b, c);
-	return cp > EPSILON || fabs(crossProduct(a, b, c)) <= EPSILON;
+	return cp > EPSILON || fabs(cp) <= EPSILON;
 }
 
 // Andrew 凸包扫描算法。
@@ -87,7 +87,7 @@ polygon andrewConvexHull(polygon &pg)
 	}
 
     ch.pop_back();
-
+    
 	return ch;
 }
 

@@ -55,19 +55,42 @@ double area(polygon pg)
 	return fabs(areaOfPolygon / 2.0);
 }
 
-// 叉积。
+// 叉积，判断点a，b，c组成的两条线段的转折方向。当叉积小于0，则形成一个右拐，
+// 否则共线（cp = 0）或左拐（cp > 0）。
 int crossProduct(point a, point b, point c)
 {
 	return (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x);
 }
 
+// 从点a向点b望去，点c位于线段ab的右侧，返回true。
+bool cw(point a, point b, point c)
+{
+	return crossProduct(a, b, c) < -EPSILON;
+}
+// 从点a向点b望去，点c位于线段ab的左侧时，返回true。
+bool ccw(point a, point b, point c)
+{
+	return crossProduct(a, b, c) > EPSILON;
+}
+
+// 当三点共线时，返回true。
+bool collinear(point a, point b, point c)
+{
+	return fabs(crossProduct(a, b, c)) <= EPSILON;
+}
+
+// 判断是否向左转或共线。
+bool ccwOrCollinear(point a, point b, point c)
+{
+	return ccw(a, b, c) || collinear(a, b, c);
+}
+
 // 按相对于参考点的极角大小进行排序。
 bool smallerAngle(point &p1, point &p2)
 {
-    int cp = crossProduct(lowerLeftPoint, p1, p2);
-    if (fabs(cp) <= EPSILON)
+    if (collinear(lowerLeftPoint, p1, p2))
         return lowerLeftPoint.distTo(p1) <= lowerLeftPoint.distTo(p2);
-    return cp > EPSILON;
+    return ccw(lowerLeftPoint, p1, p2);
 }
 
 // Graham凸包扫描算法。
@@ -78,6 +101,8 @@ polygon grahamConvexHull(polygon &pg)
 	sort(ch.begin(), ch.end());
     ch.erase(unique(ch.begin(), ch.end()), ch.end());
 
+    if (ch.size() < 3) return ch;
+
     lowerLeftPoint = ch.front();
     sort(ch.begin() + 1, ch.end(), smallerAngle);
 
@@ -86,12 +111,13 @@ polygon grahamConvexHull(polygon &pg)
 	int top = 2, candidate = 2, total = ch.size() - 1;
 	while (candidate <= total)
 	{
-	    int cp = crossProduct(ch[top - 2], ch[top - 1], ch[candidate]);
-	    if (cp < -EPSILON) top--;
+	    if (cw(ch[top - 2], ch[top - 1], ch[candidate])) top--;
 	    else 
 	    {
-	        if (fabs(cp) <= EPSILON) ch[top - 1] = ch[candidate++];
-	        else ch[top++] = ch[candidate++];
+	        if (collinear(ch[top - 2], ch[top - 1], ch[candidate]))
+	            ch[top - 1] = ch[candidate++];
+	        else
+	            ch[top++] = ch[candidate++];
         }
 	}
 	ch.erase(ch.begin() + top, ch.end());
