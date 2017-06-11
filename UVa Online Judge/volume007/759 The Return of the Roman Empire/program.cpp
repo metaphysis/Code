@@ -43,8 +43,6 @@ vector<string> symbols = {
     "IX", "VIII", "VII", "VI", "V", "IV", "III", "II", "I"
 };
 
-vector<string> precedes = {"IVX", "XLC", "CDM"};
-
 string pattern = R"(^M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$)";
 regex romanExp(pattern, regex_constants::ECMAScript);
 
@@ -69,7 +67,7 @@ int roman2Arab(string &roman)
 string arab2Roman(int arab)
 {
     string roman;
-    
+
     while (arab > 0)
     {
         for (int i = 0; i < numbers.size(); i++)
