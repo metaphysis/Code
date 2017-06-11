@@ -2,7 +2,7 @@
 // UVa ID: 185
 // Verdict: Accepted
 // Submission Date: 2016-03-13
-// UVa Run Time: 0.099s
+// UVa Run Time: 0.100s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
@@ -17,63 +17,12 @@ using namespace std;
 string leftPart, rightPart, lastPart;
 string leftColumn = "IXCM", rightColumn = "VLD", allRoman = "IVXLCDM";
 int numbers[] = {1, 5, 10, 50, 100, 500, 1000};
+string pattern = R"(^M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$)";
+regex romanExp(pattern, regex_constants::ECMAScript);
 
-bool isRoman(string roman)
+bool isRoman(string &roman)
 {
-    // rule 1
-    for (int i = 0; i < leftColumn.length(); i++)
-    {
-        for (int j = 0; j < roman.length(); j++)
-        {
-            if (roman[j] == leftColumn[i])
-            {
-                int counter = 1;
-                for (int k = j; k < roman.length() - 1; k++)
-                    if (roman[k] == roman[k + 1] && roman[k] == leftColumn[i])
-                        counter++;
-
-                if (counter > 3)
-                    return false;
-
-                if (counter >= 2)
-                {
-                    for (int k = j + counter; k < roman.length() - 1; k++)
-                        if (roman[k] == roman[k + 1]
-                            && roman[k] == leftColumn[i])
-                            return false;
-                }
-            }
-        }
-    }
-
-    // rule 2
-    for (int i = 0; i < rightColumn.length(); i++)
-    {
-        int counter = 0;
-        for (int j = 0; j < roman.length(); j++)
-            if (roman[j] == rightColumn[i])
-                counter++;
-
-        if (counter > 1)
-            return false;
-    }
-
-    // rule 3
-    for (int i = 0; i < roman.length() - 1; i++)
-    {
-        int first = allRoman.find(roman[i]);
-        int second = allRoman.find(roman[i + 1]);
-
-        // negative
-        if (first < second)
-        {
-            for (int j = i + 2; j < roman.length(); j++)
-                if (allRoman.find(roman[j]) > first)
-                    return false;
-        }
-    }
-
-    return true;
+    return regex_match(roman, romanExp);
 }
 
 int romanToNumber(string roman)
@@ -101,7 +50,7 @@ int romanToNumber(string roman)
     return number;
 }
 
-void parse(string line)
+void parse(string &line)
 {
     int plusIndex = line.find('+');
     int equalIndex = line.find('=');
@@ -111,7 +60,7 @@ void parse(string line)
     lastPart = line.substr(equalIndex + 1);
 }
 
-string Roman(string line)
+string Roman()
 {
     if (!isRoman(leftPart) || !isRoman(rightPart) || !isRoman(lastPart))
         return "Incorrect";
@@ -193,7 +142,7 @@ void backtrack(int index)
         }
 }
 
-string Arabic(string line)
+string Arabic(string &line)
 {
     digits.clear();
     matchNeed.clear();
@@ -229,7 +178,7 @@ int main(int argc, char *argv[])
             if (isblank(line[i]))
                 line.erase(line.begin() + i);
         parse(line);
-        cout << Roman(line) << " " << Arabic(line) << "\n";
+        cout << Roman() << " " << Arabic(line) << "\n";
     }
 
     return 0;
