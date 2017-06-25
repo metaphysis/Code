@@ -1,0 +1,399 @@
+Case 1:
+Minimum number of lectures: 1
+Total dissatisfaction index: 0
+
+Case 2:
+Minimum number of lectures: 2
+Total dissatisfaction index: -2
+
+Case 3:
+Minimum number of lectures: 3
+Total dissatisfaction index: -3
+
+Case 4:
+Minimum number of lectures: 3
+Total dissatisfaction index: -4
+
+Case 5:
+Minimum number of lectures: 5
+Total dissatisfaction index: -20
+
+Case 6:
+Minimum number of lectures: 4
+Total dissatisfaction index: -6
+
+Case 7:
+Minimum number of lectures: 6
+Total dissatisfaction index: -42
+
+Case 8:
+Minimum number of lectures: 5
+Total dissatisfaction index: -32
+
+Case 9:
+Minimum number of lectures: 6
+Total dissatisfaction index: -36
+
+Case 10:
+Minimum number of lectures: 7
+Total dissatisfaction index: -50
+
+Case 11:
+Minimum number of lectures: 330
+Total dissatisfaction index: 1025815
+
+Case 12:
+Minimum number of lectures: 177
+Total dissatisfaction index: 25316
+
+Case 13:
+Minimum number of lectures: 359
+Total dissatisfaction index: 542080
+
+Case 14:
+Minimum number of lectures: 461
+Total dissatisfaction index: 194968
+
+Case 15:
+Minimum number of lectures: 605
+Total dissatisfaction index: 1868447
+
+Case 16:
+Minimum number of lectures: 533
+Total dissatisfaction index: 3588936
+
+Case 17:
+Minimum number of lectures: 119
+Total dissatisfaction index: 2395689
+
+Case 18:
+Minimum number of lectures: 176
+Total dissatisfaction index: 397298
+
+Case 19:
+Minimum number of lectures: 302
+Total dissatisfaction index: 624377
+
+Case 20:
+Minimum number of lectures: 254
+Total dissatisfaction index: 3850359
+
+Case 21:
+Minimum number of lectures: 521
+Total dissatisfaction index: 8754832
+
+Case 22:
+Minimum number of lectures: 390
+Total dissatisfaction index: 5050466
+
+Case 23:
+Minimum number of lectures: 468
+Total dissatisfaction index: 41813
+
+Case 24:
+Minimum number of lectures: 306
+Total dissatisfaction index: 5863177
+
+Case 25:
+Minimum number of lectures: 19
+Total dissatisfaction index: 182026
+
+Case 26:
+Minimum number of lectures: 95
+Total dissatisfaction index: 464994
+
+Case 27:
+Minimum number of lectures: 335
+Total dissatisfaction index: 5075223
+
+Case 28:
+Minimum number of lectures: 459
+Total dissatisfaction index: 289086
+
+Case 29:
+Minimum number of lectures: 214
+Total dissatisfaction index: 20396
+
+Case 30:
+Minimum number of lectures: 19
+Total dissatisfaction index: 343347
+
+Case 31:
+Minimum number of lectures: 640
+Total dissatisfaction index: 7811519
+
+Case 32:
+Minimum number of lectures: 449
+Total dissatisfaction index: 8847117
+
+Case 33:
+Minimum number of lectures: 620
+Total dissatisfaction index: 625277
+
+Case 34:
+Minimum number of lectures: 513
+Total dissatisfaction index: 4991908
+
+Case 35:
+Minimum number of lectures: 637
+Total dissatisfaction index: -17282
+
+Case 36:
+Minimum number of lectures: 443
+Total dissatisfaction index: 5596560
+
+Case 37:
+Minimum number of lectures: 610
+Total dissatisfaction index: 8357
+
+Case 38:
+Minimum number of lectures: 569
+Total dissatisfaction index: 2059307
+
+Case 39:
+Minimum number of lectures: 85
+Total dissatisfaction index: 163752
+
+Case 40:
+Minimum number of lectures: 461
+Total dissatisfaction index: 548780
+
+Case 41:
+Minimum number of lectures: 282
+Total dissatisfaction index: 1880333
+
+Case 42:
+Minimum number of lectures: 370
+Total dissatisfaction index: 2918648
+
+Case 43:
+Minimum number of lectures: 506
+Total dissatisfaction index: 1084415
+
+Case 44:
+Minimum number of lectures: 552
+Total dissatisfaction index: 1330748
+
+Case 45:
+Minimum number of lectures: 490
+Total dissatisfaction index: 6795533
+
+Case 46:
+Minimum number of lectures: 636
+Total dissatisfaction index: 8750884
+
+Case 47:
+Minimum number of lectures: 95
+Total dissatisfaction index: 1791625
+
+Case 48:
+Minimum number of lectures: 451
+Total dissatisfaction index: -21755
+
+Case 49:
+Minimum number of lectures: 351
+Total dissatisfaction index: 907364
+
+Case 50:
+Minimum number of lectures: 179
+Total dissatisfaction index: 767524
+
+Case 51:
+Minimum number of lectures: 461
+Total dissatisfaction index: 6730474
+
+Case 52:
+Minimum number of lectures: 424
+Total dissatisfaction index: 7580029
+
+Case 53:
+Minimum number of lectures: 234
+Total dissatisfaction index: 344634
+
+Case 54:
+Minimum number of lectures: 8
+Total dissatisfaction index: 13538
+
+Case 55:
+Minimum number of lectures: 198
+Total dissatisfaction index: 2443748
+
+Case 56:
+Minimum number of lectures: 33
+Total dissatisfaction index: 181676
+
+Case 57:
+Minimum number of lectures: 424
+Total dissatisfaction index: 2231473
+
+Case 58:
+Minimum number of lectures: 187
+Total dissatisfaction index: 87200
+
+Case 59:
+Minimum number of lectures: 602
+Total dissatisfaction index: 3571724
+
+Case 60:
+Minimum number of lectures: 257
+Total dissatisfaction index: 1188448
+
+Case 61:
+Minimum number of lectures: 257
+Total dissatisfaction index: 86893
+
+Case 62:
+Minimum number of lectures: 89
+Total dissatisfaction index: 765995
+
+Case 63:
+Minimum number of lectures: 390
+Total dissatisfaction index: -3965
+
+Case 64:
+Minimum number of lectures: 427
+Total dissatisfaction index: 7298
+
+Case 65:
+Minimum number of lectures: 77
+Total dissatisfaction index: 1555861
+
+Case 66:
+Minimum number of lectures: 516
+Total dissatisfaction index: 7335663
+
+Case 67:
+Minimum number of lectures: 630
+Total dissatisfaction index: 4511476
+
+Case 68:
+Minimum number of lectures: 22
+Total dissatisfaction index: 115313
+
+Case 69:
+Minimum number of lectures: 120
+Total dissatisfaction index: 389850
+
+Case 70:
+Minimum number of lectures: 166
+Total dissatisfaction index: 2156417
+
+Case 71:
+Minimum number of lectures: 276
+Total dissatisfaction index: 228526
+
+Case 72:
+Minimum number of lectures: 562
+Total dissatisfaction index: 8710288
+
+Case 73:
+Minimum number of lectures: 469
+Total dissatisfaction index: 57567
+
+Case 74:
+Minimum number of lectures: 201
+Total dissatisfaction index: 1019660
+
+Case 75:
+Minimum number of lectures: 7
+Total dissatisfaction index: 146148
+
+Case 76:
+Minimum number of lectures: 210
+Total dissatisfaction index: 4117033
+
+Case 77:
+Minimum number of lectures: 592
+Total dissatisfaction index: 1906058
+
+Case 78:
+Minimum number of lectures: 457
+Total dissatisfaction index: 8109601
+
+Case 79:
+Minimum number of lectures: 168
+Total dissatisfaction index: 2864638
+
+Case 80:
+Minimum number of lectures: 653
+Total dissatisfaction index: 9248291
+
+Case 81:
+Minimum number of lectures: 409
+Total dissatisfaction index: 6330077
+
+Case 82:
+Minimum number of lectures: 76
+Total dissatisfaction index: 1451299
+
+Case 83:
+Minimum number of lectures: 328
+Total dissatisfaction index: -6574
+
+Case 84:
+Minimum number of lectures: 330
+Total dissatisfaction index: 2145846
+
+Case 85:
+Minimum number of lectures: 629
+Total dissatisfaction index: 4874432
+
+Case 86:
+Minimum number of lectures: 39
+Total dissatisfaction index: 82286
+
+Case 87:
+Minimum number of lectures: 470
+Total dissatisfaction index: 82142
+
+Case 88:
+Minimum number of lectures: 99
+Total dissatisfaction index: 611357
+
+Case 89:
+Minimum number of lectures: 161
+Total dissatisfaction index: 151683
+
+Case 90:
+Minimum number of lectures: 27
+Total dissatisfaction index: 86796
+
+Case 91:
+Minimum number of lectures: 665
+Total dissatisfaction index: 165501
+
+Case 92:
+Minimum number of lectures: 436
+Total dissatisfaction index: 7409938
+
+Case 93:
+Minimum number of lectures: 19
+Total dissatisfaction index: 78335
+
+Case 94:
+Minimum number of lectures: 357
+Total dissatisfaction index: 360308
+
+Case 95:
+Minimum number of lectures: 422
+Total dissatisfaction index: 742555
+
+Case 96:
+Minimum number of lectures: 473
+Total dissatisfaction index: 9540030
+
+Case 97:
+Minimum number of lectures: 416
+Total dissatisfaction index: 7759738
+
+Case 98:
+Minimum number of lectures: 619
+Total dissatisfaction index: 5086084
+
+Case 99:
+Minimum number of lectures: 57
+Total dissatisfaction index: 185516
+
+Case 100:
+Minimum number of lectures: 147
+Total dissatisfaction index: 3001081
