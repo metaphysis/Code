@@ -16,7 +16,7 @@ public class Main
 
     public static void main(String args[]) throws IOException
     {
-        BigInteger[] a = new BigInteger[1002];
+        BigInteger[] f = new BigInteger[1002];
         f[0] = new BigInteger("1"); f[1] = new BigInteger("2");
         for(int i = 2; i <= 1000; i++) f[i] = f[i - 1].add(f[i - 2]);
         Scanner cin = new Scanner(System.in);

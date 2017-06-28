@@ -1,8 +1,8 @@
-// Edge Case
-// UVa ID: 1646
+// Fibonacci Numbers
+// UVa ID: 10579
 // Verdict: Accepted
-// Submission Date: 2017-06-27
-// UVa Run Time: 0.000s
+// Submission Date: 2017-06-28
+// UVa Run Time: 0.080s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
@@ -16,9 +16,9 @@ public class Main
 
     public static void main(String args[]) throws IOException
     {
-        BigInteger[] f = new BigInteger[10002];
-        f[3] = new BigInteger("4"); f[4] = new BigInteger("7");
-        for(int i = 5; i <= 10000; i++) f[i] = f[i - 1].add(f[i - 2]);
+        BigInteger[] f = new BigInteger[5002];
+        f[1] = new BigInteger("1"); f[2] = new BigInteger("1");
+        for(int i = 3; i <= 5000; i++) f[i] = f[i - 1].add(f[i - 2]);
         Scanner cin = new Scanner(System.in);
         while(cin.hasNext())
         {
