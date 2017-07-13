@@ -48,7 +48,7 @@ void generate(int flag[], int idx, int last, int n)
     else print(flag, idx);
 }
 
-void enumerating_subset(int n)
+void enumeratingSubset(int n)
 {
     for (int i = 1; i <= n; i++)
     {
@@ -60,7 +60,7 @@ void enumerating_subset(int n)
 
 int main(int argc, char *argv[])
 {
-    enumerating_subset(8);
+    enumeratingSubset(8);
 
     return 0;
 }

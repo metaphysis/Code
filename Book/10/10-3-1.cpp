@@ -29,48 +29,48 @@ struct edge
 };
 
 vector<edge> edges[MAXV];
-int parent[MAXV], dist_to_tree[MAXV], intree[MAXV];
-int number_of_vertices;
+int parent[MAXV], distToTree[MAXV], intree[MAXV];
+int numberOfVertices;
 
 int prim(int u)
 {
-    int min_weight_sum = 0;
+    int minWeightSum = 0;
 
-    for (int i = 0; i < number_of_vertices; i++) {
-        parent[i] = -1; intree[i] = 0; dist_to_tree[i] = MAX_DIST;
+    for (int i = 0; i < numberOfVertices; i++) {
+        parent[i] = -1; intree[i] = 0; distToTree[i] = MAX_DIST;
     }
 
-    dist_to_tree[u] = 0;
+    distToTree[u] = 0;
     while (!intree[u]) {
         intree[u] = 1;
-        min_weight_sum += dist_to_tree[u];
+        minWeightSum += distToTree[u];
 
         for (int i = 0; i < edges[u].size(); i++) {
             edge v = edges[u][i];
-            if (!intree[v.idx] && dist_to_tree[v.idx] > v.weight) {
-                dist_to_tree[v.idx] = v.weight;
+            if (!intree[v.idx] && distToTree[v.idx] > v.weight) {
+                distToTree[v.idx] = v.weight;
                 parent[v.idx] = u;
             }
         }
 
-        int min_dist_to_tree = MAX_DIST;
-        for (int i = 0; i < number_of_vertices; i++) {
-            if (!intree[i] && min_dist_to_tree > dist_to_tree[i]) {
-                min_dist_to_tree = dist_to_tree[i];
+        int minDistToTree = MAX_DIST;
+        for (int i = 0; i < numberOfVertices; i++) {
+            if (!intree[i] && minDistToTree > distToTree[i]) {
+                minDistToTree = distToTree[i];
                 u = i;
             }
         }
     }
 
-    return min_weight_sum;
+    return minWeightSum;
 }
 
 int prim1(int u)
 {
-    int min_weight_sum = 0;
+    int minWeightSum = 0;
 
-    for (int i = 0; i < number_of_vertices; i++) {
-        parent[i] = -1; intree[i] = 0; dist_to_tree[i] = MAX_DIST;
+    for (int i = 0; i < numberOfVertices; i++) {
+        parent[i] = -1; intree[i] = 0; distToTree[i] = MAX_DIST;
     }
 
     priority_queue<edge> unvisited;
@@ -81,18 +81,18 @@ int prim1(int u)
 
         if (intree[v.idx]) continue;
         intree[v.idx] = 1;
-        min_weight_sum += v.weight;
+        minWeightSum += v.weight;
 
         for (int i = 0; i < edges[v.idx].size(); i++) {
             edge e = edges[v.idx][i];
-            if (!intree[e.idx] && dist_to_tree[e.idx] > e.weight) {
-                dist_to_tree[e.idx] = e.weight;
+            if (!intree[e.idx] && distToTree[e.idx] > e.weight) {
+                distToTree[e.idx] = e.weight;
                 parent[e.idx] = v.idx;
             }
         }
     }
 
-    return min_weight_sum;
+    return minWeightSum;
 }
 
 int main(int argc, char *argv[])

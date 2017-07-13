@@ -27,27 +27,27 @@ struct edge
 };
 
 edge input[MAXE], query[MAXE];
-int idx, head_input[MAXV], head_query[MAXV];
-int number_of_vertices, number_of_queries;
+int idx, headInput[MAXV], headQuery[MAXV];
+int numberOfVertices, numberOfQueries;
 int parent[MAXV], ranks[MAXV], ancestor[MAXV], visited[MAXV];
 int father[MAXV], colored[MAXV], lca[MAXV];
 
-void make_set()
+void makeSet()
 {
     iota(parent, parent + MAXV, 0);
     memset(ranks, 0, sizeof(ranks));
 }
 
 // 带路径压缩的查找，使用递归实现。
-int find_set(int x)
+int findSet(int x)
 {
-    return (x == parent[x] ? x : parent[x] = find_set(parent[x]));
+    return (x == parent[x] ? x : parent[x] = findSet(parent[x]));
 }
 
 //  集合的按秩合并。
-bool union_set(int x, int y)
+bool unionSet(int x, int y)
 {
-    x = find_set(x), y = find_set(y);
+    x = findSet(x), y = findSet(y);
     if (x != y)
     {
         if (ranks[x] > ranks[y]) parent[y] = x;
@@ -63,24 +63,24 @@ bool union_set(int x, int y)
 
 void dfs(int u)
 {
-    ancestor[find_set(u)] = u;
+    ancestor[findSet(u)] = u;
     visited[u] = 1;
 
-    for (int i = head_input[u]; i != -1; i = input[i].next)
+    for (int i = headInput[u]; i != -1; i = input[i].next)
         if (!visited[input[i].v])
         {
             father[input[i].v] = u;
 
             dfs(input[i].v);
-            union_set(u, input[i].v);
-            ancestor[find_set(u)] = u;
+            unionSet(u, input[i].v);
+            ancestor[findSet(u)] = u;
         }
 
     colored[u] = 1;
 
-    for (int i = head_query[u]; i != -1; i = query[i].next)
+    for (int i = headQuery[u]; i != -1; i = query[i].next)
         if (colored[query[i].v])
-            lca[query[i].id] = ancestor[find_set(query[i].v)];
+            lca[query[i].id] = ancestor[findSet(query[i].v)];
 }
 
 int main(int argc, char *argv[])
@@ -88,45 +88,45 @@ int main(int argc, char *argv[])
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
     
     int u, v;
-    while (cin >> number_of_vertices, number_of_vertices)
+    while (cin >> numberOfVertices, numberOfVertices)
     {
         idx = 0;
-        memset(head_input, -1, sizeof(head_input));
+        memset(headInput, -1, sizeof(headInput));
 
-        for (int i = 0; i < number_of_vertices - 1; i++)
+        for (int i = 0; i < numberOfVertices - 1; i++)
         {
             cin >> u >> v;
 
-            input[idx] = (edge){idx, u, v, head_input[u]};
-            head_input[u] = idx++;
+            input[idx] = (edge){idx, u, v, headInput[u]};
+            headInput[u] = idx++;
 
-            input[idx] = (edge){idx, v, u, head_input[v]};
-            head_input[v] = idx++;
+            input[idx] = (edge){idx, v, u, headInput[v]};
+            headInput[v] = idx++;
         }
 
         idx = 0;
-        memset(head_query, -1, sizeof(head_query));
+        memset(headQuery, -1, sizeof(headQuery));
 
-        cin >> number_of_queries;
-        for (int i = 0; i < number_of_queries; i++)
+        cin >> numberOfQueries;
+        for (int i = 0; i < numberOfQueries; i++)
         {
             cin >> u >> v;
 
-            query[idx] = (edge){i, u, v, head_query[u]};
-            head_query[u] = idx++;
+            query[idx] = (edge){i, u, v, headQuery[u]};
+            headQuery[u] = idx++;
             
-            query[idx] = (edge){i, v, u, head_query[v]};
-            head_query[v] = idx++;
+            query[idx] = (edge){i, v, u, headQuery[v]};
+            headQuery[v] = idx++;
         }
 
         memset(visited, 0, sizeof(visited));
         memset(colored, 0, sizeof(colored));
         memset(father, -1, sizeof(father));
-        make_set();
+        makeSet();
         
         dfs(1);
         
-        for (int i = 0; i < number_of_queries; i++)
+        for (int i = 0; i < numberOfQueries; i++)
             cout << lca[i] << '\n';
     }
 

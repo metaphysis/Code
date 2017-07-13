@@ -48,25 +48,25 @@ void bfs(int u)
 int main(int argc, char *argv[])
 {
     // 读入图数据，顶点从1开始编号。
-    // number_of_vertices：图中顶点的数目；
-    // number_of_edges：与某个顶点相连接的其他顶点数目；
-    // next_v：与某个顶点相连接的其他顶点编号。
-    int number_of_vertices, number_of_edges, next_v;
+    // numberOfVertices：图中顶点的数目；
+    // numberOfEdges：与某个顶点相连接的其他顶点数目；
+    // nextV：与某个顶点相连接的其他顶点编号。
+    int numberOfVertices, numberOfEdges, nextV;
 
-    while (cin >> number_of_vertices)
+    while (cin >> numberOfVertices)
     {
-        for (int v = 1; v <= number_of_vertices; v++)
+        for (int v = 1; v <= numberOfVertices; v++)
         {
             edges[v].clear();
 
-            cin >> number_of_edges;
+            cin >> numberOfEdges;
 
             // 读入相连接的其他顶点，构建图。
-            for (int i = 1; i <= number_of_edges; i++)
+            for (int i = 1; i <= numberOfEdges; i++)
             {
-                cin >> next_v;
-                edges[v].push_back(next_v);
-                edges[next_v].push_back(v);
+                cin >> nextV;
+                edges[v].push_back(nextV);
+                edges[nextV].push_back(v);
             }
         }
 
@@ -75,7 +75,7 @@ int main(int argc, char *argv[])
 
         // 输出各顶点的父顶点以及和起始顶点间的最短距离。
         cout << "vertex  parent  distance\n";
-        for (int i = 1; i <= number_of_vertices; i++)
+        for (int i = 1; i <= numberOfVertices; i++)
         {
             cout << setw(3) << right << i;
             cout << setw(8) << right << parent[i];

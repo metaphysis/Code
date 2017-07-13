@@ -4,34 +4,34 @@ using namespace std;
 
 pair<int, int> findLongestPalindrome(string text)
 {
-    int start_index = 0, max_length = 0, current_length, left, right;
+    int startIndex = 0, maxLength = 0, currentLength, left, right;
     for (int i = 0, length = text.length(); i < length; i++)
     {
-        current_length = 1, left = i - 1, right = i + 1;
+        currentLength = 1, left = i - 1, right = i + 1;
         while (left >= 0 && right < length && text[left] == text[right])
-            left--, right++, current_length++;
+            left--, right++, currentLength++;
 
-        if (current_length > max_length)
+        if (currentLength > maxLength)
         {
-            start_index = i - current_length + 1;
-            max_length = 2 * current_length - 1;
+            startIndex = i - currentLength + 1;
+            maxLength = 2 * currentLength - 1;
         }
 
         if (i > 0 && text[i] == text[i - 1])
         {
-            current_length = 1, left = i - 2, right = i + 1;
+            currentLength = 1, left = i - 2, right = i + 1;
             while (left >= 0 && right < length && text[left] == text[right])
-                left--, right++, current_length++;
+                left--, right++, currentLength++;
 
-            if (current_length > max_length)
+            if (currentLength > maxLength)
             {
-                start_index = i - current_length;
-                max_length = 2 * current_length;
+                startIndex = i - currentLength;
+                maxLength = 2 * currentLength;
             }
         }
     }
 
-    return make_pair(start_index, max_length);
+    return make_pair(startIndex, maxLength);
 }
 
 int main(int argc, char *argv[])

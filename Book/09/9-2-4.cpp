@@ -30,13 +30,13 @@ int first[MAXV];
 
 int main(int argc, char *argv[])
 {
-    int number_of_vertices, number_of_edges;
+    int numberOfVertices, numberOfEdges;
     int u, v, w, idx = 0;
     
     memset(first, -1, sizeof(first));
     
-    cin >> number_of_vertices >> number_of_edges;
-    for (int i = 0; i < number_of_edges; i++)
+    cin >> numberOfVertices >> numberOfEdges;
+    for (int i = 0; i < numberOfEdges; i++)
     {
         cin >> u >> v >> w;
         
@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
         first[v] = idx++;
     }
 
-    for (int i = 1; i <= number_of_vertices; i++)
+    for (int i = 1; i <= numberOfVertices; i++)
         for (int j = first[i]; j != -1; j = edges[j].next)
             cout << edges[j].from << ' ' << edges[j].to << ' ' << edges[j].weight << '\n';
 

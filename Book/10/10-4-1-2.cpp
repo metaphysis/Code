@@ -23,7 +23,7 @@ vector<vector<edge>> edges(N + 1);
 vector<long long int> dist(N + 1);
 vector<int> parent(N + 1);
 
-void moore_dijkstra(int start)
+void mooreDijkstra(int start)
 {
     fill(parent.begin(), parent.end(), 0);
     fill(dist.begin(), dist.end(), MAX_DISTANCE);
@@ -50,7 +50,7 @@ void moore_dijkstra(int start)
 
 int main(int argc, char *argv[])
 {
-    moore_dijkstra(0);
+    mooreDijkstra(0);
     
     return 0;
 }

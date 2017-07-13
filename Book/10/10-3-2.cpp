@@ -30,23 +30,23 @@ struct edge
 
 edge edges[MAXV * MAXV];
 int parent[MAXV], ranks[MAXV];
-int number_of_vertices, number_of_edges;
+int numberOfVertices, numberOfEdges;
 
-void make_set()
+void makeSet()
 {
-    for (int i = 0; i < number_of_vertices; i++) {
+    for (int i = 0; i < numberOfVertices; i++) {
         parent[i] = i; ranks[i] = 0;
     }
 }
 
-int find_set(int x)
+int findSet(int x)
 {
-    return (parent[x] == x ? x : parent[x] = find_set(parent[x]));
+    return (parent[x] == x ? x : parent[x] = findSet(parent[x]));
 }
 
-void union_set(int x, int y)
+void unionSet(int x, int y)
 {
-    x = find_set(x), y = find_set(y);
+    x = findSet(x), y = findSet(y);
     if (x != y) {
         if (ranks[x] > ranks[y]) parent[y] = x;
         else {
@@ -58,20 +58,20 @@ void union_set(int x, int y)
 
 int kruskal()
 {
-    int min_weight_sum = 0;
+    int minWeightSum = 0;
 
-    make_set();
-    sort(edges, edges + number_of_edges);
+    makeSet();
+    sort(edges, edges + numberOfEdges);
 
-    for (int i = 0; i < number_of_edges; i++) {
-        int x = find_set(edges[i].from), y = find_set(edges[i].to);
+    for (int i = 0; i < numberOfEdges; i++) {
+        int x = findSet(edges[i].from), y = findSet(edges[i].to);
         if (x != y) {
-            union_set(x, y);
-            min_weight_sum += edges[i].weight;
+            unionSet(x, y);
+            minWeightSum += edges[i].weight;
         }
     }
 
-    return min_weight_sum;
+    return minWeightSum;
 }
 
 int main(int argc, char *argv[])

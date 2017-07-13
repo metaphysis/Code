@@ -9,7 +9,7 @@ void lcs(string& s, string& t)
     if (s.length() == 0 || t.length() == 0)
         return;
 
-    int max_length = 0, max_start = 0;
+    int maxLength = 0, maxStart = 0;
     int memo[s.length() + 1][t.length() + 1];
 
     memset(memo, 0, sizeof(memo));
@@ -22,14 +22,14 @@ void lcs(string& s, string& t)
             else
                 memo[i][j] = 0;
                 
-            if (memo[i][j] > max_length)
+            if (memo[i][j] > maxLength)
             {
-                max_length = memo[i][j];
-                max_start = i - memo[i][j];
+                maxLength = memo[i][j];
+                maxStart = i - memo[i][j];
             }
         }
 
-    cout << s.substr(max_start, max_length) << '\n';
+    cout << s.substr(maxStart, maxLength) << '\n';
 }
 
 int main(int argc, char *argv[])

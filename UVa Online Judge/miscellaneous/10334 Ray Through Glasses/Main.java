@@ -12,8 +12,6 @@ import java.math.*;
 
 public class Main
 {
-    static PrintWriter out = new PrintWriter(new BufferedWriter(new OutputStreamWriter(System.out)));
-
     public static void main(String args[]) throws IOException
     {
         BigInteger[] f = new BigInteger[1002];

@@ -19,11 +19,11 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-    string s = "ABCDEF";
+    string s = "ABCDE";
     
     int indexer = 1;
     do {
-        if (indexer == 193) {
+        if (indexer == 83) {
             cout << s << '\n';
             break;
         }

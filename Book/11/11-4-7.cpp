@@ -3,9 +3,9 @@
 
 using namespace std;
 
-int maximum_sum_n3(int data[], int n)
+int maximumSum1(int data[], int n)
 {
-    int max_sum = numeric_limits<int>::min();
+    int maxSum = numeric_limits<int>::min();
 
     for (int i = 0; i < n; i++)
         for (int j = i; j < n; j++)
@@ -13,13 +13,13 @@ int maximum_sum_n3(int data[], int n)
             int sum = 0;
             for (int k = i; k <= j; k++)
                 sum += data[k];
-            max_sum = max(max_sum, sum);
+            maxSum = max(maxSum, sum);
         }
 
-    return max_sum;
+    return maxSum;
 }
 
-int maximum_sum_n_logn(int data[], int left, int right)
+int maximumSum2(int data[], int left, int right)
 {
     // 递归出口。
     if (left > right)
@@ -32,68 +32,68 @@ int maximum_sum_n_logn(int data[], int left, int right)
     int middle = (left + right) / 2;
     
     // 求最大连续子序列和的左半部分。
-    int left_max = numeric_limits<int>::min(), left_sum = 0;
+    int leftMax = numeric_limits<int>::min(), leftSum = 0;
     for (int i = middle; i >= left; i--)
     {
-        left_sum += data[i];
-        left_max = max(left_max, left_sum);   
+        leftSum += data[i];
+        leftMax = max(leftMax, leftSum);   
     }
 
     // 求最大连续子序列和的左半部分。
-    int right_max = numeric_limits<int>::min(), right_sum = 0;
+    int rightMax = numeric_limits<int>::min(), rightSum = 0;
     for (int i = middle + 1; i <= right; i++)
     {
-        right_sum += data[i];
-        right_max = max(right_max, right_sum);   
+        rightSum += data[i];
+        rightMax = max(rightMax, rightSum);   
     }
     
     // 递归求解。
-    return max(left_max + right_max, max(maximum_sum_n_logn(data, left, middle), 
-        maximum_sum_n_logn(data, middle + 1, right)));
+    return max(leftMax + rightMax, max(maximumSum2(data, left, middle), 
+        maximumSum2(data, middle + 1, right)));
 }
 
-int maximum_sum_n(int data[], int n)
+int maximumSum3(int data[], int n)
 {
-    int max_sum = data[0], current_sum = data[0];
+    int maxSum = data[0], currentSum = data[0];
     
     for (int i = 1; i < n; i++)
     {
-        if (current_sum <= 0) current_sum = data[i];
-        else current_sum += data[i];
-        max_sum = max(max_sum, current_sum);
+        if (currentSum <= 0) currentSum = data[i];
+        else currentSum += data[i];
+        maxSum = max(maxSum, currentSum);
     }
     
-    return max_sum;
+    return maxSum;
 }
 
-int maximum_sum(int data[], int n)
+int maximumSum4(int data[], int n)
 {
-    int max_sum = data[0], current_sum = data[0];
+    int maxSum = data[0], currentSum = data[0];
     
     for (int i = 1; i < n; i++)
     {
-        current_sum = max(data[i], current_sum + data[i]);
-        max_sum = max(max_sum, current_sum);
+        currentSum = max(data[i], currentSum + data[i]);
+        maxSum = max(maxSum, currentSum);
     }
     
-    return max_sum;
+    return maxSum;
 }
 
-long long maximum_product(int data[], int n)
+long long maximumProduct(int data[], int n)
 {
     long long maximum = data[0];
-    long long max_current = data[0], min_current = data[0];
+    long long maxCurrent = data[0], minCurrent = data[0];
 
     for (int i = 1; i < n; i++)
     {
         long long element = data[i];
-        long long next_max = max_current * data[i];
-        long long next_min = min_current * data[i];
+        long long next_max = maxCurrent * data[i];
+        long long next_min = minCurrent * data[i];
 
-        max_current = max(element, max(next_max, next_min));
-        min_current = min(element, min(next_max, next_min));
+        maxCurrent = max(element, max(next_max, next_min));
+        minCurrent = min(element, min(next_max, next_min));
 
-        maximum = max(maximum, max_current);
+        maximum = max(maximum, maxCurrent);
     }
     
     return maximum;
@@ -103,11 +103,11 @@ int main(int argc, char *argv[])
 {
     int data[] = { -13, -17, 45, -20, 33, -33, 90, 30, 41, 7 };
 
-    cout << maximum_sum_n3(data, 10) << endl;
-    cout << maximum_sum_n_logn(data, 0, 9) << endl;
-    cout << maximum_sum_n(data, 10) << endl;
-    cout << maximum_sum(data, 10) << endl;
-    cout << maximum_product(data, 10) << endl;
+    cout << maximumSum1(data, 10) << endl;
+    cout << maximumSum2(data, 0, 9) << endl;
+    cout << maximumSum3(data, 10) << endl;
+    cout << maximumSum4(data, 10) << endl;
+    cout << maximumProduct(data, 10) << endl;
     
     return 0;
 }

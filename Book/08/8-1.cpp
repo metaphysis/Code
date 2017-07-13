@@ -6,24 +6,24 @@ using namespace std;
 
 const int MATRIX_SIZE = 8;
 
-int column_selected[MATRIX_SIZE] = {0}, column_used[MATRIX_SIZE] = {0};
+int columnSelected[MATRIX_SIZE] = {0}, columnUsed[MATRIX_SIZE] = {0};
 int offset[4][2] = {{1, 1}, {1, -1}, {-1, 1}, {-1, -1}};
 int solutions = 0;
 
 // 检查是否满足对角线规则。
-bool is_solution()
+bool check()
 {
     for (int i = 0; i < MATRIX_SIZE; i++)
         for (int k = 0; k < 4; k++)
         {
-            int ii = i, jj = column_selected[i];
+            int ii = i, jj = columnSelected[i];
 
             ii += offset[k][0];
             jj += offset[k][1];
 
             while (0 <= ii && ii < MATRIX_SIZE && 0 <= jj && jj < MATRIX_SIZE)
             {
-                if (column_selected[ii] == jj)
+                if (columnSelected[ii] == jj)
                     return false;
 
                 ii += offset[k][0];
@@ -40,7 +40,7 @@ void display()
     for (int i = 0; i < MATRIX_SIZE; i++)
     {
         for (int j = 0; j < MATRIX_SIZE; j++)
-            if (column_selected[i] == j)
+            if (columnSelected[i] == j)
                 cout << " Q";
             else
                 cout << " *";
@@ -52,7 +52,7 @@ void display()
 void backtrack(int index)
 {
     // 当行数达到棋盘的最大行数时进行验证。
-    if (index == MATRIX_SIZE && is_solution())
+    if (index == MATRIX_SIZE && check())
     {
         solutions++;
         display();
@@ -61,12 +61,12 @@ void backtrack(int index)
     {
         // 未达到棋盘最大行数，继续进行递归回溯。注意在递归的前后设置对应位向量的值。
         for (int i = 0; i < MATRIX_SIZE; i++)
-            if (!column_used[i])
+            if (!columnUsed[i])
             {
-                column_used[i] = 1;
-                column_selected[index] = i;
+                columnUsed[i] = 1;
+                columnSelected[index] = i;
                 backtrack(index + 1);
-                column_used[i] = 0;
+                columnUsed[i] = 0;
             }
     }
 }

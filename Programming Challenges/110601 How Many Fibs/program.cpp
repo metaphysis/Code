@@ -14,7 +14,7 @@ using namespace std;
 
 #define UPBOUND 101
 
-vector < string > fibs;
+vector<string> fibs;
 
 // 比较两个斐波那契数的大小，数位存放在f1和f2中，其中f1的数位是按高位到低位存放，
 // f2的数位是按低位到高位存放。f1大于f2返回1，小于返回-1，等于返回0。
