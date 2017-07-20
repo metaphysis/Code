@@ -28,9 +28,9 @@ void countTimes()
         return;
     }
 
-    vector<int> ds;
-    for (auto c : to_string(number - 1)) ds.push_back(c - '0');
-    while (ds.size() < nextBondNumber.length()) ds.insert(ds.begin(), 0);
+    vector<int> bn;
+    for (auto c : to_string(number - 1)) bn.push_back(c - '0');
+    while (bn.size() < nextBondNumber.length()) bn.insert(bn.begin(), 0);
 
     for (int i = 0; i <= 9; i++)
     {
@@ -46,13 +46,13 @@ void countTimes()
 
             if (idx > 0)
             {
-                for (int j = 0; j < idx; j++) total += ds[j] * pow(10, 7 - j);
+                for (int j = 0; j < idx; j++) total += bn[j] * pow(10, 7 - j);
             }
-            if (i < ds[idx]) total += pow(10, ds.size() - idx - 1);
-            if (i == ds[idx])
+            if (i < bn[idx]) total += pow(10, bn.size() - idx - 1);
+            if (i == bn[idx])
             {
                 long long tail = 0;
-                for (int j = idx + 1; j < ds.size(); j++) tail = tail * 10 + ds[j];
+                for (int j = idx + 1; j < bn.size(); j++) tail = tail * 10 + bn[j];
                 total += tail;
                 total += 1;
             }
