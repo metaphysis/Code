@@ -31,15 +31,14 @@ void calculate()
         return;
     }
 
-    vector <int> digits;
+    vector<int> digits;
     long long temp = number - 1;
     while (temp)
     {
         digits.push_back(temp % 10);
         temp /= 10;
     }
-    while (digits.size() < numberText.length())
-        digits.push_back(0);
+    while (digits.size() < numberText.length()) digits.push_back(0);
     reverse(digits.begin(), digits.end());
 
     for (int i = 0; i <= 9; i++)

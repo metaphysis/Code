@@ -2,7 +2,7 @@
 // UVa ID: 11898
 // Verdict: Accepted
 // Submission Date: 2016-08-02
-// UVa Run Time: 0.320s
+// UVa Run Time: 0.140s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
             int l, r;
             cin >> l >> r;
             
-            if (l - r >= 10000)
+            if (r - l >= 10000)
             {
                 cout << "0\n";
                 continue;
