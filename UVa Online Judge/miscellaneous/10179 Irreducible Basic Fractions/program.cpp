@@ -1,3 +1,11 @@
+// Irreducible Basic Fractions
+// UVa ID: 10179
+// Verdict: Accepted
+// Submission Date: 2017-07-23
+// UVa Run Time: 0.030s
+//
+// 版权所有（C）2017，邱秋。metaphysis # yeah dot net
+
 #include <algorithm>
 #include <bitset>
 #include <cassert>
@@ -19,10 +27,8 @@
 
 using namespace std;
 
-const int MAXN = 1000000;
-
-int primes[MAXN], counterOfPrimes = 0;
-
+const int MAXN = 32000;
+    
 void sieve(int *primes, int n, int &counterOfPrimes)
 {
     // 初始时假定所有数为素数，从最小的素数开始筛除。
@@ -40,27 +46,31 @@ void sieve(int *primes, int n, int &counterOfPrimes)
         }
 }
 
-int getPhi(int m)
-{
-    int phi = m;
-    for (int i = 0; i < counterOfPrimes; i++) {
-        if (primes[i] > m) break;
-        if (m % primes[i] == 0)
-        {
-            while (m % primes[i] == 0) m /= primes[i];
-            phi -= phi / primes[i];
-        }
-    }
-    if (m > 1) phi -= phi / m;
-    return phi;
-}
-
 int main(int argc, char *argv[])
 {
+    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
+
+    int primes[MAXN], counterOfPrimes = 0;
+
     sieve(primes, MAXN, counterOfPrimes);
     
     int n;
-    while (cin >> n, n > 0) cout << getPhi(n) << '\n';
+    while (cin >> n, n > 0)
+    {
+        int t = n;
+        for (int i = 0; i < counterOfPrimes; i++)
+        {
+            if (primes[i] > n) break;
+            if (n % primes[i] == 0)
+            {
+                while (n % primes[i] == 0) n /= primes[i];
+                t -= t / primes[i];
+            }
+        }
+        if (n > 1) t -= t / n;
+        
+        cout << t << '\n';
+    }
     
     return 0;
 }
