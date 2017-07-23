@@ -1,11 +1,3 @@
-// Continued Fractions
-// UVa ID: 834
-// Verdict: Accepted
-// Submission Date: 2016-12-02
-// UVa Run Time: 0.000s
-//
-// 版权所有（C）2016，邱秋。metaphysis # yeah dot net
-
 #include <algorithm>
 #include <bitset>
 #include <cassert>
@@ -30,7 +22,7 @@ int main(int argc, char *argv[])
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
 
     int numerator, denominator;
-    while (cin >> numerator >> denominator)
+    while (cin >> numerator >> denominator, denominator > 0)
     {
         cout << '[' << numerator / denominator;
         numerator %= denominator;
