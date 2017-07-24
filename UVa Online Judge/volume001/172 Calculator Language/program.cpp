@@ -15,45 +15,42 @@
 using namespace std;
 
 const int VARIABLE = 0, OPERATOR = 1, NUMBER = 2;
+
 struct symbol
 {
-    char character;
-    int number;
-    int category;
+    int token, category;
 };
 
 int original[26] = { 0 };
 int now[26] = { 0 };
 
-vector < symbol > symbols;
+vector<symbol> symbols;
 
 void calculate()
 {
-    stack<symbol> result;
+    stack<symbol> operands;
     for (int i = 0; i < symbols.size(); i++)
     {
         symbol s = symbols[i];
         if (s.category == VARIABLE || s.category == NUMBER)
-            result.push(s);
+            operands.push(s);
         else
         {
-            symbol a = result.top();
-            result.pop();
-            symbol b = result.top();
-            result.pop();
+            symbol a = operands.top(); operands.pop();
+            symbol b = operands.top(); operands.pop();
 
             int aa, bb, cc;
             if (a.category == VARIABLE)
-                aa = now[a.character - 'A'];
+                aa = now[a.token - 'A'];
             else
-                aa = a.number;
+                aa = a.token;
                 
             if (b.category == VARIABLE)
-                bb = now[b.character - 'A'];
+                bb = now[b.token - 'A'];
             else
-                bb = b.number;
+                bb = b.token;
                 
-            switch (s.character)
+            switch (s.token)
             {
                 case '+':
                     cc = aa + bb;
@@ -69,13 +66,13 @@ void calculate()
                     break;
                 case '=':
                     cc = bb;
-                    now[a.character - 'A'] = bb;
+                    now[a.token - 'A'] = bb;
                     break;
                 default:
                     break;
             }
             
-            result.push((symbol){0, cc, NUMBER});
+            operands.push((symbol){cc, NUMBER});
         }
     }
 }
@@ -87,93 +84,52 @@ void infixToPostfix()
     for (int i = 0; i < symbols.size(); i++)
         if (symbols[i].category == OPERATOR)
         {
-            if (symbols[i].character == ')')
-                symbols[i].character = '(';
-            else if (symbols[i].character == '(')
-                symbols[i].character = ')';
+            if (symbols[i].token == ')')
+                symbols[i].token = '(';
+            else if (symbols[i].token == '(')
+                symbols[i].token = ')';
         }
-    
-    //for (int i = 0; i < symbols.size(); i++)
-        //if (symbols[i].category == VARIABLE || symbols[i].category == OPERATOR)
-            //cout << symbols[i].character;
-        //else
-            //cout << symbols[i].number;
-    //cout << endl;
         
-    stack<symbol> number, operators;
+    stack<symbol> operands, operators;
     for (int i = 0; i < symbols.size(); i++)
     {
         symbol s = symbols[i];
-        
-        //cout << "current symbol: ";
-        //if (s.category == NUMBER)
-           //cout << s.number << endl;
-        //else
-            //cout << s.character << endl;
             
         if (s.category == NUMBER || s.category == VARIABLE)
         {
-            //if (s.category == NUMBER)
-                //cout << "push number " << s.number << " to number stack." << endl;
-            //else
-               //cout << "push variable " << s.character << " to number stack." << endl;
-            number.push(s);
+            operands.push(s);
         }
         else
         {
-            if (s.character == '(')
+            if (s.token == '(')
             {
-                //cout << "push left bracket " << s.character << " to operator stack." << endl;
                 operators.push(s);
             }
-            else if (s.character == ')')
+            else if (s.token == ')')
             {
-                //cout << "counter right bracket " << s.character << endl;
-                while (!operators.empty() && operators.top().character != '(')
+                while (!operators.empty() && operators.top().token != '(')
                 {
-                    //cout << "pop operator stack to number stack. ";
-                    //symbol t = operators.top();
-                    //cout << "top of operator stack is: ";
-                    
-                    //if (t.category == NUMBER)
-                        //cout << t.number;
-                    //else
-                        //cout << t.character;
-                    //cout << endl;
-                    
-                    number.push(operators.top());
+                    operands.push(operators.top());
                     operators.pop();
                 }
 
                 if (!operators.empty())
-                {
-                    //symbol t = operators.top();
-                    //cout << "pop the last symbol in operator stack: ";
-                    //cout << t.character << endl;
-                    
                     operators.pop();
-                }
             }
             else
             {                
-                if (operators.empty() || operators.top().character == '(')
+                if (operators.empty() || operators.top().token == '(')
                 {
-                    //cout << "push operator " << s.character << " to operator stack." << endl;
                     operators.push(s);
                 }
                 else
                 {
-                    while (!operators.empty() && operators.top().character != '(')
+                    while (!operators.empty() && operators.top().token != '(')
                     {
-                        //cout << "pop top of operator stack to number stack: ";
-                        //symbol t = operators.top();
-                        //cout << t.character << endl;
-                        
-                        number.push(operators.top());
+                        operands.push(operators.top());
                         operators.pop();
                     }
-                    
-                    //cout << "push operator " << s.character << " to operator stack." << endl;
+
                     operators.push(s);
                 }
             }
@@ -182,23 +138,16 @@ void infixToPostfix()
 
     while (!operators.empty())
     {
-        number.push(operators.top());
+        operands.push(operators.top());
         operators.pop();
     }
     
     symbols.clear();
-    while (!number.empty())
+    while (!operands.empty())
     {
-        symbols.insert(symbols.begin(), number.top());
-        number.pop();
+        symbols.insert(symbols.begin(), operands.top());
+        operands.pop();
     }
-    
-    //for (int i = 0; i < symbols.size(); i++)
-        //if (symbols[i].category == VARIABLE || symbols[i].category == OPERATOR)
-            //cout << symbols[i].character;
-        //else
-            //cout << symbols[i].number;
-    //cout << endl;
 }
 
 void parse(string line)
@@ -208,8 +157,6 @@ void parse(string line)
         if (line[i] == ' ' || line[i] == '\t')
             line.erase(line.begin() + i);
     
-    //cout << line << endl;
-    
     symbols.clear();
     
     int index = 0;
@@ -218,26 +165,26 @@ void parse(string line)
         if ((line[index] >= '0' && line[index] <= '9') || line[index] == '_')
         {
             int sign = line[index] == '_' ? -1 : 1;
-            int number = 0;
+            int operands = 0;
             if (line[index] == '_')
                 index++;
                 
             while (index < line.length() &&
                 (line[index] >= '0' && line[index] <= '9'))
             {
-                number = number * 10 + line[index] - '0';
+                operands = operands * 10 + line[index] - '0';
                 index++;
             }
-            symbols.push_back((symbol){0, number * sign, NUMBER});
+            symbols.push_back((symbol){operands * sign, NUMBER});
         }
         else if (line[index] >= 'A' && line[index] <= 'Z')
         {
-            symbols.push_back((symbol){line[index], 0, VARIABLE});
+            symbols.push_back((symbol){line[index], VARIABLE});
             index++;
         }
         else
         {
-            symbols.push_back((symbol){line[index], 0, OPERATOR});
+            symbols.push_back((symbol){line[index], OPERATOR});
             index++;            
         }
     }
@@ -245,18 +192,18 @@ void parse(string line)
     infixToPostfix();
     calculate();
     
-    // output the result
-    vector < int > result;
+    // output the operands
+    vector < int > operands;
     for (int i = 0; i < 26; i++)
         if (now[i] != original[i])
-            result.push_back(i);
+            operands.push_back(i);
 
-    if (result.size() > 0)
+    if (operands.size() > 0)
     {
-        for (int i = 0; i < result.size(); i++)
+        for (int i = 0; i < operands.size(); i++)
         {
-            cout << (char)('A' + result[i]) << " = " << now[result[i]];
-            if (i < result.size() - 1)
+            cout << (char)('A' + operands[i]) << " = " << now[operands[i]];
+            if (i < operands.size() - 1)
                 cout << ", ";
         }
         cout << endl;

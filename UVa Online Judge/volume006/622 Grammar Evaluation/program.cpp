@@ -29,43 +29,40 @@ map<char, int> priority = {
 };
 
 const int OPERATOR = 0, NUMBER = 1;
+
 struct symbol
 {
-    char character;
-    int number, category;
+    int token, category;
 };
-
-string line;
-int index;
 
 vector<symbol> symbols;
 
 int calculate()
 {
-    stack<symbol> result;
+    stack<symbol> operands;
     for (int i = 0; i < symbols.size(); i++)
     {
         symbol s = symbols[i];
         if (s.category == NUMBER)
-            result.push(s);
+            operands.push(s);
         else
         {
-            symbol a = result.top(); result.pop();
-            symbol b = result.top(); result.pop();
+            symbol a = operands.top(); operands.pop();
+            symbol b = operands.top(); operands.pop();
                 
-            switch (s.character)
+            switch (s.token)
             {
                 case '+':
-                    result.push((symbol){0, a.number + b.number, NUMBER});
+                    operands.push((symbol){a.token + b.token, NUMBER});
                     break;
                 case '*':
-                    result.push((symbol){0, a.number * b.number, NUMBER});
+                    operands.push((symbol){a.token * b.token, NUMBER});
                     break;
             }
         }
     }
     
-    return result.top().number;
+    return operands.top().token;
 }
 
 // 比较运算符在栈中的优先级顺序。
@@ -76,22 +73,22 @@ bool lessPriority(char previous, char next)
 
 void infixToPostfix()
 {  
-    stack<symbol> number, operators;
+    stack<symbol> operands, operators;
     for (int i = 0; i < symbols.size(); i++)
     {
         symbol s = symbols[i];
             
         if (s.category == NUMBER)
-            number.push(s);
+            operands.push(s);
         else
         {
-            if (s.character == '(')
+            if (s.token == '(')
                 operators.push(s);
-            else if (s.character == ')')
+            else if (s.token == ')')
             {
-                while (!operators.empty() && operators.top().character != '(')
+                while (!operators.empty() && operators.top().token != '(')
                 {
-                    number.push(operators.top());
+                    operands.push(operators.top());
                     operators.pop();
                 }
 
@@ -100,13 +97,13 @@ void infixToPostfix()
             }
             else
             {                
-                if (operators.empty() || operators.top().character == '(' || !lessPriority(s.character, operators.top().character))
+                if (operators.empty() || operators.top().token == '(' || !lessPriority(s.token, operators.top().token))
                     operators.push(s);
                 else
                 {
-                    while (!operators.empty() && lessPriority(s.character, operators.top().character))
+                    while (!operators.empty() && lessPriority(s.token, operators.top().token))
                     {
-                        number.push(operators.top());
+                        operands.push(operators.top());
                         operators.pop();
                     }
                     operators.push(s);
@@ -117,19 +114,19 @@ void infixToPostfix()
 
     while (!operators.empty())
     {
-        number.push(operators.top());
+        operands.push(operators.top());
         operators.pop();
     }
     
     symbols.clear();
-    while (!number.empty())
+    while (!operands.empty())
     {
-        symbols.insert(symbols.begin(), number.top());
-        number.pop();
+        symbols.insert(symbols.begin(), operands.top());
+        operands.pop();
     }
 }
 
-bool validate()
+bool validate(string &line)
 {
     string next;
     int i = 0;
@@ -174,7 +171,7 @@ bool validate()
     return next.length() == 1;
 }
 
-void parse()
+void parse(string &line)
 {
     symbols.clear();
 
@@ -189,11 +186,11 @@ void parse()
                 number = number * 10 + line[index] - '0';
                 index++;
             }
-            symbols.push_back((symbol){0, number, NUMBER});
+            symbols.push_back((symbol){number, NUMBER});
         }
         else if (line[index] == '(' || line[index] == ')' || line[index] == '+' || line[index] == '*')
         {
-            symbols.push_back((symbol){line[index], 0, OPERATOR});
+            symbols.push_back((symbol){line[index], OPERATOR});
             index++;            
         }
     }
@@ -203,6 +200,8 @@ int main(int argc, char *argv[])
 {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
 
+    string line;
+    
     getline(cin, line);
     int cases = stoi(line);
 
@@ -210,9 +209,9 @@ int main(int argc, char *argv[])
     {
         getline(cin, line);
 
-        if (validate())
+        if (validate(line))
         {
-            parse();
+            parse(line);
             infixToPostfix();
             cout << calculate() << '\n';
         }

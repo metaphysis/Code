@@ -128,9 +128,9 @@ void parse(string expression, int &x, int &constant)
             infix.push_back(token{NUMBER, 0, number});
         }
     }
-    
+
     vector<token> postfix = toPostfix(infix);
-    
+
     stack<token> result;
     for (int i = 0; i < postfix.size(); i++)
     {
@@ -142,7 +142,7 @@ void parse(string expression, int &x, int &constant)
         {
             token b = result.top(); result.pop();
             token a = result.top(); result.pop();
-            
+
             if (postfix[i].id == PLUS)
             {
                 int v1 = a.coefficient + b.coefficient;
@@ -182,7 +182,7 @@ void parse(string expression, int &x, int &constant)
             }
         }
     }
-    
+
     x = result.top().coefficient, constant = result.top().constant;
 }
 
@@ -192,18 +192,18 @@ int main(int argc, char *argv[])
 
     string line;
     int cases = 0;
-    
+
     while (getline(cin, line))
     {
         int left_x = 0, left_constant = 0, right_x = 0, right_constant = 0;
-        
+
         int equation = line.find('=');
-        
+
         parse(line.substr(0, equation), left_x, left_constant);
         parse(line.substr(equation + 1), right_x, right_constant);
-        
+
         left_x -= right_x, right_constant -= left_constant;
-        
+
         if (cases++ > 0) cout << '\n';
         cout << "Equation #" << cases << '\n';
 
@@ -221,6 +221,6 @@ int main(int argc, char *argv[])
             cout << (double)right_constant / (double)left_x << '\n';
         }
     }
-    
+
     return 0;
 }

@@ -1,8 +1,8 @@
 // Playing With Fraction
 // UVa ID: 10437
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2017-07-24
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
@@ -32,31 +32,28 @@ map<char, int> priority = {
     {'+', 1}, {'-', 1}, {'*', 2}, {'/', 2}, {'(', 0}, {')', 0}
 };
 
-typedef unsigned long long ull;
+#undef DEBUG
 
 const int OPERATOR = 0, NUMBER = 1;
 
-ull gcd(ull a, ull b)
+long long gcd(long long a, long long b)
 {
     return b == 0 ? a : gcd(b, a % b);
 }
 
 struct fraction
 {
-    ull numerator, denominator;
+    long long numerator, denominator;
     
-    void justify()
+    void reduce()
     {
         if (numerator != 0 && denominator != 0)
         {
-            ull g = gcd(numerator, denominator);
+            long long g = gcd(abs(numerator), abs(denominator));
             numerator /= g, denominator /= g;
         }
-        
-        if (numerator == 0 && denominator != 0)
-        {
-            denominator = 1;
-        }
+
+        if (numerator == 0 && denominator != 0) denominator = 1;
     }
     
     fraction operator+(const fraction f)
@@ -64,7 +61,7 @@ struct fraction
         fraction r;
         r.numerator = numerator * f.denominator + denominator * f.numerator;
         r.denominator = denominator * f.denominator;
-        r.justify();
+        r.reduce();
         return r;
     }
     
@@ -73,7 +70,7 @@ struct fraction
         fraction r;
         r.numerator = numerator * f.denominator - denominator * f.numerator;
         r.denominator = denominator * f.denominator;
-        r.justify();
+        r.reduce();
         return r;
     }
     
@@ -82,7 +79,7 @@ struct fraction
         fraction r;
         r.numerator = numerator * f.numerator;
         r.denominator = denominator * f.denominator;
-        r.justify();
+        r.reduce();
         return r;
     }
     
@@ -91,57 +88,61 @@ struct fraction
         fraction r;
         r.numerator = numerator * f.denominator;
         r.denominator = denominator * f.numerator;
-        r.justify();
+        r.reduce();
         return r;
     }
 };
 
 struct symbol
 {
-    char character;
+    int token, category;
     fraction f;
-    int category;
 };
 
 vector<symbol> symbols;
 
 symbol calculate()
 {
-    symbol empty = (symbol){0, (fraction){0, 0}, NUMBER};
-    
-    stack<symbol> result;
+    symbol empty = (symbol){0, NUMBER, (fraction){0, 0}};
+
+    stack<symbol> operands;
     for (int i = 0; i < symbols.size(); i++)
     {
         symbol s = symbols[i];
         if (s.category == NUMBER)
-            result.push(s);
+            operands.push(s);
         else
         {
-            symbol a = result.top(); result.pop();
-            symbol b = result.top(); result.pop();
+            symbol a = operands.top(); operands.pop();
+            symbol b = operands.top(); operands.pop();
             
             if (a.f.denominator == 0 || b.f.denominator == 0) return empty;
-            if (s.character == '/' && a.f.numerator == 0) return empty;
+            if (s.token == '/' && a.f.numerator == 0) return empty;
 
-            switch (s.character)
+            switch (s.token)
             {
                 case '+':
-                    result.push((symbol){0, a.f + b.f, NUMBER});
+                    operands.push((symbol){0, NUMBER, b.f + a.f});
                     break;
                 case '-':
-                    result.push((symbol){0, b.f - a.f, NUMBER});
+                    operands.push((symbol){0, NUMBER, b.f - a.f});
                     break;
                 case '*':
-                    result.push((symbol){0, a.f * b.f, NUMBER});
+                    operands.push((symbol){0, NUMBER, b.f * a.f});
                     break;
                 case '/':
-                    result.push((symbol){0, b.f / a.f, NUMBER});
+                    operands.push((symbol){0, NUMBER, b.f / a.f});
                     break;
             }
+            
+            #ifdef DEBUG
+            s = operands.top();
+            cout << s.f.numerator << '|' << s.f.denominator << '\n';
+            #endif
         }
     }
 
-    return result.top();
+    return operands.top();
 }
 
 // 比较运算符在栈中的优先级顺序。
@@ -152,37 +153,34 @@ bool lessPriority(char previous, char next)
 
 void infixToPostfix()
 {  
-    stack<symbol> number, operators;
+    stack<symbol> operands, operators;
     for (int i = 0; i < symbols.size(); i++)
     {
         symbol s = symbols[i];
-            
-        if (s.category == NUMBER)
-            number.push(s);
+
+        if (s.category == NUMBER) operands.push(s);
         else
         {
-            if (s.character == '(')
-                operators.push(s);
-            else if (s.character == ')')
+            if (s.token == '(') operators.push(s);
+            else if (s.token == ')')
             {
-                while (!operators.empty() && operators.top().character != '(')
+                while (!operators.empty() && operators.top().token != '(')
                 {
-                    number.push(operators.top());
+                    operands.push(operators.top());
                     operators.pop();
                 }
 
-                if (!operators.empty())
-                    operators.pop();
+                if (!operators.empty()) operators.pop();
             }
             else
             {                
-                if (operators.empty() || operators.top().character == '(' || !lessPriority(s.character, operators.top().character))
+                if (operators.empty() || operators.top().token == '(' || !lessPriority(s.token, operators.top().token))
                     operators.push(s);
                 else
                 {
-                    while (!operators.empty() && lessPriority(s.character, operators.top().character))
+                    while (!operators.empty() && lessPriority(s.token, operators.top().token))
                     {
-                        number.push(operators.top());
+                        operands.push(operators.top());
                         operators.pop();
                     }
                     operators.push(s);
@@ -193,16 +191,25 @@ void infixToPostfix()
 
     while (!operators.empty())
     {
-        number.push(operators.top());
+        operands.push(operators.top());
         operators.pop();
     }
     
     symbols.clear();
-    while (!number.empty())
+    while (!operands.empty())
     {
-        symbols.insert(symbols.begin(), number.top());
-        number.pop();
+        symbols.insert(symbols.begin(), operands.top());
+        operands.pop();
     }
+    
+    #ifdef DEBUG
+    for (auto s : symbols)
+    {
+        if (s.category == OPERATOR) cout << s.token << ' ';
+        else cout << s.f.numerator << '|' << s.f.denominator << ' ';
+    }
+    cout << '\n';
+    #endif
 }
 
 void parse(string line)
@@ -214,7 +221,7 @@ void parse(string line)
     {
         if (line[index] >= '0' && line[index] <= '9')
         {
-            ull numerator = 0, denominator = 1;
+            long long numerator = 0, denominator = 1;
             while (index < line.length() && line[index] >= '0' && line[index] <= '9')
             {
                 numerator = numerator * 10 + line[index] - '0';
@@ -232,11 +239,11 @@ void parse(string line)
                 }
             }
 
-            symbols.push_back((symbol){0, (fraction){numerator, denominator}, NUMBER});
+            symbols.push_back((symbol){0, NUMBER, (fraction){numerator, denominator}});
         }
         else
         {
-            symbols.push_back((symbol){line[index], (fraction){0, 0}, OPERATOR});
+            symbols.push_back((symbol){line[index], OPERATOR, (fraction){0, 0}});
             index++;            
         }
     }
@@ -258,7 +265,7 @@ int main(int argc, char *argv[])
         infixToPostfix();
 
         symbol r = calculate();
-        r.f.justify();
+        r.f.reduce();
         
         if (r.f.denominator == 0) cout << "INVALID\n";
         else

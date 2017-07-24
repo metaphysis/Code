@@ -11,26 +11,22 @@ map<char, int> priority = {
 
 int calculate(string postfix)
 {
-    stack<int> result;
+    stack<int> operands;
     for (auto c : postfix)
     {
-        if (isdigit(c))
-        {
-            result.push(c - '0');
-        }
+        if (isdigit(c)) operands.push(c - '0');
         else
         {
+            int second = operands.top(); operands.pop();
+            int first = operands.top(); operands.pop();
 
-            int second = result.top(); result.pop();
-            int first = result.top(); result.pop();
-
-            if (c == '+') result.push(first + second);
-            if (c == '-') result.push(first - second);
-            if (c == '*') result.push(first * second);
-            if (c == '/') result.push(first / second);
+            if (c == '+') operands.push(first + second);
+            if (c == '-') operands.push(first - second);
+            if (c == '*') operands.push(first * second);
+            if (c == '/') operands.push(first / second);
         }
     }
-    return result.top();
+    return operands.top();
 }
 
 bool lessPriority(char previous, char next)
@@ -40,8 +36,7 @@ bool lessPriority(char previous, char next)
 
 string toPostfix(string infix)
 {
-    stack<char> operands;
-    stack<char> operators;
+    stack<char> operands, operators;
 
     for (auto c : infix)
     {
