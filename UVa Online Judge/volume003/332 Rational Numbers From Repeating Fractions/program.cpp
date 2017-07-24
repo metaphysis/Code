@@ -2,7 +2,7 @@
 // UVa ID: 332
 // Verdict: Accepted
 // Submission Date: 2016-06-28
-// UVa Run Time: 0.120s
+// UVa Run Time: 0.040s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
@@ -28,32 +28,27 @@ using namespace std;
 int main(int argc, char *argv[])
 {
     int j, cases = 0;
-    string fractions;
+    string fraction;
     
     while (cin >> j, j >= 0)
     {
-        cin >> fractions;
+        cin >> fraction;
         
         long long int numerator, denominator;
+        
+        fraction = fraction.substr(2);
         if (j == 0)
         {
-            fractions = fractions.substr(2);
-            numerator = stoll(fractions);
-            denominator = pow(10, fractions.length());
+            numerator = stoll(fraction);
+            denominator = pow(10, fraction.length());
         }
         else
         {
-            fractions = fractions.substr(2);
-            int k = fractions.length() - j;
-            string repeating = fractions.substr(fractions.length() - j);
-            while (fractions.length() <= 30)
-                fractions += repeating;
+            int k = fraction.length() - j;
+            string preRepeated = fraction.substr(0, k);
+            if (preRepeated.length() == 0) preRepeated = "0";
             
-            string first = fractions.substr(0, k + j);
-            string second = fractions.substr(0, k);
-            if (second.length() == 0) second = "0";
-            
-            numerator = stoll(first) - stoll(second);
+            numerator = stoll(fraction) - stoll(preRepeated);
             denominator = pow(10, k + j) - pow(10, k);
         }
         

@@ -1,3 +1,11 @@
+// Rational Numbers From Repeating Fractions
+// UVa ID: 332
+// Verdict: Accepted
+// Submission Date: 2017-07-24
+// UVa Run Time: 0.010s
+//
+// 版权所有（C）2016，邱秋。metaphysis # yeah dot net
+
 #include <algorithm>
 #include <bitset>
 #include <cassert>
