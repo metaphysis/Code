@@ -58,10 +58,9 @@ int main(int argc, char *argv[])
         }
         
         long long int a = numerator, b = denominator, c;
-        while (b != 0)
-            c = a % b, a = b, b = c;
+        while (b != 0) c = a % b, a = b, b = c;
 
-        cout << "Case " << ++cases << ": " << numerator / a << "/" << denominator / a << endl;
+        cout << "Case " << ++cases << ": " << numerator / a << "/" << denominator / a << '\n';
     }
     
 	return 0;
