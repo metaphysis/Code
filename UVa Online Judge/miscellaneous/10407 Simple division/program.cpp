@@ -27,8 +27,9 @@
 
 using namespace std;
 
-int gcd1(int a, int b)
+int gcd(int a, int b)
 {
+    if (a < b) swap(a, b);
     int t;
     while (b != 0) t = a, a = b, b = t % b;
     return a;
@@ -52,10 +53,10 @@ int main(int argc, char *argv[])
         if (numbers.size() == 1) cout << abs(numbers.front()) << '\n';
         else
         {
-            int gcd = numbers[1] - numbers[0];
+            int g = numbers[1] - numbers[0];
             for (int i = 2; i < numbers.size(); i++)
-                gcd = gcd1(gcd, numbers[i] - numbers[i - 1]); 
-            cout << gcd << '\n';
+                g = gcd(g, numbers[i] - numbers[i - 1]); 
+            cout << g << '\n';
         }
 
         numbers.clear();
