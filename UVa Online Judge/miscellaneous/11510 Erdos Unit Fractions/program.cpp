@@ -2,7 +2,7 @@
 // UVa ID: 11510
 // Verdict: Accepted
 // Submission Date: 2017-07-29
-// UVa Run Time: 0.490s
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
@@ -66,7 +66,7 @@ void findFractions(int p)
     else
     {
         long long lowX = p / 4 + 1, upX = (p + 1) / 2;
-        long long lowY = upX, upY = p * ((5 + sqrt(4 * p - 3)) / 4);
+        long long lowY = upX, upY = 2 * p * (sqrt(p) + 1);
         
         bool found = false;
         for (long long i = lowX; i <= upX && !found; i++)
@@ -91,20 +91,22 @@ int main(int argc, char *argv[])
     int MAXN = 10000, primes[MAXN], countOfPrimes;
 
     sieve(primes, MAXN, countOfPrimes);
-
-    for (int i = 0; i < countOfPrimes; i++)
-    {
-        int p = primes[i];
-        findFractions(p);
-        for (int j = 2 * p, k = 2; j < 10000; j += p, k++)
-            if (!solution[j][0])
-                for (int m = 0; m < 3; m++)
-                    solution[j][m] = k * solution[p][m];
-    }
     
     int n;
     while (cin >> n, n > 0)
     {
+        for (int i = 0; i < countOfPrimes; i++)
+        {
+            int p = primes[i];
+            if (n % p == 0)
+            {
+                if (!solution[p][0]) findFractions(p);
+                for (int j = 0; j < 3; j++)
+                    solution[n][j] = (n / p) * solution[p][j];
+                break;
+            }
+        }
+        
         for (int i = 0; i < 3; i++)
         {
             if (i > 0) cout << ' ';
