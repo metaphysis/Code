@@ -1,54 +1,55 @@
-#include <iostream>
 #include <algorithm>
+#include <bitset>
+#include <cassert>
+#include <cmath>
+#include <cstring>
+#include <iomanip>
+#include <iostream>
+#include <limits>
+#include <list>
+#include <map>
+#include <numeric>
+#include <queue>
+#include <set>
+#include <sstream>
+#include <stack>
+#include <unordered_map>
+#include <unordered_set>
+#include <vector>
 
 using namespace std;
 
-int binarySearch(int data[], int n, int x)
-{
-    int left = 0, right = n - 1, middle;
-    
-    while (left <= right)
-    {
-        middle = (left + right) / 2;
-        
-        if (data[middle] == x) return middle;
+const int MAX_SIZE = 20;
 
-        if (data[middle] < x) left = middle + 1;
-        else right = middle - 1;
-    }
-    
-    return -1;
+void output(int data[], int n)
+{
+    for (int i = 0; i < n; i++)
+        cout << data[i] << " ";
+    cout << endl;
 }
 
-int binarySearch1(int data[], int n, int x)
+void shellSort(int data[], int n)
 {
-    int left = -1, right = n, middle;
-
-    while ((left + 1) != right)
-    {
-        middle = left + (right - left) / 2;
-
-        if (data[middle] < x) left = middle;
-        else right = middle;
-    }
-
-    if (right >= n || data[right] != x) right = -1;
-
-    return right;
+    int gap, i, j, temp;
+    for (gap = n / 2; gap > 0; gap /= 2)
+        for (i = gap; i < n; i++)
+            for (j = i - gap; j >= 0 && data[j] > data[j + gap]; j -= gap)
+                swap(data[j], data[j + gap]);
 }
- 
-int main(int argc, char* argv[])
+
+int main(int argc, char *argv[])
 {
-    int numbers[10] = {1, 1, 2, 2, 2, 5, 6, 7, 8, 9};
+    int data[MAX_SIZE];
+    for (int i = MAX_SIZE; i >= 1; i--)
+        data[MAX_SIZE - i] = i;
+
+    random_shuffle(data, data + MAX_SIZE);
+
+    output(data, MAX_SIZE);
+
+    shellSort(data, MAX_SIZE);
     
-    cout << binarySearch(numbers, 10, 1) << endl;
-    cout << binarySearch(numbers, 10, 2) << endl;
-    cout << binarySearch(numbers, 10, 11) << endl;
-    cout << binarySearch(numbers, 10, -1) << endl;
-    
-    cout.setf(ios::boolalpha);
-    cout << binary_search(numbers, numbers + 10, 5) << endl;
-    cout << binary_search(numbers, numbers + 10, 100) << endl;
-    
+    output(data, MAX_SIZE);
+
     return 0;
 }
