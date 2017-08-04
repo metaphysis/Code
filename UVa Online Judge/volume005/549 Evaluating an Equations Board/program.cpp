@@ -1,8 +1,8 @@
 // Evaluating an Equations Board
 // UVa ID: 549
-// Verdict: Wrong Answer
-// Submission Date: 2017-05-12
-// UVa Run Time: 0.000s
+// Verdict: Accepted
+// Submission Date: 2017-08-04
+// UVa Run Time: 0.010s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
@@ -54,26 +54,26 @@ int evaluate(int nChosen)
     return result.top();
 }
 
-void backtrack(int nChosen, int nNumber, int nOperators)
+void backtrack(int nChosen, int nOperands, int nOperators)
 {
     if (exist) return;
 
-    if (nNumber == 1)
+    if (nOperands == 1)
     {
+        if (debug)
+        {
+            for (int i = 0; i < nChosen; i++) cout << expression[i];
+            cout << '\n';
+        }
+
         if (evaluate(nChosen) == nGoal)
         {
             exist = 1;
-            if (debug)
-            {
-                for (int i = 0; i < nChosen; i++)
-                    cout << expression[i];
-                cout << '\n';
-            }
             return;
         }
     }
-    
-    if (nChosen == 0 || nOperators >= nNumber)
+
+    if (nOperators >= (nOperands - 1))
     {
         for (int i = 0; i < operands.length(); i++)
         {
@@ -81,14 +81,14 @@ void backtrack(int nChosen, int nNumber, int nOperators)
             {
                 usedOperands[i] = 1;
                 expression[nChosen] = operands[i];
-                backtrack(nChosen + 1, nNumber + 1, nOperators);
+                backtrack(nChosen + 1, nOperands + 1, nOperators);
                 if (exist) return;
                 usedOperands[i] = 0;
             }
         }
     }
 
-    if (nNumber >= 2)
+    if (nOperands >= 2)
     {
         for (int i = 0; i < operators.length(); i++)
         {
@@ -96,7 +96,7 @@ void backtrack(int nChosen, int nNumber, int nOperators)
             {
                 usedOperators[i] = 1;
                 expression[nChosen] = operators[i];
-                backtrack(nChosen + 1, nNumber - 1, nOperators - 1);
+                backtrack(nChosen + 1, nOperands - 1, nOperators - 1);
                 if (exist) return;
                 usedOperators[i] = 0;
             }
@@ -117,7 +117,7 @@ int main(int argc, char *argv[])
         nGoal = stoi(goal);
 
         operands.clear(), operators.clear();
-        
+
         sort(resource.begin(), resource.end());
 
         for (auto c : resource)
@@ -125,16 +125,16 @@ int main(int argc, char *argv[])
             if (isdigit(c)) operands += c;
             else operators += c;
         }
-        
+
         exist = 0;
         memset(usedOperands, 0, sizeof(usedOperands));
         memset(usedOperators, 0, sizeof(usedOperators));
         memset(expression, 0, sizeof(expression));
 
         backtrack(0, 0, operators.size());
-        
+
         cout << (exist ? "solution" : "no solution") << '\n';
     }
-    
+
     return 0;
 }

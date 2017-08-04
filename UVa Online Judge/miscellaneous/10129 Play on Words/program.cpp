@@ -1,8 +1,8 @@
 // Play on Words
 // UVa ID: 10129
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2017-08-04
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
@@ -27,26 +27,18 @@
 
 using namespace std;
 
-struct edge {
-    int u, v;
-};
-
-int n;
-vector<edge> edges;
-
-const int MAXV = 100010;
-
-int parent[MAXV], ranks[MAXV], numberOfVertices;
+const int MAXV = 26;
+int parent[MAXV], ranks[MAXV];
 
 void makeSet()
 {
-    for (int i = 0; i < numberOfVertices; i++) parent[i] = i, ranks[i] = 0;
+    for (int i = 0; i < MAXV; i++) parent[i] = i, ranks[i] = 0;
 }
 
 // 带路径压缩的查找，使用递归实现。
 int findSet(int x)
 {
-    return (x == parent[x] ? x : parent[x] = findSet1(parent[x]));
+    return (x == parent[x] ? x : parent[x] = findSet(parent[x]));
 }
 
 //  集合的按秩合并。
@@ -54,9 +46,11 @@ bool unionSet(int x, int y)
 {
     x = findSet(x), y = findSet(y);
     
-    if (x != y) {
+    if (x != y)
+    {
         if (ranks[x] > ranks[y]) parent[y] = x;
-        else {
+        else
+        {
             parent[x] = y;
             if (ranks[x] == ranks[y]) ranks[y]++;
         }
@@ -69,31 +63,47 @@ int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    int cases;
-    cin >> cases;
+    int cases, n;
 
-    numberOfVertices = 26;
-    
+    cin >> cases;
     for (int c = 1; c <= cases; c++)
     {
         cin >> n;
-        
-        edges.clear();
-        
+
         string word;
+        int letterUsed[26] = {0}, inDegree[26] = {0}, outDegree[26] = {0};
+
+        makeSet();
+
         for (int i = 1; i <= n; i++)
         {
             cin >> word;
-            edges.push_back(edge{word.front() - 'a', word.back() - 'a'});
+            int u = word.front() - 'a', v = word.back() - 'a';
+            if (findSet(u) != findSet(v)) unionSet(u, v);
+            letterUsed[u] = letterUsed[v] = 1;
+            outDegree[u]++, inDegree[v]++;
         }
-        
-        makeSet();
-        
-        for (auto e : edges)
+
+        bool eulerianPath = true;
+        int moreOne = 0, lessOne = 0;
+        for (int first = -1, i = 0; i < 26; i++)
         {
-            if (findSet(e.u) != findSet(e.v)) unionSet(e.u, e.v);
+            if (!letterUsed[i]) continue;
+
+            if (first == -1) first = i;
+            if (findSet(first) != findSet(i)) { eulerianPath = 0; break; }
+
+            int diff = inDegree[i] - outDegree[i];
+            if (abs(diff) >= 2) { eulerianPath = 0; break; }
+            if (diff == 1 && ++moreOne > 1) { eulerianPath = 0; break; }
+            if (diff == -1 && ++lessOne > 1) { eulerianPath = 0; break; }
         }
+
+        if (moreOne != lessOne) eulerianPath = false;
+
+        if (eulerianPath) cout << "Ordering is possible.\n";
+        else cout << "The door cannot be opened.\n";
     }
-    
+
     return 0;
 }
