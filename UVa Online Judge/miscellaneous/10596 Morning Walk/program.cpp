@@ -1,8 +1,8 @@
 // Morning Walk
 // UVa ID: 10596
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2017-08-05
+// UVa Run Time: 0.010s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
