@@ -43,18 +43,35 @@ struct point
 
     point() { }
     point(double x, double y):x(x), y(y) { }
+    
+    point operator+(point p)
+    {
+        return point(x + p.x, y + p.y);
+    }
+
+    point operator-(point p)
+    {
+        return point(x - p.x, y - p.y);
+    }
+
+    point operator*(double p)
+    {
+        return point(x * p, y * p);
+    }
+
+    point operator/(double p)
+    {
+        return point(x / p, y / p);
+    }
 
     bool operator<(point p) const
     {
-        if (fabs(x - p.x) < epsilon)
-            return y < p.y;
-        else
-            return x < p.x;
+        return x < p.x || dcmp(x - p.x) == 0 && y < p.y;
     }
 
     bool operator==(point p) const
     {
-        return fabs(x - p.x) < epsilon && fabs(y - p.y) < epsilon;
+        return dcmp(x - p.x) == 0 && dcmp(y - p.y) == 0;
     }
 };
 
@@ -62,26 +79,6 @@ struct segment
 {
     point p1, p2;
 };
-
-point operator+(point p1, point p2)
-{
-    return point(p1.x + p2.x, p1.y + p2.y);
-}
-
-point operator-(point p1, point p2)
-{
-    return point(p1.x - p2.x, p1.y - p2.y);
-}
-
-point operator*(point p1, double p)
-{
-    return point(p1.x * p, p1.y * p);
-}
-
-point operator/(point p1, double p)
-{
-    return point(p1.x / p, p1.y / p);
-}
 
 double dot(point p1, point p2)
 {
@@ -130,9 +127,7 @@ int main(int argc, char *argv[])
         for (int i = 1; i <= N; i++)
         {
             cin >> x1 >> y1;
-            points.push_back(point
-                {
-                x1, y1});
+            points.push_back(point{x1, y1});
         }
 
         for (int i = 1; i < points.size(); i++)
