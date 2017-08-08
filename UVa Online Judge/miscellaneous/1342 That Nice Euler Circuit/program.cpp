@@ -29,7 +29,7 @@
 
 using namespace std;
 
-const double EPSILON = 1E-7;
+const double EPSILON = 1E-6;
 
 struct point
 {
@@ -127,7 +127,7 @@ point getIntersection(line line1, line line2)
 
 int main(int argc, char *argv[])
 {
-    //cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
+    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
     int N, cases = 0;
 
