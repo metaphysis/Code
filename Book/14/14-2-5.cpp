@@ -97,7 +97,6 @@ bool isPointInPolygon(point p, polygon pg)
     return ((numberOfIntersection & 1) == 1);
 }
 
-
 int main(int argc, char* argv[])
 {
     point p;

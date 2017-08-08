@@ -1,8 +1,8 @@
 // That Nice Euler Circuit
 // UVa ID: 1342
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2017-08-09
+// UVa Run Time: 0.020s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 //
@@ -29,100 +29,90 @@
 
 using namespace std;
 
-const double EPSILON = 1E-6;
+const double epsilon = 1e-7;
+
+int dcmp(double x)
+{
+    if (fabs(x) < epsilon) return 0;
+    return x < 0 ? -1 : 1;
+}
 
 struct point
 {
     double x, y;
-    
-    bool operator == (point p)
+
+    point() { }
+    point(double x, double y):x(x), y(y) { }
+
+    bool operator<(point p) const
     {
-        return fabs(x - p.x) < EPSILON && fabs(y - p.y) < EPSILON;
+        if (fabs(x - p.x) < epsilon)
+            return y < p.y;
+        else
+            return x < p.x;
+    }
+
+    bool operator==(point p) const
+    {
+        return fabs(x - p.x) < epsilon && fabs(y - p.y) < epsilon;
     }
 };
-
-// 叉积。
-int crossProduct(point a, point b, point c)
-{
-	return (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x);
-}
-
-// 从点a向点b望去，点c位于线段ab的右侧，返回true。
-bool cw(point a, point b, point c)
-{
-	return crossProduct(a, b, c) < -EPSILON;
-}
-// 从点a向点b望去，点c位于线段ab的左侧时，返回true。
-bool ccw(point a, point b, point c)
-{
-	return crossProduct(a, b, c) > EPSILON;
-}
 
 struct segment
 {
     point p1, p2;
-
-    bool contains(point p)
-    {
-        return p.x >= min(p1.x, p2.x) && p.x <= max(p1.x, p2.x) &&
-            p.y >= min(p1.y, p2.y) && p.y <= max(p1.y, p2.y);
-    }
 };
+
+point operator+(point p1, point p2)
+{
+    return point(p1.x + p2.x, p1.y + p2.y);
+}
+
+point operator-(point p1, point p2)
+{
+    return point(p1.x - p2.x, p1.y - p2.y);
+}
+
+point operator*(point p1, double p)
+{
+    return point(p1.x * p, p1.y * p);
+}
+
+point operator/(point p1, double p)
+{
+    return point(p1.x / p, p1.y / p);
+}
+
+double dot(point p1, point p2)
+{
+    return p1.x * p2.x + p1.y * p2.y;
+}
+
+double cross(point p1, point p2)
+{
+    return p1.x * p2.y - p1.y * p2.x;
+}
 
 bool intersected(segment s1, segment s2)
 {
-    double cp1, cp2, cp3, cp4;
-
-    cp1 = crossProduct(s1.p1, s1.p2, s2.p1);
-    cp2 = crossProduct(s1.p1, s1.p2, s2.p2);
-    cp3 = crossProduct(s2.p1, s2.p2, s1.p1);
-    cp4 = crossProduct(s2.p1, s2.p2, s1.p2);
-    
-    if ((cp1 * cp2 < 0) && (cp3 * cp4) < 0) return true;
-    if (fabs(cp1) < EPSILON && s1.contains(s2.p1)) return true;
-    if (fabs(cp2) < EPSILON && s1.contains(s2.p2)) return true;
-    if (fabs(cp3) < EPSILON && s2.contains(s1.p1)) return true;
-    if (fabs(cp4) < EPSILON && s2.contains(s1.p2)) return true;
-        
-    return false;
+    double c1 = cross(s1.p2 - s1.p1, s2.p1 - s1.p1);
+    double c2 = cross(s1.p2 - s1.p1, s2.p2 - s1.p1);
+    double c3 = cross(s2.p2 - s2.p1, s1.p1 - s2.p1);
+    double c4 = cross(s2.p2 - s2.p1, s1.p2 - s2.p1);
+    return dcmp(c1) * dcmp(c2) < 0 && dcmp(c3) * dcmp(c4) < 0;
 }
 
-struct line
+point getIntersection(segment s1, segment s2)
 {
-    double a, b, c;
-};
-
-line pointsToLine(point start, point end)
-{
-    line lr;
-
-    if (fabs(start.x - end.x) <= EPSILON)
-    {
-        lr.a = 1.0;
-        lr.b = 0.0;
-        lr.c = -start.x;
-    }
-    else
-    {
-        lr.a = -(start.y - end.y) / (start.x - end.x);
-        lr.b = 1.0;
-        lr.c = -lr.a * start.x - start.y;
-    }
-
-    return lr;
+    point p = s1.p1, v = s1.p2 - s1.p1, q = s2.p1, w = s2.p2 - s2.p1;
+    point u = p - q;
+    double t = cross(w, u) / cross(v, w);
+    return p + v * t;
 }
 
-point getIntersection(line line1, line line2)
+bool onSegment(point p, point p1, point p2)
 {
-    point pr;
-
-    pr.x = (line2.b * line1.c - line1.b * line2.c) / (line2.a * line1.b - line1.a * line2.b);
-    if (fabs(line1.b) > EPSILON)
-        pr.y = -(line1.a * pr.x + line1.c) / line1.b;
-    else
-        pr.y = -(line2.a * pr.x + line2.c) / line2.b;
-
-    return pr;
+    return dcmp(cross(p1 - p, p2 - p)) == 0 && dcmp(dot(p1 - p, p2 - p)) < 0;
 }
 
 int main(int argc, char *argv[])
@@ -135,55 +125,37 @@ int main(int argc, char *argv[])
     {
         vector<point> points;
         vector<segment> segments;
-        
-        double x1, y1, x2, y2, x3, y3;
-        cin >> x1 >> y1 >> x2 >> y2;
-        
-        point p1 = point{x1, y1}, p2 = point{x2, y2};
-        points.push_back(p1);
-        points.push_back(p2);
-        segments.push_back(segment{p1, p2});
-        
-        int edges = 1;
 
-        for (int i = 3; i <= N; i++)
+        double x1, y1;
+        for (int i = 1; i <= N; i++)
         {
-            cin >> x3 >> y3;
-            
-            segment s2 = segment{point{x2, y2}, point{x3, y3}};
-
-            for (int j = 0; j < segments.size() - 1; j++)
-            {
-                if (i == N && j == 0) continue;
-
-                if (intersected(segments[j], s2))
+            cin >> x1 >> y1;
+            points.push_back(point
                 {
-                    line line1 = pointsToLine(segments[j].p1, segments[j].p2);
-                    line line2 = pointsToLine(s2.p1, s2.p2);
-                    
-                    point p3 = getIntersection(line1, line2);
-                    
-                    if (find(points.begin(), points.end(), p3) != points.end())
-                        edges += 1;
-                    else
-                    {
-                        edges += 2;
-                        points.push_back(p3);
-                    }
-                }
-            }
-            
-            edges += 1;
-            
-            if (i != N) points.push_back(point{x3, y3});
-            segments.push_back(s2);
-
-            x2 = x3, y2 = y3;
+                x1, y1});
         }
 
-        int f = edges + 2 - points.size();
-        cout << "Case " << ++cases << ": There are " << f << " pieces.\n";
+        for (int i = 1; i < points.size(); i++)
+            segments.push_back(segment{points[i - 1], points[i]});
+
+        for (int i = 0; i < segments.size(); i++)
+            for (int j = 0; j < i; j++)
+                if (intersected(segments[i], segments[j]))
+                    points.push_back(getIntersection(segments[i], segments[j]));
+
+        sort(points.begin(), points.end());
+        points.erase(unique(points.begin(), points.end()), points.end());
+
+        int edges = N - 1;
+        for (int i = 0; i < segments.size(); i++)
+            for (int j = 0; j < points.size(); j++)
+                if (onSegment(points[j], segments[i].p1, segments[i].p2))
+                    edges++;
+
+        int vertices = points.size();
+        int face = edges + 2 - vertices;
+        cout << "Case " << ++cases << ": There are " << face << " pieces.\n";
     }
-    
+
     return 0;
 }
