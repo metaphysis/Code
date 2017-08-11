@@ -46,7 +46,7 @@ edge edges[MAXV * MAXV];
 int parent[MAXV], ranks[MAXV], N, M, E;
 point buildings[MAXV];
 
-void make_set()
+void makeSet()
 {
     for (int i = 0; i <= N; i++)
     {
@@ -54,14 +54,14 @@ void make_set()
     }
 }
 
-int find_set(int x)
+int findSet(int x)
 {
-    return (parent[x] == x ? x : parent[x] = find_set(parent[x]));
+    return (parent[x] == x ? x : parent[x] = findSet(parent[x]));
 }
 
-void union_set(int x, int y)
+void unionSet(int x, int y)
 {
-    x = find_set(x), y = find_set(y);
+    x = findSet(x), y = findSet(y);
 
     if (x != y)
     {
@@ -78,24 +78,24 @@ double kruskal()
 {
     double length = 0.0;
 
-    make_set();
+    makeSet();
     
     int x, y;
     cin >> M;
     for (int i = 1; i <= M; i++)
     {
         cin >> x >> y;
-        union_set(x, y);
+        unionSet(x, y);
     }
     
     sort(edges, edges + E);
     for (int i = 0; i < E; i++)
     {
-        x = find_set(edges[i].from), y = find_set(edges[i].to);
+        x = findSet(edges[i].from), y = findSet(edges[i].to);
         
         if (x != y)
         {
-            union_set(x, y);
+            unionSet(x, y);
             length += sqrt(edges[i].weight);
         }
     }
