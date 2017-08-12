@@ -58,43 +58,23 @@ bool unionSet(int x, int y)
     return false;
 }
 
-multiset<string> connected[26][26];
-string path[1010];
-int solved = 0, n;
+multiset<string> connected[26];
 
-void dfs(int u, int top)
+void dfs(int u)
 {
-    if (solved) return;
-    
-    if (top == n)
-    {
-        for (int i = 0; i < top; i++)
-        {
-            if (i > 0) cout << '.';
-            cout << path[i];
-        }
-        cout << '\n';
-        solved = 1;
-        return;
-    }
-    
-    for (int v = 0; v < 26; v++) {
-        if (connected[u][v].size() > 0) {
-            string word = *connected[u][v].begin();
-            path[top] = word;
-            connected[u][v].erase(connected[u][v].begin());
-            dfs(v, top + 1);
-            if (solved) return;
-            connected[u][v].insert(word);
-        }
-    }
+    string word = *connected[u].begin();
+    cout << word << '.';
+    connected[u].erase(connected[u].begin());
+    int next = word.back() - 'a';
+    if (connected[next].size() > 0) dfs(next);
+    else dfs(u);
 }
 
 int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    int cases;
+    int cases, n;
 
     cin >> cases;
     for (int c = 1; c <= cases; c++)
@@ -108,8 +88,7 @@ int main(int argc, char *argv[])
         makeSet();
 
         for (int i = 0; i < 26; i++)
-            for (int j = 0; j < 26; j++)
-                connected[i][j].clear();
+            connected[i].clear();
 
         for (int i = 1; i <= n; i++)
         {
@@ -118,7 +97,7 @@ int main(int argc, char *argv[])
             if (findSet(u) != findSet(v)) unionSet(u, v);
             letterUsed[u] = letterUsed[v] = 1;
             outDegree[u]++, inDegree[v]++;
-            connected[u][v].insert(word);
+            connected[u].insert(word);
         }
 
         bool eulerianPath = true;
@@ -130,19 +109,20 @@ int main(int argc, char *argv[])
             if (first == -1) first = i;
             if (findSet(first) != findSet(i)) { eulerianPath = 0; break; }
 
-            int diff = inDegree[i] - outDegree[i];
+            int diff = outDegree[i] - inDegree[i];
             if (abs(diff) >= 2) { eulerianPath = 0; break; }
             if (diff == 1 && ++moreOne > 1) { eulerianPath = 0; break; }
             if (diff == -1 && ++lessOne > 1) { eulerianPath = 0; break; }
-            if ((moreOne || lessOne) && oddStart < 0) oddStart = i;
+            if (moreOne  && oddStart < 0) oddStart = i;
             if (diff == 0 && evenStart < 0) evenStart = i;
         }
 
         if (moreOne != lessOne) eulerianPath = false;
         if (!eulerianPath) { cout << "***\n"; continue; }
         
-        solved = 0;
-        dfs(oddStart >= 0 ? oddStart : evenStart, 0);
+        cout << "oddStart = " << oddStart << " evenStart = " << evenStart << '\n';
+        dfs(oddStart >= 0 ? oddStart : evenStart);
+        cout << "SOLVED!\n";
     }
 
     return 0;
