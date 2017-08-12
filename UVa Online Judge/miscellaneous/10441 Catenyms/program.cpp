@@ -58,52 +58,43 @@ bool unionSet(int x, int y)
     return false;
 }
 
-const int MAXV = 1010;
-int stk[MAXV], top;
-stack<string> words;
-set<string> connected[MAXV][MAXV];
+multiset<string> connected[26][26];
+string path[1010];
+int solved = 0, n;
 
-void dfs(int x)
+void dfs(int u, int top)
 {
-    stk[top++] = x;
-    for (int i = 0; i < 26; i++) {
-        if (connected[x][i].size() > 0) {
-            words.push(*connected[x][i].begin());
-            connected[x][i].erase(connected[x][i].begin());
-            dfs(i);
-            break;
+    if (solved) return;
+    
+    if (top == n)
+    {
+        for (int i = 0; i < top; i++)
+        {
+            if (i > 0) cout << '.';
+            cout << path[i];
+        }
+        cout << '\n';
+        solved = 1;
+        return;
+    }
+    
+    for (int v = 0; v < 26; v++) {
+        if (connected[u][v].size() > 0) {
+            string word = *connected[u][v].begin();
+            path[top] = word;
+            connected[u][v].erase(connected[u][v].begin());
+            dfs(v, top + 1);
+            if (solved) return;
+            connected[u][v].insert(word);
         }
     }
-}
-
-void fleury(int start)
-{
-    top = 0, stk[top++] = start;
-
-    while (top > 0) {
-        int brige = 1;
-        for (int i = 0; i < 26; ++i)
-            if (connected[stk[top - 1]][i].size() > 0) {
-                brige = 0;
-                break;
-            }
-
-        if (brige) {
-            cout << words.top() << '.';
-            words.pop();
-            top--;
-        }
-        else
-            dfs(stk[--top]);
-    }
-    cout << '\n';
 }
 
 int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    int cases, n;
+    int cases;
 
     cin >> cases;
     for (int c = 1; c <= cases; c++)
@@ -149,7 +140,9 @@ int main(int argc, char *argv[])
 
         if (moreOne != lessOne) eulerianPath = false;
         if (!eulerianPath) { cout << "***\n"; continue; }
-        fleury(oddStart >= 0 ? oddStart : evenStart);
+        
+        solved = 0;
+        dfs(oddStart >= 0 ? oddStart : evenStart, 0);
     }
 
     return 0;
