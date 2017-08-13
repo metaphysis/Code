@@ -60,14 +60,21 @@ bool unionSet(int x, int y)
 
 multiset<string> connected[26];
 
-void dfs(int u)
+void dfs(int u, vector<string> &path, int idx)
 {
-    string word = *connected[u].begin();
-    cout << word << '.';
-    connected[u].erase(connected[u].begin());
-    int next = word.back() - 'a';
-    if (connected[next].size() > 0) dfs(next);
-    else dfs(u);
+    if (connected[u].size() > 0)
+    {
+        string word = *connected[u].begin();
+        path.push_back(word);
+        connected[u].erase(connected[u].begin());
+        dfs(word.back() - 'a', path, idx + 1);
+    }
+    else
+    {
+        vector<string> cycle;
+        dfs(path[idx - 1].front() - 'a', cycle, 0);
+        path.insert(path.begin() + idx - 1, cycle.begin(), cycle.end());
+    }
 }
 
 int main(int argc, char *argv[])
@@ -119,10 +126,15 @@ int main(int argc, char *argv[])
 
         if (moreOne != lessOne) eulerianPath = false;
         if (!eulerianPath) { cout << "***\n"; continue; }
-        
-        cout << "oddStart = " << oddStart << " evenStart = " << evenStart << '\n';
-        dfs(oddStart >= 0 ? oddStart : evenStart);
-        cout << "SOLVED!\n";
+
+        vector<string> path;
+        dfs((oddStart >= 0 ? oddStart : evenStart), path, 0);
+        for (int i = 0; i < path.size(); i++)
+        {
+            if (i > 0) cout << '.';
+            cout << path[i];
+        }
+        cout << '\n';
     }
 
     return 0;
