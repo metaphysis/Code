@@ -45,20 +45,21 @@ void dfs(int u)
 
 void dfs1(int u)
 {
-    int number = 0, indexer = 0;
-    stack<int> unvisited; unvisited.push(0);
+    stack<pair<int, int>> unvisited; unvisited.push(make_pair(0, 0));
 
     while (!unvisited.empty())
     {
-        u = unvisited.top(); unvisited.pop();
-        u = (u & mask) << 1;
+        pair<int, int> node = unvisited.top(); unvisited.pop();
+        
+        sequence[node.second] = node.first;
+        int u = (node.first & mask) << 1;
 
         for (int v = 0; v <= 1; v++)
         {
             if (used[u + v]) continue;
             used[u + v] = 1;
             number = u + v;
-            unvisited.push(u + v);
+            unvisited.push(make_pair(u + v, node.second + 1));
             break;
         }
     }
