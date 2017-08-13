@@ -27,59 +27,56 @@
 
 using namespace std;
 
-const int MAXV = 1024 * 1024 * 2;
+int n, k;
+int used[1 << 21], sequence[1 << 21], top;
+int bits, mask;
 
-int used[MAXV], sequence[MAXV];
-int n, k, bits, solved;
-
-void dfs(int i, int counter)
+void dfs(int u)
 {
-    if (solved) return;
-
-    if (counter == bits)
+    u = (u & mask) << 1;
+    for (int v = 0; v <= 1; v++)
     {
-        cout << sequence[k] << '\n';
-        solved = true;
-        return;
+        if (used[u + v]) continue;
+        used[u + v] = 1;
+        dfs(u + v);
+        sequence[top++] = u + v;
     }
+}
 
-    int next = (i & ((1 << (n - 1)) - 1)) << 1;
+void dfs1(int u)
+{
+    int number = 0, indexer = 0;
+    stack<int> unvisited; unvisited.push(0);
 
-    if (!used[next])
+    while (!unvisited.empty())
     {
-        used[next] = 1, sequence[counter] = next;
-        dfs(next, counter + 1);
-        if (solved) return;
-        used[next] = 0;
-    }
+        u = unvisited.top(); unvisited.pop();
+        u = (u & mask) << 1;
 
-    if (!used[next + 1])
-    {
-        used[next + 1] = 1, sequence[counter] = next + 1;
-        dfs(next + 1, counter + 1);
-        if (solved) return;
-        used[next + 1] = 0;
+        for (int v = 0; v <= 1; v++)
+        {
+            if (used[u + v]) continue;
+            used[u + v] = 1;
+            number = u + v;
+            unvisited.push(u + v);
+            break;
+        }
     }
 }
 
 int main(int argc, char *argv[])
 {
-    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
-
     int cases;
 
     cin >> cases;
     for (int c = 1; c <= cases; c++)
     {
         cin >> n >> k;
-        
-        memset(used, 0, sizeof(used));
-        memset(sequence, 0, sizeof(sequence));
-        solved = false;
-        bits = pow(2, n);
-
-        dfs(0, 0);
+        top = 0, bits = 1 << n, mask = (1 << (n - 1)) - 1;
+        memset(used, 0, sizeof(int) * bits);
+        dfs(0);
+        cout << sequence[bits - 1 - k] << '\n';
     }
-    
+
     return 0;
 }
