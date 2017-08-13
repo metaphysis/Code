@@ -45,7 +45,7 @@ void dfs(int u)
 
 void dfs1(int u)
 {
-    stack<pair<int, int>> unvisited; unvisited.push(make_pair(0, 0));
+    stack<pair<int, int>> unvisited; unvisited.push(make_pair(u, 0));
 
     while (!unvisited.empty())
     {
@@ -58,7 +58,6 @@ void dfs1(int u)
         {
             if (used[u + v]) continue;
             used[u + v] = 1;
-            number = u + v;
             unvisited.push(make_pair(u + v, node.second + 1));
             break;
         }
@@ -75,8 +74,12 @@ int main(int argc, char *argv[])
         cin >> n >> k;
         top = 0, bits = 1 << n, mask = (1 << (n - 1)) - 1;
         memset(used, 0, sizeof(int) * bits);
-        dfs(0);
-        cout << sequence[bits - 1 - k] << '\n';
+        
+        //dfs(0);
+        //cout << sequence[bits - 1 - k] << '\n';
+        
+        dfs1(0);
+        cout << sequence[k] << '\n';
     }
 
     return 0;
