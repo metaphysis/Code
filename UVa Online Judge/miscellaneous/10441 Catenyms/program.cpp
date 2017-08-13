@@ -1,8 +1,8 @@
 // Catenyms
 // UVa ID: 10441
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2017-08-13
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
@@ -58,22 +58,25 @@ bool unionSet(int x, int y)
     return false;
 }
 
-multiset<string> connected[26];
+multiset<string> edges[26];
 
-void dfs(int u, vector<string> &path, int idx)
+void dfs(int u, vector<string> &path)
 {
-    if (connected[u].size() > 0)
+    if (edges[u].size() > 0)
     {
-        string word = *connected[u].begin();
+        string word = *edges[u].begin();
         path.push_back(word);
-        connected[u].erase(connected[u].begin());
-        dfs(word.back() - 'a', path, idx + 1);
+        edges[u].erase(edges[u].begin());
+        dfs(word.back() - 'a', path);
     }
     else
     {
-        vector<string> cycle;
-        dfs(path[idx - 1].front() - 'a', cycle, 0);
-        path.insert(path.begin() + idx - 1, cycle.begin(), cycle.end());
+        for (int i = path.size() - 1; i >= 0; i--)
+        {
+            vector<string> cycle;
+            dfs(path[i].back() - 'a', cycle);
+            path.insert(path.begin() + i + 1, cycle.begin(), cycle.end());
+        }
     }
 }
 
@@ -95,7 +98,7 @@ int main(int argc, char *argv[])
         makeSet();
 
         for (int i = 0; i < 26; i++)
-            connected[i].clear();
+            edges[i].clear();
 
         for (int i = 1; i <= n; i++)
         {
@@ -104,7 +107,7 @@ int main(int argc, char *argv[])
             if (findSet(u) != findSet(v)) unionSet(u, v);
             letterUsed[u] = letterUsed[v] = 1;
             outDegree[u]++, inDegree[v]++;
-            connected[u].insert(word);
+            edges[u].insert(word);
         }
 
         bool eulerianPath = true;
@@ -128,7 +131,7 @@ int main(int argc, char *argv[])
         if (!eulerianPath) { cout << "***\n"; continue; }
 
         vector<string> path;
-        dfs((oddStart >= 0 ? oddStart : evenStart), path, 0);
+        dfs((oddStart >= 0 ? oddStart : evenStart), path);
         for (int i = 0; i < path.size(); i++)
         {
             if (i > 0) cout << '.';
