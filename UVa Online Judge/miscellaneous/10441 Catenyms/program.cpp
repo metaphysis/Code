@@ -60,25 +60,40 @@ bool unionSet(int x, int y)
 
 multiset<string> edges[26];
 
-void dfs(int u, vector<string> &path)
+int visited[26];
+
+int dfs(int u)
 {
-    if (edges[u].size() > 0)
+    visited[u] = 1;
+    int count = 1;
+
+    for (auto s : connected[u])
     {
-        string word = *edges[u].begin();
-        path.push_back(word);
-        edges[u].erase(edges[u].begin());
-        dfs(word.back() - 'a', path);
+        int v = s.back() - 'a';
+        if (!visited[v])
+            count += dfs(s.back() - 'a');
     }
-    else
-    {
-        for (int i = path.size() - 1; i >= 0; i--)
-        {
-            vector<string> cycle;
-            dfs(path[i].back() - 'a', cycle);
-            path.insert(path.begin() + i + 1, cycle.begin(), cycle.end());
-        }
-    }
+
+    return count;
 }
+
+bool isValidNextEdge(int u, string s)
+{
+    if (connected[u].count(s) >= 2) return true;
+
+    memset(visited, 0, sizeof(visited));
+    int count1 = dfs(u);
+
+    connected[u].erase(s);
+
+    memset(visited, 0, sizeof(visited));
+    int count2 = dfs(u);
+
+    connected[u].insert(s);
+
+    return count1 == count2;
+}
+
 
 int main(int argc, char *argv[])
 {
