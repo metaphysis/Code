@@ -1,8 +1,8 @@
 // Doing Windows
 // UVa ID: 618
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2017-08-15
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
@@ -35,8 +35,8 @@ vector<int> indexer;
 
 int gcd(int a, int b)
 {
-    if (b == 0) return a;
-    else return gcd(b, a % b);
+    if (a < b) swap(a, b);
+    return b ? gcd(b, a % b) : a;
 }
 
 bool validate()
@@ -52,7 +52,7 @@ bool validate()
 
         int width2 = screen.width - width1;
         int height3 = screen.height - height1;
-        
+
         if (width2 % windows[1].width == 0 && height3 % windows[2].height == 0)
         {
             int height2 = windows[1].height * (width2 / windows[1].width);
@@ -60,16 +60,19 @@ bool validate()
             
             if (height2 < screen.height && width3 < screen.width)
             {
-                int width4 = screen.width - width3;
-                int height4 = screen.height - height2;
-                
-                if (width4 * windows[3].height == height4 * windows[3].width)
+                if (width1 == width3)
                 {
-                    cout << width1 << ' ' << height1;
-                    cout << ' ' << width2 << ' ' << height2;
-                    cout << ' ' << width3 << ' ' << height3;
-                    cout << ' ' << width4 << ' ' << height4 << '\n';
-                    return true;
+                    int width4 = screen.width - width1;
+                    int height4 = screen.height - height2;
+                    
+                    if (windows[3].width * height4 == width4 * windows[3].height) return true;
+                }
+                if (height1 == height2)
+                {
+                    int width4 = screen.width - width3;
+                    int height4 = screen.height - height2;
+                    
+                    if (windows[3].width * height4 == width4 * windows[3].height) return true;
                 }
             }
         }
