@@ -60,25 +60,6 @@ bool unionSet(int x, int y)
 
 multiset<string> edges[26];
 
-void dfs(int u, vector<string> &path)
-{
-    if (edges[u].size() > 0)
-    {
-        string word = *edges[u].begin();
-        path.push_back(word);
-        edges[u].erase(edges[u].begin());
-        dfs(word.back() - 'a', path);
-    }
-    else
-    {
-        for (int i = path.size() - 1; i >= 0; i--)
-        {
-            vector<string> cycle;
-            dfs(path[i].back() - 'a', cycle);
-            path.insert(path.begin() + i + 1, cycle.begin(), cycle.end());
-        }
-    }
-}
 
 int main(int argc, char *argv[])
 {
