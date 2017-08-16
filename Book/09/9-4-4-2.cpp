@@ -4,8 +4,8 @@
 
 using namespace std;
 
-const int MAX_V = 1000;
-int dfstime = 0, dfn[MAX_V], low[MAX_V], inscc[MAX_V], cscc = 0;
+const int MAXV = 1000;
+int dfstime = 0, dfn[MAXV], low[MAXV], inscc[MAXV], cscc = 0;
 vector<vector<int>> edges;
 stack<int> s;
 

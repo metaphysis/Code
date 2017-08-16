@@ -38,8 +38,11 @@ int dfs(int u, int parent)
             ++children, lowu = min(lowu, lowv = dfs(v, u));
             if (lowv >= dfn[u]) ic[u] = 1;
         }
-        else if (dfn[v] < dfn[u] && v != parent)
-            lowu = min(lowu, dfn[v]);
+        else 
+        {
+            if (dfn[v] < dfn[u] && v != parent)
+                lowu = min(lowu, dfn[v]);
+        }
     }
 
     // 如果为树的根结点且子孙结点数目少于两个，不是割顶。

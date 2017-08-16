@@ -58,8 +58,13 @@ bool unionSet(int x, int y)
     return false;
 }
 
-multiset<string> edges[26];
+vector<string> edges[26];
 
+void fleury(int u)
+{
+    for (int i = 0; i < edges[u].size(); i++)
+        if (edges[u][i] != "*")
+}
 
 int main(int argc, char *argv[])
 {
@@ -88,7 +93,7 @@ int main(int argc, char *argv[])
             if (findSet(u) != findSet(v)) unionSet(u, v);
             letterUsed[u] = letterUsed[v] = 1;
             outDegree[u]++, inDegree[v]++;
-            edges[u].insert(word);
+            edges[u].push_back(word);
         }
 
         bool eulerianPath = true;
@@ -110,6 +115,8 @@ int main(int argc, char *argv[])
 
         if (moreOne != lessOne) eulerianPath = false;
         if (!eulerianPath) { cout << "***\n"; continue; }
+
+        for (int i = 0; i < 26; i++) sort(edges[i].begin(), edges[i].end());
 
         vector<string> path;
         dfs((oddStart >= 0 ? oddStart : evenStart), path);
