@@ -93,7 +93,7 @@ int main(int argc, char *argv[])
 
         string word;
 
-        int letterUsed[26] = {0}, inDegree[26] = {0}, outDegree[26] = {0};
+        int appeared[26] = {0}, id[26] = {0}, od[26] = {0};
 
         makeSet();
 
@@ -105,30 +105,30 @@ int main(int argc, char *argv[])
             cin >> word;
             int u = word.front() - 'a', v = word.back() - 'a';
             if (findSet(u) != findSet(v)) unionSet(u, v);
-            letterUsed[u] = letterUsed[v] = 1;
-            outDegree[u]++, inDegree[v]++;
+            appeared[u] = appeared[v] = 1;
+            od[u]++, id[v]++;
             edges[u].insert(word);
         }
 
-        bool eulerianPath = true;
+        bool eulerian = true;
         int moreOne = 0, lessOne = 0, evenStart = -1, oddStart = -1;
         for (int first = -1, i = 0; i < 26; i++)
         {
-            if (!letterUsed[i]) continue;
+            if (!appeared[i]) continue;
 
             if (first == -1) first = i;
-            if (findSet(first) != findSet(i)) { eulerianPath = 0; break; }
+            if (findSet(first) != findSet(i)) { eulerian = 0; break; }
 
-            int diff = outDegree[i] - inDegree[i];
-            if (abs(diff) >= 2) { eulerianPath = 0; break; }
-            if (diff == 1 && ++moreOne > 1) { eulerianPath = 0; break; }
-            if (diff == -1 && ++lessOne > 1) { eulerianPath = 0; break; }
+            int diff = od[i] - id[i];
+            if (abs(diff) >= 2) { eulerian = 0; break; }
+            if (diff == 1 && ++moreOne > 1) { eulerian = 0; break; }
+            if (diff == -1 && ++lessOne > 1) { eulerian = 0; break; }
             if (moreOne  && oddStart < 0) oddStart = i;
             if (diff == 0 && evenStart < 0) evenStart = i;
         }
 
-        if (moreOne != lessOne) eulerianPath = false;
-        if (!eulerianPath) { cout << "***\n"; continue; }
+        if (moreOne != lessOne) eulerian = false;
+        if (!eulerian) { cout << "***\n"; continue; }
 
         vector<string> path;
         dfs((oddStart >= 0 ? oddStart : evenStart), path);
