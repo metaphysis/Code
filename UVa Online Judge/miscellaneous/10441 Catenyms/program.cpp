@@ -106,6 +106,8 @@ private:
     void fleury(int u);
     void dfs(int u);
     bool isValidNextEdge(int u, int v);
+    void deleteEdge(int u, int v);
+    void restoreEdge(int u, int v);
 };
 
 bool graph::isEulerian()
@@ -191,7 +193,7 @@ bool graph::findEulerianTrail()
 void graph::fleury(int u)
 {
     for (auto v: edges[u])
-        if (v != -1 && isValidNextEdge(u, v))
+        if (v >= 0 && isValidNextEdge(u, v))
         {
             printTrail(u, v);
             removeEdge(u, v);
@@ -201,6 +203,7 @@ void graph::fleury(int u)
 
 void graph::printTrail(int u, int v)
 {
+    cout << dictionary[u].front() << endl;
     trail.push_back(dictionary[u].front());
     dictionary[u].erase(dictionary[u].begin());
 }
@@ -215,12 +218,11 @@ bool graph::isValidNextEdge(int u, int v)
     dfs(u);
     int count1 = count(visited, visited + numberOfVertices, 1);
 
-    removeEdge(u, v);
     memset(visited, 0, sizeof(int) * numberOfVertices);
+    deleteEdge(u, v);
     dfs(u);
+    restoreEdge(u, v);
     int count2 = count(visited, visited + numberOfVertices, 1);
-
-    addEdge(u, v);
 
     return count1 == count2;
 }
@@ -229,7 +231,7 @@ void graph::dfs(int u)
 {
     visited[u] = 1;
     for (auto v : edges[u])
-        if (v != -1 && !visited[v])
+        if (v >= 0 && !visited[v])
             dfs(v);
 }
 
@@ -246,9 +248,21 @@ void graph::removeEdge(int u, int v)
     if (isUndirectedGraph) *find(edges[v].begin(), edges[v].end(), u) = -1;
 }
 
+void graph::restoreEdge(int u, int v)
+{
+    *find(edges[u].begin(), edges[u].end(), -2) = v;
+    if (isUndirectedGraph) *find(edges[v].begin(), edges[v].end(), -2) = u;  
+}
+
+void graph::deleteEdge(int u, int v)
+{
+    *find(edges[u].begin(), edges[u].end(), v) = -2;
+    if (isUndirectedGraph) *find(edges[v].begin(), edges[v].end(), u) = -2;    
+}
+
 int main(int argc, char *argv[])
 {
-    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
+    //cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
     int cases, n;
     string word;
