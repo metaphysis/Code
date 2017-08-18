@@ -1,4 +1,12 @@
-1
+14
+7
+abc
+cbd
+dea
+afg
+ghi
+ijk
+kla
 19
 raloha
 arachnid
