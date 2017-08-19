@@ -191,12 +191,13 @@ void graph::printTrail(int u, int v)
     dictionary[u][v].erase(dictionary[u][v].begin());
 }
 
-bool isConnected(int i) { return i >= 0; }
-
 bool graph::isValidNextEdge(int u, int v)
 {
-    if (count_if(edges[u].begin(), edges[u].end(), isConnected) == 1)
-        return true;
+    int connected = 0;
+    for (auto v : edges[u])
+        if (v >= 0)
+            connected++;
+    if (connected == 1) return true;
 
     int connected1 = getConnectedVertices(u);
     deleteEdge(u, v);
