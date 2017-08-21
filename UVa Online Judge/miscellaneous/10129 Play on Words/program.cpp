@@ -84,24 +84,24 @@ int main(int argc, char *argv[])
             outDegree[u]++, inDegree[v]++;
         }
 
-        bool eulerianPath = true;
+        bool eulerianTrail = true;
         int moreOne = 0, lessOne = 0;
         for (int first = -1, i = 0; i < 26; i++)
         {
             if (!letterUsed[i]) continue;
 
             if (first == -1) first = i;
-            if (findSet(first) != findSet(i)) { eulerianPath = 0; break; }
+            if (findSet(first) != findSet(i)) { eulerianTrail = 0; break; }
 
             int diff = inDegree[i] - outDegree[i];
-            if (abs(diff) >= 2) { eulerianPath = 0; break; }
-            if (diff == 1 && ++moreOne > 1) { eulerianPath = 0; break; }
-            if (diff == -1 && ++lessOne > 1) { eulerianPath = 0; break; }
+            if (abs(diff) >= 2) { eulerianTrail = 0; break; }
+            if (diff == 1 && ++moreOne > 1) { eulerianTrail = 0; break; }
+            if (diff == -1 && ++lessOne > 1) { eulerianTrail = 0; break; }
         }
 
-        if (moreOne != lessOne) eulerianPath = false;
+        if (moreOne != lessOne) eulerianTrail = false;
 
-        if (eulerianPath) cout << "Ordering is possible.\n";
+        if (eulerianTrail) cout << "Ordering is possible.\n";
         else cout << "The door cannot be opened.\n";
     }
 

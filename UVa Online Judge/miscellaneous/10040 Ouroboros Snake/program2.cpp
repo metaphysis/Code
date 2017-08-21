@@ -1,8 +1,8 @@
 // Ouroboros Snake
 // UVa ID: 10040
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2017-08-21
+// UVa Run Time: 0.150s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
@@ -27,65 +27,66 @@
 
 using namespace std;
 
-int n, k;
-int used[1 << 21], sequence[1 << 21], top;
-int bits, mask;
+int used[1 << 20][2], sequence[22][1 << 21];
 
-void dfs(int u)
+void hierholzer(int n)
 {
-    u = (u & mask) << 1;
-    for (int v = 0; v <= 1; v++)
+    int mask = (1 << (n - 2)) - 1, u = 0;
+
+    stack<int> path;
+    vector<int> circuit;
+
+    memset(used, 0, sizeof(int) * (1 << (n - 1)) * 2);
+    path.push(u);
+
+    while (!path.empty())
     {
-        if (used[u + v]) continue;
-        used[u + v] = 1;
-        dfs(u + v);
-        sequence[top++] = u + v;
+        int v = 0;
+        for (v = 0; v <= 1; v++)
+            if (!used[u][v])
+                break;
+
+        if (v <= 1)
+        {
+            path.push(u);
+            used[u][v] = 1;
+            u = ((u & mask) << 1) + v;
+        }
+        else
+        {
+            circuit.push_back(u);
+            u = path.top();
+            path.pop();
+        }
+    }
+
+    int bits = circuit.back();
+    mask = (1 << (n - 1)) - 1;
+    for (int i = circuit.size() - 2, j = 0; i >= 0; i--, j++)
+    {
+        sequence[n][j] = ((bits & mask) << 1) + (circuit[i] & 1);
+        bits = sequence[n][j];
     }
 }
 
-struct state
+void trick()
 {
-    int u, v;
-};
-
-void dfs1(int u)
-{
-    stack<state> stk;
-    stk.push(state{u, 0});
-
-    while (!stk.empty())
-    {
-        state node = stk.top();
-        stk.pop();
-
-        int u = (node.u & mask) << 1;
-        if (used[u + node.v]) continue;
-
-        sequence[top++] = node.u + node.v;
-        used[u + node.v] = 1;
-        if (node.v == 0) stk.push(state{u, 1});
-        stk.push(state{u, node.v});
-    }
+    sequence[1][0] = 0, sequence[1][1] = 1;
+    for (int i = 2; i <= 21; i++)
+        hierholzer(i);
 }
 
 int main(int argc, char *argv[])
 {
-    int cases;
+    int cases, n, k;
+
+    trick();
 
     cin >> cases;
     for (int c = 1; c <= cases; c++)
     {
         cin >> n >> k;
-
-        bits = 1 << n, mask = (1 << (n - 1)) - 1;
-        memset(used, 0, sizeof(int) * bits);
-        top = 0;
-        
-        dfs(0);
-        cout << sequence[bits - 1 - k] << '\n';
-        
-        //dfs1(0);
-        //cout << sequence[bits - 1 - k] << '\n';
+        cout << sequence[n][k] << '\n';
     }
 
     return 0;

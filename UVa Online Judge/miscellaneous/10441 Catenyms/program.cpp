@@ -27,279 +27,115 @@
 
 using namespace std;
 
-vector<string> dictionary[26], trail;
+int parent[26], ranks[26];
 
-class disjointSet
+void makeSet()
 {
-private:
-    int numberOfVertices, *parent, *rank;
+    for (int i = 0; i < 26; i++) parent[i] = i, ranks[i] = 0;
+}
 
-public:
-    disjointSet(int v)
-    {
-        numberOfVertices = v;
-        parent = new int[v], rank = new int[v];
-    }
-
-    ~disjointSet()
-    {
-        delete [] parent, rank;
-    }
-
-    void makeSet()
-    {
-        for (int i = 0; i < numberOfVertices; i++) parent[i] = i, rank[i] = 0;
-    }
-
-    int findSet(int x)
-    {
-        return (x == parent[x] ? x : parent[x] = findSet(parent[x]));
-    }
-
-    bool unionSet(int x, int y)
-    {
-        x = findSet(x), y = findSet(y);
-        if (x != y) {
-            if (rank[x] > rank[y]) parent[y] = x;
-            else {
-                parent[x] = y;
-                if (rank[x] == rank[y]) rank[y]++;
-            }
-            return true;
-        }
-        return false;
-    }
-};
-
-class graph
+// 带路径压缩的查找，使用递归实现。
+int findSet(int x)
 {
-private:
-    bool isUndirectedGraph;
-    int numberOfVertices, startOfEulerianTrail, *visited, *appeared;
-    list<int> *edges;
+    return (x == parent[x] ? x : parent[x] = findSet(parent[x]));
+}
 
-public:
-    graph(int v, bool ug)
-    {
-        numberOfVertices = v;
-        edges = new list<int>[v];
-        visited = new int[v];
-        appeared = new int[v];
-        memset(appeared, 0, sizeof(int) * v);
-        isUndirectedGraph = ug;
-    }
-
-    ~graph()
-    {
-        delete [] edges, visited, appeared;
-    }
-
-    bool findEulerianTrail();
-
-    void addEdge(int u, int v);
-    void removeEdge(int u, int v);
-
-private:
-    bool isEulerian();
-    void printTrail(int u, int v);
-
-    void fleury(int u);
-    void dfs(int u);
-    bool isValidNextEdge(int u, int v);
-    void deleteEdge(int u, int v);
-    void restoreEdge(int u, int v);
-};
-
-bool graph::isEulerian()
+//  集合的按秩合并。
+bool unionSet(int x, int y)
 {
-    bool eulerian = true;
-
-    if (eulerian)
+    x = findSet(x), y = findSet(y);
+    
+    if (x != y)
     {
-        disjointSet ds(numberOfVertices);
-        ds.makeSet();
-
-        for (int u = 0; u < numberOfVertices; u++)
-            for (auto v : edges[u])
-                if (ds.findSet(u) != ds.findSet(v))
-                    ds.unionSet(u, v);
-
-        for (int first = -1, u = 0; u < numberOfVertices; u++)
+        if (ranks[x] > ranks[y]) parent[y] = x;
+        else
         {
-            if (!appeared[u]) continue;
-            if (first == -1) first = u;
-            if (ds.findSet(first) != ds.findSet(u))
-            {
-                eulerian = false;
-                break;
-            }
+            parent[x] = y;
+            if (ranks[x] == ranks[y]) ranks[y]++;
         }
+        return true;
     }
+    return false;
+}
 
-    if (!eulerian) return eulerian;
+multiset<string> edges[26];
 
-    if (isUndirectedGraph)
+void dfs(int u, vector<string> &path)
+{
+    if (edges[u].size() > 0)
     {
-        startOfEulerianTrail = 0;
-
-        int odd = 0;
-        for (int u = 0; u < numberOfVertices; u++)
-        {
-            if (!appeared[u]) continue;
-            if (edges[u].size() & 1)
-                odd++, startOfEulerianTrail = u;
-        }
-
-        eulerian = (odd == 0 || odd == 2);
+        string word = *edges[u].begin();
+        path.push_back(word);
+        edges[u].erase(edges[u].begin());
+        dfs(word.back() - 'a', path);
     }
     else
     {
-        int *id = new int[numberOfVertices], *od = new int[numberOfVertices];
-
-        memset(id, 0, sizeof(int) * numberOfVertices);
-        memset(od, 0, sizeof(int) * numberOfVertices);
-
-        for (int u = 0; u < numberOfVertices; u++)
-            for (auto v : edges[u])
-                od[u]++, id[v]++;
-
-        int moreOne = 0, lessOne = 0, evenStart = -1, oddStart = -1;
-        for (int u = 0; u < numberOfVertices; u++)
+        for (int i = path.size() - 1; i >= 0; i--)
         {
-            if (!appeared[u]) continue;
-            int diff = od[u] - id[u];
-            if (abs(diff) >= 2) { eulerian = false; break; }
-            if (diff == 1 && ++moreOne > 1) { eulerian = false; break; }
-            if (diff == -1 && ++lessOne > 1) { eulerian = false; break; }
-            if (moreOne  && oddStart < 0) oddStart = u;
-            if (diff == 0 && evenStart < 0) evenStart = u;
+            vector<string> cycle;
+            dfs(path[i].back() - 'a', cycle);
+            path.insert(path.begin() + i + 1, cycle.begin(), cycle.end());
         }
-        delete [] id, od;
-
-        if (moreOne != lessOne) { eulerian = false; }
-        startOfEulerianTrail = oddStart >= 0 ? oddStart : evenStart;
     }
-
-    return eulerian;
-}
-
-bool graph::findEulerianTrail()
-{
-    bool eulerian = isEulerian();
-    if (eulerian) fleury(startOfEulerianTrail);
-    return eulerian;
-}
-
-void graph::fleury(int u)
-{
-    for (auto v: edges[u])
-        if (v >= 0 && isValidNextEdge(u, v))
-        {
-            printTrail(u, v);
-            removeEdge(u, v);
-            fleury(v);
-        }
-}
-
-void graph::printTrail(int u, int v)
-{
-    cout << dictionary[u].front() << endl;
-    trail.push_back(dictionary[u].front());
-    dictionary[u].erase(dictionary[u].begin());
-}
-
-bool graph::isValidNextEdge(int u, int v)
-{
-    int connected = 0;
-    for (auto iv : edges[u]) if (iv != -1) connected++;
-    if (connected == 1) return true;
-
-    memset(visited, 0, sizeof(int) * numberOfVertices);
-    dfs(u);
-    int count1 = count(visited, visited + numberOfVertices, 1);
-
-    memset(visited, 0, sizeof(int) * numberOfVertices);
-    deleteEdge(u, v);
-    dfs(u);
-    restoreEdge(u, v);
-    int count2 = count(visited, visited + numberOfVertices, 1);
-
-    return count1 == count2;
-}
-
-void graph::dfs(int u)
-{
-    visited[u] = 1;
-    for (auto v : edges[u])
-        if (v >= 0 && !visited[v])
-            dfs(v);
-}
-
-void graph::addEdge(int u, int v)
-{
-    appeared[u] = appeared[v] = 1;
-    edges[u].push_back(v);
-    if (isUndirectedGraph) edges[v].push_back(u);
-}
-
-void graph::removeEdge(int u, int v)
-{
-    *find(edges[u].begin(), edges[u].end(), v) = -1;
-    if (isUndirectedGraph) *find(edges[v].begin(), edges[v].end(), u) = -1;
-}
-
-void graph::restoreEdge(int u, int v)
-{
-    *find(edges[u].begin(), edges[u].end(), -2) = v;
-    if (isUndirectedGraph) *find(edges[v].begin(), edges[v].end(), -2) = u;  
-}
-
-void graph::deleteEdge(int u, int v)
-{
-    *find(edges[u].begin(), edges[u].end(), v) = -2;
-    if (isUndirectedGraph) *find(edges[v].begin(), edges[v].end(), u) = -2;    
 }
 
 int main(int argc, char *argv[])
 {
-    //cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
+    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
     int cases, n;
-    string word;
 
     cin >> cases;
     for (int c = 1; c <= cases; c++)
     {
         cin >> n;
 
-        vector<string> words;
-        for (int i = 0; i < n; i++)
+        string word;
+
+        int appeared[26] = {0}, id[26] = {0}, od[26] = {0};
+
+        makeSet();
+
+        for (int i = 0; i < 26; i++)
+            edges[i].clear();
+
+        for (int i = 1; i <= n; i++)
         {
             cin >> word;
-            words.push_back(word);
-        }
-        sort(words.begin(), words.end());
-
-        for (int i = 0; i < 26; i++) dictionary[i].clear();
-
-        graph g(26, false);
-        for (int i = 0; i < n; i++)
-        {
-            word = words[i];
             int u = word.front() - 'a', v = word.back() - 'a';
-            g.addEdge(u, v);
-            dictionary[u].push_back(word);
+            if (findSet(u) != findSet(v)) unionSet(u, v);
+            appeared[u] = appeared[v] = 1;
+            od[u]++, id[v]++;
+            edges[u].insert(word);
         }
 
-        trail.clear();
-        if (!g.findEulerianTrail()) cout << "***";
-        else
+        bool eulerian = true;
+        int moreOne = 0, lessOne = 0, evenStart = -1, oddStart = -1;
+        for (int first = -1, i = 0; i < 26; i++)
         {
-            for (int i = 0; i < trail.size(); i++)
-            {
-                if (i > 0) cout << '.';
-                cout << trail[i];
-            }
+            if (!appeared[i]) continue;
+
+            if (first == -1) first = i;
+            if (findSet(first) != findSet(i)) { eulerian = 0; break; }
+
+            int diff = od[i] - id[i];
+            if (abs(diff) >= 2) { eulerian = 0; break; }
+            if (diff == 1 && ++moreOne > 1) { eulerian = 0; break; }
+            if (diff == -1 && ++lessOne > 1) { eulerian = 0; break; }
+            if (moreOne  && oddStart < 0) oddStart = i;
+            if (diff == 0 && evenStart < 0) evenStart = i;
+        }
+
+        if (moreOne != lessOne) eulerian = false;
+        if (!eulerian) { cout << "***\n"; continue; }
+
+        vector<string> path;
+        dfs((oddStart >= 0 ? oddStart : evenStart), path);
+        for (int i = 0; i < path.size(); i++)
+        {
+            if (i > 0) cout << '.';
+            cout << path[i];
         }
         cout << '\n';
     }

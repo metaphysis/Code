@@ -1,1 +1,14 @@
+abc.cbd.dea.afg.ghi.ijk.kla
 aloha.aloha.arachnid.dog.gopher.raloha.arachnid.dog.gopher.raloha.arachnid.dog.gopher.rat.tiger.rat.tiger.rat.tiger
+***
+ba.ab.bc.ca.ad.da
+aabb.ba.aabba
+***
+abc.cba
+ab.bc.cd.da.ac.ce.ea
+b.bb.bbb.bbbb.bc.c.ca.a.aa.aaa.aaaa.aaaaa.abbbb.bd.d.dc.cac.cc.cccc.cccca.ac
+c.ca.a.aa.aaa.aaaa.aaaaa.ac.cac.cc.cccc.cccca.abbbb.b.bb.bbb.bbbb
+a.aa.aaa.aaaa.aaaaa.ac.c.cac.cc.cccc.cccca.abbbb.b.bb.bbb.bbbb
+ab.bc.cb.bd.dc.cd.de.ed.db.ba
+ok.ke.eam.mae.em.me.eo.om.mo.ok
+ab.ba.ab.bc.cb.bc.cd.dc.cd.dc.cb.be.eb.be.ef.fe.ef.fe.eb.ba

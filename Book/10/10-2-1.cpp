@@ -1,10 +1,4 @@
-// Catenyms
-// UVa ID: 10441
-// Verdict: Accepted
-// Submission Date: 2017-08-21
-// UVa Run Time: 0.000s
-//
-// 版权所有（C）2017，邱秋。metaphysis # yeah dot net
+// http://www.geeksforgeeks.org/fleurys-algorithm-for-printing-eulerian-path/, 2017.
 
 #include <algorithm>
 #include <bitset>
@@ -26,8 +20,6 @@
 #include <vector>
 
 using namespace std;
-
-vector<string> dictionary[26][26], trail;
 
 class disjointSet
 {
@@ -215,8 +207,7 @@ void graph::hierholzer(int u)
 
 void graph::printTrail(int u, int v)
 {
-    trail.push_back(dictionary[u][v].front());
-    dictionary[u][v].erase(dictionary[u][v].begin());
+    cout << u << "->" << v << ' ';
 }
 
 bool graph::isValidNextEdge(int u, int v)
@@ -278,51 +269,31 @@ void graph::deleteEdge(int u, int v)
     if (isUndirectedGraph) *find(edges[v].begin(), edges[v].end(), u) = -2;    
 }
 
-int main(int argc, char *argv[])
+int main(int argc, char * argv[])
 {
-    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
+    graph g1(4, true);
+    g1.addEdge(0, 1);
+    g1.addEdge(0, 2);
+    g1.addEdge(1, 2);
+    g1.addEdge(2, 3);
+    g1.findEulerianTrail();
 
-    int cases, n;
-    string word;
+    graph g2(3, true);
+    g2.addEdge(0, 1);
+    g2.addEdge(1, 2);
+    g2.addEdge(2, 0);
+    g2.findEulerianTrail();
 
-    cin >> cases;
-    for (int c = 1; c <= cases; c++)
-    {
-        cin >> n;
-
-        vector<string> words;
-        for (int i = 0; i < n; i++)
-        {
-            cin >> word;
-            words.push_back(word);
-        }
-        sort(words.begin(), words.end());
-
-        for (int i = 0; i < 26; i++)
-            for (int j = 0; j < 26; j++)
-                dictionary[i][j].clear();
-
-        graph g(26, false);
-        for (int i = 0; i < n; i++)
-        {
-            word = words[i];
-            int u = word.front() - 'a', v = word.back() - 'a';
-            g.addEdge(u, v);
-            dictionary[u][v].push_back(word);
-        }
-        
-        trail.clear();
-        if (!g.findEulerianTrail()) cout << "***";
-        else
-        {
-            for (int i = 0; i < trail.size(); i++)
-            {
-                if (i > 0) cout << '.';
-                cout << trail[i];
-            }
-        }
-        cout << '\n';
-    }
-
+    graph g3(5, true);
+    g3.addEdge(1, 0);
+    g3.addEdge(0, 2);
+    g3.addEdge(2, 1);
+    g3.addEdge(0, 3);
+    g3.addEdge(3, 4);
+    g3.addEdge(3, 2);
+    g3.addEdge(3, 1);
+    g3.addEdge(2, 4);
+    g3.findEulerianTrail();
+    
     return 0;
 }
