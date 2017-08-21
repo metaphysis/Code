@@ -31,41 +31,31 @@ int n, k;
 int used[1 << 21], sequence[1 << 21], top;
 int bits, mask;
 
-void dfs(int u)
+void hierholzer(int u)
 {
-    u = (u & mask) << 1;
-    for (int v = 0; v <= 1; v++)
+    stack<int> path; path.push(u);
+    vector<int> circuit;
+
+    int current = u;
+    while (!path.empty())
     {
-        if (used[u + v]) continue;
-        used[u + v] = 1;
-        dfs(u + v);
-        sequence[top++] = u + v;
+        if (edges[current].size())
+        {
+            path.push(current);
+            int next = edges[current].front();
+            edges[current].erase(edges[current].begin());
+            current = next;
+        }
+        else
+        {
+            circuit.push_back(current);
+            current = path.top();
+            path.pop();
+        }
     }
-}
 
-struct state
-{
-    int u, v;
-};
-
-void dfs1(int u)
-{
-    stack<state> stk;
-    stk.push(state{u, 0});
-
-    while (!stk.empty())
-    {
-        state node = stk.top();
-        stk.pop();
-
-        int u = (node.u & mask) << 1;
-        if (used[u + node.v]) continue;
-
-        sequence[top++] = node.u + node.v;
-        used[u + node.v] = 1;
-        if (node.v == 0) stk.push(state{u, 1});
-        stk.push(state{u, node.v});
-    }
+    for (int i = circuit.size() - 1; i > 0; i--)
+        printTrail(circuit[i], circuit[i - 1]);
 }
 
 int main(int argc, char *argv[])
@@ -78,14 +68,8 @@ int main(int argc, char *argv[])
         cin >> n >> k;
 
         bits = 1 << n, mask = (1 << (n - 1)) - 1;
-        memset(used, 0, sizeof(int) * bits);
-        top = 0;
         
-        dfs(0);
-        cout << sequence[bits - 1 - k] << '\n';
-        
-        //dfs1(0);
-        //cout << sequence[bits - 1 - k] << '\n';
+        hierholzer(0);
     }
 
     return 0;
