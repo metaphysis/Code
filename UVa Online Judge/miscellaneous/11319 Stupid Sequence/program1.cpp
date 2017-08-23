@@ -29,20 +29,34 @@ using namespace std;
 
 typedef unsigned long long ull;
 
-void print(vector<vector<ull>> A)
-{
-    for (auto u : A)
-    {
-        for (auto v : u)
-            cout << v << ' ';
-        cout << '\n';
-    }
-}
-
 ull gcd(ull a, ull b)
 {
     if (a < b) swap(a, b);
     return b ? gcd(b, a % b) : a;
+}
+
+bool gaussianElimination1(vector<vector<ull>> &A, vector<ull> &b)
+{
+    int n = A.size();
+    for (int i = 0; i < n; i++) A[i].push_back(b[i]);
+
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+            if (i != j)
+                for (int k = i + 1; k <= n; k++)
+                    A[j][k] -= A[j][i] * A[i][k];
+                    
+        ull g = gcd(A[j][i + 1], A[j][i + 1]);
+            for (int k = i + 2; k < n + 1; k++)
+                g = gcd(g, A[j][k]);
+            for (int k = 0; k < n + 1; k++)
+                A[j][k] /= g;
+    }
+
+    for (int i = 0; i < n; i++) b[i] = A[i][n];
+    
+    return true;
 }
 
 bool gaussianElimination(vector<vector<ull>> &A, vector<ull> &b)
@@ -112,7 +126,7 @@ int main(int argc, char *argv[])
             b.push_back(term);
         }
         
-        bool stupid = gaussianElimination(A, b);
+        bool stupid = gaussianElimination1(A, b);
         if (stupid)
         {
             for (ull i = 8; i <= 1500; i++)
