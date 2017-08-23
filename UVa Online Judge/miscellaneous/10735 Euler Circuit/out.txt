@@ -1,0 +1,2 @@
+No euler circuit exist
+No euler circuit exist
