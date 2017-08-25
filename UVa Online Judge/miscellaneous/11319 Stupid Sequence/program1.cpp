@@ -2,7 +2,7 @@
 // UVa ID: 11319
 // Verdict: Accepted
 // Submission Date: 2017-08-24
-// UVa Run Time: 0.000s
+// UVa Run Time: 0.020s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
@@ -35,65 +35,32 @@ ull gcd(ull a, ull b)
     return b ? gcd(b, a % b) : a;
 }
 
-bool gaussianElimination1(vector<vector<ull>> &A, vector<ull> &b)
-{
-    int n = A.size();
-    for (int i = 0; i < n; i++) A[i].push_back(b[i]);
-
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j < n; j++)
-            if (i != j)
-                for (int k = i + 1; k <= n; k++)
-                    A[j][k] -= A[j][i] * A[i][k];
-                    
-        ull g = gcd(A[j][i + 1], A[j][i + 1]);
-            for (int k = i + 2; k < n + 1; k++)
-                g = gcd(g, A[j][k]);
-            for (int k = 0; k < n + 1; k++)
-                A[j][k] /= g;
-    }
-
-    for (int i = 0; i < n; i++) b[i] = A[i][n];
-    
-    return true;
-}
-
 bool gaussianElimination(vector<vector<ull>> &A, vector<ull> &b)
 {
     int n = A.size();
     for (int i = 0; i < n; i++) A[i].push_back(b[i]);
-    
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = i + 1; j < n; j++)
-        {
-            for (int k = i + 1; k < n + 1; k++)
-                A[j][k] = A[j][k] * A[i][i] - A[i][k] * A[j][i];
-            A[j][i] = 0;
-            
-            ull g = gcd(A[j][i + 1], A[j][i + 1]);
-            for (int k = i + 2; k < n + 1; k++)
-                g = gcd(g, A[j][k]);
-            for (int k = 0; k < n + 1; k++)
-                A[j][k] /= g;
-        }
-    }
 
-    for (int i = n - 1; i >= 0; i--)
-    {
-        if (A[i][i] == 0 || (A[i][n] % A[i][i]) != 0) return false;
-        A[i][n] /= A[i][i];
-        
-        for (int j = 0; j < i; j++)
-        {
-            A[j][n] -= A[i][n] * A[j][i];
-            A[j][i] = 0;
-        }
-    }
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            if (i != j)
+            {
+                ull t = A[j][i];
+                for (int k = 0; k <= n; k++)
+                    A[j][k] = A[j][k] * A[i][i] - A[i][k] * t;
+
+                ull g = A[j][0];
+                for (int k = 1; k <= n; k++)
+                    g = gcd(g, A[j][k]);
+                for (int k = 1; k <= n; k++)
+                    A[j][k] /= g;
+            }
+
+    for (int i = 0; i < n; i++)
+        if (A[i][i] != 1)
+            return false;
     
     for (int i = 0; i < n; i++) b[i] = A[i][n];
-
+    
     return true;
 }
 
@@ -126,7 +93,7 @@ int main(int argc, char *argv[])
             b.push_back(term);
         }
         
-        bool stupid = gaussianElimination1(A, b);
+        bool stupid = gaussianElimination(A, b);
         if (stupid)
         {
             for (ull i = 8; i <= 1500; i++)

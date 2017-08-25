@@ -16,7 +16,7 @@
 using namespace std;
 
 const int MAXN = 100;
-const double EPSICON = 1e-8;
+const double EPSILON = 1e-8;
 
 // 不考虑其他连接点影响时，两个连接点间的阻值。
 double resistor[MAXN][MAXN];
@@ -40,7 +40,7 @@ bool gaussianElimination(vector<vector<double>> &A, vector<double> &b)
         swap(A[i], A[pivot]);
 
         // 方程组无解或具有无穷多个解。
-        if (fabs(A[i][i]) < EPSICON) return false;
+        if (fabs(A[i][i]) < EPSILON) return false;
 
         // 把正在处理的未知元的系数变为1。
         for (int j = i + 1; j <= n; j++) A[i][j] /= A[i][i];
@@ -107,7 +107,7 @@ int main(int argc, char *argv[])
             if (node == indexer[A] || node == indexer[B]) continue;
 
             for (int other = 0; other < C; other++)
-                if (resistor[node][other] > EPSICON)
+                if (resistor[node][other] > EPSILON)
                 {
                     // 单位电势下从node流到other的电流。
                     double inI = 1.0 / resistor[node][other];
@@ -125,12 +125,12 @@ int main(int argc, char *argv[])
         // 计算终点流入的电流之和。
         double current = 0.0;
         for (int node = 0; node < C; node++)
-            if (resistor[node][indexer[B]] > EPSICON)
+            if (resistor[node][indexer[B]] > EPSILON)
                 current += (voltage[node] - voltage[indexer[B]]) /
                     resistor[node][indexer[B]];
 
         // 根据欧姆定律计算等效阻值。
-        if (fabs(current) < EPSICON)
+        if (fabs(current) < EPSILON)
             cout << "0.00 Ohms\n";
         else
         {

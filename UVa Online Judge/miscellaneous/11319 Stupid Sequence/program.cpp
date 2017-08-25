@@ -2,7 +2,7 @@
 // UVa ID: 11319
 // Verdict: Accepted
 // Submission Date: 2017-08-24
-// UVa Run Time: 0.000s
+// UVa Run Time: 0.040s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
@@ -49,22 +49,20 @@ bool gaussianElimination(vector<vector<ull>> &A, vector<ull> &b)
 {
     int n = A.size();
     for (int i = 0; i < n; i++) A[i].push_back(b[i]);
-    
+
     for (int i = 0; i < n; i++)
-    {
         for (int j = i + 1; j < n; j++)
         {
-            for (int k = i + 1; k < n + 1; k++)
+            for (int k = i + 1; k <= n; k++)
                 A[j][k] = A[j][k] * A[i][i] - A[i][k] * A[j][i];
             A[j][i] = 0;
-            
+
             ull g = gcd(A[j][i + 1], A[j][i + 1]);
-            for (int k = i + 2; k < n + 1; k++)
+            for (int k = i + 2; k <= n; k++)
                 g = gcd(g, A[j][k]);
-            for (int k = 0; k < n + 1; k++)
+            for (int k = 0; k <= n; k++)
                 A[j][k] /= g;
         }
-    }
 
     for (int i = n - 1; i >= 0; i--)
     {
