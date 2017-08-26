@@ -1,8 +1,8 @@
 // Back to Kernighan-Ritchie
 // UVa ID: 10828
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2017-08-26
+// UVa Run Time: 0.050s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
