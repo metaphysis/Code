@@ -65,14 +65,6 @@ bool gaussianElimination(vector<vector<double>> &A, vector<double> &b)
     return true;
 }
 
-void dfs(int u)
-{
-    inf[u] = 1;
-    for (auto v : out[u])
-        if (!inf[v])
-            dfs(v);
-}
-
 int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
@@ -101,23 +93,25 @@ int main(int argc, char *argv[])
         vector<vector<double>> A(n, vector<double>(n, 0.0));
         for (int u = 0; u < n; u++)
         {
+            A[u][u] = 1.0;
             for (auto v : in[u])
-                A[u][v] += 1.0 / (double)(out[v].size());
-            A[u][u] = -1.0;
+                A[u][v] -= 1.0 / (double)(out[v].size());
         }
 
         vector<double> b(n, 0.0);
-        b[0] = -1.0;
+        b[0] = 1.0;
 
         gaussianElimination(A, b);
 
         memset(inf, 0, sizeof(inf));
-        for (int i = 0; i < n; i++)
-            if (fabs(A[i][i]) < EPSILON)
+        for (int i = n - 1; i >= 0; i--)
+        {
+            if (fabs(A[i][i]) < EPSILON && fabs(A[i][n]) > EPSILON)
                 inf[i] = 1;
-        for (int i = 0; i < n; i++)
-            if (inf[i])
-                dfs(i);
+            for (int j = i + 1; j < n; j++)
+                if (fabs(A[i][j]) > EPSILON && inf[j])
+                    inf[i] = 1;
+        }
 
         cout << "Case #" << ++cases << ":\n";
 
@@ -127,7 +121,7 @@ int main(int argc, char *argv[])
             cin >> from;
             from--;
             if (inf[from]) cout << "infinity\n";
-            else cout << fabs(b[from]) << '\n';
+            else cout << (fabs(b[from]) < EPSILON ? 0.000 : fabs(b[from])) << '\n';
         }
     }
 
