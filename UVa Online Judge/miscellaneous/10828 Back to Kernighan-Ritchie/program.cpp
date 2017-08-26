@@ -30,47 +30,47 @@ using namespace std;
 const double EPSILON = 10e-6;
 const int MAXN = 110;
 
-int n, q;
-vector<int> in[MAXN];
-int out[MAXN], inf[MAXN];
-
-void print(vector<vector<double>> A)
-{
-    for (auto u : A)
-    {
-        for (auto v : u)
-            cout << v << ' ';
-        cout << '\n';
-    }
-    cout << '\n';
-}
+int n, q, inf[MAXN];
+vector<int> in[MAXN], out[MAXN];
 
 bool gaussianElimination(vector<vector<double>> &A, vector<double> &b)
 {
     int n = A.size();
-    for (int i = 0; i < n; i++) A[i].push_back(b[i]);
+    for (int i = 0; i < n; i++)
+        A[i].push_back(b[i]);
 
     for (int i = 0; i < n; i++)
     {
         int pivot = i;
         for (int j = i; j < n; j++)
-            if (fabs(A[j][i]) > fabs(A[pivot][i])) pivot = j;
+            if (fabs(A[j][i]) > fabs(A[pivot][i]))
+                pivot = j;
         swap(A[i], A[pivot]);
 
-        if (fabs(A[i][i]) < EPSILON) continue;
+        if (fabs(A[i][i]) < EPSILON)
+            continue;
         
-        for (int j = i + 1; j <= n; j++) A[i][j] /= A[i][i];
+        for (int j = i + 1; j <= n; j++)
+            A[i][j] /= A[i][i];
 
         for (int j = 0; j < n; j++)
             if (i != j)
-                for (int k = i + 1; k <= n; k++) A[j][k] -= A[j][i] * A[i][k];
-
-        print(A);
+                for (int k = i + 1; k <= n; k++)
+                    A[j][k] -= A[j][i] * A[i][k];
     }
 
-    for (int i = 0; i < n; i++) b[i] = A[i][n];
+    for (int i = 0; i < n; i++)
+        b[i] = A[i][n];
 
     return true;
+}
+
+void dfs(int u)
+{
+    inf[u] = 1;
+    for (auto v : out[u])
+        if (!inf[v])
+            dfs(v);
 }
 
 int main(int argc, char *argv[])
@@ -83,24 +83,27 @@ int main(int argc, char *argv[])
     int cases = 0;
     while (cin >> n, n > 0)
     {
-        for (int i = 1; i <= n; i++)
+        for (int i = 0; i < n; i++)
+        {
             in[i].clear();
-        memset(out, 0, sizeof(out));
+            out[i].clear();
+        }
 
         int from, to;
         while (cin >> from >> to)
         {
             if (!from) break;
-            out[from]++;
+            from--, to--;
+            out[from].push_back(to);
             in[to].push_back(from);
         }
 
         vector<vector<double>> A(n, vector<double>(n, 0.0));
-        for (int u = 1; u <= n; u++)
+        for (int u = 0; u < n; u++)
         {
             for (auto v : in[u])
-                A[u - 1][v - 1] += 1.0 / (double)(out[v]);
-            A[u - 1][u - 1] = -1.0;
+                A[u][v] += 1.0 / (double)(out[v].size());
+            A[u][u] = -1.0;
         }
 
         vector<double> b(n, 0.0);
@@ -110,22 +113,22 @@ int main(int argc, char *argv[])
 
         memset(inf, 0, sizeof(inf));
         for (int i = 0; i < n; i++)
-        {
-            if (fabs(A[i][i]) < EPSILON) inf[i] = 1;
-            for (int j = i + 1; j < n; j++)
-                if (fabs(A[i][j]) > EPSILON && inf[i]) inf[j] = 1;
-        }
-        
+            if (fabs(A[i][i]) < EPSILON)
+                inf[i] = 1;
+        for (int i = 0; i < n; i++)
+            if (inf[i])
+                dfs(i);
+
         cout << "Case #" << ++cases << ":\n";
 
         cin >> q;
         for (int i = 1; i <= q; i++)
         {
             cin >> from;
-            if (inf[from - 1]) cout << "infinity\n";
-            else cout << b[from - 1] << '\n';
+            from--;
+            if (inf[from]) cout << "infinity\n";
+            else cout << fabs(b[from]) << '\n';
         }
-        cout << '\n';
     }
 
     return 0;
