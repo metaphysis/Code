@@ -34,23 +34,23 @@ int main(int argc, char *argv[])
     int cases, n;
 
     cin >> cases;
-    for (int i = 1; i <= cases; i++)
+    for (int c = 1; c <= cases; c++)
     {
-        double c = 0.0, di, mean = 0.0;
+        double t = 0.0, di, mean = 0.0;
 
         cin >> n;
-        for (int j = 1; j <= n; j++)
+        for (int i = 0; i < n; i++)
         {
             cin >> di;
-            if (j > 1) c += log2((double)(n - j + 1) / (j - 1));
+            if (i) t += log2((double)(n - i) / i);
             if (fabs(di) > 0)
             {
                 double sign = (di > 0 ? 1.0 : -1.0);
-                mean += sign * pow(2, c + log2(fabs(di)) - (n - 1));
+                mean += sign * pow(2, t + log2(fabs(di)) - (n - 1));
             }
         }
 
-        cout << "Case #" << i << ": ";
+        cout << "Case #" << c << ": ";
         cout << fixed << setprecision(3) << mean << '\n';
     }
 
