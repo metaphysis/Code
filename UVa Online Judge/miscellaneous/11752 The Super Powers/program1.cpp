@@ -58,7 +58,7 @@ int main(int argc, char *argv[])
     set<ull> powers;
     powers.insert(1);
 
-    long double top = pow(2, 64), start_double;
+    double top = pow(2, 64), start_double;
     ull start_ull, exponent;
     for (ull i = 2; i <= 65536; i++)
     {
