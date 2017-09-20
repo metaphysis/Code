@@ -76,8 +76,7 @@ struct edmondsKarp
 
     void augmentPath(int source, int sink)
     {
-        if (source == sink)
-            return;
+        if (source == sink) return;
         arcs[path[sink]][sink] = 0;
         arcs[sink][path[sink]] = 1;
         augmentPath(source, path[sink]);
@@ -85,13 +84,13 @@ struct edmondsKarp
 
     int maxFlow()
     {
-        int flow = 0, source = 0, sink = 5010;
+        int flows = 0, source = 0, sink = 5010;
         while (bfs(source, sink))
         {
-            flow++;
+            flows++;
             augmentPath(source, sink);
         }
-        return flow;
+        return flows;
     }
 };
 

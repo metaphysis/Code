@@ -48,7 +48,7 @@ public:
         return (x == parent[x] ? x : parent[x] = findSet(parent[x]));
     }
 
-    void unionSet(int x, int y)
+    bool unionSet(int x, int y)
     {
         x = findSet(x), y = findSet(y);
         if (x != y) {
@@ -57,7 +57,9 @@ public:
                 parent[x] = y;
                 if (rank[x] == rank[y]) rank[x]++;
             }
+            return true;
         }
+        return  false;
     }
 };
 
