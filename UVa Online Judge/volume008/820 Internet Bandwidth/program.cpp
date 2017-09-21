@@ -51,11 +51,8 @@ int fordFulkerson()
         memset(flags, -1, sizeof(flags));
 
         // 首先标记源点为已标号未检查顶点。
-	    queue<int> unchecked;
-	    unchecked.push(source);
-	    flags[source].status = UNCHECKED;
-	    flags[source].parent = -1;
-	    flags[source].alpha = INF;
+	    queue<int> unchecked; unchecked.push(source);
+	    flags[source].status = flag{UNCHECKED, -1, INF};
 
         // 当汇点尚未被标记且队列非空时继续。
 	    while (flags[sink].status == UNLABELED && !unchecked.empty())
@@ -115,7 +112,7 @@ int fordFulkerson()
 	return maxFlow;
 }
 
-void buildGraph()
+void createGraph()
 {
     // 初始化有向弧。
     for (int i = 1; i <= nodes; i++)
@@ -150,7 +147,7 @@ int main(int argc, char *argv[])
     
     while (cin >> nodes, nodes > 0)
     {
-        buildGraph();
+        createGraph();
 
         int maxFlow = fordFulkerson();
 

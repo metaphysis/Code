@@ -1,10 +1,10 @@
-// Crimewave
-// UVa ID: 563
-// Verdict: Accepted
+// Monkeys in the Emei Mountain
+// UVa ID: 11167
+// Verdict: TLE
 // Submission Date: 2017-09-21
-// UVa Run Time: 0.070s
+// UVa Run Time: 3.000s
 //
-// 版权所有（C）2016，邱秋。metaphysis # yeah dot net
+// 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
 #include <algorithm>
 #include <bitset>
@@ -21,11 +21,13 @@
 #include <set>
 #include <sstream>
 #include <stack>
+#include <unordered_map>
+#include <unordered_set>
 #include <vector>
 
 using namespace std;
 
-const int MAXV = 5100, MAXA = 31000, INF = 0x7fffffff;
+const int INF = 0x7fffffff;
 
 struct arc
 {
@@ -53,15 +55,15 @@ public:
     {
         delete [] link, path, visited, arcs;
     }
-    
+
     int maxFlow()
     {
         int netFlow = 0;
 
         while (true)
         {
-            memset(path, 0xff, vertices * sizeof(int));
-            memset(visited, 0, vertices * sizeof(int));
+            memset(path, 0, vertices * sizeof(int));
+            memset(visited, 0xff, vertices * sizeof(int));
 
             queue<int> unvisited; unvisited.push(source);
             visited[source] = 1;
@@ -103,60 +105,80 @@ public:
         arcs[idx] = (arc){v, u, capacity, 0, link[v]};
         link[v] = idx++;
     }
-};
 
-int problem, streets, avenues, banks;
-
-void createGraph(EdmondsKarp &ek)
-{
-    // 上下左右四个顶点的坐标偏移量。
-    int offset[4][2] = { {1, 0}, {0, -1}, {-1, 0}, {0, 1} };
-
-    // 在源点和银行之间建立有向弧。
-    for (int b = 1, x, y; b <= banks; b++)
+    vector<arc> getArcs(int u)
     {
-        cin >> x >> y;
-        ek.addArc(0, (x - 1) * avenues + y, 1);
+        vector<arc> as;
+        for (int i = link[u]; i != -1; i = arcs[i].next)
+            as.insert(as.begin(), arcs[i]);
+        return as;
     }
-
-    // 在交叉路口之间和交叉路口与汇点间建立有向弧。
-    int base = streets * avenues;
-    for (int s = 1; s <= streets; s++)
-        for (int a = 1; a <= avenues; a++)
-        {
-            int index = (s - 1) * avenues + a;
-
-            // 将交叉路口拆分为前点和后点并建立有向弧。
-            ek.addArc(index, base + index, 1);
-
-            // 如果交叉路口不位于城镇的边界上，则每个交叉路口的后点向上下左右四个
-            // 交叉路口的前点建立有向弧，否则在交叉路口的后点和汇点间建立有向弧。
-            if (s > 1 && s < streets && a > 1 && a < avenues)
-            {
-                for (int f = 0; f < 4; f++)
-                {
-                    int ss = s + offset[f][0], aa = a + offset[f][1];
-                    if (ss >= 1 && ss <= streets && aa >= 1 && aa <= avenues)
-                        ek.addArc(base + index, (ss - 1) * avenues + aa, 1);
-                }
-            }
-            else
-                ek.addArc(base + index, 2 * streets * avenues + 1, 1);
-        }
-}
+};
 
 int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    cin >> problem;
-    for (int p = 1; p <= problem; p++)
-    {
-        cin >> streets >> avenues >> banks;
-        EdmondsKarp ek(MAXV, MAXA, 0, 2 * streets * avenues + 1);
-        createGraph(ek);
-        cout << (ek.maxFlow() == banks ? "possible" : "not possible") << '\n';
-    }
+    int cases = 0;
+    int n, m;
+    int v, a, b;
+    int drinked[50000];
 
+    while (cin >> n, n > 0)
+    {
+        cin >> m;
+
+        EdmondsKarp ek(50200, 11000000, 0, 50150);
+        
+        memset(drinked, 0, sizeof(drinked));
+        
+        int flow = 0;
+        for (int i = 1; i <= n; i++)
+        {
+            cin >> v >> a >> b;
+
+            flow += v;
+            
+            ek.addArc(0, i, v);
+            for (int j = a; j < b; j++)
+            {
+                ek.addArc(i, n + j + 1, 1);
+                if (drinked[j]) continue;
+                ek.addArc(n + j + 1, 50150, m);
+                drinked[j] = 1;
+            }
+        }        
+
+        cout << "Case " << ++cases << ": "; 
+        if (ek.maxFlow() == flow)
+        {
+            cout << "Yes\n";
+            for (int i = 1; i <= n; i++)
+            {
+                vector<int> interval;
+                for (auto a : ek.getArcs(i))
+                {
+                    if (a.residual == 0)
+                    {
+                        if (!interval.size() || (a.v - n - 1) != interval.back())
+                        {
+                            interval.push_back(a.v - n - 1);
+                            interval.push_back(a.v - n);
+                        }
+                        else
+                            interval.back() += 1;
+                    }
+                }
+                
+                cout << interval.size() / 2;
+                for (int i = 0; i < interval.size(); i += 2)
+                    cout << " (" << interval[i] << ',' << interval[i + 1] << ')';
+                cout << '\n';
+            }
+        }
+        else
+            cout << "No\n";
+    }
+    
     return 0;
 }

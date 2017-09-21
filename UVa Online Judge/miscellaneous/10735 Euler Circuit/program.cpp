@@ -90,12 +90,12 @@ private:
     int vertices, indexer, source, sink, *head, *path, *visited;
 
 public:
-    edmondsKarp(int v, int s, int t)
+    edmondsKarp(int v, int e, int s, int t)
     {
         vertices = v, indexer = 0, source = s, sink = t;
         head = new int[v], path = new int[v], visited = new int[v];
-        arcs = new arc[v * v];
-        for (int i = 0; i < vertices; i++) head[i] = -1;
+        arcs = new arc[e];
+        for (int i = 0; i < v; i++) head[i] = -1;
     }
 
     ~edmondsKarp()
@@ -226,7 +226,7 @@ int main(int argc, char *argv[])
         char type;
 
         disjointSet ds(V + 1);
-        edmondsKarp ek(V + 2, 0, V + 1);
+        edmondsKarp ek(V + 2, (V + 2) * (V + 2), 0, V + 1);
         int degree[V + 1] = { 0 }, flows = 0, combined = 0;
 
         for (int i = 1; i <= E; i++)
