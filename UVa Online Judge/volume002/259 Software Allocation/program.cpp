@@ -11,10 +11,10 @@
 
 using namespace std;
 
-vector < vector < int > > computer(10);
-vector < int > applications(26);
-vector < int > candidates(26);
-vector < int > solution(10);
+vector<vector<int>> computer(10);
+vector<int> applications(26);
+vector<int> candidates(26);
+vector<int> solution(10);
 
 bool found = false;
 
@@ -61,18 +61,7 @@ void backtrack(int index)
 }
 
 void allocate()
-{
-    //for (int i = 0; i < applications.size(); i++)
-        //cout << applications[i] << " ";
-    //cout << endl;
-    
-    //for (int i = 0; i < computer.size(); i++)
-    //{
-        //for (int j = 0; j < computer[i].size(); j++)
-            //cout << computer[i][j] << " ";
-        //cout << endl;
-    //}
-    
+{   
     // check if the count of applications is bigger than count of computers or not
     int counter = 0;
     for (int i = 0; i < applications.size(); i++)
@@ -101,8 +90,7 @@ void allocate()
 
 int main(int argc, char *argv[])
 {
-    cin.tie(0);
-    cout.sync_with_stdio(false);
+    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
     
     fill(candidates.begin(), candidates.end(), 0);
     

@@ -89,15 +89,15 @@ class EdmondsKarp
 {
 private:
     arc *arcs;
-    int vertices, indexer, source, sink, *link, *parent, *visited;
+    int vertices, idx, source, sink, *link, *parent, *visited;
 
 public:
     EdmondsKarp(int v, int e, int s, int t)
     {
-        vertices = v, indexer = 0, source = s, sink = t;
+        vertices = v, idx = 0, source = s, sink = t;
         link = new int[v], parent = new int[v], visited = new int[v];
         arcs = new arc[e];
-        for (int i = 0; i < v; i++) link[i] = -1;
+        memset(link, 0xff, v * sizeof(int));
     }
 
     ~EdmondsKarp()
@@ -112,16 +112,15 @@ public:
         while (true)
         {
             // 使用广度优先遍历寻找从源点到汇点的增广路。
-            for (int i = 0; i < vertices; i++) visited[i] = 0, parent[i] = -1;
+            memset(visited, 0, vertices * sizeof(int));
+            memset(parent, 0xff, vertices * sizeof(int));
 
-            queue<int> unvisited;
-            unvisited.push(source);
+            queue<int> unvisited; unvisited.push(source);
             visited[source] = 1;
 
             while (!unvisited.empty())
             {
-                int u = unvisited.front();
-                unvisited.pop();
+                int u = unvisited.front(); unvisited.pop();
 
                 // 遍历以当前顶点为起点的有向弧，沿着残留容量为正的弧进行图遍历。
                 for (int x = link[u]; x != -1; x = arcs[x].next)
@@ -158,17 +157,17 @@ public:
 
     void addArc(int u, int v, int capacity)
     {
-        arcs[indexer] = (arc){u, v, capacity, capacity, link[u]};
-        link[u] = indexer++;
+        arcs[idx] = (arc){u, v, capacity, capacity, link[u]};
+        link[u] = idx++;
 
-        arcs[indexer] = (arc){v, u, capacity, 0, link[v]};
-        link[v] = indexer++;
+        arcs[idx] = (arc){v, u, capacity, 0, link[v]};
+        link[v] = idx++;
     }
     
     vector<arc> getArcs()
     {
         vector<arc> even;
-        for (int i = 0; i < indexer; i += 2)
+        for (int i = 0; i < idx; i += 2)
             even.push_back(arcs[i]);
         return even;
     }
