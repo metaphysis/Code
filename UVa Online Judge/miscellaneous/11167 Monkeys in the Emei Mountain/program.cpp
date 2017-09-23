@@ -1,8 +1,8 @@
 // Monkeys in the Emei Mountain
 // UVa ID: 11167
-// Verdict: TLE
-// Submission Date: 2017-09-21
-// UVa Run Time: 3.000s
+// Verdict: Accepted
+// Submission Date: 2017-09-23
+// UVa Run Time: 0.280s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
@@ -38,60 +38,60 @@ class EdmondsKarp
 {
 private:
     arc *arcs;
-    int vertices, idx, source, sink, *link, *path, *visited;
+    int vertices, idx, source, sink, *link, *parent, *visited;
+
+    bool bfs()
+    {
+        memset(parent, 0xff, vertices * sizeof(int));
+        memset(visited, 0, vertices * sizeof(int));
+
+        queue<int> unvisited; unvisited.push(source);
+        visited[source] = 1;
+
+        while (!unvisited.empty())
+        {
+            int u = unvisited.front(); unvisited.pop();
+            for (int i = link[u]; i != -1; i = arcs[i].next)
+                if (!visited[arcs[i].v] && arcs[i].residual > 0)
+                {
+                    unvisited.push(arcs[i].v);
+                    visited[arcs[i].v] = 1;
+                    parent[arcs[i].v] = i;
+                }
+        }
+
+        return visited[sink];
+    }
 
 public:
     EdmondsKarp(int v, int e, int s, int t)
     {
         vertices = v;
-        link = new int[v], path = new int[v], visited = new int[v];
-        arcs = new arc[e];
-        source = s, sink = t;
-        idx = 0;
+        link = new int[v], parent = new int[v], visited = new int[v], arcs = new arc[e];
+        idx = 0, source = s, sink = t;
         memset(link, 0xff, vertices * sizeof(int));
     }
 
     ~EdmondsKarp()
     {
-        delete [] link, path, visited, arcs;
+        delete [] link, parent, visited, arcs;
     }
 
     int maxFlow()
     {
         int netFlow = 0;
 
-        while (true)
+        while (bfs())
         {
-            memset(path, 0, vertices * sizeof(int));
-            memset(visited, 0xff, vertices * sizeof(int));
-
-            queue<int> unvisited; unvisited.push(source);
-            visited[source] = 1;
-
-            while (!unvisited.empty())
-            {
-                int u = unvisited.front(); unvisited.pop();
-
-                for (int x = link[u]; x != -1; x = arcs[x].next)
-                    if (!visited[arcs[x].v] && arcs[x].residual > 0)
-                    {
-                        unvisited.push(arcs[x].v);
-                        visited[arcs[x].v] = 1;
-                        path[arcs[x].v] = x;
-                    }
-            }
-
-            if (!visited[sink]) break;
-
             int delta = INF;
-            for (int x = path[sink]; x != -1; x = path[arcs[x].u])
-                delta = min(delta, arcs[x].residual);
+            for (int i = parent[sink]; i != -1; i = parent[arcs[i].u])
+                delta = min(delta, arcs[i].residual);
 
             netFlow += delta;
-            for (int x = path[sink]; x != -1; x = path[arcs[x].u])
+            for (int i = parent[sink]; i != -1; i = parent[arcs[i].u])
             {
-                arcs[x].residual -= delta;
-                arcs[x ^ 1].residual += delta;
+                arcs[i].residual -= delta;
+                arcs[i ^ 1].residual += delta;
             }
         }
 
@@ -106,79 +106,105 @@ public:
         link[v] = idx++;
     }
 
-    vector<arc> getArcs(int u)
+    vector<vector<arc>> getArcs(int interval, int monkeys)
     {
-        vector<arc> as;
-        for (int i = link[u]; i != -1; i = arcs[i].next)
-            as.insert(as.begin(), arcs[i]);
+        vector<vector<arc>> as(monkeys, vector<arc>());
+        for (int u = 1; u <= interval; u++)
+            for (int i = link[u]; i != -1; i = arcs[i].next)
+                if (arcs[i].v != sink && arcs[i].v != source)
+                    as[arcs[i].v - (interval + 1)].push_back(arcs[i]);
         return as;
     }
+};
+
+struct monkey
+{
+    int units, start, end;
 };
 
 int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    int cases = 0;
-    int n, m;
-    int v, a, b;
-    int drinked[50000];
+    int cases = 0, n, m, v, a, b;
 
     while (cin >> n, n > 0)
     {
         cin >> m;
 
-        EdmondsKarp ek(50200, 11000000, 0, 50150);
-        
-        memset(drinked, 0, sizeof(drinked));
-        
-        int flow = 0;
+        vector<int> duration;
+        vector<monkey> monkeys;
+
+        int needed = 0;
         for (int i = 1; i <= n; i++)
         {
             cin >> v >> a >> b;
-
-            flow += v;
-            
-            ek.addArc(0, i, v);
-            for (int j = a; j < b; j++)
-            {
-                ek.addArc(i, n + j + 1, 1);
-                if (drinked[j]) continue;
-                ek.addArc(n + j + 1, 50150, m);
-                drinked[j] = 1;
-            }
+            needed += v;
+            duration.push_back(a); duration.push_back(b);
+            monkeys.push_back(monkey{v, a, b});
         }        
 
-        cout << "Case " << ++cases << ": "; 
-        if (ek.maxFlow() == flow)
+        // 去除重复的时间点。
+        sort(duration.begin(), duration.end());
+        duration.erase(unique(duration.begin(), duration.end()), duration.end());
+
+        // 设置流量网络的最大顶点数为400，有向弧的数量最大为400*400；
+        // 指定源点的序号为0，汇点的序号为320。
+        EdmondsKarp ek(400, 400 * 400, 0, 320);
+        for (int i = 1; i < duration.size(); i++)
         {
-            cout << "Yes\n";
-            for (int i = 1; i <= n; i++)
-            {
-                vector<int> interval;
-                for (auto a : ek.getArcs(i))
-                {
-                    if (a.residual == 0)
-                    {
-                        if (!interval.size() || (a.v - n - 1) != interval.back())
-                        {
-                            interval.push_back(a.v - n - 1);
-                            interval.push_back(a.v - n);
-                        }
-                        else
-                            interval.back() += 1;
-                    }
-                }
-                
-                cout << interval.size() / 2;
-                for (int i = 0; i < interval.size(); i += 2)
-                    cout << " (" << interval[i] << ',' << interval[i + 1] << ')';
-                cout << '\n';
-            }
+            ek.addArc(0, i, m * (duration[i] - duration[i - 1]));
+            for (int j = 0; j < monkeys.size(); j++)
+                if (duration[i - 1] >= monkeys[j].start && duration[i] <= monkeys[j].end)
+                    ek.addArc(i, duration.size() + j, duration[i] - duration[i - 1]);
         }
-        else
-            cout << "No\n";
+        for (int i = 0; i < monkeys.size(); i++)
+            ek.addArc(duration.size() + i, 320, monkeys[i].units);
+
+        // 使用最大流算法确定是否存在可行的安排方案，若存在则根据正向弧
+        // 的容量使用情况安排时间段。
+        cout << "Case " << ++cases << ": ";
+        if (ek.maxFlow() < needed) { cout << "No\n"; continue; }
+        cout << "Yes\n";
+
+        vector<int> idx(duration.size(), 0), periods[n];
+        vector<vector<arc>> arcs = ek.getArcs(duration.size() - 1, n);
+
+        for (int i = 0; i < arcs.size(); i++)
+            for (auto r : arcs[i])
+            {
+                int provided = r.capacity - r.residual, u = r.u - 1;
+
+                vector<int> hours;
+                for (int j = 1; j <= provided; j++)
+                {
+                    if (idx[u] == duration[u + 1] - duration[u]) idx[u] = 0;
+                    hours.push_back(duration[r.u - 1] + idx[u]);
+                    idx[u]++;
+                }
+
+                sort(hours.begin(), hours.end());
+
+                for (auto hour : hours)
+                {
+                    if (!periods[i].size() || hour != periods[i].back())
+                    {
+                        periods[i].push_back(hour);
+                        periods[i].push_back(hour + 1);
+                        continue;
+                    }
+                    periods[i].back()++;
+                }
+            }
+
+        for (int i = 0; i < n; i++)
+        {
+            cout << periods[i].size() / 2 ;
+            for (int j = 0; j < periods[i].size(); j += 2)
+                cout << " (" << periods[i][j] << ',' << periods[i][j + 1] << ')';
+            cout << '\n';
+        }
     }
-    
+
     return 0;
 }

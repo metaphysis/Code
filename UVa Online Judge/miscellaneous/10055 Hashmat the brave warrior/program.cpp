@@ -27,11 +27,10 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-    cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
+    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
     long long i, j;
-    while (cin >> i >> j)
-        cout << abs(i - j) << '\n';
+    while (cin >> i >> j) cout << abs(i - j) << '\n';
  
     return 0;
 }

@@ -27,23 +27,25 @@
 
 using namespace std;
 
+const int INF = 0x7fffffff;
+
 int V, E;
 vector<int> edges[210];
         
-class disjointSet
+class DisjointSet
 {
   private:
     int vertices, *parent, *rank;
 
   public:
-    disjointSet(int v)
+    DisjointSet(int v)
     {
         vertices = v;
         parent = new int[v], rank = new int[v];
         makeSet();
     }
 
-    ~disjointSet()
+    ~DisjointSet()
     {
         delete [] parent, rank;
     }
@@ -83,24 +85,24 @@ struct arc
     int u, v, capacity, residual, next;
 };
 
-class edmondsKarp
+class EdmondsKarp
 {
 private:
     arc *arcs;
-    int vertices, indexer, source, sink, *head, *path, *visited;
+    int vertices, indexer, source, sink, *link, *parent, *visited;
 
 public:
-    edmondsKarp(int v, int e, int s, int t)
+    EdmondsKarp(int v, int e, int s, int t)
     {
         vertices = v, indexer = 0, source = s, sink = t;
-        head = new int[v], path = new int[v], visited = new int[v];
+        link = new int[v], parent = new int[v], visited = new int[v];
         arcs = new arc[e];
-        for (int i = 0; i < v; i++) head[i] = -1;
+        for (int i = 0; i < v; i++) link[i] = -1;
     }
 
-    ~edmondsKarp()
+    ~EdmondsKarp()
     {
-        delete [] head, path, visited, arcs;
+        delete [] link, parent, visited, arcs;
     }
     
     int maxFlow()
@@ -110,7 +112,7 @@ public:
         while (true)
         {
             // 使用广度优先遍历寻找从源点到汇点的增广路。
-            for (int i = 0; i < vertices; i++) visited[i] = 0, path[i] = -1;
+            for (int i = 0; i < vertices; i++) visited[i] = 0, parent[i] = -1;
 
             queue<int> unvisited;
             unvisited.push(source);
@@ -122,14 +124,14 @@ public:
                 unvisited.pop();
 
                 // 遍历以当前顶点为起点的有向弧，沿着残留容量为正的弧进行图遍历。
-                for (int x = head[u]; x != -1; x = arcs[x].next)
+                for (int x = link[u]; x != -1; x = arcs[x].next)
                     if (!visited[arcs[x].v] && arcs[x].residual > 0)
                     {
                         unvisited.push(arcs[x].v);
                         visited[arcs[x].v] = 1;
 
                         // 注意路径记录的是有向弧的编号。
-                        path[arcs[x].v] = x;
+                        parent[arcs[x].v] = x;
                     }
             }
 
@@ -137,17 +139,17 @@ public:
             if (!visited[sink]) break;
 
             // 确定增广路的流量。
-            int minFlow = 10000000;
-            for (int x = path[sink]; x != -1; x = path[arcs[x].u])
-                minFlow = min(minFlow, arcs[x].residual);
+            int delta = INF;
+            for (int x = parent[sink]; x != -1; x = parent[arcs[x].u])
+                delta = min(delta, arcs[x].residual);
 
             // 更新可行流的流量及残留网络。
-            netFlow += minFlow;
+            netFlow += delta;
 
-            for (int x = path[sink]; x != -1; x = path[arcs[x].u])
+            for (int x = parent[sink]; x != -1; x = parent[arcs[x].u])
             {
-                arcs[x].residual -= minFlow;
-                arcs[x ^ 1].residual += minFlow;
+                arcs[x].residual -= delta;
+                arcs[x ^ 1].residual += delta;
             }
         }
 
@@ -156,11 +158,11 @@ public:
 
     void addArc(int u, int v, int capacity)
     {
-        arcs[indexer] = (arc){u, v, capacity, capacity, head[u]};
-        head[u] = indexer++;
+        arcs[indexer] = (arc){u, v, capacity, capacity, link[u]};
+        link[u] = indexer++;
 
-        arcs[indexer] = (arc){v, u, capacity, 0, head[v]};
-        head[v] = indexer++;
+        arcs[indexer] = (arc){v, u, capacity, 0, link[v]};
+        link[v] = indexer++;
     }
     
     vector<arc> getArcs()
@@ -175,17 +177,17 @@ public:
 // Hierholzer algorithm.
 void hierholzer()
 {
-    stack<int> path;
+    stack<int> parent;
     vector<int> circuit;
 
-    path.push(1);
+    parent.push(1);
     int current = 1;
 
-    while (!path.empty())
+    while (!parent.empty())
     {
         if (edges[current].size())
         {
-            path.push(current);
+            parent.push(current);
             int next = edges[current].front();
             edges[current].erase(edges[current].begin());
             current = next;
@@ -193,8 +195,8 @@ void hierholzer()
         else
         {
             circuit.push_back(current);
-            current = path.top();
-            path.pop();
+            current = parent.top();
+            parent.pop();
         }
     }
 
@@ -225,8 +227,8 @@ int main(int argc, char *argv[])
         int a, b;
         char type;
 
-        disjointSet ds(V + 1);
-        edmondsKarp ek(V + 2, (V + 2) * (V + 2), 0, V + 1);
+        DisjointSet ds(V + 1);
+        EdmondsKarp ek(V + 2, (V + 2) * (V + 2), 0, V + 1);
         int degree[V + 1] = { 0 }, flows = 0, combined = 0;
 
         for (int i = 1; i <= E; i++)
@@ -245,7 +247,7 @@ int main(int argc, char *argv[])
 
         // Is the base graph connected?
         bool eulerian = (combined == (V - 1));
-        
+
         // Is the degree of every vertex even?
         if (eulerian)
         {
@@ -266,7 +268,7 @@ int main(int argc, char *argv[])
                     ek.addArc(i, V + 1, -degree[i] / 2);
             }
         }
-        
+
         // Can the network reach max flow?
         if (eulerian)
         {
@@ -293,7 +295,7 @@ int main(int argc, char *argv[])
             cout << "No euler circuit exist\n";
             continue;
         }
-        
+
         hierholzer();
     }
 

@@ -141,7 +141,7 @@ void createGraph()
 
 int main(int argc, char *argv[])
 {
-    cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
+    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
     int cases = 0;
     
