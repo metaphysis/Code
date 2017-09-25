@@ -127,7 +127,7 @@ bool discovered[MAXV];		// 遍历标记，是否已发现。
 // 饱和边和非饱和边。
 void breadthFirstSearch(int source, int sink)
 {
-	queue < int > vertices;
+	queue<int> vertices;
 
 	vertices.push(source);
 	discovered[source] = true;
