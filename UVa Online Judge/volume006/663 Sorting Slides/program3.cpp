@@ -27,37 +27,18 @@ using namespace std;
 
 const int MAXV = 60, INF = 0x3f3f3f3f;
 
-struct point
-{
-    int x, y;
-};
-
-struct rectangle
-{
-    int xmin, xmax, ymin, ymax;
-};
-
-rectangle rectangles[MAXV];
-point points[MAXV];
 int g[MAXV][MAXV], visited[MAXV], cx[MAXV], cy[MAXV], dx[MAXV], dy[MAXV];
-int dist, heap, cases = 0;
-
-// 判断点是否在矩形内。
-bool pointInBox(point p, rectangle r)
-{
-    return p.x > r.xmin && p.x < r.xmax && p.y > r.ymin && p.y < r.ymax;
-}
+int tx, ty;
 
 int bfs()
 {
     queue<int> q;
 
-    dist = INF;
+    int dist = INF;
 
-    memset(dx, -1, sizeof(dx));
-    memset(dy, -1, sizeof(dy));
+    memset(dx, -1, sizeof(dx)); memset(dy, -1, sizeof(dy));
 
-    for (int i = 0; i < heap; i++)
+    for (int i = 0; i < tx; i++)
         if (cx[i] == -1)
         {
             q.push(i);
@@ -70,7 +51,7 @@ int bfs()
         
         if (dx[u] > dist) break;
 
-        for (int v = 0; v < heap; v++)
+        for (int v = 0; v < ty; v++)
             if (g[u][v] && dy[v] == -1)
             {
                 dy[v] = dx[u] + 1;
@@ -90,7 +71,9 @@ int bfs()
 
 int dfs(int u)
 {
-    for (int v = 0; v < heap; v++)
+    int dist = INF;
+
+    for (int v = 0; v < ty; v++)
         if (g[u][v] && !visited[v] && dy[v] == (dx[u] + 1))
         {
             visited[v] = 1;
@@ -108,14 +91,13 @@ int dfs(int u)
 
 int hopcroftKarp()
 {
-    memset(cx, -1, sizeof(cx));
-    memset(cy, -1, sizeof(cy));
+    memset(cx, -1, sizeof(cx)); memset(cy, -1, sizeof(cy));
     
     int matches = 0;
     while (bfs())
     {
         memset(visited, 0, sizeof(visited));
-        for (int i = 0; i < heap; i++)
+        for (int i = 0; i < tx; i++)
             if (cx[i] == -1)
                 matches += dfs(i);
     }
@@ -123,37 +105,59 @@ int hopcroftKarp()
     return matches;
 }
 
+struct point
+{
+    int x, y;
+};
+
+struct rectangle
+{
+    int xmin, xmax, ymin, ymax;
+};
+
+point points[MAXV];
+rectangle rectangles[MAXV];
+
+// 判断点是否在矩形内。
+bool pointInBox(point p, rectangle r)
+{
+    return p.x > r.xmin && p.x < r.xmax && p.y > r.ymin && p.y < r.ymax;
+}
+
+
 int main(int argc, char *argv[])
 {
-    while (cin >> heap, heap > 0)
+    int cases = 0;
+
+    while (cin >> ty, ty > 0)
     {
         // 读入矩形和点的位置数据。
-        for (int i = 0; i < heap; i++)
+        tx = ty;
+        for (int i = 0; i < ty; i++)
         {
             cin >> rectangles[i].xmin >> rectangles[i].xmax;
             cin >> rectangles[i].ymin >> rectangles[i].ymax;
         }
-        
-        for (int i = 0; i < heap; i++)
-            cin >> points[i].x >> points[i].y;
+        for (int i = 0; i < tx; i++) cin >> points[i].x >> points[i].y;
         
         // 根据数字是否在某个矩形内建立有向边。
         memset(g, 0, sizeof(g));
-        for (int i = 0; i < heap; i++)
-            for (int j = 0; j < heap; j++)
+        for (int i = 0; i < tx; i++)
+            for (int j = 0; j < ty; j++)
                 if (pointInBox(points[i], rectangles[j]))
                     g[i][j] = 1;
 
-        // 使用匈牙利算法求最大匹配数。
-        int maxMatch = hopcroftKarp();
-        
         // 将任意一条有向边移除，再次求最大匹配数，检查最大匹配数是否减少，以此
         // 判定有向边是否唯一可确定。
         cout << "Heap " << ++cases << '\n';
         bool outputed = false;
 
-        for (int i = 0; i < heap; i++)
-            for (int j = 0; j < heap; j++)
+        // 使用匈牙利算法求最大匹配数。
+        int maxMatch = hopcroftKarp();
+        
+        // 因为需要按照幻灯片编号升序输出，故移除有向边的顺序要相应改变。
+        for (int i = 0; i < tx; i++)
+            for (int j = 0; j < ty; j++)
                 if (g[j][i])
                 {
                     // 移除有向边。
@@ -162,8 +166,7 @@ int main(int argc, char *argv[])
                     // 再次求最大匹配数。
                     int nextMatch = hopcroftKarp();
                     
-                    // 比较最大匹配数是否减小，减小表明移除的有向边为唯一可确定
-                    // 的关联边。
+                    // 比较最大匹配数是否减小，减小表明移除的有向边为唯一可确定的关联边。
                     if (nextMatch < maxMatch)
                     {
                         if (outputed) cout << ' ';
@@ -179,6 +182,6 @@ int main(int argc, char *argv[])
 
         cout << "\n\n";
     }
-    
+
 	return 0;
 }

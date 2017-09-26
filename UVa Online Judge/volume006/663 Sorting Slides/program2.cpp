@@ -27,6 +27,42 @@ using namespace std;
 
 const int MAXV = 60;
 
+int g[MAXV][MAXV], visited[MAXV], cx[MAXV], cy[MAXV];
+int tx, ty;
+
+int dfs(int u)
+{
+    for (int v = 0; v < ty; v++)
+        if (g[u][v] && !visited[v])
+        {
+            visited[v] = 1;
+            if (cy[v] == -1 || dfs(cy[v]))
+            {
+                cx[u] = v;
+                cy[v] = u;
+                return 1;
+            }
+        }
+
+    return 0;
+}
+
+// 匈牙利算法求最大匹配数。
+int hungarian()
+{
+    memset(cx, -1, sizeof(cx)); memset(cy, -1, sizeof(cy));
+    
+    int matches = 0;
+    for (int i = 0; i < tx; i++)
+        if (cx[i] == -1)
+        {
+            memset(visited, 0, sizeof(visited));
+            matches += dfs(i);
+        }
+
+    return matches;
+}
+
 struct point
 {
     int x, y;
@@ -37,90 +73,43 @@ struct rectangle
     int xmin, xmax, ymin, ymax;
 };
 
-rectangle rectangles[MAXV];
 point points[MAXV];
-int g[MAXV][MAXV], visited[MAXV], cx[MAXV], cy[MAXV], heap, cases = 0;
+rectangle rectangles[MAXV];
 
-// 判断点是否在矩形内。
 bool pointInBox(point p, rectangle r)
 {
     return p.x > r.xmin && p.x < r.xmax && p.y > r.ymin && p.y < r.ymax;
 }
 
-// 使用深度优先搜索寻找增广路，一次搜索只能使当前的匹配数增加1。
-int dfs(int u)
-{
-    // 考虑所有与u邻接且尚未访问的顶点v。
-    for (int v = 0; v < heap; v++)
-        if (g[u][v] && !visited[v])
-        {
-            // 如果v尚未匹配或者v已经匹配但是从v出发可以找到增广路则匹配成功。
-            visited[v] = 1;
-            if (cy[v] == -1 || dfs(cy[v]))
-            {
-                cx[u] = v;
-                cy[v] = u;
-                return 1;
-            }
-        }
-        
-    // 未能找到增广路，已经是最大匹配。
-    return 0;
-}
-
-// 匈牙利算法求最大匹配数。
-int hungarian()
-{
-    // 初始化匹配标记。
-    memset(cx, -1, sizeof(cx)); memset(cy, -1, sizeof(cy));
-    
-    // 从每个非饱和点出发寻找增广路。
-    int matches = 0;
-    for (int i = 0; i < heap; i++)
-        if (cx[i] == -1)
-        {
-            // 注意寻找之前需要将访问标记置为初始状态。
-            memset(visited, 0, sizeof(visited));
-            
-            // 每找到一条增广路，可使得匹配数增加1。
-            matches += dfs(i);
-        }
-    
-    // 返回匹配数。
-    return matches;
-}
-
 int main(int argc, char *argv[])
 {
-    while (cin >> heap, heap > 0)
+    int cases = 0;
+    while (cin >> ty, ty > 0)
     {
-        // 读入矩形和点的位置数据。
-        for (int i = 0; i < heap; i++)
+        tx = ty;
+        for (int i = 0; i < ty; i++)
         {
             cin >> rectangles[i].xmin >> rectangles[i].xmax;
             cin >> rectangles[i].ymin >> rectangles[i].ymax;
         }
-        
-        for (int i = 0; i < heap; i++)
-            cin >> points[i].x >> points[i].y;
+        for (int i = 0; i < tx; i++) cin >> points[i].x >> points[i].y;
         
         // 根据数字是否在某个矩形内建立有向边。
         memset(g, 0, sizeof(g));
-        for (int i = 0; i < heap; i++)
-            for (int j = 0; j < heap; j++)
+        for (int i = 0; i < tx; i++)
+            for (int j = 0; j < ty; j++)
                 if (pointInBox(points[i], rectangles[j]))
                     g[i][j] = 1;
 
+        cout << "Heap " << ++cases << '\n';
+        bool outputed = false;
+        
         // 使用匈牙利算法求最大匹配数。
         int maxMatch = hungarian();
         
-        // 将任意一条有向边移除，再次求最大匹配数，检查最大匹配数是否减少，以此
-        // 判定有向边是否唯一可确定。
-        cout << "Heap " << ++cases << '\n';
-        bool outputed = false;
-
-        for (int i = 0; i < heap; i++)
-            for (int j = 0; j < heap; j++)
+        // 因为需要按照幻灯片编号升序输出，故移除有向边的顺序要相应改变。
+        for (int i = 0; i < tx; i++)
+            for (int j = 0; j < ty; j++)
                 if (g[j][i])
                 {
                     // 移除有向边。

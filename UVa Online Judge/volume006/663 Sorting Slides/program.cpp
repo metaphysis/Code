@@ -25,18 +25,8 @@
 
 using namespace std;
 
-const int MAXV = 60, INF = 100000;
+const int MAXV = 60, INF = 0x3f3f3f3f;
 const int UNLABELED = -1, UNCHECKED = 0, CHECKED = 1;
-
-struct point
-{
-    int x, y;
-};
-
-struct rectangle
-{
-    int xmin, xmax, ymin, ymax;
-};
 
 struct arc
 {
@@ -48,16 +38,9 @@ struct flag
     int status, parent, alpha;
 };
 
-rectangle rectangles[MAXV];
-point points[MAXV];
 arc arcs[MAXV][MAXV], backup[MAXV][MAXV], edge[MAXV][MAXV];
 flag flags[MAXV];
 int source, sink;
-
-bool pointInBox(point p, rectangle r)
-{
-    return p.x > r.xmin && p.x < r.xmax && p.y > r.ymin && p.y < r.ymax;
-}
 
 int fordFulkerson()
 {
@@ -133,6 +116,24 @@ int fordFulkerson()
 	return maxFlow;
 }
 
+struct point
+{
+    int x, y;
+};
+
+struct rectangle
+{
+    int xmin, xmax, ymin, ymax;
+};
+
+point points[MAXV];
+rectangle rectangles[MAXV];
+
+bool pointInBox(point p, rectangle r)
+{
+    return p.x > r.xmin && p.x < r.xmax && p.y > r.ymin && p.y < r.ymax;
+}
+
 int main(int argc, char *argv[])
 {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
@@ -182,6 +183,7 @@ int main(int argc, char *argv[])
                 edge[i][j].flow = arcs[i][j].flow;
             }
             
+        // 因为需要按照幻灯片编号升序输出，故移除有向边的顺序要相应改变。
         bool outputed = false;
         for (int i = 1; i <= heap; i++)
             for (int j = 1; j <= heap; j++)

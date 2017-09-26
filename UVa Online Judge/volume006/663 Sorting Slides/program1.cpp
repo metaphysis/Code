@@ -25,18 +25,8 @@
 
 using namespace std;
 
-const int MAXV = 60, INF = 100000;
+const int MAXV = 60, INF = 0x3f3f3f3f;
 const int UNLABELED = -1, UNCHECKED = 0, CHECKED = 1;
-
-struct point
-{
-    int x, y;
-};
-
-struct rectangle
-{
-    int xmin, xmax, ymin, ymax;
-};
 
 struct arc
 {
@@ -48,17 +38,9 @@ struct flag
     int status, parent, alpha;
 };
 
-rectangle rectangles[MAXV];
-point points[MAXV];
 arc arcs[MAXV][MAXV];
 flag flags[MAXV];
 int source, sink;
-
-// 判断点是否在矩形内。
-bool pointInBox(point p, rectangle r)
-{
-    return p.x > r.xmin && p.x < r.xmax && p.y > r.ymin && p.y < r.ymax;
-}
 
 // 使用标号法求容量网络的最大流。
 int fordFulkerson()
@@ -135,6 +117,25 @@ int fordFulkerson()
 	return maxFlow;
 }
 
+struct point
+{
+    int x, y;
+};
+
+struct rectangle
+{
+    int xmin, xmax, ymin, ymax;
+};
+
+point points[MAXV];
+rectangle rectangles[MAXV];
+
+// 判断点是否在矩形内。
+bool pointInBox(point p, rectangle r)
+{
+    return p.x > r.xmin && p.x < r.xmax && p.y > r.ymin && p.y < r.ymax;
+}
+
 int main(int argc, char *argv[])
 {
     int heap, cases = 0;
@@ -176,6 +177,7 @@ int main(int argc, char *argv[])
         cout << "Heap " << ++cases << '\n';
         bool outputed = false;
 
+        // 因为需要按照幻灯片编号升序输出，故移除有向边的顺序要相应改变。
         for (int i = 1; i <= heap; i++)
             for (int j = 1; j <= heap; j++)
                 if (arcs[j][i + heap].capacity == 1)
