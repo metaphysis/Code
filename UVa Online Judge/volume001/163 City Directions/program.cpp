@@ -6,10 +6,24 @@
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
-#include <iostream>
-#include <cctype>
-#include <sstream>
 #include <algorithm>
+#include <bitset>
+#include <cassert>
+#include <cmath>
+#include <cstring>
+#include <iomanip>
+#include <iostream>
+#include <limits>
+#include <list>
+#include <map>
+#include <numeric>
+#include <queue>
+#include <set>
+#include <sstream>
+#include <stack>
+#include <unordered_map>
+#include <unordered_set>
+#include <vector>
 
 using namespace std;
 
@@ -37,7 +51,7 @@ int step[8][2] = {
 };
 
 int command, intersections, avenue, street, ahead;
-vector < string > texts;
+vector<string> texts;
 
 void parseDirection(string line)
 {

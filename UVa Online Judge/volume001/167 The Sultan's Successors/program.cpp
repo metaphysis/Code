@@ -6,66 +6,52 @@
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
-#include <iostream>
-#include <iomanip>
-#include <vector>
 #include <algorithm>
+#include <bitset>
+#include <cassert>
+#include <cmath>
+#include <cstring>
+#include <iomanip>
+#include <iostream>
+#include <limits>
+#include <list>
+#include <map>
+#include <numeric>
+#include <queue>
+#include <set>
+#include <sstream>
+#include <stack>
+#include <unordered_map>
+#include <unordered_set>
+#include <vector>
 
 using namespace std;
 
-int number[64];
-int chessboard[8][8];
+int number[64], k;
 vector<int> column;
 vector<vector<int>> positions;
-int offset[4][2] = { {1, 1}, {-1, -1}, {1, -1}, {-1, 1} };
 
 // 判断皇后在对角线上是否会互相攻击。
-bool is_solution()
+bool isSolution()
 {
-    fill(chessboard[0], chessboard[0] + 64, false);
-    
     for (int i = 0; i < 8; i++)
-        chessboard[i][column[i]] = true;
-
-    for (int i = 0; i < 8; i++)
-        for (int j = 0; j < 8; j++)
-            if (chessboard[i][j])
-            {
-                for (int k = 0; k < 4; k++)
-                {
-                    int ii = i, jj = j;
-                    
-                    ii += offset[k][0];
-                    jj += offset[k][1];
-                    
-                    while (0 <= ii && ii <= 7 && 0 <= jj && jj <= 7)
-                    {
-                        if (chessboard[ii][jj])
-                            return false;
-                            
-                        ii += offset[k][0];
-                        jj += offset[k][1];
-                    }
-                }
-            }
-        
+        for (int j = 0; j < i; j++)
+            if (abs(i - j) == abs(column[i] - column[j]))
+                return false;
     return true;
 }
 
 // 回溯查找所有可能排列。
 void backtrack()
 {
-    for (int i = 0; i < 8; i++)
-        column.push_back(i);
+    for (int i = 0; i < 8; i++) column.push_back(i);
+
     do
     {
-        if (is_solution())
+        if (isSolution())
         {
             vector<int> solution;
-            for (int i = 0; i < 8; i++)
-                for (int j = 0; j < 8; j++)
-                    if (chessboard[i][j])
-                        solution.push_back(i * 8 + j);
+            for (int i = 0; i < 8; i++) solution.push_back(i * 8 + column[i]);
             positions.push_back(solution);
         }
         
@@ -73,7 +59,7 @@ void backtrack()
 }
 
 // 对符合要求的放置方案求数值和。
-int find_max_sum()
+int findMaxSum()
 {
     int maxSum = 0;
     for (int i = 0; i < positions.size(); i++)
@@ -89,17 +75,15 @@ int find_max_sum()
 // 读入数据，查找最大值并输出。
 int main(int argc, char* argv[])
 {
-    int k;
-    cin >> k;
-    
     backtrack();
     
+    cin >> k;
     while (k--)
     {
         for (int i = 0; i < 8; i++)
             for (int j = 0; j < 8; j++)
                 cin >> number[i * 8 + j];
-        cout << setw(5) << right << find_max_sum() << endl;
+        cout << setw(5) << right << findMaxSum() << endl;
     }
     
 	return 0;
