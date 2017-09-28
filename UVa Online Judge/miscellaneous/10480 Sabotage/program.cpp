@@ -1,4 +1,33 @@
-const int INF = 0x7fffffff;
+// Sabotage
+// UVa ID: 10480
+// Verdict: Accepted
+// Submission Date: 2017-09-28
+// UVa Run Time: 0.000s
+//
+// 版权所有（C）2017，邱秋。metaphysis # yeah dot net
+
+#include <algorithm>
+#include <bitset>
+#include <cassert>
+#include <cmath>
+#include <cstring>
+#include <iomanip>
+#include <iostream>
+#include <limits>
+#include <list>
+#include <map>
+#include <numeric>
+#include <queue>
+#include <set>
+#include <sstream>
+#include <stack>
+#include <unordered_map>
+#include <unordered_set>
+#include <vector>
+
+using namespace std;
+
+const int INF = 0x3fffffff;
 
 struct arc
 {
@@ -77,4 +106,47 @@ public:
         arcs[idx] = (arc){v, u, capacity, 0, head[v]};
         head[v] = idx++;
     }
+    
+    void dfs(int u)
+    {
+        visited[u] = 1;
+        for (int i = head[u]; ~i; i = arcs[i].next)
+            if (!visited[arcs[i].v] && arcs[i].residual > 0)
+                dfs(arcs[i].v);
+    }
+    
+    void printMinCut()
+    {
+        memset(visited, 0, vertices * sizeof(int));
+        dfs(0);
+        for (int i = 0; i < idx; i += 2)
+            if (arcs[i].u < arcs[i].v && visited[arcs[i].u] != visited[arcs[i].v])
+                cout << (arcs[i].u + 1) << ' ' << (arcs[i].v + 1) << '\n';
+    }
 };
+
+int main(int argc, char *argv[])
+{
+    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
+
+    int n, m, from, to, cost;
+    
+    while (cin >> n >> m, n > 0)
+    {
+        EdmondsKarp ek(n, m * 4, 0, 1);
+        for (int i = 1; i <= m; i++)
+        {
+            cin >> from >> to >> cost;
+            from--, to--;
+            ek.addArc(from, to, cost);
+            ek.addArc(to, from, cost);
+        }
+        
+        ek.maxFlow();
+        ek.printMinCut();
+
+        cout << '\n';
+    }
+    
+    return 0;
+}
