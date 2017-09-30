@@ -1,8 +1,8 @@
 // Angry Programmer
 // UVa ID: 11506
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2017-09-30
+// UVa Run Time: 0.020s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
@@ -131,20 +131,25 @@ int main(int argc, char *argv[])
         {
             cin >> wirei >> wirej >> wired;
             if (wirei > wirej) swap(wirei, wirej);
-            if (wirei == 1)
+            if (wirei == 1 && wirej == M)
             {
                 ek.addArc(wirei, wirej, wired);
                 ek.addArc(wirej, wirei, wired);
             }
-            else if (wirej == M)
+            else if (wirei == 1 && wirej != M)
+            {
+                ek.addArc(wirei, wirej, wired);
+                ek.addArc(wirej + M, wirei, wired);
+            }
+            else if (wirei != 1 && wirej == M)
             {
                 ek.addArc(wirei + M, wirej, wired);
                 ek.addArc(wirej, wirei + M, wired);
             }
             else
             {
-                ek.addArc(wirei, wirej, wired);
-                ek.addArc(wirej + M, wirei + M, 0);      
+                ek.addArc(wirei + M, wirej, wired);
+                ek.addArc(wirej + M, wirei, wired);      
             }
         }
         
