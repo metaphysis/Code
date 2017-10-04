@@ -70,13 +70,13 @@ public:
 
     int maxFlow()
     {
-        int netFlow = 0;
+        int flow = 0;
 
         while (bfs())
             while (int delta = dfs(0, INF))
-                netFlow += delta;
+                flow += delta;
 
-        return netFlow;
+        return flow;
     }
 
     void addArc(int u, int v, int capacity)

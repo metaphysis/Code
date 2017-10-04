@@ -52,14 +52,14 @@ public:
 
     int maxFlow()
     {
-        int netFlow = 0;
+        int flow = 0;
 
         while (bfs())
         {
             int delta = INF;
             for (int i = parent[sink]; ~i; i = parent[arcs[i].u])
                 delta = min(delta, arcs[i].residual);
-            netFlow += delta;
+            flow += delta;
             for (int i = parent[sink]; ~i; i = parent[arcs[i].u])
             {
                 arcs[i].residual -= delta;
@@ -67,7 +67,7 @@ public:
             }
         }
 
-        return netFlow;
+        return flow;
     }
 
     void addArc(int u, int v, int capacity)

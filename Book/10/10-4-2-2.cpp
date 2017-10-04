@@ -11,7 +11,7 @@
 
 using namespace std;
 
-const int NODES = 1100, INFINITY = 100000000;
+const int MAXV = 1100, INF = 100000000;
 
 struct edge
 {
@@ -19,15 +19,15 @@ struct edge
     edge *next;
 };
 
-edge *edges[NODES];
-int n, dist[NODES], predecessor[NODES], visited[NODES], counter[NODES];
+edge *edges[MAXV];
+int n, dist[MAXV], parent[MAXV], visited[MAXV], counter[MAXV];
 
 // source为起始顶点的序号。
 bool spfa(int source)
 {
     for (int i = 0; i < n; i++)
     {
-        dist[i] = INFINITY, predecessor[i] = -1;
+        dist[i] = INF, parent[i] = -1;
         visited[i] = 0, counter[i] = 0;
     }
 
@@ -37,7 +37,7 @@ bool spfa(int source)
     
     while (!unvisited.empty())
     {
-        int u = unvisited.front(); unvisited.pop(); visited[u]--;
+        int u = unvisited.front(); unvisited.pop();
  
         if (counter[u] > n) return true;
         
@@ -47,7 +47,7 @@ bool spfa(int source)
             int v = e->to;
             if (dist[v] > dist[u] + e->weight)
             {
-                dist[v] = dist[u] + e->weight; predecessor[v] = u;
+                dist[v] = dist[u] + e->weight; parent[v] = u;
                 if (!visited[v])
                 {
                     unvisited.push(v); visited[v]++; counter[v]++;
@@ -55,6 +55,8 @@ bool spfa(int source)
             }
             e = e->next;
         }
+        
+        visited[u]--;
     }
 
     return false;
