@@ -36,31 +36,31 @@ class EdmondsKarp
 {
 private:
     arc *arcs;
-    int vertices, idx, source, sink, *link, *path, *visited;
+    int vertices, idx, source, sink, *head, *path, *visited;
 
 public:
     EdmondsKarp(int v, int e, int s, int t)
     {
         vertices = v;
-        link = new int[v], path = new int[v], visited = new int[v];
+        head = new int[v], path = new int[v], visited = new int[v];
         arcs = new arc[e];
         source = s, sink = t;
         idx = 0;
-        memset(link, 0xff, vertices * sizeof(int));
+        memset(head, 0xff, vertices * sizeof(int));
     }
 
     ~EdmondsKarp()
     {
-        delete [] link, path, visited, arcs;
+        delete [] head, path, visited, arcs;
     }
     
     int maxFlow()
     {
-        int netFlow = 0;
+        int flow = 0;
 
         while (true)
         {
-            memset(path, 0xff, vertices * sizeof(int));
+            memset(path, -1, vertices * sizeof(int));
             memset(visited, 0, vertices * sizeof(int));
 
             queue<int> unvisited; unvisited.push(source);
@@ -70,7 +70,7 @@ public:
             {
                 int u = unvisited.front(); unvisited.pop();
 
-                for (int x = link[u]; x != -1; x = arcs[x].next)
+                for (int x = head[u]; x != -1; x = arcs[x].next)
                     if (!visited[arcs[x].v] && arcs[x].residual > 0)
                     {
                         unvisited.push(arcs[x].v);
@@ -84,8 +84,7 @@ public:
             int delta = INF;
             for (int x = path[sink]; x != -1; x = path[arcs[x].u])
                 delta = min(delta, arcs[x].residual);
-
-            netFlow += delta;
+            flow += delta;
             for (int x = path[sink]; x != -1; x = path[arcs[x].u])
             {
                 arcs[x].residual -= delta;
@@ -93,15 +92,15 @@ public:
             }
         }
 
-        return netFlow;
+        return flow;
     }
 
     void addArc(int u, int v, int capacity)
     {
-        arcs[idx] = (arc){u, v, capacity, capacity, link[u]};
-        link[u] = idx++;
-        arcs[idx] = (arc){v, u, capacity, 0, link[v]};
-        link[v] = idx++;
+        arcs[idx] = (arc){u, v, capacity, capacity, head[u]};
+        head[u] = idx++;
+        arcs[idx] = (arc){v, u, capacity, 0, head[v]};
+        head[v] = idx++;
     }
 };
 

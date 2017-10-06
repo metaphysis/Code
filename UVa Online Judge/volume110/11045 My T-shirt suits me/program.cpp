@@ -1,3 +1,32 @@
+// My T-shirt suits me
+// UVa ID: 11045
+// Verdict: Accepted
+// Submission Date: 2017-10-06
+// UVa Run Time: 0.000s
+//
+// 版权所有（C）2017，邱秋。metaphysis # yeah dot net
+
+#include <algorithm>
+#include <bitset>
+#include <cassert>
+#include <cmath>
+#include <cstring>
+#include <iomanip>
+#include <iostream>
+#include <limits>
+#include <list>
+#include <map>
+#include <numeric>
+#include <queue>
+#include <set>
+#include <sstream>
+#include <stack>
+#include <unordered_map>
+#include <unordered_set>
+#include <vector>
+
+using namespace std;
+
 const int INF = 0x7fffffff;
 
 struct arc
@@ -78,3 +107,35 @@ public:
         head[v] = idx++;
     }
 };
+
+int main(int argc, char *argv[])
+{
+    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
+
+    map<string, int> code = {{"XXL", 1}, {"XL", 2}, {"L", 3}, {"M", 4}, {"S", 5}, {"XS", 6}};
+    int cases, N, M;
+    
+    cin >> cases;
+    for (int c = 1; c <= cases; c++)
+    {
+        cin >> N >> M;
+        
+        EdmondsKarp ek(100, 10000, 0, 90);
+
+        for (int i = 1; i <= 6; i++)
+            ek.addArc(0, i, N / 6);
+            
+        string size1, size2;
+        for (int i = 1; i <= M; i++)
+        {
+            cin >> size1 >> size2;
+            ek.addArc(code[size1], i + 6, 1);
+            ek.addArc(code[size2], i + 6, 1);
+            ek.addArc(i + 6, 90, 1);
+        }
+
+        cout << (ek.maxFlow() == M ? "YES" : "NO") << '\n';
+    }
+
+    return 0;
+}
