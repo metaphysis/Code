@@ -1,0 +1,100 @@
+3 r2 r3 c1
+1 r1
+8 r1 r8 r12 r13 r14 r15 c6 c8
+5 r1 r3 r4 r8 c1
+9 r2 r3 r11 c1 c2 c3 c4 c8 c9
+2 r3 r4
+5 r9 c2 c5 c6 c8
+1 r4
+6 r5 r6 r8 c5 c8 c11
+1 r9
+3 r1 r6 c3
+5 r5 r9 r10 r11 r13
+6 r2 r6 c2 c5 c6 c10
+5 r1 r2 r3 r5 c2
+7 r1 r3 r5 r13 c3 c4 c5
+8 r4 r6 r8 r11 c6 c11 c12 c13
+1 r1
+4 r5 r6 r8 c16
+6 r4 r5 c1 c3 c5 c6
+1 c6
+9 r2 r3 r4 r6 r12 c3 c4 c12 c14
+2 r3 r4
+1 r1
+7 r1 r3 r4 r9 r10 c3 c10
+8 r2 r6 r8 c2 c3 c7 c8 c10
+7 r3 r5 r6 c6 c7 c8 c9
+6 r2 r4 r8 c1 c2 c4
+8 r4 r6 r7 r13 c3 c4 c13 c15
+7 r3 r4 r5 r7 r8 c4 c9
+8 r3 r6 r9 c3 c7 c8 c9 c10
+6 r3 r5 r6 c3 c8 c13
+7 r2 r4 r5 r9 c1 c2 c4
+2 r3 c1
+1 c1
+5 r3 r6 r8 r12 r14
+9 r2 r5 r8 r11 r12 c8 c9 c14 c15
+5 r8 r9 c1 c7 c8
+8 r1 r3 r4 c1 c2 c3 c8 c9
+2 r3 r5
+8 r6 r12 r15 r17 c2 c3 c4 c6
+5 r8 r14 r16 c4 c8
+2 r1 r8
+9 r3 r4 r6 r7 r8 r10 r12 c4 c11
+2 r12 r17
+7 r3 r6 r10 r11 r17 c3 c17
+11 r2 r4 r6 r14 r15 r16 c1 c2 c4 c14 c15
+8 r4 r7 r8 r9 r10 c4 c8 c9
+6 r9 r10 r11 c2 c7 c9
+1 r13
+2 r1 r2
+8 r1 r2 r5 r8 c5 c9 c10 c11
+7 r8 r10 c1 c3 c5 c6 c7
+3 r1 r2 r3
+1 r1
+1 c2
+2 c1 c12
+1 c1
+5 r1 r2 c1 c2 c4
+1 r4
+2 c1 c2
+3 r3 r5 c5
+1 r1
+4 r1 r2 r3 r4
+4 r1 r2 r4 c1
+4 r4 c2 c3 c4
+3 r1 r2 r3
+5 r2 r3 r4 c11 c12
+1 c1
+3 r3 r12 c6
+1 r1
+3 r7 r9 r10
+6 r5 r6 c1 c2 c6 c9
+2 c1 c2
+8 r1 r4 r5 r8 c4 c7 c8 c12
+2 c1 c2
+1 c13
+3 r3 r4 c1
+6 r1 r4 r6 c1 c4 c6
+1 r2
+3 r8 c1 c2
+1 r2
+1 r3
+7 r4 r5 r7 r10 c4 c5 c10
+1 c1
+3 r2 r5 c2
+5 r3 r6 c3 c12 c13
+1 c1
+3 c1 c2 c3
+7 r2 r3 r7 r12 r17 c12 c13
+6 r2 r3 r4 r6 c2 c3
+2 r2 r5
+7 r1 r2 r8 r18 c1 c5 c13
+8 r4 r5 r6 r7 c2 c3 c8 c13
+9 r1 r2 r3 r7 r10 c1 c3 c7 c13
+6 r5 r11 c3 c4 c7 c8
+7 r2 r7 r9 r14 c2 c7 c10
+1 r9
+9 r1 r4 r5 r13 r16 c3 c4 c5 c12
+3 r3 c2 c3
+6 r8 r13 r16 r18 c6 c7
