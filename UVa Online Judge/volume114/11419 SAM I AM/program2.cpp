@@ -2,7 +2,7 @@
 // UVa ID: 11419
 // Verdict: Accepted
 // Submission Date: 2017-10-09
-// UVa Run Time: 0.210s
+// UVa Run Time: 0.030s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
@@ -29,13 +29,14 @@ using namespace std;
 
 const int MAXV = 1010;
 
-int g[MAXV][MAXV], visited[MAXV], cx[MAXV], cy[MAXV], tx, ty;
+vector<int> edges[MAXV];
+int visited[MAXV], cx[MAXV], cy[MAXV], tx, ty;
 int inx[MAXV], iny[MAXV], mx[MAXV], my[MAXV];
 
 int dfs(int u)
 {
-    for (int v = 1; v <= ty; v++)
-        if (g[u][v] && !visited[v])
+    for (auto v : edges[u])
+        if (!visited[v])
         {
             visited[v] = 1;
             if (!cy[v] || dfs(cy[v]))
@@ -64,8 +65,8 @@ int hungarian()
 void mark(int u)
 {
     mx[u] = 1;
-    for (int v = 1; v <= ty; v++)
-        if (g[u][v] && !visited[v])
+    for (auto v : edges[u])
+        if (!visited[v])
         {
             visited[v] = 1, my[v] = 1;
             mark(cy[v]);
@@ -81,12 +82,14 @@ int main(int argc, char *argv[])
     {
         tx = r, ty = c;
 
-        memset(g, 0, sizeof g);
+        for (int i = 1; i <= tx; i++)
+            edges[i].clear();
+
         memset(inx, 0, sizeof inx); memset(iny, 0, sizeof iny);
         for (int i = 1; i <= n; i++)
         {
             cin >> x >> y;
-            g[x][y] = 1;
+            edges[x].push_back(y);
             inx[x] = iny[y] = 1;
         }
         

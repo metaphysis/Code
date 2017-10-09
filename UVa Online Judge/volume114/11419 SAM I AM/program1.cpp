@@ -2,7 +2,7 @@
 // UVa ID: 11419
 // Verdict: Accepted
 // Submission Date: 2017-10-09
-// UVa Run Time: 0.210s
+// UVa Run Time: 1.220s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
@@ -61,14 +61,14 @@ int hungarian()
     return matches;
 }
 
-void mark(int u)
+void mark(int v)
 {
-    mx[u] = 1;
-    for (int v = 1; v <= ty; v++)
-        if (g[u][v] && !visited[v])
+    my[v] = 1;
+    for (int u = 1; u <= tx; u++)
+        if (g[u][v] && !visited[u])
         {
-            visited[v] = 1, my[v] = 1;
-            mark(cy[v]);
+            visited[u] = 1, mx[u] = 1;
+            mark(cx[u]);
         }
 }
 
@@ -93,17 +93,17 @@ int main(int argc, char *argv[])
         cout << hungarian();
         
         memset(mx, 0, sizeof mx); memset(my, 0, sizeof my);
-        for (int u = 1; u <= tx; u++)
-            if (inx[u] && !cx[u])
+        for (int v = 1; v <= ty; v++)
+            if (iny[v] && !cy[v])
             {
                 memset(visited, 0, sizeof visited);
-                mark(u);
+                mark(v);
             }
         
         for (int i = 1; i <= tx; i++)
-            if (inx[i] && !mx[i]) cout << " r" << i;
+            if (inx[i] && mx[i]) cout << " r" << i;
         for (int i = 1; i <= ty; i++)
-            if (iny[i] && my[i]) cout << " c" << i;
+            if (iny[i] && !my[i]) cout << " c" << i;
 
         cout << '\n';
     }
