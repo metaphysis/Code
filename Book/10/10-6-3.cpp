@@ -10,8 +10,7 @@ int dfs(int u)
             visited[v] = 1;
             if (cy[v] == -1 || dfs(cy[v]))
             {
-                cx[u] = v;
-                cy[v] = u;
+                cx[u] = v, cy[v] = u;
                 return 1;
             }
         }
