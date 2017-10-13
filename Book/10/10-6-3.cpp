@@ -17,7 +17,6 @@ int dfs(int u)
     return 0;
 }
 
-// 匈牙利算法求最大匹配数。
 int hungarian()
 {
     int matches = 0;
