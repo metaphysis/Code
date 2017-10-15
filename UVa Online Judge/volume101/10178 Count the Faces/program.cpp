@@ -1,8 +1,33 @@
+// Count the Faces
+// UVa ID: 10178
+// Verdict: Accepted
+// Submission Date: 2017-10-15
+// UVa Run Time: 0.000s
+//
+// 版权所有（C）2017，邱秋。metaphysis # yeah dot net
+
+#include <algorithm>
+#include <bitset>
+#include <cassert>
+#include <cmath>
+#include <cstring>
+#include <iomanip>
 #include <iostream>
+#include <limits>
+#include <list>
+#include <map>
+#include <numeric>
+#include <queue>
+#include <set>
+#include <sstream>
+#include <stack>
+#include <unordered_map>
+#include <unordered_set>
+#include <vector>
 
 using namespace std;
 
-const int MAXV = 100000;
+const int MAXV = 256;
 
 int parent[MAXV], ranks[MAXV];
 
@@ -50,6 +75,24 @@ bool unionSet(int x, int y)
 
 int main(int argc, char *argv[])
 {
-    makeSet();
+    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
+
+    int N, E, merges;
+    char n1, n2;
+
+    while (cin >> N >> E)
+    {
+        makeSet();
+        
+        merges = 0;
+        for (int i = 1; i <= E; i++)
+        {
+            cin >> n1 >> n2;
+            merges += unionSet(n1, n2);
+        }
+        
+        cout << (1 + (N - merges) + E - N) << '\n';
+    }
+    
     return 0;
 }
