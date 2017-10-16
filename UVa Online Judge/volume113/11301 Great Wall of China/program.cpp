@@ -1,42 +1,28 @@
-// Dijkstra, Dijkstra.
-// UVa ID: 10806
+// Great Wall of China
+// UVa ID: 11301
 // Verdict: Accepted
-// Submission Date: 2017-10-05
-// UVa Run Time: 0.000s
+// Submission Date: 2017-10-16
+// UVa Run Time: 1.240s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
-#include <algorithm>
-#include <bitset>
-#include <cassert>
-#include <cmath>
 #include <cstring>
-#include <iomanip>
 #include <iostream>
-#include <limits>
-#include <list>
-#include <map>
-#include <numeric>
 #include <queue>
-#include <set>
-#include <sstream>
-#include <stack>
-#include <unordered_map>
-#include <unordered_set>
-#include <vector>
 
 using namespace std;
 
-const int MAXV = 110, MAXE = 20100, INF = 0x3fffffff;
+const int MAXV = 10010, MAXE = 200100, INF = 0x3fffffff;
 
 struct arc { int u, v, capacity, residual, cost, next; } arcs[MAXE];
 
+char grid[10][1010];
 int idx, source, sink, dist[MAXV], head[MAXV], parent[MAXV], visited[MAXV];
-int n, m, fee, flow;
+int fee, flow;
 
 bool spfa()
 {
-    for (int i = 0; i <= MAXV; i++)
+    for (int i = 0; i < MAXV; i++)
         dist[i] = INF, parent[i] = -1, visited[i] = 0;
 
     dist[source] = 0, visited[source] = 1;
@@ -93,27 +79,56 @@ int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    int u, v, t, d, k;
+    int n, offset[4][2] = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
 
     while (cin >> n, n > 0)
     {
-        cin >> m;
-
-        idx = 0, source = 0, sink = n;
+        idx = 0, source = 0, sink = 10 * n + 5;
         memset(head, -1, sizeof head);
 
-        for (int i = 1; i <= m; i++)
-        {
-            cin >> u >> v >> t;
-            addArc(u, v, 1, t);
-            addArc(v, u, 1, t);
-        }
-        addArc(0, 1, 2, 0);
+        for (int i = 1; i <= 5; i++)
+            for (int j = 1; j <= n; j++)
+                cin >> grid[i][j];
+
+        for (int i = 1; i <= 5; i++)
+            for (int j = 1; j <= n; j++)
+            {
+                if (grid[i][j] == '@')
+                {
+                    addArc(0, (i - 1) * n + j, 1, 0);
+                }
+
+                if (j == n)
+                {
+                    addArc((i - 1) * n + j + 5 * n, sink, 1, 0);
+                }
+
+                if (isdigit(grid[i][j]))
+                {
+                    addArc((i - 1) * n + j, (i - 1) * n + j + 5 * n, 1, grid[i][j] - '0');
+                }
+
+                for (int k = 0; k < 4; k++)
+                {
+                    int nexti = i + offset[k][0], nextj = j + offset[k][1];
+                    if (nexti >= 1 && nexti <= 5 && nextj >= 1 && nextj <= n)
+                    {
+                        if (grid[i][j] == '@' && grid[nexti][nextj] != '@')
+                        {
+                            addArc((i - 1) * n + j, (nexti - 1) * n + nextj, 1, 0);
+                        }
+                        
+                        if (isdigit(grid[i][j]) && isdigit(grid[nexti][nextj]))
+                        {
+                            addArc((i - 1) * n + j + 5 * n, (nexti - 1) * n + nextj, 1, 0);
+                        }
+                    }
+                }
+            }
 
         mcmf();
-        
-        if (flow < 2) cout << "Back to jail\n";
-        else cout << fee << '\n';
+
+        cout << fee << '\n';
     }
     
     return 0;

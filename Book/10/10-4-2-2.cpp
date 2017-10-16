@@ -20,12 +20,12 @@ struct edge
 };
 
 edge *edges[MAXV];
-int n, dist[MAXV], parent[MAXV], visited[MAXV], counter[MAXV];
+int dist[MAXV], parent[MAXV], visited[MAXV], counter[MAXV];
 
 // source为起始顶点的序号。
 bool spfa(int source)
 {
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < MAXV; i++)
     {
         dist[i] = INF, parent[i] = -1;
         visited[i] = 0, counter[i] = 0;
