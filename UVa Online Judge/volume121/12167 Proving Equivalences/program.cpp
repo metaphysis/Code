@@ -15,11 +15,11 @@
 using namespace std;
 
 // 最大顶点数目。
-const int MAX_V = 20010;
+const int MAXV = 20010;
 
-int dfn[MAX_V], low[MAX_V], scc[MAX_V], dfstime, cscc;
+int dfn[MAXV], low[MAXV], scc[MAXV], dfstime, cscc;
 int cases, n, m, from, to;
-stack<int> s; vector<list<int>> edges(MAX_V);
+stack<int> s; vector<list<int>> edges(MAXV);
 
 // 初始化。
 void initialize()
@@ -77,7 +77,7 @@ int main(int argc, char *argv[])
         else
         {
             // 将同一强连通分量中的顶点视为一个顶点，计数其出度及入度。
-            int id[MAX_V] = {0}, od[MAX_V] = {0};
+            int id[MAXV] = {0}, od[MAXV] = {0};
             for (int u = 1; u <= n; u++)
                 for (auto v : edges[u])
                 {
