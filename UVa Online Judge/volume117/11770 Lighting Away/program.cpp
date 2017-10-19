@@ -1,8 +1,8 @@
 // Lighting Away
 // UVa ID: 11770
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2017-10-19
+// UVa Run Time: 0.060s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
@@ -85,7 +85,26 @@ int main(int argc, char *argv[])
             if (!dfn[u])
                 tarjan(u);
 
-        cout << "Case " << c << ": " << cscc << '\n';
+        // 如果已经是强连通的则不需继续计算。
+        cout << "Case " << c << ": ";
+        if (cscc == 1) cout << "1\n";
+        else
+        {
+            // 将同一强连通分量中的顶点视为一个顶点，计数入度。
+            int id[MAXV] = {0};
+            for (int u = 1; u <= N; u++)
+                for (auto v : edges[u])
+                {
+                    if (scc[u] == scc[v]) continue;
+                    id[scc[v]] = 1;
+                }
+
+            // 计数缩点操作后新图中入度为0的顶点数即为所求。
+            int tid = 0;
+            for (int u = 1; u <= cscc; u++)
+                if (!id[u]) tid++;
+            cout << tid << '\n';
+        }
     }
     
     return 0;
