@@ -96,8 +96,7 @@ int main(int argc, char *argv[])
             edges[indexer[first]][indexer[second]] = 1;
         }
         
-        if (cases++)
-            cout << "\n";
+        if (cases++) cout << "\n";
         
         cout << "Calling circles for data set " << cases << ":\n";
     
