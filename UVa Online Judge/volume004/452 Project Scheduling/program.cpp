@@ -57,8 +57,6 @@ int main(int argc, char *argv[])
             for (int j = 0; j < pretask.length(); j++)
                 edges[pretask[j] - 'A'][letter - 'A'] = 1;
             indegree[letter - 'A'] += pretask.length();
-            
-            //cout << letter << " indegree[" << letter << "] = " << indegree[letter - 'A'] << endl;
         }
         
         // topological sorting
@@ -74,8 +72,7 @@ int main(int argc, char *argv[])
                     indexer = j;
                     break;
                 }
-            if (indexer == -1)
-                break;
+            if (indexer == -1) break;
                 
             unvisited[indexer] = 0;
             for (int j = 0; j < 26; j++)

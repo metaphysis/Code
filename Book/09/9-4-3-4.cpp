@@ -40,7 +40,6 @@ void dfs(int u)
         {
             ancestor[input[i].v][0] = u;
             depth[input[i].v] = depth[u] + 1;
-
             dfs(input[i].v);
         }
 }

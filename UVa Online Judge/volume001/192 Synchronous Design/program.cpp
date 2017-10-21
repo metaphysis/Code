@@ -20,15 +20,15 @@ struct vertex
 	int index, delay, type;
 };
 
-vector < vertex > verties;
-vector < int > path;
-vector < vector < int > > edges;
+vector<vertex> verties;
+vector<int> path;
+vector<vector<int>> edges;
 int maximumDelay;
 
 // topological sorting
 bool findCycle()
 {
-    vector < int > connections;
+    vector<int> connections;
     connections.resize(verties.size());
     fill(connections.begin(), connections.end(), 0);
     
@@ -37,7 +37,7 @@ bool findCycle()
             if (verties[edges[i][j]].type == ASYN)
                 connections[edges[i][j]]++;
    
-    vector < bool > removed;
+    vector<bool> removed;
     removed.resize(verties.size());
     fill(removed.begin(), removed.end(), false);
     

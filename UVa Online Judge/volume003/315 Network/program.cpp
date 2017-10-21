@@ -89,7 +89,7 @@ int main(int argc, char *argv[])
                 }
         }
         
-        cout << counter << endl;
+        cout << counter << '\n';
     }
     
 	return 0;

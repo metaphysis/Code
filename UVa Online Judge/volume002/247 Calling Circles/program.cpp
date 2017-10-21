@@ -15,8 +15,8 @@ using namespace std;
 
 const int MAXN = 10000;
 int edges[25][25];
-map < string, int > indexer;
-map < int, string > names;
+map<string, int> indexer;
+map<int, string> names;
 int n, m;
 
 void floyd()
@@ -32,7 +32,7 @@ void findAllCircles()
 {
     floyd();
     
-    vector < bool > outputed(n);
+    vector<bool> outputed(n);
     fill(outputed.begin(), outputed.end(), false);
     
     for (int i = 0; i < n; i++)
@@ -63,12 +63,12 @@ void findAllCircles()
 
 int main(int argc, char *argv[])
 {
-    cin.tie(0);
-    cout.sync_with_stdio(false);
+    cin.tie(0), cout.tie(0), cout.sync_with_stdio(false);
     
     int cases = 0;
-    string first, second;
-    while (cin >> n >> m, n && m)
+    string name1, name2;
+
+    while (cin >> n >> m, n > 0)
     {
         indexer.clear();
         names.clear();
@@ -77,23 +77,22 @@ int main(int argc, char *argv[])
             for (int j = 0; j < n; j++)
                 edges[i][j] = MAXN;
         
+        n = 0;
+        indexer.clear(), names.clear();
         for (int i = 1; i <= m; i++)
         {
-            cin >> first >> second;
-            
-            if (indexer.count(first) == 0)
+            cin >> name1 >> name2;
+            if (indexer.find(name1) == indexer.end())
             {
-                names.insert(make_pair(indexer.size(), first));
-                indexer.insert(make_pair(first, indexer.size()));
+                indexer[name1] = n++;
+                names[n - 1] = name1;
             }
-            
-            if (indexer.count(second) == 0)
+            if (indexer.find(name2) == indexer.end())
             {
-                names.insert(make_pair(indexer.size(), second));
-                indexer.insert(make_pair(second, indexer.size()));
+                indexer[name2] = n++;
+                names[n - 1] = name2;
             }
-            
-            edges[indexer[first]][indexer[second]] = 1;
+            edges[indexer[name1]][indexer[name2]] = 1;
         }
         
         if (cases++) cout << "\n";
