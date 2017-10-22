@@ -1,37 +1,42 @@
+#include <algorithm>
+#include <bitset>
+#include <cassert>
+#include <cmath>
+#include <cstring>
+#include <iomanip>
 #include <iostream>
+#include <limits>
+#include <list>
+#include <map>
+#include <numeric>
+#include <queue>
+#include <set>
 #include <sstream>
+#include <stack>
+#include <unordered_map>
+#include <unordered_set>
 #include <vector>
 
 using namespace std;
 
-// 最大顶点数目。
-const int MAX_V = 1000;
-
-// 使用邻接表来表示图。
-vector<vector<int>> edges(MAX_V);
-
-// parent记录各顶点的父域，visited记录顶点是否已被访问，dfn记录顶点的时间戳。
-vector<int> parent(MAX_V), visited(MAX_V), dfn(MAX_V);
-
-// dfstime为全局变量，表示时间戳。
+const int MAXV = 1000, WHITE = 0, GRAY = 1, BLACK = 2;
+vector<list<int>> edges(MAXV);
+int parent[MAXV], color[MAXV], dfn[MAXV], ft[MAXV];
 int dfstime = 0;
 
 // 深度优先遍历。
 void dfs(int u)
 {
-    // 记录顶点的发现时间并标记顶点为已发现。
-    dfn[u] = ++dfstime, visited[u] = 1;
-
-    // 处理与当前顶点相连接的其他顶点。
+    dfn[u] = ++dfstime, color[u] = GRAY;
     for (auto v : edges[u])
-        if (!visited[v])
+        if (!color[v])
         {
             parent[v] = u;
             dfs(v);
         }
+    ft[u] = ++dfstime, color[u] = BLACK;
 }
 
-// 使用递归输出路径。
 void findPath1(int u, int v)
 {
     if (v != u)
@@ -43,30 +48,19 @@ void findPath1(int u, int v)
         cout << u;
 }
 
-// 使用回溯来输出路径。
 void findPath2(int u, int v)
 {
-    // 声明一个vector，存储路径上顶点的编号。
     vector<int> path;
-
-    // v为终止顶点的序号，u为起始顶点的序号。每次将顶点编号插入到路径的最前端。
-    // 然后将当前顶点的编号设置为其父顶点的编号，继续该过程，直到找到起始顶点。
     while (v != u)
     {
         path.insert(path.begin(), v);
-
         // path.push_back(v);
-
         v = parent[v];
     }
 
-    // 注意在退出while循环时，v和u相同，但起始顶点u的编号尚未加入，需要
-    // 将起始顶点的编号添加进来，这样才能构成从起点到终点的一条完整路径。
     path.insert(path.begin(), u);
-
     // path.push_back(u);
     // reverse(path.begin(), path.end());
-
     for (int i = 0; i < path.size(); i++)
     {
         if (i > 0)
@@ -102,8 +96,8 @@ int main(int argc, char *argv[])
         }
 
         // 初始化父域向量和标记顶点是否发现的向量。顶点序号从1开始。
-        fill(parent.begin(), parent.end(), -1);
-        fill(visited.begin(), visited.end(), 0);
+        memset(parent, -1, sizeof(parent));
+        memset(color, WHITE, sizeof(color));
 
         dfs(1);
 

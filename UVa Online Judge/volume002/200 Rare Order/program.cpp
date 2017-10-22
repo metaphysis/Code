@@ -17,7 +17,7 @@ int map[26][26] = { 0 }, letters[26] = { 0 }, degreeOfIn[26];
 int main(int argc, char *argv[])
 {
     string line;
-    vector < string > words;
+    vector<string> words;
     while (getline(cin, line))
     {
         if (line != "#")
