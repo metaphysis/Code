@@ -1,8 +1,8 @@
 // Fire! Fire!! Fire!!!
 // UVa ID: 10243
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2017-10-22
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
@@ -25,47 +25,45 @@
 
 using namespace std;
 
-const int MAXV = 1000010;
+const int MAXV = 1010;
 
 struct edge
 {
     int u, v, next;
 };
 
-int first[MAXV], nodes[MAXV], visited[MAXV], parent[MAXV], idx = 0, n;
-edge edges[MAXV];
+int head[MAXV], nodes[MAXV], visited[MAXV], parent[MAXV], cnt = 0, n;
+int covered[MAXV], mvs[MAXV];
+edge edges[1010 * 1010];
 
 int greedy()
 {
-    int cvn = 0, covered[MAXV], in_mvs[MAXV];
-    
     memset(covered, 0, sizeof(covered));
-    memset(in_mvs, 0, sizeof(in_mvs));
+    memset(mvs, 0, sizeof(mvs));
 
-    for (int i = n - 1; i >= 1; i--)
+    int cvn = 0;
+    for (int i = cnt - 1; i >= 0; i--)
     {
         int u = nodes[i];
         if (!covered[u] && !covered[parent[u]])
         {
-            in_mvs[parent[u]] = 1;
+            mvs[parent[u]] = 1;
             covered[u] = covered[parent[u]] = 1;
             cvn++;
         }
     }
-    
     return cvn;
 }
 
 void dfs(int u)
 {
-    nodes[idx++] = u;
-    
-    for (int k = first[u]; k != -1; k = edges[k].next)
-        if (!visited[edges[k].v])
+    nodes[cnt++] = u;
+    for (int i = head[u]; ~i; i = edges[i].next)
+        if (!visited[edges[i].v])
         {
-            parent[edges[k].v] = u;
-            visited[edges[k].v] = 1;
-            dfs(edges[k].v);
+            parent[edges[i].v] = u;
+            visited[edges[i].v] = 1;
+            dfs(edges[i].v);
         }
 }
 
@@ -73,30 +71,27 @@ int main(int argc, char *argv[])
 {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
     
+    int nv, v;
     while (cin >> n, n > 0)
     {
-        idx = 0;
-        memset(first, -1, sizeof(first));
-
-        int nv, v;
+        cnt = 0;
+        memset(head, -1, sizeof(head));
         for (int u = 1; u <= n; u++)
         {
             cin >> nv;
             for (int j = 1; j <= nv; j++)
             {
                 cin >> v;
-                edges[idx] = (edge){u, v, first[u]};
-                first[u] = idx++;
-                
-                edges[idx] = (edge){v, u, first[v]};
-                first[v] = idx++;
+                edges[cnt] = (edge){u, v, head[u]};
+                head[u] = cnt++;
+                edges[cnt] = (edge){v, u, head[v]};
+                head[v] = cnt++;
             }
         }
 
-        idx = 0;
+        cnt = 0;
         memset(visited, 0, sizeof(visited));
         memset(parent, -1, sizeof(parent));
-        
         dfs(1);
         
         if (n == 1) cout << "1\n";
