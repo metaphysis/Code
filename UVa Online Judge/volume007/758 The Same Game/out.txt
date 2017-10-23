@@ -1,0 +1,51 @@
+Game 1:
+
+Move 1 at (4,1): removed 32 balls of color B, got 900 points.
+Move 2 at (2,1): removed 39 balls of color R, got 1369 points.
+Move 3 at (1,1): removed 37 balls of color G, got 1225 points.
+Move 4 at (3,4): removed 11 balls of color B, got 81 points.
+Move 5 at (1,1): removed 8 balls of color R, got 36 points.
+Move 6 at (2,1): removed 6 balls of color G, got 16 points.
+Move 7 at (1,6): removed 6 balls of color B, got 16 points.
+Move 8 at (1,2): removed 5 balls of color R, got 9 points.
+Move 9 at (1,2): removed 5 balls of color G, got 9 points.
+Final score: 3661, with 1 balls remaining.
+
+Game 2:
+
+Move 1 at (1,1): removed 30 balls of color G, got 784 points.
+Move 2 at (1,1): removed 30 balls of color R, got 784 points.
+Move 3 at (1,1): removed 30 balls of color B, got 784 points.
+Move 4 at (1,1): removed 30 balls of color G, got 784 points.
+Move 5 at (1,1): removed 30 balls of color R, got 784 points.
+Final score: 4920, with 0 balls remaining.
+
+Game 3:
+
+Final score: 0, with 150 balls remaining.
+
+Game 4:
+
+Move 1 at (1,1): removed 150 balls of color R, got 21904 points.
+Final score: 22904, with 0 balls remaining.
+
+Game 5:
+
+Move 1 at (4,4): removed 3 balls of color R, got 1 points.
+Move 2 at (3,4): removed 3 balls of color B, got 1 points.
+Move 3 at (4,3): removed 5 balls of color G, got 9 points.
+Move 4 at (4,2): removed 3 balls of color B, got 1 points.
+Move 5 at (4,1): removed 7 balls of color R, got 25 points.
+Move 6 at (4,1): removed 4 balls of color G, got 4 points.
+Move 7 at (3,1): removed 5 balls of color B, got 9 points.
+Move 8 at (3,1): removed 4 balls of color R, got 4 points.
+Move 9 at (2,1): removed 6 balls of color G, got 16 points.
+Move 10 at (2,1): removed 3 balls of color B, got 1 points.
+Move 11 at (1,1): removed 3 balls of color R, got 1 points.
+Final score: 72, with 104 balls remaining.
+
+Game 6:
+
+Move 1 at (1,1): removed 140 balls of color R, got 19044 points.
+Move 2 at (1,1): removed 10 balls of color G, got 64 points.
+Final score: 20108, with 0 balls remaining.
