@@ -25,44 +25,38 @@
 
 using namespace std;
 
-const int MAX_DIST = numeric_limits<int>::max();
+const int MAXV = 1010, MAXE = 1000010, INF = 0x3fffffff;
 
 struct edge
 {
-    int idx;
+    int to;
     long long weight;
+    bool operator<(const edge &e) const { return weight > e.weight; }
+} edges[MAXE][4];
 
-    bool operator<(const edge& x) const
-    {
-        return weight > x.weight;
-    }
-};
-
-edge edges[1000000][4];
-long long dist[1000000];
-
-int cases, N, M, maze[1010][1010];
+long long dist[MAXE];
+int cases, N, M, maze[MAXV][MAXV];
 int offset[4][2] = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
 
-void moore_dijkstra(int u)
+void mooreDijkstra(int u)
 {
-    fill(dist, dist + N * M, MAX_DIST);
+    fill(dist, dist + N * M, INF);
     dist[u] = maze[0][0];
     
-    priority_queue<edge> unvisited;
-    unvisited.push((edge){0, dist[u]});
+    priority_queue<edge> q;
+    q.push((edge){0, dist[u]});
     
-    while (!unvisited.empty())
+    while (!q.empty())
     {
-        edge v = unvisited.top(); unvisited.pop();
+        edge v = q.top(); q.pop();
         for (int i = 0; i < 4; i++)
         {
-            edge e = edges[v.idx][i];
-            if (e.idx == 0) continue;
-            if (dist[v.idx] + e.weight < dist[e.idx])
+            edge e = edges[v.to][i];
+            if (e.to == 0) continue;
+            if (dist[v.to] + e.weight < dist[e.to])
             {
-                dist[e.idx] = dist[v.idx] + e.weight;
-                unvisited.push((edge){e.idx, dist[e.idx]});
+                dist[e.to] = dist[v.to] + e.weight;
+                q.push((edge){e.to, dist[e.to]});
             }
         }
     }
@@ -86,14 +80,14 @@ int main(int argc, char *argv[])
                 int c = i * M + j;
                 for (int k = 0; k < 4; k++)
                 {
-                    edges[c][k].idx = 0;
+                    edges[c][k].to = 0;
                     int ii = i + offset[k][0], jj = j + offset[k][1];
                     if (ii >= 0 && ii < N && jj >= 0 && jj < M)
                         edges[c][k] = (edge){ii * M + jj, maze[ii][jj]};
                 }
             }
 
-        moore_dijkstra(0);
+        mooreDijkstra(0);
         cout << dist[N * M - 1] << '\n';
     }
     

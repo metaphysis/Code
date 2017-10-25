@@ -10,15 +10,15 @@
 
 using namespace std;
 
-const int NODES = 1100, EDGES = 2100, INFINITY = 100000000;
+const int MAXV = 1100, MAXE = 2100, INF = 100000000;
 
 struct edge
 {
     int from, to, weight;
 };
 
-edge edges[EDGES];
-int n, m, dist[NODES], predecessor[NODES];
+edge edges[MAXE];
+int n, m, dist[MAXV], parent[MAXV];
 
 // edges为边列表，predecessor保存各顶点的前驱，n为顶点数目，m为边的数目，
 // source为起始顶点的序号。
@@ -27,7 +27,7 @@ bool bellmanFord(int source)
     // 初始化距离为无限大。各顶点的前驱顶点为未定义。
     for (int i = 0; i <= n; i++)
     {
-        dist[i] = INFINITY; predecessor[i] = -1;
+        dist[i] = INF; parent[i] = -1;
     }
 
     // 起始顶点的距离为0。
@@ -41,7 +41,7 @@ bool bellmanFord(int source)
             if (dist[edges[i].to] > dist[edges[i].from] + edges[i].weight)
             {
                 dist[edges[i].to] = dist[edges[i].from] + edges[i].weight;
-                predecessor[edges[i].to] = edges[i].from;
+                parent[edges[i].to] = edges[i].from;
                 updated = true;
             }
             

@@ -56,7 +56,7 @@ int main(int argc, char *argv[])
         for (int i = 0; i <= n; i++) dist[i] = INF;
  
         dist[1] = 0;
-        for (int k = 1; k <= n; k++)
+        for (int k = 1; k < n; k++)
         {
             bool updated = false;
             for (int i = 1; i <= r; i++)
