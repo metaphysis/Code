@@ -1,0 +1,89 @@
+Scenario #1
+Total cost of flight(s) is $484
+Total cost of flight(s) is $484
+Total cost of flight(s) is $484
+Total cost of flight(s) is $484
+Total cost of flight(s) is $484
+Total cost of flight(s) is $484
+Total cost of flight(s) is $484
+Total cost of flight(s) is $484
+Total cost of flight(s) is $484
+Total cost of flight(s) is $484
+
+Scenario #2
+Total cost of flight(s) is $290
+Total cost of flight(s) is $290
+Total cost of flight(s) is $290
+Total cost of flight(s) is $290
+Total cost of flight(s) is $290
+Total cost of flight(s) is $290
+Total cost of flight(s) is $290
+Total cost of flight(s) is $290
+Total cost of flight(s) is $290
+Total cost of flight(s) is $290
+
+Scenario #3
+No satisfactory flights
+No satisfactory flights
+No satisfactory flights
+No satisfactory flights
+No satisfactory flights
+No satisfactory flights
+No satisfactory flights
+No satisfactory flights
+No satisfactory flights
+No satisfactory flights
+
+Scenario #4
+Total cost of flight(s) is $179
+
+Scenario #5
+Total cost of flight(s) is $402
+Total cost of flight(s) is $402
+Total cost of flight(s) is $402
+Total cost of flight(s) is $402
+Total cost of flight(s) is $402
+
+Scenario #6
+Total cost of flight(s) is $222
+Total cost of flight(s) is $222
+Total cost of flight(s) is $222
+Total cost of flight(s) is $222
+Total cost of flight(s) is $222
+Total cost of flight(s) is $222
+Total cost of flight(s) is $222
+Total cost of flight(s) is $222
+Total cost of flight(s) is $222
+
+Scenario #7
+Total cost of flight(s) is $974
+Total cost of flight(s) is $974
+Total cost of flight(s) is $974
+Total cost of flight(s) is $974
+Total cost of flight(s) is $974
+Total cost of flight(s) is $974
+Total cost of flight(s) is $974
+Total cost of flight(s) is $974
+
+Scenario #8
+No satisfactory flights
+Total cost of flight(s) is $342
+
+Scenario #9
+Total cost of flight(s) is $508
+Total cost of flight(s) is $508
+Total cost of flight(s) is $508
+Total cost of flight(s) is $508
+Total cost of flight(s) is $508
+Total cost of flight(s) is $508
+Total cost of flight(s) is $508
+Total cost of flight(s) is $508
+Total cost of flight(s) is $508
+Total cost of flight(s) is $508
+
+Scenario #10
+Total cost of flight(s) is $227
+Total cost of flight(s) is $227
+Total cost of flight(s) is $227
+Total cost of flight(s) is $227
+Total cost of flight(s) is $227

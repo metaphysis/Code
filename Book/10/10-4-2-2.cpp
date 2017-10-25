@@ -11,7 +11,7 @@
 
 using namespace std;
 
-const int MAXV = 1100, INF = 100000000;
+const int MAXV = 1100, INF = 0x3fffffff;
 
 struct edge
 {
@@ -22,8 +22,7 @@ struct edge
 edge *edges[MAXV];
 int dist[MAXV], parent[MAXV], visited[MAXV], counter[MAXV];
 
-// source为起始顶点的序号。
-bool spfa(int source)
+bool spfa(int u)
 {
     for (int i = 0; i < MAXV; i++)
     {
@@ -31,13 +30,13 @@ bool spfa(int source)
         visited[i] = 0, counter[i] = 0;
     }
 
-    dist[source] = 0, visited[source]++;
+    dist[u] = 0, visited[u]++;
     
-    queue<int> unvisited; unvisited.push(source);
+    queue<int> q; q.push(u);
     
-    while (!unvisited.empty())
+    while (!q.empty())
     {
-        int u = unvisited.front(); unvisited.pop();
+        int u = q.front(); q.pop();
  
         if (counter[u] > n) return true;
         
@@ -50,7 +49,8 @@ bool spfa(int source)
                 dist[v] = dist[u] + e->weight; parent[v] = u;
                 if (!visited[v])
                 {
-                    unvisited.push(v); visited[v]++; counter[v]++;
+                    q.push(v);
+                    visited[v]++, counter[v]++;
                 }
             }
             e = e->next;
