@@ -47,7 +47,6 @@ int main(int argc, char *argv[])
                 for (int k = 1; k <= n; k++)
                 {
                     if (i == j || j == k || k == i) continue;
-                    
                     if (grid[i][j] && grid[j][k] && grid[k][i])
                      {
                         if ((i < j && j < k) || (i > j && j > k))

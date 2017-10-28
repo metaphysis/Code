@@ -6,7 +6,24 @@
 //
 // 版权所有（C）2011，邱秋。metaphysis # yeah dot net
 
+#include <algorithm>
+#include <bitset>
+#include <cassert>
+#include <cmath>
+#include <cstring>
+#include <iomanip>
 #include <iostream>
+#include <limits>
+#include <list>
+#include <map>
+#include <numeric>
+#include <queue>
+#include <set>
+#include <sstream>
+#include <stack>
+#include <unordered_map>
+#include <unordered_set>
+#include <vector>
 
 using namespace std;
 
@@ -16,26 +33,26 @@ struct TreeNode
     TreeNode *parent, *leftChild, *rightChild;
 };
 
-bool targetSumExist, emptyTree;
+bool exist, empty;
 
 // 前序遍历，将路径和保存在叶结点上。
-void summingTree(TreeNode * current)
+void summing(TreeNode *node)
 {
-    if (current->leftChild != NULL)
+    if (node->leftChild != NULL)
     {
-        current->leftChild->weight += current->weight;
-        summingTree(current->leftChild);
+        node->leftChild->weight += node->weight;
+        summing(node->leftChild);
     }
 
-    if (current->rightChild != NULL)
+    if (node->rightChild != NULL)
     {
-        current->rightChild->weight += current->weight;
-        summingTree(current->rightChild);
+        node->rightChild->weight += node->weight;
+        summing(node->rightChild);
     }
 }
 
 // 利用递归和cin.putback()，将输入解析为链表表示的树。
-void parseTree(TreeNode * current)
+void parse(TreeNode *node)
 {
     bool isLeaf = false;
 
@@ -46,35 +63,26 @@ void parseTree(TreeNode * current)
     cin >> c;
     if (isdigit(c) || c == '-')
     {
-        int sign = (c == '-' ? (-1) : 1);
-        int number = 0;
-
-        if (isdigit(c))
-            number = c - '0';
-
-        while (cin >> c, isdigit(c))
-        {
-            number *= 10;
-            number += (c - '0');
-        }
-
+        int sign = (c == '-' ? (-1) : 1), number = 0;
+        if (isdigit(c)) number = c - '0';
+        while (cin >> c, isdigit(c)) number *= 10, number += (c - '0');
         cin.putback(c);
-        current->weight = number * sign;
+        node->weight = number * sign;
     }
     else
     {
         cin.putback(c);
 
         // 若当前结点为空，则将父结点的相应子结点设为空。
-        if (current->parent != NULL)
+        if (node->parent != NULL)
         {
-            if (current == current->parent->leftChild)
-                current->parent->leftChild = NULL;
+            if (node == node->parent->leftChild)
+                node->parent->leftChild = NULL;
             else
-                current->parent->rightChild = NULL;
+                node->parent->rightChild = NULL;
         }
         else
-            emptyTree = true;
+            empty = true;
 
         isLeaf = true;
     }
@@ -83,48 +91,47 @@ void parseTree(TreeNode * current)
     if (!isLeaf)
     {
         TreeNode *left = new TreeNode;
-        current->leftChild = left;
-        left->parent = current;
-        parseTree(left);
+        node->leftChild = left;
+        left->parent = node;
+        parse(left);
 
         TreeNode *right = new TreeNode;
-        current->rightChild = right;
-        right->parent = current;
-        parseTree(right);
+        node->rightChild = right;
+        right->parent = node;
+        parse(right);
     }
 
     while (cin >> c, c != ')') { }
 }
 
 // 遍历树，检查叶结点保存的路径和是否为目标值。
-void treeTraversal(TreeNode * current, int targetSum)
+void traversal(TreeNode *node, int sum)
 {
-    if (targetSumExist) return;
+    if (exist) return;
 
-    if (current->leftChild == NULL && current->rightChild == NULL)
-        if (current->weight == targetSum)
-            targetSumExist = true;
+    if (node->leftChild == NULL && node->rightChild == NULL)
+        if (node->weight == sum)
+            exist = true;
 
-    if (current->leftChild != NULL) treeTraversal(current->leftChild, targetSum);
-    if (current->rightChild != NULL) treeTraversal(current->rightChild, targetSum);
+    if (node->leftChild != NULL) traversal(node->leftChild, sum);
+    if (node->rightChild != NULL) traversal(node->rightChild, sum);
 }
 
 int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    int targetSum;
-    while (cin >> targetSum)
+    int sum;
+    while (cin >> sum)
     {
-        emptyTree = false;
-        targetSumExist = false;
+        empty = false, exist = false;
         
         TreeNode *root = new TreeNode;
-        parseTree(root);
-        summingTree(root);
-        if (!emptyTree) treeTraversal(root, targetSum);
+        parse(root);
+        summing(root);
+        if (!empty) traversal(root, sum);
 
-        cout << (targetSumExist ? "yes" : "no") << '\n';
+        cout << (exist ? "yes" : "no") << '\n';
 
         delete root;
     }
