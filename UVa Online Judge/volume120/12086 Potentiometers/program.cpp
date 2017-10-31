@@ -43,19 +43,22 @@ void build(int p, int left, int right)
 
 void update(int p, int left, int right, int index, int value)
 {
-    if (left == right && left == index) st[p] = value;
-    else {
-        int middle = (left + right) >> 1;
-        if (index <= middle) update((p << 1) + 1, left, middle, index, value);
-        else update((p + 1) << 1, middle + 1, right, index, value);
-        st[p] = st[(p << 1) + 1] + st[(p + 1) << 1];
+    if (index < left || index > right) return;
+    if (index == left && index == right)
+    {
+        st[p] = value;
+        return;
     }
+    int middle = (left + right) >> 1;
+    update((p << 1) + 1, left, middle, index, value);
+    update((p + 1) << 1, middle + 1, right, index, value);
+    st[p] = st[(p << 1) + 1] + st[(p + 1) << 1];
 }
 
 int query(int p, int left, int right, int qleft, int qright)
 {
-    if (qright < left || right < qleft) return 0;
-    if (qleft <= left && right <= qright) return st[p];
+    if (qleft > right || qright < left) return 0;
+    if (qleft <= left && qright >= right) return st[p];
     int middle = (left + right) >> 1;
     return query((p << 1) + 1, left, middle, qleft, qright) +
         query((p + 1) << 1, middle + 1, right, qleft, qright);

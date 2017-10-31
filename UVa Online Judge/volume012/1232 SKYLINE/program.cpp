@@ -56,9 +56,9 @@ void propagate(int p)
 
 int query(int p, int left, int right, int qleft, int qright, int height)
 {
-    if (qright <= left || right <= qleft) return 0;
+    if (qleft >= right || qright <= left) return 0;
     
-    if (qleft <= left && right <= qright)
+    if (qleft <= left && qright >= right)
     {
         if (st[p].high <= height)
         {
