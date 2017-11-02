@@ -74,7 +74,6 @@ int main(int ac, char *av[])
 			}
 		}
 
-
 		// 对于每一棵树，以其作为矩形的左边界，往右扫描，直到发现某一列有树，或者达到右
 		// 侧边界，则该列为此矩形的右边界。先按横坐标进行排序。
 		int maxArea = 0, lowY, topY, leftX, rightX;

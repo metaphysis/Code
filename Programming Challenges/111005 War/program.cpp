@@ -82,8 +82,8 @@
 //
 // [解题方法]
 // 此题可以应用不相交集合数据结构（并查集）来解决。数组 root 的元素从 [0，N - 1] 存放的是国家
-// [0，N - 1] 的朋友，元素 [N，2 * N - 1] 存放的是国家 [0，N - 1] 的敌人，x 和 x + people
-// 均标记 x，x + people 的作用是放置在敌对国家下的副本以便记录敌对关系。
+// [0，N - 1] 的朋友，元素 [N，2 * N - 1] 存放的是国家 [0，N - 1] 的敌人，x 和 x + n
+// 均标记 x，x + n 的作用是放置在敌对国家下的副本以便记录敌对关系。
 
 #include <iostream>
 
@@ -100,7 +100,7 @@ using namespace std;
 #define YES 1
 #define ERROR (-1)
 
-int root[MAXV];
+int root[MAXV], n;
 
 // 查找操作。
 int findSet(int x)
@@ -109,19 +109,18 @@ int findSet(int x)
 }
 
 // 初始化集合。
-void makeSet(int people)
+void makeSet()
 {
-	for (int i = 0; i < people * 2; i++)
-		root[i] = i;
+	for (int i = 0; i < n * 2; i++) root[i] = i;
 }
 
 // 设置朋友关系。
-void setFriends(int x, int y, int people)
+void setFriends(int x, int y)
 {
 	int xRoot = findSet(x);
 	int yRoot = findSet(y);
-	int xEnemyRoot = findSet(x + people);
-	int yEnemyRoot = findSet(y + people);
+	int xEnemyRoot = findSet(x + n);
+	int yEnemyRoot = findSet(y + n);
 
 	if (xRoot == yEnemyRoot || yRoot == xEnemyRoot)
 		cout << ERROR << endl;
@@ -135,12 +134,12 @@ void setFriends(int x, int y, int people)
 }
 
 // 设置敌对关系。
-void setEnemies(int x, int y, int people)
+void setEnemies(int x, int y)
 {
 	int xRoot = findSet(x);
 	int yRoot = findSet(y);
-	int xEnemyRoot = findSet(x + people);
-	int yEnemyRoot = findSet(y + people);
+	int xEnemyRoot = findSet(x + n);
+	int yEnemyRoot = findSet(y + n);
 
 	if (xRoot == yRoot)
 		cout << ERROR << endl;
@@ -159,12 +158,12 @@ void areFriends(int x, int y)
 }
 
 // 判断敌对关系。
-void areEnemies(int x, int y, int people)
+void areEnemies(int x, int y)
 {
 	int xRoot = findSet(x);
 	int yRoot = findSet(y);
-	int xEnemyRoot = findSet(x + people);
-	int yEnemyRoot = findSet(y + people);
+	int xEnemyRoot = findSet(x + n);
+	int yEnemyRoot = findSet(y + n);
 
 	if (xRoot == yEnemyRoot || yRoot == xEnemyRoot)
 		cout << YES << endl;
@@ -174,22 +173,22 @@ void areEnemies(int x, int y, int people)
 
 int main(int ac, char *av[])
 {
-	int people, c, x, y;
+	int n, c, x, y;
 
-	cin >> people;
+	cin >> n;
 
-	makeSet(people);
+	makeSet();
 
 	while (cin >> c >> x >> y, c || x || y)
 	{
 		switch (c)
 		{
 			case SET_FRIENDS:
-				setFriends(x, y, people);
+				setFriends(x, y);
 				break;
 
 			case SET_ENEMIES:
-				setEnemies(x, y, people);
+				setEnemies(x, y);
 				break;
 
 			case ARE_FRIENDS:
@@ -197,7 +196,7 @@ int main(int ac, char *av[])
 				break;
 
 			case ARE_ENEMIES:
-				areEnemies(x, y, people);
+				areEnemies(x, y);
 				break;
 		}
 	}
