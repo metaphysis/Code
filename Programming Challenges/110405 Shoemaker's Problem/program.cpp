@@ -1,4 +1,4 @@
-// Shoemaker’s Problem （鞋匠的烦恼）
+// Shoemaker's Problem （鞋匠的烦恼）
 // PC/UVa IDs: 110405/10026, Popularity: C, Success rate: average Level: 2
 // Verdict: Accepted
 // Submission Date: 2011-05-23

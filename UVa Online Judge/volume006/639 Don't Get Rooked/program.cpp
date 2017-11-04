@@ -1,4 +1,4 @@
-// Don’t Get Rooked
+// Don't Get Rooked
 // UVa ID: 639
 // Verdict: Accepted
 // Submission Date: 2016-08-25

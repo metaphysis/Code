@@ -1,4 +1,4 @@
-// There’s treasure everywhere!
+// There's treasure everywhere!
 // UVa ID: 587
 // Verdict: Accepted
 // Submission Date: 2016-08-10

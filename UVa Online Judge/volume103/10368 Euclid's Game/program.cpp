@@ -1,4 +1,4 @@
-// Euclid’s Game
+// Euclid's Game
 // UVa ID: 10368
 // Verdict: Accepted
 // Submission Date: 2017-03-28

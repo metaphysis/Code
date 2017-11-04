@@ -1,4 +1,4 @@
-// The Archeologist’s Dilemma （考古学家的烦恼）
+// The Archeologist's Dilemma （考古学家的烦恼）
 // PC/UVa IDs: 110503/701, Popularity: A, Success rate: low Level: 1
 // Verdict: Accepted
 // Submission Date: 2011-05-29

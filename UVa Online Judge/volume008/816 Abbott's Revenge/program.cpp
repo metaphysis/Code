@@ -1,4 +1,4 @@
-// Abbott’s Revenge
+// Abbott's Revenge
 // UVa ID: 816
 // Verdict: Accepted
 // Submission Date: 2016-12-13

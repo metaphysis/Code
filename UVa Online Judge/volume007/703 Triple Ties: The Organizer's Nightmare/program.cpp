@@ -1,4 +1,4 @@
-// Triple Ties: The Organizer’s Nightmare
+// Triple Ties: The Organizer's Nightmare
 // UVa ID: 703
 // Verdict: Accepted
 // Submission Date: 2017-10-27

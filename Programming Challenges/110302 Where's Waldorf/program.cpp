@@ -1,4 +1,4 @@
-// Where’s Waldorf?
+// Where's Waldorf?
 // PC/UVa IDs: 110302/10010, Popularity: B, Success rate: average Level: 2
 // Verdict: Accepted
 // Submission Date: 2016-01-27

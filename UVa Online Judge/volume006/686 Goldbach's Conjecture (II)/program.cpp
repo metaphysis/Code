@@ -1,4 +1,4 @@
-// Goldbach’s Conjecture (II)
+// Goldbach's Conjecture (II)
 // UVa ID: 686
 // Verdict: Accepted
 // Submission Date: 2016-08-16

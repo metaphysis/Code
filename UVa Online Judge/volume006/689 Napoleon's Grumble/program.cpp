@@ -1,4 +1,4 @@
-// Napoleon’s Grumble
+// Napoleon's Grumble
 // UVa ID: 689
 // Verdict: Accepted
 // Submission Date: 2017-06-22
