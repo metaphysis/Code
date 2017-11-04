@@ -27,9 +27,11 @@
 
 using namespace std;
 
+const int MAXV = 110;
+
 struct rectangle { int height, left; };
 
-int m, n, matrix[110][110];
+int m, n, matrix[MAXV][MAXV];
     
 int getMaxArea()
 {
@@ -60,7 +62,7 @@ int getMaxArea()
             }
         }
     }
-    
+
     return area;
 }
 
