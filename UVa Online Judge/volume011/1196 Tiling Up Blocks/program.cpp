@@ -1,8 +1,8 @@
 // Tiling Up Blocks
 // UVa ID: 1196
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2017-10-05
+// UVa Run Time: 0.010s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
@@ -44,21 +44,25 @@ int main(int argc, char *argv[])
     int n, left, middle;
     while (cin >> n, n > 0)
     {
-        vector<tile> tiles, length(n, 1), index(n);
+        vector<tile> tiles;
+        vector<int> length(n, 1);
         for (int i = 0; i < n; i++)
         {
             cin >> left >> middle;
             tiles.push_back(tile{left, middle});
-            index[i] = i;
         }
         
         sort(tiles.begin(), tiles.end());
+
         for (int i = 0; i < n; i++)
             for (int j = 0; j < i; j++)
-                if (tiles[i].l >= tiles[index[j]].l && tiles[i].m >= tiles[index[j]].m)
-                    index[j] = i, length[j] += 1;
+                if (tiles[i].l >= tiles[j].l && tiles[i].m >= tiles[j].m)
+                    if (length[j] + 1 > length[i])
+                        length[i] = length[j] + 1;
         
+        cout << *max_element(length.begin(), length.end()) << '\n';
     }
-    
+    cout << "*\n";
+
     return 0;
 }
