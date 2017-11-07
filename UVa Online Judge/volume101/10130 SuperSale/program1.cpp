@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
     int cases, prices[1024], weight[1024];
-    int n, g, stand[128], value[1024][32];
+    int n, g, stand[128], value[32];
     
     cin >> cases;
     for (int c = 1; c <= cases; c++)
@@ -48,24 +48,12 @@ int main(int argc, char *argv[])
         memset(value, 0, sizeof(value));
 
         for (int i = 1; i <= n; i++)
-            for (int w = 0; w <= 30; w++)
-            {
-                if (w >= weight[i] && value[i - 1][w - weight[i]] + prices[i] > value[i - 1][w])
-                    value[i][w] = value[i - 1][w - weight[i]] + prices[i];
-                else
-                    value[i][w] = value[i - 1][w];
-            }
-
-        //for (int i = 1; i <= n; i++)
-        //{
-        //    memcpy(value[i], value[i - 1], 32 * sizeof(int));
-        //    for (int w = weight[i]; w <= 30; w++)
-        //        value[i][w] = max(value[i][w], value[i - 1][w - weight[i]] + prices[i]);
-        //}
+            for (int w = 30; w >= weight[i]; w--)
+                value[w] = max(value[w - weight[i]] + prices[i], value[w]);
         
         int total = 0;
         for (int i = 0; i < g; i++)
-            total += value[n][stand[i]];
+            total += value[stand[i]];
 
         cout << total << '\n';
     }

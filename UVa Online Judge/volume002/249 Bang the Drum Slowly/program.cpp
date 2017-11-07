@@ -31,7 +31,7 @@ struct address
     int address1, address2;
 };
 
-vector < address > instructions;
+vector<address> instructions;
 double memoization[50][50];
 int n, t;
 

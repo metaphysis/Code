@@ -1,0 +1,4 @@
+value[money][1] = 2000
+1
+value[money][1] = 2001
+3
