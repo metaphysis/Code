@@ -1,0 +1,10 @@
+Case 1: 0
+
+Case 2: 0
+
+Case 3: 0
+
+Case 4: 4
+
+Case 5: 7
+
