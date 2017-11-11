@@ -1,0 +1,10 @@
+3
+
+YGOR 4 0
+RGOB 4 0
+
+RBVY 2 1
+ORVY 4 0
+
+GYBV 2 1
+YORV 0 2

@@ -66,8 +66,8 @@ int operating_rooms, recovery_rooms, starting_mintues,
     mintues_preparing_recovery, patients_counter, mintues_required_surgery,
     mintues_required_recovery;
 
-vector < patient > patients;
-priority_queue < room > rooms;
+vector<patient> patients;
+priority_queue<room> rooms;
 
 string toTime(int time)
 {
@@ -154,7 +154,7 @@ void arrange()
         usedBeds.push_back(bed);
     }
 
-    vector < patient > last;
+    vector<patient> last;
     for (int i = 0; i < next.size(); i++)
     {
         patient another = next[i];
