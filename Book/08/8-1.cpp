@@ -1,19 +1,34 @@
-#include <iostream>
-#include <vector>
 #include <algorithm>
+#include <bitset>
+#include <cassert>
+#include <cmath>
+#include <cstring>
+#include <iomanip>
+#include <iostream>
+#include <limits>
+#include <list>
+#include <map>
+#include <numeric>
+#include <queue>
+#include <set>
+#include <sstream>
+#include <stack>
+#include <unordered_map>
+#include <unordered_set>
+#include <vector>
 
 using namespace std;
 
 const int MAXV = 8;
 
-int columns[MAXV] = {0}, used[MAXV] = {0}, solutions = 0;
+int column[MAXV] = {0}, used[MAXV] = {0}, solutions = 0;
 
 // 检查是否满足对角线规则。
-bool isSolution()
+bool safe()
 {
     for (int i = 0; i < MAXV; i++)
         for (int j = 0; j < i; j++)
-            if (abs(i - j) == abs(columns[i] - columns[j]))
+            if (abs(i - j) == abs(column[i] - column[j]))
                 return false;
     return true;
 }
@@ -24,7 +39,7 @@ void display()
     for (int i = 0; i < MAXV; i++)
     {
         for (int j = 0; j < MAXV; j++)
-            cout << (columns[i] == j ? " Q" : " *");
+            cout << (column[i] == j ? " Q" : " *");
         cout << '\n';
     }
     cout << '\n';
@@ -33,13 +48,15 @@ void display()
 void backtrack(int depth)
 {
     // 当行数达到棋盘的最大行数时进行验证。
-    if (depth == MAXV && isSolution()) {
-        display(); solutions++; return;
+    if (depth == MAXV && safe()) {
+        display();
+        solutions++;
+        return;
     }
 
     // 未达到棋盘最大行数，继续进行递归回溯。注意在递归的前后设置对应位向量的值。
     for (int i = 0; i < MAXV; i++) if (!used[i]) {
-        used[i] = 1, columns[depth] = i;
+        used[i] = 1, column[depth] = i;
         backtrack(depth + 1);
         used[i] = 0;
     }
