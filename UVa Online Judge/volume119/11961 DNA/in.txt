@@ -1,0 +1,51 @@
+25
+5 4
+GGTGC
+3 3
+GGA
+5 5
+AGGGG
+1 1
+G
+2 1
+GA
+2 1
+AC
+3 2
+TCC
+2 1
+CT
+3 2
+GAA
+4 4
+TACG
+2 1
+AC
+3 3
+TAT
+1 1
+T
+4 2
+ATAC
+3 1
+CAA
+4 3
+ATTG
+3 3
+GCG
+4 4
+CTTC
+4 1
+CTGG
+2 2
+CG
+4 4
+CCCT
+4 2
+CGTG
+1 1
+A
+3 3
+GAA
+2 1
+CA

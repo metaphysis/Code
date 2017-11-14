@@ -1,4 +1,4 @@
-// The dominoes solitaire
+// The Dominoes Solitaire
 // UVa ID: 10503
 // Verdict: Accepted
 // Submission Date: 2017-11-12
