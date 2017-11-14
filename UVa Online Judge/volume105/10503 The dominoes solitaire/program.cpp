@@ -33,12 +33,14 @@ int finished = 0;
 
 void dfs(int depth, int ending)
 {
+    if (finished) return;
+
     if (depth == n)
     {
         if (ending == tail) finished = 1;
         return;
     }
-    
+
     for (int i = 0; i < m; i++)
     {
         if (used[i]) continue;
@@ -64,14 +66,11 @@ int main(int argc, char *argv[])
     while (cin >> n, n > 0)
     {
         cin >> m;
-        
-        cin >> dot1 >> dot2;
-        head = dot2;
-        cin >> dot1 >> dot2;
-        tail = dot1;
-        
-        for (int i = 0; i < m; i++)
-            cin >> dominoes[i][0] >> dominoes[i][1];
+
+        cin >> dot1 >> dot2; head = dot2;
+        cin >> dot1 >> dot2; tail = dot1;
+
+        for (int i = 0; i < m; i++) cin >> dominoes[i][0] >> dominoes[i][1];
 
         memset(used, 0, sizeof(used));
         finished = 0;
