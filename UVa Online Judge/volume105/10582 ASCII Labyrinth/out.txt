@@ -1,0 +1,4 @@
+Number of solutions: 2
+Number of solutions: 2
+Number of solutions: 0
+Number of solutions: 1
