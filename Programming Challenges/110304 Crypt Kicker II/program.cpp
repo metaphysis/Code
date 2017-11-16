@@ -13,8 +13,8 @@
 
 using namespace std;
 
-vector < vector < string > >encrypted;
-vector < string > plain;
+vector<vector<string>> encrypted;
+vector<string> plain;
 
 void printPlain(string cipher)
 {
@@ -28,7 +28,6 @@ void printPlain(string cipher)
             if (n < encrypted[m].size() - 1)
                 cout << " ";
         }
-
         cout << endl;
     }
 }
@@ -50,7 +49,7 @@ void decipher()
             }
         if (allMatched == false)
             continue;
-        
+
         string cipher(26, '*');
         for (int k = 0; k < plain.size(); k++)
         {
@@ -102,16 +101,14 @@ int main(int ac, char *av[])
         {
             iss.clear();
             iss.str(line);
-            vector < string > tmp;
-            while (iss >> word)
-                tmp.push_back(word);
+            vector<string> tmp;
+            while (iss >> word) tmp.push_back(word);
             encrypted.push_back(tmp);
         }
 
         decipher();
 
-        if (cases > 0)
-            cout << endl;
+        if (cases > 0) cout << endl;
     }
 
     return 0;

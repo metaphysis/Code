@@ -15,7 +15,7 @@ using namespace std;
 char grid[60][60];
 int row, column;
 int reflect[3600][4], indexer[60][60], flapped[3600], visited[3600];
-vector < pair<int, int> > mirrors(3600);
+vector<pair<int, int>> mirrors(3600);
 
 // up = 0, right = 1, down = 2, left = 3
 int offset[4][2] = { {-1, 0}, {0, 1}, {1, 0}, {0, -1} };

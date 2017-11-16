@@ -105,8 +105,7 @@ void output(string line, string cipher)
 }
 	
 // 解密。
-void decipher(vector < string > &dict, vector < string > &word, int start, 
-								string &cipher)
+void decipher(vector<string> &dict, vector<string> &word, int start, string &cipher)
 {
 	// 保存当前密码，以便不能匹配时恢复。
 	string tmp = cipher;
