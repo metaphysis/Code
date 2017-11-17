@@ -28,14 +28,14 @@
 using namespace std;
 
 string line;
-int m, n, maze[70][70], used[70][70], path, cases;
-// right 0, down 1, left 2, up 3
+int m, n, maze[70][70], used[70][70], paths, cases;
 int offset[4][2] = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
 
+// right 0, down 1, left 2, up 3
 void dfs(int i, int j, int d)
 {
-    if (i == m && j == n) { path++; return; }
-    
+    if (i == m && j == n) { paths++; return; }
+
     used[i][j] = 1;
     for (int next = 0; next <= 3; next++)
     {
@@ -74,10 +74,10 @@ int main(int argc, char *argv[])
         }
         getline(cin, line);
 
-        path = 0, maze[1][1] = 3;
+        paths = 0, maze[1][1] = 3;
         dfs(1, 1, 0); dfs(1, 1, 1);
-        
-        cout << "Number of solutions: " << path << '\n';
+
+        cout << "Number of solutions: " << paths << '\n';
     }
 
     return 0;
