@@ -18,7 +18,7 @@ using namespace std;
 #define DUMMY (-1)
 
 int parent[MAXN];
-map < string, int > genealogy;
+map<string, int> genealogy;
 	
 bool isAncestor(string fName, string sName)
 {

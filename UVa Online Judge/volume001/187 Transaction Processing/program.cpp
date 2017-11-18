@@ -20,9 +20,9 @@ struct transaction
     long long money; 
 };
 
-map < string, string > account;
-vector < string > sequences;
-vector < transaction > allTransactions;
+map<string, string> account;
+vector<string> sequences;
+vector<transaction> allTransactions;
 
 void checkBalances(string sequenceNumber)
 {

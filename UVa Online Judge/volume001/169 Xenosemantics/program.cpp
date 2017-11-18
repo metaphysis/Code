@@ -68,10 +68,10 @@ bool cmpWord(word x, word y)
 }
 
 string block;
-vector < letter > letters;
-vector < word > words;
-map < string, vector < word > > candidates;
-vector < vector < word > > trueWords;
+vector<letter> letters;
+vector<word> words;
+map<string, vector<word>> candidates;
+vector<vector<word>> trueWords;
 
 void findTrueWord()
 {
@@ -145,7 +145,7 @@ void findTrueWord()
     }
     
     trueWords.clear();
-    for (map < string, vector < word > >::iterator it = candidates.begin(); it != candidates.end(); it++)
+    for (map<string, vector<word>>::iterator it = candidates.begin(); it != candidates.end(); it++)
         if ((*it).second.size() > 1)
             trueWords.push_back((*it).second);
     

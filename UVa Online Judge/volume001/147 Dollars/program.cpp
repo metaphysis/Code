@@ -6,8 +6,7 @@
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 //
-// PDF 格式的试题描述和 UVa 网页上的试题描述有出入，主
-// 要是上限提高到 300 美元。输出格式亦有改变。
+// PDF 格式的试题描述和 UVa 网页上的试题描述有出入，主是上限提高到 300 美元。输出格式亦有改变。
 
 #include <iostream>
 #include <sstream>

@@ -90,8 +90,8 @@ void parseStrategy(node *parent)
 }
 
 int scores = 0;
-vector < int > myMemory, yourMemory;
-vector < node* > nodes;
+vector<int> myMemory, yourMemory;
+vector< node*> nodes;
 
 bool evaluatePart(string part, vector < int >& my, vector < int >& your)
 {
@@ -127,7 +127,7 @@ bool evaluatePart(string part, vector < int >& my, vector < int >& your)
     }
 }
 
-bool evaluate(string conditions, vector < int >& my, vector < int >& your)
+bool evaluate(string conditions, vector <int> &my, vector<int> &your)
 {
     int orIndex = conditions.find("OR", 0);
     int andIndex = conditions.find("AND", 0);

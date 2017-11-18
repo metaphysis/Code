@@ -23,8 +23,8 @@ struct line
     point start, end;
 };
 
-vector < vector < point > >lines;
-vector < point > points;
+vector<vector<point>> lines;
+vector<point> points;
 
 bool pointCmp(point a, point b)
 {
@@ -79,7 +79,7 @@ void find()
 {
     sort(points.begin(), points.end(), pointCmp);
 
-    vector < line > slopes;
+    vector<line> slopes;
     for (int i = 0; i < points.size() - 1; i++)
         for (int j = i + 1; j < points.size(); j++)
         {

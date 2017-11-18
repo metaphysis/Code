@@ -14,8 +14,8 @@
 
 using namespace std;
 
-vector < vector < string > > profiles, titles;
-vector < int > gaps;
+vector<vector<string>> profiles, titles;
+vector<int> gaps;
 
 void processProfile(string line)
 {
@@ -57,7 +57,7 @@ void processTitle(string line)
         }
         
     istringstream iss(line);
-    vector < string > singleTitle;
+    vector<string> singleTitle;
     string word;
     while (iss >> word)
         singleTitle.push_back(word);

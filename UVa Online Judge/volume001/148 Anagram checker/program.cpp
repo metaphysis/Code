@@ -23,7 +23,7 @@ struct item
 
 item words[2001];
 int goalCount[26], currentCount[26];
-vector < string > single;
+vector<string> single;
 bool used[2001];
 int wordGet[2001], indexGet, total;
 string targetLine;
@@ -106,7 +106,6 @@ void backtrack(int start, int length, int target)
         used[i] = false;
         indexGet--;
     }
-        
 }
 
 int main(int argc, char *argv[])

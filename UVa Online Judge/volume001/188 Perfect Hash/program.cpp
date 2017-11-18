@@ -13,11 +13,11 @@
 
 using namespace std;
 
-vector < int > words;
+vector<int> words;
 
 bool test(long long C)
 {
-    vector < int > used;
+    vector<int> used;
     for (int i = 0; i < words.size(); i++)
         used.push_back(false);
       

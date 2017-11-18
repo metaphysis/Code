@@ -13,9 +13,9 @@
 
 using namespace std;
 
-vector < char > nonDealer;
-vector < char > dealer;
-vector < char > piles;
+vector<char> nonDealer;
+vector<char> dealer;
+vector<char> piles;
 int cardNeeded, newCardNeeded, exposer;
 char card;
 

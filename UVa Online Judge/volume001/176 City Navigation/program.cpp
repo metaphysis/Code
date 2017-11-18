@@ -44,7 +44,7 @@ house makeHouse(char code, int index, int number, int step)
 
 void bfs()
 {
-    queue < house > next;
+    queue<house> next;
     next.push(from);
 
     discovered.clear();

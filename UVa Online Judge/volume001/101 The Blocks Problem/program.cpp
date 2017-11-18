@@ -59,7 +59,7 @@ void pileOnto(int a, int b, pair < int, int > aIndex, pair < int, int > bIndex)
 	pileOver(a, b, aIndex, bIndex);
 }
 
-pair < int, int > findIndex(int x)
+pair<int, int> findIndex(int x)
 {
 	for (int i = 0; i < nBlocks; i++)
 		for (int j = 0; j < blocks[i]; j++)
@@ -97,8 +97,8 @@ int main(int ac, char *av[])
 		if (a == b)
 			continue;
 
-		pair < int, int > aIndex = findIndex(a);
-		pair < int, int > bIndex = findIndex(b);
+		pair<int, int> aIndex = findIndex(a);
+		pair<int, int> bIndex = findIndex(b);
 		if (aIndex.first == bIndex.first)
 			continue;
 

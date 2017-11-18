@@ -13,7 +13,7 @@
 
 using namespace std;
 
-vector < vector < int > > nodes;
+vector<vector<int>> nodes;
 bool initialized = false;
 int paskill, lisper, visited[26];
 const int UNVISITED = 0, PASKILL_VISITED = 1, LISPER_VISITED = 2, NONE = -1;

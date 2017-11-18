@@ -16,7 +16,7 @@ using namespace std;
 
 #define MAXN 15
 
-map < string, int > money;
+map< string, int> money;
 string name[MAXN];
 
 int main (int argc, char const* argv[])

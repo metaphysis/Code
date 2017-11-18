@@ -32,11 +32,7 @@ void printCycle(int numerator, int denominator)
     cout << (numerator / denominator) << '.';
     numerator %= denominator;
 
-    if (numerator == 0)
-    {
-        cout << "0\n";
-        return;
-    }
+    if (numerator == 0) { cout << "0\n"; return; }
 
     vector<int> digits(denominator + 1), position(denominator + 1);
     vector<bool> appeared(denominator + 1);
@@ -56,17 +52,12 @@ void printCycle(int numerator, int denominator)
     if (numerator > 0)
     {
         loopStart = position[numerator];
-        for (int i = 0; i < position[numerator]; i++)
-            cout << digits[i];
+        for (int i = 0; i < position[numerator]; i++) cout << digits[i];
         cout << '(';
     }
-
-    for (int i = loopStart; i < index; i++)
-        cout << digits[i];
-
+    for (int i = loopStart; i < index; i++) cout << digits[i];
     if (numerator > 0) cout << ')';
-
-    cout << endl;
+    cout << '\n';
 }
 
 int main(int argc, char *argv[])
@@ -77,7 +68,6 @@ int main(int argc, char *argv[])
     for (int c = 1; c <= cases; c++)
     {
         cin >> numerator >> denominator;
-        
         printCycle(numerator, denominator);
     }
 

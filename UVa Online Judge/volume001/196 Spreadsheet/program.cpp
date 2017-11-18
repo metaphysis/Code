@@ -12,8 +12,8 @@
 
 using namespace std;
 
-map < string, int > cells;
-map < string, vector < string > > formula;
+map<string, int> cells;
+map<string, vector<string>> formula;
 string columns = "ZABCDEFGHIJKLMNOPQRSTUVWXY";
 
 string getCellId(int i, int j)

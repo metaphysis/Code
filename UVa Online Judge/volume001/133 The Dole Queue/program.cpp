@@ -13,7 +13,7 @@
 using namespace std;
 
 int n, k, m;
-vector < int > circle;
+vector<int> circle;
 
 // count off in counter-clockwise and return the index of target.
 int findCCW(int right, int number)

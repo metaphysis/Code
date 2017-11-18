@@ -58,8 +58,8 @@ bool cmp(title a, title b)
 
 int main (int argc, char const* argv[])
 {
-	set < string > ignore;
-	vector < title > titles;
+	set<string> ignore;
+	vector<title> titles;
 	string line;
 	
 	while (getline(cin, line))

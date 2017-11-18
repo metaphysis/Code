@@ -14,7 +14,7 @@
 using namespace std;
 
 string nodes;
-map < char, string > neighbours;
+map<char, string> neighbours;
 
 int getBandwidth()
 {

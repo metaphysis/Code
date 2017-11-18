@@ -14,9 +14,9 @@
 
 using namespace std;
 
-vector < vector < int > > edges;
-vector < bool > black;
-vector < int > answer;
+vector<vector<int>> edges;
+vector<bool> black;
+vector<int> answer;
 int maximum, n;
 
 void backtrack(int node)

@@ -30,9 +30,9 @@ bool operator <(topCard x, topCard y)
 }
 
 string cardValue = "A23456789TJQK";
-vector < card > cards;
-vector < topCard > top;
-vector < vector < card > > piles(16);
+vector<card> cards;
+vector<topCard> top;
+vector<vector<card>> piles(16);
 int twoPair[2], threePair[3];
 int testcase = 0;
 

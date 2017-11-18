@@ -13,7 +13,7 @@
 using namespace std;
 
 string plaintext, cyphertext1, cyphertext2;
-vector < int >k, key;
+vector<int> k, key;
 
 string encrypt(string plain)
 {
