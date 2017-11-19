@@ -19,7 +19,7 @@ struct event
     string description;
 };
 
-vector < event > calendar;
+vector<event> calendar;
 int daysInMonth[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 int todayDays;
 
@@ -98,7 +98,7 @@ int main(int argc, char* argv[])
 {   
     string line, category, description;
     int year, month, day, priority, index = 1;
-    bool printBlankLine = false;
+    int cases = 0;
     
     cin >> year;
     while (cin >> category, category != "#")
@@ -115,14 +115,9 @@ int main(int argc, char* argv[])
                 dateToDays(year + 1, month, day), trimLeft(description)});
             continue;
         }
-        
-        if (printBlankLine == false)
-            printBlankLine = true;
-        else
-            cout << endl;
-            
+        if (cases++) cout << '\n';
         cin >> day >> month;
-        showCalendar(year, month, day);        
+        showCalendar(year, month, day);
     }
     
 	return 0;
