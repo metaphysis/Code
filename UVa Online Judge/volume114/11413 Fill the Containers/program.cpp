@@ -1,7 +1,7 @@
-// Winterim Backpacking Trip
-// UVa ID: 907
+// Fill the Containers
+// UVa ID: 11413
 // Verdict: Accepted
-// Submission Date: 2017-04-09
+// Submission Date: 2017-11-28
 // UVa Run Time: 0.000s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
@@ -27,16 +27,16 @@
 
 using namespace std;
 
-long long partition(long long data[], long long n, long long k)
+int partition(int data[], int n, int k)
 {
-    long long left = 0, right = 0;
+    int left = 0, right = 0;
 
     for (int i = 0; i < n; i++) right += data[i];
     
     while (left <= right)
     {
-        long long middle = (left + right) / 2;
-        long long j = 0, p = 0, sum = 0, ok = 1;
+        int middle = (left + right) / 2;
+        int j = 0, p = 0, sum = 0, ok = 1;
 
         while (j < n && p <= k)
         {
@@ -65,17 +65,15 @@ long long partition(long long data[], long long n, long long k)
 
 int main(int argc, char *argv[])
 {
-    cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
+    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    long long N, K, dist[610];
-    
-    while (cin >> N >> K)
+    int data[1010], n, k;
+    while (cin >> n >> k)
     {
-        N++, K++;
-        for (int i = 0; i < N; i++)
-            cin >> dist[i];
-        cout << partition(dist, N, K) << '\n';
+        for (int i = 0; i < n; i++)
+            cin >> data[i];
+        cout << partition(data, n, k) << '\n';
     }
-    
-	return 0;
+
+    return 0;
 }

@@ -52,10 +52,10 @@ long long partition(long long data[], long long n, long long k)
 
         if (sum > 0) p++;
 
-        if (p <= k)
-            right = middle - 1;
-        else
+        if (p > k)
             left = middle + 1;
+        else
+            right = middle - 1;
     }
     
     return left;

@@ -1,0 +1,752 @@
+0 Fuel consumption 55
+10 Gas station
+34 Mechanic
+58 Leak
+85 Gas station
+104 Leak
+128 Goal
+0 Fuel consumption 4
+13 Leak
+14 Fuel consumption 48
+35 Gas station
+64 Gas station
+81 Fuel consumption 1
+95 Leak
+99 Fuel consumption 87
+108 Mechanic
+129 Leak
+133 Goal
+0 Fuel consumption 68
+5 Leak
+13 Mechanic
+21 Leak
+36 Leak
+59 Fuel consumption 13
+63 Fuel consumption 61
+85 Gas station
+111 Mechanic
+126 Goal
+0 Fuel consumption 31
+12 Gas station
+41 Fuel consumption 25
+59 Leak
+88 Mechanic
+89 Mechanic
+103 Fuel consumption 43
+125 Gas station
+147 Gas station
+176 Fuel consumption 85
+176 Fuel consumption 63
+184 Leak
+208 Mechanic
+227 Gas station
+229 Mechanic
+232 Gas station
+261 Fuel consumption 43
+278 Gas station
+290 Goal
+0 Fuel consumption 32
+6 Fuel consumption 13
+26 Mechanic
+30 Fuel consumption 69
+38 Mechanic
+41 Leak
+67 Fuel consumption 90
+92 Goal
+0 Fuel consumption 76
+23 Leak
+24 Mechanic
+49 Leak
+63 Mechanic
+82 Leak
+107 Leak
+117 Fuel consumption 39
+141 Gas station
+167 Mechanic
+196 Fuel consumption 25
+201 Leak
+212 Gas station
+226 Leak
+251 Gas station
+254 Fuel consumption 24
+259 Fuel consumption 70
+284 Mechanic
+295 Gas station
+319 Goal
+0 Fuel consumption 68
+21 Leak
+32 Mechanic
+34 Leak
+38 Gas station
+42 Leak
+53 Gas station
+56 Leak
+79 Fuel consumption 97
+94 Goal
+0 Fuel consumption 21
+17 Gas station
+23 Mechanic
+48 Gas station
+53 Fuel consumption 87
+75 Leak
+94 Fuel consumption 46
+99 Leak
+109 Gas station
+133 Leak
+157 Mechanic
+178 Mechanic
+198 Gas station
+210 Mechanic
+237 Fuel consumption 69
+258 Fuel consumption 59
+277 Fuel consumption 84
+298 Goal
+0 Fuel consumption 74
+15 Mechanic
+15 Mechanic
+43 Fuel consumption 37
+54 Fuel consumption 29
+82 Leak
+83 Gas station
+85 Gas station
+106 Gas station
+115 Fuel consumption 49
+119 Fuel consumption 93
+146 Mechanic
+171 Gas station
+180 Mechanic
+195 Fuel consumption 79
+221 Fuel consumption 78
+243 Mechanic
+259 Gas station
+278 Mechanic
+285 Gas station
+311 Leak
+333 Leak
+341 Leak
+350 Gas station
+354 Leak
+355 Mechanic
+378 Gas station
+403 Gas station
+427 Fuel consumption 83
+449 Goal
+0 Fuel consumption 92
+18 Gas station
+22 Gas station
+45 Mechanic
+54 Fuel consumption 46
+77 Leak
+102 Fuel consumption 80
+120 Fuel consumption 96
+143 Gas station
+159 Fuel consumption 18
+175 Leak
+187 Mechanic
+190 Leak
+198 Fuel consumption 34
+198 Mechanic
+225 Mechanic
+242 Leak
+254 Fuel consumption 24
+261 Fuel consumption 8
+263 Leak
+266 Mechanic
+270 Mechanic
+274 Gas station
+282 Mechanic
+287 Fuel consumption 23
+297 Leak
+322 Leak
+323 Goal
+0 Fuel consumption 15
+24 Fuel consumption 3
+50 Mechanic
+61 Leak
+81 Fuel consumption 80
+83 Mechanic
+88 Goal
+0 Fuel consumption 18
+15 Gas station
+15 Mechanic
+35 Mechanic
+42 Leak
+51 Fuel consumption 57
+77 Fuel consumption 13
+94 Gas station
+100 Mechanic
+113 Leak
+128 Fuel consumption 36
+130 Leak
+146 Leak
+164 Leak
+191 Gas station
+201 Gas station
+214 Leak
+224 Goal
+0 Fuel consumption 61
+17 Leak
+30 Mechanic
+49 Mechanic
+67 Fuel consumption 21
+74 Mechanic
+74 Gas station
+80 Fuel consumption 85
+103 Goal
+0 Fuel consumption 23
+23 Fuel consumption 84
+29 Mechanic
+48 Gas station
+57 Leak
+60 Gas station
+60 Gas station
+71 Mechanic
+79 Gas station
+92 Mechanic
+114 Gas station
+121 Fuel consumption 29
+145 Mechanic
+150 Mechanic
+170 Mechanic
+173 Goal
+0 Fuel consumption 35
+3 Fuel consumption 38
+19 Mechanic
+46 Mechanic
+68 Mechanic
+86 Mechanic
+101 Gas station
+114 Mechanic
+124 Fuel consumption 56
+138 Gas station
+141 Mechanic
+142 Fuel consumption 95
+157 Fuel consumption 56
+158 Gas station
+186 Leak
+215 Mechanic
+217 Gas station
+217 Leak
+231 Leak
+245 Mechanic
+247 Mechanic
+274 Fuel consumption 37
+302 Fuel consumption 27
+322 Goal
+0 Fuel consumption 92
+19 Fuel consumption 98
+36 Leak
+39 Gas station
+56 Leak
+66 Gas station
+87 Leak
+115 Leak
+136 Leak
+165 Leak
+165 Fuel consumption 38
+166 Fuel consumption 94
+184 Mechanic
+193 Gas station
+206 Fuel consumption 57
+213 Mechanic
+214 Gas station
+238 Mechanic
+263 Leak
+279 Mechanic
+303 Fuel consumption 7
+327 Leak
+330 Mechanic
+336 Goal
+0 Fuel consumption 1
+5 Gas station
+17 Mechanic
+23 Mechanic
+23 Mechanic
+27 Mechanic
+42 Mechanic
+66 Mechanic
+69 Fuel consumption 2
+84 Mechanic
+97 Mechanic
+103 Gas station
+110 Gas station
+115 Leak
+142 Leak
+147 Fuel consumption 12
+152 Gas station
+180 Mechanic
+181 Gas station
+195 Gas station
+196 Gas station
+214 Mechanic
+225 Gas station
+226 Fuel consumption 37
+238 Gas station
+254 Fuel consumption 8
+267 Goal
+0 Fuel consumption 30
+20 Gas station
+33 Gas station
+44 Leak
+62 Gas station
+63 Leak
+77 Leak
+91 Mechanic
+102 Fuel consumption 75
+103 Fuel consumption 72
+116 Mechanic
+118 Mechanic
+131 Mechanic
+140 Gas station
+148 Gas station
+156 Fuel consumption 13
+170 Leak
+186 Mechanic
+212 Gas station
+234 Mechanic
+252 Leak
+281 Mechanic
+302 Mechanic
+327 Leak
+340 Goal
+0 Fuel consumption 25
+29 Leak
+49 Fuel consumption 18
+60 Mechanic
+80 Leak
+81 Fuel consumption 33
+100 Mechanic
+118 Fuel consumption 31
+124 Mechanic
+128 Gas station
+145 Fuel consumption 44
+153 Leak
+160 Leak
+172 Mechanic
+193 Gas station
+203 Goal
+0 Fuel consumption 23
+21 Mechanic
+24 Leak
+30 Gas station
+39 Gas station
+55 Fuel consumption 42
+75 Mechanic
+75 Leak
+75 Mechanic
+93 Leak
+99 Fuel consumption 51
+101 Gas station
+112 Goal
+0 Fuel consumption 54
+21 Leak
+39 Mechanic
+63 Fuel consumption 91
+66 Mechanic
+67 Gas station
+94 Leak
+118 Leak
+138 Leak
+138 Goal
+0 Fuel consumption 34
+1 Mechanic
+8 Mechanic
+32 Leak
+59 Leak
+70 Gas station
+93 Mechanic
+115 Fuel consumption 88
+132 Gas station
+153 Gas station
+163 Goal
+0 Fuel consumption 88
+10 Leak
+29 Gas station
+39 Gas station
+58 Gas station
+72 Leak
+98 Fuel consumption 64
+123 Mechanic
+148 Gas station
+175 Goal
+0 Fuel consumption 82
+7 Fuel consumption 63
+13 Mechanic
+34 Goal
+0 Fuel consumption 67
+22 Goal
+0 Fuel consumption 13
+7 Leak
+16 Leak
+39 Leak
+40 Fuel consumption 71
+63 Mechanic
+65 Fuel consumption 42
+89 Gas station
+115 Mechanic
+121 Gas station
+137 Leak
+150 Gas station
+172 Leak
+176 Goal
+0 Fuel consumption 82
+19 Leak
+26 Leak
+37 Fuel consumption 85
+48 Gas station
+49 Fuel consumption 43
+77 Mechanic
+105 Mechanic
+130 Leak
+159 Leak
+175 Mechanic
+194 Fuel consumption 31
+218 Goal
+0 Fuel consumption 47
+5 Fuel consumption 80
+10 Leak
+27 Fuel consumption 9
+53 Gas station
+73 Leak
+83 Fuel consumption 79
+94 Leak
+113 Fuel consumption 16
+125 Gas station
+146 Gas station
+172 Leak
+190 Mechanic
+202 Gas station
+208 Gas station
+236 Fuel consumption 2
+250 Mechanic
+263 Gas station
+279 Fuel consumption 63
+308 Gas station
+313 Leak
+338 Mechanic
+348 Fuel consumption 55
+355 Leak
+377 Fuel consumption 99
+400 Gas station
+416 Fuel consumption 95
+437 Goal
+0 Fuel consumption 59
+20 Leak
+33 Leak
+49 Leak
+67 Mechanic
+72 Gas station
+99 Leak
+125 Fuel consumption 86
+143 Mechanic
+150 Fuel consumption 2
+169 Leak
+179 Gas station
+203 Gas station
+229 Leak
+244 Gas station
+250 Gas station
+274 Leak
+293 Fuel consumption 33
+306 Goal
+0 Fuel consumption 66
+7 Fuel consumption 91
+16 Mechanic
+20 Leak
+29 Gas station
+44 Leak
+68 Leak
+78 Mechanic
+87 Fuel consumption 66
+108 Gas station
+128 Mechanic
+136 Mechanic
+158 Leak
+185 Leak
+214 Gas station
+218 Mechanic
+235 Gas station
+246 Leak
+269 Gas station
+298 Gas station
+309 Mechanic
+332 Goal
+0 Fuel consumption 37
+12 Leak
+14 Leak
+14 Gas station
+21 Goal
+0 Fuel consumption 87
+4 Leak
+33 Gas station
+51 Mechanic
+72 Leak
+98 Fuel consumption 70
+105 Gas station
+124 Mechanic
+153 Mechanic
+174 Gas station
+174 Mechanic
+184 Fuel consumption 2
+208 Goal
+0 Fuel consumption 26
+20 Mechanic
+46 Mechanic
+50 Leak
+54 Goal
+0 Fuel consumption 70
+18 Mechanic
+20 Fuel consumption 44
+25 Fuel consumption 26
+41 Leak
+69 Mechanic
+91 Mechanic
+113 Fuel consumption 52
+142 Gas station
+143 Gas station
+165 Gas station
+165 Gas station
+194 Fuel consumption 59
+209 Fuel consumption 30
+235 Gas station
+261 Fuel consumption 88
+289 Fuel consumption 42
+306 Mechanic
+311 Leak
+324 Mechanic
+327 Gas station
+353 Goal
+0 Fuel consumption 79
+9 Mechanic
+31 Gas station
+36 Mechanic
+51 Leak
+69 Fuel consumption 81
+82 Leak
+107 Gas station
+121 Fuel consumption 87
+124 Gas station
+152 Fuel consumption 72
+165 Mechanic
+167 Fuel consumption 20
+190 Fuel consumption 58
+203 Fuel consumption 39
+213 Gas station
+231 Fuel consumption 12
+258 Fuel consumption 56
+265 Mechanic
+283 Gas station
+286 Leak
+307 Goal
+0 Fuel consumption 29
+15 Mechanic
+25 Mechanic
+53 Gas station
+76 Fuel consumption 94
+85 Leak
+98 Gas station
+106 Leak
+134 Goal
+0 Fuel consumption 43
+12 Fuel consumption 31
+31 Gas station
+49 Fuel consumption 64
+62 Mechanic
+71 Leak
+77 Mechanic
+104 Mechanic
+126 Leak
+147 Gas station
+147 Leak
+163 Gas station
+178 Goal
+0 Fuel consumption 9
+28 Gas station
+47 Mechanic
+58 Leak
+70 Leak
+83 Mechanic
+94 Gas station
+95 Leak
+103 Gas station
+126 Fuel consumption 52
+127 Leak
+141 Leak
+151 Gas station
+157 Gas station
+168 Gas station
+192 Mechanic
+210 Fuel consumption 27
+219 Leak
+235 Gas station
+248 Mechanic
+252 Leak
+274 Gas station
+281 Leak
+281 Leak
+305 Fuel consumption 49
+322 Fuel consumption 36
+327 Fuel consumption 75
+344 Goal
+0 Fuel consumption 73
+26 Leak
+47 Gas station
+49 Fuel consumption 59
+72 Leak
+99 Leak
+106 Leak
+114 Leak
+140 Leak
+164 Goal
+0 Fuel consumption 99
+21 Fuel consumption 18
+33 Leak
+35 Leak
+37 Gas station
+42 Fuel consumption 13
+43 Fuel consumption 10
+55 Fuel consumption 21
+74 Fuel consumption 1
+103 Gas station
+117 Gas station
+126 Leak
+143 Fuel consumption 72
+168 Fuel consumption 60
+171 Mechanic
+191 Fuel consumption 17
+220 Leak
+221 Fuel consumption 3
+246 Gas station
+249 Gas station
+258 Mechanic
+264 Leak
+281 Leak
+294 Goal
+0 Fuel consumption 43
+10 Mechanic
+28 Fuel consumption 25
+46 Mechanic
+60 Gas station
+83 Fuel consumption 56
+87 Fuel consumption 12
+108 Fuel consumption 98
+119 Mechanic
+129 Gas station
+140 Fuel consumption 10
+166 Gas station
+170 Mechanic
+175 Leak
+199 Fuel consumption 69
+222 Mechanic
+240 Leak
+260 Goal
+0 Fuel consumption 25
+1 Mechanic
+12 Gas station
+39 Mechanic
+66 Gas station
+87 Leak
+106 Mechanic
+113 Mechanic
+120 Goal
+0 Fuel consumption 53
+21 Mechanic
+22 Gas station
+42 Leak
+49 Leak
+58 Mechanic
+67 Goal
+0 Fuel consumption 19
+8 Mechanic
+16 Leak
+29 Leak
+36 Gas station
+39 Gas station
+68 Gas station
+87 Fuel consumption 56
+97 Leak
+114 Goal
+0 Fuel consumption 30
+27 Gas station
+39 Gas station
+41 Fuel consumption 96
+66 Fuel consumption 24
+90 Mechanic
+113 Gas station
+117 Fuel consumption 54
+146 Fuel consumption 39
+152 Gas station
+166 Fuel consumption 37
+195 Goal
+0 Fuel consumption 92
+17 Fuel consumption 21
+34 Goal
+0 Fuel consumption 48
+2 Leak
+30 Fuel consumption 74
+33 Gas station
+35 Goal
+0 Fuel consumption 14
+0 Leak
+18 Leak
+42 Leak
+50 Leak
+70 Mechanic
+72 Leak
+89 Mechanic
+94 Gas station
+110 Gas station
+132 Fuel consumption 18
+137 Mechanic
+145 Gas station
+159 Goal
+0 Fuel consumption 75
+10 Gas station
+30 Mechanic
+36 Leak
+51 Mechanic
+75 Fuel consumption 39
+85 Fuel consumption 81
+108 Fuel consumption 67
+115 Mechanic
+141 Gas station
+141 Mechanic
+141 Fuel consumption 8
+144 Mechanic
+160 Mechanic
+170 Mechanic
+178 Mechanic
+205 Gas station
+211 Fuel consumption 10
+239 Gas station
+265 Goal
+0 Fuel consumption 49
+21 Gas station
+21 Fuel consumption 40
+23 Mechanic
+26 Fuel consumption 99
+42 Fuel consumption 55
+61 Leak
+80 Leak
+108 Mechanic
+133 Gas station
+156 Leak
+182 Gas station
+194 Gas station
+213 Gas station
+219 Fuel consumption 35
+223 Mechanic
+236 Gas station
+242 Gas station
+267 Leak
+278 Fuel consumption 93
+298 Mechanic
+305 Gas station
+329 Leak
+339 Gas station
+357 Mechanic
+383 Fuel consumption 33
+389 Fuel consumption 44
+390 Fuel consumption 5
+416 Goal
+0 Fuel consumption 0
