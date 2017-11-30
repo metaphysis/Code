@@ -20,9 +20,7 @@ int main(int argc, char *argv[])
 {
     int factors[3] = { 2, 3, 5 };
     set<bigNumber> uglyNumbers;
-    priority_queue< bigNumber,
-                    vector<bigNumber>,
-                    greater<bigNumber> > candidates;
+    priority_queue<bigNumber, vector<bigNumber>, greater<bigNumber>> candidates;
 
     candidates.push(1);
 
@@ -41,8 +39,7 @@ int main(int argc, char *argv[])
         for (int j = 0; j < 3; j++)
         {
             bigNumber next = top * factors[j];
-            if (uglyNumbers.count(next) == 0)
-                candidates.push(next);
+            if (uglyNumbers.count(next) == 0) candidates.push(next);
         }
 
         if (i == 1500)

@@ -13,10 +13,10 @@
 	
 using namespace std;
 	
-#define MAXSIZE 	1000	// 照片的最大数量。
-#define FARE_TYPES	24	// 时段收费的种类。
-#define ACCOUNT_FEE	200	// 月租费用，美分。
-#define TRIP_FEE	100	// 单次通过费用，美分。
+#define MAXSIZE 	1000    // 照片的最大数量。
+#define FARE_TYPES	24	    // 时段收费的种类。
+#define ACCOUNT_FEE	200	    // 月租费用，美分。
+#define TRIP_FEE	100	    // 单次通过费用，美分。
 	
 #ifndef DEBUG_MODE
 // #define DEBUG_MODE
@@ -25,14 +25,14 @@ using namespace std;
 struct license_photo
 {
 	string license;	// 车辆牌照
-	int time;	// 进入时间，为：日 * 24 * 60 + 小时 * 60 + 分钟。
+	int time;	    // 进入时间，为：日 * 24 * 60 + 小时 * 60 + 分钟。
 	string status;	// 车辆状态：enter，exit。
 	int location;	// 距离高速公路一端的距离。
-	int fare;	// 收费标准，根据进入时间确定，美分。
+	int fare;	    // 收费标准，根据进入时间确定，美分。
 };
 	
 #ifdef DEBUG_MODE
-ostream & operator << (ostream &out, license_photo &photo)
+ostream& operator<<(ostream &out, license_photo &photo)
 {
 	cout << photo.license << " " << photo.time << " ";
 	cout << photo.status << " ";
@@ -163,8 +163,7 @@ int main(int ac, char *av[])
 		bill_list(photos, capacity);
 		
 		// 无成对记录的测试数据不输出任何内容，仅输出一个换行。需要注意。
-		if (cases)
-			cout << endl;
+		if (cases) cout << endl;
 	}
 	
 	return 0;

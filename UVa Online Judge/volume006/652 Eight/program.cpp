@@ -75,15 +75,13 @@ int main(int argc, char *argv[])
 
     for (int c = 1; c <= cases; c++)
     {
-        if (c > 1)
-            cout << '\n';
+        if (c > 1) cout << '\n';
 
         string matrix(9, '0');
         for (int i = 0; i < 9; i++)
         {
             cin >> matrix[i];
-            if (matrix[i] == 'x')
-                matrix[i] = '9';
+            if (matrix[i] == 'x') matrix[i] = '9';
         }
 
         int tag = stoi(matrix), hash = tag % HASH;
