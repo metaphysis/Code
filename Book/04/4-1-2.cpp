@@ -33,35 +33,26 @@ void quickSort(int data[], int left, int right)
 {
     if (left < right)
     {
-        int pivot = data[left], low = left, high = right;
-        while (low < high)
+        int pivot = data[(left + right) >> 1];
+        int i = left - 1, j = right + 1;
+        while (i < j)
         {
-            while (low < high && data[high] > pivot)
-                high--;
-            data[low] = data[high];
-
-            while (low < high && data[low] < pivot)
-                low++;
-            data[high] = data[low];
+            do i++; while (data[i] < pivot);
+            do j--; while (data[j] > pivot);
+            if (i < j) swap(data[i], data[j]);
         }
-        data[low] = pivot;
-        quickSort(data, left, low - 1);
-        quickSort(data, low + 1, right);
+        quickSort(data, left, i - 1);
+        quickSort(data, j + 1, right);
     }
 }
 
 int main(int argc, char *argv[])
 {
     int data[MAX_SIZE];
-    for (int i = MAX_SIZE; i >= 1; i--)
-        data[MAX_SIZE - i] = i;
-
+    for (int i = 0; i < MAX_SIZE; i++) data[i] = i;
     random_shuffle(data, data + MAX_SIZE);
-
     output(data, MAX_SIZE);
-
     quickSort(data, 0, MAX_SIZE - 1);
-
     output(data, MAX_SIZE);
 
     return 0;

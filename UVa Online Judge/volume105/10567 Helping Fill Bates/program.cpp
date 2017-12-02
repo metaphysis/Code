@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
     string SS;
     vector<int> indices[257];
 
-    while (cin.read(&c, 1) and c != '\n') indices[c].push_back(idx++);
+    while (cin.get(c) and c != '\n') indices[c].push_back(idx++);
 
     cin >> q;
     for (int c = 1; c <= q; c++)

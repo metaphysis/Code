@@ -13,14 +13,13 @@ void output(int data[], int n)
     cout << endl;
 }
 
-void countingSort(int data[], int n, int ceiling)
+void countingSort(int data[], int n, int C)
 {
-    int *bucket = new int[ceiling];
+    int *bucket = new int[C];
     
-    for (int i = 0; i < n; i++)
-        bucket[data[i]]++;
+    for (int i = 0; i < n; i++) bucket[data[i]]++;
     
-    for (int i = 0, index = 0; i < ceiling; i++)
+    for (int i = 0, index = 0; i < C; i++)
         while (bucket[i]-- > 0)
             data[index++] = i;
             
@@ -30,8 +29,7 @@ void countingSort(int data[], int n, int ceiling)
 int main(int argc, char *argv[])
 {
     int data[MAX_SIZE];
-    for (int i = MAX_SIZE; i >= 1; i--)
-        data[MAX_SIZE - i] = i;
+    for (int i = 0; i < MAX_SIZE; i++) data[i] = i;
 
     random_shuffle(data, data + MAX_SIZE);
 

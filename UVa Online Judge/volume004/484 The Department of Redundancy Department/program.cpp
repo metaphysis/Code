@@ -43,8 +43,7 @@ int main(int argc, char *argv[])
         counter[n]++;
     }
     
-    for (auto i : number)
-        cout << i << " " << counter[i] << endl;
+    for (auto i : number) cout << i << " " << counter[i] << endl;
         
 	return 0;
 }

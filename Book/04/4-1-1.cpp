@@ -68,8 +68,7 @@ void bubbleSort(int data[], int n)
 int main(int argc, char *argv[])
 {
     int data[MAX_SIZE];
-    for (int i = MAX_SIZE; i >= 1; i--)
-        data[MAX_SIZE - i] = i;
+    for (int i = 0; i < MAX_SIZE; i++) data[i] = i;
 
     random_shuffle(data, data + MAX_SIZE);
 
