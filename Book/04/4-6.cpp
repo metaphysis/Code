@@ -1,15 +1,16 @@
+#include <algorithm>
+#include <cstdlib>
+#include <ctime>
 #include <iostream>
 #include <vector>
-#include <algorithm>
 
 using namespace std;
 
-const int MAX_SIZE = 20;
+const int MAXN = 1010, UP = 1000000;
 
-void output(int data[], int n)
+void display(int data[], int n)
 {
-    for (int i = 0; i < n; i++)
-        cout << data[i] << " ";
+    for (int i = 0; i < n; i++) cout << data[i] << " ";
     cout << endl;
 }
 
@@ -27,13 +28,13 @@ int getDigitAtIndex(int number, int index)
 void radixSort2(int data[], int n, int digits)
 {
     int *bucket[10];
-    
+
     for (int i = 0; i < 10; i++)
     {
         bucket[i] = new int[n + 1];
         bucket[i][0] = 0;
     }
-    
+
     for (int index = 0; index < digits; index++)
     {
         for (int i = 0; i < n; i++)
@@ -50,57 +51,53 @@ void radixSort2(int data[], int n, int digits)
             bucket[i][0] = 0;
         }
     }
-    
-    for (int i = 0; i < 10; i++)
-        delete [] bucket[i];
+
+    for (int i = 0; i < 10; i++) delete [] bucket[i];
 }
 
 // 使用计数排序的变种对数组按指定位置排序。
 void countingSort2(int data[], int n, int index)
 {
     int *bucket = new int[10], *sorted = new int[n];
-    
+
     for (int i = 0; i < 10; i++)
         bucket[i] = 0;
-        
+
     for (int i = 0; i < n; i++)
         bucket[getDigitAtIndex(data[i], index)]++;
-        
+
     for (int i = 1; i < 10; i++)
         bucket[i] += bucket[i - 1];
-    
+
     for (int i = n - 1; i >= 0; i--)
     {
         int digit = getDigitAtIndex(data[i], index);
         sorted[bucket[digit] - 1] = data[i];
         bucket[digit]--;
     }
-    
+
     for (int i = 0; i < n; i++)
         data[i] = sorted[i];
-                
+
     delete [] bucket, sorted;
 }
 
 void radixSort(int data[], int n, int digits)
 {
-    for (int index = 0; index < digits; index++)
-        countingSort2(data, n, index);
+    for (int index = 0; index < digits; index++) countingSort2(data, n, index);
 }
 
 int main(int argc, char *argv[])
 {
-    int data[MAX_SIZE];
-    for (int i = 0; i < MAX_SIZE; i++) data[i] = i;
+    srand(time(NULL));
 
-    random_shuffle(data, data + MAX_SIZE);
+    int data[MAXN];
+    for (int i = 0; i < MAXN; i++)  data[i] = rand() % UP;
 
-    output(data, MAX_SIZE);
-
-    radixSort(data, MAX_SIZE, 4);
-    //radixSort2(data, MAX_SIZE, 4);
-    
-    output(data, MAX_SIZE);
+    display(data, MAXN);
+    radixSort(data, MAXN, 6);
+    //radixSort2(data, MAXN, 6);
+    display(data, MAXN);
 
     return 0;
 }

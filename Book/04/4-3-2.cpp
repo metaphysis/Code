@@ -1,15 +1,16 @@
+#include <algorithm>
+#include <cstdlib>
+#include <ctime>
 #include <iostream>
 #include <vector>
-#include <algorithm>
 
 using namespace std;
 
-const int MAX_SIZE = 20;
+const int MAXN = 1010, UP = 1000000;
 
-void output(int data[], int n)
+void display(int data[], int n)
 {
-    for (int i = 0; i < n; i++)
-        cout << data[i] << " ";
+    for (int i = 0; i < n; i++) cout << data[i] << " ";
     cout << endl;
 }
 
@@ -51,16 +52,14 @@ void heapSort(int data[], int n)
 
 int main(int argc, char *argv[])
 {
-    int data[MAX_SIZE];
-    for (int i = 0; i < MAX_SIZE; i++) data[i] = i;
+    srand(time(NULL));
 
-    random_shuffle(data, data + MAX_SIZE);
+    int data[MAXN];
+    for (int i = 0; i < MAXN; i++)  data[i] = rand() % UP;
 
-    output(data, MAX_SIZE);
-
-    heapSort(data, MAX_SIZE);
-    
-    output(data, MAX_SIZE);
+    display(data, MAXN);
+    heapSort(data, MAXN);
+    display(data, MAXN);
 
     return 0;
 }

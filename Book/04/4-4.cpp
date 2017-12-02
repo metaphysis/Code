@@ -1,60 +1,56 @@
+#include <algorithm>
+#include <cstdlib>
+#include <ctime>
 #include <iostream>
 #include <vector>
-#include <algorithm>
 
 using namespace std;
 
-const int MAX_SIZE = 20;
+const int MAXN = 1010, UP = 1000000;
 
-void output(int data[], int n)
+void display(int data[], int n)
 {
-    for (int i = 0; i < n; i++)
-        cout << data[i] << " ";
+    for (int i = 0; i < n; i++) cout << data[i] << " ";
     cout << endl;
 }
 
-int temp[MAX_SIZE];
+int tmp[MAXN];
 
-void merge(int data[], int first, int middle, int last)
+void merge(int data[], int left, int middle, int right)
 {
-    int i = first, j = middle + 1, k = 0;
+    int i = left, j = middle + 1, k = 0;
     
-    while (i <= middle && j <= last)
-        temp[k++] = data[i] < data[j] ? data[i++] : data[j++];
+    while (i <= middle && j <= right)
+        tmp[k++] = data[i] <= data[j] ? data[i++] : data[j++];
         
-    while (i <= middle)
-        temp[k++] = data[i++];
+    while (i <= middle) tmp[k++] = data[i++];
         
-    while (j <= last)
-        temp[k++] = data[j++];
+    while (j <= right) tmp[k++] = data[j++];
         
-    for (int i = 0; i < k; i++)
-        data[first + i] = temp[i];
+    for (int i = 0; i < k; i++)  data[left + i] = tmp[i];
 }
 
-void mergeSort(int data[], int first, int last)
+void mergeSort(int data[], int left, int right)
 {
-    if (first < last)
+    if (left < right)
     {
-        int middle = (first + last) / 2;
-        mergeSort(data, first, middle);
-        mergeSort(data, middle + 1, last);
-        merge(data, first, middle, last);
+        int middle = (left + right) >> 1;
+        mergeSort(data, left, middle);
+        mergeSort(data, middle + 1, right);
+        merge(data, left, middle, right);
     }
 }
 
 int main(int argc, char *argv[])
 {
-    int data[MAX_SIZE];
-    for (int i = 0; i < MAX_SIZE; i++) data[i] = i;
+    srand(time(NULL));
 
-    random_shuffle(data, data + MAX_SIZE);
+    int data[MAXN];
+    for (int i = 0; i < MAXN; i++)  data[i] = rand() % UP;
 
-    output(data, MAX_SIZE);
-
-    mergeSort(data, 0, MAX_SIZE - 1);
-
-    output(data, MAX_SIZE);
+    display(data, MAXN);
+    mergeSort(data, 0, MAXN - 1);
+    display(data, MAXN);
 
     return 0;
 }
