@@ -1,4 +1,4 @@
-// Magic square palindromes
+// Magic Square Palindromes
 // UVa ID: 11221
 // Verdict: Accepted
 // Submission Date: 2017-04-01

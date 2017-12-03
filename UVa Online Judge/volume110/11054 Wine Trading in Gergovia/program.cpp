@@ -1,4 +1,4 @@
-// Wine trading in Gergovia
+// Wine Trading in Gergovia
 // UVa ID: 11054
 // Verdict: Accepted
 // Submission Date: 2017-10-15
