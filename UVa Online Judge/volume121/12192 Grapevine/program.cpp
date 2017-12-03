@@ -1,8 +1,8 @@
 // Grapevine
 // UVa ID: 12192
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2017-11-02
+// UVa Run Time: 0.350s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
@@ -36,26 +36,28 @@ int main(int argc, char *argv[])
     
     while (cin >> N >> M, N > 0)
     {
-        for (int i = 1; i <= N; i++)
-            for (int j = 1; j <= M; j++)
+        for (int i = 0; i < N; i++)
+            for (int j = 0; j < M; j++)
                 cin >> g[i][j];
         cin >> Q;       
         for (int q = 1; q <= Q; q++)
         {
             cin >> L >> U;
-            for (int i = 0; i <= N; i++)
-                for (int j = 0; j <= M; j++)
-                    d[i][j] = 0;
 
-            int S = 0;
-            for (int i = 1; i <= N; i++)
-                for (int j = 1; j <= M; j++)
+            int largest = 0;
+            for (int i = 0; i < N; i++)
+            {
+                int s = lower_bound(g[i], g[i] + M, L) - g[i];
+                if (s == M) continue;
+                for (int j = largest; j < N; j++)
                 {
-                    if (L <= g[i][j] && g[i][j] <= U)
-                        d[i][j] = min(d[i - 1][j - 1], min(d[i - 1][j], d[i][j - 1])) + 1;
-                    S = max(S, d[i][j]);
+                    int ii = i + j, jj = s + j;
+                    if (ii >= N || jj >= M || g[ii][jj] > U) break;
+                    largest = j + 1;
                 }
-            cout << S << '\n';
+            }
+
+            cout << largest << '\n';
         }
         cout << "-\n";
     }
