@@ -1,8 +1,8 @@
 // Setting Problems
 // UVa ID: 11269
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2017-12-03
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
@@ -32,8 +32,15 @@ struct problem
     int create, verify;
     bool operator<(const problem &p) const
     {
-        if (verify != p.verify) return verify > p.verify;
-        return create < p.create;
+        int t1 = 0;
+        if (p.create > verify) t1 = create + p.create + p.verify;
+        else t1 = create + verify + p.verify;
+
+        int t2 = 0;
+        if (create > p.verify) t2 = p.create + create + verify;
+        else t2 = p.create + p.verify + verify;
+
+        return t1 < t2;
     }
 } problems[25];
 
@@ -53,8 +60,7 @@ int main(int argc, char *argv[])
         for (int i = 0; i < n; i++)
         {
             createtime += problems[i].create;
-            if (createtime + problems[i].verify > finishtime)
-                finishtime = createtime + problems[i].verify;
+            if (createtime > finishtime) finishtime = createtime;
             finishtime += problems[i].verify;
         }
         cout << max(createtime, finishtime) << '\n';
