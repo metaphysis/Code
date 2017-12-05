@@ -1,1 +1,1 @@
-# UVa Online Judge, Programming Challeges and codes in my book.
+# UVa Online Judge solutions and sample codes in my book.
