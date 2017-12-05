@@ -1,0 +1,19 @@
+2
+4 7
+Smith, M.N., Martin, G., Erdos, P., Qiu: Newtonian forms of prime factor matrices
+Erdos, P., Reisig, W.: Stuttering in petri nets
+Smith, M.N., Chen, X.: First oder derivates in structured programming
+Jablonski, T., Hsueh, Z.: Selfstabilizing data structures
+Smith, M.N.
+Hsueh, Z.
+Chen, X.
+Erdos, P.
+Erdos, P.
+Reisig, W.
+Jablonski, T.
+1 2
+Smith, M.N., Erdos, P.: Newtonian forms of prime factor matrices
+Smith, M.N.
+Smith, M.N.
+
+
