@@ -1,0 +1,6 @@
+Mission 1: FAILURE!! Traveled: 2.00  From Home: 7.00
+Mission 2: FAILURE!! Traveled: 10.00  From Home: 90.00
+Mission 3: FAILURE!! Traveled: 4.00  From Home: 170.36
+Mission 4: FAILURE!! Traveled: 10.50  From Home: 950.21
+Mission 5: FAILURE!! Traveled: 10.50  From Home: 908.20
+Mission 6: SUCCESS!! Time: 10.33  Traveled: 113.63  Fuel Left: 34.34

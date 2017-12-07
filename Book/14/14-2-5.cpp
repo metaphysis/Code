@@ -1,115 +1,68 @@
-#include <iostream>
-#include <cmath>
-
-using namespace std;
-
-const int MAX_VERTICES = 100;
-const double EPSILON = 1E-7;
-
-struct point
-{
+struct point {
     double x, y;
-};
 
-struct segment
-{
-    point start, end;
-};
+    point (double x = 0, double y = 0): x(x), y(y) {}
 
-struct polygon
-{
-    int vertexNumber;
-    point vertex[MAX_VERTICES];
-};
+    point operator + (point p) { return point(x + p.x, y + p.y); };
+    point operator - (point p) { return point(x - p.x, y - p.y); };
+    point operator * (double a) { return point(a * x, a * y); };
+    point operator / (double a) { return point(x / a, y / a); };
 
-// 叉积。
-int crossProduct(point a, point b, point c)
-{
-	return (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x);
-}
-
-// 从点a向点b望去，点c位于线段ab的右侧，返回true。
-bool cw(point a, point b, point c)
-{
-	return crossProduct(a, b, c) < -EPSILON;
-}
-// 从点a向点b望去，点c位于线段ab的左侧时，返回true。
-bool ccw(point a, point b, point c)
-{
-	return crossProduct(a, b, c) > EPSILON;
-}
-
-// 判断多边形的边是否在射线上方。
-bool isSideAboveRay(segment ray, segment side)
-{
-    return side.start.y >= ray.start.y && side.end.y >= ray.start.y;
-}
-
-// 根据设定的交点数规则判断射线与多边形的边是否相交。
-bool segmentsIntersect(segment ray, segment side)
-{
-    double cp1, cp2, cp3, cp4;
-    
-    cp1 = crossProduct(ray.start, ray.end, side.start);
-    cp2 = crossProduct(ray.start, ray.end, side.end);
-    cp3 = crossProduct(side.start, side.end, ray.start);
-    cp4 = crossProduct(side.start, side.end, ray.end);
-    
-    // 跨越式相交。
-    if ((cp1 * cp2 < 0) && (cp3 * cp4 < 0)) return true;
-        
-    // 不相交。
-    if ((cp1 * cp2 > 0) || (cp3 * cp4 > 0)) return false;   
-        
-	// 共线，不论是否重合，均判断为不相交。
-    if ((fabs(cp1) <= EPSILON && fabs(cp2) <= EPSILON) ||
-        (fabs(cp3) <= EPSILON && fabs(cp4) <= EPSILON))
-        return false;
-        
-	// 相交于顶点，判断是否在射线上方。
-    if (fabs(cp1) <= EPSILON || fabs(cp2) <= EPSILON ||
-        fabs(cp3) <= EPSILON || fabs(cp4) <= EPSILON)
-        return isSideAboveRay (ray, side);
-
-    return false;
-}
-
-bool isPointInPolygon(point p, polygon pg)
-{
-    // 找到多边形顶点中位于最右边的点的横坐标。
-    double rightX = pg.vertex[0].x;
-    for (int i = 0; i < pg.vertexNumber; i++)
-    {
-        if (pg.vertex[i].x > rightX)
-            rightX = pg.vertex[i].x;
-    }
-    
-    int numberOfIntersection = 0;
-    segment ray = (segment){ p, (point){ 2 * rightX, p.y }};
-    for (int i = 0; i < pg.vertexNumber; i++)
-    {
-        segment side = (segment){ pg.vertex[i], pg.vertex[(i + 1) % pg.vertexNumber] };
-        if (segmentsIntersect(ray, side))
-            numberOfIntersection++;
+    bool operator < (const point &p) const {
+        return x != p.x ? x < p.x : y < p.y;
     }
 
-    // 测试交点个数奇偶性。
-    return ((numberOfIntersection & 1) == 1);
+    bool operator == (const point &p) const {
+        return fabs(x - p.x) < EPSILON && fabs(y - p.y) < EPSILON;
+    }
+};
+
+struct segment {
+    point p1, p2;
+};
+
+typedef segment line;
+
+double dot(point a, point b) { return a.x * b.x + a.y * b.y; }
+double cross(point a, point b) { return a.x * b.y - b.x * a.y; }
+double norm(point p) { return p.x * p.x + p.y * p.y; };
+double abs(point p) { return sqrt(norm(p)); };
+
+double getDist(point a, point b)
+{
+    return abs(a - b);
 }
 
-int main(int argc, char* argv[])
+double getDistPL(point p, line l)
 {
-    point p;
-    polygon pg;
-    
-    cin >> pg.vertexNumber;
-    for (int i = 0; i < pg.vertexNumber; i++)
-        cin >> pg.vertex[i].x >> pg.vertex[i].y;
-    
-    while (cin >> p.x >> p.y, p.x || p.y)
-    {
-        cout << p.x << " " << p.y << " " << (isPointInPolygon(p, pg) ? "true" : "false") << '\n';
-    }
-    
-    return 0;
+    return fabs(cross(l.p2 - l.p1, p - l.p1) / abs(l.p2 - l.p1));
+}
+
+double getDistPS1(point p, segment s)
+{
+    double cosa = norm(p - s.p1) + norm(s.p1 - s.p2) - norm(p - s.p2);
+    double cosb = norm(p - s.p2) + norm(s.p1 - s.p2) - norm(p - s.p1);
+    if (cosa >= 0 && cosb >= 0) return getDistPL(p, s);
+    return min(abs(p - s.p1), abs(p - s.p2));
+}
+
+double getDistPS2(point p, segment s)
+{
+    if (dot(s.p2 - s.p1, p - s.p1) < 0.0) return abs(p - s.p1);
+    if (dot(s.p1 - s.p2, p - s.p2) < 0.0) return abs(p - s.p2);
+    return getDistPL(p, s);
+}
+
+point project(point p, segment s)
+{
+    point base = s.p2 - s.p1;
+    double r = dot(p - s.p1, base) / norm(base);
+    return s.p1 + base * r;
+}
+
+point project(point p, point p1, point p2)
+{
+    point base = p2 - p1;
+    double r = dot(p - p1, base) / norm(base);
+    return p1 + base * r;
 }

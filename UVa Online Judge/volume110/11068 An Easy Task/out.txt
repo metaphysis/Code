@@ -1,0 +1,7 @@
+The fixed point is at -nan nan.
+The fixed point is at -inf inf.
+The fixed point is at inf -inf.
+The fixed point is at 1.00 1.50.
+The fixed point is at 1.00 2.00.
+No fixed point exists.
+The fixed point is at 2.37 -0.65.

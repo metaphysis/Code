@@ -19,10 +19,12 @@
 
 using namespace std;
 
+const int MAXN = 1000000;
+int primes[MAXN], cnt;
+    
 void sieve(int *primes, int n, int &cnt)
 {
-    cnt = 0;
-    memset(primes, 1, n * sizeof(int));
+    cnt = 0, memset(primes, 1, n * sizeof(int));
 
     for (int i = 2; i < n; i++)
         if (primes[i])
@@ -34,8 +36,7 @@ void sieve(int *primes, int n, int &cnt)
 
 void sieve1(int *primes, int n, int &cnt)
 {
-    cnt = 0;
-    memset(primes, 1, n * sizeof(int));
+    cnt = 0, memset(primes, 1, n * sizeof(int));
 
     for (int i = 2; i < n; i++)
     {
@@ -79,9 +80,6 @@ vector<int> findDivisor(int n)
 
 int main(int argc, char *argv[])
 {
-    const int MAXN = 1000000;
-    int primes[MAXN], cnt = 0;
-
     sieve1(primes, MAXN, cnt);
     
     for (int i = 0; i < cnt; i++)
