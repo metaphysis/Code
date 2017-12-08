@@ -2,7 +2,7 @@
 // UVa ID: 11505
 // Verdict: Accepted
 // Submission Date: 2017-12-07
-// UVa Run Time: 0.020s
+// UVa Run Time: 0.030s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
@@ -47,8 +47,8 @@ int main(int argc, char *argv[])
             cin >> command >> units;
             if (command.front() == 'f')
             {
-                px -= units * cos(angle);
-                py -= units * sin(angle);
+                px += units * cos(angle);
+                py += units * sin(angle);
             }
             else if (command.front() == 'l')
             {
@@ -61,8 +61,8 @@ int main(int argc, char *argv[])
             // Just move back, the turtle DO NOT trun its head back.
             else if (command.front() == 'b')
             {
-                px -= units * cos(angle - PI);
-                py -= units * sin(angle - PI);
+                px += units * cos(angle - PI);
+                py += units * sin(angle - PI);
             }
         }
         cout << fixed << setprecision(0) << sqrt(px * px + py * py) << '\n';

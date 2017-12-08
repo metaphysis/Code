@@ -1,0 +1,43 @@
+7
+5
+fd 100
+lt 120
+fd ?
+lt 120
+fd 100
+6
+fd 3
+rt 90
+fd 4
+rt 90
+rt ?
+fd 5
+3
+fd 100
+lt ?
+fd 100
+4
+fd 100
+lt 180
+rt ?
+fd 100
+7
+fd 100
+rt 90
+fd 100
+rt 90
+bk ?
+rt 90
+fd 100
+5
+fd 100
+lt 120
+fd 100
+lt ?
+fd 100
+5
+fd 100
+lt 120
+fd 100
+rt ?
+fd 100

@@ -55,7 +55,6 @@ int main(int argc, char *argv[])
                 double tpx = px * cos(angle) + py * sin(angle);
                 double tpy = -px * sin(angle) + py * cos(angle);
                 px = tpx, py = tpy;
-                
             }
             else if (command.front() == 'r')
             {
