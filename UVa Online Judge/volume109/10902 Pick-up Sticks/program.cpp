@@ -1,8 +1,8 @@
-// Isolated Segments
-// UVa ID: 11343
+// Pick-up Sticks
+// UVa ID: 10902
 // Verdict: Accepted
-// Submission Date: 2017-12-07
-// UVa Run Time: 0.000s
+// Submission Date: 2017-12-09
+// UVa Run Time: 0.120s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
@@ -49,9 +49,10 @@ bool pointInBox(point a, point b, point p)
 
 struct segment
 {
+    int idx;
     point p1, p2;
     bool contains(const point &p) { return pointInBox(p1, p2, p); }
-}ss[110];
+};
 
 bool isIntersected(segment &s1, segment &s2)
 {
@@ -71,35 +72,31 @@ int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    int cases, n, visited[110];
-    cin >> cases;
-
-    for (int c = 1; c <= cases; c++)
+    int n;
+    vector<segment> sticks;
+    
+    while (cin >> n, n > 0)
     {
-        cin >> n;
-        for (int i = 0; i < n; i++)
+        sticks.clear();
+        for (int i = 1; i <= n; i++)
         {
-            cin >> ss[i].p1.x >> ss[i].p1.y;
-            cin >> ss[i].p2.x >> ss[i].p2.y;
-        }
-
-        memset(visited, 0, sizeof(visited));
-
-        int isolated = 0;
-        for (int i = 0; i < n; i++)
-        {
-            for (int j = 0; j < n; j++)
+            segment s;
+            s.idx = i;
+            cin >> s.p1.x >> s.p1.y >> s.p2.x >> s.p2.y;
+            for (int j = sticks.size() - 1; j >= 0; j--)
             {
-                if (i == j) continue;
-                if (isIntersected(ss[i], ss[j]))
-                {
-                    visited[i] = visited[j] = 1;
-                    break;
-                }
+                if (isIntersected(sticks[j], s))
+                    sticks.erase(sticks.begin() + j);
             }
-            isolated += 1 - visited[i];
+            sticks.push_back(s);
         }
-        cout << isolated << '\n';
+        cout << "Top sticks: ";
+        for (int i = 0; i < sticks.size(); i++)
+        {
+            if (i) cout << ", ";
+            cout << sticks[i].idx;
+        }
+        cout << ".\n";
     }
 
     return 0;

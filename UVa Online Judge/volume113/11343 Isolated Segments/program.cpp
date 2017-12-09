@@ -37,8 +37,9 @@ struct point
 
 bool pointInBox(point a, point b, point p)
 {
-    return (p.x >= min(a.x, b.x)) && (p.x <= max(a.x, b.x)) &&
-        (p.y >= min(a.y, b.y)) && (p.y <= max(a.y, b.y));
+    double minx = min(a.x, b.x), maxx = max(a.x, b.x);
+    double miny = min(a.y, b.y), maxy = max(a.y, b.y);
+    return p.x >= minx && p.x <= maxx && p.y >= miny && p.y <= maxy;
 }
 
 struct segment
