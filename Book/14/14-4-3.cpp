@@ -49,7 +49,7 @@ double area(polygon pg)
 }
 
 // 叉积。
-int crossProduct(point &a, point &b, point &c)
+int cp(point &a, point &b, point &c)
 {
 	return (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x);
 }
@@ -57,8 +57,8 @@ int crossProduct(point &a, point &b, point &c)
 // 判断是否向左转或共线。
 bool ccwOrCollinear(point &a, point &b, point &c)
 {
-    int cp = crossProduct(a, b, c);
-	return cp > EPSILON || fabs(cp) <= EPSILON;
+    int cp1 = cp(a, b, c);
+	return cp1 > EPSILON || fabs(cp1) <= EPSILON;
 }
 
 // Andrew 凸包扫描算法。
