@@ -88,19 +88,13 @@ polygon jarvisConvexHull(polygon &pg)
 {
     polygon ch;
 
-	// 排序得到位置处于最左且最下的点，当有共线情况存在时，取y坐标最小的点。
     sort(pg.begin(), pg.end());
     
-	// 去除重复点。
     pg.erase(unique(pg.begin(), pg.end()), pg.end());
 
     int current = 0;
     do
     {
-        // 测试点current，next，i是否构成一个右转，或者共线。
-        // 当构成右转时，说明点i比点next相对于current有更小的极角，应该将当前的
-        // 待选凸包点更新为点i。
-        // 当共线时，选择距离当前凸包点current更远的点。
         int next = 0;
         for (int i = 1; i < pg.size(); i++)
         {
@@ -110,7 +104,6 @@ polygon jarvisConvexHull(polygon &pg)
                 next = i;
         }
         
-        // 将点next加入凸包。
         ch.push_back(pg[next]);
         current = next;
     } while (current != 0);

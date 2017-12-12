@@ -7,9 +7,22 @@
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
 #include <algorithm>
-#include <iomanip>
+#include <bitset>
+#include <cassert>
 #include <cmath>
+#include <cstring>
+#include <iomanip>
 #include <iostream>
+#include <limits>
+#include <list>
+#include <map>
+#include <numeric>
+#include <queue>
+#include <set>
+#include <sstream>
+#include <stack>
+#include <unordered_map>
+#include <unordered_set>
 #include <vector>
 
 using namespace std;
@@ -19,18 +32,18 @@ const int EPSILON = 0;
 struct point
 {
 	int x, y;
-	
+
 	bool operator<(const point &p) const
 	{
 	    if (fabs(x - p.x) > EPSILON) return x < p.x;
 	    return y < p.y;
 	}
-	
+
 	bool operator==(const point &p) const
 	{
 	    return fabs(x - p.x) <= EPSILON && fabs(y - p.y) <= EPSILON;
 	}
-	
+
 	int distTo(const point &p)
 	{
 	    return pow(x - p.x, 2) + pow(y - p.y, 2);
@@ -39,7 +52,7 @@ struct point
 
 typedef vector<point> polygon;
 
-point lowerLeftPoint;
+point pr;
 
 double area(polygon pg)
 {
@@ -86,11 +99,10 @@ bool ccwOrCollinear(point a, point b, point c)
 }
 
 // 按相对于参考点的极角大小进行排序。
-bool smallerAngle(point &p1, point &p2)
+bool smallerAngle(point &a, point &b)
 {
-    if (collinear(lowerLeftPoint, p1, p2))
-        return lowerLeftPoint.distTo(p1) <= lowerLeftPoint.distTo(p2);
-    return ccw(lowerLeftPoint, p1, p2);
+    if (collinear(pr, a, b)) return pr.distTo(a) <= pr.distTo(b);
+    return ccw(pr, a, b);
 }
 
 // Graham凸包扫描算法。
@@ -100,13 +112,11 @@ polygon grahamConvexHull(polygon &pg)
 
 	sort(ch.begin(), ch.end());
     ch.erase(unique(ch.begin(), ch.end()), ch.end());
-
     if (ch.size() < 3) return ch;
 
-    lowerLeftPoint = ch.front();
+    pr = ch.front();
     sort(ch.begin() + 1, ch.end(), smallerAngle);
-
-	ch.push_back(lowerLeftPoint);
+	ch.push_back(pr);
 
 	int top = 2, candidate = 2, total = ch.size() - 1;
 	while (candidate <= total)
@@ -116,8 +126,7 @@ polygon grahamConvexHull(polygon &pg)
 	    {
 	        if (collinear(ch[top - 2], ch[top - 1], ch[candidate]))
 	            ch[top - 1] = ch[candidate++];
-	        else
-	            ch[top++] = ch[candidate++];
+	        else ch[top++] = ch[candidate++];
         }
 	}
 	ch.erase(ch.begin() + top, ch.end());
@@ -134,8 +143,7 @@ int main(int argc, char *argv[])
 	while (cin >> number, number)
 	{
 	    polygon tile(number);
-		for (int i = 0; i < number; i++)
-			cin >> tile[i].x >> tile[i].y;
+		for (int i = 0; i < number; i++) cin >> tile[i].x >> tile[i].y;
 		double used = area(tile);
 		double all = area(grahamConvexHull(tile));
 		cout << "Tile #" << cases++ << '\n';
