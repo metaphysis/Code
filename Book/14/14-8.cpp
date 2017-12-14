@@ -19,8 +19,6 @@
 
 using namespace std;
 
-const double EPSILON = 1e-7;
-
 struct point {
     double x, y;
 
@@ -30,18 +28,10 @@ struct point {
     point operator - (point p) { return point(x - p.x, y - p.y); };
     point operator * (double a) { return point(a * x, a * y); };
     point operator / (double a) { return point(x / a, y / a); };
-
-    bool operator < (const point &p) const {
-        return x != p.x ? x < p.x : y < p.y;
-    }
-
-    bool operator == (const point &p) const {
-        return fabs(x - p.x) < EPSILON && fabs(y - p.y) < EPSILON;
-    }
     
-    double distTo(point a)
+    double distTo(point p)
     {
-        return sqrt(pow(x - a.x, 2) + pow(y - a.y, 2));
+        return sqrt(pow(x - p.x, 2) + pow(y - p.y, 2));
     }
 };
 
