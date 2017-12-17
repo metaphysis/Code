@@ -1,0 +1,38 @@
+Set 1:
+2.0000
+Set 2:
+4.0000
+Set 3:
+5.0000
+Set 4:
+0.0000
+Set 5:
+0.0000
+Set 6:
+0.0000
+Set 7:
+0.0000
+Set 8:
+Poor King!
+Set 9:
+0.4278
+Set 10:
+Poor King!
+Set 11:
+Poor King!
+Set 12:
+Poor King!
+Set 13:
+Poor King!
+Set 14:
+0.2451
+Set 15:
+0.0000
+Set 16:
+20.0000
+Set 17:
+200.0000
+Set 18:
+2000.0000
+Set 19:
+2000000.0002

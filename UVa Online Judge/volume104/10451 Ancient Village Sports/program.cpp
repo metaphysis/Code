@@ -1,5 +1,5 @@
-// Kingdom Division
-// UVa ID: 11164
+// Ancient Village Sports
+// UVa ID: 10451
 // Verdict: Accepted
 // Submission Date: 2017-12-17
 // UVa Run Time: 0.000s
@@ -27,23 +27,23 @@
 
 using namespace std;
 
+const double PI = 2.0 * acos(0);
+
 int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
     int cases = 0;
-    double a, b, c;
+    double n, A;
     
-    while (cin >> a >> b >> c)
+    while (cin >> n >> A, n >= 3)
     {
-        if (a == -1.0) break;
-        cout << "Set " << ++cases << ":\n";
-        if (b * b <= a * c ) cout << "Poor King!\n";
-        else
-        {
-            double d = a * c * (a + 2 * b + c) / (b * b - a * c);
-            cout << fixed << setprecision(4) << d << '\n';
-        }
+        cout << "Case " << ++cases << ": ";
+        double a = (n - 2) * PI / n;
+        double r = sqrt(A / (n * cos(a / 2) * sin(a / 2)));
+        double spectators = PI * r * r - A;
+        double officials = A - PI * r * r * sin(a / 2) * sin(a / 2);
+        cout << fixed << setprecision(5) << spectators << ' ' << officials << '\n';
     }
 
     return 0;

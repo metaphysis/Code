@@ -1,5 +1,5 @@
-// Kingdom Division
-// UVa ID: 11164
+// Satellites
+// UVa ID: 10221
 // Verdict: Accepted
 // Submission Date: 2017-12-17
 // UVa Run Time: 0.000s
@@ -27,23 +27,24 @@
 
 using namespace std;
 
+const double PI = 2.0 * acos(0);
+
 int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
+    cout << fixed << setprecision(6);
 
-    int cases = 0;
-    double a, b, c;
+    double s, a;
+    string unit;
     
-    while (cin >> a >> b >> c)
+    while (cin >> s >> a >> unit)
     {
-        if (a == -1.0) break;
-        cout << "Set " << ++cases << ":\n";
-        if (b * b <= a * c ) cout << "Poor King!\n";
-        else
-        {
-            double d = a * c * (a + 2 * b + c) / (b * b - a * c);
-            cout << fixed << setprecision(4) << d << '\n';
-        }
+        if (unit == "min") a /= 60;
+        if (a > 180.0) a = 360.0 - a;
+        a = a / 180.0 * PI;
+        double arc = (6440.0 + s) * a;
+        double chord = 2 * (6440.0 + s) * sin(a / 2);
+        cout << arc << ' ' << chord << '\n';
     }
 
     return 0;

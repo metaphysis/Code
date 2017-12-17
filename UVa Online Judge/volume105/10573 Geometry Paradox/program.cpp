@@ -1,5 +1,5 @@
-// Kingdom Division
-// UVa ID: 11164
+// Geometry Paradox
+// UVa ID: 10573
 // Verdict: Accepted
 // Submission Date: 2017-12-17
 // UVa Run Time: 0.000s
@@ -27,23 +27,33 @@
 
 using namespace std;
 
+const double PI = 2.0 * acos(0);
+
 int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
+    cout << fixed << setprecision(4);
 
-    int cases = 0;
-    double a, b, c;
-    
-    while (cin >> a >> b >> c)
+    int n;
+    cin >> n;
+    cin.ignore(1024, '\n');
+
+    string line;
+    for (int i = 1; i <= n; i++)
     {
-        if (a == -1.0) break;
-        cout << "Set " << ++cases << ":\n";
-        if (b * b <= a * c ) cout << "Poor King!\n";
+        getline(cin, line);
+        istringstream iss(line);
+        
+        int flag = 0;
+        double r1, r2;
+
+        iss >> r1;
+        if (iss >> r2) flag = 1;
+
+        if (flag)
+            cout << 2.0 * PI * r1 * r2 << '\n';
         else
-        {
-            double d = a * c * (a + 2 * b + c) / (b * b - a * c);
-            cout << fixed << setprecision(4) << d << '\n';
-        }
+            cout << PI * r1 * r1 * 0.125 << '\n';
     }
 
     return 0;
