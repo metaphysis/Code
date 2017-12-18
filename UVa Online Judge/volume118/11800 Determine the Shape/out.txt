@@ -1,0 +1,14 @@
+Case 1: Ordinary Quadrilateral
+Case 2: Square
+Case 3: Rhombus
+Case 4: Parallelogram
+Case 5: Rectangle
+Case 6: Rectangle
+Case 7: Ordinary Quadrilateral
+Case 8: Ordinary Quadrilateral
+Case 9: Ordinary Quadrilateral
+Case 10: Ordinary Quadrilateral
+Case 11: Ordinary Quadrilateral
+Case 12: Trapezium
+Case 13: Trapezium
+Case 14: Trapezium

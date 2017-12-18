@@ -7,7 +7,7 @@ struct point {
     point operator / (double a) { return point(x / a, y / a); };
 };
 
-double nrom(point a)
+double norm(point a)
 {
 	return a.x * a.x + a.y * a.y;
 }
