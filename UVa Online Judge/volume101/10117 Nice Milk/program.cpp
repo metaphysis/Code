@@ -89,7 +89,7 @@ double calDistance(point a, point b)
 }
 
 // 坐标变换。
-void shiftPoint(point a, point b, point & c, point & d, double offset)
+void shiftPoint(point a, point b, point &c, point &d, double offset)
 {
     double distance = calDistance(a, b);
     double dx = offset / distance * (a.y - b.y);
@@ -103,8 +103,7 @@ void shiftPoint(point a, point b, point & c, point & d, double offset)
 // 利用有向面积计算多边形的面积，注意最后结果取绝对值，因为顶点顺序可能并不是按逆时针方向给出。
 double area(point p[], int n)
 {
-    if (n < 3)
-        return 0.0;
+    if (n < 3) return 0.0;
     double total = 0.0;
     for (int i = 0, j = (i + 1) % n; i < n; i++, j = (i + 1) % n)
         total += (p[i].x * p[j].y - p[j].x * p[i].y);
@@ -124,7 +123,7 @@ point intersection(line f, line s)
 }
 
 // 给定一组直线，求直线的交点得到多边形的顶点。
-void halfPlaneIntersection(line * edges, int n, point * vertex, int &nPoint)
+void halfPlaneIntersection(line *edges, int n, point *vertex, int &nPoint)
 {
     nPoint = 0;
     sort(edges, edges + n, cmpLine);

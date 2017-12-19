@@ -1,3 +1,32 @@
+// Cutting Tabletops
+// UVa ID: 10406
+// Verdict: Accepted
+// Submission Date: 2017-12-19
+// UVa Run Time: 0.000s
+//
+// 版权所有（C）2017，邱秋。metaphysis # yeah dot net
+
+#include <algorithm>
+#include <bitset>
+#include <cassert>
+#include <cmath>
+#include <cstring>
+#include <iomanip>
+#include <iostream>
+#include <limits>
+#include <list>
+#include <map>
+#include <numeric>
+#include <queue>
+#include <set>
+#include <sstream>
+#include <stack>
+#include <unordered_map>
+#include <unordered_set>
+#include <vector>
+
+using namespace std;
+
 const int MAXN = 1100;
 const double EPSILON = 1E-7;
 
@@ -134,4 +163,42 @@ polygon halfPlaneIntersection(line *edges, int nLine)
         pg.push_back(getIntersection(deques[bottom], deques[top]));
 
     return pg;
+}
+
+double area(polygon & pg)
+{
+    if (pg.size() < 3) return 0.0;
+    double A = 0.0;
+    int n = pg.size();
+    for (int i = 0, j = (i + 1) % n; i < n; i++, j = (i + 1) % n)
+        A += (pg[i].x * pg[j].y - pg[j].x * pg[i].y);
+    return fabs(A / 2.0);
+}
+
+line edges[MAXN];
+point vertices[MAXN];
+
+int main(int argc, char *argv[])
+{
+    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
+
+    double d;
+    int n;
+
+    while (cin >> d >> n)
+    {
+        if (n == 0) break;
+
+        for (int i = 0; i < n; i++)
+            cin >> vertices[i].x >> vertices[i].y;
+
+        for (int i = 0; i < n; i++)
+            edges[i] = shiftLine(vertices[(i + 1) % n], vertices[i], d);
+
+        polygon pg = halfPlaneIntersection(edges, n);
+
+        cout << fixed << setprecision(3) << area(pg) << '\n';
+    }
+
+    return 0;
 }

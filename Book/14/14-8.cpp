@@ -26,8 +26,8 @@ struct point {
 
     point operator + (point p) { return point(x + p.x, y + p.y); };
     point operator - (point p) { return point(x - p.x, y - p.y); };
-    point operator * (double a) { return point(a * x, a * y); };
-    point operator / (double a) { return point(x / a, y / a); };
+    point operator * (double k) { return point(x * k, y * k); };
+    point operator / (double k) { return point(x / k, y / k); };
     
     double distTo(point p)
     {
