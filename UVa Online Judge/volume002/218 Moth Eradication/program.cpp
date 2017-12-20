@@ -105,7 +105,7 @@ void grahamConvexHull(vector <point> &vertices, vector <point> &hull)
 	hull.push_back(vertices[0]);
 	hull.push_back(vertices[1]);
 	
-	// 设置哨兵元素，将最左最低点设置为最后一个元素以便扫描时能回到参考点。
+	// 设置哨兵元素，将最低最左点设置为最后一个元素以便扫描时能回到参考点。
 	vertices.push_back(lowerLeftPoint);
 	
 	while (i <= vertices.size() - 1)

@@ -14,11 +14,11 @@
 
 using namespace std;
 
-const int EPSILON = 0;
+const double EPSILON = 1e-7;
 
 struct point
 {
-	int x, y;
+	double x, y;
 	
 	bool operator<(const point &p) const
 	{
@@ -31,7 +31,7 @@ struct point
 	    return fabs(x - p.x) <= EPSILON && fabs(y - p.y) <= EPSILON;
 	}
 	
-	int distTo(const point &p)
+	double distTo(const point &p)
 	{
 	    return pow(x - p.x, 2) + pow(y - p.y, 2);
 	}
@@ -55,7 +55,7 @@ double area(polygon pg)
 
 // 叉积，判断点a，b，c组成的两条线段的转折方向。当叉积小于0，则形成一个右拐，
 // 否则共线（cp = 0）或左拐（cp > 0）。
-int crossProduct(point a, point b, point c)
+double crossProduct(point a, point b, point c)
 {
 	return (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x);
 }

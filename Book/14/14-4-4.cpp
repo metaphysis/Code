@@ -14,12 +14,12 @@
 
 using namespace std;
 
-const int MAX_VERTICES = 105;
-const int EPSILON = 0;
+const int MAXV = 105;
+const double EPSILON = 1e-7;
 
 struct point
 {
-	int x, y;
+	double x, y;
 	
 	bool operator<(const point &p) const
 	{
@@ -50,7 +50,7 @@ double area(polygon pg)
 }
 
 // 叉积。
-int crossProduct(point a, point b, point c)
+double crossProduct(point a, point b, point c)
 {
 	return (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x);
 }

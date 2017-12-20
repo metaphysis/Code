@@ -1,7 +1,7 @@
-// Useless Tile Packers （没用的瓷砖打包公司）
-// PC/UVa IDs: 111405/10065, Popularity: C, Success rate: average Level: 3
+// Nails
+// UVa ID: 11096
 // Verdict: Accepted
-// Submission Date: 2017-06-09
+// Submission Date: 2017-12-20
 // UVa Run Time: 0.000s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
@@ -27,21 +27,19 @@
 
 using namespace std;
 
-const double EPSILON = 1e-7;
-
 struct point
 {
 	double x, y;
 
 	bool operator<(const point &p) const
 	{
-	    if (fabs(x - p.x) > EPSILON) return x < p.x;
-	    return y < p.y;
+	    if (abs(y - p.y) > 0) return y < p.y;
+	    return x < p.x;
 	}
 
 	bool operator==(const point &p) const
 	{
-	    return fabs(x - p.x) <= EPSILON && fabs(y - p.y) <= EPSILON;
+	    return abs(x - p.x) == 0 && abs(y - p.y) == 0;
 	}
 
 	double distTo(const point &p)
@@ -54,20 +52,6 @@ typedef vector<point> polygon;
 
 point pr;
 
-double area(polygon pg)
-{
-	double areaOfPolygon = 0.0;
-
-    int n = pg.size();
-	for (int i = 0; i < n; i++)
-	{
-		int j = (i + 1) % n;
-		areaOfPolygon += (pg[i].x * pg[j].y - pg[j].x * pg[i].y);
-	}
-
-	return fabs(areaOfPolygon / 2.0);
-}
-
 // 叉积，判断点a，b，c组成的两条线段的转折方向。当叉积小于0，则形成一个右拐，
 // 否则共线（cp = 0）或左拐（cp > 0）。
 double cp(point a, point b, point c)
@@ -78,18 +62,18 @@ double cp(point a, point b, point c)
 // 从点a向点b望去，点c位于线段ab的右侧，返回true。
 bool cw(point a, point b, point c)
 {
-	return cp(a, b, c) < -EPSILON;
+	return cp(a, b, c) < 0;
 }
 // 从点a向点b望去，点c位于线段ab的左侧时，返回true。
 bool ccw(point a, point b, point c)
 {
-	return cp(a, b, c) > EPSILON;
+	return cp(a, b, c) > 0;
 }
 
 // 当三点共线时，返回true。
 bool collinear(point a, point b, point c)
 {
-	return fabs(cp(a, b, c)) <= EPSILON;
+	return abs(cp(a, b, c)) == 0;
 }
 
 // 判断是否向左转或共线。
@@ -105,7 +89,33 @@ bool cmpAngle(point &a, point &b)
     return ccw(pr, a, b);
 }
 
-// Graham凸包扫描算法。
+polygon andrewConvexHull(polygon &pg)
+{
+	sort(pg.begin(), pg.end());
+
+	polygon ch;
+
+	for (int i = 0; i < pg.size(); i++)
+	{
+		while (ch.size() >= 2 &&
+		    ccwOrCollinear(ch[ch.size() - 2], ch[ch.size() - 1], pg[i]))
+			ch.pop_back();
+		ch.push_back(pg[i]);
+	}
+
+	for (int i = pg.size() - 1, upper = ch.size() + 1; i >= 0; i--)
+	{
+		while (ch.size() >= upper &&
+		    ccwOrCollinear(ch[ch.size() - 2], ch[ch.size() - 1], pg[i]))
+			ch.pop_back();
+		ch.push_back(pg[i]);
+	}
+
+    ch.pop_back();
+    
+	return ch;
+}
+
 polygon grahamConvexHull(polygon &pg)
 {
     polygon ch(pg);
@@ -122,12 +132,13 @@ polygon grahamConvexHull(polygon &pg)
 	while (candidate <= total)
 	{
 	    if (cw(ch[top - 2], ch[top - 1], ch[candidate])) top--;
-	    else 
-	    {
-	        if (collinear(ch[top - 2], ch[top - 1], ch[candidate]))
-	            ch[top - 1] = ch[candidate++];
-	        else ch[top++] = ch[candidate++];
-        }
+	    else ch[top++] = ch[candidate++];
+	    //else 
+	    //{
+	    //    if (collinear(ch[top - 2], ch[top - 1], ch[candidate]))
+	    //        ch[top - 1] = ch[candidate++];
+	    //    else ch[top++] = ch[candidate++];
+        //}
 	}
 	ch.erase(ch.begin() + top, ch.end());
 
@@ -136,19 +147,36 @@ polygon grahamConvexHull(polygon &pg)
 
 int main(int argc, char *argv[])
 {
-	cout.precision(2);
-	cout.setf(ios::fixed | ios::showpoint);
+    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-	int number, cases = 1;
-	while (cin >> number, number)
-	{
-	    polygon tile(number);
-		for (int i = 0; i < number; i++) cin >> tile[i].x >> tile[i].y;
-		double used = area(tile);
-		double all = area(grahamConvexHull(tile));
-		cout << "Tile #" << cases++ << '\n';
-		cout << "Wasted Space = " << (1.0 - used / all) * 100.0 << " %\n\n";
-	}
+    int cases;
+    cin >> cases;
+    for (int c = 1; c <= cases; c++)
+    {
+        double ribbon, xi, yi;
+        int n;
+        
+        polygon pg;
+        cin >> ribbon >> n;
+        for (int i = 0; i < n; i++)
+        {
+            cin >> xi >> yi;
+            
+            pg.push_back(point{xi, yi});
+        }
+        
+        polygon ch = grahamConvexHull(pg);
+        
+        double length = 0;
+        n = ch.size();
+        for (int i = 0; i < n; i++)
+        {
+            int j = (i + 1) % n;
+            length += sqrt(pow(ch[i].x - ch[j].x, 2) + pow(ch[i].y - ch[j].y, 2));
+        }
+        ribbon = max(ribbon, length);
+        cout << fixed << setprecision(5) << ribbon << '\n';
+    }
 
-	return 0;
+    return 0;
 }

@@ -14,16 +14,16 @@
 
 using namespace std;
 
-const int EPSILON = 0;
+const double EPSILON = 1e-7;
 
 struct point
 {
-	int x, y;
+	double x, y;
 	
 	bool operator<(const point &p) const
 	{
-	    if (fabs(x - p.x) > EPSILON) return x < p.x;
-	    return y < p.y;
+	    if (fabs(y - p.y) > EPSILON) return y < p.y;
+	    return x < p.x;
 	}
 	
 	bool operator==(const point &p) const
@@ -48,14 +48,14 @@ double area(polygon pg)
 	return fabs(areaOfPolygon / 2.0);
 }
 
-int cp(point &a, point &b, point &c)
+double cp(point &a, point &b, point &c)
 {
 	return (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x);
 }
 
 bool ccwOrCollinear(point &a, point &b, point &c)
 {
-    int cp1 = cp(a, b, c);
+    double cp1 = cp(a, b, c);
 	return cp1 > EPSILON || fabs(cp1) <= EPSILON;
 }
 
