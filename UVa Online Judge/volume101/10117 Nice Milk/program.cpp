@@ -77,13 +77,13 @@ bool cmpLine(line f, line s)
 }
 
 // 两条直线是否平行。
-bool paralle(line f, line s)
+bool parallel(line f, line s)
 {
     return fabs((f.a.x - f.b.x) * (s.a.y - s.b.y) - (s.a.x - s.b.x) * (f.a.y - f.b.y)) <= EPSILON;
 }
 
 // 计算两点间距离。
-double calDistance(point a, point b)
+double getDist(point a, point b)
 {
     return sqrt((a.x - b.x) * (a.x - b.x) + (a.y - b.y) * (a.y - b.y));
 }
@@ -91,7 +91,7 @@ double calDistance(point a, point b)
 // 坐标变换。
 void shiftPoint(point a, point b, point &c, point &d, double offset)
 {
-    double distance = calDistance(a, b);
+    double distance = getDist(a, b);
     double dx = offset / distance * (a.y - b.y);
     double dy = offset / distance * (-a.x + b.x);
     c.x = a.x + dx;
@@ -110,7 +110,7 @@ double area(point p[], int n)
     return fabs(total / 2.0);
 }
 
-point intersection(line f, line s)
+point getIntersection(line f, line s)
 {
     point p = f.a;
     double tmp =
@@ -134,26 +134,26 @@ void halfPlaneIntersection(line *edges, int n, point *vertex, int &nPoint)
 
     for (int i = 2; i < n; i++)
     {
-        if (paralle(deque[top], deque[top - 1]) || paralle(deque[bottom], deque[bottom + 1]))
+        if (parallel(deque[top], deque[top - 1]) || parallel(deque[bottom], deque[bottom + 1]))
             return;
 
         while (bottom < top && cw(tmpLine[i].a, tmpLine[i].b,
-                intersection(deque[top], deque[top - 1])))
+                getIntersection(deque[top], deque[top - 1])))
             top--;
 
         while (bottom < top && cw(tmpLine[i].a, tmpLine[i].b,
-                intersection(deque[bottom], deque[bottom + 1])))
+                getIntersection(deque[bottom], deque[bottom + 1])))
             bottom++;
 
         deque[++top] = tmpLine[i];
     }
 
     while (bottom < top && cw(deque[bottom].a, deque[bottom].b,
-            intersection(deque[top], deque[top - 1])))
+            getIntersection(deque[top], deque[top - 1])))
         top--;
 
     while (bottom < top && cw(deque[top].a, deque[top].b,
-            intersection(deque[bottom], deque[bottom + 1])))
+            getIntersection(deque[bottom], deque[bottom + 1])))
         bottom++;
 
     if (top <= (bottom + 1))
@@ -161,11 +161,11 @@ void halfPlaneIntersection(line *edges, int n, point *vertex, int &nPoint)
 
     // 求相邻两条凸包边的交点获取顶点坐标。
     for (int i = bottom; i < top; i++)
-        vertex[nPoint++] = intersection(deque[i], deque[i + 1]);
+        vertex[nPoint++] = getIntersection(deque[i], deque[i + 1]);
 
     // 首尾两条直线的交点也是顶点。
     if (bottom < (top + 1))
-        vertex[nPoint++] = intersection(deque[bottom], deque[top]);
+        vertex[nPoint++] = getIntersection(deque[bottom], deque[top]);
 }
 
 // 回溯以遍历可能的蘸牛奶方案。

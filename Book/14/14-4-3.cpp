@@ -48,27 +48,23 @@ double area(polygon pg)
 	return fabs(areaOfPolygon / 2.0);
 }
 
-// 叉积。
 int cp(point &a, point &b, point &c)
 {
 	return (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x);
 }
 
-// 判断是否向左转或共线。
 bool ccwOrCollinear(point &a, point &b, point &c)
 {
     int cp1 = cp(a, b, c);
 	return cp1 > EPSILON || fabs(cp1) <= EPSILON;
 }
 
-// Andrew 凸包扫描算法。
 polygon andrewConvexHull(polygon &pg)
 {
 	sort(pg.begin(), pg.end());
 
 	polygon ch;
 
-	// 求上凸包。
 	for (int i = 0; i < pg.size(); i++)
 	{
 		while (ch.size() >= 2 &&
@@ -77,7 +73,6 @@ polygon andrewConvexHull(polygon &pg)
 		ch.push_back(pg[i]);
 	}
 
-	// 求下凸包。
 	for (int i = pg.size() - 1, upper = ch.size() + 1; i >= 0; i--)
 	{
 		while (ch.size() >= upper &&

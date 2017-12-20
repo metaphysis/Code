@@ -13,8 +13,8 @@
 
 using namespace std;
 
-#define MAX_VERTICES 1100
-#define EPSILON 1E-6
+#define MAXV 1100
+#define EPSILON 1E-7
 
 struct point
 {
@@ -31,10 +31,10 @@ struct line
 struct polygon
 {
     int number;
-    point vertex[MAX_VERTICES];
+    point vertices[MAXV];
 };
 
-double crossProduct(point a, point b, point c)
+double cp(point a, point b, point c)
 {
     return (c.x - a.x) * (b.y - a.y) - (b.x - a.x) * (c.y - a.y);
 }
@@ -42,24 +42,16 @@ double crossProduct(point a, point b, point c)
 // 从点 a 向点 b 望去，点 c 位于线段 ab 的右侧，返回 true。
 bool cw(point a, point b, point c)
 {
-    return crossProduct(a, b, c) > EPSILON;
-}
-
-// 从点 a 向点 b 望去，点 c 位于线段 ab 的左侧时，返回 true。
-bool ccw(point a, point b, point c)
-{
-    return crossProduct(a, b, c) < -EPSILON;
+    return cp(a, b, c) > EPSILON;
 }
 
 line pointsToLine(point a, point b)
 {
-    line l;
-
-    l.a = a;
-    l.b = b;
-    l.angle = atan2(a.y - b.y, a.x - b.x);
-
-    return l;
+    line lr;
+    lr.a = a;
+    lr.b = b;
+    lr.angle = atan2(a.y - b.y, a.x - b.x);
+    return lr;
 }
 
 // 角度排序函数。
@@ -69,75 +61,68 @@ bool cmpAngle(line a, line b)
 }
 
 // 半平面比较函数。
-bool cmpHalfPlane(line f, line s)
+bool cmpLine(line f, line s)
 {
     if (fabs(f.angle - s.angle) <= EPSILON)
-        return crossProduct(s.a, s.b, f.a) < 0.0;
+        return cp(s.a, s.b, f.a) < EPSILON;
     return f.angle < s.angle;
 }
 
 // 两条直线是否平行。
-bool paralleLine(line f, line s)
+bool parallel(line p, line q)
 {
-    return fabs((f.a.x - f.b.x) * (s.a.y - s.b.y) -
-        (s.a.x - s.b.x) * (f.a.y - f.b.y)) <= EPSILON;
+    return fabs((p.a.x - p.b.x) * (q.a.y - q.b.y) -
+        (q.a.x - q.b.x) * (p.a.y - p.b.y)) <= EPSILON;
 }
 
-// 计算两点间距离。
-double calDistance(point a, point b)
+point getIntersection(line p, line q)
 {
-    return sqrt((a.x - b.x) * (a.x - b.x) + (a.y - b.y) * (a.y - b.y));
-}
-
-point intersectionPoint(line f, line s)
-{
-    point p = f.a;
-    double tmp =
-        ((f.a.x - s.a.x) * (s.a.y - s.b.y) - (f.a.y -
-            s.a.y) * (s.a.x - s.b.x)) / ((f.a.x -
-            f.b.x) * (s.a.y - s.b.y) - (f.a.y - f.b.y) * (s.a.x - s.b.x));
-    p.x += (f.b.x - f.a.x) * tmp;
-    p.y += (f.b.y - f.a.y) * tmp;
-    return p;
+    point p1 = p.a;
+    double scale =
+        ((p.a.x - q.a.x) * (q.a.y - q.b.y) - (p.a.y - q.a.y) * (q.a.x - q.b.x)) /
+        ((p.a.x - p.b.x) * (q.a.y - q.b.y) - (p.a.y - p.b.y) * (q.a.x - q.b.x));
+    p1.x += (p.b.x - p.a.x) * scale;
+    p1.y += (p.b.y - p.a.y) * scale;
+    return p1;
 }
 
 // 给定一组直线，求直线的交点得到多边形的顶点。
-polygon halfPlaneIntersection(line * edgeLine, int nLine)
+polygon halfPlaneIntersection(line * sides, int nLine)
 {
     polygon pg;
-    line deque[MAX_VERTICES];
+    line deque[MAXV];
 
     pg.number = 0;
-    sort(edgeLine, edgeLine + nLine, cmpHalfPlane);
-    nLine = unique(edgeLine, edgeLine + nLine, cmpAngle) - edgeLine;
+    sort(sides, sides + nLine, cmpLine);
+    nLine = unique(sides, sides + nLine, cmpAngle) - sides;
 
     int bottom = 0, top = 1;
-    deque[0] = edgeLine[0];
-    deque[1] = edgeLine[1];
+    deque[0] = sides[0];
+    deque[1] = sides[1];
 
     for (int i = 2; i < nLine; i++)
     {
-        if (paralleLine(deque[top], deque[top - 1])
-            || paralleLine(deque[bottom], deque[bottom + 1]))
+        if (parallel(deque[top], deque[top - 1])
+            || parallel(deque[bottom], deque[bottom + 1]))
             return pg;
 
-        while (bottom < top && cw(edgeLine[i].a, edgeLine[i].b,
-                intersectionPoint(deque[top], deque[top - 1])))
+        while (bottom < top && cw(sides[i].a, sides[i].b,
+                getIntersection(deque[top], deque[top - 1])))
             top--;
 
-        while (bottom < top && cw(edgeLine[i].a, edgeLine[i].b,
-                intersectionPoint(deque[bottom], deque[bottom + 1])))
+        while (bottom < top && cw(sides[i].a, sides[i].b,
+                getIntersection(deque[bottom], deque[bottom + 1])))
             bottom++;
 
-        deque[++top] = edgeLine[i];
+        deque[++top] = sides[i];
     }
 
     while (bottom < top && cw(deque[bottom].a, deque[bottom].b,
-            intersectionPoint(deque[top], deque[top - 1])))
+            getIntersection(deque[top], deque[top - 1])))
         top--;
 
     while (bottom < top && cw(deque[top].a, deque[top].b,
-            intersectionPoint(deque[bottom], deque[bottom + 1])))
+            getIntersection(deque[bottom], deque[bottom + 1])))
         bottom++;
 
     if (top <= (bottom + 1))
@@ -145,11 +130,11 @@ polygon halfPlaneIntersection(line * edgeLine, int nLine)
 
     // 求相邻两条凸包边的交点获取顶点坐标。
     for (int i = bottom; i < top; i++)
-        pg.vertex[pg.number++] = intersectionPoint(deque[i], deque[i + 1]);
+        pg.vertices[pg.number++] = getIntersection(deque[i], deque[i + 1]);
 
     // 首尾两条直线的交点也是顶点。
     if (bottom < (top + 1))
-        pg.vertex[pg.number++] = intersectionPoint(deque[bottom], deque[top]);
+        pg.vertices[pg.number++] = getIntersection(deque[bottom], deque[top]);
 
     return pg;
 }
@@ -158,14 +143,12 @@ polygon halfPlaneIntersection(line * edgeLine, int nLine)
 // 并不是按逆时针方向给出。
 double area(polygon pg)
 {
-    if (pg.number < 3)
-        return 0.0;
-        
-    double total = 0.0;
+    if (pg.number < 3) return 0.0;
+
+    double A = 0.0;
     for (int i = 0, j; j = (i + 1) % pg.number, i < pg.number; i++)
-        total +=
-            (pg.vertex[i].x * pg.vertex[j].y - pg.vertex[j].x * pg.vertex[i].y);
-    return fabs(total / 2.0);
+        A += (pg.vertices[i].x * pg.vertices[j].y - pg.vertices[j].x * pg.vertices[i].y);
+    return fabs(A / 2.0);
 }
 
 void exclusiveOr(polygon a, polygon b)
@@ -173,20 +156,20 @@ void exclusiveOr(polygon a, polygon b)
     double areaA = area(a);
     double areaB = area(b);
 
-    line edgeLine[MAX_VERTICES];
+    line sides[MAXV];
     int nLine = 0;
 
     for (int i = 0; i < a.number - 1; i++)
-        edgeLine[nLine++] = pointsToLine(a.vertex[i + 1], a.vertex[i]);
-    edgeLine[nLine++] = pointsToLine(a.vertex[0], a.vertex[a.number - 1]);
+        sides[nLine++] = pointsToLine(a.vertices[i + 1], a.vertices[i]);
+    sides[nLine++] = pointsToLine(a.vertices[0], a.vertices[a.number - 1]);
 
     for (int i = 0; i < b.number - 1; i++)
-        edgeLine[nLine++] = pointsToLine(b.vertex[i + 1], b.vertex[i]);
-    edgeLine[nLine++] = pointsToLine(b.vertex[0], b.vertex[b.number - 1]);
+        sides[nLine++] = pointsToLine(b.vertices[i + 1], b.vertices[i]);
+    sides[nLine++] = pointsToLine(b.vertices[0], b.vertices[b.number - 1]);
 
-    polygon andPolygon = halfPlaneIntersection(edgeLine, nLine);
+    polygon c = halfPlaneIntersection(sides, nLine);
 
-    double areaAnd = area(andPolygon);
+    double areaAnd = area(c);
     double areaExclusiveOr = areaA + areaB - 2 * areaAnd;
     cout << fixed << setw(8) << setfill(' ') << setprecision(2);
     cout << areaExclusiveOr;
@@ -204,7 +187,7 @@ int main(int argc, char *argv[])
         for (int i = 1; i <= number; i++)
         {
             cin >> x >> y;
-            a.vertex[a.number++] = (point){x, y};
+            a.vertices[a.number++] = (point){x, y};
         }
 
         cin >> number;
@@ -212,7 +195,7 @@ int main(int argc, char *argv[])
         for (int i = 1; i <= number; i++)
         {
             cin >> x >> y;
-            b.vertex[b.number++] = (point){x, y};
+            b.vertices[b.number++] = (point){x, y};
         }
 
         exclusiveOr(a, b);

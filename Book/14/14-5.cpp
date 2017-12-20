@@ -11,3 +11,13 @@ double area(point vertex[], int numberOfVertex)
 
 	return fabs(areaOfPolygon / 2.0);
 }
+
+double area(polygon &pg)
+{
+    if (pg.size() < 3) return 0.0;
+    double A = 0.0;
+    int n = pg.size();
+    for (int i = 0, j = (i + 1) % n; i < n; i++, j = (i + 1) % n)
+        A += (pg[i].x * pg[j].y - pg[j].x * pg[i].y);
+    return fabs(A / 2.0);
+}

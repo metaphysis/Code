@@ -57,31 +57,31 @@ double lastX = 0.0, lastY = 0.0, lastArea = 100.0;
 bool isLineOrEmpty;
 
 // 判断两条直线是否平行。
-bool paralleLine(line l1, line l2)
+bool parallel(line l1, line l2)
 {
 	return ((fabs(l1.a - l2.a) <= EPSILON) && (fabs(l1.b - l2.b) <= EPSILON));
 }
 
 // 判断两条直线是否重合。
-bool sameLine(line l1, line l2)
+bool same(line l1, line l2)
 {
-	return (paralleLine(l1, l2) && (fabs(l1.c - l2.c) <= EPSILON));
+	return (parallel(l1, l2) && (fabs(l1.c - l2.c) <= EPSILON));
 }
 
 // 点是否在线段的包围盒内。
-bool point_in_box(point p, point b1, point b2)
+bool pointInBox(point p, point b1, point b2)
 {
 	return ((p.x >= min(b1.x, b2.x)) && (p.x <= max(b1.x, b2.x))
 		&& (p.y >= min(b1.y, b2.y)) && (p.y <= max(b1.y, b2.y)));
 }
 
 // 求两直线的交点。
-int intersection_point(line l1, line l2, segment s, point &p)
+int getIntersection(line l1, line l2, segment s, point &p)
 {
-	if (sameLine(l1, l2))
+	if (same(l1, l2))
 		return SAME_LINE;
 
-	if (paralleLine(l1, l2))
+	if (parallel(l1, l2))
 		return PARALLE_LINE;
 
 	p.x = (l2.b * l1.c - l1.b * l2.c) / (l2.a * l1.b - l1.a * l2.b);
@@ -90,14 +90,14 @@ int intersection_point(line l1, line l2, segment s, point &p)
 	else
 		p.y = -(l2.a * p.x + l2.c) / l2.b;
 		
-	if (point_in_box(p, s.p1, s.p2))
+	if (pointInBox(p, s.p1, s.p2))
 		return LINE_INTERSECT;
 	else
 		return LINE_NO_INTERSECT;
 }
 
 // 通过两点求直线方程。
-void points_to_line(point p1, point p2, line &l)
+void pointToLine(point p1, point p2, line &l)
 {
 	if (p1.x == p2.x)
 	{
@@ -114,7 +114,7 @@ void points_to_line(point p1, point p2, line &l)
 }
 
 // 使用斜率和一点求直线方程。
-void point_and_slope_to_line(point p, double m, line &l)
+void pointAndSlopeToLine(point p, double m, line &l)
 {
 	l.a = -m;
 	l.b = 1;
@@ -122,7 +122,7 @@ void point_and_slope_to_line(point p, double m, line &l)
 }
 
 // 利用有向面积计算多边形的面积，注意最后结果取绝对值，因为顶点顺序可能并不是按逆时针方向给出。
-double calArea(point vertex[], int vertexNumber)
+double getArea(point vertex[], int vertexNumber)
 {
 	double total = 0.0;
 
@@ -181,7 +181,7 @@ double area(double x, double y, string status)
 	else
 	{
 		double slope = -(lastX - x) / (lastY - y);
-		point_and_slope_to_line(middle, slope, l1);
+		pointAndSlopeToLine(middle, slope, l1);
 	}
 
 	// 判断是那个半平面与凸多边形相交。可以通过起点和垂直平分线的关系以及提示语来判断。若
@@ -193,7 +193,7 @@ double area(double x, double y, string status)
 
 	// 判断直线与多边形的相交情况，总是顺时针枚举凸包的顶点，以便生成的凸多边形顶点顺序仍然
 	// 是顺时针方向。
-	queue < point > up, down;
+	queue<point> up, down;
 	for (int i = 0; i < region.n; i++)
 	{
 		int j = (i + 1) % region.n;
@@ -205,10 +205,10 @@ double area(double x, double y, string status)
 		// 凸多边形两个相邻顶点在直线的异侧，表明直线和该线段有交点，求交点。
 		if (ri * rj < 0)
 		{
-			points_to_line(region.p[i], region.p[j], l2);
+			pointToLine(region.p[i], region.p[j], l2);
 			point intersect;
 			segment s = (segment) { region.p[i], region.p[j] };
-			intersection_point(l1, l2, s, intersect);
+			getIntersection(l1, l2, s, intersect);
 			
 			if (ri < 0)
 			{
@@ -277,7 +277,7 @@ double area(double x, double y, string status)
 	}
 
 	// 计算面积。
-	return calArea(region.p, region.n);
+	return getArea(region.p, region.n);
 }
 
 int main (int argc, char const* argv[])

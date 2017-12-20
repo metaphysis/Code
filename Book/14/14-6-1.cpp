@@ -1,4 +1,4 @@
-const int MAXN = 1100;
+const int MAXV = 1100;
 const double EPSILON = 1E-7;
 
 struct point {
@@ -60,7 +60,7 @@ bool cmpAngle(line p, line q)
     return fabs(p.angle - q.angle) <= EPSILON;
 }
 
-bool paralle(line p, line q)
+bool parallel(line p, line q)
 {
     return fabs((p.a.x - p.b.x) * (q.a.y - q.b.y) -
         (q.a.x - q.b.x) * (p.a.y - p.b.y)) <= EPSILON;
@@ -92,46 +92,55 @@ line shiftLine(point a, point b, double d)
     return pointToLine(a + offset, b + offset);
 }
 
-polygon halfPlaneIntersection(line *edges, int nLine)
+double area(polygon &pg)
+{
+    if (pg.size() < 3) return 0.0;
+    double A = 0.0;
+    int n = pg.size();
+    for (int i = 0, j = (i + 1) % n; i < n; i++, j = (i + 1) % n)
+        A += (pg[i].x * pg[j].y - pg[j].x * pg[i].y);
+    return fabs(A / 2.0);
+}
+
+polygon halfPlaneIntersection(line *sides, int nLine)
 {
     polygon pg;
-    line deques[MAXN];
+    line deq[MAXV];
 
-    sort(edges, edges + nLine, cmpLine);
-    nLine = unique(edges, edges + nLine, cmpAngle) - edges;
+    sort(sides, sides + nLine, cmpLine);
+    nLine = unique(sides, sides + nLine, cmpAngle) - sides;
 
-    int bottom = 0, top = 1;
-    deques[0] = edges[0], deques[1] = edges[1];
+    int btm = 0, top = 1;
+    deq[0] = sides[0], deq[1] = sides[1];
 
     for (int i = 2; i < nLine; i++)
     {
-        if (paralle(deques[top], deques[top - 1]) ||
-            paralle(deques[bottom], deques[bottom + 1]))
+        if (parallel(deq[top], deq[top - 1]) || parallel(deq[btm], deq[btm + 1]))
             return pg;
 
-        while (bottom < top && cw(edges[i].a, edges[i].b,
-            getIntersection(deques[top], deques[top - 1])))
+        while (btm < top &&
+            cw(sides[i].a, sides[i].b, getIntersection(deq[top], deq[top - 1])))
             top--;
-        while (bottom < top && cw(edges[i].a, edges[i].b,
-            getIntersection(deques[bottom], deques[bottom + 1])))
-            bottom++;
+        while (btm < top &&
+            cw(sides[i].a, sides[i].b, getIntersection(deq[btm], deq[btm + 1])))
+            btm++;
 
-        deques[++top] = edges[i];
+        deq[++top] = sides[i];
     }
 
-    while (bottom < top && cw(deques[bottom].a, deques[bottom].b,
-        getIntersection(deques[top], deques[top - 1])))
+    while (btm < top &&
+        cw(deq[btm].a, deq[btm].b, getIntersection(deq[top], deq[top - 1])))
         top--;
-    while (bottom < top && cw(deques[top].a, deques[top].b,
-        getIntersection(deques[bottom], deques[bottom + 1])))
-        bottom++;
+    while (btm < top &&
+        cw(deq[top].a, deq[top].b, getIntersection(deq[btm], deq[btm + 1])))
+        btm++;
 
-    if (top <= (bottom + 1)) return pg;
+    if (top <= (btm + 1)) return pg;
 
-    for (int i = bottom; i < top; i++)
-        pg.push_back(getIntersection(deques[i], deques[i + 1]));
-    if (bottom < (top + 1))
-        pg.push_back(getIntersection(deques[bottom], deques[top]));
+    for (int i = btm; i < top; i++)
+        pg.push_back(getIntersection(deq[i], deq[i + 1]));
+    if (btm < (top + 1))
+        pg.push_back(getIntersection(deq[btm], deq[top]));
 
     return pg;
 }

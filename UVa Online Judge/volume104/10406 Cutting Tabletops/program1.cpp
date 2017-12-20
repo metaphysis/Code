@@ -58,7 +58,7 @@ point rotate(point p, double t)
     return point(p.x * cos(t) - p.y * sin(t), p.x * sin(t) + p.y * cos(t));
 }
 
-point getShiftPoint(point a, point b, point c, double d)
+point shift(point a, point b, point c, double d)
 {
     point u = a - b, v = c - b;
     double t = acos(dot(u, v) / (abs(u) * abs(v)));
@@ -66,7 +66,7 @@ point getShiftPoint(point a, point b, point c, double d)
     return b + rotate(uu, t / 2);
 }
 
-double area(polygon & pg)
+double area(polygon &pg)
 {
     if (pg.size() < 3) return 0.0;
     double A = 0.0;
@@ -95,7 +95,7 @@ int main(int argc, char *argv[])
         for (int i = 0; i < n; i++)
         {
             int j = (i + 1) % n, k = (i + 2) % n;
-            pg.push_back(getShiftPoint(vertices[i], vertices[j], vertices[k], d));
+            pg.push_back(shift(vertices[i], vertices[j], vertices[k], d));
         }
 
         cout << fixed << setprecision(3) << area(pg) << '\n';
