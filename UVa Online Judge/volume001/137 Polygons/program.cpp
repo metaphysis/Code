@@ -36,21 +36,18 @@ struct polygon
 
 double cp(point a, point b, point c)
 {
-    return (c.x - a.x) * (b.y - a.y) - (b.x - a.x) * (c.y - a.y);
+    return (b.x - a.x) * (c.y - a.y) - (c.x - a.x) * (b.y - a.y);
 }
 
-// 从点 a 向点 b 望去，点 c 位于线段 ab 的右侧，返回 true。
 bool cw(point a, point b, point c)
 {
-    return cp(a, b, c) > EPSILON;
+    return cp(a, b, c) < -EPSILON;
 }
 
 line pointsToLine(point a, point b)
 {
     line lr;
-    lr.a = a;
-    lr.b = b;
-    lr.angle = atan2(a.y - b.y, a.x - b.x);
+    lr.a = a, lr.b = b, lr.angle = atan2(a.y - b.y, a.x - b.x);
     return lr;
 }
 
@@ -63,8 +60,7 @@ bool cmpAngle(line a, line b)
 // 半平面比较函数。
 bool cmpLine(line f, line s)
 {
-    if (fabs(f.angle - s.angle) <= EPSILON)
-        return cp(s.a, s.b, f.a) < EPSILON;
+    if (fabs(f.angle - s.angle) <= EPSILON) return cw(f.a, f.b, s.a);
     return f.angle < s.angle;
 }
 

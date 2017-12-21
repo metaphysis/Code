@@ -1,10 +1,10 @@
-// Polygons
-// UVa ID: 137
+// The Sultan's Problem
+// UVa ID: 11265
 // Verdict: Accepted
-// Submission Date: 2017-12-20
-// UVa Run Time: 0.000s
+// Submission Date: 2017-12-22
+// UVa Run Time: 0.100s
 //
-// 版权所有（C）2016 - 2017，邱秋。metaphysis # yeah dot net
+// 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
 #include <algorithm>
 #include <bitset>
@@ -40,6 +40,21 @@ struct point {
 };
 
 typedef vector<point> polygon;
+
+double norm(point a)
+{
+    return a.x * a.x + a.y * a.y;
+}
+
+double abs(point a)
+{
+    return sqrt(norm(a));
+}
+
+double dot(point a, point b)
+{
+    return a.x * b.x + a.y * b.y;
+}
 
 double cross(point a, point b)
 {
@@ -97,16 +112,6 @@ line pointToLine(point a, point b)
     return lr;
 }
 
-double area(polygon &pg)
-{
-    if (pg.size() < 3) return 0.0;
-    double A = 0.0;
-    int n = pg.size();
-    for (int i = 0, j = (i + 1) % n; i < n; i++, j = (i + 1) % n)
-        A += (pg[i].x * pg[j].y - pg[j].x * pg[i].y);
-    return fabs(A / 2.0);
-}
-
 polygon halfPlaneIntersection(line *sides, int nLine)
 {
     polygon pg;
@@ -150,55 +155,46 @@ polygon halfPlaneIntersection(line *sides, int nLine)
     return pg;
 }
 
-void exclusiveOr(polygon &a, polygon &b)
+double area(polygon &pg)
 {
-    double areaA = area(a), areaB = area(b);
-
-    line sides[MAXV];
-    int nLine = 0;
-
-    
-    for (int i = 0; i < a.size() - 1; i++)
-        sides[nLine++] = pointToLine(a[i + 1], a[i]);
-    sides[nLine++] = pointToLine(a[0], a.back());
-
-    for (int i = 0; i < b.size() - 1; i++)
-        sides[nLine++] = pointToLine(b[i + 1], b[i]);
-    sides[nLine++] = pointToLine(b[0], b.back());
-
-    polygon c = halfPlaneIntersection(sides, nLine);
-
-    double area1 = area(c);
-    double area2 = areaA + areaB - 2 * area1;
-    cout << fixed << setw(8) << setfill(' ') << setprecision(2) << (area2 + 1e-9);
+    if (pg.size() < 3) return 0.0;
+    double A = 0.0;
+    int n = pg.size();
+    for (int i = 0, j = (i + 1) % n; i < n; i++, j = (i + 1) % n)
+        A += (pg[i].x * pg[j].y - pg[j].x * pg[i].y);
+    return fabs(A / 2.0);
 }
 
 int main(int argc, char *argv[])
 {
-    int n;
-    double xi, yi;
+    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    while (cin >> n, n > 0)
+    point f, u, v;
+    line sides[MAXV];
+    int n, w, h, cases = 0;
+
+    while (cin >> n >> w >> h >> f.x >> f.y)
     {
-        polygon a, b;
-
-        for (int i = 1; i <= n; i++)
+        for (int i = 0; i < n; i++)
         {
-            cin >> xi >> yi;
-            a.push_back(point(xi, yi));
+            cin >> u.x >> u.y >> v.x >> v.y;
+
+            if (cw(u, v, f))
+                sides[i] = pointToLine(v, u);
+            else
+                sides[i] = pointToLine(u, v);
         }
 
-        cin >> n;
-        for (int i = 1; i <= n; i++)
-        {
-            cin >> xi >> yi;
-            b.push_back(point(xi, yi));
-        }
+        sides[n++] = pointToLine(point(0, 0), point(w, 0));
+        sides[n++] = pointToLine(point(w, 0), point(w, h));
+        sides[n++] = pointToLine(point(w, h), point(0, h));
+        sides[n++] = pointToLine(point(0, h), point(0, 0));
 
-        exclusiveOr(a, b);
+        polygon pg = halfPlaneIntersection(sides, n);
+
+        cout << "Case #" << ++cases << ": ";
+        cout << fixed << setprecision(3) << area(pg) << '\n';
     }
-
-    cout << '\n';
 
     return 0;
 }

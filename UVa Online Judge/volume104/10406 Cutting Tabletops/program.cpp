@@ -79,8 +79,7 @@ bool cw(point a, point b, point c)
 
 bool cmpLine(line p, line q)
 {
-    if (fabs(p.angle - q.angle) <= EPSILON)
-        return cp(q.a, q.b, p.a) < EPSILON;
+    if (fabs(p.angle - q.angle) <= EPSILON) return cw(p.a, p.b, q.a);
     return p.angle < q.angle;
 }
 

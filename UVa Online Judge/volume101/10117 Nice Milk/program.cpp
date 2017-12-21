@@ -37,24 +37,24 @@ int innerN;
 double minArea;
 bool finished, dipped[MAXN];
 
-double crossProduct(point a, point b, point c)
+double cp(point a, point b, point c)
 {
-    return (c.x - a.x) * (b.y - a.y) - (b.x - a.x) * (c.y - a.y);
+    return (b.x - a.x) * (c.y - a.y) - (c.x - a.x) * (b.y - a.y);
 }
 
 // 从点 a 向点 b 望去，点 c 位于线段 ab 的右侧，返回 true。
 bool cw(point a, point b, point c)
 {
-    return crossProduct(a, b, c) > EPSILON;
+    return cp(a, b, c) < -EPSILON;
 }
 
 // 从点 a 向点 b 望去，点 c 位于线段 ab 的左侧时，返回 true。
 bool ccw(point a, point b, point c)
 {
-    return crossProduct(a, b, c) < -EPSILON;
+    return cp(a, b, c) > EPSILON;
 }
 
-void pointsToLine(point a, point b, line & l)
+void pointsToLine(point a, point b, line &l)
 {
     l.a = a;
     l.b = b;
@@ -70,9 +70,7 @@ bool cmpAngle(line a, line b)
 // 半平面比较函数。
 bool cmpLine(line f, line s)
 {
-    if (fabs(f.angle - s.angle) <= EPSILON)
-        return crossProduct(s.a, s.b, f.a) < 0.0;
-
+    if (fabs(f.angle - s.angle) <= EPSILON) return cw(f.a, f.b, s.a);
     return f.angle < s.angle;
 }
 
