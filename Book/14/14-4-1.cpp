@@ -1,32 +1,3 @@
-// Useless Tile Packers （没用的瓷砖打包公司）
-// PC/UVa IDs: 111405/10065, Popularity: C, Success rate: average Level: 3
-// Verdict: Accepted
-// Submission Date: 2017-06-09
-// UVa Run Time: 0.000s
-//
-// 版权所有（C）2017，邱秋。metaphysis # yeah dot net
-
-#include <algorithm>
-#include <bitset>
-#include <cassert>
-#include <cmath>
-#include <cstring>
-#include <iomanip>
-#include <iostream>
-#include <limits>
-#include <list>
-#include <map>
-#include <numeric>
-#include <queue>
-#include <set>
-#include <sstream>
-#include <stack>
-#include <unordered_map>
-#include <unordered_set>
-#include <vector>
-
-using namespace std;
-
 const double EPSILON = 1e-7;
 
 struct point
@@ -35,8 +6,8 @@ struct point
 
 	bool operator<(const point &p) const
 	{
-	    if (fabs(x - p.x) > EPSILON) return x < p.x;
-	    return y < p.y;
+	    if (fabs(y - p.y) > EPSILON) return y < p.y;
+	    return x < p.x;
 	}
 
 	bool operator==(const point &p) const
@@ -54,58 +25,37 @@ typedef vector<point> polygon;
 
 point pr;
 
-double area(polygon pg)
-{
-	double areaOfPolygon = 0.0;
-
-    int n = pg.size();
-	for (int i = 0; i < n; i++)
-	{
-		int j = (i + 1) % n;
-		areaOfPolygon += (pg[i].x * pg[j].y - pg[j].x * pg[i].y);
-	}
-
-	return fabs(areaOfPolygon / 2.0);
-}
-
-// 叉积，判断点a，b，c组成的两条线段的转折方向。当叉积小于0，则形成一个右拐，
-// 否则共线（cp = 0）或左拐（cp > 0）。
 double cp(point a, point b, point c)
 {
 	return (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x);
 }
 
-// 从点a向点b望去，点c位于线段ab的右侧，返回true。
 bool cw(point a, point b, point c)
 {
 	return cp(a, b, c) < -EPSILON;
 }
-// 从点a向点b望去，点c位于线段ab的左侧时，返回true。
+
 bool ccw(point a, point b, point c)
 {
 	return cp(a, b, c) > EPSILON;
 }
 
-// 当三点共线时，返回true。
 bool collinear(point a, point b, point c)
 {
 	return fabs(cp(a, b, c)) <= EPSILON;
 }
 
-// 判断是否向左转或共线。
 bool ccwOrCollinear(point a, point b, point c)
 {
 	return ccw(a, b, c) || collinear(a, b, c);
 }
 
-// 按相对于参考点的极角大小进行排序。
 bool cmpAngle(point &a, point &b)
 {
     if (collinear(pr, a, b)) return pr.distTo(a) <= pr.distTo(b);
     return ccw(pr, a, b);
 }
 
-// Graham凸包扫描算法。
 polygon grahamConvexHull(polygon &pg)
 {
     polygon ch(pg);
@@ -118,37 +68,19 @@ polygon grahamConvexHull(polygon &pg)
     sort(ch.begin() + 1, ch.end(), cmpAngle);
 	ch.push_back(pr);
 
-	int top = 2, candidate = 2, total = ch.size() - 1;
-	while (candidate <= total)
+	int top = 2, next = 2, total = ch.size() - 1;
+	while (next <= total)
 	{
-	    if (cw(ch[top - 2], ch[top - 1], ch[candidate])) top--;
+	    if (cw(ch[top - 2], ch[top - 1], ch[next])) top--;
 	    else 
 	    {
-	        if (collinear(ch[top - 2], ch[top - 1], ch[candidate]))
-	            ch[top - 1] = ch[candidate++];
-	        else ch[top++] = ch[candidate++];
+	        if (collinear(ch[top - 2], ch[top - 1], ch[next]))
+	            ch[top - 1] = ch[next++];
+	        else
+	            ch[top++] = ch[next++];
         }
 	}
 	ch.erase(ch.begin() + top, ch.end());
 
 	return ch;
-}
-
-int main(int argc, char *argv[])
-{
-	cout.precision(2);
-	cout.setf(ios::fixed | ios::showpoint);
-
-	int number, cases = 1;
-	while (cin >> number, number)
-	{
-	    polygon tile(number);
-		for (int i = 0; i < number; i++) cin >> tile[i].x >> tile[i].y;
-		double used = area(tile);
-		double all = area(grahamConvexHull(tile));
-		cout << "Tile #" << cases++ << '\n';
-		cout << "Wasted Space = " << (1.0 - used / all) * 100.0 << " %\n\n";
-	}
-
-	return 0;
 }

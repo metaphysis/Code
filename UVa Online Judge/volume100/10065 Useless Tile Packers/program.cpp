@@ -39,7 +39,7 @@ struct point
 
 typedef vector<point> polygon;
 
-point lowerLeftPoint;
+point pr;
 
 double area(polygon pg)
 {
@@ -57,7 +57,7 @@ double area(polygon pg)
 
 // 叉积，判断点a，b，c组成的两条线段的转折方向。当叉积小于0，则形成一个右拐，
 // 否则共线（cp = 0）或左拐（cp > 0）。
-int crossProduct(point a, point b, point c)
+int cp(point a, point b, point c)
 {
 	return (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x);
 }
@@ -65,18 +65,18 @@ int crossProduct(point a, point b, point c)
 // 从点a向点b望去，点c位于线段ab的右侧，返回true。
 bool cw(point a, point b, point c)
 {
-	return crossProduct(a, b, c) < -EPSILON;
+	return cp(a, b, c) < -EPSILON;
 }
 // 从点a向点b望去，点c位于线段ab的左侧时，返回true。
 bool ccw(point a, point b, point c)
 {
-	return crossProduct(a, b, c) > EPSILON;
+	return cp(a, b, c) > EPSILON;
 }
 
 // 当三点共线时，返回true。
 bool collinear(point a, point b, point c)
 {
-	return fabs(crossProduct(a, b, c)) <= EPSILON;
+	return fabs(cp(a, b, c)) <= EPSILON;
 }
 
 // 判断是否向左转或共线。
@@ -86,11 +86,11 @@ bool ccwOrCollinear(point a, point b, point c)
 }
 
 // 按相对于参考点的极角大小进行排序。
-bool smallerAngle(point &p1, point &p2)
+bool cmpAngle(point &p1, point &p2)
 {
-    if (collinear(lowerLeftPoint, p1, p2))
-        return lowerLeftPoint.distTo(p1) <= lowerLeftPoint.distTo(p2);
-    return ccw(lowerLeftPoint, p1, p2);
+    if (collinear(pr, p1, p2))
+        return pr.distTo(p1) <= pr.distTo(p2);
+    return ccw(pr, p1, p2);
 }
 
 // Graham凸包扫描算法。
@@ -103,10 +103,10 @@ polygon grahamConvexHull(polygon &pg)
 
     if (ch.size() < 3) return ch;
 
-    lowerLeftPoint = ch.front();
-    sort(ch.begin() + 1, ch.end(), smallerAngle);
+    pr = ch.front();
+    sort(ch.begin() + 1, ch.end(), cmpAngle);
 
-	ch.push_back(lowerLeftPoint);
+	ch.push_back(pr);
 
 	int top = 2, candidate = 2, total = ch.size() - 1;
 	while (candidate <= total)
