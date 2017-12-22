@@ -30,7 +30,7 @@ bool pointInBox(point p, point a, point b)
 
 double direction(point a, point b, point c)
 {
-    return (c.x - a.x) * (b.y - a.y) - (b.x - a.x) * (c.y - a.y);
+    return (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x);
 }
 
 // 判断两条线段是否相交。

@@ -55,32 +55,32 @@ point lowerLeftPoint, vertex[MAX_VERTICES];
 int vertexPerObject, vertexOfTotal = 0;
 
 // 叉积。
-int crossProduct(point a, point b, point c)
+int cp(point a, point b, point c)
 {
-	return (c.x - a.x) * (b.y - a.y) - (b.x - a.x) * (c.y - a.y);
+	return (b.x - a.x) * (c.y - a.y) - (c.x - a.x) * (b.y - a.y);
 }
 
 // 从点a向点b望去，点c位于线段ab的右侧，返回true。
 bool cw(point a, point b, point c)
 {
-	return crossProduct(a, b, c) > 0;
+	return cp(a, b, c) < 0;
 }
 // 从点a向点b望去，点c位于线段ab的左侧时，返回true。
 bool ccw(point a, point b, point c)
 {
-	return crossProduct(a, b, c) < 0;
+	return cp(a, b, c) > 0;
 }
 
 // 当三点共线时，返回true。
 bool collinear(point a, point b, point c)
 {
-	return fabs(crossProduct(a, b, c)) <= 0;
+	return cp(a, b, c) == 0;
 }
 
 // 判断是否向左转或共线。
 bool ccwOrCollinear(point a, point b, point c)
 {
-	return ccw(a, b, c) || collinear(a, b, c);
+	return cp(a, b, c) >= 0;
 }
 
 // 两点距离的平方值。

@@ -38,7 +38,7 @@ struct segment
 // 使用叉积来表示线段的相对方向。
 double direction(point a, point b, point c)
 {
-    return (c.x - a.x) * (b.y - a.y) - (b.x - a.x) * (c.y - a.y);
+    return (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x);
 }
 
 // 包围盒测试。测试点p是否在线段ab上，不包括在端点上，但部分重合认为相交。

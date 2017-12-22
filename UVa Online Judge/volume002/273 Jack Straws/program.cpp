@@ -29,7 +29,7 @@ bool pointInBox(point p, point a, point b)
 
 double direction(point a, point b, point c)
 {
-    return (c.x - a.x) * (b.y - a.y) - (b.x - a.x) * (c.y - a.y);
+    return (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x);
 }
 
 bool segmentsIntersect(segment a, segment b)
@@ -41,20 +41,11 @@ bool segmentsIntersect(segment a, segment b)
     d3 = direction(b.start, b.end, a.start);
     d4 = direction(b.start, b.end, a.end);
     
-    if ((d1 * d2 < 0) && (d3 * d4 < 0))
-        return true;
-
-    if (d1 == 0 && pointInBox(b.start, a.start, a.end))
-        return true;
-
-    if (d2 == 0 && pointInBox(b.end, a.start, a.end))
-        return true;
-
-    if (d3 == 0 && pointInBox(a.start, b.start, b.end))
-        return true;
-
-    if (d4 == 0 && pointInBox(a.end, b.start, b.end))
-        return true;
+    if ((d1 * d2 < 0) && (d3 * d4 < 0)) return true;
+    if (d1 == 0 && pointInBox(b.start, a.start, a.end)) return true;
+    if (d2 == 0 && pointInBox(b.end, a.start, a.end)) return true;
+    if (d3 == 0 && pointInBox(a.start, b.start, b.end)) return true;
+    if (d4 == 0 && pointInBox(a.end, b.start, b.end)) return true;
         
     return false;
 }

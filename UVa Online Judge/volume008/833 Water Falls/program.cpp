@@ -43,15 +43,15 @@ struct segment
 
 // 叉积，判断点a，b，c组成的两条线段的转折方向。当叉积大于0，则形成一个右拐，
 // 否则共线（cp = 0）或左拐（cp < 0）。
-int crossProduct(const point &a, const point &b, const point &c)
+int cp(const point &a, const point &b, const point &c)
 {
-	return (c.x - a.x) * (b.y - a.y) - (b.x - a.x) * (c.y - a.y);
+	return (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x);
 }
 
 // 从点a向点b望去，点c位于线段ab的左侧或在线段上，返回true。
 bool ccw(const point &a, const point &b, const point &c)
 {
-	return crossProduct(a, b, c) <= 0;
+	return cp(a, b, c) >= 0;
 }
 
 bool pointOnSegment(const point &p, const segment &s)

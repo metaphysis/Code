@@ -24,26 +24,26 @@ struct point
 point lowerLeftPoint;
 
 // 叉积。
-double crossProduct(point a, point b, point c)
+double cp(point a, point b, point c)
 {
-	return (c.x - a.x) * (b.y - a.y) - (b.x - a.x) * (c.y - a.y);
+	return (b.x - a.x) * (c.y - a.y) - (c.x - a.x) * (b.y - a.y);
 }
 
 // 从点 a 向点 b 望去，点 c 位于线段 ab 的右侧，返回 true。
 bool cw(point a, point b, point c)
 {
-	return crossProduct(a, b, c) > EPSILON;
+	return cp(a, b, c) < -EPSILON;
 }
 // 从点 a 向点 b 望去，点 c 位于线段 ab 的左侧时，返回 true。
 bool ccw(point a, point b, point c)
 {
-	return crossProduct(a, b, c) < -EPSILON;
+	return cp(a, b, c) > EPSILON;
 }
 
 // 当三点共线时，返回true。
 bool collinear(point a, point b, point c)
 {
-	return fabs(crossProduct(a, b, c)) <= EPSILON;
+	return fabs(cp(a, b, c)) <= EPSILON;
 }
 
 // 判断是否向左转或共线。

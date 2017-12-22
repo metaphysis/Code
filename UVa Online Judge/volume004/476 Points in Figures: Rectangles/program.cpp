@@ -42,20 +42,20 @@ int cases = 0;
 
 double direction(point a, point b, point c)
 {
-    return (c.x - a.x) * (b.y - a.y) - (b.x - a.x) * (c.y - a.y);
+    return (b.x - a.x) * (c.y - a.y) - (c.x - a.x) * (b.y - a.y);
 }
 
-void is_contained(point test)
+void isContained(point test)
 {
     ++cases;
     bool flag = false;
     for (int i = 0; i < rectangles.size(); i++)
     {
         rectangle rect = rectangles[i];
-        if (direction(rect.left_top, rect.right_top, test) > EPSILON &&
-            direction(rect.right_top, rect.right_bottom, test) > EPSILON &&
-            direction(rect.right_bottom, rect.left_bottom, test) > EPSILON &&
-            direction(rect.left_bottom, rect.left_top, test) > EPSILON)
+        if (direction(rect.left_top, rect.right_top, test) < -EPSILON &&
+            direction(rect.right_top, rect.right_bottom, test) < -EPSILON &&
+            direction(rect.right_bottom, rect.left_bottom, test) < -EPSILON &&
+            direction(rect.left_bottom, rect.left_top, test) < -EPSILON)
         {
             flag = true;
             cout << "Point " << cases << " is contained in figure " << (i + 1) << endl;
@@ -86,7 +86,7 @@ int main(int argc, char *argv[])
     while (cin >> test_x >> test_y)
     {
         if (test_x == "9999.9" && test_y == "9999.9") break;
-        is_contained((point){stod(test_x), stod(test_y)});
+        isContained((point){stod(test_x), stod(test_y)});
     }
     
 	return 0;

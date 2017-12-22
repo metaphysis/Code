@@ -19,24 +19,24 @@ struct point
     double x, y;
 };
 
-double crossProduct(point a, point b, point c)
+double cp(point a, point b, point c)
 {
-    return (c.x - a.x) * (b.y - a.y) - (b.x - a.x) * (c.y - a.y);
+    return (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x);
 }
 
 bool cw(point a, point b, point c)
 {
-    return crossProduct(a, b, c) > EPSILON;
+    return cp(a, b, c) <- EPSILON;
 }
 
 bool ccw(point a, point b, point c)
 {
-    return crossProduct(a, b, c) < -EPSILON;
+    return cp(a, b, c) > EPSILON;
 }
 
 bool collinear(point a, point b, point c)
 {
-    return fabs(crossProduct(a, b, c)) <= EPSILON;
+    return fabs(cp(a, b, c)) <= EPSILON;
 }
 
 // 包围盒测试。
@@ -67,7 +67,7 @@ int main(int argc, char *argv[])
         for (int i = max(minX, 1); i <= min(maxX, 99); i++)
             for (int j = max(minY, 1); j <= min(maxY, 99); j++)
             {
-                point tree = (point) { i, j };
+                point tree = (point) { (double)i, (double)j };
                 if ((collinear(a, b, tree) && pointInBox(tree, a, b)) ||
                     (collinear(b, c, tree) && pointInBox(tree, b, c)) ||
                     (collinear(c, a, tree) && pointInBox(tree, c, a)))

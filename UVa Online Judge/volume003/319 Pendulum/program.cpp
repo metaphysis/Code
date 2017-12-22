@@ -37,9 +37,9 @@ double getDist(const point & p1, const point & p2)
     return sqrt(pow(p1.x - p2.x, 2) + pow(p1.y - p2.y, 2));
 }
 
-double crossProduct(const point & a, const point & b, const point & c)
+double cp(const point &a, const point &b, const point &c)
 {
-    return (c.x - a.x) * (b.y - a.y) - (b.x - a.x) * (c.y - a.y);
+    return (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x);
 }
 
 int main(int argc, char *argv[])
@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
     {
         cout << "Pendulum #" << ++cases << '\n';
 
-        vector < point > hooks;
+        vector<point> hooks;
         hooks.push_back(point{0.0, 0.0});
 
         for (int i = 0; i < n; i++)
@@ -96,8 +96,8 @@ int main(int argc, char *argv[])
                 }
                 else
                 {
-                    double cp = crossProduct(hooks[lastHookIdx], hooks[nextHookIdx], hooks[i]);
-                    if (fabs(cp) < EPSILON)
+                    double CP = cp(hooks[lastHookIdx], hooks[nextHookIdx], hooks[i]);
+                    if (fabs(CP) < EPSILON)
                     {
                         double lastDist = getDist(hooks[nextHookIdx], hooks[lastHookIdx]);
                         if (lastDist + EPSILON < currentDist)
@@ -108,7 +108,7 @@ int main(int argc, char *argv[])
                     }
                     else
                     {
-                        if (cp > 0)
+                        if (CP < 0)
                         {
                             nextTheta = theta;
                             nextHookIdx = i;

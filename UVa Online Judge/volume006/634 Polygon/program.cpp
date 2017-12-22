@@ -33,7 +33,7 @@ struct polygon
 // 使用叉积来表示线段的相对方向。
 double direction(point a, point b, point c)
 {
-    return (c.x - a.x) * (b.y - a.y) - (b.x - a.x) * (c.y - a.y);
+    return (b.x - a.x) * (c.y - a.y) - (c.x - a.x) * (b.y - a.y);
 }
 
 // 判断多边形的边是否在射线上方。

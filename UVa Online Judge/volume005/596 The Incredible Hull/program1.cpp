@@ -15,7 +15,6 @@
 using namespace std;
 
 const int MAX_VERTICES = 500;
-const int EPSILON = 0;
 
 struct point
 {
@@ -46,27 +45,27 @@ int vertexPerObject, vertexOfTotal = 0;
 
 // 叉积，判断点a，b，c组成的两条线段的转折方向。当叉积大于0，则形成一个右拐，
 // 否则共线（cp = 0）或左拐（cp < 0）。
-int crossProduct(point a, point b, point c)
+int cp(point a, point b, point c)
 {
-	return (c.x - a.x) * (b.y - a.y) - (b.x - a.x) * (c.y - a.y);
+	return (b.x - a.x) * (c.y - a.y) - (c.x - a.x) * (b.y - a.y);
 }
 
 // 从点a向点b望去，点c位于线段ab的右侧，返回true。
 bool cw(point a, point b, point c)
 {
-	return crossProduct(a, b, c) > EPSILON;
+	return cp(a, b, c) < 0;
 }
 
 // 从点a向点b望去，点c位于线段ab的左侧时，返回true。
 bool ccw(point a, point b, point c)
 {
-	return crossProduct(a, b, c) < EPSILON;
+	return cp(a, b, c) > 0;
 }
 
 // 当三点共线时，返回true。
 bool collinear(point a, point b, point c)
 {
-	return fabs(crossProduct(a, b, c)) <= EPSILON;
+	return abs(cp(a, b, c)) == 0;
 }
 
 int distanceOfPoint(point a, point b)

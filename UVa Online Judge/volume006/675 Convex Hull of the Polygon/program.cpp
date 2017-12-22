@@ -49,7 +49,7 @@ typedef vector<point> polygon;
 
 // 叉积，判断点a，b，c组成的两条线段的转折方向。当叉积大于0，则形成一个右拐，
 // 否则共线（cp = 0）或左拐（cp < 0）。
-int crossProduct(point &a, point &b, point &c)
+int cp(point &a, point &b, point &c)
 {
 	return (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x);
 }
@@ -57,24 +57,24 @@ int crossProduct(point &a, point &b, point &c)
 // 从点a向点b望去，点c位于线段ab的右侧，返回true。
 bool cw(point &a, point &b, point &c)
 {
-	return crossProduct(a, b, c) < 0;
+	return cp(a, b, c) < 0;
 }
 
 // 从点a向点b望去，点c位于线段ab的左侧时，返回true。
 bool ccw(point &a, point &b, point &c)
 {
-	return crossProduct(a, b, c) > 0;
+	return cp(a, b, c) > 0;
 }
 
 // 当三点共线时，返回true。
 bool collinear(point &a, point &b, point &c)
 {
-	return crossProduct(a, b, c) == 0;
+	return cp(a, b, c) == 0;
 }
 
 bool ccwOrCollinear(point &a, point &b, point &c)
 {
-    return crossProduct(a, b, c) >= 0;
+    return cp(a, b, c) >= 0;
 }
 
 double distanceOfPoint(point &a, point &b)
