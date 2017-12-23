@@ -1,8 +1,8 @@
 // Trash Removal
 // UVa ID: 1111
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2017-12-23
+// UVa Run Time: 0.120s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
@@ -56,6 +56,16 @@ double cross(point a, point b)
     return a.x * b.y - a.y * b.x;
 }
 
+double cp(point a, point b, point c)
+{
+    return cross(b - a, c - a);
+}
+
+bool cw(point a, point b, point c)
+{
+    return cp(a, b, c) < 0;
+}
+
 double getDistPL(point p, point p1, point p2)
 {
 	return fabs(cross(p2 - p1, p - p1) / abs(p2 - p1));
@@ -76,19 +86,21 @@ int main(int argc, char *argv[])
         
         double mostH = 1e9;
         for (int i = 0; i < n; i++)
-        {
-            int j = (i + 1) % n;
-            
-            double maxH = 0;
-            for (int k = 0; k < n; k++)
+            for (int j = i + 1; j < n; j++)
             {
-                double h = getDistPL(vertices[k], vertices[i], vertices[j]);
-                maxH = max(maxH, h);
+                double maxLeft = 0, maxRight = 0;
+                for (int k = 0; k < n; k++)
+                {
+                    double h = getDistPL(vertices[k], vertices[i], vertices[j]);
+                    if (cw(vertices[i], vertices[j], vertices[k]))
+                        maxLeft = max(maxLeft, h);
+                    else
+                        maxRight = max(maxRight, h);
+                    if (maxLeft + maxRight > mostH) break;
+                }
+                mostH = min(mostH, maxLeft + maxRight);
             }
-            
-            mostH = min(mostH, maxH);
-        }
-        
+
         cout << "Case " << ++cases << ": " << fixed << setprecision(2) << mostH << '\n';
     }
 

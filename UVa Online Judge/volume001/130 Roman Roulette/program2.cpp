@@ -1,9 +1,34 @@
+// Roman Roulette
+// UVa ID: 130
+// Verdict: Accepted
+// Submission Date: 2015-12-10
+// UVa Run Time: 0.000s
+//
+// 版权所有（C）2015，邱秋。metaphysis # yeah dot net
+
+#include <algorithm>
+#include <bitset>
+#include <cassert>
+#include <cmath>
+#include <cstring>
+#include <iomanip>
 #include <iostream>
+#include <limits>
+#include <list>
+#include <map>
+#include <numeric>
+#include <queue>
+#include <set>
+#include <sstream>
+#include <stack>
+#include <unordered_map>
+#include <unordered_set>
 #include <vector>
+
 using namespace std;
 
 int n, k, m;
-vector < int > circle;
+vector<int> circle;
 
 // 模拟计数的过程。
 int findCW(int start, int count)
