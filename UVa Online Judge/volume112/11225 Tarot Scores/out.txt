@@ -1,0 +1,14 @@
+Hand #1
+Game lost by 56 point(s).
+
+Hand #2
+Game lost by 9 point(s).
+
+Hand #3
+Game lost by 10 point(s).
+
+Hand #4
+Game won by 44 point(s).
+
+Hand #5
+Game won by 16 point(s).
