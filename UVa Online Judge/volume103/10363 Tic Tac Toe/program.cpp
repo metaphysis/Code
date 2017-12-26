@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 
     int cases;
     char g[3][3];
-    
+
     cin >> cases;
     for (int c = 1; c <= cases; c++)
     {
@@ -47,45 +47,40 @@ int main(int argc, char *argv[])
                 if (g[i][j] == 'O') so++;
             }
         }
-        
-        int hx = 0, vx = 0, dx1 = 0, dx2 = 0;
-        int ho = 0, vo = 0, do1 = 0, do2 = 0;
+
         int wx = 0, wo = 0;
 
         for (int i = 0; i < 3; i++)
         {
             if (g[i][0] == g[i][1] && g[i][1] == g[i][2])
             {
-                if (g[i][0] == 'X') hx++, wx++;
-                if (g[i][0] == 'O') ho++, wo++;
+                if (g[i][0] == 'X') wx++;
+                if (g[i][0] == 'O') wo++;
             }
             if (g[0][i] == g[1][i] && g[1][i] == g[2][i])
             {
-                if (g[0][i] == 'X') vx++, wx++;
-                if (g[0][i] == 'O') vo++, wo++;
+                if (g[0][i] == 'X') wx++;
+                if (g[0][i] == 'O') wo++;
             }
-            
         }
 
         if (g[0][0] == g[1][1] && g[1][1] == g[2][2])
         {
-            if (g[0][0] == 'X') dx1++, wx++;
-            if (g[0][0] == 'O') do1++, wo++;
+            if (g[0][0] == 'X') wx++;
+            if (g[0][0] == 'O') wo++;
         }
         if (g[0][2] == g[1][1] && g[1][1] == g[2][0])
         {
-            if (g[0][2] == 'X') dx2++, wx++;
-            if (g[0][2] == 'O') do2++, wo++;
+            if (g[0][2] == 'X') wx++;
+            if (g[0][2] == 'O') wo++;
         }
 
-        if (wx > 0 && wo > 0) { cout << "no\n"; continue; }
-        if (hx > 1 || vx > 1 || ho > 1 || vx > 1) { cout << "no\n"; continue; }
-        if (hx > 0 && vx > 0 && dx2 > 0) { cout << "no\n"; continue; }
-        if (ho > 0 && vo > 0 && do2 > 0) { cout << "no\n"; continue; }
+        if (sx > 5 || so > 4) { cout << "no\n"; continue; }
         if (sx != so && sx != so + 1) { cout << "no\n"; continue; }
+        if (wx > 0 && wo > 0) { cout << "no\n"; continue; }
         if (sx == so && wx > 0) { cout << "no\n"; continue; }
         if (sx == so + 1 && wo > 0) { cout << "no\n"; continue; }
-        
+
         cout << "yes\n";
     }
 
