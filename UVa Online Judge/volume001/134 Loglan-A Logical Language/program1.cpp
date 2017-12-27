@@ -16,8 +16,7 @@ const int NONE = -1, A = 0, MOD = 1, BA = 2, DA = 3, LA = 4, NAM = 5,
     PREDA = 6, PREDSTRING = 7, PREDNAME = 8, PREDS = 9, VERBPRED = 10,
     PREDVERB = 11, PREDCLAIM = 12, STATEMENT = 13, SENTENCE = 14;
 
-vector < int > S;
-vector < string > W;
+vector<int> S; vector<string> W;
 
 int T[14][4] = {
     {PREDA, NONE, PREDA, PREDA}, {PREDA, NONE, NONE, PREDSTRING},
@@ -32,25 +31,16 @@ int T[14][4] = {
 int getSymbol(string word)
 {
     string vowel = "aeiou";
-    if (word.length() == 1 && vowel.find(word[0]) != word.npos)
-        return A;
+    if (word.length() == 1 && vowel.find(word[0]) != word.npos) return A;
     if (word.length() == 2 && vowel.find(word[1]) != word.npos)
     {
-        switch (word[0])
-        {
-            case 'g':
-                return MOD;
-            case 'b':
-                return BA;
-            case 'd':
-                return DA;
-            case 'l':
-                return LA;
-        }
+        if (word[0] == 'g') return MOD;
+        if (word[0] == 'b') return BA;
+        if (word[0] == 'd') return DA;
+        if (word[0] == 'l') return LA;
         return NONE;
     }
-    if (vowel.find(word.back()) == word.npos)
-        return NAM;
+    if (vowel.find(word.back()) == word.npos) return NAM;
     if (word.length() == 5)
     {
         int bitOr = 0;
@@ -62,37 +52,34 @@ int getSymbol(string word)
     return NONE;
 }
 
-bool translateToSymbol()
+bool parse()
 {
     S.clear();
     for (int i = 0; i < W.size(); i++)
     {
         int symbol = getSymbol(W[i]);
-        if (symbol == NONE)
-            return false;
-        else
-            S.push_back(symbol);
+        if (symbol == NONE) return false;
+        else S.push_back(symbol);
     }
     return true;
 }
 
-bool isSentence()
+bool good()
 {
-    if (translateToSymbol() == false)
-        return false;
+    if (!parse()) return false;
 
     for (int i = 0; i < 14; i++)
         for (int j = 0; j < S.size();)
         {
             if ((S[j] != T[i][0]) ||
-                (T[i][1] != NONE && (j == 0 || S[j - 1] != T[i][1])) ||
-                (T[i][2] != NONE && (j == (S.size() - 1) || S[j + 1] != T[i][2])))
+                (~T[i][1] && (!j || S[j - 1] != T[i][1])) ||
+                (~T[i][2] && (j == (S.size() - 1) || S[j + 1] != T[i][2])))
             {
                 j++;
                 continue;
             }
-            j = T[i][1] != NONE ? S.erase(S.begin() + j - 1) - S.begin() : j;
-            j = T[i][2] != NONE ? S.erase(S.begin() + j + 1) - S.begin() - 1 : j;
+            j = ~T[i][1] ? S.erase(S.begin() + j - 1) - S.begin() : j;
+            j = ~T[i][2]? S.erase(S.begin() + j + 1) - S.begin() - 1 : j;
             S[j] = T[i][3];
         }
 
@@ -104,20 +91,17 @@ int main(int argc, char *argv[])
     string line, word;
     while (getline(cin, line), line != "#")
     {
-        string newLine(line);
-        if (line.find('.') != string::npos)
-            newLine = newLine.substr(0, newLine.find('.'));
+        string temp(line);
+        if (line.find('.') != string::npos) temp = temp.substr(0, temp.find('.'));
 
-        istringstream iss(newLine);
-        while (iss >> word)
-            W.push_back(word);
+        istringstream iss(temp);
+        while (iss >> word) W.push_back(word);
 
         if (line.find('.') != string::npos)
         {
-            cout << (isSentence()? "Good" : "Bad!") << endl;
+            cout << (good()? "Good" : "Bad!") << endl;
             W.clear();
         }
     }
-
     return 0;
 }

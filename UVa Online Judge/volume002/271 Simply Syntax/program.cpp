@@ -14,7 +14,7 @@ using namespace std;
 
 const int NONE = -1, N = 0, C = 1, D = 2, E = 3, I = 4, SENTENCE = 5;
 
-vector < int > S;
+vector<int> S;
 
 int T[5][4] = {
     {SENTENCE, C, SENTENCE, SENTENCE},
@@ -56,14 +56,14 @@ bool isSentence(string line)
             for (int j = 0; j < S.size(); )
             {
                 if ((S[j] != T[i][0]) ||
-                    (T[i][1] != NONE && (j == 0 || S[j - 1] != T[i][1])) ||
-                    (T[i][2] != NONE && (j == (S.size() - 1) || S[j + 1] != T[i][2])))
+                    (~T[i][1] && (!j || S[j - 1] != T[i][1])) ||
+                    (~T[i][2] && (j == (S.size() - 1) || S[j + 1] != T[i][2])))
                 {
                     j++;
                     continue;
                 }
-                j = T[i][1] != NONE ? S.erase(S.begin() + j - 1) - S.begin() : j;
-                j = T[i][2] != NONE ? S.erase(S.begin() + j + 1) - S.begin() - 1 : j;
+                j = ~T[i][1] ? S.erase(S.begin() + j - 1) - S.begin() : j;
+                j = ~T[i][2] ? S.erase(S.begin() + j + 1) - S.begin() - 1 : j;
                 S[j] = T[i][3];
                 
                 replaced = true;
