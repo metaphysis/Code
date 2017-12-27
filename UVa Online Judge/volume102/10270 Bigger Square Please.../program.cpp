@@ -696,8 +696,7 @@ int main(int ac, char *av[])
 	}
 
 #ifdef DEBUG_MODE
-	cout << "TIME ELAPSED: " << (clock() -
-		start) / CLOCKS_PER_SEC << " s." << endl;
+	cout << "TIME ELAPSED: " << (clock() - start) / CLOCKS_PER_SEC << " s." << endl;
 #endif
 
 	return 0;
