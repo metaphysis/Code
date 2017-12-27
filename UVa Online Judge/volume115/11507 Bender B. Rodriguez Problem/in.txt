@@ -1,0 +1,201 @@
+11
+-y +z +y -y No No +y -z +z +z
+3
++z -z
+18
++z +z +y -z +y +z No +y -z No +z +z +z -y +z +z -z
+20
+-y No +z +y +z -z No -y +z +y No -y No -y No No +z -y -y
+14
++y -z -y -z -z +y -z +y -z No +z -y +y
+5
+No +y +z -z
+17
++z -y -z -y -z No -y -z No +y +y -z -y No -y No
+21
+-z -z -z -z -y +y +y -y No -y -y -z -z +z +z +y -z +y +y +z
+4
+-z +z +y
+7
++z +z -y No +z -y
+15
+No -z -z No -y +y -y No No +y +y No No +z
+19
++z No -z +y -y No +z -y -z No No No +z -y -y -y +z No
+17
++y +z -z -y +z No +z -z +z +z -z No No +y No +z
+14
+-z +y -y -y +z No +z -z +z No +z -z +z
+19
++y -y -z No +z +y +y -z No -y +y +y +z No No +z +y No
+17
+No No +y +z No -z +z -y +y -y +z No +y -z -y No
+5
+No +y -y -z
+15
++z -z -y +z No No -z +z -z -z -y -z +z -z
+15
++z +z +z -z +z +z +z +z -z +y +z +z +y +y
+18
++y -y +y +z +z -y +y No No +z -z -z -y +y No -y +y
+13
+No +y -y -y -y -y +y -z +z -y +z No
+14
+-z -z +y No -y +z +z No +y +z +z -y -y
+14
++y -z -z -y -z +y -z +z +y No -y +y -y
+11
+-z +z +z No +y -y +z -z +y No
+4
+-z +y No
+17
++z No +y +z +z -z -z -z -z -y +z +z -z -z +z +y
+20
+No -y No +z No +z +z -y -y -y +y -y -z No -y -y No -y No
+16
+-y -z +y No +z +y +y +z +y No +y No -y No -z
+20
++y No -z No No -z -z No -y -z +z +z +z -z -z -y -y -y -y
+21
++z -z -z No -y No No -y -z +y +z +z -z No -z -y -z -y No -z
+12
++z No +y +y +z +y -z -z +z +z +y
+10
+-z -z +y No No -y +z +y -z
+8
++z No +y No +y -y No
+14
+-z -y -z No -z +z -z +y -z -z -y +y +z
+19
++y -y +z No +y +z No No +y +z -z +z -y -y -z -z +y -z
+9
+-z -z -z -y -z No No +y
+10
+-y No No +z -z +z -z No -z
+9
++z No -z -z No -z +z -z
+20
++y -y -z No +z +y +y -y +z +y -y No -y -y -y +y -z +y -y
+14
+No -y -z -y -y -y -y +z -z +z +z -y +y
+6
++z +y -z No -z
+14
++z +z +y -y +z +z +y No +y +z -z +y -y
+9
+No -z -y +y -y +z -y -y
+13
+-y +y -y +y +z -y +z No +z -y +y +z
+3
++z -y
+21
+No No +y +z +y -y No -z -y +z +y +z -z +y No +z -y -z -z No
+20
+-y +z No -y -y +y -z +y +y -y -y -y No -z -y +y No -z -z
+21
+-z -z +y -z -y +y -y No -z No +y +z No -y +z +z No +z No +z
+2
++z
+16
++z -y +y +z -z +z +z -z +z -z -z +z No -z No
+14
++y +y -y -y -z -z +z +y No +y +z -y -z
+21
+-z No +z +y +z No +z No +z -z +y +z +y +z -z -y -y -y -z +y
+9
+No +z -y -z No -y -y +y
+9
+No +y -y -z -y -y -y -z
+17
+-y +y +z -y +y No -y +y -y No +z No +z +z +z +z
+14
++z No -z +z -y No +z +z +y +z No +y +z
+6
++z +z -z -z -y
+7
+-y No +y -y -z +y
+10
++z No +y +y No +y +y No +z
+19
+-y No No +y +y +z -z -y +y +z +y No -y -z +y -y No +y
+15
++y -z -z +y +z +z +z No -y -y +z -z -z -z
+20
+No -z -z -z +z No +z -z -y No +z +y +y +y +y No No -z -y
+3
++z +y
+20
++y No +z +y +y +z -y +y -z -y No -z No -z +z -y +z -y -y
+4
+-y +z +z
+3
+-y +y
+7
+-z -z +z +z +z No
+3
+-y -z
+8
+-y -z No -z -y -y +y
+19
++z -y -z +y -y No +y -y No -y -z -y +z -y -y -z +y -z
+9
+-z -y No -z -z -y +z +z
+14
++y No +y +z No +z -y No No +z No -y No
+16
+-y No -y No +y -y No -z No +z -z No -y No -z
+10
++y -y +y -y No No +z No +z
+7
+-z +y +z +y +z -y
+3
+No -z
+8
+No +y -y -y No +z No
+13
+No +z +y No +z +y +y +y -y No +y -z
+19
+-z No -y -y No No No No -y No No No -y No +y +z +z -y
+8
++z -z No -z -z +y +y
+5
++z +y -z No
+5
+-z -z No +y
+9
+-y -y +z -z +z +z -y -z
+8
+-z +y +y +z -z -z +z
+3
++z +z
+10
++y -y +z +z -y +z +z -z +z
+14
+-z +z -y No +y -z No +z -z No No -y -y
+19
++z -z -z No No No +z +y +y -z No -z -z +z No -z +z No
+9
+-z -y +z +z No +y +y +z
+3
+-y +y
+9
++z -y -z -y +z +y +y +z
+13
+-y +z -z -y -y -z +z +z -y +y -z +z
+16
+-y -y -z -y -y No -y +y No +z +z +z -y +y -z
+18
+-y No +y +z -y +y No -z +z -y -z +y +y +z -z -z No
+3
++z No
+12
++y +z -y +z -y +y No No -z No +y
+14
+-z +z +z No No +y No -z No -z -y -y No
+20
+-y -y +y -y No +z No +y No -y -y +z +y No +z -y -y -y +z
+5
+No +z -y -y
+4
++y +z +y
+0
