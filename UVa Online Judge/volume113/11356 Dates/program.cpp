@@ -1,10 +1,10 @@
-// Y3K Problem
-// UVa ID: 893
+// Dates
+// UVa ID: 11356
 // Verdict: Accepted
-// Submission Date: 2016-12-04
+// Submission Date: 2017-12-28
 // UVa Run Time: 0.000s
 //
-// 版权所有（C）2016，邱秋。metaphysis # yeah dot net
+// 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
 #include <algorithm>
 #include <bitset>
@@ -87,18 +87,35 @@ date toDate(int days)
     return date(yyyy, mm, dd);
 }
 
+string months[12] = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+
 int main(int argc, char *argv[])
 {
-    int days, dd, mm, yyyy;
+    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    while (cin >> days >> dd >> mm >> yyyy)
+    string line;
+    int cases, diff;
+
+    cin >> cases;
+    for (int c = 1; c <= cases; c++)
     {
-        if (yyyy == 0) break;
-
-        date next = toDate(toDays(yyyy, mm, dd) + days);
-
-        cout << next.dd << ' ' << next.mm << ' ' << next.yyyy << '\n';
+        cin >> line >> diff;
+        
+        istringstream iss(line);
+        string dtext, mtext, ytext;
+        getline(iss, ytext, '-');
+        getline(iss, mtext, '-');
+        getline(iss, dtext, '-');
+        
+        int yyyy = stoi(ytext);
+        int mm = find(months, months + 12, mtext) - months + 1;
+        int dd = stoi(dtext);
+        
+        date next = toDate(toDays(yyyy, mm, dd) + diff);
+        cout << "Case " << c << ": ";
+        cout << next.yyyy << '-' << months[next.mm - 1];
+        cout << '-' << setw(2) << setfill('0') << next.dd << '\n';
     }
 
-	return 0;
+    return 0;
 }

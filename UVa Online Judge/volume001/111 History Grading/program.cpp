@@ -54,7 +54,7 @@ int main (int argc, char *argv[])
 		order[index] = i;
 	}
 
-	cin.ignore();
+	cin.ignore(1024, '\n');
 
 	while (getline(cin, line))
 	{

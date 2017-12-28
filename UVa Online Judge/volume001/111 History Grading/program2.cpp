@@ -13,55 +13,39 @@
 
 using namespace std;
 
-vector < int > order, events;
+vector<int> order, events;
 
 int getScores()
 {
-    vector<int> length;
-    
-    length.push_back(events.front());
-
+    vector<int> length; length.push_back(events.front());
     for (auto it = events.begin() + 1; it != events.end(); it++)
-        if (*it > length.back())
-            length.push_back(*it);
-        else
-        {
+        if (*it > length.back()) length.push_back(*it);
+        else {
             auto location = upper_bound(length.begin(), length.end(), *it);
             *location = *it;
         }
-        
     return length.size();
 }
 
 int main(int argc, char *argv[])
 {
-    string line;
-    int index, n;
+    int n, index; string line;
 
     cin >> n;
-    
-    order.resize(n);
-    events.resize(n);
-
-    for (int i = 1; i <= n; i++)
-    {
+    order.resize(n); events.resize(n);
+    for (int i = 1; i <= n; i++) {
         cin >> index;
         order[index - 1] = i;
     }
 
-    cin.ignore();
-    while (getline(cin, line))
-    {
+    cin.ignore(1024, '\n');
+    while (getline(cin, line)) {
         istringstream iss(line);
-
-        for (int i = 1; i <= n; i++)
-        {
+        for (int i = 1; i <= n; i++) {
             iss >> index;
-            events[index - 1] =
-                find(order.begin(), order.end(), i) - order.begin();
+            events[index - 1] = find(order.begin(), order.end(), i) - order.begin();
         }
-
-        cout << getScores() << endl;
+        cout << getScores() << '\n';
     }
 
     return 0;

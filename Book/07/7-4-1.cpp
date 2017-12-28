@@ -1,30 +1,3 @@
-// Y3K Problem
-// UVa ID: 893
-// Verdict: Accepted
-// Submission Date: 2016-12-04
-// UVa Run Time: 0.000s
-//
-// 版权所有（C）2016，邱秋。metaphysis # yeah dot net
-
-#include <algorithm>
-#include <bitset>
-#include <cassert>
-#include <cmath>
-#include <cstring>
-#include <iomanip>
-#include <iostream>
-#include <limits>
-#include <list>
-#include <map>
-#include <numeric>
-#include <queue>
-#include <set>
-#include <sstream>
-#include <stack>
-#include <vector>
-
-using namespace std;
-
 const int daysOfYear = 365;
 const int daysOf4Years = daysOfYear * 4 + 1;
 const int daysOf100Years = daysOf4Years * 25 - 1;
@@ -85,20 +58,4 @@ date toDate(int days)
         }
 
     return date(yyyy, mm, dd);
-}
-
-int main(int argc, char *argv[])
-{
-    int days, dd, mm, yyyy;
-
-    while (cin >> days >> dd >> mm >> yyyy)
-    {
-        if (yyyy == 0) break;
-
-        date next = toDate(toDays(yyyy, mm, dd) + days);
-
-        cout << next.dd << ' ' << next.mm << ' ' << next.yyyy << '\n';
-    }
-
-	return 0;
 }
