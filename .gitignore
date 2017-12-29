@@ -5,3 +5,4 @@
 *.cpp~
 *.orig
 *.java~
+*.class
