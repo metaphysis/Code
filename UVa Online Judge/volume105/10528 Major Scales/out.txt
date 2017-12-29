@@ -1,0 +1,18 @@
+C D E F# G A B
+
+
+C# E F# G# B
+
+C# D# E F# G# A B
+C#
+C C# D# F G G# A#
+C# D E F# G# A B
+C D D# F G A A#
+C# D# E F# G# A# B
+C D E F G A B
+C C# D# F F# G# A#
+C# D E F# G A B
+C D D# F G G# A#
+C# D# E F# G# A B
+C D E F G A A#
+C# D# F F# G# A# B
