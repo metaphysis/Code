@@ -1,0 +1,143 @@
+A+ A+ ?
+A+ B+ ?
+A+ AB+ ?
+A+ O+ ?
+
+B+ A+ ?
+B+ B+ ?
+B+ AB+ ?
+B+ O+ ?
+
+AB+ A+ ?
+AB+ B+ ?
+AB+ AB+ ?
+AB+ O+ ?
+
+O+ A+ ?
+O+ B+ ?
+O+ AB+ ?
+O+ O+ ?
+
+A- A+ ?
+A- B+ ?
+A- AB+ ?
+A- O+ ?
+
+B- A+ ?
+B- B+ ?
+B- AB+ ?
+B- O+ ?
+
+AB- A+ ?
+AB- B+ ?
+AB- AB+ ?
+AB- O+ ?
+
+O- A+ ?
+O- B+ ?
+O- AB+ ?
+O- O+ ?
+
+A- A- ?
+A- B- ?
+A- AB- ?
+A- O- ?
+
+B- A- ?
+B- B- ?
+B- AB- ?
+B- O- ?
+
+AB- A- ?
+AB- B- ?
+AB- AB- ?
+AB- O- ?
+
+O- A- ?
+O- B- ?
+O- AB- ?
+O- O- ?
+
+A+ ? A+ 
+B+ ? A+ 
+AB+ ? A+
+O+ ? A+
+
+A+ ? B+
+B+ ? B+
+AB+ ? B+
+O+ ? B+
+
+A+ ? AB+
+B+ ? AB+
+AB+ ? AB+
+O+ ? AB+
+
+A+ ? O+
+B+ ? O+
+AB+ ? O+
+O+ ? O+
+
+A- ? A+ 
+B- ? A+ 
+AB- ? A+
+O- ? A+
+
+A- ? B+
+B- ? B+
+AB- ? B+
+O- ? B+
+
+A- ? AB+
+B- ? AB+
+AB- ? AB+
+O- ? AB+
+
+A- ? O+
+B- ? O+
+AB- ? O+
+O- ? O+
+
+A+ ? A- 
+B+ ? A- 
+AB+ ? A-
+O+ ? A-
+
+A+ ? B-
+B+ ? B-
+AB+ ? B-
+O+ ? B-
+
+A+ ? AB-
+B+ ? AB-
+AB+ ? AB-
+O+ ? AB-
+
+A+ ? O-
+B+ ? O-
+AB+ ? O-
+O+ ? O-
+
+A- ? A-
+B- ? A-
+AB- ? A-
+O- ? A-
+
+A- ? B-
+B- ? B-
+AB- ? B-
+O- ? B-
+
+A- ? AB-
+B- ? AB-
+AB- ? AB-
+O- ? AB-
+
+A- ? O-
+B- ? O-
+AB- ? O-
+O- ? O-
+
+E N D
+
+
