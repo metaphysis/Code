@@ -1,4 +1,4 @@
-// Let’s Play Magic!
+// Let's Play Magic!
 // UVa ID: 10978
 // Verdict: Accepted
 // Submission Date: 2017-12-31
