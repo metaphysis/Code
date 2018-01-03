@@ -1,10 +1,10 @@
-// Proving Equivalences
-// UVa ID: 12167
+// Prove Them All
+// UVa ID: 13057
 // Verdict: Accepted
-// Submission Date: 2016-09-07
-// UVa Run Time: 0.010s
+// Submission Date: 2018-01-03
+// UVa Run Time: 0.030s
 //
-// 版权所有（C）2016，邱秋。metaphysis # yeah dot net
+// 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
 #include <cstring>
 #include <iostream>
@@ -15,10 +15,11 @@
 using namespace std;
 
 // 最大顶点数目。
-const int MAXV = 20010;
+const int MAXV = 10010;
 
 int dfn[MAXV], low[MAXV], scc[MAXV], dfstime, cscc;
 int cases, n, m, from, to;
+int id[MAXV] = {0};
 stack<int> s; vector<list<int>> edges(MAXV);
 
 // 初始化。
@@ -97,27 +98,26 @@ int main(int argc, char *argv[])
         // Tarjan算法求强连通分量。
         for (int u = 1; u <= n; u++) if (!dfn[u]) tarjan(u);
 
-        // 如果已经是强连通的则不需继续计算。
-        if (cscc == 1) cout << "0\n";
+        cout << "Case " << c << ": ";
+
+        // 如果已经是强连通的则只需证明一个即可。
+        if (cscc == 1) cout << "1\n";
         else
         {
             // 将同一强连通分量中的顶点视为一个顶点，计数其出度及入度。
-            int id[MAXV] = {0}, od[MAXV] = {0};
+            memset(id, 0, sizeof(id));
             for (int u = 1; u <= n; u++)
                 for (auto v : edges[u])
                 {
                     if (scc[u] == scc[v]) continue;
-                    od[scc[u]] = id[scc[v]] = 1;
+                    id[scc[v]] = 1;
                 }
 
             // 计数缩点操作后新图中出度或入度为0的顶点数的较大值即为所求。
-            int tid = 0, tod = 0;
+            int tid = 0;
             for (int u = 1; u <= cscc; u++)
-            {
                 if (!id[u]) tid++;
-                if (!od[u]) tod++;
-            }
-            cout << max(tid, tod) << '\n';
+            cout << tid << '\n';
         }
     }
 

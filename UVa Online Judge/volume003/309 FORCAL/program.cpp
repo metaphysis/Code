@@ -94,8 +94,7 @@ int main(int argc, char *argv[])
                     position++;
                 }
 
-                if ((!all_are_digits && block.length() > 32) || (all_are_digits
-                        && block.length() > 8))
+                if ((!all_are_digits && block.length() > 32) || (all_are_digits && block.length() > 8))
                 {
                     error = true;
                 }

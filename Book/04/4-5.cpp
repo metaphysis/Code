@@ -16,7 +16,7 @@ void display(int data[], int n)
 
 void countingSort(int data[], int n, int C)
 {
-    int *bucket = new int[C];
+    int *bucket = new int[C]();
     
     for (int i = 0; i < n; i++) bucket[data[i]]++;
     

@@ -182,8 +182,7 @@ bool isPredclaim(vector<string> words)
 // <sentence> => <statement> | <predclaim>
 bool isSentence(vector<string> words)
 {
-    if (words.size() == 0)
-        return false;
+    if (words.size() == 0) return false;
     return isStatement(words) || isPredclaim(words);
 }
 

@@ -12,13 +12,14 @@
 
 using namespace std;
 
+const int GROUPS = 14;
 const int NONE = -1, A = 0, MOD = 1, BA = 2, DA = 3, LA = 4, NAM = 5,
     PREDA = 6, PREDSTRING = 7, PREDNAME = 8, PREDS = 9, VERBPRED = 10,
     PREDVERB = 11, PREDCLAIM = 12, STATEMENT = 13, SENTENCE = 14;
 
 vector<int> S; vector<string> W;
 
-int T[14][4] = {
+int T[GROUPS][4] = {
     {PREDA, NONE, PREDA, PREDA}, {PREDA, NONE, NONE, PREDSTRING},
     {NAM, NONE, NONE, PREDNAME}, {LA, NONE, PREDSTRING, PREDNAME},
     {MOD, NONE, PREDSTRING, VERBPRED}, {A, PREDSTRING, PREDSTRING, PREDSTRING},
@@ -68,7 +69,7 @@ bool good()
 {
     if (!parse()) return false;
 
-    for (int i = 0; i < 14; i++)
+    for (int i = 0; i < GROUPS; i++)
         for (int j = 0; j < S.size();)
         {
             if ((S[j] != T[i][0]) ||

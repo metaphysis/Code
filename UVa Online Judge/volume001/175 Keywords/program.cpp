@@ -31,7 +31,7 @@ void processProfile(string line)
     
     gaps.push_back(distance);
     
-    vector < string > keywords;
+    vector<string> keywords;
     while (iss >> word)
         keywords.push_back(word);
     

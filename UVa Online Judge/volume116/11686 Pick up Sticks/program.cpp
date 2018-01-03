@@ -1,4 +1,4 @@
-// Pick up sticks
+// Pick up Sticks
 // UVa ID: 11686
 // Verdict: Accepted
 // Submission Date: 2017-10-22
