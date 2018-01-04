@@ -15,8 +15,8 @@ using namespace std;
 
 const double EPSILON = 1E-6, PI = 2.0 * acos(0.0), HALF_PI = PI / 2.0;
 
-map < char, double > p, old;
-map < char, bool > defined;
+map<char, double> p, old;
+map<char, bool> defined;
 string variable = "aAbBcC";
 bool multiSolution = false;
 
@@ -155,9 +155,9 @@ int main(int argc, char *argv[])
         }
  
         multiSolution = false;
-        if (counter <= 2 || valid == false || calculate() == false)
+        if (counter <= 2 || !valid || !calculate())
             cout << "Invalid input.\n";
-        else if (multiSolution == true)
+        else if (multiSolution)
             cout << "More than one solution.\n";
         else
         {
