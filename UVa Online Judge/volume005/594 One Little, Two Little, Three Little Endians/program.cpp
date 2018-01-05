@@ -38,8 +38,7 @@ int main(int argc, char *argv[])
         string binary = little.to_string();
 
         string next;
-        next += binary.substr(24, 8) + binary.substr(16, 8) +
-            binary.substr(8, 8) + binary.substr(0, 8);
+        next += binary.substr(24, 8) + binary.substr(16, 8) + binary.substr(8, 8) + binary.substr(0, 8);
         
         if (next.front() == '0')
         {

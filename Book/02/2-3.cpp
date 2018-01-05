@@ -1,106 +1,57 @@
+#include <algorithm>
+#include <bitset>
+#include <cassert>
+#include <cmath>
+#include <cstring>
+#include <iomanip>
 #include <iostream>
-#include <stack>
-#include <string>
+#include <limits>
+#include <list>
 #include <map>
+#include <numeric>
+#include <queue>
+#include <set>
+#include <sstream>
+#include <stack>
+#include <vector>
 
 using namespace std;
 
-map<char, int> priority = {
-    {'+', 1}, {'-', 1}, {'*', 2}, {'/', 2}, {'(', 0}, {')', 0}
-};
+const int ERROR = -0x3fffffff, MAXN = 1010;
 
-int calculate(string postfix)
+int cache[MAXN], idx = 0;
+
+bool empty() { return idx == 0; };
+int size() { return idx; }
+
+bool push(int x)
 {
-    stack<int> operands;
-    for (auto c : postfix)
+    if (idx < MAXN)
     {
-        if (isdigit(c)) operands.push(c - '0');
-        else
-        {
-            int second = operands.top(); operands.pop();
-            int first = operands.top(); operands.pop();
-
-            if (c == '+') operands.push(first + second);
-            if (c == '-') operands.push(first - second);
-            if (c == '*') operands.push(first * second);
-            if (c == '/') operands.push(first / second);
-        }
+        cache[idx++] = x;
+        return true;
     }
-    return operands.top();
+    return false;
 }
 
-bool lessPriority(char previous, char next)
+void pop()
 {
-    return priority[previous] <= priority[next];
+    if (idx > 0) idx--;
 }
 
-string toPostfix(string infix)
+int top()
 {
-    stack<char> operands, operators;
-
-    for (auto c : infix)
-    {
-        if (isdigit(c))
-        {
-            operands.push(c);
-            continue;
-        }
-
-        if (c == '(')
-        {
-            operators.push(c);
-            continue;
-        }
-
-        if (c == ')')
-        {
-            while (!operators.empty() && operators.top() != '(')
-            {
-                operands.push(operators.top());
-                operators.pop();
-            }
-            if (!operators.empty()) operators.pop();
-
-            continue;
-        }
-
-        if (operators.empty() || operators.top() == '(' ||
-            !lessPriority(c, operators.top()))
-        {
-            operators.push(c);
-        }
-        else
-        {
-            while (!operators.empty() && lessPriority(c, operators.top()))
-            {
-                operands.push(operators.top());
-                operators.pop();
-            }
-            operators.push(c);
-        }
-    }
-
-    while (!operators.empty())
-    {
-        operands.push(operators.top());
-        operators.pop();
-    }
-
-    string postfix;
-    while (!operands.empty())
-    {
-        postfix = operands.top() + postfix;
-        operands.pop();
-    }
-
-    return postfix;
+    if (idx > 0) return cache[idx - 1];
+    return ERROR;
 }
 
 int main(int argc, char *argv[])
 {
-    string infix;
-    while (getline(cin, infix), infix.length() > 0)
-        cout << calculate(toPostfix(infix)) << endl;
-
-    return 0;
+    for (int i = 0; i < 100; i++)
+    {
+        push(i);
+        cout << top() << '\n';
+        pop();
+    }
 }
+
