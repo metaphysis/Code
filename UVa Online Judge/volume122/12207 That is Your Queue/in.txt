@@ -1,0 +1,405 @@
+46 22
+E 12
+N
+E 7
+E 37
+N
+N
+N
+E 46
+N
+N
+N
+E 44
+E 6
+N
+E 27
+E 44
+N
+N
+E 43
+E 32
+N
+N
+69 97
+N
+E 17
+E 63
+E 26
+N
+N
+E 3
+E 37
+E 60
+E 28
+N
+E 33
+N
+E 34
+N
+E 42
+N
+N
+N
+N
+N
+E 31
+N
+E 24
+N
+N
+N
+E 55
+E 69
+N
+E 30
+N
+E 43
+E 32
+E 51
+E 60
+E 9
+N
+N
+N
+E 51
+N
+E 10
+E 52
+N
+N
+N
+N
+N
+N
+E 10
+N
+E 15
+E 51
+E 51
+E 4
+E 36
+E 66
+N
+N
+N
+E 35
+N
+E 44
+N
+E 19
+E 29
+N
+E 36
+N
+E 16
+E 44
+E 64
+E 16
+E 40
+N
+N
+E 1
+E 57
+N
+E 22
+E 50
+N
+N
+N
+E 45
+N
+N
+N
+N
+N
+E 42
+N
+E 7
+N
+N
+E 65
+32 10
+E 1
+E 12
+N
+N
+N
+E 4
+E 12
+E 29
+N
+E 20
+72 46
+E 59
+N
+E 26
+E 18
+E 34
+N
+N
+E 53
+E 45
+N
+N
+E 9
+E 57
+E 50
+N
+E 22
+E 7
+E 22
+E 7
+N
+N
+E 49
+N
+E 39
+E 14
+E 54
+E 1
+N
+N
+N
+N
+N
+N
+N
+N
+E 11
+E 68
+N
+E 60
+E 63
+E 47
+E 67
+E 46
+E 6
+E 43
+N
+88 29
+N
+E 8
+E 29
+E 62
+N
+E 69
+E 47
+N
+N
+E 28
+N
+N
+N
+N
+N
+N
+E 19
+E 72
+E 55
+E 76
+E 70
+E 50
+N
+E 68
+E 56
+N
+E 22
+N
+E 45
+85 34
+E 67
+E 37
+E 1
+N
+E 28
+E 62
+N
+E 52
+N
+N
+E 55
+E 77
+E 71
+E 3
+N
+N
+N
+N
+E 24
+E 34
+E 79
+N
+E 80
+N
+E 22
+N
+N
+N
+E 33
+E 20
+E 59
+E 64
+N
+N
+98 33
+E 47
+N
+E 91
+E 25
+E 51
+N
+E 57
+N
+N
+N
+E 63
+E 60
+E 37
+E 91
+N
+N
+E 15
+E 12
+N
+E 16
+N
+E 60
+E 29
+E 91
+N
+N
+E 48
+E 12
+E 71
+E 14
+E 35
+N
+E 27
+1 18
+E 1
+N
+N
+N
+N
+N
+N
+N
+E 1
+E 1
+N
+N
+N
+E 1
+N
+N
+N
+E 1
+53 19
+E 40
+E 30
+E 19
+N
+E 13
+E 32
+N
+N
+N
+N
+E 45
+N
+E 15
+E 22
+N
+E 48
+N
+N
+N
+69 86
+N
+E 38
+N
+N
+N
+E 27
+N
+E 9
+N
+E 2
+E 46
+E 32
+E 5
+E 12
+E 27
+E 7
+E 52
+N
+N
+N
+N
+N
+E 42
+E 65
+N
+E 60
+N
+N
+E 4
+N
+N
+E 30
+N
+E 5
+N
+E 37
+N
+N
+E 26
+N
+N
+E 8
+E 17
+N
+N
+E 56
+E 11
+N
+N
+E 42
+N
+N
+N
+N
+E 27
+E 53
+E 44
+N
+N
+N
+N
+E 46
+N
+N
+N
+N
+N
+E 67
+N
+E 6
+E 19
+E 23
+E 17
+N
+N
+E 21
+N
+E 45
+N
+N
+E 44
+E 68
+N
+N
+N
+E 48
+0 0
