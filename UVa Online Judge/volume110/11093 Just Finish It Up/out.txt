@@ -1,0 +1,6 @@
+Case 1: Possible from station 2
+Case 2: Possible from station 3
+Case 3: Possible from station 2
+Case 4: Not possible
+Case 5: Not possible
+Case 6: Possible from station 5

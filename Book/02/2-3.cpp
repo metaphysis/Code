@@ -17,31 +17,22 @@
 
 using namespace std;
 
-const int ERROR = -0x3fffffff, MAXN = 1010;
+const int ERROR = -0x3fffffff, CAPACITY = 1010;
+int memory[CAPACITY], rear = 0;
 
-int cache[MAXN], idx = 0;
+bool empty() { return rear == 0; }
+int size() { return rear; }
 
-bool empty() { return idx == 0; };
-int size() { return idx; }
-
-bool push(int x)
-{
-    if (idx < MAXN)
-    {
-        cache[idx++] = x;
-        return true;
-    }
+bool push(int x) {
+    if (rear < CAPACITY) { memory[rear++] = x; return true; }
     return false;
 }
 
-void pop()
-{
-    if (idx > 0) idx--;
-}
+void pop() { if (rear > 0) rear--; }
+void reset() { rear = 0; }
 
-int top()
-{
-    if (idx > 0) return cache[idx - 1];
+int top() {
+    if (rear > 0) return memory[rear - 1];
     return ERROR;
 }
 
