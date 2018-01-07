@@ -89,7 +89,7 @@ bool cmp(patient x, patient y)
 
 void arrange()
 {
-    vector < patient > next;
+    vector<patient> next;
     while (patients.size())
     {
         room room = rooms.top();
@@ -121,7 +121,7 @@ void arrange()
         }
     }
 
-    vector < room > usedRooms;
+    vector<room> usedRooms;
     while (rooms.size())
     {
         room room = rooms.top();
@@ -143,7 +143,7 @@ void arrange()
     sort(next.begin(), next.end(), cmp);
 
     // queue to recovery room
-    vector < bed > usedBeds;
+    vector<bed> usedBeds;
     for (int i = 1; i <= recovery_rooms; i++)
     {
         bed bed;
