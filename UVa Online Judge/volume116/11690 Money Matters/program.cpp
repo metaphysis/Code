@@ -1,8 +1,8 @@
-// Friends
-// UVa ID: 10608
+// Money Matters
+// UVa ID: 11690
 // Verdict: Accepted
 // Submission Date: 2018-01-08
-// UVa Run Time: 0.010s
+// UVa Run Time: 0.070s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
@@ -27,13 +27,13 @@
 
 using namespace std;
 
-const int MAXV = 30010;
+const int MAXV = 10010;
 
 int parent[MAXV], ranks[MAXV], cnt[MAXV];
 
-void makeSet()
+void makeSet(int N)
 {
-    for (int i = 0; i < MAXV; i++) parent[i] = i, ranks[i] = 1;
+    for (int i = 0; i <= N; i++) parent[i] = i, ranks[i] = 1;
 }
 
 // 带路径压缩的查找，使用递归实现。
@@ -74,23 +74,31 @@ int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    int cases;
+    int cases, owes[MAXV], n, m, x, y, balance[MAXV];
     cin >> cases;
 
     for (int c = 1; c <= cases; c++)
     {
-        int N, M, A, B;
-
-        makeSet();
-
-        cin >> N >> M;
-        for (int i = 1; i <= M; i++)
+        cin >> n >> m;
+        for (int i = 0; i < n; i++)
+            cin >> owes[i];
+        makeSet(n);
+        for (int i = 0; i < m; i++)
         {
-            cin >> A >> B;
-            unionSet(A, B);
+            cin >> x >> y;
+            unionSet(x, y);
         }
-        
-        cout << *max_element(ranks, ranks + N + 1) << '\n';
+        memset(balance, 0, sizeof(balance));
+        for (int i = 0; i < n; i++)
+            balance[findSet1(i)] += owes[i];
+        bool possible = true;
+        for (int i = 0; i < n; i++)
+            if (balance[i] != 0)
+            {
+                possible = false;
+                break;
+            }
+        cout << (possible ? "POSSIBLE\n" : "IMPOSSIBLE\n");
     }
 
     return 0;

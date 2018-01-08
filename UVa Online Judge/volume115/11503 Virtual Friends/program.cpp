@@ -1,8 +1,8 @@
-// Friends
-// UVa ID: 10608
+// Virtual Friends
+// UVa ID: 11503
 // Verdict: Accepted
 // Submission Date: 2018-01-08
-// UVa Run Time: 0.010s
+// UVa Run Time: 0.370s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
@@ -27,13 +27,13 @@
 
 using namespace std;
 
-const int MAXV = 30010;
+const int MAXV = 200010;
 
 int parent[MAXV], ranks[MAXV], cnt[MAXV];
 
-void makeSet()
+void makeSet(int N)
 {
-    for (int i = 0; i < MAXV; i++) parent[i] = i, ranks[i] = 1;
+    for (int i = 0; i <= N; i++) parent[i] = i, ranks[i] = 1;
 }
 
 // 带路径压缩的查找，使用递归实现。
@@ -76,21 +76,23 @@ int main(int argc, char *argv[])
 
     int cases;
     cin >> cases;
-
     for (int c = 1; c <= cases; c++)
     {
-        int N, M, A, B;
-
-        makeSet();
-
-        cin >> N >> M;
-        for (int i = 1; i <= M; i++)
-        {
-            cin >> A >> B;
-            unionSet(A, B);
-        }
+        int F;
+        cin >> F;
+        makeSet(2 * F);
         
-        cout << *max_element(ranks, ranks + N + 1) << '\n';
+        map<string, int> indexer;
+        int idx = 1;
+        string name1, name2;
+        for (int i = 1; i <= F; i++)
+        {
+            cin >> name1 >> name2;
+            if (indexer.find(name1) == indexer.end()) indexer[name1] = idx++;
+            if (indexer.find(name2) == indexer.end()) indexer[name2] = idx++;
+            unionSet(indexer[name1], indexer[name2]);
+            cout << ranks[findSet1(indexer[name1])] << '\n';
+        }
     }
 
     return 0;

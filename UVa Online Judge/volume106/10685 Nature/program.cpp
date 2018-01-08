@@ -1,5 +1,5 @@
-// Friends
-// UVa ID: 10608
+// Nature
+// UVa ID: 10685
 // Verdict: Accepted
 // Submission Date: 2018-01-08
 // UVa Run Time: 0.010s
@@ -31,9 +31,9 @@ const int MAXV = 30010;
 
 int parent[MAXV], ranks[MAXV], cnt[MAXV];
 
-void makeSet()
+void makeSet(int N)
 {
-    for (int i = 0; i < MAXV; i++) parent[i] = i, ranks[i] = 1;
+    for (int i = 0; i <= N; i++) parent[i] = i, ranks[i] = 1;
 }
 
 // 带路径压缩的查找，使用递归实现。
@@ -74,23 +74,29 @@ int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    int cases;
-    cin >> cases;
-
-    for (int c = 1; c <= cases; c++)
+    int C, R;
+    while (cin >> C >> R)
     {
-        int N, M, A, B;
+        if (C == 0 && R == 0) break;
+        
+        map<string, int> indexer;
+        string name1, name2;
 
-        makeSet();
-
-        cin >> N >> M;
-        for (int i = 1; i <= M; i++)
+        for (int i = 1; i <= C; i++)
         {
-            cin >> A >> B;
-            unionSet(A, B);
+            cin >> name1;
+            indexer[name1] = i;
         }
         
-        cout << *max_element(ranks, ranks + N + 1) << '\n';
+        makeSet(C);
+        
+        for (int i = 1; i <= R; i++)
+        {
+            cin >> name1 >> name2;
+            unionSet(indexer[name1], indexer[name2]);
+        }
+        
+        cout << *max_element(ranks, ranks + C + 1) << '\n';
     }
 
     return 0;
