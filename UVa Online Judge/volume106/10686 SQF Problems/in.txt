@@ -1,0 +1,221 @@
+15
+4
+Biology 14 5
+plant
+animal
+life 
+cell
+earth
+soil
+water
+plant
+animal
+life 
+cell
+earth
+soil
+water
+Zoology 10 5
+plant
+animal
+life 
+cell
+earth
+plant
+animal
+life 
+cell
+earth
+Numerology 5 0
+plant
+animal
+life 
+cell
+earth
+Toxicology 4 7
+plant
+animal
+life 
+cell
+plant
+animal life cell earth plant
+animal!
+life. 
+cell;
+earth? plant animal life 
+cell earth plant...animal life  cell earth
+plant
+animal
+life 
+cell
+earth
+
+4
+Biology 14 1
+plant
+animal
+life 
+cell
+earth
+soil
+water
+plant
+animal
+life 
+cell
+earth
+soil
+water
+Zoology 10 5
+plant
+animal
+life 
+cell
+earth
+plant
+animal
+life 
+cell
+earth
+Numerology 5 0
+plant
+animal
+life 
+cell
+earth
+Toxicology 4 1
+plant
+animal
+life 
+cell
+plant
+animal life cell earth plant
+animal!
+life. 
+cell;
+earth? plant animal life 
+cell earth plant...animal life  cell earth
+plant
+animal
+life 
+cell
+earth
+
+1
+Geography 0 1
+Some rubbish text
+This should not be processed
+
+1
+Geography 1 1
+sudan
+
+3
+Imaginography 3 2
+imagine
+imagine
+real
+Geography 2 1
+chad
+sudan
+Countrygraphy 2 2
+chad
+sudan
+chad;imaginesudan is also in africa 
+chad;imagine sudan is also in africa
+chad;sudan is also in africa
+chad;sudan is also in africa|real
+
+0
+
+0
+But still rubbish text and this is 
+going to be processed????
+
+2
+Cryptology 2 2
+          cipher             
+                               decipher                       
+      Cryptography 1                0
+      key             
+cipher cipher cipher
+cipher[][230492-4923decipher<>>>>key 
+
+2
+Cryptology 2 2
+          cipher             
+                               decipher                       
+      Cryptography 1                0
+      key             
+
+2
+category 3 2
+category
+category
+category 
+Category 3 1
+category 
+category 
+category 
+category Category
+
+2
+category 3 0
+category
+category
+category 
+Category 3 0
+category 
+category 
+category 
+
+1
+HipHop 0 10
+FloRida LilWayne
+
+3
+Math 3 2
+plus 
+minus
+equals
+Physics 4 1
+mass
+plus
+Physics
+plus
+Chemistry 2 2
+atom
+reaction
+reaction plus plus plus not equals 
+
+1
+Graph 2 2
+edge
+these
+We need an edge! And theseãáàâçéêíõóôúü are portuguese characters that are 
+embedded so make sure you parse them
+
+3
+Cat 2 1
+batmouse
+supermouse
+Eats 2 1
+spidermouse
+CaptainAmericaMouse
+Dog 1 1
+hahahaitsavalidword
+I Can't hear you "AYE AYE CAPTAIN"
+Ohh...
+Who lives in a pineapple under the sea
+"Spongebob squarepants"
+Absorbant batmouse and yellow and porous is he
+"Spongebob Squarepants"
+If nautical nonsense be something you wish
+"Spongebob *34*54545*CaptainAmericaMouse*5*5**5445* Squarepants"
+Then @@hahahaitsavalidword. drop on the super.mouse deck and flop like a fish
+"Spongebob Squarepants"
+READY batmouse of course
+Spongebob squarepants
+Spongebob squarepants
+Spongebob squarepants
+

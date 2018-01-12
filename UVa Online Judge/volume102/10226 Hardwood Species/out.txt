@@ -1,0 +1,248 @@
+Aspen 2.0000
+Basswood 6.0000
+Beech 8.0000
+Black Walnut 4.0000
+Cherry 8.0000
+Cottonwood 2.0000
+Cypress 4.0000
+Gum 2.0000
+Hackberry 10.0000
+Hard Maple 2.0000
+Pecan 6.0000
+Poplan 6.0000
+Red Alder 4.0000
+Red Elm 4.0000
+Red Oak 6.0000
+Sassafras 2.0000
+Soft Maple 2.0000
+Sycamore 8.0000
+White Oak 6.0000
+Willow 6.0000
+Yellow Birch 2.0000
+
+Ash 2.0000
+Aspen 3.0000
+Basswood 3.0000
+Beech 6.0000
+Black Walnut 4.0000
+Cherry 5.0000
+Cottonwood 1.0000
+Cypress 4.0000
+Gum 6.0000
+Hackberry 8.0000
+Hard Maple 2.0000
+Pecan 8.0000
+Poplan 5.0000
+Red Alder 3.0000
+Red Elm 6.0000
+Red Oak 4.0000
+Sassafras 3.0000
+Soft Maple 4.0000
+Sycamore 10.0000
+White Oak 7.0000
+Willow 4.0000
+Yellow Birch 2.0000
+
+Aspen 1.8868
+Basswood 5.6604
+Beech 7.5472
+Black Walnut 3.7736
+Cherry 7.5472
+Cottonwood 3.7736
+Cypress 3.7736
+Gum 1.8868
+Hackberry 9.4340
+Hard Maple 1.8868
+Pecan 5.6604
+Poplan 5.6604
+Red Alder 3.7736
+Red Elm 3.7736
+Red Oak 5.6604
+Sassafras 1.8868
+Soft Maple 1.8868
+Sycamore 7.5472
+White Oak 5.6604
+Willow 5.6604
+Yellow Birch 5.6604
+
+Ash 3.0000
+Aspen 3.5000
+Basswood 2.5000
+Beech 5.0000
+Black Walnut 4.5000
+Cherry 4.0000
+Cottonwood 2.5000
+Cypress 3.0000
+Gum 5.0000
+Hackberry 5.5000
+Hard Maple 2.5000
+Hickory 1.0000
+Pecan 6.5000
+Poplan 4.0000
+Red Alder 3.0000
+Red Elm 5.5000
+Red Oak 5.5000
+Sassafras 3.5000
+Soft Maple 2.5000
+Sycamore 8.0000
+White Oak 10.0000
+Willow 6.0000
+Yellow Birch 3.5000
+
+Ash 13.7931
+Aspen 3.4483
+Basswood 3.4483
+Beech 3.4483
+Black Walnut 3.4483
+Cherry 3.4483
+Cottonwood 3.4483
+Cypress 3.4483
+Gum 3.4483
+Hackberry 3.4483
+Hard Maple 3.4483
+Hickory 3.4483
+Pecan 3.4483
+Poplan 3.4483
+Red Alder 3.4483
+Red Elm 3.4483
+Red Oak 6.8966
+Sassafras 3.4483
+Soft Maple 3.4483
+Sycamore 3.4483
+White Oak 10.3448
+Willow 3.4483
+Yellow Birch 3.4483
+
+Ash 4.5455
+Aspen 4.5455
+Basswood 2.2727
+Beech 4.5455
+Cherry 4.5455
+Cottonwood 4.5455
+Cypress 2.2727
+Gum 4.5455
+Hackberry 2.2727
+Hard Maple 2.2727
+Hickory 4.5455
+Pecan 4.5455
+Poplan 6.8182
+Red Alder 2.2727
+Red Elm 2.2727
+Red Oak 4.5455
+Sassafras 6.8182
+Sycamore 4.5455
+White Oak 13.6364
+Willow 9.0909
+Yellow Birch 4.5455
+
+Ash 4.5455
+Aspen 4.5455
+Basswood 2.2727
+Beech 4.5455
+Cherry 4.5455
+Cottonwood 4.5455
+Cypress 2.2727
+Gum 4.5455
+Hackberry 2.2727
+Hard Maple 2.2727
+Hickory 4.5455
+Pecan 4.5455
+Poplan 6.8182
+Red Alder 2.2727
+Red Elm 2.2727
+Red Oak 4.5455
+Sassafras 6.8182
+Sycamore 4.5455
+White Oak 13.6364
+Willow 9.0909
+Yellow Birch 4.5455
+
+Ash 4.5455
+Aspen 4.5455
+Basswood 2.2727
+Beech 4.5455
+Cherry 4.5455
+Cottonwood 4.5455
+Cypress 2.2727
+Gum 4.5455
+Hackberry 2.2727
+Hard Maple 2.2727
+Hickory 4.5455
+Pecan 4.5455
+Poplan 6.8182
+Red Alder 2.2727
+Red Elm 2.2727
+Red Oak 4.5455
+Sassafras 6.8182
+Sycamore 4.5455
+White Oak 13.6364
+Willow 9.0909
+Yellow Birch 4.5455
+
+Ash 4.5455
+Aspen 4.5455
+Basswood 2.2727
+Beech 4.5455
+Cherry 4.5455
+Cottonwood 4.5455
+Cypress 2.2727
+Gum 4.5455
+Hackberry 2.2727
+Hard Maple 2.2727
+Hickory 4.5455
+Pecan 4.5455
+Poplan 6.8182
+Red Alder 2.2727
+Red Elm 2.2727
+Red Oak 4.5455
+Sassafras 6.8182
+Sycamore 4.5455
+White Oak 13.6364
+Willow 9.0909
+Yellow Birch 4.5455
+
+Ash 3.9275
+Aspen 3.9275
+Basswood 1.2085
+Beech 5.4381
+Cherry 5.4381
+Cottonwood 5.4381
+Cypress 2.7190
+Gum 3.9275
+Hackberry 2.7190
+Hard Maple 2.7190
+Hickory 5.4381
+Pecan 3.9275
+Poplan 6.6465
+Red Alder 2.7190
+Red Elm 1.2085
+Red Oak 3.9275
+Sassafras 6.6465
+Sycamore 5.4381
+White Oak 14.8036
+Willow 6.3444
+Yellow Birch 5.4381
+
+Ash 13.7931
+Aspen 3.4483
+Basswood 3.4483
+Beech 3.4483
+Black Walnut 3.4483
+Cherry 3.4483
+Cottonwood 3.4483
+Cypress 3.4483
+Gum 3.4483
+Hackberry 3.4483
+Hard Maple 3.4483
+Hickory 3.4483
+Pecan 3.4483
+Poplan 3.4483
+Red Alder 3.4483
+Red Elm 3.4483
+Red Oak 6.8966
+Sassafras 3.4483
+Soft Maple 3.4483
+Sycamore 3.4483
+White Oak 10.3448
+Willow 3.4483
+Yellow Birch 3.4483
