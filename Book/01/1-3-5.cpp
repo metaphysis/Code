@@ -2,9 +2,10 @@
 
 using namespace std;
 
+const int LENGTH = (1 << 20);
+
 inline int nextChar()
 {
-    const int LENGTH = 1048576;
     static char buffer[LENGTH], *p = buffer, *end = buffer;
     if (p == end) {
         if ((end = buffer + fread(buffer, 1, LENGTH, stdin)) == buffer) return EOF;
