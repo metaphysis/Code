@@ -61,6 +61,8 @@ vector<int> findDivisor(int n)
         }
     }
 
+    if (n > 1) factors[n]++;
+
     vector<int> divisors = {1};
     for (auto f : factors)
     {
