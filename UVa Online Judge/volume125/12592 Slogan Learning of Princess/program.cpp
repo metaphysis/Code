@@ -1,8 +1,8 @@
-// Unique Snowflakes
-// UVa ID: 11572
+// Slogan Learning of Princess
+// UVa ID: 12592
 // Verdict: Accepted
 // Submission Date: 2018-01-13
-// UVa Run Time: 0.260s
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
@@ -31,22 +31,27 @@ int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    int cases;
-    cin >> cases;
-    for (int c = 1; c <= cases; c++)
+    int n, m;
+    while (cin >> n)
     {
-        int n, integer, mark = -1, maximum = 0;
-        cin >> n;
-        map<int, int> snowflake;
-        for (int i = 0; i < n; i++)
+        map<string, string> slogan;
+        string line1, line2;
+        cin.ignore(1024, '\n');
+
+        for (int i = 1; i <= n; i++)
         {
-            cin >> integer;
-            if (snowflake.find(integer) != snowflake.end())
-                mark = max(mark, (int)snowflake[integer]);
-            maximum = max(maximum, i - mark);
-            snowflake[integer] = i;
+            getline(cin, line1); getline(cin, line2);
+            slogan[line1] = line2;
         }
-        cout << maximum << '\n';
+
+        cin >> m;
+        cin.ignore(1024, '\n');
+
+        for (int i = 1; i <= m; i++)
+        {
+            getline(cin, line1);
+            cout << slogan[line1] << '\n';
+        }
     }
 
     return 0;

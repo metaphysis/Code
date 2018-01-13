@@ -1,0 +1,38 @@
+13
+what is kmp
+string matching algorithm
+my name is
+adnan sarker
+who are you
+im hkjhkjhk jkh h jkh h jh kj hkj hj kh kjh
+a b a c
+hjhjk hjkhkjlhjh
+a a bc
+hoe to sole
+a c b a
+jijk hjhjhj jhji
+a a c b
+lay thela
+a
+a
+b
+b
+c
+c
+how to solve
+kmp or imp
+tumi ki dekheso kovu
+jiboner porajoy
+kisher dohone korun rodone
+tile tile tar khoy
+10
+what is kmp
+my name is
+a a bc
+a c b a
+a a bc
+a a c b
+how to solve
+tumi ki dekheso kovu
+kisher dohone korun rodone
+b
