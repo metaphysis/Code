@@ -1,8 +1,8 @@
 // Document Analyzer
 // UVa ID: 11860
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2018-01-15
+// UVa Run Time: 0.980s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
@@ -31,54 +31,72 @@ int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    string line, word;
+    string line;
     getline(cin, line);
     int cases = stoi(line);
     
     for (int c = 1; c <= cases; c++)
     {
-        int p, q;
-        int idx = 0, smallestDist = (1 << 20), biggestSize = 0;
-
-        map<string, int> hashMap;
-        map<int, string> heap;
+        vector<string> words;
+        set<string> allKinds;
 
         while (getline(cin, line), line != "END")
         {
-            word.clear();
+            string token;
             for (int i = 0; i < line.length(); i++)
             {
-                if (isalpha(line[i])) word += line[i];
+                if (isalpha(line[i])) token += line[i];
                 else
                 {
-                    if (word.length())
+                    if (token.length())
                     {
-                        heap[idx] = word;
-                        hashMap[word] = idx;
-
-                        pair<int, string> pr;
-                        while (true)
-                        {
-                            pr = *heap.begin();
-                            if (hashMap[pr.second] != pr.first) heap.erase(heap.begin());
-                            else break;
-                        }
-                        
-                        int dist = idx - (pr = *heap.begin()).first;
-                        if (heap.size() > biggestSize || dist < smallestDist)
-                        {
-                            biggestSize = heap.size(), smallestDist = dist;
-                            p = (pr = *heap.begin()).first, q = idx;
-                        }
-
-                        idx++;
-                        word.clear();
+                        words.push_back(token);
+                        allKinds.insert(token);
+                        token.clear();
                     }
                 }
             }
+            if (token.length())
+            {
+                words.push_back(token);
+                allKinds.insert(token);
+            } 
         }
-        
-        cout << "Document " << c << ": " << p << ' ' << q << '\n';
+
+        int p = 0, q = 0, difference = 0, total = allKinds.size();
+
+        vector<int> cache;
+        map<string, int> interval;
+
+        for (int i = 0; i < words.size(); i++)
+        {
+            cache.push_back(i);
+            interval[words[i]]++;
+
+            // Add all kinds of words to interval.
+            if (interval.size() < total)
+            {
+                q = i + 1, p = 0;
+                difference = q - p;
+                continue;
+            }
+
+            // Is this word saw before?
+            while (interval[words[cache.front()]] > 1)
+            {
+                interval[words[cache.front()]]--;
+                cache.erase(cache.begin());
+            }
+
+            // Can the difference of p and q be better?
+            if (i - cache.front() < difference)
+            {
+                q = i, p = cache.front();
+                difference = q - p;
+            }
+        }
+
+        cout << "Document " << c << ": " << (p + 1) << ' ' << (q + 1) << '\n';
     }
 
     return 0;

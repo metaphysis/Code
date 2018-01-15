@@ -1,4 +1,21 @@
+#include <algorithm>
+#include <bitset>
+#include <cassert>
+#include <cmath>
+#include <cstring>
+#include <iomanip>
 #include <iostream>
+#include <limits>
+#include <list>
+#include <map>
+#include <numeric>
+#include <queue>
+#include <set>
+#include <sstream>
+#include <stack>
+#include <unordered_map>
+#include <unordered_set>
+#include <vector>
 
 using namespace std;
 
@@ -25,6 +42,22 @@ inline bool nextInt(int &x)
     return true;
 }
 
+inline void nextWord(string &w)
+{
+    register char c = 0;
+    w.clear();
+    while (!isalpha(c)) c = nextChar();
+    do w += c; while (isalpha(c = nextChar()));
+}
+
+inline void nextString(string &s)
+{
+    register char c = 0;
+    s.clear();
+    while (c <= ' ') c = nextChar();
+    do s += c; while ((c = nextChar()) > ' ');
+}
+
 int main(int argc, char *argv[])
 {
     // 需要在进行任何输入输出前使用。
@@ -35,6 +68,14 @@ int main(int argc, char *argv[])
     // 每次输出时均会刷新缓冲区，增加时间消耗。
 
     // 后续代码...
+
+    string w;
+    nextWord(w); cout << w << '\n';
+    nextWord(w); cout << w << '\n';
+
+    string s;
+    nextString(s); cout << s << '\n';
+
     int x;
     while (nextInt(x)) cout << x << '\n';
 
