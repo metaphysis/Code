@@ -25,7 +25,7 @@ struct point
     int x, y;
 };
 
-vector <point> network;
+vector<point> network;
 int cases = 0, computers;
 double matrix[8][8];
 
@@ -40,11 +40,11 @@ void calculate()
         for (int j = 0; j < computers; j++)
             matrix[i][j] = distances(network[i], network[j]);
             
-    vector <int> permutation;
+    vector<int> permutation;
     for (int i = 0; i < computers; i++)
         permutation.push_back(i);
     
-    vector <int> best(permutation.size());
+    vector<int> best(permutation.size());
     double minimum = numeric_limits<int>::max();
     do
     {
