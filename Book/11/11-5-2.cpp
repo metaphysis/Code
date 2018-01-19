@@ -1,50 +1,62 @@
+#include <algorithm>
+#include <bitset>
+#include <cassert>
+#include <cmath>
+#include <cstring>
+#include <iomanip>
 #include <iostream>
 #include <limits>
-#include <algorithm>
+#include <list>
+#include <map>
+#include <numeric>
+#include <queue>
+#include <set>
+#include <sstream>
+#include <stack>
+#include <unordered_map>
+#include <unordered_set>
+#include <vector>
 
 using namespace std;
 
-int denominations[110], n;
-int coins[10010], parentMoney[10010], index[10010];
-int counter[110];
-const int MAX_INT = numeric_limits < int >::max();
+const int INF = 0x3fffffff;
+
+int n;
+int denom[110];
+int coins[10010], parent[10010], idx[10010], cnt[110];
 
 void findPath(int money)
 {
     if (money > 0)
     {
-        counter[index[money]]++;
-        findPath(parentMoney[money]);
+        cnt[idx[money]]++;
+        findPath(parent[money]);
     }
 }
 
 void findMiniumCoins(int money)
 {
-    fill(coins, coins + 10010, MAX_INT);
-    fill(counter, counter + 110, 0);
+    fill(coins, coins + 10010, INF);
+    fill(cnt, cnt + 110, 0);
 
     coins[0] = 0;
     for (int m = 1; m <= money; m++)
     {
-        int minCoins = MAX_INT, minIndex = MAX_INT;
+        int minCoins = INF, minIdx = INF;
         for (int d = 0; d < n; d++)
-            if (m >= denominations[d] &&
-                coins[m - denominations[d]] != MAX_INT &&
-                minCoins > (coins[m - denominations[d]] + 1))
-            {
-                minCoins = coins[m - denominations[d]] + 1;
-                minIndex = d;
-            }
+            if (m >= denom[d] && coins[m - denom[d]] != INF &&
+                minCoins > (coins[m - denom[d]] + 1))
+                minCoins = coins[m - denom[d]] + 1, minIdx = d;
 
-        if (minIndex != MAX_INT)
+        if (minIdx != INF)
         {
             coins[m] = minCoins;
-            parentMoney[m] = m - denominations[minIndex];
-            index[m] = minIndex;
+            parent[m] = m - denom[minIdx];
+            idx[m] = minIdx;
         }
     }
 
-    if (coins[money] == MAX_INT)
+    if (coins[money] == INF)
         cout << "No solution." << endl;
     else
     {
@@ -54,10 +66,10 @@ void findMiniumCoins(int money)
 
         int plusPrinted = 0;
         for (int i = 0; i < n; i++)
-            if (counter[i] > 0)
+            if (cnt[i] > 0)
             {
                 cout << (plusPrinted++ ? "+" : " ");
-                cout << denominations[i] << "*" << counter[i];
+                cout << denom[i] << "*" << cnt[i];
             }
         cout << endl;
     }
@@ -69,10 +81,10 @@ int main(int argc, char *argv[])
     while (cin >> n, n)
     {
         for (int i = 0; i < n; i++)
-            cin >> denominations[i];
+            cin >> denom[i];
 
-        sort(denominations, denominations + n);
-        n = unique(denominations, denominations + n) - denominations;
+        sort(denom, denom + n);
+        n = unique(denom, denom + n) - denom;
 
         cin >> money;
         findMiniumCoins((int)(money * 100.0 + 0.5));
