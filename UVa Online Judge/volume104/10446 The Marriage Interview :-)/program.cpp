@@ -1,8 +1,8 @@
 // The Marriage Interview :-)
 // UVa ID: 10446
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2018-01-20
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
@@ -27,19 +27,16 @@
 
 using namespace std;
 
-int dp[64][64] = {0};
+unsigned long long dp[64][64];
 
-int trib(int n, int back)
+unsigned long long trib(int n, int back)
 {
-    if (dp[n][back]) return dp[n][back];
-    int count = 1;
-    if (n <= 1) return dp[n][back] = count;
-    else
-    {
-        for (int i = 1; i <= back; i++)
-            count += trib(n - i, back);
-    }
-    return dp[n][back] = count;
+    if (n <= 1) return 1;
+    if (dp[n][back] > 0) return dp[n][back];
+    dp[n][back] = 1;
+    for (int i = 1; i <= back; i++)
+        dp[n][back] += trib(n - i, back);
+    return dp[n][back];
 }
 
 int main(int argc, char *argv[])
@@ -47,11 +44,13 @@ int main(int argc, char *argv[])
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
     memset(dp, 0, sizeof(dp));
-    trib(62, 62);
 
     int n, back, cases = 0;
     while (cin >> n >> back)
-        cout << "Case " << ++cases << ": " << dp[n][back] << '\n';
+    {
+        if (n > 60) break;
+        cout << "Case " << ++cases << ": " << trib(n, back) << '\n';
+    }
 
     return 0;
 }
