@@ -1,8 +1,8 @@
 // Bar Codes
 // UVa ID: 10721
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2018-01-20
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
@@ -31,30 +31,17 @@ long long bc[51][51][51] = {0};
 
 long long search(int n, int k, int m)
 {
+    if (n == 0 && k == 0) return 1;
+    if (n == 0 || k == 0) return 0;
     if (bc[n][k][m] < 0)
     {
-        if (n == 1)
+        bc[n][k][m] = 0;
+        for (int i = 1; i <= m; i++)
         {
-            if (k > 1) bc[n][k][m] = 0;
-            else bc[n][k][m] = 1;
-        }
-        else if (k == 1)
-        {
-            if (n > m) bc[n][k][m] = 0;
-            else bc[n][k][m] = 1;
-        }
-        else if (m == 1)
-        {
-            bc[n][k][m] = 2 * search(n - 1, k - 1, m);
-        }
-        else
-        {
-            if (m > n) m = n;
-            bc[n][k][m] = k * search(n, k, m - 1);
+            if (n - i < 0) break;
+            bc[n][k][m] += search(n - i, k - 1, m);
         }
     }
-
-    cout << "n = " << n << " k = " << k << " m = " << m << ": " << bc[n][k][m] << '\n';
     return bc[n][k][m];
 }
 
