@@ -1,8 +1,8 @@
 // Moliu Number Generator
 // UVa ID: 11567
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2018-01-25
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
@@ -31,9 +31,30 @@ int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    unsigned int S;
+    long long S;
     while (cin >> S)
     {
+        int operations = 0;
+        while (S > 0)
+        {
+            if (S == 1) { operations += 1; break; }
+            if (S == 2) { operations += 2; break; }
+            if (S == 3) { operations += 3; break; }
+    
+            if (S & 1)
+            {
+                if ((((S - 1) >> 1) & 1) == 0) S -= 1;
+                else S += 1;
+
+                operations += 1;            
+            }
+            else 
+            {
+                S >>= 1;
+                operations += 1;
+            }
+        }
+        cout << operations << '\n';
     }
 
     return 0;
