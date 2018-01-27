@@ -1,8 +1,8 @@
 // String Popping
 // UVa ID: 1261
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2018-01-27
+// UVa Run Time: 0.060s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
@@ -27,21 +27,30 @@
 
 using namespace std;
 
-bool isA(string s)
-{
-}
+set<string> good;
 
-bool isB(string s)
-{
-    if (s.length() == 1 && s.front() == 'b') return true;
-    if (s.length() > 0) return 
-    return false;
-}
-
-bool isEmpty(string s)
+bool dfs(string s)
 {
     if (s.length() == 0) return true;
-    if (s.back() == 'b') return isB(s.substr(0, s.length() - 1))
+    if (good.find(s) != good.end()) return true;
+
+    for (int i = 1; i < s.length(); i++)
+        if (s[i] == s[i - 1])
+        {
+            int right = 0;
+            for (int j = i + 1; j < s.length() && s[j] == s[i]; j++)
+                right++;
+            string next;
+            for (int j = 0; j < i - 1; j++) next += s[j];
+            for (int j = i + right + 1; j < s.length(); j++) next += s[j];
+            if (dfs(next))
+            {
+                good.insert(next);
+                return true;
+            }
+            i += right + 1;
+        }
+    return false;
 }
 
 int main(int argc, char *argv[])
@@ -55,7 +64,8 @@ int main(int argc, char *argv[])
     for (int c = 1; c <= cases; c++)
     {
         cin >> line;
-        cout << (isEmpty(line) ? 1 : 0) << '\n';
+        if (dfs(line)) cout << 1 << '\n';
+        else cout << 0 << '\n';
     }
 
     return 0;
