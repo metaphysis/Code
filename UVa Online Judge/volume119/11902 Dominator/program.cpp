@@ -25,10 +25,10 @@
 
 using namespace std;
 
-const int MAX_V = 110;
+const int MAXV = 110;
 
-int cases, n, edges[MAX_V][MAX_V], dominate[MAX_V][MAX_V];
-int visited[MAX_V], reachable[MAX_V];
+int cases, n, edges[MAXV][MAXV], dominate[MAXV][MAXV];
+int visited[MAXV], reachable[MAXV];
 
 int dfs1(int u)
 {
