@@ -1,0 +1,10 @@
+Case 1: A
+Case 2: WW
+Case 3: AKW
+Case 4: DWWW
+Case 5: AWW
+Case 6: J
+Case 7: ADJKSW
+Case 8: WWWWWWWWWWWWWWWWWWWW
+Case 9: AKW
+Case 10: AAAAA
