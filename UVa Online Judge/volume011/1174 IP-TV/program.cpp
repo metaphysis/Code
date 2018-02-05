@@ -1,3 +1,11 @@
+// IP-TV
+// UVa ID: 1174
+// Verdict: Accepted
+// Submission Date: 2018-02-05
+// UVa Run Time: 0.030s
+//
+// 版权所有（C）2018，邱秋。metaphysis # yeah dot net
+
 #include <algorithm>
 #include <bitset>
 #include <cassert>
@@ -13,11 +21,13 @@
 #include <set>
 #include <sstream>
 #include <stack>
+#include <unordered_map>
+#include <unordered_set>
 #include <vector>
 
 using namespace std;
 
-const int MAXV = 1010;
+const int MAXV = 2010;
 
 struct edge
 {
@@ -28,9 +38,10 @@ struct edge
     }
 };
 
-edge edges[MAXV * MAXV];
+edge edges[50010];
 int parent[MAXV], ranks[MAXV];
 int numberOfVertices, numberOfEdges;
+map<string, int> indexer;
 
 void makeSet()
 {
@@ -44,7 +55,7 @@ int findSet(int x)
     return (parent[x] == x ? x : parent[x] = findSet(parent[x]));
 }
 
-bool unionSet(int x, int y)
+void unionSet(int x, int y)
 {
     x = findSet(x), y = findSet(y);
     if (x != y) {
@@ -53,9 +64,7 @@ bool unionSet(int x, int y)
             parent[x] = y;
             if (ranks[x] == ranks[y]) ranks[y]++;
         }
-        return true;
     }
-    return false;
 }
 
 int kruskal()
@@ -65,16 +74,41 @@ int kruskal()
     makeSet();
     sort(edges, edges + numberOfEdges);
 
-    for (int i = 0; i < numberOfEdges; i++)
-        if (unionSet(edges[i].from, edges[i].to))
+    for (int i = 0; i < numberOfEdges; i++) {
+        int x = findSet(edges[i].from), y = findSet(edges[i].to);
+        if (x != y) {
+            unionSet(x, y);
             minWeightSum += edges[i].weight;
+        }
+    }
 
     return minWeightSum;
 }
 
 int main(int argc, char *argv[])
 {
-    cout << kruskal() << endl;
- 
-    return 0;   
+    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
+
+    int cases;
+    cin >> cases;
+    while (cases--)
+    {
+        cin >> numberOfVertices >> numberOfEdges;
+
+        int cost, cnt = 0;
+        string from, to;
+        indexer.clear();
+
+        for (int i = 0; i < numberOfEdges; i++)
+        {
+            cin >> from >> to >> cost;
+            if (indexer.find(from) == indexer.end()) indexer[from] = cnt++;
+            if (indexer.find(to) == indexer.end()) indexer[to] = cnt++;
+            edges[i] = edge(indexer[from], indexer[to], cost);
+        }
+        cout << kruskal() << '\n';
+        if (cases) cout << '\n';
+    }
+
+    return 0;
 }
