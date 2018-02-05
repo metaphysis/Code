@@ -1,8 +1,8 @@
-// Transportation System
-// UVa ID: 11228
+// Expensive Subway
+// UVa ID: 11710
 // Verdict: Accepted
 // Submission Date: 2018-02-05
-// UVa Run Time: 0.070s
+// UVa Run Time: 0.220s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
@@ -27,7 +27,7 @@
 
 using namespace std;
 
-const int MAXV = 1010;
+const int MAXV = 410;
 
 struct edge
 {
@@ -38,9 +38,9 @@ struct edge
     }
 };
 
-edge edges1[1000010], edges2[1000010];
+edge edges[100010];
 int parent[MAXV], ranks[MAXV];
-int n, m1, m2;
+int n, m;
 map<string, int> indexer;
 
 void makeSet()
@@ -73,50 +73,37 @@ int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    int cases, r, xs[MAXV], ys[MAXV];
-
-    cin >> cases;
-    for (int c = 1; c <= cases; c++)
+    while (cin >> n >> m, n > 0)
     {
-        cin >> n >> r;
+        indexer.clear();
+        string name;
         for (int i = 0; i < n; i++)
-            cin >> xs[i] >> ys[i];
-
-        m1 = m2 = 0;
-        int threshold = r * r;
-        for (int i = 0; i < n; i++)
-            for (int j = i + 1; j < n; j++)
-            {
-                int dist = (xs[i] - xs[j]) * (xs[i] - xs[j]) + (ys[i] - ys[j]) * (ys[i] - ys[j]);
-                if (dist <= threshold)
-                    edges1[m1++] = edge(i, j, dist);
-                else
-                    edges2[m2++] = edge(i, j, dist);
-            }
+        {
+            cin >> name;
+            indexer[name] = i;
+        }
+        
+        string start, end;
+        int cost;
+        for (int i = 0; i < m; i++)
+        {
+            cin >> start >> end >> cost;
+            edges[i] = edge(indexer[start], indexer[end], cost);
+        }
+        cin >> start;
 
         makeSet();
+        sort(edges, edges + m);
 
-        // Road.
-        int merged = 0;
-        double roads = 0.0;
-        sort(edges1, edges1 + m1);
-        for (int i = 0; i < m1; i++)
-            if (unionSet(edges1[i].from, edges1[i].to))
+        int merged = 0, total = 0;
+        for (int i = 0; i < m; i++)
+            if (unionSet(edges[i].from, edges[i].to))
             {
                 merged++;
-                roads += sqrt(edges1[i].cost);
+                total += edges[i].cost;
             }
-
-        // Railroad.
-        double railroads = 0.0;
-        sort(edges2, edges2 + m2);
-        for (int i = 0; i < m2; i++)
-            if (unionSet(edges2[i].from, edges2[i].to))
-                    railroads += sqrt(edges2[i].cost);
-
-        cout << "Case #" << c << ": " << (n - merged);
-        cout << ' ' << fixed << setprecision(0) << roads;
-        cout << ' ' << fixed << setprecision(0) << railroads << '\n';
+        if (merged == n - 1) cout << total << '\n';
+        else cout << "Impossible\n";
     }
 
     return 0;
