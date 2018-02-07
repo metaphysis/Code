@@ -1,0 +1,47 @@
+4
+
+7 3
+Rome Turin
+Turin Venice
+Turin Genoa
+Rome Pisa
+Pisa Florence
+Venice Athens
+Turin Milan
+Turin Pisa
+Milan Florence
+Athens Genoa
+
+7 3
+Rome Turin
+Turin Venice
+Turin Genoa
+Rome Pisa
+Pisa Florence
+Venice Athens
+Turin Milan
+Turin Pisa
+Milan Florence
+Athens Genoa
+
+8 3
+Rome Chittagong
+Rome Khulna
+Rome Pabna
+Rome Sylhet
+Sylhet Moulovibazar
+Chittagong Bandorban
+Pabna Gaibandha
+Rome Zurich
+Rome Chittagong
+Khulna Gaibandha
+Pabna Sylhet
+
+6 1
+Rome BUET
+BUET TSC
+TSC Shahbag
+Shahbag Nilkhet
+Nilkhet Katabon
+Katabon ElephantRoad
+ElephantRoad Rome
