@@ -46,5 +46,9 @@ int main(int argc, char *argv[])
 {
     int a, b;
     
-    while (cin >> a >> b) cout << gcd1(a, b) << '\n';
+    while (cin >> a >> b)
+    {
+        cout << gcd1(a, b) << '\n';
+        cout << __gcd(a, b) << '\n';
+    }
 }
