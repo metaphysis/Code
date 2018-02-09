@@ -56,7 +56,8 @@ void mooreDijkstra1(int u)
     for (int i = 0; i < n; i++) dist[i] = INF, parent[i] = -1;
     dist[u] = 0;
     
-    priority_queue<edge> q; q.push((edge){u, dist[u]});
+    priority_queue<edge> q;
+    q.push(edge(u, dist[u]));
 
     while (!q.empty())
     {
@@ -66,7 +67,7 @@ void mooreDijkstra1(int u)
             {
                 dist[e.to] = dist[v.to] + e.weight;
                 parent[e.to] = v.to;
-                q.push((edge){e.to, dist[e.to]});
+                q.push(edge(e.to, dist[e.to]));
             }
     }
 }
