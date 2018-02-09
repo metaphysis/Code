@@ -1,0 +1,200 @@
+Set #1
+37
+Set #2
+?
+Set #3
+?
+Set #4
+35
+Set #5
+?
+Set #6
+?
+Set #7
+9
+Set #8
+19
+Set #9
+14
+Set #10
+56
+Set #11
+14
+Set #12
+42
+Set #13
+28
+Set #14
+17
+Set #15
+?
+Set #16
+17
+Set #17
+?
+Set #18
+5
+Set #19
+?
+Set #20
+31
+Set #21
+16
+Set #22
+13
+Set #23
+59
+Set #24
+25
+Set #25
+23
+Set #26
+8
+Set #27
+?
+Set #28
+12
+Set #29
+22
+Set #30
+?
+Set #31
+?
+Set #32
+51
+Set #33
+?
+Set #34
+21
+Set #35
+?
+Set #36
+28
+Set #37
+8
+Set #38
+?
+Set #39
+22
+Set #40
+13
+Set #41
+?
+Set #42
+?
+Set #43
+?
+Set #44
+?
+Set #45
+13
+Set #46
+27
+Set #47
+47
+Set #48
+?
+Set #49
+26
+Set #50
+47
+Set #51
+26
+Set #52
+?
+Set #53
+?
+Set #54
+15
+Set #55
+?
+Set #56
+62
+Set #57
+29
+Set #58
+11
+Set #59
+12
+Set #60
+10
+Set #61
+?
+Set #62
+64
+Set #63
+7
+Set #64
+?
+Set #65
+21
+Set #66
+45
+Set #67
+21
+Set #68
+19
+Set #69
+40
+Set #70
+6
+Set #71
+?
+Set #72
+12
+Set #73
+57
+Set #74
+?
+Set #75
+20
+Set #76
+40
+Set #77
+?
+Set #78
+?
+Set #79
+?
+Set #80
+21
+Set #81
+14
+Set #82
+22
+Set #83
+?
+Set #84
+28
+Set #85
+?
+Set #86
+?
+Set #87
+10
+Set #88
+23
+Set #89
+29
+Set #90
+?
+Set #91
+18
+Set #92
+24
+Set #93
+13
+Set #94
+13
+Set #95
+?
+Set #96
+?
+Set #97
+14
+Set #98
+13
+Set #99
+25
+Set #100
+8

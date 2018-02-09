@@ -1,0 +1,10634 @@
+12
+vistula
+nigeria
+debater
+mantilla
+duffer
+python
+linnet
+strumpet
+seducer
+ocular
+wishful
+navajo
+11
+8
+0007 duffer
+0044 strumpet
+0634 mantilla
+0731 vistula
+0859 navajo
+1504 seducer
+1700 nigeria
+2226 debater
+6
+0634 strumpet
+1045 wishful
+1108 python
+1418 linnet
+1839 ocular
+2052 seducer
+5
+1030 vistula
+1628 ocular
+1737 duffer
+1905 nigeria
+1936 wishful
+11
+0218 navajo
+0317 ocular
+1047 nigeria
+1315 vistula
+1454 debater
+1724 seducer
+1831 python
+1931 duffer
+1940 strumpet
+2039 linnet
+2342 wishful
+12
+0155 navajo
+0203 strumpet
+0311 seducer
+0510 duffer
+0641 python
+0803 ocular
+1045 linnet
+1211 debater
+1515 mantilla
+2047 nigeria
+2315 vistula
+2358 wishful
+3
+1127 strumpet
+1704 navajo
+1925 duffer
+2
+0124 nigeria
+1447 linnet
+10
+0806 linnet
+0843 navajo
+0848 mantilla
+1058 seducer
+1103 debater
+1204 nigeria
+1212 ocular
+1322 duffer
+1724 python
+1953 vistula
+3
+1623 duffer
+2054 strumpet
+2147 debater
+7
+0051 duffer
+0311 navajo
+0725 vistula
+0851 strumpet
+1451 linnet
+1728 seducer
+2126 nigeria
+10
+0051 nigeria
+0205 duffer
+0728 python
+1214 linnet
+1442 mantilla
+1558 strumpet
+1612 seducer
+1727 vistula
+1926 wishful
+2039 debater
+1258
+python
+navajo
+12
+sinecure
+duffer
+synonyms
+nutshell
+pelvis
+laggard
+losers
+starred
+scribble
+cherubim
+pleiades
+batting
+3
+9
+0229 synonyms
+0704 duffer
+0858 sinecure
+1104 nutshell
+1145 cherubim
+1417 laggard
+1510 starred
+1906 losers
+2245 pleiades
+11
+0433 synonyms
+0605 cherubim
+0832 losers
+0932 laggard
+1030 starred
+1356 pelvis
+1822 duffer
+1905 nutshell
+1944 batting
+2234 sinecure
+2249 pleiades
+10
+0022 nutshell
+0645 laggard
+0711 cherubim
+0722 starred
+0818 sinecure
+0842 duffer
+1346 pelvis
+1351 batting
+1545 scribble
+1653 losers
+1237
+synonyms
+sinecure
+12
+vagina
+lifelike
+accrued
+cuckold
+truism
+jogging
+doggerel
+minion
+magnolia
+citation
+ancona
+accruing
+7
+4
+0515 cuckold
+0656 doggerel
+0732 minion
+2100 accrued
+12
+0037 jogging
+0310 accrued
+0506 magnolia
+0621 minion
+0622 truism
+0657 ancona
+1434 cuckold
+1443 doggerel
+1740 accruing
+1834 vagina
+1853 lifelike
+2247 citation
+10
+0022 accrued
+0330 truism
+0357 doggerel
+0551 ancona
+0949 lifelike
+1015 vagina
+1627 magnolia
+1632 accruing
+1723 minion
+2329 jogging
+9
+0009 vagina
+0634 ancona
+0821 jogging
+1522 cuckold
+1549 accruing
+1613 doggerel
+1743 accrued
+1909 truism
+2135 magnolia
+5
+0208 jogging
+0219 citation
+0912 cuckold
+1033 ancona
+2149 accrued
+12
+0002 vagina
+0046 magnolia
+0119 truism
+0255 doggerel
+0708 minion
+1343 ancona
+1526 cuckold
+1951 accrued
+2034 jogging
+2056 lifelike
+2340 accruing
+2343 citation
+10
+0126 magnolia
+0812 vagina
+0851 doggerel
+0939 citation
+1112 lifelike
+1242 cuckold
+1333 truism
+1345 accrued
+2122 accruing
+2253 ancona
+1950
+cuckold
+doggerel
+12
+pagoda
+townsman
+outstrip
+coupling
+wishful
+wraith
+passer
+tricolor
+fidget
+teamster
+gabble
+tutelage
+16
+8
+0611 coupling
+0621 tricolor
+1051 outstrip
+1258 pagoda
+1544 townsman
+1732 wraith
+2103 passer
+2219 gabble
+4
+0653 wishful
+0907 passer
+2207 coupling
+2215 fidget
+11
+0553 passer
+0844 pagoda
+0846 fidget
+0937 outstrip
+0948 coupling
+1457 townsman
+1638 tutelage
+1838 wishful
+2141 tricolor
+2208 teamster
+2252 wraith
+9
+0231 teamster
+0418 tricolor
+0854 wraith
+0909 pagoda
+0937 wishful
+1433 passer
+1547 outstrip
+2111 tutelage
+2140 coupling
+3
+0540 teamster
+1601 passer
+2149 wraith
+6
+0333 teamster
+0737 townsman
+1308 pagoda
+1648 coupling
+1711 tricolor
+2248 outstrip
+10
+0133 tricolor
+0754 coupling
+1231 wishful
+1356 teamster
+1431 tutelage
+1520 outstrip
+2029 passer
+2049 pagoda
+2129 wraith
+2312 gabble
+6
+0417 tricolor
+1204 pagoda
+1318 gabble
+1322 teamster
+1612 wishful
+1936 outstrip
+10
+0313 outstrip
+0723 wishful
+1107 gabble
+1345 teamster
+1450 townsman
+1453 pagoda
+1456 passer
+1603 tricolor
+1646 coupling
+1716 tutelage
+10
+0215 tutelage
+0432 coupling
+1108 gabble
+1204 wishful
+1439 teamster
+1610 tricolor
+1903 pagoda
+2028 townsman
+2059 fidget
+2325 passer
+2
+0040 fidget
+1931 tutelage
+9
+0106 outstrip
+0804 tricolor
+0814 tutelage
+0834 coupling
+0915 teamster
+1216 wraith
+1433 fidget
+1459 wishful
+1702 pagoda
+9
+0046 outstrip
+0114 passer
+0128 coupling
+0551 tricolor
+1354 wishful
+1440 wraith
+1827 teamster
+1855 tutelage
+2356 pagoda
+4
+0123 fidget
+0242 tricolor
+1132 wishful
+1212 townsman
+6
+0449 tricolor
+1126 teamster
+1211 townsman
+1934 coupling
+2106 wishful
+2226 pagoda
+3
+0404 pagoda
+0503 outstrip
+1253 wishful
+2226
+tutelage
+gabble
+12
+marksmen
+climber
+obituary
+abased
+laplace
+networks
+achieves
+lunged
+carver
+overhaul
+prolix
+bewilder
+19
+11
+0035 bewilder
+0641 abased
+0712 networks
+0927 climber
+1046 overhaul
+1137 obituary
+1314 carver
+1417 marksmen
+1536 laplace
+1540 lunged
+2015 achieves
+5
+0148 networks
+0305 achieves
+0333 carver
+1509 abased
+2155 climber
+2
+0717 achieves
+2300 obituary
+11
+0005 laplace
+0059 lunged
+0559 overhaul
+0938 abased
+0941 marksmen
+1041 carver
+1423 climber
+1535 achieves
+1941 prolix
+2221 obituary
+2253 networks
+11
+0059 networks
+0324 laplace
+0414 lunged
+0508 abased
+0521 overhaul
+0658 obituary
+1404 carver
+1417 achieves
+1424 climber
+1449 marksmen
+1847 prolix
+3
+0026 obituary
+0356 climber
+2300 abased
+6
+0420 lunged
+0520 carver
+0617 marksmen
+0736 laplace
+1409 achieves
+2050 networks
+7
+0457 bewilder
+0816 marksmen
+0900 laplace
+1313 abased
+1628 lunged
+1713 climber
+1740 achieves
+7
+0312 prolix
+0434 carver
+0640 bewilder
+1346 overhaul
+1641 lunged
+2058 climber
+2301 networks
+5
+0703 laplace
+0736 climber
+0845 prolix
+1317 obituary
+1854 bewilder
+10
+0217 prolix
+0429 networks
+0442 carver
+0735 marksmen
+0756 laplace
+1110 abased
+1228 achieves
+1336 climber
+1411 bewilder
+1431 obituary
+5
+0036 networks
+0139 climber
+0609 marksmen
+0617 abased
+2316 laplace
+12
+0015 climber
+0043 overhaul
+0328 lunged
+0743 achieves
+0922 marksmen
+0934 prolix
+1100 networks
+1339 bewilder
+1546 carver
+1838 laplace
+2210 abased
+2331 obituary
+3
+0546 prolix
+0945 lunged
+1019 carver
+11
+0256 abased
+0306 overhaul
+0823 networks
+1028 carver
+1118 bewilder
+1502 laplace
+1612 achieves
+1621 prolix
+2001 obituary
+2010 marksmen
+2357 lunged
+12
+0113 laplace
+0114 overhaul
+0535 abased
+0644 achieves
+1012 marksmen
+1146 obituary
+1219 networks
+1304 climber
+1457 carver
+2044 lunged
+2140 prolix
+2332 bewilder
+6
+0018 networks
+0155 prolix
+0409 marksmen
+1602 lunged
+2042 climber
+2223 bewilder
+3
+0603 networks
+0832 obituary
+1615 prolix
+2
+0335 networks
+1549 achieves
+0604
+obituary
+climber
+12
+azalea
+rosette
+suckling
+travesty
+barbados
+alfalfa
+gangrene
+cremona
+disavow
+purblind
+linguist
+ellipse
+1
+4
+0943 ellipse
+1010 alfalfa
+1042 cremona
+1524 suckling
+0118
+cremona
+travesty
+12
+crayon
+omelet
+rumania
+rarefied
+digger
+studios
+ancona
+brothel
+calabash
+nagasaki
+pinafore
+navajo
+5
+9
+0057 brothel
+0102 studios
+0204 ancona
+1000 nagasaki
+1105 calabash
+1140 rumania
+1307 digger
+1620 crayon
+2300 rarefied
+6
+0336 pinafore
+0616 rarefied
+1538 rumania
+1550 digger
+1634 crayon
+1839 navajo
+2
+0749 studios
+0936 navajo
+10
+0039 brothel
+0901 calabash
+1005 crayon
+1019 omelet
+1203 studios
+1804 nagasaki
+2152 pinafore
+2249 digger
+2250 rarefied
+2304 ancona
+6
+0737 rarefied
+0811 omelet
+1041 ancona
+1521 nagasaki
+1543 calabash
+1804 studios
+2222
+omelet
+pinafore
+12
+fatalism
+hiatus
+cinder
+scudding
+rocker
+propel
+salzburg
+armoury
+liqueur
+smelting
+scraggy
+airplane
+18
+10
+0121 scraggy
+0221 salzburg
+0308 rocker
+0430 armoury
+0633 propel
+0906 liqueur
+1237 airplane
+1509 smelting
+1627 fatalism
+1925 hiatus
+5
+0703 airplane
+0850 liqueur
+1054 hiatus
+1409 smelting
+2125 rocker
+2
+0221 airplane
+0608 rocker
+7
+0506 scraggy
+0516 airplane
+1402 rocker
+1833 hiatus
+2110 armoury
+2131 cinder
+2148 salzburg
+4
+0134 scudding
+1441 airplane
+1920 smelting
+2325 liqueur
+11
+0038 salzburg
+0351 cinder
+0357 airplane
+0418 liqueur
+1030 rocker
+1046 propel
+1517 hiatus
+1518 smelting
+1746 armoury
+2206 scudding
+2341 scraggy
+6
+0143 scudding
+0545 airplane
+0755 rocker
+1047 armoury
+1637 propel
+2217 fatalism
+4
+0809 rocker
+1415 scudding
+1830 fatalism
+1925 scraggy
+2
+1952 scudding
+2328 rocker
+9
+0021 airplane
+0107 fatalism
+0650 rocker
+1229 propel
+1832 scraggy
+1914 smelting
+2009 hiatus
+2222 salzburg
+2341 cinder
+10
+0141 salzburg
+0244 smelting
+1058 liqueur
+1414 propel
+1444 rocker
+1714 airplane
+1816 scraggy
+2016 fatalism
+2058 scudding
+2316 cinder
+9
+0044 armoury
+0125 liqueur
+0537 smelting
+0641 fatalism
+0648 rocker
+0849 scraggy
+1535 cinder
+1546 propel
+2258 airplane
+5
+0806 armoury
+1032 smelting
+1624 scraggy
+2023 salzburg
+2321 liqueur
+11
+0015 hiatus
+0020 cinder
+0344 smelting
+0638 scraggy
+0833 liqueur
+0921 scudding
+0941 propel
+1041 salzburg
+1049 armoury
+1207 airplane
+1610 rocker
+11
+0025 smelting
+0048 cinder
+0310 fatalism
+0419 airplane
+0646 scraggy
+1251 salzburg
+1306 liqueur
+1620 scudding
+1626 hiatus
+1729 propel
+2241 armoury
+4
+0322 liqueur
+0517 fatalism
+1035 scudding
+1324 salzburg
+11
+0020 salzburg
+0058 scraggy
+0738 airplane
+0743 smelting
+0909 fatalism
+1016 scudding
+1039 liqueur
+1113 rocker
+1701 armoury
+1949 hiatus
+2253 propel
+2
+0125 fatalism
+1010 scudding
+0357
+rocker
+propel
+12
+phrygian
+veined
+anglia
+append
+pakistan
+primate
+tableaux
+restorer
+andros
+altruism
+stellar
+engrave
+9
+8
+0019 pakistan
+0502 veined
+0815 tableaux
+1139 primate
+1802 phrygian
+1848 stellar
+1956 engrave
+2058 restorer
+3
+0331 append
+1834 andros
+2256 veined
+7
+0319 veined
+0712 restorer
+0853 primate
+1218 andros
+1542 phrygian
+2140 append
+2341 stellar
+3
+0541 veined
+1344 append
+2120 primate
+2
+0007 anglia
+1322 pakistan
+4
+0941 veined
+0949 primate
+1029 append
+1244 phrygian
+9
+0034 pakistan
+0338 restorer
+0606 andros
+0610 primate
+0623 anglia
+0708 tableaux
+0721 stellar
+0804 append
+1806 veined
+11
+0119 phrygian
+0623 append
+0731 altruism
+0908 stellar
+0948 engrave
+1357 veined
+1455 tableaux
+1503 andros
+1934 anglia
+2120 primate
+2148 restorer
+8
+0052 restorer
+0130 pakistan
+0851 primate
+1008 append
+1021 stellar
+1211 tableaux
+1542 altruism
+1844 phrygian
+1336
+restorer
+append
+12
+trudge
+ablution
+migrant
+bootless
+abjectly
+leprous
+topeka
+redound
+scrubs
+fustian
+sprouted
+opiate
+6
+12
+0113 topeka
+0410 abjectly
+0445 ablution
+1312 leprous
+1355 trudge
+1519 sprouted
+1634 scrubs
+1638 migrant
+1930 fustian
+2128 redound
+2130 bootless
+2303 opiate
+6
+0242 bootless
+1219 ablution
+1245 leprous
+1529 abjectly
+1823 fustian
+2226 sprouted
+10
+0505 fustian
+0517 sprouted
+0705 topeka
+0711 migrant
+0938 redound
+1004 bootless
+1104 abjectly
+1721 leprous
+1830 ablution
+2000 trudge
+6
+1228 migrant
+1310 opiate
+1609 bootless
+1743 scrubs
+1804 fustian
+2240 abjectly
+12
+0055 abjectly
+0638 fustian
+0737 leprous
+1044 redound
+1051 bootless
+1401 topeka
+1743 scrubs
+1924 opiate
+2005 migrant
+2026 sprouted
+2120 ablution
+2215 trudge
+9
+0145 trudge
+0303 topeka
+0430 sprouted
+0531 redound
+0734 leprous
+0757 abjectly
+0853 scrubs
+1227 fustian
+2201 bootless
+0229
+scrubs
+ablution
+12
+pleiades
+tourism
+arroyo
+dudgeon
+alumina
+regulus
+coupling
+dioxide
+clematis
+abjured
+bicycles
+leniency
+7
+4
+0043 alumina
+0116 bicycles
+0401 coupling
+1242 regulus
+9
+0237 dudgeon
+0243 pleiades
+0248 clematis
+0350 leniency
+0639 arroyo
+0808 dioxide
+0834 alumina
+0927 coupling
+1832 regulus
+11
+0114 dioxide
+0228 abjured
+0425 dudgeon
+0650 coupling
+0822 tourism
+1054 alumina
+1317 bicycles
+1459 arroyo
+1705 regulus
+2003 leniency
+2127 clematis
+9
+0530 dudgeon
+0610 pleiades
+0741 clematis
+0847 tourism
+1028 arroyo
+1127 coupling
+1353 dioxide
+1729 alumina
+1852 bicycles
+6
+0640 dudgeon
+0831 leniency
+1123 bicycles
+1224 alumina
+2030 tourism
+2307 pleiades
+12
+0101 regulus
+0347 tourism
+0440 dioxide
+0905 arroyo
+0920 dudgeon
+0942 abjured
+1111 clematis
+1148 bicycles
+1156 leniency
+1315 coupling
+2222 pleiades
+2340 alumina
+8
+0211 alumina
+0309 clematis
+0425 bicycles
+0802 tourism
+1328 dudgeon
+1850 regulus
+1907 dioxide
+2345 leniency
+1609
+leniency
+coupling
+12
+arterial
+topeka
+cherubim
+barrage
+loudness
+argent
+coconut
+waylay
+unformed
+beehive
+entree
+cosmos
+5
+9
+0124 cosmos
+0334 barrage
+0835 cherubim
+1035 arterial
+1148 argent
+1553 coconut
+1627 beehive
+1806 waylay
+2208 entree
+5
+0244 cosmos
+0449 beehive
+0732 topeka
+1056 entree
+1807 waylay
+6
+0029 beehive
+0111 argent
+0418 arterial
+0741 topeka
+1610 cosmos
+2208 coconut
+8
+0547 arterial
+1108 cherubim
+1235 beehive
+1515 barrage
+1725 unformed
+1731 cosmos
+2005 waylay
+2335 loudness
+10
+0146 argent
+0303 coconut
+0408 cosmos
+0549 entree
+0920 topeka
+1213 arterial
+1221 cherubim
+1628 beehive
+1738 waylay
+1849 loudness
+0142
+cherubim
+unformed
+12
+bearable
+pontoon
+rocker
+strumpet
+rhapsody
+clematis
+belittle
+borrower
+sandal
+basilica
+dropsy
+waylay
+2
+2
+1558 basilica
+2311 belittle
+10
+0403 pontoon
+0707 dropsy
+1056 sandal
+1244 basilica
+1249 bearable
+1335 clematis
+1719 rocker
+2023 strumpet
+2210 rhapsody
+2258 belittle
+1115
+borrower
+clematis
+12
+magnolia
+esdras
+linguist
+viscera
+zeppelin
+piebald
+sesame
+static
+draper
+succinct
+dietary
+tiffany
+13
+8
+0449 viscera
+0459 linguist
+0847 tiffany
+0854 dietary
+0937 esdras
+1024 succinct
+1316 zeppelin
+1427 static
+8
+0308 succinct
+0657 linguist
+0708 static
+0953 tiffany
+1044 viscera
+1337 draper
+1712 piebald
+2256 dietary
+12
+0017 zeppelin
+0218 tiffany
+0717 succinct
+0729 sesame
+0738 esdras
+0810 draper
+1217 magnolia
+1451 static
+1853 piebald
+1942 viscera
+2051 dietary
+2232 linguist
+9
+0246 draper
+0915 dietary
+0944 magnolia
+1106 succinct
+1302 esdras
+1349 tiffany
+1410 static
+1946 linguist
+2100 piebald
+4
+1035 tiffany
+1109 sesame
+1437 piebald
+1927 dietary
+3
+0150 esdras
+1523 magnolia
+2035 linguist
+6
+0011 piebald
+0242 esdras
+0904 sesame
+1852 zeppelin
+2033 dietary
+2334 draper
+5
+0536 linguist
+0918 piebald
+1224 draper
+1649 viscera
+1901 sesame
+6
+1149 dietary
+1333 viscera
+1540 zeppelin
+1849 draper
+1943 piebald
+2031 magnolia
+4
+0452 zeppelin
+0515 static
+1024 draper
+1644 succinct
+10
+0236 draper
+1054 zeppelin
+1109 linguist
+1221 piebald
+1340 tiffany
+1547 static
+1754 esdras
+2100 viscera
+2100 sesame
+2355 dietary
+5
+0121 piebald
+0912 zeppelin
+1356 succinct
+2038 static
+2351 magnolia
+8
+0217 linguist
+0303 viscera
+0627 draper
+0923 piebald
+1046 static
+1510 succinct
+1556 magnolia
+2051 dietary
+1352
+linguist
+static
+12
+amulet
+succinct
+orchid
+carmine
+jaundice
+buttocks
+freshet
+ranking
+bigamy
+primacy
+riband
+apricot
+19
+10
+0053 ranking
+0159 riband
+0540 bigamy
+0548 freshet
+0559 primacy
+0714 jaundice
+0820 succinct
+1408 buttocks
+1730 apricot
+1809 carmine
+8
+0717 amulet
+0836 apricot
+1051 ranking
+1411 bigamy
+1533 carmine
+2145 buttocks
+2217 orchid
+2304 jaundice
+5
+0401 freshet
+0828 jaundice
+1440 ranking
+1645 primacy
+1702 succinct
+3
+0936 freshet
+0941 succinct
+1211 carmine
+9
+0049 succinct
+0233 amulet
+0252 bigamy
+0732 riband
+0928 primacy
+1046 orchid
+1821 buttocks
+2048 carmine
+2125 jaundice
+6
+0111 riband
+0810 orchid
+1102 carmine
+1618 jaundice
+1837 bigamy
+2035 ranking
+9
+0859 orchid
+1114 amulet
+1313 buttocks
+1432 freshet
+1651 primacy
+1814 bigamy
+1907 jaundice
+2012 riband
+2142 apricot
+10
+0128 riband
+0148 freshet
+0436 carmine
+0448 amulet
+0554 primacy
+1024 buttocks
+1223 orchid
+1957 apricot
+2140 jaundice
+2147 ranking
+7
+0106 buttocks
+0224 amulet
+0531 apricot
+0558 jaundice
+0607 primacy
+0934 carmine
+1032 ranking
+3
+1515 primacy
+1842 amulet
+2157 ranking
+5
+0102 freshet
+0459 buttocks
+0950 amulet
+1725 carmine
+2016 primacy
+5
+0507 jaundice
+0935 freshet
+1739 carmine
+1740 riband
+2037 apricot
+3
+0634 bigamy
+2246 orchid
+2322 apricot
+11
+0140 freshet
+0147 bigamy
+0331 orchid
+0453 apricot
+0700 buttocks
+1012 amulet
+1352 jaundice
+1559 succinct
+1630 primacy
+1720 carmine
+2253 riband
+12
+0235 apricot
+0250 carmine
+0335 primacy
+0422 jaundice
+0522 ranking
+0704 bigamy
+0740 freshet
+1439 amulet
+1532 orchid
+1651 buttocks
+1740 succinct
+2131 riband
+12
+0136 buttocks
+0810 bigamy
+0825 freshet
+0858 riband
+1008 carmine
+1059 jaundice
+1231 apricot
+1437 ranking
+1539 orchid
+2027 succinct
+2052 amulet
+2103 primacy
+3
+0759 ranking
+2026 buttocks
+2054 primacy
+3
+1826 succinct
+1835 amulet
+2225 primacy
+4
+0335 bigamy
+1142 freshet
+1257 primacy
+1630 buttocks
+0912
+bigamy
+freshet
+12
+suitcase
+crunch
+exalting
+synopsis
+aluminum
+opiate
+outhouse
+armoury
+joyance
+condone
+factotum
+hoover
+13
+5
+0227 condone
+1122 armoury
+1429 exalting
+1745 opiate
+2358 aluminum
+3
+0407 suitcase
+1959 synopsis
+2252 opiate
+4
+0708 synopsis
+0728 aluminum
+1024 crunch
+1349 condone
+9
+0005 crunch
+0521 outhouse
+0823 synopsis
+1058 hoover
+1245 joyance
+1424 condone
+2108 suitcase
+2119 armoury
+2323 aluminum
+3
+0330 aluminum
+1914 synopsis
+2022 opiate
+2
+0252 joyance
+1452 armoury
+4
+1524 synopsis
+1707 hoover
+1827 joyance
+2147 opiate
+3
+0646 aluminum
+1241 armoury
+1613 suitcase
+11
+0038 aluminum
+0205 hoover
+0233 condone
+0333 joyance
+0847 suitcase
+1141 outhouse
+1239 opiate
+1803 factotum
+1945 exalting
+2051 crunch
+2223 armoury
+7
+0257 outhouse
+0409 aluminum
+0640 crunch
+1118 opiate
+1936 suitcase
+1950 condone
+2127 synopsis
+3
+1134 outhouse
+1548 factotum
+2353 crunch
+6
+0227 suitcase
+0408 exalting
+0653 synopsis
+1351 crunch
+1544 aluminum
+1810 hoover
+12
+0229 armoury
+0637 suitcase
+0712 crunch
+0743 aluminum
+0749 exalting
+0845 opiate
+0850 factotum
+1042 hoover
+1423 synopsis
+1723 joyance
+1916 condone
+2121 outhouse
+0438
+hoover
+condone
+12
+coiffure
+coerce
+quilted
+baritone
+barbados
+capitol
+buttocks
+incest
+suckling
+wainscot
+capsized
+castaway
+16
+3
+0237 suckling
+0248 coiffure
+2117 barbados
+3
+1047 coerce
+1914 wainscot
+2154 capitol
+11
+0535 coerce
+0755 castaway
+0953 baritone
+1226 coiffure
+1317 quilted
+1324 incest
+1403 barbados
+1507 capitol
+1514 buttocks
+2156 wainscot
+2311 capsized
+11
+0413 coiffure
+0547 buttocks
+0641 barbados
+0643 capsized
+0755 capitol
+0958 incest
+1133 coerce
+1436 wainscot
+1554 suckling
+1958 castaway
+2036 baritone
+7
+0029 wainscot
+0037 baritone
+0057 castaway
+0607 capsized
+1017 buttocks
+1842 capitol
+1854 coiffure
+2
+0758 coiffure
+1423 capitol
+12
+0147 suckling
+0412 capitol
+0501 baritone
+0542 castaway
+0649 coerce
+0651 buttocks
+0721 barbados
+0925 coiffure
+1209 capsized
+1806 incest
+2113 wainscot
+2134 quilted
+4
+0439 coiffure
+0531 capitol
+1135 suckling
+1717 quilted
+10
+0627 castaway
+0754 incest
+1014 suckling
+1035 coerce
+1452 capitol
+1516 wainscot
+1656 buttocks
+1820 coiffure
+2025 baritone
+2039 capsized
+8
+0002 capsized
+0216 capitol
+0335 incest
+0357 buttocks
+1314 castaway
+1322 coerce
+2258 quilted
+2336 baritone
+4
+0529 incest
+1652 coerce
+1709 coiffure
+2036 barbados
+9
+0116 capitol
+0441 wainscot
+0842 barbados
+0930 buttocks
+1252 quilted
+1332 coiffure
+1802 suckling
+1859 baritone
+2148 incest
+10
+0016 buttocks
+0028 baritone
+0047 coiffure
+0202 suckling
+0231 coerce
+0904 quilted
+1150 wainscot
+1725 barbados
+1812 capsized
+2251 incest
+8
+0534 suckling
+1117 coerce
+1138 quilted
+1547 capsized
+1550 capitol
+2039 coiffure
+2142 buttocks
+2349 castaway
+7
+0220 capsized
+0408 incest
+0855 coerce
+1600 coiffure
+1647 wainscot
+1707 baritone
+2153 capitol
+10
+0623 capsized
+1209 buttocks
+1422 capitol
+1706 suckling
+1751 incest
+1908 quilted
+1940 coiffure
+1957 wainscot
+2111 barbados
+2139 coerce
+1336
+incest
+suckling
+12
+scurry
+bromide
+carbolic
+seance
+rosebud
+priced
+buttocks
+trends
+coeval
+prolix
+sloppy
+mileage
+20
+3
+0239 mileage
+1651 rosebud
+2143 seance
+10
+0845 rosebud
+1138 buttocks
+1139 seance
+1345 mileage
+1504 coeval
+1539 sloppy
+1817 scurry
+1946 priced
+2144 trends
+2335 prolix
+12
+0308 prolix
+0400 buttocks
+0528 mileage
+0543 bromide
+0549 trends
+0620 carbolic
+1307 seance
+1843 rosebud
+1848 priced
+2024 sloppy
+2152 coeval
+2335 scurry
+7
+0646 priced
+0652 rosebud
+0808 bromide
+0856 seance
+0927 mileage
+1502 sloppy
+2151 scurry
+4
+0106 rosebud
+0129 buttocks
+1916 sloppy
+2237 mileage
+10
+0048 rosebud
+0054 scurry
+0528 bromide
+0732 coeval
+0917 prolix
+1050 priced
+1347 buttocks
+1616 sloppy
+1644 trends
+2215 carbolic
+12
+0121 mileage
+0310 buttocks
+0346 bromide
+0657 coeval
+0845 prolix
+1022 seance
+1347 carbolic
+1348 rosebud
+1417 priced
+1649 trends
+1958 sloppy
+2255 scurry
+3
+0207 bromide
+0821 rosebud
+1005 scurry
+5
+0240 seance
+0623 trends
+0819 buttocks
+1145 carbolic
+1704 coeval
+10
+0337 scurry
+0428 mileage
+0450 trends
+0633 rosebud
+0800 sloppy
+1418 prolix
+1530 bromide
+1722 coeval
+2308 carbolic
+2308 priced
+8
+0201 prolix
+0230 seance
+0321 trends
+0439 sloppy
+0517 mileage
+0628 buttocks
+1301 coeval
+1404 priced
+4
+0604 carbolic
+1340 prolix
+1929 trends
+1936 rosebud
+11
+0424 sloppy
+0526 seance
+0545 scurry
+0652 rosebud
+0850 trends
+0901 prolix
+0924 buttocks
+0955 carbolic
+1043 bromide
+1928 mileage
+2047 priced
+3
+0000 prolix
+0619 rosebud
+1804 sloppy
+7
+0124 priced
+0543 trends
+0610 sloppy
+0745 prolix
+1021 bromide
+2115 mileage
+2301 carbolic
+7
+0428 priced
+0551 buttocks
+0634 seance
+1053 carbolic
+1358 bromide
+1818 scurry
+2124 trends
+6
+0504 bromide
+0556 prolix
+1523 mileage
+1738 rosebud
+1953 carbolic
+2037 priced
+7
+0158 buttocks
+0554 carbolic
+1013 prolix
+1032 coeval
+1908 bromide
+2032 seance
+2225 trends
+12
+0040 prolix
+0824 rosebud
+0945 priced
+1048 sloppy
+1428 carbolic
+1555 bromide
+1612 trends
+1634 seance
+2140 coeval
+2200 mileage
+2226 buttocks
+2249 scurry
+10
+0058 seance
+0143 sloppy
+0301 scurry
+0510 priced
+0640 rosebud
+0740 bromide
+1424 mileage
+1459 coeval
+1753 buttocks
+2319 prolix
+0519
+mileage
+bromide
+12
+rocker
+climber
+frisky
+amatory
+samurai
+flaunt
+whiting
+bitumen
+feldspar
+agnostic
+accruing
+nascent
+2
+6
+0115 accruing
+0207 flaunt
+0844 frisky
+1250 nascent
+1318 feldspar
+1400 bitumen
+3
+0354 accruing
+0544 amatory
+1527 whiting
+1046
+nascent
+bitumen
+12
+tendon
+atrophy
+sprouted
+smelting
+giraffe
+usable
+spittle
+cashed
+seraglio
+altruism
+pistil
+abased
+4
+5
+0943 tendon
+1446 seraglio
+1535 altruism
+1639 usable
+2028 giraffe
+11
+0210 smelting
+0416 spittle
+0525 pistil
+0926 sprouted
+0931 giraffe
+1205 usable
+1235 seraglio
+1549 cashed
+1732 abased
+1742 tendon
+1811 atrophy
+9
+0207 atrophy
+0521 abased
+0528 cashed
+0657 smelting
+0831 tendon
+0938 usable
+1655 pistil
+1708 altruism
+1948 seraglio
+11
+0037 smelting
+0437 altruism
+0652 spittle
+0700 atrophy
+0721 pistil
+0754 sprouted
+0801 tendon
+1102 seraglio
+1629 usable
+2202 cashed
+2316 giraffe
+1431
+altruism
+seraglio
+12
+cremona
+barrage
+flaunt
+abetted
+jeweler
+solder
+crusty
+dominoes
+betaken
+minimize
+voltaic
+teamster
+7
+8
+0720 abetted
+0757 betaken
+0759 voltaic
+0801 jeweler
+1435 solder
+1616 minimize
+1619 crusty
+2157 teamster
+10
+0450 solder
+0602 abetted
+0710 jeweler
+0822 teamster
+0824 minimize
+1249 voltaic
+1552 barrage
+1713 cremona
+1823 dominoes
+2315 betaken
+12
+0046 teamster
+0153 dominoes
+0207 solder
+0230 abetted
+0429 voltaic
+0918 crusty
+1611 flaunt
+1722 jeweler
+1946 barrage
+2016 betaken
+2159 cremona
+2324 minimize
+4
+0138 flaunt
+0745 voltaic
+1837 betaken
+2142 cremona
+10
+0133 crusty
+0233 teamster
+0234 flaunt
+0518 solder
+0927 abetted
+1145 voltaic
+1316 dominoes
+1448 jeweler
+1602 minimize
+1657 betaken
+9
+0210 barrage
+0630 jeweler
+1011 dominoes
+1017 betaken
+1556 minimize
+1645 crusty
+1840 teamster
+1907 solder
+2124 flaunt
+6
+0231 flaunt
+0235 teamster
+0436 voltaic
+0911 betaken
+1002 barrage
+2136 minimize
+1013
+dominoes
+flaunt
+12
+lancet
+atrium
+viscid
+outstrip
+wrestler
+ensnare
+mutation
+recline
+lintel
+syringe
+denizen
+agnostic
+18
+10
+0013 syringe
+0027 atrium
+0457 recline
+0512 outstrip
+0536 viscid
+0927 ensnare
+1353 agnostic
+1857 mutation
+1907 lintel
+2308 lancet
+8
+0151 lancet
+0232 denizen
+0317 viscid
+0508 recline
+0604 atrium
+0718 lintel
+2037 ensnare
+2253 wrestler
+12
+0041 recline
+0315 viscid
+0705 syringe
+0727 atrium
+0838 agnostic
+1138 lintel
+1318 lancet
+1543 outstrip
+1701 wrestler
+1716 denizen
+1809 mutation
+2301 ensnare
+9
+0651 mutation
+0717 lancet
+0748 viscid
+1243 atrium
+1254 agnostic
+1338 denizen
+1927 wrestler
+2054 outstrip
+2328 lintel
+9
+0143 mutation
+0511 atrium
+1301 lintel
+1620 ensnare
+1744 recline
+2032 agnostic
+2042 viscid
+2054 syringe
+2114 denizen
+10
+0002 syringe
+0132 lancet
+0158 lintel
+0548 atrium
+1010 outstrip
+1151 denizen
+1434 mutation
+1735 ensnare
+2043 recline
+2231 agnostic
+2
+0325 lintel
+1334 wrestler
+7
+0430 lancet
+0459 syringe
+0638 outstrip
+1244 atrium
+1410 agnostic
+1837 denizen
+2224 lintel
+4
+0456 lancet
+0545 ensnare
+1012 mutation
+2344 atrium
+8
+0220 recline
+0259 syringe
+0441 denizen
+0543 ensnare
+0858 outstrip
+1416 atrium
+2150 mutation
+2243 lintel
+4
+1131 viscid
+1148 wrestler
+1243 lintel
+1529 recline
+9
+0455 lancet
+0612 denizen
+1407 atrium
+1850 wrestler
+1923 recline
+2025 ensnare
+2034 outstrip
+2047 agnostic
+2210 lintel
+4
+0718 lancet
+0728 viscid
+1259 ensnare
+1836 lintel
+8
+0224 viscid
+0447 atrium
+0655 ensnare
+1512 lintel
+1614 agnostic
+1910 wrestler
+2030 mutation
+2301 outstrip
+3
+0054 mutation
+0156 recline
+2105 wrestler
+8
+0413 denizen
+0500 agnostic
+0830 atrium
+1504 lancet
+1515 mutation
+1642 lintel
+2000 recline
+2352 syringe
+8
+0034 syringe
+0411 lintel
+0549 agnostic
+1133 mutation
+1232 wrestler
+1333 ensnare
+1609 outstrip
+1752 viscid
+12
+0007 atrium
+0252 viscid
+0254 ensnare
+0713 recline
+0929 denizen
+1201 mutation
+1416 lintel
+1638 syringe
+1933 agnostic
+1953 wrestler
+2105 outstrip
+2125 lancet
+0808
+outstrip
+mutation
+12
+barbados
+vaunting
+draper
+lacquer
+rectum
+nipple
+liqueur
+contemn
+nutshell
+berber
+overlap
+crispin
+3
+7
+0031 overlap
+0943 contemn
+1009 rectum
+1405 nutshell
+1442 liqueur
+1722 draper
+2011 lacquer
+3
+1021 crispin
+1428 liqueur
+1619 rectum
+10
+0046 vaunting
+0148 crispin
+0352 barbados
+0521 contemn
+0554 berber
+0731 lacquer
+1436 nipple
+2015 liqueur
+2103 draper
+2304 nutshell
+0312
+overlap
+barbados
+12
+unshaven
+bemoan
+scurry
+pennant
+whiten
+bombard
+manitoba
+carbolic
+sandal
+burrows
+lifelike
+lender
+5
+11
+0018 sandal
+0053 bemoan
+0138 manitoba
+0929 lifelike
+1039 bombard
+1053 pennant
+1124 unshaven
+1245 scurry
+1602 carbolic
+1920 whiten
+2244 lender
+9
+0059 whiten
+0247 bombard
+0249 carbolic
+0349 scurry
+0707 burrows
+0951 bemoan
+1059 pennant
+1112 manitoba
+1141 lender
+8
+0042 burrows
+0334 unshaven
+0427 pennant
+0641 lifelike
+0742 manitoba
+1033 bombard
+1238 carbolic
+2323 whiten
+7
+0552 carbolic
+0841 lender
+0907 manitoba
+1713 unshaven
+1727 pennant
+1803 bemoan
+2108 bombard
+8
+0043 scurry
+0251 bombard
+0252 unshaven
+0613 manitoba
+2026 carbolic
+2034 bemoan
+2225 lender
+2311 whiten
+0722
+scurry
+manitoba
+12
+woodcut
+fumble
+shifty
+hussar
+abbeys
+accrued
+fiddling
+vistula
+woodcock
+scurry
+fiasco
+joyance
+15
+4
+0313 fiddling
+0324 scurry
+0613 joyance
+1816 shifty
+6
+0651 fiddling
+0719 abbeys
+1032 hussar
+1316 fiasco
+2125 woodcut
+2337 shifty
+2
+1216 woodcock
+1406 accrued
+5
+0244 fiddling
+0518 shifty
+1007 woodcock
+1446 abbeys
+1613 vistula
+8
+0154 fiasco
+0554 woodcut
+0629 woodcock
+0911 abbeys
+1115 shifty
+1448 fumble
+2113 fiddling
+2318 scurry
+7
+0047 fumble
+0855 fiasco
+1152 fiddling
+1201 woodcock
+1540 woodcut
+1646 abbeys
+2235 scurry
+8
+0239 joyance
+0406 abbeys
+0446 woodcock
+0615 fiasco
+1507 fiddling
+1657 scurry
+1714 hussar
+2227 vistula
+3
+0020 woodcut
+1428 vistula
+1435 hussar
+4
+0957 woodcut
+1359 abbeys
+1927 woodcock
+2055 vistula
+6
+0012 fiasco
+0033 vistula
+0104 woodcock
+1304 fiddling
+2255 accrued
+2316 woodcut
+8
+0311 joyance
+0413 woodcock
+0645 scurry
+1020 fumble
+1438 abbeys
+1911 fiasco
+2010 fiddling
+2138 hussar
+9
+0200 shifty
+0325 fiddling
+0501 hussar
+0522 fumble
+0842 joyance
+0948 abbeys
+1242 fiasco
+1439 vistula
+2130 accrued
+12
+0048 fumble
+0242 vistula
+0331 fiddling
+1005 woodcut
+1202 abbeys
+1315 woodcock
+1618 shifty
+1619 scurry
+1730 fiasco
+1829 joyance
+1952 hussar
+2019 accrued
+10
+0309 woodcut
+0349 vistula
+0355 accrued
+0424 fumble
+0618 woodcock
+0735 fiasco
+1116 fiddling
+1843 shifty
+1851 joyance
+2239 scurry
+7
+0452 vistula
+0507 hussar
+0531 joyance
+0646 accrued
+1200 fiddling
+1313 abbeys
+2145 woodcock
+1602
+woodcut
+fumble
+12
+altruism
+whiten
+godson
+thyroid
+blends
+oriole
+mediate
+rosebud
+baboon
+joyance
+asthma
+niggard
+6
+2
+0222 baboon
+1036 oriole
+2
+1120 blends
+2319 thyroid
+11
+0154 blends
+0315 godson
+0738 oriole
+0758 altruism
+0813 baboon
+1242 niggard
+1412 joyance
+1412 whiten
+1808 rosebud
+1938 thyroid
+2354 mediate
+11
+0000 asthma
+0450 joyance
+0732 rosebud
+0755 baboon
+1430 oriole
+1455 niggard
+1653 altruism
+1741 whiten
+1818 thyroid
+2039 godson
+2330 mediate
+7
+0526 asthma
+0544 mediate
+0600 blends
+0901 rosebud
+1401 niggard
+1709 thyroid
+2137 joyance
+8
+0413 blends
+0518 mediate
+1402 oriole
+1405 rosebud
+1420 joyance
+1425 whiten
+2152 baboon
+2251 thyroid
+0331
+thyroid
+whiten
+12
+releases
+crayon
+celibate
+codicil
+nimbus
+warble
+whiten
+liqueur
+angelus
+phrygian
+campfire
+converge
+9
+6
+0010 releases
+0129 liqueur
+0439 nimbus
+1435 converge
+1853 celibate
+2319 warble
+3
+0549 phrygian
+1613 whiten
+1614 releases
+12
+0138 codicil
+0141 phrygian
+0233 warble
+0235 celibate
+0633 converge
+0642 liqueur
+0654 whiten
+0707 crayon
+1437 angelus
+1628 nimbus
+2021 releases
+2250 campfire
+11
+0251 converge
+0413 campfire
+0557 liqueur
+0603 angelus
+0627 nimbus
+0850 warble
+1006 crayon
+1558 celibate
+1732 whiten
+1943 phrygian
+2243 releases
+4
+0331 converge
+1218 crayon
+1308 warble
+1749 whiten
+12
+0124 crayon
+0349 codicil
+0708 celibate
+0806 warble
+0913 whiten
+1034 campfire
+1214 releases
+1248 liqueur
+1457 converge
+1626 nimbus
+1650 phrygian
+1947 angelus
+4
+0017 liqueur
+0022 crayon
+0556 converge
+2331 campfire
+9
+0121 phrygian
+0625 releases
+0945 warble
+1238 converge
+1320 codicil
+1322 crayon
+1457 angelus
+1457 celibate
+2018 liqueur
+10
+0215 crayon
+0409 converge
+0449 nimbus
+0616 whiten
+0644 warble
+0721 campfire
+1020 liqueur
+1933 releases
+2008 phrygian
+2138 angelus
+0450
+converge
+codicil
+12
+jogging
+abysmal
+petting
+usable
+pistil
+rosemary
+brothel
+allspice
+overdue
+trowel
+pennant
+looting
+8
+12
+0152 abysmal
+0429 pennant
+0447 trowel
+0713 brothel
+1006 allspice
+1046 usable
+1209 looting
+1252 pistil
+2053 jogging
+2256 petting
+2257 overdue
+2340 rosemary
+2
+0903 brothel
+1733 allspice
+3
+0736 petting
+1304 abysmal
+1608 trowel
+3
+0342 jogging
+0637 abysmal
+2123 usable
+4
+0448 pistil
+1117 petting
+1140 trowel
+1845 abysmal
+11
+0100 rosemary
+0219 pennant
+0245 pistil
+0957 allspice
+1024 usable
+1025 brothel
+1049 looting
+1126 jogging
+1758 trowel
+2103 petting
+2331 abysmal
+8
+0228 rosemary
+0448 trowel
+0753 usable
+1059 pennant
+1524 abysmal
+1555 brothel
+1725 pistil
+2224 jogging
+6
+0157 trowel
+0241 allspice
+0455 abysmal
+0737 jogging
+1213 petting
+1852 usable
+1533
+jogging
+pistil
+12
+treacle
+brescia
+wolfish
+restorer
+elegiac
+flaunt
+impost
+heirloom
+cryptic
+durban
+quaver
+clayey
+16
+12
+0248 brescia
+0449 impost
+0606 heirloom
+0642 clayey
+0929 restorer
+0939 treacle
+1212 cryptic
+1231 quaver
+1332 wolfish
+1543 elegiac
+2133 durban
+2216 flaunt
+6
+0107 treacle
+0151 flaunt
+0248 durban
+1314 elegiac
+1526 clayey
+1753 impost
+4
+0941 impost
+1128 elegiac
+2007 clayey
+2101 cryptic
+10
+0014 treacle
+1210 clayey
+1218 brescia
+1331 impost
+1436 elegiac
+1539 quaver
+1646 durban
+1929 heirloom
+2322 wolfish
+2354 restorer
+5
+0220 restorer
+0407 wolfish
+1520 clayey
+2150 treacle
+2229 flaunt
+4
+0641 restorer
+0747 cryptic
+1519 elegiac
+2147 durban
+12
+0117 treacle
+0311 impost
+0318 elegiac
+0553 cryptic
+0720 brescia
+0731 clayey
+0733 quaver
+0909 restorer
+1007 wolfish
+2049 durban
+2057 flaunt
+2356 heirloom
+12
+0000 wolfish
+0009 impost
+0147 durban
+0157 cryptic
+0430 restorer
+0611 elegiac
+1015 flaunt
+1048 clayey
+1124 heirloom
+1127 treacle
+1518 quaver
+2203 brescia
+5
+0054 brescia
+0259 heirloom
+0747 restorer
+1007 clayey
+1426 durban
+7
+0418 quaver
+1234 durban
+1348 treacle
+1444 flaunt
+1506 heirloom
+1720 cryptic
+1948 clayey
+7
+0447 elegiac
+0918 durban
+1425 heirloom
+1700 impost
+1833 restorer
+2206 wolfish
+2349 cryptic
+11
+0557 quaver
+0842 restorer
+0954 flaunt
+1138 wolfish
+1209 durban
+1231 elegiac
+1507 brescia
+1911 impost
+1925 treacle
+2123 heirloom
+2344 clayey
+3
+0432 quaver
+0852 flaunt
+2329 impost
+5
+0048 brescia
+0431 durban
+1054 impost
+1644 wolfish
+1907 flaunt
+10
+0301 wolfish
+0613 quaver
+0644 heirloom
+1001 durban
+1309 treacle
+1335 clayey
+1415 elegiac
+1432 impost
+1645 restorer
+2110 brescia
+6
+0306 flaunt
+0321 quaver
+0525 impost
+0536 clayey
+1505 treacle
+2203 elegiac
+0047
+flaunt
+quaver
+12
+curtail
+satiate
+taffrail
+celibate
+loveless
+rectum
+armoury
+florin
+glinting
+trinket
+armory
+ofries
+18
+10
+0225 loveless
+0450 armoury
+0832 florin
+1104 ofries
+1434 glinting
+1704 rectum
+1741 curtail
+1901 satiate
+1921 celibate
+2313 armory
+4
+0134 armory
+0910 satiate
+1118 celibate
+1145 glinting
+2
+0242 taffrail
+0401 florin
+12
+0150 celibate
+0642 curtail
+0837 taffrail
+0913 loveless
+1041 glinting
+1102 armory
+1334 florin
+1404 armoury
+1802 satiate
+1804 trinket
+2134 ofries
+2301 rectum
+11
+0017 armoury
+0733 taffrail
+0902 rectum
+1223 celibate
+1405 loveless
+1521 curtail
+1536 glinting
+1733 armory
+1924 satiate
+1950 trinket
+2159 florin
+9
+0018 taffrail
+0428 glinting
+0658 satiate
+0754 curtail
+0820 florin
+0942 rectum
+1330 armory
+1411 armoury
+1856 loveless
+2
+0107 taffrail
+2006 armory
+5
+0428 armory
+1218 armoury
+1646 glinting
+1807 taffrail
+2333 rectum
+11
+0045 taffrail
+0325 glinting
+0436 ofries
+0459 armory
+0853 armoury
+0955 loveless
+1517 trinket
+1744 rectum
+1802 satiate
+1909 celibate
+2202 curtail
+4
+1844 glinting
+1944 armory
+2111 armoury
+2139 ofries
+6
+0012 rectum
+0020 ofries
+0248 armoury
+0343 glinting
+0937 satiate
+1059 florin
+4
+0007 celibate
+0225 florin
+1804 armoury
+1859 satiate
+8
+0119 armory
+0300 celibate
+0547 florin
+0657 trinket
+0900 ofries
+1135 rectum
+1842 glinting
+2221 curtail
+4
+0327 glinting
+0645 trinket
+1755 celibate
+1910 rectum
+9
+0516 rectum
+0544 satiate
+0938 taffrail
+0958 ofries
+1239 curtail
+1306 trinket
+1443 glinting
+1517 celibate
+1746 florin
+12
+0017 armory
+0050 armoury
+0411 rectum
+0447 loveless
+0901 ofries
+1128 trinket
+1344 satiate
+1628 florin
+1628 glinting
+1807 taffrail
+1926 celibate
+2327 curtail
+11
+0004 taffrail
+0228 armory
+0413 ofries
+0506 curtail
+1024 glinting
+1049 rectum
+1100 florin
+1848 armoury
+1946 loveless
+2122 satiate
+2139 celibate
+10
+0228 trinket
+0525 satiate
+0717 rectum
+0910 armory
+1024 glinting
+1046 loveless
+1127 florin
+1622 curtail
+1920 ofries
+1940 armoury
+0629
+taffrail
+celibate
+12
+crowbar
+cranny
+distil
+pinafore
+grafting
+deadlock
+ocular
+buttocks
+deface
+matins
+riband
+malaysia
+14
+12
+0121 cranny
+0629 pinafore
+0658 matins
+0742 distil
+1318 malaysia
+1356 grafting
+1759 deadlock
+1947 buttocks
+1952 ocular
+1957 deface
+2247 riband
+2330 crowbar
+7
+0325 riband
+0712 distil
+0925 deadlock
+1001 cranny
+1227 pinafore
+2013 buttocks
+2126 grafting
+12
+0113 ocular
+0259 distil
+0303 malaysia
+0324 deface
+0335 riband
+0405 grafting
+0514 deadlock
+0701 crowbar
+1133 cranny
+1307 pinafore
+1641 matins
+2118 buttocks
+5
+0826 buttocks
+0843 ocular
+0953 deface
+1855 deadlock
+2230 malaysia
+3
+0411 distil
+1022 deface
+2014 malaysia
+6
+0300 matins
+0725 pinafore
+0900 grafting
+0930 buttocks
+1904 ocular
+2145 deface
+6
+1207 grafting
+1623 pinafore
+1807 deadlock
+1849 riband
+1951 malaysia
+2007 buttocks
+11
+0240 pinafore
+0425 malaysia
+0925 deadlock
+1233 buttocks
+1351 ocular
+1659 deface
+1727 riband
+1849 cranny
+2128 matins
+2147 distil
+2306 crowbar
+11
+0243 riband
+0607 pinafore
+0620 crowbar
+0817 ocular
+1024 matins
+1128 grafting
+1139 malaysia
+1141 buttocks
+1541 cranny
+1621 deface
+1830 distil
+11
+0044 grafting
+0205 crowbar
+0332 ocular
+0354 riband
+0812 matins
+1135 deadlock
+1612 cranny
+1653 distil
+2319 malaysia
+2344 deface
+2351 pinafore
+9
+0133 deadlock
+0612 cranny
+0704 pinafore
+1000 buttocks
+1335 distil
+1726 malaysia
+1854 crowbar
+2034 matins
+2137 deface
+8
+0207 deadlock
+0210 distil
+0241 cranny
+0349 ocular
+1033 buttocks
+1909 crowbar
+1932 deface
+2152 riband
+11
+0000 grafting
+0045 malaysia
+0239 riband
+0358 crowbar
+0437 cranny
+0453 ocular
+1150 deface
+1459 matins
+1732 buttocks
+1917 distil
+2220 deadlock
+10
+0536 grafting
+0559 cranny
+0641 buttocks
+1152 distil
+1320 malaysia
+1513 matins
+1631 riband
+1735 deadlock
+1909 pinafore
+2253 ocular
+1933
+deface
+cranny
+12
+gangrene
+bugbear
+underlie
+warbler
+steven
+laplace
+angelus
+suckling
+organise
+esdras
+pyjamas
+valerian
+5
+9
+0011 valerian
+0137 gangrene
+0226 angelus
+0323 underlie
+0808 suckling
+1029 laplace
+1354 esdras
+1845 organise
+2106 pyjamas
+8
+0025 angelus
+0442 warbler
+0728 gangrene
+1325 laplace
+1545 pyjamas
+1606 esdras
+1959 suckling
+2131 valerian
+2
+1604 bugbear
+2118 laplace
+10
+0657 angelus
+0706 warbler
+1623 steven
+1638 valerian
+1916 laplace
+2054 gangrene
+2111 pyjamas
+2129 bugbear
+2255 suckling
+2258 underlie
+10
+0012 gangrene
+0349 suckling
+0514 warbler
+0938 valerian
+0954 pyjamas
+1239 esdras
+1325 angelus
+1856 bugbear
+2047 organise
+2118 steven
+0348
+esdras
+bugbear
+12
+folklore
+heyday
+bootless
+smuggle
+snowball
+maligned
+cockade
+celibate
+warbler
+bewitch
+looting
+abhors
+10
+3
+0754 bootless
+0932 maligned
+2030 cockade
+6
+0630 smuggle
+0830 folklore
+1115 warbler
+1446 cockade
+1946 snowball
+2118 abhors
+2
+0025 looting
+2144 heyday
+4
+0544 warbler
+1347 smuggle
+1522 snowball
+1804 cockade
+10
+0020 folklore
+0253 bootless
+0305 warbler
+0435 looting
+0500 bewitch
+0819 smuggle
+1128 snowball
+1510 abhors
+1530 celibate
+1840 cockade
+5
+0033 folklore
+0152 celibate
+1114 abhors
+1152 looting
+2145 smuggle
+4
+0641 bewitch
+1214 bootless
+1808 snowball
+2022 abhors
+10
+0338 celibate
+0359 snowball
+0445 bootless
+0837 folklore
+0909 maligned
+1020 bewitch
+1137 abhors
+1215 smuggle
+1918 warbler
+2221 heyday
+12
+0137 heyday
+0154 cockade
+0156 smuggle
+0406 snowball
+0412 bootless
+0446 bewitch
+0624 maligned
+0813 celibate
+1314 warbler
+1538 looting
+2147 folklore
+2232 abhors
+5
+0023 celibate
+0023 bootless
+0912 smuggle
+1905 folklore
+2058 abhors
+0626
+heyday
+cockade
+12
+giraffe
+granny
+warbler
+mantilla
+begrudge
+numeral
+invert
+impolite
+tapioca
+mileage
+tabooed
+nagasaki
+1
+7
+0104 mileage
+0346 tapioca
+0716 nagasaki
+1425 begrudge
+1728 granny
+1847 mantilla
+2334 numeral
+0916
+granny
+begrudge
+12
+aphorism
+crowbar
+citation
+marche
+mesquite
+quandary
+topping
+woodcut
+mangrove
+grafting
+garnered
+faggot
+11
+7
+0149 citation
+0425 grafting
+0440 mangrove
+1519 quandary
+1717 crowbar
+1833 aphorism
+2313 marche
+3
+0602 mangrove
+0928 mesquite
+2211 citation
+4
+0007 topping
+0204 faggot
+0807 garnered
+1157 mangrove
+6
+0031 marche
+0715 quandary
+0951 mesquite
+1304 topping
+1856 garnered
+1938 woodcut
+2
+0044 mangrove
+1259 quandary
+3
+0004 faggot
+0337 marche
+0639 grafting
+12
+0055 crowbar
+0152 mangrove
+1134 aphorism
+1200 woodcut
+1223 grafting
+1348 marche
+1534 faggot
+1834 mesquite
+1943 quandary
+1952 topping
+2129 citation
+2257 garnered
+4
+0548 garnered
+1550 topping
+1617 marche
+2255 aphorism
+6
+0433 marche
+0655 quandary
+1025 topping
+1045 faggot
+1640 mesquite
+2004 crowbar
+10
+0004 marche
+0008 crowbar
+0040 garnered
+0537 faggot
+0744 woodcut
+0815 mangrove
+1243 citation
+1654 quandary
+1813 grafting
+1818 mesquite
+2
+0302 aphorism
+0932 citation
+2102
+marche
+woodcut
+12
+ocular
+forswear
+lintel
+mutation
+protocol
+zoology
+doggerel
+burmese
+primacy
+steven
+morphia
+mandolin
+18
+9
+0715 mandolin
+0749 forswear
+1144 lintel
+1238 ocular
+1328 doggerel
+1537 morphia
+1739 steven
+2055 zoology
+2222 protocol
+2
+0416 zoology
+0422 lintel
+3
+0140 zoology
+1052 mandolin
+2205 mutation
+8
+0233 protocol
+0248 burmese
+0618 primacy
+0712 steven
+0955 mutation
+1113 mandolin
+1757 lintel
+2136 ocular
+12
+0321 zoology
+0340 steven
+0501 forswear
+0532 protocol
+0714 lintel
+1014 primacy
+1455 doggerel
+1737 ocular
+1741 morphia
+1910 mutation
+1920 mandolin
+2311 burmese
+7
+0245 protocol
+0940 mutation
+1209 primacy
+1302 steven
+1450 lintel
+1833 zoology
+2201 ocular
+10
+0433 ocular
+0852 mandolin
+1133 steven
+1221 zoology
+1226 burmese
+1315 doggerel
+1429 lintel
+1529 forswear
+1546 protocol
+1632 morphia
+8
+1148 protocol
+1310 primacy
+1349 ocular
+1428 zoology
+1509 doggerel
+1626 mutation
+1657 lintel
+2021 steven
+8
+0204 lintel
+1333 morphia
+1359 steven
+1506 mandolin
+1525 primacy
+1527 forswear
+2128 protocol
+2305 ocular
+4
+0227 mandolin
+0714 zoology
+0952 primacy
+1813 burmese
+8
+0259 primacy
+0714 mandolin
+1107 mutation
+1222 forswear
+1458 protocol
+1647 steven
+1647 morphia
+2215 lintel
+10
+0122 ocular
+0434 mutation
+0455 steven
+0528 lintel
+0905 burmese
+1520 morphia
+1723 zoology
+1747 doggerel
+1802 protocol
+1926 forswear
+9
+0205 burmese
+0446 steven
+0511 morphia
+0929 primacy
+1119 forswear
+1142 ocular
+1419 lintel
+2026 mandolin
+2158 doggerel
+9
+0015 ocular
+0214 burmese
+0455 mutation
+0902 lintel
+1137 morphia
+1247 forswear
+1407 steven
+1916 zoology
+2242 doggerel
+2
+2001 primacy
+2231 mutation
+9
+0027 ocular
+0340 primacy
+0502 burmese
+0510 protocol
+1255 mandolin
+1425 lintel
+1504 mutation
+1729 forswear
+2046 zoology
+2
+0659 mandolin
+0904 zoology
+4
+0245 doggerel
+0941 zoology
+1216 ocular
+1258 steven
+2344
+primacy
+forswear
+12
+petting
+engulf
+impeach
+syphilis
+shifty
+networks
+batting
+satrap
+prompter
+popish
+bicycles
+bigamy
+7
+3
+0321 prompter
+1046 syphilis
+1227 impeach
+5
+0239 popish
+0606 impeach
+1740 networks
+1824 syphilis
+2012 batting
+11
+0007 bigamy
+0053 bicycles
+0625 impeach
+0808 prompter
+0933 networks
+1010 popish
+1100 satrap
+1517 shifty
+1907 engulf
+2006 syphilis
+2354 batting
+5
+0910 syphilis
+1044 engulf
+1647 satrap
+1843 networks
+2241 petting
+4
+0131 syphilis
+0833 engulf
+0839 petting
+1910 satrap
+11
+0150 popish
+0315 prompter
+0326 engulf
+0335 impeach
+0651 networks
+0757 petting
+1242 bigamy
+1421 bicycles
+1704 satrap
+1845 shifty
+2123 syphilis
+10
+0126 impeach
+0407 syphilis
+0520 satrap
+0923 batting
+0931 prompter
+1341 shifty
+1619 bicycles
+1830 engulf
+1941 bigamy
+2303 networks
+1635
+engulf
+satrap
+12
+garter
+lacquer
+margot
+unbiased
+bicycles
+adhesive
+invoice
+senile
+apulia
+regulus
+galaxy
+emetic
+6
+6
+0203 bicycles
+0424 margot
+0505 invoice
+1046 adhesive
+1433 garter
+1848 lacquer
+5
+0053 apulia
+0258 galaxy
+1603 bicycles
+1926 emetic
+2050 margot
+4
+0238 invoice
+0256 lacquer
+1424 senile
+1629 margot
+3
+1420 apulia
+1609 regulus
+1927 senile
+8
+0246 unbiased
+1129 apulia
+1142 invoice
+1721 regulus
+1724 garter
+2100 adhesive
+2208 senile
+2251 galaxy
+6
+0438 senile
+1013 adhesive
+1357 galaxy
+1525 margot
+1957 emetic
+2222 bicycles
+2115
+apulia
+unbiased
+12
+redound
+warship
+awesome
+wizened
+sloppy
+propel
+leaflet
+overhaul
+whiting
+optional
+unafraid
+coitus
+6
+2
+0613 warship
+0734 redound
+12
+0031 optional
+0343 whiting
+0525 awesome
+0533 sloppy
+0539 wizened
+0821 coitus
+1346 redound
+1402 unafraid
+1431 warship
+1439 overhaul
+1800 leaflet
+1924 propel
+10
+0028 whiting
+0059 optional
+0207 unafraid
+0519 redound
+0532 propel
+1420 sloppy
+1520 leaflet
+1523 overhaul
+2040 coitus
+2201 awesome
+2
+0747 warship
+1248 sloppy
+8
+0102 leaflet
+0104 propel
+1037 unafraid
+1231 redound
+1540 coitus
+1816 overhaul
+2049 optional
+2229 sloppy
+6
+1112 sloppy
+1323 optional
+1510 unafraid
+1741 warship
+1826 coitus
+2153 overhaul
+1340
+propel
+overhaul
+12
+gaslight
+bruising
+igneous
+faggot
+requiem
+rancid
+morphia
+coitus
+unwound
+effete
+devonian
+nutshell
+18
+10
+0033 nutshell
+0300 coitus
+0552 igneous
+0710 requiem
+0719 gaslight
+0746 effete
+0856 devonian
+1013 bruising
+1423 unwound
+1635 faggot
+3
+0803 unwound
+1107 requiem
+1514 morphia
+2
+1356 unwound
+1517 bruising
+7
+1329 igneous
+1423 gaslight
+1530 faggot
+1742 requiem
+1750 bruising
+2356 devonian
+2359 effete
+9
+0117 devonian
+0435 nutshell
+0702 coitus
+1052 bruising
+1206 morphia
+1843 effete
+2015 requiem
+2109 igneous
+2157 rancid
+8
+0206 faggot
+0500 bruising
+0900 coitus
+1637 unwound
+1903 devonian
+1914 igneous
+2044 requiem
+2226 morphia
+9
+0011 unwound
+0128 morphia
+0456 gaslight
+0750 effete
+1318 coitus
+1542 rancid
+1728 igneous
+1848 requiem
+2311 devonian
+3
+0000 unwound
+0622 bruising
+2258 gaslight
+2
+1917 effete
+2221 gaslight
+5
+0816 igneous
+1238 gaslight
+1539 faggot
+2205 morphia
+2217 effete
+7
+0129 nutshell
+0526 devonian
+0533 rancid
+0803 gaslight
+0924 requiem
+1333 igneous
+1553 bruising
+8
+0242 requiem
+0256 nutshell
+0306 morphia
+0901 bruising
+1213 unwound
+1408 faggot
+1559 devonian
+2251 igneous
+7
+0109 requiem
+0230 nutshell
+0816 igneous
+0933 faggot
+1740 devonian
+1831 gaslight
+2240 rancid
+11
+0140 nutshell
+0327 coitus
+0351 gaslight
+0432 effete
+0643 devonian
+0646 bruising
+1121 igneous
+1323 requiem
+1737 rancid
+1902 unwound
+2122 faggot
+11
+0215 gaslight
+0445 effete
+0511 igneous
+0857 devonian
+1210 rancid
+1242 coitus
+1932 unwound
+1958 requiem
+1959 faggot
+2100 bruising
+2115 nutshell
+2
+0810 bruising
+2104 coitus
+9
+0713 faggot
+0737 requiem
+1125 bruising
+1228 coitus
+1249 morphia
+1250 unwound
+1313 rancid
+1448 gaslight
+1952 nutshell
+6
+0311 unwound
+0316 requiem
+0459 nutshell
+1252 bruising
+1716 faggot
+2302 coitus
+1001
+rancid
+requiem
+12
+foolscap
+loveless
+grandee
+protocol
+synopsis
+underlie
+acrimony
+hessian
+landau
+budapest
+warble
+uptown
+12
+7
+0602 uptown
+0828 landau
+1025 protocol
+1728 acrimony
+2112 budapest
+2146 underlie
+2329 warble
+5
+0445 protocol
+0919 warble
+0920 uptown
+1650 hessian
+2152 underlie
+4
+0905 loveless
+0918 warble
+1607 hessian
+2333 synopsis
+8
+0951 budapest
+1010 warble
+1209 foolscap
+1737 acrimony
+1821 grandee
+1900 landau
+1916 loveless
+2056 hessian
+6
+0142 synopsis
+0308 landau
+0925 protocol
+1045 budapest
+1309 acrimony
+1557 loveless
+7
+0136 protocol
+0930 warble
+1423 landau
+1832 acrimony
+1845 grandee
+1953 budapest
+2055 synopsis
+4
+1615 foolscap
+1912 protocol
+2211 budapest
+2328 warble
+9
+0342 protocol
+0434 budapest
+0447 acrimony
+0614 underlie
+1028 grandee
+1032 foolscap
+1207 synopsis
+1535 warble
+1928 uptown
+9
+0027 landau
+0137 underlie
+0334 uptown
+0617 warble
+0705 protocol
+0747 loveless
+1735 grandee
+2030 synopsis
+2035 acrimony
+5
+1022 hessian
+1444 foolscap
+1645 acrimony
+1947 warble
+2320 loveless
+6
+0125 landau
+0950 acrimony
+1318 grandee
+1624 protocol
+2133 uptown
+2306 foolscap
+5
+0055 uptown
+0338 hessian
+0440 underlie
+1503 landau
+2308 foolscap
+1141
+uptown
+underlie
+12
+hereupon
+comport
+durban
+trinket
+ideally
+ensnare
+diablo
+americas
+etching
+genitive
+walrus
+dioxide
+13
+3
+0313 etching
+1934 ensnare
+2034 durban
+11
+0241 americas
+0439 durban
+0739 trinket
+0745 ensnare
+0859 walrus
+0922 genitive
+1141 diablo
+1243 ideally
+1332 comport
+1440 etching
+2339 hereupon
+7
+0309 walrus
+0618 etching
+0910 ensnare
+1110 americas
+1114 ideally
+1443 trinket
+2156 genitive
+2
+0049 hereupon
+0403 trinket
+3
+1740 etching
+2034 ideally
+2127 comport
+11
+0407 dioxide
+0550 durban
+0707 hereupon
+0741 trinket
+0751 comport
+0838 genitive
+0848 diablo
+1044 americas
+1342 ensnare
+1639 etching
+1936 ideally
+3
+0731 comport
+1504 trinket
+2251 americas
+5
+0254 walrus
+0957 dioxide
+2151 ensnare
+2159 durban
+2229 etching
+8
+0142 walrus
+0517 hereupon
+0542 durban
+0653 ensnare
+1146 ideally
+1457 etching
+1543 americas
+1706 comport
+9
+0624 ideally
+0819 ensnare
+0844 genitive
+1000 diablo
+1023 hereupon
+1242 americas
+1446 walrus
+1612 comport
+2238 durban
+8
+0026 ideally
+0347 durban
+0530 hereupon
+0607 americas
+0841 diablo
+1317 comport
+1549 dioxide
+2025 trinket
+10
+0057 americas
+0133 dioxide
+0200 walrus
+0955 hereupon
+1212 genitive
+1220 trinket
+1632 ensnare
+1641 comport
+1729 durban
+2129 diablo
+9
+0111 comport
+0155 durban
+0530 americas
+0952 diablo
+1018 hereupon
+1214 trinket
+2045 ideally
+2120 genitive
+2156 walrus
+1232
+hereupon
+diablo
+12
+croatia
+pander
+campfire
+ecuador
+folklore
+nozzle
+sealskin
+omelette
+nominee
+unmanned
+whiting
+ganymede
+15
+3
+0218 omelette
+1205 unmanned
+2032 pander
+2
+0056 pander
+0754 omelette
+2
+0133 sealskin
+2330 whiting
+12
+0017 nominee
+0258 omelette
+1142 unmanned
+1333 ecuador
+1439 whiting
+1447 ganymede
+1659 sealskin
+1904 pander
+2032 folklore
+2100 croatia
+2219 campfire
+2250 nozzle
+4
+0003 sealskin
+0515 nominee
+0634 ecuador
+1831 ganymede
+5
+0408 folklore
+0535 croatia
+0558 whiting
+0618 ecuador
+2353 pander
+3
+0117 nominee
+0250 sealskin
+0655 folklore
+4
+0253 unmanned
+0612 nominee
+0813 croatia
+0939 folklore
+6
+1145 pander
+1355 unmanned
+2058 croatia
+2100 ganymede
+2132 ecuador
+2349 campfire
+5
+0656 croatia
+0859 folklore
+1059 campfire
+1147 nominee
+1609 omelette
+9
+0353 campfire
+0731 ganymede
+1007 folklore
+1043 croatia
+1154 omelette
+1359 sealskin
+1713 unmanned
+1859 nominee
+2227 whiting
+10
+0159 sealskin
+0329 nozzle
+0513 pander
+1016 ecuador
+1236 whiting
+1325 omelette
+1822 nominee
+2046 folklore
+2105 unmanned
+2326 campfire
+3
+0012 ganymede
+0143 croatia
+0858 nominee
+5
+0132 nominee
+0803 ganymede
+1138 campfire
+1147 ecuador
+1732 nozzle
+12
+0108 pander
+0348 ecuador
+0424 whiting
+0642 nozzle
+0650 folklore
+0718 croatia
+1248 unmanned
+1539 campfire
+1822 omelette
+2150 sealskin
+2157 nominee
+2302 ganymede
+1531
+pander
+croatia
+12
+releases
+yeomanry
+curative
+hatter
+coalesce
+voyager
+bombast
+nimbus
+storied
+valerian
+woodsman
+advert
+15
+10
+0256 hatter
+0559 storied
+1028 curative
+1951 releases
+1954 yeomanry
+2037 bombast
+2038 advert
+2056 voyager
+2311 coalesce
+2346 woodsman
+12
+0057 storied
+0302 valerian
+0350 woodsman
+0523 curative
+0524 yeomanry
+0751 advert
+0909 coalesce
+1639 voyager
+2109 hatter
+2115 bombast
+2157 releases
+2209 nimbus
+4
+0212 coalesce
+0407 voyager
+0722 advert
+1657 storied
+6
+1026 hatter
+1147 releases
+1400 coalesce
+1413 voyager
+1903 curative
+1913 bombast
+11
+0237 bombast
+0240 voyager
+0332 curative
+0349 nimbus
+0816 releases
+0852 coalesce
+0906 advert
+1042 yeomanry
+2107 hatter
+2118 valerian
+2331 storied
+5
+0051 hatter
+0433 nimbus
+0829 voyager
+1846 woodsman
+2313 storied
+4
+0102 releases
+0855 woodsman
+0903 nimbus
+1104 curative
+7
+0217 advert
+0255 bombast
+0416 curative
+0423 woodsman
+0531 voyager
+0646 releases
+1850 hatter
+10
+0041 nimbus
+0050 bombast
+0115 curative
+0151 storied
+0707 valerian
+0904 hatter
+1235 woodsman
+1243 coalesce
+1454 yeomanry
+2314 advert
+2
+0258 voyager
+1126 advert
+12
+0032 coalesce
+0332 curative
+0340 nimbus
+0551 hatter
+0822 valerian
+1526 woodsman
+1611 bombast
+1633 advert
+1737 voyager
+2108 storied
+2215 yeomanry
+2335 releases
+7
+0003 voyager
+0231 woodsman
+0459 nimbus
+0721 curative
+1104 coalesce
+1302 advert
+1623 storied
+9
+0343 voyager
+0427 hatter
+0602 curative
+0618 woodsman
+0910 bombast
+1023 nimbus
+1037 yeomanry
+1423 storied
+1934 advert
+12
+0005 bombast
+0016 yeomanry
+0040 valerian
+0048 releases
+0345 coalesce
+1007 hatter
+1026 woodsman
+1138 nimbus
+1258 voyager
+1318 curative
+1327 storied
+1508 advert
+6
+0053 voyager
+1023 advert
+1249 bombast
+1735 nimbus
+2024 storied
+2305 hatter
+2257
+hatter
+advert
+12
+tobago
+wainscot
+mileage
+slipshod
+quietest
+forsworn
+branding
+nebula
+rumania
+encumber
+rutland
+impeach
+11
+12
+0007 wainscot
+0111 rutland
+0324 tobago
+0409 quietest
+0417 encumber
+0451 forsworn
+1012 rumania
+1202 branding
+1342 slipshod
+1444 mileage
+1554 nebula
+1555 impeach
+6
+0004 encumber
+0221 rumania
+1149 rutland
+1719 mileage
+1749 tobago
+2110 nebula
+7
+0019 wainscot
+0056 nebula
+0943 encumber
+1411 impeach
+1414 rumania
+2214 slipshod
+2310 tobago
+9
+0304 wainscot
+0503 impeach
+0622 encumber
+1125 nebula
+1619 tobago
+1725 branding
+1753 quietest
+1855 forsworn
+2233 mileage
+11
+0104 forsworn
+0119 mileage
+0202 rumania
+0231 nebula
+0233 encumber
+0555 impeach
+0646 branding
+1501 rutland
+2017 slipshod
+2125 quietest
+2318 wainscot
+9
+0246 branding
+0935 nebula
+1045 impeach
+1214 tobago
+1239 rumania
+1242 wainscot
+1400 quietest
+1406 forsworn
+1740 rutland
+6
+0033 forsworn
+0042 impeach
+1104 slipshod
+1446 branding
+1715 wainscot
+2017 encumber
+12
+0924 mileage
+0925 slipshod
+0955 rumania
+0957 forsworn
+1039 nebula
+1439 tobago
+1623 branding
+1634 wainscot
+1636 impeach
+2049 quietest
+2218 rutland
+2347 encumber
+10
+0618 encumber
+0807 branding
+1131 quietest
+1423 tobago
+1534 impeach
+1703 rumania
+2149 mileage
+2200 wainscot
+2303 forsworn
+2324 nebula
+12
+0456 impeach
+0557 encumber
+0753 forsworn
+0801 tobago
+0828 rumania
+0834 quietest
+1142 mileage
+1208 branding
+1220 nebula
+1435 wainscot
+1956 slipshod
+2244 rutland
+12
+0354 tobago
+0401 slipshod
+0418 wainscot
+0535 impeach
+0559 encumber
+0745 rutland
+0820 forsworn
+0940 quietest
+1127 mileage
+1409 nebula
+1641 rumania
+1845 branding
+0807
+rutland
+rumania
+12
+pistil
+leprous
+rumania
+topsail
+barnet
+eschew
+traction
+loafer
+colonist
+villager
+pontoon
+inscribe
+20
+10
+0135 pistil
+0140 villager
+0308 traction
+0434 topsail
+1107 loafer
+1432 barnet
+1526 inscribe
+1546 eschew
+1834 pontoon
+2204 rumania
+2
+0048 leprous
+1950 loafer
+10
+0238 pistil
+0632 traction
+1022 inscribe
+1232 leprous
+1301 barnet
+1634 pontoon
+1656 eschew
+1820 rumania
+2224 colonist
+2238 villager
+12
+0014 traction
+0912 villager
+0934 leprous
+1045 inscribe
+1438 loafer
+1632 pontoon
+1925 eschew
+1947 pistil
+2130 topsail
+2213 barnet
+2313 rumania
+2319 colonist
+10
+0335 villager
+0449 traction
+0529 pistil
+0638 loafer
+1016 barnet
+1110 pontoon
+1502 rumania
+1555 leprous
+1631 eschew
+1711 colonist
+4
+0909 rumania
+1538 pistil
+1831 villager
+2343 eschew
+8
+0044 eschew
+0232 rumania
+0708 pistil
+1047 villager
+1306 colonist
+1638 loafer
+1721 barnet
+2135 pontoon
+11
+0050 traction
+0358 eschew
+0455 villager
+0532 barnet
+0849 pistil
+0959 pontoon
+1057 inscribe
+1753 loafer
+1843 rumania
+2032 leprous
+2043 colonist
+10
+0157 inscribe
+0235 leprous
+0300 loafer
+0318 traction
+0458 rumania
+1322 eschew
+1426 pontoon
+2119 colonist
+2248 villager
+2301 topsail
+10
+0002 leprous
+0306 traction
+0334 topsail
+0442 pistil
+0447 pontoon
+1408 loafer
+1530 colonist
+1540 villager
+1834 inscribe
+2241 rumania
+9
+0031 rumania
+0759 pistil
+0802 topsail
+0842 traction
+1317 eschew
+1513 pontoon
+2101 leprous
+2136 inscribe
+2330 colonist
+5
+0059 traction
+0107 inscribe
+0620 colonist
+0858 villager
+2206 loafer
+4
+0342 leprous
+1957 rumania
+2209 colonist
+2209 loafer
+2
+0110 loafer
+1050 topsail
+11
+0054 inscribe
+0116 pontoon
+0645 topsail
+1022 eschew
+1153 colonist
+1509 villager
+1725 leprous
+1821 traction
+1921 loafer
+2325 pistil
+2332 barnet
+9
+0420 inscribe
+0545 rumania
+0742 leprous
+0841 loafer
+0848 villager
+1002 pontoon
+1542 eschew
+2054 colonist
+2223 pistil
+8
+0021 topsail
+0024 colonist
+0120 barnet
+0440 loafer
+0627 pontoon
+0745 eschew
+1029 rumania
+1134 pistil
+4
+0320 pistil
+1642 rumania
+2058 pontoon
+2234 barnet
+4
+0551 pontoon
+0700 eschew
+1346 villager
+2205 barnet
+5
+0110 inscribe
+0131 topsail
+0304 pistil
+0715 colonist
+0958 loafer
+0918
+eschew
+traction
+12
+catarrh
+drachm
+samoan
+pollute
+teamster
+rutledge
+twaddle
+gunshot
+curative
+petting
+pajamas
+voyager
+13
+2
+0759 curative
+2252 samoan
+10
+0318 rutledge
+0450 curative
+0528 voyager
+0843 teamster
+1151 gunshot
+1332 twaddle
+1400 samoan
+1816 pajamas
+1959 drachm
+2301 pollute
+8
+0059 drachm
+0347 pollute
+0444 gunshot
+1238 rutledge
+1828 curative
+1850 catarrh
+2123 twaddle
+2330 petting
+9
+0326 curative
+0438 teamster
+0500 gunshot
+0512 rutledge
+0813 drachm
+1026 twaddle
+1405 pollute
+1551 pajamas
+1744 catarrh
+12
+0044 teamster
+0332 gunshot
+0816 drachm
+1005 pajamas
+1352 voyager
+1400 catarrh
+1406 samoan
+1406 twaddle
+1637 curative
+2223 rutledge
+2328 petting
+2354 pollute
+8
+0115 twaddle
+0344 curative
+0718 catarrh
+0836 pajamas
+1041 gunshot
+1537 petting
+1855 teamster
+1858 rutledge
+12
+0010 petting
+0021 pajamas
+0251 drachm
+0347 rutledge
+0708 teamster
+1013 samoan
+1323 catarrh
+1428 curative
+1828 voyager
+1832 pollute
+1842 gunshot
+2311 twaddle
+3
+0256 twaddle
+1051 samoan
+2257 gunshot
+10
+0002 voyager
+0426 petting
+0641 samoan
+0716 rutledge
+0731 pollute
+0935 pajamas
+1057 gunshot
+1241 twaddle
+1638 drachm
+2217 teamster
+5
+0013 curative
+0403 teamster
+0957 gunshot
+1436 pollute
+1610 samoan
+4
+0103 catarrh
+0641 pollute
+0658 drachm
+2337 pajamas
+6
+0348 drachm
+0715 pajamas
+1053 samoan
+1253 gunshot
+1435 rutledge
+2334 teamster
+2
+0205 twaddle
+0928 teamster
+0523
+petting
+curative
+12
+panoply
+mumble
+bemoan
+baldness
+postmark
+engender
+ideally
+oncoming
+oriole
+petting
+puncture
+hessian
+9
+6
+0013 puncture
+0852 baldness
+0921 bemoan
+1121 hessian
+1636 engender
+1824 ideally
+4
+0621 oriole
+0917 panoply
+1719 bemoan
+1852 mumble
+4
+1056 puncture
+1700 oncoming
+1734 petting
+1829 panoply
+6
+1028 baldness
+1219 bemoan
+1253 oncoming
+1602 hessian
+1848 mumble
+2310 ideally
+5
+0030 mumble
+0223 panoply
+0805 bemoan
+1606 puncture
+1944 petting
+7
+0131 oncoming
+0317 petting
+0353 ideally
+0657 puncture
+1225 oriole
+1832 baldness
+2339 postmark
+3
+0426 petting
+1056 panoply
+1301 puncture
+10
+0226 puncture
+0234 bemoan
+0938 postmark
+1006 ideally
+1111 mumble
+1446 oncoming
+1527 oriole
+1909 baldness
+2003 panoply
+2225 petting
+6
+0355 mumble
+0923 engender
+1242 panoply
+1243 oriole
+1338 petting
+2241 postmark
+0515
+mumble
+petting
+12
+mediate
+emetic
+ingress
+procures
+uptown
+rectum
+hawser
+sloppy
+burrows
+winded
+townsman
+stellar
+20
+9
+0108 rectum
+0219 burrows
+0220 procures
+0242 emetic
+0800 hawser
+1145 stellar
+1307 townsman
+1611 sloppy
+2007 winded
+10
+0040 emetic
+0210 burrows
+0646 rectum
+0850 hawser
+1248 mediate
+1309 stellar
+1321 procures
+1417 winded
+1613 uptown
+1919 sloppy
+2
+0655 winded
+2350 uptown
+10
+0031 sloppy
+0114 burrows
+0131 hawser
+0244 ingress
+0310 uptown
+0318 rectum
+0608 stellar
+1023 procures
+1045 emetic
+1828 townsman
+7
+1354 burrows
+1447 sloppy
+1759 townsman
+2013 rectum
+2015 emetic
+2026 ingress
+2112 winded
+5
+0015 townsman
+0917 rectum
+2006 emetic
+2323 winded
+2356 hawser
+12
+0118 townsman
+0302 procures
+0327 ingress
+0338 hawser
+0428 mediate
+0530 winded
+0856 stellar
+1614 rectum
+1651 emetic
+1908 sloppy
+2242 uptown
+2257 burrows
+6
+0454 winded
+0553 mediate
+0831 sloppy
+1640 stellar
+1812 townsman
+2125 uptown
+2
+0001 mediate
+0237 winded
+2
+1952 stellar
+2052 ingress
+2
+1230 townsman
+1858 burrows
+12
+0218 emetic
+0241 winded
+0310 townsman
+0344 rectum
+0533 procures
+0541 burrows
+0951 sloppy
+1231 ingress
+1258 uptown
+1529 mediate
+1729 hawser
+2244 stellar
+5
+0046 uptown
+0149 mediate
+0911 winded
+1230 townsman
+1802 emetic
+11
+0055 uptown
+0130 stellar
+0224 emetic
+0501 townsman
+0616 rectum
+0842 winded
+0936 mediate
+1242 ingress
+1504 hawser
+1557 procures
+2344 burrows
+10
+0327 procures
+0354 burrows
+0543 uptown
+0853 emetic
+1122 stellar
+1431 hawser
+1811 mediate
+1838 ingress
+1923 winded
+2008 rectum
+10
+0525 ingress
+0900 hawser
+1118 rectum
+1316 stellar
+1558 mediate
+1637 sloppy
+2144 uptown
+2156 procures
+2214 burrows
+2347 emetic
+11
+0108 sloppy
+0125 uptown
+0852 stellar
+1040 ingress
+1238 emetic
+1334 burrows
+1435 procures
+1602 townsman
+1714 mediate
+1722 rectum
+2036 winded
+12
+0138 mediate
+0412 rectum
+0523 sloppy
+0721 winded
+0844 stellar
+0941 uptown
+1434 hawser
+1604 emetic
+1728 ingress
+1802 burrows
+1849 procures
+2206 townsman
+3
+1028 burrows
+1853 mediate
+2246 stellar
+8
+0027 procures
+0245 mediate
+0517 sloppy
+0847 stellar
+1635 burrows
+1726 rectum
+1730 emetic
+1952 townsman
+0349
+burrows
+uptown
+12
+copyist
+pleiades
+boeotia
+popish
+boding
+largesse
+global
+welding
+sulphide
+bemoan
+catarrh
+tannin
+15
+12
+0142 global
+0300 pleiades
+0554 boding
+1103 bemoan
+1133 welding
+1425 tannin
+1618 largesse
+1717 copyist
+1903 catarrh
+2026 boeotia
+2036 sulphide
+2107 popish
+7
+0146 global
+0257 popish
+0502 catarrh
+0908 boeotia
+1801 welding
+1837 bemoan
+2245 sulphide
+3
+0338 global
+0611 catarrh
+2212 pleiades
+9
+0127 sulphide
+0459 global
+1300 tannin
+1409 pleiades
+1709 popish
+1736 catarrh
+1846 boding
+1919 bemoan
+2336 boeotia
+6
+0001 boding
+0513 tannin
+0741 catarrh
+1251 largesse
+1450 copyist
+2208 popish
+4
+0240 bemoan
+0429 pleiades
+1452 largesse
+2006 welding
+4
+0227 pleiades
+2201 sulphide
+2252 bemoan
+2253 welding
+9
+0940 boeotia
+1001 copyist
+1313 catarrh
+1325 popish
+1640 global
+1651 pleiades
+1857 bemoan
+2147 largesse
+2149 boding
+8
+0119 bemoan
+0246 popish
+0640 sulphide
+0958 largesse
+1656 tannin
+1729 catarrh
+1853 welding
+2344 boding
+12
+0247 largesse
+0332 copyist
+0422 boding
+0529 sulphide
+0828 catarrh
+1145 global
+1446 boeotia
+1511 tannin
+1706 popish
+1915 pleiades
+2215 welding
+2342 bemoan
+12
+0001 copyist
+0241 global
+0249 popish
+0319 catarrh
+0440 bemoan
+0525 boeotia
+0633 largesse
+1328 tannin
+1459 boding
+1704 welding
+2101 pleiades
+2214 sulphide
+5
+0247 catarrh
+0423 welding
+1547 popish
+1551 pleiades
+1731 global
+9
+0334 boding
+0427 catarrh
+0540 boeotia
+0627 largesse
+0755 pleiades
+1415 popish
+1752 global
+2123 welding
+2201 bemoan
+2
+0130 tannin
+1212 welding
+6
+0612 catarrh
+0737 sulphide
+0745 global
+1805 copyist
+1841 popish
+2216 welding
+1437
+popish
+catarrh
+12
+blazoned
+scrubs
+venerate
+abhors
+harmonic
+deface
+grinder
+pollute
+moccasin
+treacle
+aliment
+apposite
+5
+11
+0250 harmonic
+0812 scrubs
+1023 moccasin
+1052 grinder
+1138 apposite
+1151 blazoned
+1240 pollute
+1251 abhors
+1549 treacle
+1740 deface
+2115 venerate
+10
+0213 pollute
+0421 treacle
+0725 scrubs
+1724 abhors
+1904 apposite
+1913 blazoned
+1917 moccasin
+2008 aliment
+2210 harmonic
+2354 grinder
+12
+0127 blazoned
+0415 abhors
+0715 harmonic
+0940 venerate
+1227 moccasin
+1412 apposite
+1759 grinder
+1859 deface
+1950 treacle
+2116 scrubs
+2223 pollute
+2240 aliment
+12
+0420 harmonic
+0504 aliment
+0921 scrubs
+1438 abhors
+1601 deface
+1606 apposite
+1620 venerate
+2028 grinder
+2158 blazoned
+2202 treacle
+2300 pollute
+2311 moccasin
+2
+0135 abhors
+2049 deface
+1719
+moccasin
+abhors
+12
+whiting
+canister
+losers
+stilts
+pyrites
+meteoric
+phonetic
+postmark
+baiting
+roumania
+crayon
+radium
+13
+8
+0021 radium
+0155 canister
+0307 losers
+0335 phonetic
+0520 whiting
+1411 baiting
+1652 roumania
+1800 pyrites
+9
+0346 canister
+0926 losers
+0947 whiting
+1623 radium
+1941 phonetic
+2043 roumania
+2140 crayon
+2223 postmark
+2355 pyrites
+7
+0139 radium
+0700 whiting
+0830 canister
+0926 roumania
+1743 stilts
+1934 baiting
+2356 phonetic
+9
+0129 roumania
+0242 losers
+0354 baiting
+0719 whiting
+0838 radium
+0930 phonetic
+0951 meteoric
+1209 canister
+2321 postmark
+8
+0122 whiting
+0147 losers
+0332 meteoric
+0509 canister
+0656 pyrites
+1145 roumania
+2044 phonetic
+2336 stilts
+2
+1441 canister
+2143 postmark
+2
+0545 postmark
+1856 radium
+9
+0013 meteoric
+0206 postmark
+0527 losers
+0550 crayon
+0553 stilts
+0622 baiting
+0851 whiting
+1104 canister
+1204 roumania
+3
+0741 postmark
+1348 stilts
+2206 baiting
+8
+0030 postmark
+1036 pyrites
+1121 crayon
+1228 canister
+1503 stilts
+1504 losers
+1746 radium
+1858 phonetic
+10
+0225 pyrites
+0442 whiting
+0617 crayon
+0702 baiting
+0900 stilts
+1132 canister
+1400 radium
+1420 phonetic
+1454 postmark
+2238 roumania
+4
+0408 phonetic
+0529 stilts
+1119 postmark
+1924 radium
+6
+0421 phonetic
+1311 baiting
+1421 meteoric
+1924 losers
+2102 postmark
+2138 canister
+2014
+baiting
+whiting
+12
+fastness
+roulette
+tiffany
+smudge
+dulcet
+theorist
+ravish
+rutledge
+unmarked
+esthetic
+cryptic
+dinghy
+11
+5
+0107 theorist
+0435 tiffany
+1637 smudge
+1839 unmarked
+1902 esthetic
+10
+0642 dulcet
+0700 ravish
+0805 dinghy
+0922 theorist
+1039 fastness
+1044 unmarked
+1936 roulette
+2043 esthetic
+2130 tiffany
+2150 rutledge
+6
+0202 rutledge
+0413 dinghy
+0416 cryptic
+1334 unmarked
+2003 ravish
+2102 fastness
+3
+0645 unmarked
+0707 smudge
+1353 tiffany
+8
+0208 theorist
+0354 ravish
+0431 esthetic
+0613 rutledge
+0946 fastness
+1752 tiffany
+1810 dinghy
+1944 unmarked
+8
+0023 dulcet
+0359 roulette
+0900 cryptic
+0941 dinghy
+1050 ravish
+1517 smudge
+1703 rutledge
+1957 fastness
+12
+0104 rutledge
+0428 esthetic
+0649 theorist
+0901 roulette
+1041 dulcet
+1235 fastness
+1334 cryptic
+1649 smudge
+1957 ravish
+2132 tiffany
+2212 dinghy
+2322 unmarked
+12
+0011 esthetic
+0049 tiffany
+0158 roulette
+0257 cryptic
+0502 fastness
+0534 ravish
+0923 rutledge
+1134 unmarked
+1316 theorist
+1717 smudge
+2007 dulcet
+2326 dinghy
+11
+0019 unmarked
+0136 dulcet
+0253 fastness
+0849 tiffany
+0903 smudge
+1131 rutledge
+1303 cryptic
+1523 ravish
+1748 theorist
+1806 roulette
+2356 dinghy
+4
+0109 tiffany
+0451 unmarked
+0618 roulette
+0703 dulcet
+8
+0311 dinghy
+0322 ravish
+0807 unmarked
+1730 rutledge
+2136 dulcet
+2137 cryptic
+2138 tiffany
+2203 esthetic
+1535
+theorist
+roulette
+12
+theorist
+crunch
+losers
+zoology
+grafting
+woodsman
+rimini
+primate
+townsman
+engrave
+homily
+falsetto
+2
+8
+0208 zoology
+0255 crunch
+0359 rimini
+0510 theorist
+1537 losers
+1808 townsman
+2132 falsetto
+2139 engrave
+2
+0234 losers
+0246 falsetto
+1635
+falsetto
+primate
+12
+spittle
+crossbow
+calculus
+granny
+purging
+immodest
+deaden
+demean
+bugbear
+pennon
+cramps
+cognac
+19
+11
+0324 demean
+0356 bugbear
+0416 spittle
+0558 calculus
+0600 purging
+0606 immodest
+0921 crossbow
+1240 cognac
+1331 pennon
+1936 cramps
+2314 deaden
+6
+0724 cramps
+1120 deaden
+1311 bugbear
+1552 immodest
+1917 demean
+2319 pennon
+9
+0006 immodest
+0830 purging
+0935 granny
+1056 spittle
+1258 cognac
+1328 crossbow
+1750 bugbear
+2033 pennon
+2338 demean
+12
+0213 deaden
+0646 bugbear
+0750 pennon
+1017 calculus
+1140 granny
+1236 spittle
+1242 cramps
+1600 cognac
+1816 immodest
+1839 purging
+2111 crossbow
+2143 demean
+12
+0203 calculus
+0539 cognac
+0603 purging
+0816 deaden
+0914 pennon
+1615 crossbow
+1649 immodest
+1744 cramps
+2148 demean
+2230 granny
+2305 bugbear
+2357 spittle
+8
+0121 cramps
+0356 pennon
+0606 deaden
+0842 immodest
+1226 cognac
+1415 granny
+1443 spittle
+1715 calculus
+10
+0056 calculus
+0546 spittle
+0801 pennon
+0816 crossbow
+0830 cramps
+1024 purging
+1035 demean
+1536 granny
+1756 bugbear
+2329 cognac
+10
+0221 granny
+0356 purging
+0527 cramps
+0803 bugbear
+0900 calculus
+0939 crossbow
+1035 cognac
+1315 pennon
+1557 immodest
+2238 deaden
+6
+0048 deaden
+0257 spittle
+0736 cramps
+0816 immodest
+2207 bugbear
+2256 calculus
+6
+0139 spittle
+0549 bugbear
+1039 immodest
+1441 purging
+1928 cognac
+2258 deaden
+6
+0213 bugbear
+0550 crossbow
+0841 demean
+1204 immodest
+1317 deaden
+1448 cognac
+12
+0112 calculus
+0155 cramps
+0218 deaden
+0237 bugbear
+0242 demean
+0626 immodest
+0932 spittle
+1315 granny
+1322 purging
+1833 pennon
+2011 cognac
+2134 crossbow
+7
+0552 calculus
+0557 deaden
+1029 crossbow
+1325 bugbear
+1400 demean
+2019 purging
+2336 pennon
+5
+0309 granny
+0719 crossbow
+1154 bugbear
+1323 immodest
+1612 purging
+3
+1215 purging
+1611 demean
+1720 pennon
+5
+0451 deaden
+0634 spittle
+1229 calculus
+1259 cognac
+1529 granny
+5
+0322 immodest
+0447 demean
+1723 purging
+1745 spittle
+2141 calculus
+10
+0345 crossbow
+0504 calculus
+0613 purging
+1150 demean
+1236 spittle
+1508 deaden
+1616 granny
+1807 bugbear
+2033 cognac
+2321 immodest
+9
+0834 crossbow
+0838 demean
+0923 cramps
+1004 deaden
+1418 calculus
+1832 cognac
+2105 immodest
+2306 spittle
+2353 pennon
+1110
+pennon
+deaden
+12
+priory
+python
+clinch
+cringe
+deaden
+purblind
+minimize
+overtime
+diable
+alpine
+seasonal
+milieu
+6
+12
+0223 clinch
+0344 minimize
+0836 deaden
+0846 seasonal
+1008 overtime
+1022 milieu
+1025 purblind
+1045 alpine
+1057 priory
+1452 python
+1825 diable
+2052 cringe
+8
+0034 alpine
+0107 minimize
+0342 seasonal
+0730 deaden
+1238 priory
+1742 python
+2029 overtime
+2150 diable
+6
+0026 clinch
+0319 overtime
+0331 alpine
+1502 purblind
+1543 python
+1911 milieu
+8
+0205 overtime
+0834 priory
+0845 milieu
+0949 cringe
+1401 alpine
+1853 python
+1853 clinch
+2156 deaden
+6
+0156 purblind
+0559 python
+1248 diable
+1510 milieu
+1607 seasonal
+1946 alpine
+2
+0000 deaden
+0455 milieu
+1832
+cringe
+alpine
+12
+rutland
+morphine
+londoner
+stilts
+marksmen
+exhale
+fiasco
+bulkhead
+winder
+append
+largesse
+fallible
+7
+6
+0001 fiasco
+0533 bulkhead
+0701 morphine
+0905 exhale
+1139 fallible
+1243 marksmen
+4
+0439 exhale
+0742 append
+0746 winder
+1220 stilts
+5
+0346 stilts
+0643 marksmen
+0757 rutland
+2132 fallible
+2208 largesse
+11
+0028 append
+0147 marksmen
+0527 rutland
+0754 londoner
+0922 winder
+1011 largesse
+1637 fiasco
+2052 morphine
+2104 fallible
+2255 bulkhead
+2339 stilts
+11
+0032 append
+0206 winder
+0811 rutland
+0818 bulkhead
+0914 fiasco
+1221 fallible
+1530 stilts
+1646 exhale
+1809 largesse
+2302 londoner
+2306 morphine
+7
+0403 fallible
+0505 fiasco
+0648 marksmen
+0805 winder
+0920 stilts
+1802 exhale
+1855 londoner
+6
+0550 stilts
+1503 largesse
+1506 rutland
+1741 marksmen
+1745 fiasco
+2340 winder
+1311
+bulkhead
+winder
+12
+betaken
+ocular
+sedative
+rubble
+nettle
+vendor
+syphilis
+duality
+distil
+coalesce
+thorax
+topsail
+1
+11
+0332 ocular
+0354 duality
+0410 topsail
+0637 betaken
+0724 distil
+0806 vendor
+1015 coalesce
+1054 syphilis
+1132 thorax
+1135 nettle
+1502 sedative
+1448
+topsail
+rubble
+12
+cherubim
+trowel
+flaunt
+jacobus
+wildcat
+barrage
+succinct
+colossus
+chatty
+ignition
+milling
+quince
+11
+4
+0321 milling
+1429 chatty
+1951 jacobus
+2302 colossus
+5
+0428 wildcat
+0705 trowel
+1013 colossus
+1150 flaunt
+1412 cherubim
+9
+0155 jacobus
+0401 flaunt
+0420 succinct
+0424 barrage
+1132 trowel
+1405 quince
+2022 ignition
+2040 chatty
+2237 wildcat
+10
+0204 jacobus
+0450 milling
+1119 chatty
+1623 succinct
+1627 flaunt
+1655 wildcat
+2033 barrage
+2119 trowel
+2152 quince
+2330 ignition
+8
+0427 trowel
+0521 chatty
+1125 quince
+1208 colossus
+1316 milling
+1522 ignition
+1634 wildcat
+1823 cherubim
+3
+0541 chatty
+1848 milling
+2212 ignition
+5
+0155 quince
+1307 barrage
+1700 jacobus
+1703 ignition
+1954 succinct
+2
+0804 trowel
+0944 colossus
+2
+0548 barrage
+0614 chatty
+7
+0141 trowel
+0627 cherubim
+1017 chatty
+1030 succinct
+1311 jacobus
+1354 barrage
+1745 quince
+7
+0249 chatty
+0417 flaunt
+0558 colossus
+1043 barrage
+1114 milling
+1203 trowel
+2015 cherubim
+1302
+succinct
+flaunt
+12
+welter
+dulcet
+feldspar
+windpipe
+woodsman
+althea
+teamster
+winded
+distil
+clayey
+arterial
+headgear
+14
+4
+0353 woodsman
+1305 windpipe
+1412 teamster
+1829 distil
+10
+0255 clayey
+0645 windpipe
+0645 welter
+0732 winded
+1020 headgear
+1038 arterial
+1130 dulcet
+1329 feldspar
+1850 woodsman
+1931 teamster
+9
+0223 arterial
+0500 winded
+0534 dulcet
+0729 headgear
+0813 distil
+1047 welter
+1447 althea
+1638 woodsman
+1813 clayey
+2
+0356 arterial
+2218 windpipe
+6
+0558 teamster
+1241 welter
+1304 althea
+1458 feldspar
+2021 arterial
+2317 clayey
+6
+0627 clayey
+1356 althea
+1433 winded
+1459 windpipe
+2139 welter
+2329 feldspar
+2
+1456 distil
+1837 dulcet
+12
+0401 arterial
+0421 welter
+0423 feldspar
+0435 winded
+0512 clayey
+0645 headgear
+0708 windpipe
+0824 woodsman
+0853 dulcet
+1004 distil
+1414 teamster
+2144 althea
+10
+0136 clayey
+0406 distil
+0628 winded
+0700 arterial
+0917 woodsman
+1047 dulcet
+1342 headgear
+1844 feldspar
+1850 althea
+2302 windpipe
+3
+0203 feldspar
+0332 althea
+1724 woodsman
+3
+1055 winded
+2303 dulcet
+2304 distil
+7
+0109 arterial
+0909 feldspar
+1026 distil
+1228 woodsman
+1701 winded
+1811 teamster
+2208 headgear
+11
+0046 arterial
+0249 althea
+0650 winded
+0748 windpipe
+0748 woodsman
+0846 dulcet
+1040 welter
+1113 feldspar
+1327 teamster
+1506 clayey
+1753 distil
+5
+0245 woodsman
+1734 althea
+1813 welter
+1833 headgear
+2216 distil
+1413
+headgear
+feldspar
+12
+propel
+sadden
+pellucid
+throwed
+fiasco
+clinch
+leaking
+theorist
+bludgeon
+capsized
+corvette
+wainscot
+14
+9
+0127 wainscot
+0359 leaking
+1036 theorist
+1328 fiasco
+1516 bludgeon
+1703 corvette
+1730 clinch
+2244 pellucid
+2247 sadden
+7
+0113 wainscot
+0209 clinch
+0303 capsized
+0824 leaking
+1150 sadden
+1159 fiasco
+2303 pellucid
+10
+0008 theorist
+0029 corvette
+0221 sadden
+0550 fiasco
+0929 throwed
+1951 wainscot
+2031 leaking
+2123 pellucid
+2143 propel
+2154 bludgeon
+11
+0124 sadden
+0403 fiasco
+0702 leaking
+1259 corvette
+1430 clinch
+1431 theorist
+1932 bludgeon
+2123 wainscot
+2203 pellucid
+2303 capsized
+2307 throwed
+2
+1211 bludgeon
+2255 leaking
+12
+0953 fiasco
+1027 pellucid
+1043 bludgeon
+1048 sadden
+1126 leaking
+1357 propel
+1741 capsized
+1828 corvette
+1843 wainscot
+1951 theorist
+2117 throwed
+2311 clinch
+11
+0015 theorist
+0512 corvette
+0727 fiasco
+0858 propel
+1103 leaking
+1201 bludgeon
+1523 sadden
+1946 pellucid
+2107 wainscot
+2140 clinch
+2312 capsized
+11
+0004 theorist
+0033 pellucid
+0329 throwed
+0556 wainscot
+0613 leaking
+0852 bludgeon
+1214 sadden
+1444 capsized
+1711 corvette
+1929 fiasco
+1940 propel
+12
+0147 throwed
+0223 fiasco
+0239 clinch
+0345 pellucid
+0632 leaking
+0729 corvette
+0740 bludgeon
+0912 theorist
+1316 propel
+1438 sadden
+1630 capsized
+2321 wainscot
+3
+0650 corvette
+1155 theorist
+1554 sadden
+8
+0247 sadden
+0250 clinch
+0807 theorist
+0831 propel
+1348 capsized
+1559 throwed
+1726 fiasco
+1737 bludgeon
+2
+0820 wainscot
+1523 sadden
+9
+0015 leaking
+0354 fiasco
+0441 corvette
+0620 sadden
+0622 clinch
+1649 capsized
+1812 throwed
+1930 propel
+2015 bludgeon
+12
+0106 wainscot
+0438 capsized
+0500 propel
+0501 bludgeon
+0525 throwed
+0831 leaking
+1215 clinch
+1441 pellucid
+1512 sadden
+1615 fiasco
+2001 corvette
+2114 theorist
+0557
+clinch
+bludgeon
+12
+rumania
+aphorism
+gander
+disband
+ignition
+morphia
+glossary
+abelard
+essayist
+tendril
+pigtail
+winded
+8
+2
+1232 winded
+2059 rumania
+4
+0424 gander
+0432 pigtail
+2138 disband
+2214 rumania
+11
+0718 winded
+1313 rumania
+1315 ignition
+1319 pigtail
+1357 disband
+1411 glossary
+1418 essayist
+1423 tendril
+1749 abelard
+1803 gander
+2250 aphorism
+12
+0004 pigtail
+0809 tendril
+0904 winded
+1111 abelard
+1127 ignition
+1407 morphia
+1446 essayist
+1447 glossary
+1551 disband
+1725 rumania
+1911 gander
+2036 aphorism
+3
+1827 winded
+1955 essayist
+2054 gander
+2
+0116 pigtail
+1743 essayist
+8
+0101 disband
+0409 essayist
+0719 gander
+0729 glossary
+0730 tendril
+0847 aphorism
+1520 abelard
+2210 rumania
+11
+0205 abelard
+0248 ignition
+0627 morphia
+0738 essayist
+1318 disband
+1546 glossary
+1546 gander
+1605 winded
+2011 aphorism
+2101 tendril
+2247 pigtail
+1246
+abelard
+aphorism
+12
+incest
+jocose
+tamper
+geordie
+heirloom
+persona
+dynastic
+zephyr
+apulia
+petrol
+windfall
+lifelike
+4
+12
+0003 persona
+0100 apulia
+0941 incest
+1012 windfall
+1031 jocose
+1140 lifelike
+1144 geordie
+1213 heirloom
+1958 petrol
+2054 zephyr
+2149 tamper
+2324 dynastic
+4
+0016 zephyr
+0058 geordie
+0240 petrol
+1501 incest
+6
+0351 windfall
+0458 apulia
+1204 persona
+1204 dynastic
+1451 jocose
+2027 geordie
+6
+0404 petrol
+1023 heirloom
+1309 windfall
+1758 dynastic
+1901 apulia
+2118 incest
+1811
+zephyr
+windfall
+12
+tableaux
+navajo
+residuum
+matins
+almoner
+borrower
+woodcut
+boorish
+cuisine
+malthus
+godson
+korean
+3
+8
+0157 korean
+0714 godson
+0736 tableaux
+0916 woodcut
+1316 residuum
+1443 almoner
+1855 navajo
+2238 malthus
+9
+0417 almoner
+0417 navajo
+0531 godson
+0636 matins
+1144 woodcut
+1155 cuisine
+1340 tableaux
+1655 borrower
+1830 boorish
+8
+0042 navajo
+0153 tableaux
+0437 malthus
+1526 godson
+1700 matins
+1822 almoner
+2005 borrower
+2340 korean
+0634
+residuum
+korean
+12
+niggard
+override
+draper
+lustful
+commuted
+scraggy
+absentee
+ganymede
+baritone
+doggerel
+winded
+voicing
+14
+2
+0933 ganymede
+2125 lustful
+2
+0811 baritone
+2321 doggerel
+11
+0007 voicing
+0323 winded
+0349 ganymede
+0529 niggard
+0555 override
+0610 commuted
+1116 baritone
+1121 scraggy
+2246 lustful
+2337 absentee
+2358 draper
+2
+1711 voicing
+2316 commuted
+4
+0325 commuted
+0335 override
+1318 lustful
+2058 scraggy
+5
+0052 override
+1246 scraggy
+2012 voicing
+2116 absentee
+2332 commuted
+12
+0039 lustful
+0302 ganymede
+0431 doggerel
+0544 absentee
+0825 winded
+1011 niggard
+1121 baritone
+1142 override
+1332 draper
+1834 commuted
+1905 scraggy
+2315 voicing
+7
+0357 absentee
+0503 override
+1159 voicing
+1326 baritone
+1444 winded
+1736 scraggy
+2336 draper
+6
+0117 winded
+0517 ganymede
+0658 lustful
+0830 baritone
+0853 draper
+2054 scraggy
+2
+2007 doggerel
+2111 commuted
+8
+0225 niggard
+0323 voicing
+1015 baritone
+1358 draper
+1714 absentee
+1738 commuted
+1739 doggerel
+2134 winded
+4
+0002 niggard
+0215 baritone
+1317 doggerel
+2206 draper
+9
+0206 commuted
+0213 doggerel
+0652 niggard
+0837 scraggy
+1218 voicing
+1639 draper
+1655 ganymede
+2037 winded
+2137 lustful
+7
+0054 ganymede
+0744 override
+1104 commuted
+1738 scraggy
+1745 baritone
+2259 absentee
+2319 doggerel
+1657
+winded
+absentee
+12
+silica
+cognac
+steven
+forswear
+brescia
+demean
+acetic
+bewilder
+tarnish
+cremona
+abysmal
+dearborn
+2
+3
+0359 dearborn
+1352 tarnish
+1948 cremona
+9
+0112 tarnish
+0201 forswear
+0216 bewilder
+0539 cremona
+0543 demean
+0939 acetic
+1413 silica
+1553 cognac
+2147 steven
+1306
+acetic
+dearborn
+12
+moccasin
+niggard
+mickle
+fondle
+dulcet
+convene
+trestle
+swooping
+foresail
+wheaten
+sealskin
+usenet
+18
+4
+0338 niggard
+0518 sealskin
+0621 convene
+0841 wheaten
+3
+0726 sealskin
+1308 foresail
+2224 swooping
+8
+0936 moccasin
+1043 mickle
+1728 fondle
+1946 wheaten
+1956 niggard
+2035 trestle
+2041 sealskin
+2119 swooping
+2
+0213 mickle
+1148 dulcet
+4
+0640 sealskin
+1028 fondle
+1202 usenet
+2214 foresail
+6
+0120 niggard
+1144 sealskin
+1347 fondle
+1632 foresail
+1714 convene
+1853 mickle
+9
+0204 usenet
+1000 foresail
+1314 trestle
+1423 moccasin
+1518 mickle
+1551 convene
+1607 swooping
+2004 niggard
+2011 dulcet
+9
+0321 trestle
+0344 foresail
+0647 dulcet
+0716 mickle
+1641 sealskin
+1731 convene
+1947 swooping
+2116 niggard
+2330 moccasin
+9
+0115 convene
+0754 sealskin
+0958 moccasin
+1035 niggard
+1517 swooping
+1601 wheaten
+2010 trestle
+2207 usenet
+2343 dulcet
+8
+0017 fondle
+0926 swooping
+1429 sealskin
+1436 mickle
+2028 moccasin
+2321 dulcet
+2344 niggard
+2345 usenet
+10
+0036 swooping
+0138 dulcet
+0207 trestle
+0247 moccasin
+0733 wheaten
+0859 mickle
+1024 niggard
+1549 usenet
+1608 fondle
+2055 foresail
+11
+0123 foresail
+0442 convene
+0527 moccasin
+0928 mickle
+1011 dulcet
+1041 fondle
+1522 niggard
+1725 usenet
+1850 sealskin
+2037 trestle
+2142 swooping
+9
+0115 trestle
+0559 sealskin
+0702 moccasin
+1353 fondle
+1411 swooping
+1431 usenet
+1432 convene
+1737 wheaten
+1934 foresail
+3
+0405 sealskin
+0552 fondle
+1659 niggard
+8
+0025 mickle
+0357 foresail
+0830 swooping
+1022 moccasin
+1217 fondle
+1510 convene
+1510 dulcet
+1706 wheaten
+4
+0112 usenet
+0441 dulcet
+1322 moccasin
+1440 convene
+10
+0326 sealskin
+0449 dulcet
+0452 fondle
+1214 swooping
+1307 convene
+1425 moccasin
+1443 niggard
+1612 trestle
+2152 usenet
+2344 foresail
+5
+0445 sealskin
+0606 wheaten
+1309 convene
+1644 foresail
+2310 trestle
+0026
+dulcet
+fondle
+12
+ranking
+whitby
+largesse
+redden
+litany
+coerce
+reunite
+granular
+trinity
+suzerain
+converge
+rosewood
+14
+11
+0200 redden
+0509 coerce
+0730 trinity
+0902 suzerain
+0917 ranking
+0945 converge
+1143 granular
+1215 largesse
+1248 whitby
+1407 reunite
+1554 rosewood
+9
+0120 coerce
+0745 granular
+0905 ranking
+1202 rosewood
+1653 litany
+1728 largesse
+1733 reunite
+2023 trinity
+2327 whitby
+11
+0233 granular
+0538 suzerain
+0617 redden
+1225 converge
+1230 rosewood
+1429 whitby
+1656 largesse
+1659 trinity
+1727 coerce
+1830 ranking
+2156 litany
+9
+0223 reunite
+0249 ranking
+0441 granular
+0508 largesse
+0841 redden
+1939 trinity
+2019 coerce
+2239 whitby
+2258 rosewood
+10
+0331 trinity
+0436 whitby
+0800 redden
+0910 rosewood
+1040 reunite
+1734 litany
+1736 coerce
+1824 granular
+2118 largesse
+2227 ranking
+2
+1154 reunite
+1354 ranking
+11
+0042 converge
+0153 suzerain
+0410 trinity
+0651 coerce
+0954 redden
+1030 rosewood
+1144 granular
+1649 whitby
+1949 ranking
+2103 largesse
+2354 litany
+8
+0248 suzerain
+0358 ranking
+0814 converge
+1006 rosewood
+1912 largesse
+2016 whitby
+2036 redden
+2339 granular
+9
+0221 suzerain
+0542 trinity
+0910 ranking
+1051 converge
+1207 whitby
+1346 granular
+1631 redden
+1755 litany
+1849 rosewood
+12
+0008 converge
+0056 reunite
+0334 whitby
+0454 granular
+0604 rosewood
+0805 ranking
+0844 trinity
+0846 redden
+1137 litany
+1757 coerce
+2106 largesse
+2335 suzerain
+5
+1019 litany
+1305 converge
+1633 trinity
+2342 rosewood
+2346 whitby
+12
+0215 granular
+0801 trinity
+0830 converge
+1029 reunite
+1038 whitby
+1242 suzerain
+1825 largesse
+1851 ranking
+1948 coerce
+2207 redden
+2304 rosewood
+2313 litany
+11
+0032 litany
+0043 rosewood
+0049 granular
+0212 coerce
+0339 ranking
+0509 whitby
+1314 trinity
+1844 largesse
+1854 redden
+2042 suzerain
+2351 reunite
+2
+0001 whitby
+0503 ranking
+1053
+largesse
+whitby
+12
+clinch
+katrina
+tussle
+jennifer
+woodsman
+whitby
+armoury
+granny
+bruising
+quietest
+oriole
+bromide
+19
+7
+0111 jennifer
+0406 quietest
+0531 woodsman
+0850 whitby
+1716 bromide
+1737 katrina
+2206 clinch
+6
+0235 woodsman
+0408 bruising
+0602 clinch
+1050 bromide
+1231 granny
+2326 oriole
+4
+0046 tussle
+0216 whitby
+0519 quietest
+1847 katrina
+5
+0219 woodsman
+1329 granny
+1424 quietest
+2120 whitby
+2219 clinch
+7
+0008 armoury
+0346 whitby
+0653 oriole
+0946 woodsman
+1809 granny
+2056 bromide
+2143 clinch
+6
+0243 oriole
+0518 armoury
+1114 granny
+1407 katrina
+2124 bromide
+2355 jennifer
+11
+0034 woodsman
+0157 tussle
+0809 jennifer
+1202 bruising
+1220 katrina
+1329 oriole
+1354 whitby
+1842 clinch
+1900 armoury
+1951 granny
+2058 quietest
+2
+0143 woodsman
+1027 jennifer
+5
+0104 granny
+0244 tussle
+1348 quietest
+1447 katrina
+2207 whitby
+5
+1048 whitby
+1329 woodsman
+2050 bromide
+2259 armoury
+2331 granny
+3
+0151 jennifer
+0302 quietest
+0334 bruising
+12
+0257 bromide
+0338 quietest
+0351 jennifer
+0437 clinch
+0449 woodsman
+0559 whitby
+1335 granny
+1738 armoury
+1740 tussle
+1846 oriole
+2248 katrina
+2250 bruising
+4
+0328 katrina
+0747 tussle
+0948 granny
+1726 bruising
+12
+0004 katrina
+0020 tussle
+0633 oriole
+1011 bruising
+1018 armoury
+1056 quietest
+1218 bromide
+1421 woodsman
+1618 whitby
+2114 granny
+2250 clinch
+2318 jennifer
+4
+0446 katrina
+1401 bromide
+1429 quietest
+1826 bruising
+7
+0211 armoury
+0620 oriole
+0943 katrina
+1836 whitby
+1917 clinch
+2121 bruising
+2236 quietest
+7
+0023 katrina
+0239 woodsman
+0313 armoury
+0425 bruising
+1143 tussle
+1716 bromide
+1920 jennifer
+5
+0153 woodsman
+0728 oriole
+0927 clinch
+1105 tussle
+2344 katrina
+8
+0023 bromide
+0120 bruising
+0124 quietest
+0130 granny
+0132 clinch
+0628 jennifer
+0632 tussle
+1434 katrina
+1421
+jennifer
+whitby
+12
+ignition
+invert
+samoan
+ablution
+burdett
+pyjamas
+fallible
+radium
+angelus
+networks
+tartarus
+cringe
+12
+2
+0338 samoan
+1905 radium
+9
+0339 angelus
+0354 ignition
+0748 networks
+1101 invert
+1121 burdett
+1826 pyjamas
+1828 tartarus
+2119 radium
+2126 fallible
+6
+0928 invert
+1226 radium
+1428 burdett
+1902 ablution
+2208 angelus
+2211 fallible
+5
+0806 samoan
+1507 burdett
+1900 fallible
+2200 ignition
+2248 radium
+2
+1205 cringe
+1350 angelus
+10
+0111 burdett
+0330 invert
+0437 samoan
+0654 angelus
+0655 tartarus
+0830 fallible
+1723 pyjamas
+1858 cringe
+2031 ablution
+2323 radium
+11
+0114 invert
+0138 angelus
+0357 ignition
+0519 tartarus
+0900 pyjamas
+0900 radium
+1102 cringe
+1235 burdett
+1358 networks
+2014 fallible
+2016 samoan
+10
+0101 samoan
+0218 invert
+0814 networks
+1749 burdett
+1914 angelus
+2038 tartarus
+2136 ignition
+2304 ablution
+2315 fallible
+2345 radium
+4
+0456 ignition
+0943 tartarus
+1153 fallible
+1716 ablution
+2
+0328 tartarus
+0334 samoan
+7
+0412 ablution
+1246 radium
+1323 angelus
+1341 pyjamas
+1619 ignition
+1845 samoan
+2005 tartarus
+12
+0110 ablution
+0136 fallible
+0229 tartarus
+0627 networks
+1054 angelus
+1219 invert
+1236 radium
+1417 pyjamas
+1435 cringe
+1438 samoan
+1813 burdett
+2347 ignition
+2035
+pyjamas
+invert
+12
+cockade
+dipper
+ellipse
+hallow
+dignify
+mandolin
+fortieth
+dropsy
+nominee
+durban
+cryptic
+sealskin
+15
+12
+0049 mandolin
+0157 hallow
+0309 ellipse
+0720 dignify
+0752 durban
+1334 sealskin
+1635 cryptic
+1805 dipper
+1901 dropsy
+2050 cockade
+2156 fortieth
+2157 nominee
+4
+0120 nominee
+1154 dignify
+1323 sealskin
+1324 ellipse
+3
+0311 hallow
+0840 mandolin
+1001 dropsy
+7
+0622 hallow
+0952 sealskin
+1157 ellipse
+1339 durban
+2004 dropsy
+2132 mandolin
+2346 cockade
+10
+0003 mandolin
+0137 hallow
+0143 cryptic
+0144 sealskin
+0155 ellipse
+0205 dignify
+0218 dipper
+0855 fortieth
+1146 nominee
+1514 cockade
+5
+0010 cockade
+0224 cryptic
+0319 dropsy
+1335 fortieth
+2359 dipper
+7
+0002 mandolin
+0302 dignify
+0358 cockade
+0451 sealskin
+1406 hallow
+1724 durban
+2019 nominee
+5
+0019 durban
+0243 cockade
+0432 dipper
+0727 hallow
+0904 nominee
+7
+0518 ellipse
+1023 dignify
+1046 cryptic
+1231 mandolin
+1839 durban
+2128 nominee
+2259 dipper
+8
+0103 hallow
+0955 dignify
+0957 dropsy
+1257 cryptic
+1830 sealskin
+2116 ellipse
+2146 durban
+2228 nominee
+9
+0003 dignify
+0152 ellipse
+0419 dipper
+0731 dropsy
+0740 sealskin
+0955 durban
+1530 cryptic
+2124 cockade
+2151 nominee
+4
+0104 durban
+0450 dropsy
+2200 dignify
+2232 fortieth
+7
+0446 dropsy
+0727 fortieth
+0730 sealskin
+1051 dignify
+1216 cryptic
+1251 mandolin
+1400 hallow
+11
+0104 hallow
+0149 mandolin
+0326 durban
+0950 sealskin
+1103 ellipse
+1237 dignify
+1554 nominee
+1734 cockade
+1932 cryptic
+2219 dropsy
+2245 fortieth
+11
+0324 durban
+0359 dignify
+0417 ellipse
+0804 fortieth
+1039 hallow
+1420 sealskin
+2111 cockade
+2149 dipper
+2205 mandolin
+2308 nominee
+2318 cryptic
+1724
+nominee
+cockade
+12
+cajole
+migrant
+sedative
+numeral
+secede
+captious
+larynx
+nestle
+trident
+fastness
+altruism
+sluice
+18
+10
+0114 migrant
+0226 altruism
+0927 trident
+1007 cajole
+1112 sedative
+1428 nestle
+1611 secede
+1713 numeral
+1929 captious
+2110 sluice
+11
+0256 larynx
+0536 captious
+0612 secede
+0718 nestle
+0756 sluice
+1216 sedative
+1242 numeral
+1344 altruism
+2056 fastness
+2107 trident
+2242 migrant
+10
+0043 secede
+0124 numeral
+0618 sedative
+0752 cajole
+0938 migrant
+1052 altruism
+1218 captious
+1632 larynx
+1824 fastness
+2115 sluice
+3
+0125 nestle
+1056 trident
+1223 sluice
+6
+0312 fastness
+0435 numeral
+0709 migrant
+1740 sedative
+1913 cajole
+2029 captious
+2
+1715 secede
+2150 sluice
+7
+0330 captious
+0648 trident
+0738 cajole
+0907 migrant
+0921 altruism
+1220 larynx
+2003 sedative
+3
+0223 altruism
+1026 trident
+1809 sedative
+11
+0107 secede
+0649 altruism
+0849 larynx
+1100 nestle
+1558 migrant
+1722 numeral
+1808 sluice
+1949 captious
+2132 trident
+2253 cajole
+2332 sedative
+3
+1236 trident
+1521 numeral
+1709 nestle
+5
+0027 numeral
+1056 nestle
+1259 sedative
+2202 altruism
+2311 captious
+5
+0035 secede
+1059 cajole
+1704 fastness
+2059 numeral
+2244 sluice
+11
+0232 larynx
+0238 secede
+0432 sedative
+0906 cajole
+1017 migrant
+1327 trident
+1341 sluice
+1402 fastness
+1737 altruism
+1834 numeral
+2119 nestle
+10
+0017 captious
+0209 numeral
+0954 sluice
+1116 larynx
+1123 trident
+1714 cajole
+1843 secede
+1948 altruism
+2202 migrant
+2222 sedative
+4
+0824 secede
+0934 cajole
+1845 migrant
+2208 sluice
+6
+0803 numeral
+0840 sluice
+0901 larynx
+1329 cajole
+2225 migrant
+2300 trident
+12
+0256 cajole
+0312 altruism
+0400 secede
+0434 trident
+0826 nestle
+0852 larynx
+0953 sluice
+1150 sedative
+1154 numeral
+1942 migrant
+2018 captious
+2251 fastness
+10
+0303 captious
+0424 secede
+0831 nestle
+0851 altruism
+1230 trident
+1401 sluice
+1617 sedative
+1730 migrant
+1800 numeral
+2343 fastness
+1330
+cajole
+secede
+12
+trinket
+fatalism
+roumania
+pigtail
+copyist
+coeval
+factotum
+lynching
+agonised
+dulcet
+scurry
+oriole
+13
+4
+0433 factotum
+1236 dulcet
+1326 oriole
+2052 fatalism
+8
+0153 oriole
+0715 coeval
+0839 pigtail
+0944 dulcet
+1151 fatalism
+1616 agonised
+1855 roumania
+2303 lynching
+7
+0255 coeval
+0421 lynching
+0500 factotum
+0624 dulcet
+0823 fatalism
+2051 scurry
+2250 trinket
+2
+1823 coeval
+2222 copyist
+7
+0502 agonised
+0550 oriole
+0910 fatalism
+1427 scurry
+1448 dulcet
+1600 roumania
+1645 copyist
+11
+0304 coeval
+0333 agonised
+0746 dulcet
+0832 copyist
+1011 roumania
+1109 oriole
+1337 lynching
+1715 trinket
+2004 scurry
+2108 pigtail
+2235 fatalism
+12
+0126 agonised
+0359 fatalism
+0537 trinket
+0541 pigtail
+1142 copyist
+1347 factotum
+1400 dulcet
+1413 roumania
+1515 oriole
+1700 scurry
+1916 coeval
+2354 lynching
+9
+0253 fatalism
+0402 scurry
+0609 lynching
+0810 pigtail
+0828 oriole
+0836 trinket
+1013 roumania
+2120 coeval
+2237 factotum
+9
+0004 factotum
+0259 agonised
+0615 pigtail
+1116 roumania
+1259 trinket
+1459 fatalism
+1710 copyist
+2002 coeval
+2249 lynching
+9
+0039 roumania
+0447 factotum
+0456 copyist
+0520 fatalism
+0801 trinket
+1459 pigtail
+1642 oriole
+1915 lynching
+2000 dulcet
+4
+1414 lynching
+1621 factotum
+1722 fatalism
+2015 roumania
+12
+0116 trinket
+0506 coeval
+0518 fatalism
+1043 dulcet
+1247 scurry
+1400 factotum
+1413 pigtail
+1442 agonised
+1454 copyist
+1607 oriole
+1647 lynching
+2153 roumania
+3
+0440 trinket
+0819 factotum
+2315 lynching
+0733
+lynching
+dulcet
+12
+pollute
+strumpet
+yokohama
+corvette
+gangrene
+tendril
+nutshell
+vaporous
+hogshead
+apricot
+venerate
+rectum
+15
+12
+0009 tendril
+0042 nutshell
+0228 apricot
+0457 venerate
+1003 pollute
+1037 rectum
+1454 strumpet
+1509 corvette
+1556 hogshead
+1843 gangrene
+1853 vaporous
+2232 yokohama
+6
+0120 gangrene
+0748 apricot
+0816 strumpet
+0955 yokohama
+1105 rectum
+2313 vaporous
+5
+0342 tendril
+0512 hogshead
+0531 vaporous
+0909 venerate
+1619 gangrene
+9
+0255 tendril
+0627 apricot
+0658 vaporous
+1441 pollute
+1518 venerate
+1705 hogshead
+1829 yokohama
+2153 nutshell
+2205 gangrene
+2
+0255 yokohama
+0518 strumpet
+12
+0138 yokohama
+0146 gangrene
+0502 nutshell
+0538 pollute
+0540 vaporous
+0801 corvette
+0805 strumpet
+1008 hogshead
+1708 apricot
+1749 tendril
+1804 rectum
+1817 venerate
+12
+0002 vaporous
+0238 nutshell
+0300 tendril
+0302 corvette
+0344 strumpet
+0749 gangrene
+1239 yokohama
+1840 apricot
+1842 rectum
+1945 hogshead
+1953 pollute
+2303 venerate
+5
+0315 corvette
+0818 tendril
+1036 nutshell
+1507 hogshead
+1611 yokohama
+9
+0729 gangrene
+0732 rectum
+1033 yokohama
+1204 venerate
+1213 tendril
+1422 nutshell
+1829 corvette
+1909 hogshead
+2249 apricot
+6
+0220 vaporous
+0654 pollute
+0822 rectum
+0853 corvette
+0913 strumpet
+1044 nutshell
+7
+0123 vaporous
+0318 strumpet
+0523 nutshell
+0735 venerate
+1401 gangrene
+1841 pollute
+2113 apricot
+5
+0048 rectum
+0438 nutshell
+1030 strumpet
+1052 corvette
+1322 vaporous
+6
+0202 apricot
+0314 pollute
+0636 venerate
+2201 nutshell
+2235 corvette
+2250 strumpet
+6
+0206 corvette
+0554 rectum
+1126 venerate
+1330 pollute
+2224 vaporous
+2346 apricot
+10
+0012 nutshell
+0042 strumpet
+0604 hogshead
+0820 tendril
+1118 venerate
+1823 corvette
+2221 apricot
+2229 rectum
+2254 pollute
+2355 vaporous
+1748
+yokohama
+gangrene
+12
+recant
+carver
+varuna
+tarnish
+travesty
+staggers
+pitfall
+aniline
+urania
+medusa
+coeval
+caption
+9
+2
+0512 urania
+2319 varuna
+5
+0346 carver
+1714 coeval
+1815 medusa
+2002 recant
+2050 urania
+12
+0043 tarnish
+0129 aniline
+0817 pitfall
+1030 carver
+1355 urania
+1807 caption
+1818 travesty
+1856 recant
+2102 staggers
+2104 varuna
+2321 medusa
+2322 coeval
+5
+1002 recant
+1137 caption
+1434 varuna
+2011 tarnish
+2305 carver
+7
+0111 medusa
+0716 tarnish
+0827 urania
+1037 recant
+1918 caption
+2216 aniline
+2247 staggers
+8
+0105 medusa
+0324 pitfall
+0346 varuna
+0708 coeval
+0718 staggers
+0741 travesty
+1208 tarnish
+2028 recant
+6
+0815 caption
+0955 travesty
+1011 varuna
+1523 urania
+2034 tarnish
+2118 coeval
+11
+0138 caption
+0551 tarnish
+0722 varuna
+0755 urania
+0805 travesty
+1444 aniline
+1507 recant
+1919 coeval
+1919 medusa
+2102 pitfall
+2151 carver
+8
+0132 travesty
+0237 urania
+0243 pitfall
+0845 carver
+0908 caption
+1207 coeval
+1211 varuna
+1657 tarnish
+2236
+staggers
+recant
+12
+tiberias
+chunks
+sadden
+dimmer
+bromide
+fumble
+ramrod
+scraggy
+browse
+carmine
+rutledge
+dignify
+11
+4
+0633 sadden
+1601 dignify
+1939 rutledge
+2053 ramrod
+10
+0105 dignify
+0220 ramrod
+0634 sadden
+1101 bromide
+1118 rutledge
+1225 browse
+2046 dimmer
+2126 carmine
+2320 chunks
+2342 scraggy
+3
+0342 browse
+1206 dignify
+1927 sadden
+10
+0226 carmine
+0448 dignify
+0618 chunks
+0654 browse
+1313 dimmer
+1402 tiberias
+1848 ramrod
+1853 scraggy
+2136 bromide
+2250 fumble
+10
+0115 fumble
+0345 tiberias
+0529 chunks
+1513 browse
+1529 ramrod
+1626 sadden
+2223 dimmer
+2224 bromide
+2313 rutledge
+2315 scraggy
+2
+0241 chunks
+2242 bromide
+2
+1335 dimmer
+1951 dignify
+4
+0113 bromide
+1422 rutledge
+1517 scraggy
+2328 tiberias
+2
+1349 rutledge
+1837 sadden
+2
+0014 rutledge
+0934 carmine
+11
+0233 rutledge
+0422 scraggy
+1021 browse
+1045 sadden
+1325 chunks
+1436 bromide
+1539 dignify
+1609 fumble
+2053 dimmer
+2134 ramrod
+2331 tiberias
+0624
+tiberias
+sadden
+12
+grannie
+monaco
+marksman
+piebald
+dignify
+barbados
+equinox
+effusive
+networks
+hopper
+encumber
+windfall
+18
+7
+1038 piebald
+1748 monaco
+1751 effusive
+1802 grannie
+1826 equinox
+1947 encumber
+2313 barbados
+10
+0047 effusive
+0119 hopper
+0225 grannie
+1332 piebald
+1544 marksman
+1605 dignify
+1812 networks
+1828 windfall
+2130 equinox
+2136 encumber
+3
+0117 piebald
+0434 grannie
+0628 effusive
+9
+0216 dignify
+0333 piebald
+0714 equinox
+0953 barbados
+1020 networks
+1255 encumber
+1439 marksman
+1729 grannie
+2315 monaco
+2
+0650 marksman
+2026 hopper
+6
+0056 barbados
+0126 monaco
+0156 hopper
+0215 effusive
+0519 dignify
+1158 encumber
+5
+0259 marksman
+0524 equinox
+0810 encumber
+1212 monaco
+1315 windfall
+6
+0259 marksman
+0353 networks
+0910 grannie
+1452 dignify
+1823 windfall
+2216 barbados
+11
+0253 piebald
+0411 grannie
+0905 windfall
+0909 monaco
+1150 equinox
+1527 hopper
+1710 encumber
+1724 networks
+2114 barbados
+2139 marksman
+2158 effusive
+12
+0047 marksman
+0153 encumber
+0217 networks
+0825 monaco
+1115 piebald
+1116 grannie
+1133 dignify
+1148 hopper
+1801 equinox
+1830 barbados
+2136 windfall
+2338 effusive
+9
+0045 windfall
+0354 effusive
+0510 networks
+0849 monaco
+0929 encumber
+1350 piebald
+1435 hopper
+1658 grannie
+2147 barbados
+12
+0158 marksman
+0250 hopper
+0348 networks
+0611 barbados
+1051 windfall
+1129 encumber
+1259 dignify
+1951 effusive
+2047 monaco
+2109 equinox
+2127 piebald
+2329 grannie
+11
+0215 windfall
+0345 marksman
+0708 hopper
+0738 barbados
+1032 dignify
+1358 grannie
+1410 encumber
+1503 networks
+1823 piebald
+2133 equinox
+2204 effusive
+7
+0452 dignify
+0629 barbados
+1305 piebald
+1334 monaco
+1439 encumber
+1610 effusive
+2243 networks
+5
+0139 barbados
+0301 encumber
+0725 marksman
+0907 hopper
+1545 dignify
+7
+0023 dignify
+0127 windfall
+0624 effusive
+1505 barbados
+1606 hopper
+1854 grannie
+2147 encumber
+10
+0918 encumber
+1102 marksman
+1152 monaco
+1234 windfall
+1241 equinox
+1259 hopper
+1435 effusive
+1726 grannie
+1857 barbados
+2157 dignify
+2
+0106 grannie
+2035 dignify
+1320
+dignify
+networks
+12
+genitive
+foremen
+meteoric
+quartet
+satrap
+cramps
+linguist
+curative
+redden
+zeppelin
+secede
+branding
+7
+9
+0628 genitive
+0741 linguist
+0829 quartet
+1408 zeppelin
+1420 redden
+1952 curative
+2011 meteoric
+2124 foremen
+2301 satrap
+3
+0521 zeppelin
+1416 satrap
+1810 curative
+7
+0900 foremen
+0920 zeppelin
+0947 linguist
+1055 meteoric
+1522 cramps
+1558 satrap
+2359 redden
+7
+0032 linguist
+0442 branding
+0559 secede
+0656 satrap
+1816 meteoric
+1817 quartet
+2029 genitive
+8
+0717 secede
+0936 satrap
+1023 cramps
+1054 zeppelin
+1356 foremen
+1426 genitive
+1652 curative
+1809 quartet
+2
+0239 meteoric
+0429 branding
+12
+0157 curative
+0401 satrap
+0454 foremen
+1037 branding
+1718 redden
+1842 genitive
+1850 zeppelin
+1913 quartet
+2227 meteoric
+2228 linguist
+2255 secede
+2311 cramps
+0927
+branding
+secede
+12
+ellipse
+corset
+breeder
+rubicon
+puncture
+sensory
+yokohama
+acidity
+katrina
+meteoric
+teacup
+fastness
+10
+7
+0944 breeder
+1200 ellipse
+1222 corset
+1359 fastness
+1606 rubicon
+2054 puncture
+2341 yokohama
+4
+0349 yokohama
+0359 corset
+1246 teacup
+1442 fastness
+3
+0824 corset
+1001 fastness
+2118 teacup
+4
+0345 katrina
+1221 corset
+2034 yokohama
+2041 meteoric
+7
+0439 corset
+0828 katrina
+0936 puncture
+1608 acidity
+1625 rubicon
+2253 teacup
+2358 fastness
+12
+0454 acidity
+0537 fastness
+0625 teacup
+0748 rubicon
+0836 katrina
+0841 breeder
+1126 yokohama
+1449 puncture
+1534 meteoric
+1538 ellipse
+1540 corset
+1817 sensory
+5
+0356 teacup
+1352 corset
+1959 acidity
+2008 katrina
+2134 ellipse
+11
+0134 ellipse
+0151 meteoric
+0319 katrina
+0735 corset
+1058 teacup
+1111 acidity
+1131 sensory
+1322 rubicon
+1525 fastness
+1807 puncture
+2113 breeder
+6
+0155 breeder
+0355 acidity
+0720 puncture
+0728 rubicon
+1149 fastness
+2139 meteoric
+3
+0120 corset
+0206 breeder
+0506 ellipse
+0006
+fastness
+breeder
+12
+cartoon
+tutelage
+granny
+auckland
+persona
+adhesive
+crunch
+lesions
+peleus
+diabolic
+alsatian
+leniency
+5
+2
+2028 diabolic
+2104 cartoon
+2
+0036 adhesive
+0632 tutelage
+11
+0121 crunch
+0255 tutelage
+1117 adhesive
+1404 granny
+1716 peleus
+1749 auckland
+1840 persona
+1909 alsatian
+2008 leniency
+2110 diabolic
+2343 lesions
+5
+0933 diabolic
+1527 adhesive
+1942 lesions
+1957 auckland
+2323 crunch
+9
+0829 adhesive
+1033 granny
+1042 leniency
+1056 alsatian
+1146 cartoon
+1546 lesions
+1624 peleus
+1713 auckland
+2142 persona
+2147
+peleus
+alsatian
+12
+encomium
+concerto
+dioxide
+reprisal
+rummage
+lustful
+voltaic
+kimono
+basilica
+vaporous
+voyager
+bewilder
+15
+4
+0058 rummage
+0547 lustful
+2158 encomium
+2211 basilica
+4
+1140 vaporous
+1533 rummage
+2023 concerto
+2139 reprisal
+4
+0657 basilica
+0901 concerto
+1430 bewilder
+2311 kimono
+3
+1516 voyager
+1901 dioxide
+2038 lustful
+3
+0939 lustful
+2149 kimono
+2226 voltaic
+9
+0042 bewilder
+0343 concerto
+0347 rummage
+0604 kimono
+0832 encomium
+1111 lustful
+1618 basilica
+1845 vaporous
+2217 voltaic
+7
+0427 concerto
+0432 rummage
+0756 dioxide
+1534 bewilder
+1731 voltaic
+1823 basilica
+2241 encomium
+9
+0310 encomium
+0556 reprisal
+0659 lustful
+0814 voltaic
+0910 rummage
+1542 vaporous
+1817 voyager
+2102 basilica
+2248 bewilder
+8
+0503 dioxide
+0746 voyager
+1036 reprisal
+1528 kimono
+1809 basilica
+1847 vaporous
+2227 encomium
+2242 lustful
+2
+0654 concerto
+1700 encomium
+8
+0226 dioxide
+0258 lustful
+0558 encomium
+0631 kimono
+1810 rummage
+2002 vaporous
+2008 basilica
+2324 voltaic
+2
+0403 encomium
+2130 lustful
+3
+0930 bewilder
+1529 encomium
+1734 voyager
+11
+0058 lustful
+0431 kimono
+0511 dioxide
+0630 voltaic
+0807 reprisal
+0927 voyager
+1135 basilica
+1733 bewilder
+2002 rummage
+2311 vaporous
+2317 concerto
+9
+0110 voyager
+0347 concerto
+0445 basilica
+0821 bewilder
+1501 kimono
+1833 voltaic
+1944 dioxide
+2221 reprisal
+2245 encomium
+0331
+reprisal
+dioxide
+12
+glowered
+viscera
+malthus
+protocol
+parvenu
+burdett
+plumber
+castaway
+pansies
+trinity
+almoner
+barrage
+1
+10
+0112 viscera
+0148 protocol
+0252 plumber
+0446 glowered
+0630 pansies
+0916 castaway
+1343 parvenu
+1538 burdett
+1603 barrage
+2036 almoner
+1005
+parvenu
+plumber
+12
+nettle
+scraggy
+capitol
+unicorn
+smarter
+durban
+greener
+acetic
+arterial
+paprika
+nullify
+asbestos
+15
+5
+1502 asbestos
+1539 greener
+1818 arterial
+2224 nettle
+2230 smarter
+9
+0157 greener
+0437 capitol
+0555 scraggy
+0631 smarter
+1142 asbestos
+1231 paprika
+1247 arterial
+1334 acetic
+2339 nettle
+3
+0042 greener
+0158 asbestos
+0900 acetic
+12
+0008 acetic
+0410 unicorn
+0448 greener
+0534 durban
+0551 nullify
+0554 paprika
+0618 smarter
+0748 nettle
+0814 capitol
+0923 arterial
+1357 scraggy
+2359 asbestos
+10
+0226 smarter
+0233 paprika
+0301 durban
+0312 nullify
+0623 nettle
+1148 unicorn
+1312 capitol
+1439 arterial
+2046 asbestos
+2153 greener
+9
+0006 capitol
+0743 scraggy
+1033 paprika
+1233 nullify
+1300 nettle
+1403 asbestos
+1955 unicorn
+2133 durban
+2332 smarter
+3
+0836 scraggy
+1715 asbestos
+2022 smarter
+2
+0453 durban
+1633 nullify
+4
+0638 nettle
+0740 capitol
+1736 paprika
+1918 unicorn
+2
+0603 durban
+1641 greener
+11
+0519 arterial
+0636 scraggy
+0726 durban
+0827 nettle
+0953 paprika
+1042 acetic
+1201 capitol
+1216 smarter
+1658 asbestos
+2038 nullify
+2204 greener
+12
+0053 scraggy
+0118 acetic
+0549 unicorn
+0859 nettle
+0926 capitol
+1008 greener
+1511 nullify
+1542 asbestos
+1607 smarter
+1607 paprika
+1834 arterial
+2125 durban
+7
+0036 capitol
+0239 acetic
+0501 arterial
+0614 scraggy
+1303 unicorn
+1438 nettle
+1502 smarter
+3
+1337 nullify
+1416 durban
+1815 paprika
+11
+0015 paprika
+0251 scraggy
+0713 arterial
+0834 smarter
+0917 nettle
+1105 acetic
+1405 nullify
+1527 capitol
+1709 asbestos
+1924 greener
+1954 durban
+1348
+nullify
+durban
+12
+scribble
+fumble
+coeval
+traction
+callow
+lariat
+agnostic
+equinox
+chaldean
+throwed
+engulf
+duality
+18
+2
+0747 chaldean
+1447 callow
+10
+0007 lariat
+0045 scribble
+0614 chaldean
+1051 engulf
+1055 agnostic
+1129 equinox
+1201 coeval
+1221 traction
+1734 fumble
+1907 throwed
+7
+0129 scribble
+0617 throwed
+0827 lariat
+1043 equinox
+1615 traction
+1824 agnostic
+1827 coeval
+11
+0210 equinox
+0501 coeval
+0714 traction
+1036 engulf
+1115 callow
+1211 lariat
+1728 agnostic
+1821 fumble
+1844 chaldean
+2045 duality
+2304 scribble
+8
+0031 lariat
+0056 engulf
+0225 callow
+0314 fumble
+0715 throwed
+1206 chaldean
+1423 agnostic
+1657 coeval
+12
+0128 coeval
+0509 traction
+0741 chaldean
+0754 engulf
+1041 agnostic
+1306 lariat
+1822 fumble
+1909 equinox
+1950 duality
+2017 scribble
+2332 throwed
+2357 callow
+10
+0309 agnostic
+0330 throwed
+0730 lariat
+1310 chaldean
+1340 traction
+1542 scribble
+1630 callow
+1704 engulf
+1738 coeval
+1902 fumble
+2
+1222 lariat
+1358 duality
+7
+0027 throwed
+0410 engulf
+0753 agnostic
+0759 duality
+1455 coeval
+2211 chaldean
+2321 lariat
+5
+0058 callow
+0716 duality
+0801 lariat
+1646 traction
+1717 equinox
+6
+0012 chaldean
+0045 engulf
+0506 scribble
+0552 lariat
+1330 duality
+2252 coeval
+5
+0413 duality
+0522 agnostic
+2124 coeval
+2142 scribble
+2338 traction
+11
+0005 callow
+0047 chaldean
+0213 traction
+0407 agnostic
+0529 coeval
+0721 equinox
+0813 lariat
+1414 engulf
+1514 throwed
+1654 fumble
+2037 scribble
+12
+0026 equinox
+0134 callow
+0341 traction
+0634 agnostic
+0637 fumble
+0952 chaldean
+1211 scribble
+1307 throwed
+1319 engulf
+1524 duality
+1647 lariat
+2110 coeval
+3
+0455 equinox
+0808 throwed
+1007 chaldean
+4
+0341 traction
+0832 lariat
+1645 throwed
+2254 chaldean
+5
+0145 callow
+0711 scribble
+0755 lariat
+1806 duality
+1814 equinox
+2
+1003 coeval
+1029 chaldean
+0659
+duality
+callow
+12
+sulphide
+coppice
+americas
+warble
+minion
+venerate
+rancid
+samoan
+slogan
+canticle
+molding
+rummage
+19
+9
+0005 molding
+0333 rummage
+0333 minion
+1327 canticle
+1456 slogan
+1615 americas
+1807 warble
+2027 samoan
+2313 sulphide
+2
+1607 venerate
+1823 samoan
+9
+0107 warble
+0207 rancid
+0412 slogan
+0944 americas
+1639 venerate
+1831 samoan
+1837 rummage
+1909 sulphide
+2206 molding
+9
+0221 warble
+0529 slogan
+1223 coppice
+1229 minion
+1313 venerate
+1416 molding
+1452 sulphide
+2023 samoan
+2031 americas
+10
+0859 slogan
+1119 sulphide
+1121 warble
+1313 rummage
+1321 coppice
+1654 venerate
+1939 samoan
+2059 canticle
+2116 molding
+2218 minion
+6
+0154 sulphide
+0225 samoan
+0336 slogan
+1958 warble
+2024 canticle
+2302 rancid
+11
+0242 minion
+0354 coppice
+0647 samoan
+0912 canticle
+1028 rummage
+1133 rancid
+1238 sulphide
+1635 molding
+1712 americas
+2053 warble
+2259 slogan
+9
+0339 canticle
+0553 americas
+0907 coppice
+1342 minion
+1704 samoan
+1735 molding
+1813 rummage
+1937 rancid
+2121 slogan
+5
+0712 coppice
+0917 americas
+1306 sulphide
+2227 minion
+2243 slogan
+10
+0212 coppice
+0233 canticle
+1441 molding
+1705 americas
+1955 samoan
+2105 rancid
+2145 sulphide
+2203 slogan
+2212 minion
+2220 rummage
+8
+0053 venerate
+1303 minion
+1527 samoan
+1530 rummage
+1554 rancid
+1603 molding
+1638 canticle
+1708 slogan
+8
+0305 warble
+0717 slogan
+1057 sulphide
+1159 rummage
+1303 venerate
+1334 americas
+2057 rancid
+2148 coppice
+7
+0740 rancid
+0819 rummage
+0938 americas
+1013 minion
+1205 sulphide
+1820 molding
+1932 canticle
+10
+0120 rancid
+0240 rummage
+0452 venerate
+0823 molding
+1111 americas
+1129 samoan
+1319 canticle
+1449 coppice
+1644 warble
+2154 sulphide
+7
+0029 rancid
+0130 rummage
+0154 minion
+0428 venerate
+0452 sulphide
+0501 slogan
+1534 molding
+10
+0023 samoan
+0537 warble
+0829 minion
+0935 canticle
+1443 slogan
+1500 rummage
+1644 molding
+2109 venerate
+2117 rancid
+2303 americas
+6
+0250 warble
+0932 rummage
+1344 coppice
+1501 minion
+1616 canticle
+2207 americas
+12
+0200 venerate
+0352 rummage
+0425 rancid
+0531 americas
+0757 minion
+0836 sulphide
+1038 warble
+1632 canticle
+2005 samoan
+2045 coppice
+2310 slogan
+2319 molding
+11
+0023 molding
+0057 samoan
+0338 canticle
+0338 rancid
+0912 warble
+1206 venerate
+1206 sulphide
+1255 minion
+1256 americas
+1745 slogan
+1915 coppice
+1623
+slogan
+coppice
+12
+protocol
+looting
+lotion
+mumble
+sextant
+ensnare
+rotund
+commuted
+sophist
+esdras
+heirloom
+amulet
+16
+7
+0441 ensnare
+0749 sophist
+1819 protocol
+2042 mumble
+2224 looting
+2311 sextant
+2357 rotund
+12
+0014 protocol
+0220 heirloom
+0250 esdras
+0317 ensnare
+0452 lotion
+0452 sextant
+0537 sophist
+1007 rotund
+1031 commuted
+1321 amulet
+1455 looting
+1714 mumble
+7
+0647 sextant
+1151 sophist
+1626 looting
+1658 ensnare
+2031 rotund
+2128 amulet
+2138 lotion
+8
+0119 lotion
+0121 commuted
+0346 amulet
+0450 mumble
+1244 rotund
+1436 sextant
+1440 looting
+2350 ensnare
+12
+0307 protocol
+0430 esdras
+1014 amulet
+1527 commuted
+1537 heirloom
+1601 sextant
+1754 lotion
+1851 sophist
+2018 mumble
+2136 looting
+2303 rotund
+2308 ensnare
+7
+0610 mumble
+0938 commuted
+1224 ensnare
+1439 lotion
+1754 amulet
+2156 sophist
+2216 sextant
+2
+1812 commuted
+2240 sextant
+10
+0114 protocol
+0620 lotion
+1243 commuted
+1449 looting
+1539 ensnare
+1543 esdras
+1607 rotund
+1620 sophist
+1951 amulet
+2112 mumble
+9
+0109 looting
+1338 rotund
+1437 lotion
+1527 sophist
+1533 amulet
+1730 mumble
+1742 sextant
+1804 protocol
+1815 commuted
+12
+0046 amulet
+0114 sextant
+0223 esdras
+0955 ensnare
+1031 heirloom
+1101 protocol
+1254 commuted
+1836 rotund
+1856 lotion
+1953 sophist
+2112 mumble
+2114 looting
+9
+0114 lotion
+0400 rotund
+0551 sophist
+0647 protocol
+1312 sextant
+1315 esdras
+1509 heirloom
+1604 amulet
+2256 looting
+11
+0021 ensnare
+0124 sophist
+0631 mumble
+0648 sextant
+0759 looting
+0918 heirloom
+0925 commuted
+1052 rotund
+1351 esdras
+1802 amulet
+1917 lotion
+2
+0913 lotion
+1114 rotund
+5
+0556 lotion
+0624 commuted
+0934 rotund
+1512 looting
+2043 sophist
+4
+0215 looting
+1128 sophist
+1136 ensnare
+2334 rotund
+3
+1458 amulet
+1903 esdras
+1925 sextant
+1003
+sophist
+mumble
+12
+budapest
+crease
+seasick
+liqueur
+moccasin
+protocol
+tussle
+entree
+orally
+bugbear
+grafting
+satiate
+14
+3
+0406 protocol
+1542 bugbear
+1847 moccasin
+11
+0043 entree
+0218 seasick
+0526 protocol
+0540 moccasin
+0959 satiate
+1233 budapest
+1238 crease
+1247 bugbear
+1312 tussle
+1552 liqueur
+1808 orally
+3
+0107 budapest
+0317 moccasin
+0350 crease
+11
+0059 satiate
+0234 seasick
+0511 protocol
+0819 budapest
+1246 liqueur
+1455 tussle
+1748 entree
+1943 bugbear
+2144 moccasin
+2244 orally
+2329 grafting
+11
+0130 tussle
+0152 protocol
+0351 satiate
+0845 liqueur
+1043 budapest
+1231 seasick
+1321 crease
+1410 bugbear
+1459 entree
+1506 moccasin
+1646 grafting
+11
+0110 budapest
+0304 satiate
+0502 seasick
+0549 moccasin
+0952 orally
+1024 entree
+1425 crease
+1507 tussle
+1548 grafting
+1725 bugbear
+1951 protocol
+10
+0022 seasick
+0111 tussle
+0153 orally
+0349 budapest
+0406 crease
+0549 moccasin
+0731 bugbear
+0841 liqueur
+1038 satiate
+1840 grafting
+10
+0216 orally
+0246 budapest
+0412 entree
+0416 protocol
+0526 tussle
+0805 liqueur
+1303 seasick
+1522 bugbear
+2231 grafting
+2313 satiate
+12
+0121 moccasin
+0226 grafting
+0653 orally
+0716 satiate
+0815 seasick
+0849 liqueur
+0949 crease
+1045 tussle
+1049 bugbear
+1546 budapest
+1654 entree
+2211 protocol
+7
+0601 orally
+1249 bugbear
+1541 entree
+1751 grafting
+1838 moccasin
+2033 seasick
+2141 protocol
+3
+0157 seasick
+1113 orally
+1343 budapest
+7
+0640 grafting
+0721 liqueur
+0742 crease
+0900 satiate
+0957 bugbear
+1200 orally
+2059 budapest
+3
+0035 satiate
+1531 tussle
+2008 liqueur
+3
+0641 liqueur
+0800 tussle
+1745 protocol
+2126
+orally
+tussle
+12
+dioxide
+lamely
+nozzle
+restorer
+amulet
+kidnap
+gabble
+healer
+tights
+adverted
+cremona
+devonian
+19
+3
+1153 healer
+2306 restorer
+2307 tights
+12
+0101 healer
+0135 lamely
+0526 adverted
+0540 tights
+0607 cremona
+0947 nozzle
+1025 gabble
+1129 kidnap
+1135 amulet
+1426 restorer
+1747 devonian
+1832 dioxide
+9
+0044 gabble
+0223 devonian
+0443 tights
+0447 lamely
+0517 amulet
+1243 restorer
+1418 healer
+1745 kidnap
+2252 nozzle
+8
+0453 kidnap
+0654 gabble
+0727 nozzle
+1132 adverted
+1139 dioxide
+1159 lamely
+1231 tights
+2357 devonian
+9
+0004 tights
+0356 cremona
+0927 adverted
+1022 kidnap
+1343 nozzle
+1507 devonian
+1746 lamely
+2104 amulet
+2204 healer
+2
+0320 adverted
+1039 dioxide
+9
+0056 gabble
+1127 healer
+1537 adverted
+1718 tights
+1733 dioxide
+1936 lamely
+2101 restorer
+2158 cremona
+2354 nozzle
+4
+0456 nozzle
+1431 tights
+1825 devonian
+2005 cremona
+6
+0326 cremona
+0906 gabble
+1139 amulet
+1355 adverted
+1448 tights
+1505 dioxide
+5
+0948 adverted
+1112 cremona
+1608 healer
+2021 devonian
+2044 amulet
+2
+1826 kidnap
+1847 tights
+5
+0102 restorer
+0247 tights
+0932 healer
+1953 amulet
+2047 lamely
+2
+1107 kidnap
+2154 amulet
+3
+0154 cremona
+2155 lamely
+2306 tights
+2
+0147 devonian
+0721 healer
+8
+0901 kidnap
+0909 adverted
+1130 tights
+1137 dioxide
+1214 nozzle
+1332 healer
+2056 gabble
+2340 lamely
+9
+0334 dioxide
+0649 restorer
+0739 lamely
+0839 tights
+1149 adverted
+1221 devonian
+1235 gabble
+1827 nozzle
+1922 amulet
+7
+0110 devonian
+0252 lamely
+0927 healer
+1013 cremona
+1037 restorer
+1459 gabble
+2146 amulet
+10
+0144 amulet
+0156 cremona
+0205 kidnap
+0236 dioxide
+0859 restorer
+1047 adverted
+1406 gabble
+1550 healer
+1634 tights
+2323 devonian
+0510
+lamely
+amulet
+12
+exhale
+hessian
+armory
+vestal
+blanch
+navajo
+formosa
+creased
+amatory
+rocker
+abating
+touchy
+14
+3
+0228 armory
+1753 vestal
+2257 amatory
+11
+0119 navajo
+0251 vestal
+0647 touchy
+1207 amatory
+1252 formosa
+1423 exhale
+1530 creased
+1630 armory
+1827 abating
+1840 hessian
+2355 blanch
+8
+0003 rocker
+0008 formosa
+0056 vestal
+0100 amatory
+1008 navajo
+1620 exhale
+2059 blanch
+2343 creased
+12
+0004 blanch
+0020 creased
+0037 touchy
+0441 formosa
+0554 rocker
+0823 hessian
+0843 exhale
+1041 abating
+1114 armory
+1411 vestal
+1859 navajo
+1956 amatory
+9
+0137 abating
+0624 armory
+0734 navajo
+1122 hessian
+1208 formosa
+1248 amatory
+1637 creased
+1708 blanch
+2215 exhale
+12
+0116 navajo
+0404 blanch
+0455 creased
+0624 hessian
+0650 vestal
+0831 amatory
+1309 exhale
+1427 rocker
+1526 formosa
+2015 armory
+2226 touchy
+2339 abating
+12
+0157 navajo
+0650 abating
+0701 creased
+0854 vestal
+0913 hessian
+1008 blanch
+1356 touchy
+1452 rocker
+1636 exhale
+1704 armory
+1753 formosa
+1759 amatory
+6
+0117 exhale
+0433 vestal
+0524 formosa
+1745 amatory
+1827 hessian
+1917 rocker
+10
+0041 touchy
+0102 hessian
+0920 abating
+1011 creased
+1022 formosa
+1034 blanch
+1207 exhale
+1450 rocker
+2047 amatory
+2228 vestal
+6
+0007 vestal
+0209 formosa
+0959 rocker
+1855 amatory
+2040 exhale
+2136 armory
+12
+0117 creased
+0553 armory
+0612 navajo
+0723 amatory
+0919 abating
+1003 exhale
+1221 blanch
+1307 vestal
+1358 hessian
+1634 touchy
+1742 formosa
+1912 rocker
+8
+0308 navajo
+0803 vestal
+1313 armory
+1435 creased
+1804 touchy
+1953 amatory
+2025 blanch
+2055 rocker
+9
+0056 creased
+0103 rocker
+0312 amatory
+0352 navajo
+0405 abating
+0414 armory
+0820 exhale
+1230 formosa
+2130 touchy
+9
+0344 navajo
+0526 exhale
+0845 rocker
+1243 hessian
+1449 amatory
+1628 vestal
+1737 formosa
+1945 blanch
+2227 touchy
+2357
+touchy
+formosa
+12
+rotary
+abelard
+breviary
+dignify
+veneer
+tatiana
+recline
+yearling
+append
+parvenu
+convene
+blanch
+19
+7
+0312 convene
+0847 append
+0922 dignify
+1044 parvenu
+1442 blanch
+1606 veneer
+1838 recline
+9
+0123 yearling
+0544 abelard
+1014 tatiana
+1051 recline
+1056 append
+1135 convene
+1158 breviary
+2106 veneer
+2324 parvenu
+10
+0149 tatiana
+0207 yearling
+0319 breviary
+0649 dignify
+1433 append
+1814 veneer
+2212 rotary
+2229 blanch
+2326 convene
+2356 abelard
+7
+0735 dignify
+0807 append
+1030 yearling
+1249 parvenu
+1552 blanch
+1804 rotary
+2125 recline
+2
+1125 veneer
+1842 convene
+10
+0251 convene
+0347 veneer
+0742 yearling
+0759 recline
+1013 tatiana
+1116 append
+1427 dignify
+1723 breviary
+2045 rotary
+2305 blanch
+8
+0035 recline
+0400 append
+1019 rotary
+1132 blanch
+1422 yearling
+1613 veneer
+1916 parvenu
+2340 abelard
+11
+0239 breviary
+0317 abelard
+0443 veneer
+0544 recline
+0851 rotary
+0907 dignify
+1247 append
+1451 blanch
+1659 yearling
+2018 convene
+2122 parvenu
+3
+0112 blanch
+0336 rotary
+2122 veneer
+8
+0756 blanch
+0833 dignify
+0934 recline
+1007 parvenu
+1138 abelard
+1342 yearling
+1350 breviary
+1722 tatiana
+4
+0219 parvenu
+1054 yearling
+1432 veneer
+1731 breviary
+2
+0721 dignify
+2247 yearling
+6
+0056 veneer
+0236 yearling
+0503 breviary
+0552 blanch
+0833 append
+2127 recline
+6
+0302 tatiana
+0442 yearling
+0826 parvenu
+1103 convene
+1422 breviary
+1702 recline
+11
+0105 veneer
+0143 rotary
+0340 abelard
+0518 breviary
+0909 yearling
+1135 blanch
+1352 append
+1945 recline
+2023 convene
+2034 parvenu
+2034 tatiana
+4
+0533 veneer
+0706 yearling
+1053 tatiana
+2248 abelard
+5
+0457 append
+1527 veneer
+1639 breviary
+2019 yearling
+2239 dignify
+12
+0022 parvenu
+0231 tatiana
+0659 rotary
+0743 veneer
+0826 abelard
+1057 convene
+1211 dignify
+1649 append
+1650 breviary
+1659 yearling
+1806 blanch
+2147 recline
+6
+0343 abelard
+1435 dignify
+1639 rotary
+2057 convene
+2215 blanch
+2243 recline
+0134
+veneer
+recline
+12
+demesne
+robbie
+corked
+teamster
+redound
+crayon
+chunks
+paucity
+citation
+lamely
+hosiery
+twaddle
+7
+2
+0001 lamely
+2216 twaddle
+5
+0735 robbie
+1337 corked
+2032 teamster
+2153 redound
+2321 chunks
+4
+0707 crayon
+0757 citation
+1017 redound
+1143 teamster
+12
+0006 citation
+0220 teamster
+0550 chunks
+0607 demesne
+0623 redound
+1127 robbie
+1157 twaddle
+1204 lamely
+1241 hosiery
+1904 paucity
+1918 corked
+2005 crayon
+4
+0032 crayon
+1059 demesne
+1833 redound
+2132 paucity
+11
+0347 demesne
+0534 crayon
+0618 chunks
+1028 twaddle
+1355 citation
+1550 paucity
+1922 teamster
+2205 robbie
+2303 corked
+2345 hosiery
+2347 lamely
+7
+0117 corked
+0742 lamely
+1524 robbie
+1627 teamster
+1831 citation
+2213 paucity
+2324 demesne
+0048
+citation
+lamely
+12
+shrimp
+casualty
+anodyne
+yokohama
+borrower
+smudge
+puncture
+colossus
+literati
+thyroid
+abjectly
+perugia
+8
+11
+0236 thyroid
+0239 borrower
+0358 casualty
+0517 shrimp
+0657 perugia
+0850 puncture
+1904 smudge
+2044 abjectly
+2133 colossus
+2243 literati
+2349 yokohama
+8
+0030 colossus
+0157 puncture
+1051 yokohama
+1203 thyroid
+1524 perugia
+1916 anodyne
+2039 casualty
+2231 abjectly
+11
+0016 yokohama
+0036 puncture
+0129 thyroid
+0204 perugia
+0334 casualty
+0401 literati
+0605 anodyne
+0613 borrower
+0657 abjectly
+0724 shrimp
+2244 smudge
+7
+0201 abjectly
+0733 thyroid
+0754 colossus
+0911 perugia
+1512 smudge
+2007 shrimp
+2107 casualty
+5
+0206 casualty
+0525 colossus
+1055 shrimp
+1149 smudge
+2317 puncture
+10
+0029 thyroid
+0419 smudge
+0624 borrower
+0631 casualty
+1944 perugia
+2024 colossus
+2046 shrimp
+2110 literati
+2232 yokohama
+2258 puncture
+9
+0206 colossus
+1133 shrimp
+1139 perugia
+1319 yokohama
+1424 anodyne
+1506 smudge
+1809 casualty
+2003 borrower
+2036 thyroid
+5
+0018 literati
+0159 yokohama
+1938 colossus
+2327 puncture
+2338 shrimp
+1101
+perugia
+shrimp
+12
+sulphide
+scribble
+encumber
+bookish
+synonyms
+rotary
+outhouse
+crossbow
+overdue
+diverge
+quilted
+innings
+17
+8
+0550 quilted
+0738 encumber
+1146 crossbow
+1204 bookish
+1413 rotary
+1459 outhouse
+1900 scribble
+1900 synonyms
+6
+0324 rotary
+0409 overdue
+0714 synonyms
+0818 encumber
+2336 scribble
+2345 quilted
+3
+1032 synonyms
+1226 rotary
+1549 bookish
+6
+0052 crossbow
+0217 scribble
+0426 outhouse
+0806 bookish
+1813 quilted
+2158 sulphide
+5
+0100 synonyms
+0515 quilted
+0952 outhouse
+1509 bookish
+2011 innings
+4
+1147 scribble
+1315 bookish
+1719 outhouse
+1953 diverge
+10
+0013 outhouse
+0130 quilted
+0314 encumber
+0333 overdue
+0421 bookish
+0425 scribble
+0529 rotary
+0636 sulphide
+0849 diverge
+1848 innings
+11
+0003 innings
+0247 rotary
+0459 overdue
+0555 crossbow
+1032 outhouse
+1111 encumber
+1204 quilted
+1718 bookish
+1927 synonyms
+2234 scribble
+2236 sulphide
+3
+2306 rotary
+2341 bookish
+2352 diverge
+3
+0015 quilted
+0123 sulphide
+1431 outhouse
+3
+0844 rotary
+1943 quilted
+2040 outhouse
+4
+0206 innings
+1633 diverge
+2015 crossbow
+2257 rotary
+6
+0215 quilted
+0552 rotary
+0645 scribble
+1635 sulphide
+1644 encumber
+1800 overdue
+9
+0325 crossbow
+0414 bookish
+0743 rotary
+0833 scribble
+1028 synonyms
+1418 outhouse
+1512 sulphide
+1557 quilted
+2155 overdue
+12
+0007 overdue
+0142 innings
+0204 bookish
+0237 quilted
+0547 scribble
+0642 sulphide
+0754 diverge
+1706 encumber
+1722 outhouse
+2150 rotary
+2257 crossbow
+2308 synonyms
+5
+0245 crossbow
+0315 diverge
+0428 sulphide
+0840 innings
+1746 synonyms
+11
+0007 sulphide
+0027 innings
+0302 outhouse
+0333 crossbow
+0426 quilted
+0829 scribble
+0946 overdue
+1234 rotary
+1432 bookish
+2042 synonyms
+2347 encumber
+0115
+rotary
+quilted
+12
+coconut
+crispin
+waylay
+forestry
+cryptic
+climber
+phrygian
+aphorism
+tobago
+nazarene
+betrayer
+gashed
+3
+10
+0003 cryptic
+0112 nazarene
+0156 aphorism
+0245 climber
+0316 phrygian
+0517 waylay
+0715 coconut
+0721 forestry
+0830 betrayer
+1115 gashed
+9
+0010 forestry
+0807 crispin
+0853 tobago
+0914 betrayer
+1240 coconut
+1735 nazarene
+1827 waylay
+2024 gashed
+2205 cryptic
+12
+0209 tobago
+0745 climber
+0808 aphorism
+0819 betrayer
+0931 cryptic
+1001 coconut
+1113 gashed
+1115 nazarene
+1656 forestry
+1719 crispin
+2335 phrygian
+2357 waylay
+1944
+forestry
+cryptic
+12
+essayist
+chaldean
+tricolor
+grannie
+blazoned
+niggard
+borrower
+oriole
+educator
+homily
+capitol
+bestowal
+3
+3
+0145 homily
+1423 niggard
+1744 grannie
+11
+0054 essayist
+0514 chaldean
+0719 capitol
+0724 oriole
+0759 niggard
+0817 borrower
+1254 homily
+1502 tricolor
+1702 blazoned
+1942 grannie
+2137 bestowal
+10
+0027 bestowal
+0130 borrower
+0236 blazoned
+0236 niggard
+0645 oriole
+1048 educator
+1139 homily
+1912 grannie
+2053 essayist
+2230 tricolor
+1504
+capitol
+essayist
+12
+bestowal
+reynard
+corvette
+sloppy
+adduce
+molding
+codicil
+homily
+apulia
+tableaux
+usable
+variants
+10
+4
+0453 usable
+0902 variants
+1932 bestowal
+2138 sloppy
+11
+0039 sloppy
+0145 homily
+0835 apulia
+0931 usable
+1008 reynard
+1017 bestowal
+1938 tableaux
+2017 molding
+2209 adduce
+2213 variants
+2305 corvette
+3
+0815 adduce
+1111 molding
+1632 tableaux
+5
+0200 homily
+0835 tableaux
+0852 corvette
+1108 reynard
+1952 sloppy
+3
+0134 usable
+0921 bestowal
+1911 reynard
+12
+0404 adduce
+0428 apulia
+0618 bestowal
+0644 tableaux
+0905 reynard
+1332 usable
+1505 corvette
+1521 sloppy
+1611 molding
+1749 codicil
+2054 homily
+2227 variants
+5
+0218 reynard
+0409 molding
+1226 homily
+2037 tableaux
+2255 bestowal
+5
+0013 reynard
+1024 bestowal
+1044 variants
+1822 tableaux
+2233 molding
+11
+0101 corvette
+0254 variants
+0303 molding
+0317 bestowal
+0436 usable
+0535 homily
+1015 sloppy
+1029 adduce
+1659 apulia
+1957 tableaux
+2050 reynard
+6
+0021 sloppy
+0059 tableaux
+0255 adduce
+0547 molding
+1032 usable
+1913 corvette
+1040
+bestowal
+variants
+12
+barbados
+foolscap
+rosewood
+stellar
+composes
+converge
+looting
+abased
+titular
+welling
+wraith
+bahamas
+3
+2
+0653 abased
+2320 titular
+9
+0409 rosewood
+0437 wraith
+0444 bahamas
+0813 barbados
+0927 foolscap
+1006 welling
+1403 looting
+1955 stellar
+2158 composes
+3
+0759 composes
+1253 rosewood
+1741 stellar
+2047
+stellar
+barbados
+12
+esthetic
+shrimp
+goggles
+doggerel
+liberals
+pickaxe
+coitus
+joyance
+outhouse
+gaslight
+minuet
+wishful
+10
+3
+0250 shrimp
+0658 coitus
+1722 gaslight
+7
+0058 gaslight
+0253 minuet
+0412 shrimp
+0858 outhouse
+1454 goggles
+1638 pickaxe
+2133 liberals
+2
+0943 gaslight
+2249 doggerel
+11
+0159 outhouse
+0508 shrimp
+0942 pickaxe
+1350 gaslight
+1640 esthetic
+1711 joyance
+1757 doggerel
+1924 coitus
+1935 wishful
+2013 goggles
+2224 minuet
+5
+0212 pickaxe
+1056 minuet
+1424 goggles
+1516 gaslight
+1726 outhouse
+3
+0911 coitus
+1008 esthetic
+1933 minuet
+2
+0119 doggerel
+0818 minuet
+10
+0129 doggerel
+0559 esthetic
+0804 joyance
+1240 goggles
+1341 shrimp
+1900 wishful
+1926 liberals
+2345 coitus
+2351 minuet
+2357 outhouse
+8
+0231 liberals
+0850 gaslight
+1007 minuet
+1202 esthetic
+1801 shrimp
+1803 wishful
+1813 coitus
+2016 outhouse
+11
+0034 goggles
+0235 outhouse
+0614 wishful
+0630 doggerel
+0805 liberals
+0936 pickaxe
+1427 joyance
+1456 gaslight
+1553 shrimp
+2015 minuet
+2206 coitus
+0127
+goggles
+esthetic
+12
+dualism
+barnet
+topsail
+akimbo
+fatima
+absinthe
+beehive
+glowered
+nullify
+abjectly
+titania
+pistil
+17
+9
+0600 topsail
+0836 akimbo
+0944 abjectly
+1333 titania
+1342 barnet
+1906 fatima
+2126 dualism
+2241 glowered
+2353 pistil
+10
+0230 akimbo
+0447 dualism
+0715 pistil
+0929 titania
+0958 barnet
+1226 absinthe
+1227 beehive
+1255 abjectly
+1432 topsail
+1831 glowered
+10
+0000 fatima
+0049 titania
+0118 akimbo
+0609 glowered
+0632 topsail
+0728 nullify
+1031 absinthe
+1203 dualism
+1235 beehive
+1624 barnet
+4
+0034 akimbo
+1510 pistil
+1649 abjectly
+1920 barnet
+3
+1114 titania
+1225 absinthe
+2028 barnet
+12
+0334 nullify
+0616 absinthe
+0954 topsail
+1034 abjectly
+1125 barnet
+1133 akimbo
+1136 pistil
+1522 dualism
+1553 titania
+1852 glowered
+2034 fatima
+2237 beehive
+8
+0223 glowered
+1006 titania
+1133 nullify
+1700 absinthe
+1954 fatima
+2000 beehive
+2114 barnet
+2224 pistil
+11
+0603 barnet
+0942 beehive
+1053 fatima
+1211 dualism
+1429 glowered
+1614 akimbo
+1738 nullify
+1841 pistil
+2138 abjectly
+2243 titania
+2244 topsail
+12
+0243 beehive
+0321 fatima
+0424 dualism
+0530 abjectly
+0543 titania
+0550 absinthe
+0922 akimbo
+1306 barnet
+1743 pistil
+1834 nullify
+1953 glowered
+2208 topsail
+2
+1257 dualism
+1912 barnet
+6
+0002 abjectly
+1123 akimbo
+1438 beehive
+2122 barnet
+2140 titania
+2303 topsail
+10
+0104 topsail
+0235 akimbo
+0316 glowered
+0619 absinthe
+1152 titania
+1228 barnet
+1255 abjectly
+1444 beehive
+1816 pistil
+2346 nullify
+5
+0608 glowered
+0659 absinthe
+0801 abjectly
+0906 titania
+2148 barnet
+3
+0108 glowered
+1111 absinthe
+1220 akimbo
+8
+0032 abjectly
+0621 pistil
+1153 barnet
+1357 akimbo
+1910 nullify
+2213 absinthe
+2310 titania
+2338 dualism
+3
+0305 absinthe
+0955 barnet
+1942 fatima
+12
+0409 dualism
+0617 beehive
+1359 topsail
+1427 pistil
+1604 barnet
+1628 akimbo
+1821 fatima
+1823 absinthe
+1950 nullify
+2043 abjectly
+2103 titania
+2211 glowered
+0900
+beehive
+abjectly
+12
+recline
+pigtail
+rancid
+ranking
+reborn
+subsides
+condone
+anglia
+engrave
+pitfall
+topsail
+freshmen
+19
+3
+0946 condone
+1030 topsail
+1616 subsides
+12
+0002 subsides
+0033 engrave
+0457 condone
+0731 pitfall
+1118 topsail
+1437 ranking
+1451 pigtail
+1600 rancid
+1615 recline
+1728 freshmen
+2131 anglia
+2148 reborn
+9
+0009 engrave
+0556 recline
+0850 ranking
+1233 pigtail
+1257 rancid
+1450 condone
+1832 reborn
+2241 topsail
+2359 freshmen
+2
+0102 pigtail
+0856 freshmen
+11
+0018 pitfall
+0025 pigtail
+0213 topsail
+0341 condone
+1050 engrave
+1136 subsides
+1237 recline
+1744 anglia
+1829 rancid
+1846 freshmen
+2323 ranking
+7
+0544 subsides
+0748 anglia
+0751 reborn
+1016 recline
+1645 freshmen
+1706 rancid
+2246 ranking
+4
+0154 topsail
+0706 condone
+1317 reborn
+1633 pitfall
+8
+0248 topsail
+0822 ranking
+1021 recline
+1357 subsides
+1501 pitfall
+1658 reborn
+1824 condone
+2234 anglia
+12
+0120 pitfall
+0155 subsides
+0307 reborn
+0421 freshmen
+0458 ranking
+0503 engrave
+0943 recline
+1000 topsail
+1309 pigtail
+1627 anglia
+1935 condone
+1949 rancid
+3
+0511 ranking
+1238 subsides
+1453 reborn
+11
+0042 reborn
+0312 condone
+0414 pigtail
+0454 topsail
+0626 freshmen
+1323 engrave
+1550 ranking
+1721 anglia
+1722 rancid
+2118 recline
+2340 subsides
+6
+0114 freshmen
+0336 reborn
+0416 pigtail
+1623 anglia
+1937 engrave
+2127 topsail
+11
+0043 pigtail
+0116 topsail
+0158 anglia
+0245 engrave
+0932 reborn
+1102 recline
+1140 ranking
+1149 pitfall
+1211 rancid
+1522 subsides
+1540 freshmen
+2
+1023 condone
+2215 freshmen
+4
+1212 subsides
+1606 rancid
+1713 recline
+2330 pitfall
+7
+0331 recline
+0834 reborn
+0856 freshmen
+1111 engrave
+1233 condone
+1338 anglia
+2137 rancid
+3
+0128 condone
+0301 topsail
+0740 rancid
+7
+0225 topsail
+0334 engrave
+0705 pitfall
+0834 reborn
+1300 anglia
+1449 rancid
+2152 pigtail
+7
+0430 topsail
+0439 freshmen
+0503 engrave
+1218 ranking
+1835 subsides
+1847 pitfall
+1941 pigtail
+2252
+subsides
+anglia
+0

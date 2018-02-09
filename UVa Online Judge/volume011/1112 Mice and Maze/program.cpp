@@ -1,3 +1,11 @@
+// Mice and Maze
+// UVa ID: 1112
+// Verdict: Accepted
+// Submission Date: 2018-02-08
+// UVa Run Time: 0.000s
+//
+// 版权所有（C）2018，邱秋。metaphysis # yeah dot net
+
 #include <algorithm>
 #include <bitset>
 #include <cassert>
@@ -30,11 +38,11 @@ struct edge
 
 list<edge> edges[MAXV];
 int dist[MAXV], parent[MAXV], visited[MAXV];
-int n, m;
+int n, m, E, T;
 
 void mooreDijkstra(int u)
 {
-    for (int i = 0; i < n; i++) dist[i] = INF, parent[i] = -1, visited[i] = 0;
+    for (int i = 1; i <= n; i++) dist[i] = INF, parent[i] = -1, visited[i] = 0;
     dist[u] = 0;
 
     while (!visited[u])
@@ -45,36 +53,38 @@ void mooreDijkstra(int u)
                 dist[e.to] = dist[u] + e.weight, parent[e.to] = u;
 
         int minDist = INF;
-        for (int i = 0; i < n; i++)
+        for (int i = 1; i <= n; i++)
             if (!visited[i] && minDist > dist[i])
                 minDist = dist[i], u = i;
     }
 }
 
-void mooreDijkstra1(int u)
-{
-    for (int i = 0; i < n; i++) dist[i] = INF, parent[i] = -1;
-    dist[u] = 0;
-    
-    priority_queue<edge> q; q.push((edge){u, dist[u]});
-
-    while (!q.empty())
-    {
-        edge v = q.top(); q.pop();
-        for (auto e : edges[v.to])
-            if (dist[e.to] > dist[v.to] + e.weight)
-            {
-                dist[e.to] = dist[v.to] + e.weight;
-                parent[e.to] = v.to;
-                q.push((edge){e.to, dist[e.to]});
-            }
-    }
-}
-
 int main(int argc, char *argv[])
 {
-    mooreDijkstra(0);
-    mooreDijkstra1(0);
+    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
+
+    int cases;
+    cin >> cases;
+    for (int c = 1; c <= cases; c++)
+    {
+        cin >> n >> E >> T >> m;
+
+        for (int i = 1; i <= n; i++)
+            edges[i].clear();
+
+        int u, v, weight;
+        for (int i = 1; i <= m; i++)
+        {
+            cin >> u >> v >> weight;
+            edges[v].push_back(edge(u, weight));
+        }
+        mooreDijkstra(E);
+        int mice = 0;
+        for (int i = 1; i <= n; i++)
+            if (dist[i] <= T) mice++;
+        if (c > 1) cout << '\n';
+        cout << mice << '\n';
+    }
 
     return 0;
 }

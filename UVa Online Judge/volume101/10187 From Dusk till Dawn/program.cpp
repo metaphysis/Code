@@ -116,7 +116,7 @@ class route
 public:
 	int departure;		// 出发时间。
 	int arrival;		// 到达时间。
-	int to;			// 到达城市。
+	int to;			    // 到达城市。
 };
 
 // 城市之间的火车路线。
@@ -128,7 +128,7 @@ vector < route > edges[MAXN + 1];
 int travel(int from, int to)
 {
 	// 建立优先队列，需要血量少的路线先处理。
-	priority_queue < state > states;
+	priority_queue<state> states;
 
 	// 将当前城市为 from，到达时间为 18:00 的状态添加到优先队列中，表示已经从一个虚拟
 	// 的地方到达了起始城市 from，到达时间小于起始城市 from 的所有可用火车路线的出发
@@ -174,7 +174,7 @@ int main(int ac, char *av[])
 	cin >> test;
 	while (test--)
 	{
-		map < string, int > cities;
+		map<string, int> cities;
 
 		for (int i = 0; i < MAXN + 1; i++)
 			edges[i].clear();
