@@ -44,7 +44,7 @@ polynomial multiply(polynomial p1, polynomial p2)
 
 int main(int argc, char *argv[])
 {
-    //srand(time(NULL));
+    srand(time(NULL));
 
     for (int c = 1; c <= MAX_CASES; c++)
     {

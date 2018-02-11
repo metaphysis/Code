@@ -1,4 +1,4 @@
-// Parallelepiped walk
+// Parallelepiped Walk
 // UVa ID: 503
 // Verdict: Accepted
 // Submission Date: 2017-04-21
