@@ -2,7 +2,7 @@
 // UVa ID: 13172
 // Verdict: Accepted
 // Submission Date: 2018-02-11
-// UVa Run Time: 0.240s
+// UVa Run Time: 0.140s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
@@ -31,9 +31,9 @@ const int MAXV = 1024, INF = 0x3f3f3f3f;
 
 struct edge
 {
-    int v, weight;
-    edge (int v = 0, int weight = 0): v(v), weight(weight) {}
-    bool operator<(const edge &e) const { return weight > e.weight; }
+    int v, w;
+    edge (int v = 0, int w = 0): v(v), w(w) {}
+    bool operator<(const edge &e) const { return w > e.w; }
 };
 
 list<edge> edges[MAXV];
@@ -51,9 +51,9 @@ void mooreDijkstra(int u)
         edge e1 = q.top(); q.pop();
         for (auto e2 : edges[e1.v])
         {
-            if (dist[u][e2.v] > dist[u][e1.v] + e2.weight)
+            if (dist[u][e2.v] > dist[u][e1.v] + e2.w)
             {
-                dist[u][e2.v] = dist[u][e1.v] + e2.weight;
+                dist[u][e2.v] = dist[u][e1.v] + e2.w;
                 q.push(edge(e2.v, dist[u][e2.v]));
             }
         }
@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    int u, v, weight, cases, numberOfVillage, cntOfVillages;
+    int u, v, w, cases, numberOfVillage, cntOfVillages;
     vector<int> villages;
 
     while (cin >> n >> m)
@@ -72,9 +72,9 @@ int main(int argc, char *argv[])
         for (int i = 1; i <= n; i++) edges[i].clear();
         for (int i = 1; i <= m; i++)
         {
-            cin >> u >> v >> weight;
-            edges[u].push_back(edge(v, weight));
-            edges[v].push_back(edge(u, weight));
+            cin >> u >> v >> w;
+            edges[u].push_back(edge(v, w));
+            edges[v].push_back(edge(u, w));
         }
 
         cin >> cases;
@@ -108,7 +108,7 @@ int main(int argc, char *argv[])
                     }
                     d1 += dist[villages[j - 1]][villages[j]];
                 }
-                if (d1 == INF) continue;
+                if (d1 >= minDist) continue;
                 for (int j = 1; j <= n; j++)
                     if (!used[j])
                     {
