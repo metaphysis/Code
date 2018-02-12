@@ -17,7 +17,7 @@
 //     于未拆分图，导致了多次 TLE）。
 // （2）对于求两个集合的并采用了位操作，事先将某个顶点的邻接表表示为一个整数以便用与操作来代替集合
 //     的并。
-// （3）枚举时，先考虑度数大的顶点。
+// （3）枚举子集时，先考虑度数大的顶点。
 //
 // 枚举方法参考了 [J. Loughry, J.I. van Hemert, L. Schoofs, Efficiently Enumerating
 // the Subsets of a Set, 2000]

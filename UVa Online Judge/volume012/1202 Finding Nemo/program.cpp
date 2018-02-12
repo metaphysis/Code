@@ -60,7 +60,7 @@ void mooreDijkstra()
                 if (dist[nextx][nexty] < 0 || dist[nextx][nexty] > dist[v.x][v.y] + edges[v.x][v.y][k])
                 {
                     dist[nextx][nexty] = dist[v.x][v.y] + edges[v.x][v.y][k];
-                    q.push((edge){nextx, nexty, dist[nextx][nexty]});
+                    q.push(edge(nextx, nexty, dist[nextx][nexty]));
                 }
             }
     }

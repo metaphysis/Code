@@ -1,0 +1,66 @@
+Case 1: The longest path from 1 has length 4, finishing at 6.
+
+Case 2: The longest path from 1 has length 4, finishing at 7.
+
+Case 3: The longest path from 1 has length 10, finishing at 17.
+
+Case 4: The longest path from 1 has length 3, finishing at 5.
+
+Case 5: The longest path from 1 has length 7, finishing at 11.
+
+Case 6: The longest path from 1 has length 3, finishing at 5.
+
+Case 7: The longest path from 1 has length 6, finishing at 9.
+
+Case 8: The longest path from 1 has length 5, finishing at 6.
+
+Case 9: The longest path from 1 has length 12, finishing at 18.
+
+Case 10: The longest path from 1 has length 11, finishing at 14.
+
+Case 11: The longest path from 1 has length 9, finishing at 16.
+
+Case 12: The longest path from 1 has length 4, finishing at 7.
+
+Case 13: The longest path from 1 has length 4, finishing at 5.
+
+Case 14: The longest path from 1 has length 4, finishing at 5.
+
+Case 15: The longest path from 1 has length 2, finishing at 3.
+
+Case 16: The longest path from 1 has length 10, finishing at 16.
+
+Case 17: The longest path from 1 has length 10, finishing at 17.
+
+Case 18: The longest path from 1 has length 3, finishing at 4.
+
+Case 19: The longest path from 1 has length 5, finishing at 10.
+
+Case 20: The longest path from 1 has length 1, finishing at 2.
+
+Case 21: The longest path from 1 has length 9, finishing at 15.
+
+Case 22: The longest path from 1 has length 3, finishing at 5.
+
+Case 23: The longest path from 1 has length 5, finishing at 8.
+
+Case 24: The longest path from 1 has length 3, finishing at 4.
+
+Case 25: The longest path from 1 has length 1, finishing at 2.
+
+Case 26: The longest path from 1 has length 4, finishing at 6.
+
+Case 27: The longest path from 1 has length 3, finishing at 4.
+
+Case 28: The longest path from 1 has length 7, finishing at 9.
+
+Case 29: The longest path from 1 has length 6, finishing at 11.
+
+Case 30: The longest path from 1 has length 4, finishing at 6.
+
+Case 31: The longest path from 1 has length 11, finishing at 17.
+
+Case 32: The longest path from 1 has length 2, finishing at 3.
+
+Case 33: The longest path from 1 has length 3, finishing at 5.
+
