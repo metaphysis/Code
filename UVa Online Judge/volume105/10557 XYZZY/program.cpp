@@ -1,8 +1,8 @@
 // XYZZY
 // UVa ID: 10557
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2018-02-12
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
@@ -27,51 +27,79 @@
 
 using namespace std;
 
-const int MAXV = 110, MAXE = 10010, INF = 0;
+const int MAXV = 110, MAXE = 10010, INF = 0x3f3f3f3f;
 
-struct edge { int from, to, weight; } edges[MAXE];
+struct edge { int u, v, weight; } edges[MAXE];
+
+list<int> adjacent[MAXV];
+int n, m, doors, room, energy, visited[MAXV], dist[MAXV], backup[MAXV];
+
+void dfs(int u)
+{
+    visited[u] = 1;
+    for (auto v : adjacent[u])
+        if (!visited[v])
+            dfs(v);
+}
+
+bool updateDist()
+{
+    bool updated = false;
+    for (int i = 0; i < m; i++)
+    {
+        energy = dist[edges[i].u] + edges[i].weight;
+        if (energy >= 0) continue;
+        if (dist[edges[i].v] > energy)
+        {
+            dist[edges[i].v] = energy;
+            updated = true;
+        }
+    }
+    return updated;
+}
 
 int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    int cases = 0, n, m, r, x, y, energy;
-    int dist[MAXV];
-
     while (cin >> n, n > 0)
     {
         m = 0;
+        for (int i = 1; i <= n; i++) adjacent[i].clear();
         for (int i = 1; i <= n; i++)
         {
-            cin >> energy >> r;
-            for (int j = 1; j <= r; j++)
+            cin >> energy >> doors;
+            for (int j = 1; j <= doors; j++)
             {
-                cin >> x;
-                edges[m++] = edge{i, x, -energy};
+                cin >> room;
+                edges[m++] = edge{i, room, -energy};
+                adjacent[i].push_back(room);
             }
         }
 
-        for (int i = 1; i <= n; i++) dist[i] = INF;
- 
-        dist[1] = -100;
-        for (int k = 1; k < n; k++)
+        // Check connectness.
+        memset(visited, 0, sizeof(visited));
+        dfs(1);
+        if (!visited[n])
         {
-            bool updated = false;
-            for (int i = 0; i < m; i++)
-                if (dist[edges[i].to] > dist[edges[i].from] - edges[i].weight)
-                {
-                    dist[edges[i].to] = dist[edges[i].from] - edges[i].weight;
-                    updated = true;
-                }
-            if (!updated) break;
+            cout << "hopeless\n";
+            continue;
         }
 
-        int old = dist[n];
-        for (int i = 0; i < m; i++)
-            if (dist[edges[i].to] > dist[edges[i].from] - edges[i].weight)
-                dist[edges[i].to] = dist[edges[i].from] - edges[i].weight;
+        // Bellman-Ford algorithm.
+        for (int i = 1; i <= n; i++) dist[i] = INF;
+        dist[1] = -100;
+        for (int k = 1; k < n; k++)
+            if (!updateDist())
+                break;
+        memcpy(backup, dist, sizeof(dist));
+        updateDist();
+        for (int i = 1; i <= n; i++)
+            if (visited[i] && dist[i] < backup[i])
+                dist[i] = -INF;
+        updateDist();
 
-        if (old != INF && (old < 0 || dist[n] < old)) cout << "winnable\n";
+        if (dist[n] < 0) cout << "winnable\n";
         else cout << "hopeless\n";
     }
     

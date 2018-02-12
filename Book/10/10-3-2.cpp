@@ -23,18 +23,15 @@ struct edge
 {
     int from, to, weight;
     edge (int from = 0, int to = 0, int weight = 0): from(from), to(to), weight(weight) {}
-    bool operator<(const edge& x) const {
-        return weight < x.weight;
-    }
+    bool operator<(const edge &e) const { return weight < e.weight; }
 };
 
 edge edges[MAXV * MAXV];
-int parent[MAXV], ranks[MAXV];
-int numberOfVertices, numberOfEdges;
+int n, m, parent[MAXV], ranks[MAXV];
 
 void makeSet()
 {
-    for (int i = 0; i < numberOfVertices; i++) {
+    for (int i = 0; i < n; i++) {
         parent[i] = i; ranks[i] = 0;
     }
 }
@@ -63,9 +60,9 @@ int kruskal()
     int minWeightSum = 0;
 
     makeSet();
-    sort(edges, edges + numberOfEdges);
+    sort(edges, edges + m);
 
-    for (int i = 0; i < numberOfEdges; i++)
+    for (int i = 0; i < m; i++)
         if (unionSet(edges[i].from, edges[i].to))
             minWeightSum += edges[i].weight;
 

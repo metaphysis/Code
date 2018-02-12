@@ -17,27 +17,23 @@
 
 using namespace std;
 
-const int MAXV = 1010, MAX_DIST = 1000000;
+const int MAXV = 1010, INF = 0x3f3f3f3f;
 
 struct edge
 {
     int idx, weight;
-    
-    bool operator<(const edge& x) const {
-        return weight > x.weight;
-    }
+    bool operator<(const edge &e) const { return weight > e.weight; }
 };
 
 vector<edge> edges[MAXV];
-int parent[MAXV], distToTree[MAXV], intree[MAXV];
-int numberOfVertices;
+int n, parent[MAXV], distToTree[MAXV], intree[MAXV];
 
 int prim(int u)
 {
     int minWeightSum = 0;
 
-    for (int i = 0; i < numberOfVertices; i++) {
-        parent[i] = -1; intree[i] = 0; distToTree[i] = MAX_DIST;
+    for (int i = 0; i < n; i++) {
+        parent[i] = -1; intree[i] = 0; distToTree[i] = INF;
     }
 
     distToTree[u] = 0;
@@ -53,8 +49,8 @@ int prim(int u)
             }
         }
 
-        int minDistToTree = MAX_DIST;
-        for (int i = 0; i < numberOfVertices; i++) {
+        int minDistToTree = INF;
+        for (int i = 0; i < n; i++) {
             if (!intree[i] && minDistToTree > distToTree[i]) {
                 minDistToTree = distToTree[i];
                 u = i;
@@ -69,8 +65,8 @@ int prim1(int u)
 {
     int minWeightSum = 0;
 
-    for (int i = 0; i < numberOfVertices; i++) {
-        parent[i] = -1; intree[i] = 0; distToTree[i] = MAX_DIST;
+    for (int i = 0; i < n; i++) {
+        parent[i] = -1; intree[i] = 0; distToTree[i] = INF;
     }
 
     priority_queue<edge> unvisited;
