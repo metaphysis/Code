@@ -80,16 +80,12 @@ int main(int argc, char *argv[])
         {
             getline(cin, line);
             istringstream iss(line);
-            
             iss >> word;
-            if (indexer.find(word) == indexer.end())
-                indexer[word] = ++cnt;
-                
+            if (indexer.find(word) == indexer.end()) indexer[word] = ++cnt;
             while (iss >> definition)
             {
-                if (indexer.find(definition) == indexer.end())
-                    indexer[definition] = ++cnt;
-                edges[indexer[definition]].push_back(indexer[word]);
+                if (indexer.find(definition) == indexer.end()) indexer[definition] = ++cnt;
+                edges[indexer[word]].push_back(indexer[definition]);
             }
         }
         
@@ -101,27 +97,19 @@ int main(int argc, char *argv[])
         for (int u = 1; u <= cnt; u++)
             number[scc[u]]++;
 
-        int minu = -1;
-        for (int u = 1; u <= cscc; u++)
-            if (number[u] > 1 &&  (minu == -1 || number[u] < number[minu]))
-                minu = u;
-        if (minu == -1) cout << "0\n";
-        else
+        vector<string> dict;
+        for (auto p : indexer)
+            if (number[scc[p.second]] > 1)
+                dict.push_back(p.first);
+                
+        sort(dict.begin(), dict.end());
+        cout << dict.size() << '\n';
+        for (int i = 0; i < dict.size(); i++)
         {
-            vector<string> dict;
-            for (auto p : indexer)
-                if (scc[p.second] == minu)
-                    dict.push_back(p.first);
-                    
-            sort(dict.begin(), dict.end());
-            cout << dict.size() << '\n';
-            for (int i = 0; i < dict.size(); i++)
-            {
-                if (i) cout << ' ';
-                cout << dict[i];
-            }
-            cout << '\n';
-        }      
+            if (i) cout << ' ';
+            cout << dict[i];
+        }
+        cout << '\n';   
     }
     
     return 0;

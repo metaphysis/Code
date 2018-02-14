@@ -45,6 +45,7 @@ bool spfa()
     for (int i = 1; i <= n; i++)
     {
         dist[i] = INF, visited[i] = 1, counter[i] = 0;
+        // 因为原图不一定是强连通的，故需要从每个顶点开始更新最短路径。
         q.push(i);
     }
 

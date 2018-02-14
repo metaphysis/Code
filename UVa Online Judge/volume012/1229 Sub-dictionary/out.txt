@@ -1,4 +1,4 @@
-3
-e f g
-3
-e f g
+6
+a b c e f g
+6
+a b c e f g
