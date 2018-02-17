@@ -1,0 +1,300 @@
+Case #1:
+33.7294
+
+Case #2:
+46.9007
+
+Case #3:
+Send Kurdy
+
+Case #4:
+35.5350
+
+Case #5:
+Send Kurdy
+
+Case #6:
+Send Kurdy
+
+Case #7:
+Send Kurdy
+
+Case #8:
+39.1091
+
+Case #9:
+Send Kurdy
+
+Case #10:
+Send Kurdy
+
+Case #11:
+Send Kurdy
+
+Case #12:
+Send Kurdy
+
+Case #13:
+Send Kurdy
+
+Case #14:
+Send Kurdy
+
+Case #15:
+Send Kurdy
+
+Case #16:
+33.2105
+
+Case #17:
+43.5692
+
+Case #18:
+51.4104
+
+Case #19:
+Send Kurdy
+
+Case #20:
+55.6311
+
+Case #21:
+Send Kurdy
+
+Case #22:
+Send Kurdy
+
+Case #23:
+Send Kurdy
+
+Case #24:
+Send Kurdy
+
+Case #25:
+42.5994
+
+Case #26:
+52.3983
+
+Case #27:
+Send Kurdy
+
+Case #28:
+Send Kurdy
+
+Case #29:
+42.1124
+
+Case #30:
+Send Kurdy
+
+Case #31:
+Send Kurdy
+
+Case #32:
+Send Kurdy
+
+Case #33:
+39.9009
+
+Case #34:
+Send Kurdy
+
+Case #35:
+Send Kurdy
+
+Case #36:
+42.7884
+
+Case #37:
+34.6679
+
+Case #38:
+Send Kurdy
+
+Case #39:
+46.6219
+
+Case #40:
+63.6518
+
+Case #41:
+Send Kurdy
+
+Case #42:
+42.2231
+
+Case #43:
+45.3513
+
+Case #44:
+Send Kurdy
+
+Case #45:
+33.1942
+
+Case #46:
+Send Kurdy
+
+Case #47:
+Send Kurdy
+
+Case #48:
+Send Kurdy
+
+Case #49:
+Send Kurdy
+
+Case #50:
+Send Kurdy
+
+Case #51:
+Send Kurdy
+
+Case #52:
+Send Kurdy
+
+Case #53:
+Send Kurdy
+
+Case #54:
+Send Kurdy
+
+Case #55:
+15.1333
+
+Case #56:
+39.0285
+
+Case #57:
+Send Kurdy
+
+Case #58:
+Send Kurdy
+
+Case #59:
+Send Kurdy
+
+Case #60:
+43.2605
+
+Case #61:
+Send Kurdy
+
+Case #62:
+43.4439
+
+Case #63:
+Send Kurdy
+
+Case #64:
+36.7107
+
+Case #65:
+41.2372
+
+Case #66:
+32.9975
+
+Case #67:
+39.6249
+
+Case #68:
+Send Kurdy
+
+Case #69:
+Send Kurdy
+
+Case #70:
+Send Kurdy
+
+Case #71:
+Send Kurdy
+
+Case #72:
+37.3681
+
+Case #73:
+Send Kurdy
+
+Case #74:
+Send Kurdy
+
+Case #75:
+Send Kurdy
+
+Case #76:
+Send Kurdy
+
+Case #77:
+Send Kurdy
+
+Case #78:
+Send Kurdy
+
+Case #79:
+34.9258
+
+Case #80:
+32.9823
+
+Case #81:
+50.5063
+
+Case #82:
+Send Kurdy
+
+Case #83:
+38.3783
+
+Case #84:
+Send Kurdy
+
+Case #85:
+43.6706
+
+Case #86:
+45.2472
+
+Case #87:
+Send Kurdy
+
+Case #88:
+Send Kurdy
+
+Case #89:
+48.0353
+
+Case #90:
+Send Kurdy
+
+Case #91:
+52.5313
+
+Case #92:
+Send Kurdy
+
+Case #93:
+31.3206
+
+Case #94:
+35.7836
+
+Case #95:
+Send Kurdy
+
+Case #96:
+46.0373
+
+Case #97:
+Send Kurdy
+
+Case #98:
+38.2352
+
+Case #99:
+Send Kurdy
+
+Case #100:
+46.0465
+

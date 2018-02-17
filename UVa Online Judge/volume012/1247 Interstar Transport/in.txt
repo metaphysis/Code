@@ -1,0 +1,24 @@
+5 7
+A B 1
+B C 2
+C D 3
+D E 2
+E A 1
+A D 3
+A C 4
+3
+B D
+A D
+E C
+8 9
+C D 10 
+D E 20
+E K 10
+C A 11
+A B 9
+B J 10
+J K 10
+C F 35
+K F 5
+1 
+C K
