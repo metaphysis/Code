@@ -45,6 +45,19 @@ void dfs(int i, int j)
     }
 }
 
+void dfs1(int i, int j, int topmost)
+{
+    if (topmost) cout << letter[i] << ' ';
+    int k = path[i][j];
+    if (k > 0)
+    {
+        if (i != k) dfs1(i, k, 0);
+        if (i != k && j != k) cout << letter[k] << ' ';
+        if (j != k) dfs1(k, j, 0);
+    }
+    if (topmost) cout << letter[j] << '\n';
+}
+
 int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
@@ -97,8 +110,11 @@ int main(int argc, char *argv[])
         {
             cin >> from >> to;
             u = indexer[from], v = indexer[to];
-            dfs(u, v);
-            cout << to << '\n';
+
+            //dfs(u, v);
+            //cout << to << '\n';
+
+            dfs1(u, v, 1);
         }
     }
 
