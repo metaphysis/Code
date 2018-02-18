@@ -31,31 +31,18 @@ const int MAXV = 32, INF = 0x3f3f3f3f;
 
 char from, to;
 int n, m, q, u, v, vv, w, cnt;
-int dist[MAXV][MAXV], path[MAXV][MAXV], step[MAXV][MAXV];
+int dist[MAXV][MAXV], parent[MAXV][MAXV], step[MAXV][MAXV];
 map<char, int> indexer;
 map<int, char> letter;
 
-void dfs(int i, int j)
+void printPath(int i, int j)
 {
-    if (path[i][j] == -1) cout << letter[i] << ' ';
-    else
+    if (i != j)
     {
-        dfs(i, path[i][j]);
-        dfs(path[i][j], j);
+        printPath(i, parent[i][j]);
+        cout << ' ';
     }
-}
-
-void dfs1(int i, int j, int topmost)
-{
-    if (topmost) cout << letter[i] << ' ';
-    int k = path[i][j];
-    if (k > 0)
-    {
-        if (i != k) dfs1(i, k, 0);
-        if (i != k && j != k) cout << letter[k] << ' ';
-        if (j != k) dfs1(k, j, 0);
-    }
-    if (topmost) cout << letter[j] << '\n';
+    cout << letter[j];
 }
 
 int main(int argc, char *argv[])
@@ -69,7 +56,6 @@ int main(int argc, char *argv[])
         letter.clear();
         memset(dist, 0x3f, sizeof(dist));
         memset(step, 0x3f, sizeof(step));
-        memset(path, -1, sizeof(path));
 
         for (int i = 1; i <= m; i++)
         {
@@ -90,6 +76,10 @@ int main(int argc, char *argv[])
         }
         for (int i = 1; i <= n; i++) dist[i][i] = step[i][i] = 0;
 
+        for (int i = 1; i <= n; i++)
+            for (int j = 1; j <= n; j++)
+                parent[i][j] = i;
+
         for (int k = 1; k <= n; k++)
             for (int i = 1; i <= n; i++)
                 for (int j = 1; j <= n; j++)
@@ -97,12 +87,12 @@ int main(int argc, char *argv[])
                     {
                         dist[i][j] = dist[i][k] + dist[k][j];
                         step[i][j] = step[i][k] + step[k][j];
-                        path[i][j] = k;
+                        parent[i][j] = parent[k][j];
                     }
                     else if (dist[i][j] == dist[i][k] + dist[k][j] && step[i][j] > step[i][k] + step[k][j])
                     {
                         step[i][j] = step[i][k] + step[k][j];
-                        path[i][j] = k;
+                        parent[i][j] = parent[k][j];
                     }
 
         cin >> q;
@@ -110,11 +100,8 @@ int main(int argc, char *argv[])
         {
             cin >> from >> to;
             u = indexer[from], v = indexer[to];
-
-            //dfs(u, v);
-            //cout << to << '\n';
-
-            dfs1(u, v, 1);
+            printPath(u, v);
+            cout << '\n';
         }
     }
 
