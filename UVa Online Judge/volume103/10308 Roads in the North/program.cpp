@@ -73,11 +73,11 @@ int main(int argc, char *argv[])
         } while (getline(cin, line), line.length() > 0);
         
         memset(visited, 0, sizeof(visited));
-        maxD = 0;
+        maxD = -1;
         dfs(s, 0);
         
         memset(visited, 0, sizeof(visited));
-        maxD = 0;
+        maxD = -1;
         dfs(t, 0);
         
         cout << maxD << '\n';
