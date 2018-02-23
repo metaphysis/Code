@@ -1,0 +1,5 @@
+Minimum exchange operations : 6
+Minimum exchange operations : 16
+Minimum exchange operations : 0
+Minimum exchange operations : 19
+Minimum exchange operations : 485
