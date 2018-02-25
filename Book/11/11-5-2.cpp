@@ -1,94 +1,70 @@
-#include <algorithm>
-#include <bitset>
-#include <cassert>
-#include <cmath>
-#include <cstring>
-#include <iomanip>
 #include <iostream>
-#include <limits>
-#include <list>
-#include <map>
-#include <numeric>
-#include <queue>
-#include <set>
-#include <sstream>
-#include <stack>
-#include <unordered_map>
-#include <unordered_set>
-#include <vector>
+#include <algorithm>
+#include <string>
+#include <cstring>
 
 using namespace std;
 
-const int INF = 0x3fffffff;
+const int IMINUS_JMINUS = 1, IMINUS = 2, JMINUS = 3;
 
-int n;
-int denom[110];
-int coins[10010], parent[10010], idx[10010], cnt[110];
-
-void findPath(int money)
+struct state
 {
-    if (money > 0)
-    {
-        cnt[idx[money]]++;
-        findPath(parent[money]);
-    }
-}
+    int length, from;
+};
 
-void findMiniumCoins(int money)
+void lcs(string &s, string &t)
 {
-    fill(coins, coins + 10010, INF);
-    fill(cnt, cnt + 110, 0);
+    // 备忘数组，记录最长公共子序列的长度。
+    state memo[s.length() + 1][t.length() + 1];
 
-    coins[0] = 0;
-    for (int m = 1; m <= money; m++)
+    memset(memo, 0, sizeof(memo));
+
+    for (int i = 1; i <= s.length(); i++)
+        for (int j = 1; j <= t.length(); j++)
+            if (s[i - 1] == t[j - 1])
+            {
+                if (memo[i][j].length < memo[i - 1][j - 1].length + 1)
+                {
+                    memo[i][j].length = memo[i - 1][j - 1].length + 1;
+                    memo[i][j].from = IMINUS_JMINUS;
+                }
+            }
+            else
+            {
+                if (memo[i][j].length < memo[i - 1][j].length)
+                    memo[i][j].length = memo[i - 1][j].length, memo[i][j].from = IMINUS;
+                if (memo[i][j].length < memo[i][j - 1].length)
+                    memo[i][j].length = memo[i][j - 1].length, memo[i][j].from = JMINUS;
+            }
+
+    cout << "LCS: length = " << memo[s.length()][t.length()].length;
+
+    // 根据备忘数组回溯得到最长公共子序列的组成，如果最长公共子序列不唯一，
+    // 此处所得到的组成只是其中的一种。
+    string subsequence;
+    int endi = s.length(), endj = t.length();
+    while (memo[endi][endj].from)
     {
-        int minCoins = INF, minIdx = INF;
-        for (int d = 0; d < n; d++)
-            if (m >= denom[d] && coins[m - denom[d]] != INF &&
-                minCoins > (coins[m - denom[d]] + 1))
-                minCoins = coins[m - denom[d]] + 1, minIdx = d;
-
-        if (minIdx != INF)
+        if (memo[endi][endj].from == IMINUS_JMINUS)
         {
-            coins[m] = minCoins;
-            parent[m] = m - denom[minIdx];
-            idx[m] = minIdx;
+            subsequence.push_back(s[endi - 1]);
+            endi -= 1, endj -= 1;
+        }
+        else 
+        {
+            if (memo[endi][endj].from == IMINUS) endi -= 1;
+            else endj -= 1;
         }
     }
+    reverse(subsequence.begin(), subsequence.end());
 
-    if (coins[money] == INF)
-        cout << "No solution." << endl;
-    else
-    {
-        cout << coins[money];
-
-        findPath(money);
-
-        int plusPrinted = 0;
-        for (int i = 0; i < n; i++)
-            if (cnt[i] > 0)
-            {
-                cout << (plusPrinted++ ? "+" : " ");
-                cout << denom[i] << "*" << cnt[i];
-            }
-        cout << endl;
-    }
+    cout << " subsequence = " << subsequence << '\n';
 }
 
 int main(int argc, char *argv[])
 {
-    double money;
-    while (cin >> n, n)
-    {
-        for (int i = 0; i < n; i++)
-            cin >> denom[i];
-
-        sort(denom, denom + n);
-        n = unique(denom, denom + n) - denom;
-
-        cin >> money;
-        findMiniumCoins((int)(money * 100.0 + 0.5));
-    }
+    string s, t;
+    while (cin >> s >> t) lcs(s, t);
 
     return 0;
 }
