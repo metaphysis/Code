@@ -1,0 +1,6 @@
+Case 1: 1.079
+Case 2: 0.114
+Case 3: 0.135
+Case 4: can't determine
+Case 5: can't determine
+Case 6: can't determine
