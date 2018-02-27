@@ -1,0 +1,19 @@
+Scenario 1:
+     up hill              20.00 sec
+     well diameter        36.00 in
+     water level          72.00 in
+     bucket volume         2.00 cu ft
+     bucket ascent rate   10.00 in/sec
+     down hill            18.00 sec
+     required volume      10.00 cu ft
+     TIME REQUIRED       232.59 sec
+
+Scenario 2:
+     up hill              25.00 sec
+     well diameter        72.00 in
+     water level         200.00 in
+     bucket volume         1.50 cu ft
+     bucket ascent rate    8.00 in/sec
+     down hill            30.00 sec
+     required volume      20.00 cu ft
+     TIME REQUIRED      1141.63 sec

@@ -1,4 +1,4 @@
-// A flea on a chessboard
+// A Flea on a Chessboard
 // UVa ID: 10620
 // Verdict: Accepted
 // Submission Date: 2016-08-02
