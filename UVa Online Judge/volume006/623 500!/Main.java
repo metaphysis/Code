@@ -21,7 +21,7 @@ public class Main
         
         BufferedReader stdin = new BufferedReader(new InputStreamReader(System.in));
         String line;
-	    while ((line = stdin.readLine())!= null)
+	    while ((line = stdin.readLine()) != null)
 	    {
 	        int n = Integer.parseInt(line);
 		    System.out.println(line + "!");
