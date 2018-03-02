@@ -1,0 +1,4 @@
+Bill #1 costs 16200000000: each friend should pay 5400000000
+
+Bill #2 costs 19800000001: each friend should pay 9900000000
+
