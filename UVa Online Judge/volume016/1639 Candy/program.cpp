@@ -36,10 +36,10 @@ int main(int argc, char *argv[])
 
     long double logn[2 * MAXN] = {0.0};
     for (int i = 1; i <= MAXN; i++) logn[i] = log(i) + logn[i - 1];
-        
+
     int cases = 0, n;
     long double p;
-    
+
     while (cin >> n >> p)
     {
         cout << "Case " << ++cases << ": ";
@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
             cout << fixed << setprecision(6) << double(n) << '\n';
             continue;
         }
-        
+
         long double expected = 0.0, logp = log(p), log1_p = log(1.0 - p);
         for (int i = 1; i <= n; i++)
         {
@@ -58,7 +58,7 @@ int main(int argc, char *argv[])
             long double e2 = c + (n + 1) * log1_p + (n - i) * logp;
             expected += (exp(e1) + exp(e2)) * i;
         }
-        
+
         cout << fixed << setprecision(6) << expected << '\n';
     }
     
