@@ -1,0 +1,4 @@
+The parity of 1 is 1 (mod 2).
+The parity of 10 is 1 (mod 2).
+The parity of 1010 is 2 (mod 2).
+The parity of 10101 is 3 (mod 2).
