@@ -1,8 +1,8 @@
 // The 3-Regular Graph
 // UVa ID: 11387
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2018-03-04
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
@@ -27,6 +27,18 @@
 
 using namespace std;
 
+struct vertex
+{
+    int idx, degree;
+    vertex (int idx = 0, int degree = 0): idx(idx), degree(degree) {}
+    bool operator<(const vertex &v) const 
+    {
+        if (degree != v.degree)
+            return degree > v.degree;
+        return idx < v.idx;
+    }
+};
+
 int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
@@ -38,17 +50,19 @@ int main(int argc, char *argv[])
         else
         {
             cout << 3 * n / 2 << '\n';
+            vector<vertex> vertices;
             for (int i = 1; i <= n; i++)
+                vertices.push_back(vertex(i, 3));
+            while (vertices.size() > 0)
             {
-                int j = (i + 1) % n;
-                if (j == 0) j = n;
-                cout << i << ' ' << j << '\n';
-            }
-            for (int i = 1; i < n - 1; i++)
-            {
-                int j = (i + 2) % n;
-                if (j == 0) j = n;
-                cout << i << ' ' << j << '\n';
+                sort(vertices.begin(), vertices.end());
+                for (int i = 0, j = 1; i < vertices.front().degree; i++, j++)
+                {
+                    cout << vertices.front().idx << ' ';
+                    cout << vertices[j].idx << '\n';
+                    vertices[j].degree--;
+                }
+                vertices.erase(vertices.begin());
             }
         }
     }

@@ -1,0 +1,2000 @@
+Case #1: It is not a B2-Sequence.
+
+Case #2: It is not a B2-Sequence.
+
+Case #3: It is not a B2-Sequence.
+
+Case #4: It is not a B2-Sequence.
+
+Case #5: It is not a B2-Sequence.
+
+Case #6: It is not a B2-Sequence.
+
+Case #7: It is a B2-Sequence.
+
+Case #8: It is not a B2-Sequence.
+
+Case #9: It is not a B2-Sequence.
+
+Case #10: It is not a B2-Sequence.
+
+Case #11: It is not a B2-Sequence.
+
+Case #12: It is not a B2-Sequence.
+
+Case #13: It is not a B2-Sequence.
+
+Case #14: It is not a B2-Sequence.
+
+Case #15: It is not a B2-Sequence.
+
+Case #16: It is not a B2-Sequence.
+
+Case #17: It is not a B2-Sequence.
+
+Case #18: It is not a B2-Sequence.
+
+Case #19: It is a B2-Sequence.
+
+Case #20: It is not a B2-Sequence.
+
+Case #21: It is a B2-Sequence.
+
+Case #22: It is not a B2-Sequence.
+
+Case #23: It is not a B2-Sequence.
+
+Case #24: It is not a B2-Sequence.
+
+Case #25: It is not a B2-Sequence.
+
+Case #26: It is not a B2-Sequence.
+
+Case #27: It is not a B2-Sequence.
+
+Case #28: It is not a B2-Sequence.
+
+Case #29: It is not a B2-Sequence.
+
+Case #30: It is not a B2-Sequence.
+
+Case #31: It is a B2-Sequence.
+
+Case #32: It is not a B2-Sequence.
+
+Case #33: It is not a B2-Sequence.
+
+Case #34: It is not a B2-Sequence.
+
+Case #35: It is not a B2-Sequence.
+
+Case #36: It is not a B2-Sequence.
+
+Case #37: It is a B2-Sequence.
+
+Case #38: It is not a B2-Sequence.
+
+Case #39: It is not a B2-Sequence.
+
+Case #40: It is not a B2-Sequence.
+
+Case #41: It is a B2-Sequence.
+
+Case #42: It is a B2-Sequence.
+
+Case #43: It is not a B2-Sequence.
+
+Case #44: It is not a B2-Sequence.
+
+Case #45: It is a B2-Sequence.
+
+Case #46: It is not a B2-Sequence.
+
+Case #47: It is not a B2-Sequence.
+
+Case #48: It is not a B2-Sequence.
+
+Case #49: It is not a B2-Sequence.
+
+Case #50: It is not a B2-Sequence.
+
+Case #51: It is not a B2-Sequence.
+
+Case #52: It is not a B2-Sequence.
+
+Case #53: It is not a B2-Sequence.
+
+Case #54: It is not a B2-Sequence.
+
+Case #55: It is not a B2-Sequence.
+
+Case #56: It is not a B2-Sequence.
+
+Case #57: It is not a B2-Sequence.
+
+Case #58: It is not a B2-Sequence.
+
+Case #59: It is not a B2-Sequence.
+
+Case #60: It is not a B2-Sequence.
+
+Case #61: It is not a B2-Sequence.
+
+Case #62: It is not a B2-Sequence.
+
+Case #63: It is not a B2-Sequence.
+
+Case #64: It is not a B2-Sequence.
+
+Case #65: It is not a B2-Sequence.
+
+Case #66: It is not a B2-Sequence.
+
+Case #67: It is not a B2-Sequence.
+
+Case #68: It is not a B2-Sequence.
+
+Case #69: It is not a B2-Sequence.
+
+Case #70: It is not a B2-Sequence.
+
+Case #71: It is a B2-Sequence.
+
+Case #72: It is not a B2-Sequence.
+
+Case #73: It is not a B2-Sequence.
+
+Case #74: It is not a B2-Sequence.
+
+Case #75: It is not a B2-Sequence.
+
+Case #76: It is not a B2-Sequence.
+
+Case #77: It is not a B2-Sequence.
+
+Case #78: It is not a B2-Sequence.
+
+Case #79: It is not a B2-Sequence.
+
+Case #80: It is not a B2-Sequence.
+
+Case #81: It is a B2-Sequence.
+
+Case #82: It is not a B2-Sequence.
+
+Case #83: It is not a B2-Sequence.
+
+Case #84: It is not a B2-Sequence.
+
+Case #85: It is not a B2-Sequence.
+
+Case #86: It is not a B2-Sequence.
+
+Case #87: It is not a B2-Sequence.
+
+Case #88: It is not a B2-Sequence.
+
+Case #89: It is a B2-Sequence.
+
+Case #90: It is not a B2-Sequence.
+
+Case #91: It is not a B2-Sequence.
+
+Case #92: It is not a B2-Sequence.
+
+Case #93: It is not a B2-Sequence.
+
+Case #94: It is not a B2-Sequence.
+
+Case #95: It is not a B2-Sequence.
+
+Case #96: It is a B2-Sequence.
+
+Case #97: It is a B2-Sequence.
+
+Case #98: It is not a B2-Sequence.
+
+Case #99: It is not a B2-Sequence.
+
+Case #100: It is not a B2-Sequence.
+
+Case #101: It is not a B2-Sequence.
+
+Case #102: It is a B2-Sequence.
+
+Case #103: It is not a B2-Sequence.
+
+Case #104: It is not a B2-Sequence.
+
+Case #105: It is not a B2-Sequence.
+
+Case #106: It is not a B2-Sequence.
+
+Case #107: It is not a B2-Sequence.
+
+Case #108: It is a B2-Sequence.
+
+Case #109: It is a B2-Sequence.
+
+Case #110: It is not a B2-Sequence.
+
+Case #111: It is a B2-Sequence.
+
+Case #112: It is not a B2-Sequence.
+
+Case #113: It is not a B2-Sequence.
+
+Case #114: It is a B2-Sequence.
+
+Case #115: It is not a B2-Sequence.
+
+Case #116: It is not a B2-Sequence.
+
+Case #117: It is not a B2-Sequence.
+
+Case #118: It is a B2-Sequence.
+
+Case #119: It is not a B2-Sequence.
+
+Case #120: It is not a B2-Sequence.
+
+Case #121: It is not a B2-Sequence.
+
+Case #122: It is a B2-Sequence.
+
+Case #123: It is not a B2-Sequence.
+
+Case #124: It is not a B2-Sequence.
+
+Case #125: It is not a B2-Sequence.
+
+Case #126: It is not a B2-Sequence.
+
+Case #127: It is not a B2-Sequence.
+
+Case #128: It is a B2-Sequence.
+
+Case #129: It is not a B2-Sequence.
+
+Case #130: It is not a B2-Sequence.
+
+Case #131: It is not a B2-Sequence.
+
+Case #132: It is not a B2-Sequence.
+
+Case #133: It is not a B2-Sequence.
+
+Case #134: It is not a B2-Sequence.
+
+Case #135: It is not a B2-Sequence.
+
+Case #136: It is not a B2-Sequence.
+
+Case #137: It is a B2-Sequence.
+
+Case #138: It is not a B2-Sequence.
+
+Case #139: It is not a B2-Sequence.
+
+Case #140: It is a B2-Sequence.
+
+Case #141: It is not a B2-Sequence.
+
+Case #142: It is not a B2-Sequence.
+
+Case #143: It is not a B2-Sequence.
+
+Case #144: It is not a B2-Sequence.
+
+Case #145: It is not a B2-Sequence.
+
+Case #146: It is not a B2-Sequence.
+
+Case #147: It is a B2-Sequence.
+
+Case #148: It is a B2-Sequence.
+
+Case #149: It is not a B2-Sequence.
+
+Case #150: It is not a B2-Sequence.
+
+Case #151: It is not a B2-Sequence.
+
+Case #152: It is not a B2-Sequence.
+
+Case #153: It is not a B2-Sequence.
+
+Case #154: It is not a B2-Sequence.
+
+Case #155: It is not a B2-Sequence.
+
+Case #156: It is not a B2-Sequence.
+
+Case #157: It is not a B2-Sequence.
+
+Case #158: It is not a B2-Sequence.
+
+Case #159: It is not a B2-Sequence.
+
+Case #160: It is not a B2-Sequence.
+
+Case #161: It is not a B2-Sequence.
+
+Case #162: It is not a B2-Sequence.
+
+Case #163: It is not a B2-Sequence.
+
+Case #164: It is not a B2-Sequence.
+
+Case #165: It is not a B2-Sequence.
+
+Case #166: It is not a B2-Sequence.
+
+Case #167: It is not a B2-Sequence.
+
+Case #168: It is not a B2-Sequence.
+
+Case #169: It is not a B2-Sequence.
+
+Case #170: It is not a B2-Sequence.
+
+Case #171: It is a B2-Sequence.
+
+Case #172: It is not a B2-Sequence.
+
+Case #173: It is not a B2-Sequence.
+
+Case #174: It is not a B2-Sequence.
+
+Case #175: It is not a B2-Sequence.
+
+Case #176: It is not a B2-Sequence.
+
+Case #177: It is a B2-Sequence.
+
+Case #178: It is not a B2-Sequence.
+
+Case #179: It is a B2-Sequence.
+
+Case #180: It is a B2-Sequence.
+
+Case #181: It is not a B2-Sequence.
+
+Case #182: It is not a B2-Sequence.
+
+Case #183: It is not a B2-Sequence.
+
+Case #184: It is not a B2-Sequence.
+
+Case #185: It is not a B2-Sequence.
+
+Case #186: It is not a B2-Sequence.
+
+Case #187: It is not a B2-Sequence.
+
+Case #188: It is not a B2-Sequence.
+
+Case #189: It is not a B2-Sequence.
+
+Case #190: It is not a B2-Sequence.
+
+Case #191: It is not a B2-Sequence.
+
+Case #192: It is not a B2-Sequence.
+
+Case #193: It is not a B2-Sequence.
+
+Case #194: It is not a B2-Sequence.
+
+Case #195: It is not a B2-Sequence.
+
+Case #196: It is not a B2-Sequence.
+
+Case #197: It is not a B2-Sequence.
+
+Case #198: It is not a B2-Sequence.
+
+Case #199: It is not a B2-Sequence.
+
+Case #200: It is not a B2-Sequence.
+
+Case #201: It is not a B2-Sequence.
+
+Case #202: It is not a B2-Sequence.
+
+Case #203: It is not a B2-Sequence.
+
+Case #204: It is not a B2-Sequence.
+
+Case #205: It is not a B2-Sequence.
+
+Case #206: It is not a B2-Sequence.
+
+Case #207: It is not a B2-Sequence.
+
+Case #208: It is not a B2-Sequence.
+
+Case #209: It is not a B2-Sequence.
+
+Case #210: It is not a B2-Sequence.
+
+Case #211: It is a B2-Sequence.
+
+Case #212: It is not a B2-Sequence.
+
+Case #213: It is not a B2-Sequence.
+
+Case #214: It is a B2-Sequence.
+
+Case #215: It is not a B2-Sequence.
+
+Case #216: It is not a B2-Sequence.
+
+Case #217: It is not a B2-Sequence.
+
+Case #218: It is not a B2-Sequence.
+
+Case #219: It is not a B2-Sequence.
+
+Case #220: It is a B2-Sequence.
+
+Case #221: It is not a B2-Sequence.
+
+Case #222: It is not a B2-Sequence.
+
+Case #223: It is not a B2-Sequence.
+
+Case #224: It is not a B2-Sequence.
+
+Case #225: It is not a B2-Sequence.
+
+Case #226: It is a B2-Sequence.
+
+Case #227: It is not a B2-Sequence.
+
+Case #228: It is not a B2-Sequence.
+
+Case #229: It is not a B2-Sequence.
+
+Case #230: It is not a B2-Sequence.
+
+Case #231: It is not a B2-Sequence.
+
+Case #232: It is a B2-Sequence.
+
+Case #233: It is a B2-Sequence.
+
+Case #234: It is not a B2-Sequence.
+
+Case #235: It is not a B2-Sequence.
+
+Case #236: It is not a B2-Sequence.
+
+Case #237: It is not a B2-Sequence.
+
+Case #238: It is not a B2-Sequence.
+
+Case #239: It is not a B2-Sequence.
+
+Case #240: It is a B2-Sequence.
+
+Case #241: It is a B2-Sequence.
+
+Case #242: It is not a B2-Sequence.
+
+Case #243: It is a B2-Sequence.
+
+Case #244: It is not a B2-Sequence.
+
+Case #245: It is a B2-Sequence.
+
+Case #246: It is not a B2-Sequence.
+
+Case #247: It is not a B2-Sequence.
+
+Case #248: It is not a B2-Sequence.
+
+Case #249: It is not a B2-Sequence.
+
+Case #250: It is not a B2-Sequence.
+
+Case #251: It is not a B2-Sequence.
+
+Case #252: It is a B2-Sequence.
+
+Case #253: It is not a B2-Sequence.
+
+Case #254: It is not a B2-Sequence.
+
+Case #255: It is not a B2-Sequence.
+
+Case #256: It is not a B2-Sequence.
+
+Case #257: It is not a B2-Sequence.
+
+Case #258: It is not a B2-Sequence.
+
+Case #259: It is not a B2-Sequence.
+
+Case #260: It is not a B2-Sequence.
+
+Case #261: It is not a B2-Sequence.
+
+Case #262: It is a B2-Sequence.
+
+Case #263: It is not a B2-Sequence.
+
+Case #264: It is not a B2-Sequence.
+
+Case #265: It is not a B2-Sequence.
+
+Case #266: It is not a B2-Sequence.
+
+Case #267: It is not a B2-Sequence.
+
+Case #268: It is not a B2-Sequence.
+
+Case #269: It is not a B2-Sequence.
+
+Case #270: It is a B2-Sequence.
+
+Case #271: It is not a B2-Sequence.
+
+Case #272: It is not a B2-Sequence.
+
+Case #273: It is not a B2-Sequence.
+
+Case #274: It is not a B2-Sequence.
+
+Case #275: It is not a B2-Sequence.
+
+Case #276: It is not a B2-Sequence.
+
+Case #277: It is not a B2-Sequence.
+
+Case #278: It is not a B2-Sequence.
+
+Case #279: It is not a B2-Sequence.
+
+Case #280: It is a B2-Sequence.
+
+Case #281: It is a B2-Sequence.
+
+Case #282: It is a B2-Sequence.
+
+Case #283: It is a B2-Sequence.
+
+Case #284: It is not a B2-Sequence.
+
+Case #285: It is not a B2-Sequence.
+
+Case #286: It is a B2-Sequence.
+
+Case #287: It is a B2-Sequence.
+
+Case #288: It is not a B2-Sequence.
+
+Case #289: It is not a B2-Sequence.
+
+Case #290: It is not a B2-Sequence.
+
+Case #291: It is not a B2-Sequence.
+
+Case #292: It is not a B2-Sequence.
+
+Case #293: It is not a B2-Sequence.
+
+Case #294: It is not a B2-Sequence.
+
+Case #295: It is not a B2-Sequence.
+
+Case #296: It is not a B2-Sequence.
+
+Case #297: It is not a B2-Sequence.
+
+Case #298: It is not a B2-Sequence.
+
+Case #299: It is not a B2-Sequence.
+
+Case #300: It is not a B2-Sequence.
+
+Case #301: It is not a B2-Sequence.
+
+Case #302: It is not a B2-Sequence.
+
+Case #303: It is not a B2-Sequence.
+
+Case #304: It is not a B2-Sequence.
+
+Case #305: It is not a B2-Sequence.
+
+Case #306: It is not a B2-Sequence.
+
+Case #307: It is not a B2-Sequence.
+
+Case #308: It is not a B2-Sequence.
+
+Case #309: It is not a B2-Sequence.
+
+Case #310: It is not a B2-Sequence.
+
+Case #311: It is a B2-Sequence.
+
+Case #312: It is not a B2-Sequence.
+
+Case #313: It is not a B2-Sequence.
+
+Case #314: It is not a B2-Sequence.
+
+Case #315: It is not a B2-Sequence.
+
+Case #316: It is not a B2-Sequence.
+
+Case #317: It is not a B2-Sequence.
+
+Case #318: It is a B2-Sequence.
+
+Case #319: It is not a B2-Sequence.
+
+Case #320: It is not a B2-Sequence.
+
+Case #321: It is not a B2-Sequence.
+
+Case #322: It is not a B2-Sequence.
+
+Case #323: It is not a B2-Sequence.
+
+Case #324: It is not a B2-Sequence.
+
+Case #325: It is not a B2-Sequence.
+
+Case #326: It is a B2-Sequence.
+
+Case #327: It is not a B2-Sequence.
+
+Case #328: It is not a B2-Sequence.
+
+Case #329: It is not a B2-Sequence.
+
+Case #330: It is not a B2-Sequence.
+
+Case #331: It is a B2-Sequence.
+
+Case #332: It is not a B2-Sequence.
+
+Case #333: It is not a B2-Sequence.
+
+Case #334: It is not a B2-Sequence.
+
+Case #335: It is not a B2-Sequence.
+
+Case #336: It is not a B2-Sequence.
+
+Case #337: It is not a B2-Sequence.
+
+Case #338: It is not a B2-Sequence.
+
+Case #339: It is not a B2-Sequence.
+
+Case #340: It is not a B2-Sequence.
+
+Case #341: It is not a B2-Sequence.
+
+Case #342: It is not a B2-Sequence.
+
+Case #343: It is not a B2-Sequence.
+
+Case #344: It is not a B2-Sequence.
+
+Case #345: It is not a B2-Sequence.
+
+Case #346: It is not a B2-Sequence.
+
+Case #347: It is not a B2-Sequence.
+
+Case #348: It is not a B2-Sequence.
+
+Case #349: It is a B2-Sequence.
+
+Case #350: It is not a B2-Sequence.
+
+Case #351: It is not a B2-Sequence.
+
+Case #352: It is not a B2-Sequence.
+
+Case #353: It is not a B2-Sequence.
+
+Case #354: It is not a B2-Sequence.
+
+Case #355: It is not a B2-Sequence.
+
+Case #356: It is not a B2-Sequence.
+
+Case #357: It is a B2-Sequence.
+
+Case #358: It is not a B2-Sequence.
+
+Case #359: It is a B2-Sequence.
+
+Case #360: It is a B2-Sequence.
+
+Case #361: It is not a B2-Sequence.
+
+Case #362: It is not a B2-Sequence.
+
+Case #363: It is not a B2-Sequence.
+
+Case #364: It is a B2-Sequence.
+
+Case #365: It is not a B2-Sequence.
+
+Case #366: It is a B2-Sequence.
+
+Case #367: It is not a B2-Sequence.
+
+Case #368: It is not a B2-Sequence.
+
+Case #369: It is not a B2-Sequence.
+
+Case #370: It is not a B2-Sequence.
+
+Case #371: It is not a B2-Sequence.
+
+Case #372: It is not a B2-Sequence.
+
+Case #373: It is not a B2-Sequence.
+
+Case #374: It is not a B2-Sequence.
+
+Case #375: It is not a B2-Sequence.
+
+Case #376: It is not a B2-Sequence.
+
+Case #377: It is not a B2-Sequence.
+
+Case #378: It is a B2-Sequence.
+
+Case #379: It is a B2-Sequence.
+
+Case #380: It is not a B2-Sequence.
+
+Case #381: It is not a B2-Sequence.
+
+Case #382: It is not a B2-Sequence.
+
+Case #383: It is not a B2-Sequence.
+
+Case #384: It is a B2-Sequence.
+
+Case #385: It is not a B2-Sequence.
+
+Case #386: It is not a B2-Sequence.
+
+Case #387: It is not a B2-Sequence.
+
+Case #388: It is not a B2-Sequence.
+
+Case #389: It is not a B2-Sequence.
+
+Case #390: It is a B2-Sequence.
+
+Case #391: It is not a B2-Sequence.
+
+Case #392: It is not a B2-Sequence.
+
+Case #393: It is not a B2-Sequence.
+
+Case #394: It is not a B2-Sequence.
+
+Case #395: It is not a B2-Sequence.
+
+Case #396: It is not a B2-Sequence.
+
+Case #397: It is not a B2-Sequence.
+
+Case #398: It is a B2-Sequence.
+
+Case #399: It is not a B2-Sequence.
+
+Case #400: It is a B2-Sequence.
+
+Case #401: It is a B2-Sequence.
+
+Case #402: It is not a B2-Sequence.
+
+Case #403: It is not a B2-Sequence.
+
+Case #404: It is not a B2-Sequence.
+
+Case #405: It is a B2-Sequence.
+
+Case #406: It is not a B2-Sequence.
+
+Case #407: It is not a B2-Sequence.
+
+Case #408: It is a B2-Sequence.
+
+Case #409: It is not a B2-Sequence.
+
+Case #410: It is a B2-Sequence.
+
+Case #411: It is not a B2-Sequence.
+
+Case #412: It is not a B2-Sequence.
+
+Case #413: It is not a B2-Sequence.
+
+Case #414: It is not a B2-Sequence.
+
+Case #415: It is not a B2-Sequence.
+
+Case #416: It is not a B2-Sequence.
+
+Case #417: It is not a B2-Sequence.
+
+Case #418: It is not a B2-Sequence.
+
+Case #419: It is not a B2-Sequence.
+
+Case #420: It is a B2-Sequence.
+
+Case #421: It is not a B2-Sequence.
+
+Case #422: It is a B2-Sequence.
+
+Case #423: It is not a B2-Sequence.
+
+Case #424: It is not a B2-Sequence.
+
+Case #425: It is not a B2-Sequence.
+
+Case #426: It is not a B2-Sequence.
+
+Case #427: It is a B2-Sequence.
+
+Case #428: It is not a B2-Sequence.
+
+Case #429: It is not a B2-Sequence.
+
+Case #430: It is not a B2-Sequence.
+
+Case #431: It is not a B2-Sequence.
+
+Case #432: It is not a B2-Sequence.
+
+Case #433: It is a B2-Sequence.
+
+Case #434: It is not a B2-Sequence.
+
+Case #435: It is not a B2-Sequence.
+
+Case #436: It is not a B2-Sequence.
+
+Case #437: It is not a B2-Sequence.
+
+Case #438: It is not a B2-Sequence.
+
+Case #439: It is not a B2-Sequence.
+
+Case #440: It is not a B2-Sequence.
+
+Case #441: It is not a B2-Sequence.
+
+Case #442: It is not a B2-Sequence.
+
+Case #443: It is not a B2-Sequence.
+
+Case #444: It is a B2-Sequence.
+
+Case #445: It is not a B2-Sequence.
+
+Case #446: It is not a B2-Sequence.
+
+Case #447: It is not a B2-Sequence.
+
+Case #448: It is not a B2-Sequence.
+
+Case #449: It is not a B2-Sequence.
+
+Case #450: It is not a B2-Sequence.
+
+Case #451: It is not a B2-Sequence.
+
+Case #452: It is not a B2-Sequence.
+
+Case #453: It is not a B2-Sequence.
+
+Case #454: It is a B2-Sequence.
+
+Case #455: It is a B2-Sequence.
+
+Case #456: It is a B2-Sequence.
+
+Case #457: It is not a B2-Sequence.
+
+Case #458: It is not a B2-Sequence.
+
+Case #459: It is not a B2-Sequence.
+
+Case #460: It is not a B2-Sequence.
+
+Case #461: It is not a B2-Sequence.
+
+Case #462: It is not a B2-Sequence.
+
+Case #463: It is not a B2-Sequence.
+
+Case #464: It is not a B2-Sequence.
+
+Case #465: It is not a B2-Sequence.
+
+Case #466: It is not a B2-Sequence.
+
+Case #467: It is not a B2-Sequence.
+
+Case #468: It is a B2-Sequence.
+
+Case #469: It is not a B2-Sequence.
+
+Case #470: It is not a B2-Sequence.
+
+Case #471: It is not a B2-Sequence.
+
+Case #472: It is not a B2-Sequence.
+
+Case #473: It is not a B2-Sequence.
+
+Case #474: It is a B2-Sequence.
+
+Case #475: It is a B2-Sequence.
+
+Case #476: It is not a B2-Sequence.
+
+Case #477: It is not a B2-Sequence.
+
+Case #478: It is not a B2-Sequence.
+
+Case #479: It is not a B2-Sequence.
+
+Case #480: It is not a B2-Sequence.
+
+Case #481: It is not a B2-Sequence.
+
+Case #482: It is not a B2-Sequence.
+
+Case #483: It is a B2-Sequence.
+
+Case #484: It is not a B2-Sequence.
+
+Case #485: It is not a B2-Sequence.
+
+Case #486: It is not a B2-Sequence.
+
+Case #487: It is not a B2-Sequence.
+
+Case #488: It is not a B2-Sequence.
+
+Case #489: It is not a B2-Sequence.
+
+Case #490: It is not a B2-Sequence.
+
+Case #491: It is not a B2-Sequence.
+
+Case #492: It is not a B2-Sequence.
+
+Case #493: It is not a B2-Sequence.
+
+Case #494: It is not a B2-Sequence.
+
+Case #495: It is not a B2-Sequence.
+
+Case #496: It is not a B2-Sequence.
+
+Case #497: It is not a B2-Sequence.
+
+Case #498: It is not a B2-Sequence.
+
+Case #499: It is not a B2-Sequence.
+
+Case #500: It is not a B2-Sequence.
+
+Case #501: It is not a B2-Sequence.
+
+Case #502: It is not a B2-Sequence.
+
+Case #503: It is not a B2-Sequence.
+
+Case #504: It is not a B2-Sequence.
+
+Case #505: It is a B2-Sequence.
+
+Case #506: It is not a B2-Sequence.
+
+Case #507: It is not a B2-Sequence.
+
+Case #508: It is not a B2-Sequence.
+
+Case #509: It is not a B2-Sequence.
+
+Case #510: It is not a B2-Sequence.
+
+Case #511: It is a B2-Sequence.
+
+Case #512: It is not a B2-Sequence.
+
+Case #513: It is not a B2-Sequence.
+
+Case #514: It is not a B2-Sequence.
+
+Case #515: It is not a B2-Sequence.
+
+Case #516: It is not a B2-Sequence.
+
+Case #517: It is not a B2-Sequence.
+
+Case #518: It is not a B2-Sequence.
+
+Case #519: It is not a B2-Sequence.
+
+Case #520: It is a B2-Sequence.
+
+Case #521: It is not a B2-Sequence.
+
+Case #522: It is not a B2-Sequence.
+
+Case #523: It is not a B2-Sequence.
+
+Case #524: It is not a B2-Sequence.
+
+Case #525: It is not a B2-Sequence.
+
+Case #526: It is not a B2-Sequence.
+
+Case #527: It is not a B2-Sequence.
+
+Case #528: It is not a B2-Sequence.
+
+Case #529: It is not a B2-Sequence.
+
+Case #530: It is not a B2-Sequence.
+
+Case #531: It is not a B2-Sequence.
+
+Case #532: It is not a B2-Sequence.
+
+Case #533: It is not a B2-Sequence.
+
+Case #534: It is not a B2-Sequence.
+
+Case #535: It is not a B2-Sequence.
+
+Case #536: It is not a B2-Sequence.
+
+Case #537: It is not a B2-Sequence.
+
+Case #538: It is not a B2-Sequence.
+
+Case #539: It is not a B2-Sequence.
+
+Case #540: It is not a B2-Sequence.
+
+Case #541: It is not a B2-Sequence.
+
+Case #542: It is not a B2-Sequence.
+
+Case #543: It is not a B2-Sequence.
+
+Case #544: It is not a B2-Sequence.
+
+Case #545: It is not a B2-Sequence.
+
+Case #546: It is not a B2-Sequence.
+
+Case #547: It is not a B2-Sequence.
+
+Case #548: It is not a B2-Sequence.
+
+Case #549: It is a B2-Sequence.
+
+Case #550: It is not a B2-Sequence.
+
+Case #551: It is not a B2-Sequence.
+
+Case #552: It is not a B2-Sequence.
+
+Case #553: It is not a B2-Sequence.
+
+Case #554: It is not a B2-Sequence.
+
+Case #555: It is not a B2-Sequence.
+
+Case #556: It is not a B2-Sequence.
+
+Case #557: It is not a B2-Sequence.
+
+Case #558: It is not a B2-Sequence.
+
+Case #559: It is a B2-Sequence.
+
+Case #560: It is not a B2-Sequence.
+
+Case #561: It is not a B2-Sequence.
+
+Case #562: It is not a B2-Sequence.
+
+Case #563: It is not a B2-Sequence.
+
+Case #564: It is not a B2-Sequence.
+
+Case #565: It is not a B2-Sequence.
+
+Case #566: It is not a B2-Sequence.
+
+Case #567: It is not a B2-Sequence.
+
+Case #568: It is not a B2-Sequence.
+
+Case #569: It is a B2-Sequence.
+
+Case #570: It is not a B2-Sequence.
+
+Case #571: It is not a B2-Sequence.
+
+Case #572: It is not a B2-Sequence.
+
+Case #573: It is not a B2-Sequence.
+
+Case #574: It is not a B2-Sequence.
+
+Case #575: It is not a B2-Sequence.
+
+Case #576: It is not a B2-Sequence.
+
+Case #577: It is not a B2-Sequence.
+
+Case #578: It is not a B2-Sequence.
+
+Case #579: It is not a B2-Sequence.
+
+Case #580: It is not a B2-Sequence.
+
+Case #581: It is not a B2-Sequence.
+
+Case #582: It is not a B2-Sequence.
+
+Case #583: It is not a B2-Sequence.
+
+Case #584: It is not a B2-Sequence.
+
+Case #585: It is a B2-Sequence.
+
+Case #586: It is not a B2-Sequence.
+
+Case #587: It is not a B2-Sequence.
+
+Case #588: It is not a B2-Sequence.
+
+Case #589: It is not a B2-Sequence.
+
+Case #590: It is not a B2-Sequence.
+
+Case #591: It is not a B2-Sequence.
+
+Case #592: It is not a B2-Sequence.
+
+Case #593: It is not a B2-Sequence.
+
+Case #594: It is not a B2-Sequence.
+
+Case #595: It is not a B2-Sequence.
+
+Case #596: It is not a B2-Sequence.
+
+Case #597: It is not a B2-Sequence.
+
+Case #598: It is not a B2-Sequence.
+
+Case #599: It is not a B2-Sequence.
+
+Case #600: It is a B2-Sequence.
+
+Case #601: It is not a B2-Sequence.
+
+Case #602: It is not a B2-Sequence.
+
+Case #603: It is not a B2-Sequence.
+
+Case #604: It is not a B2-Sequence.
+
+Case #605: It is not a B2-Sequence.
+
+Case #606: It is not a B2-Sequence.
+
+Case #607: It is not a B2-Sequence.
+
+Case #608: It is not a B2-Sequence.
+
+Case #609: It is not a B2-Sequence.
+
+Case #610: It is not a B2-Sequence.
+
+Case #611: It is not a B2-Sequence.
+
+Case #612: It is not a B2-Sequence.
+
+Case #613: It is not a B2-Sequence.
+
+Case #614: It is not a B2-Sequence.
+
+Case #615: It is not a B2-Sequence.
+
+Case #616: It is not a B2-Sequence.
+
+Case #617: It is not a B2-Sequence.
+
+Case #618: It is not a B2-Sequence.
+
+Case #619: It is not a B2-Sequence.
+
+Case #620: It is not a B2-Sequence.
+
+Case #621: It is not a B2-Sequence.
+
+Case #622: It is not a B2-Sequence.
+
+Case #623: It is not a B2-Sequence.
+
+Case #624: It is not a B2-Sequence.
+
+Case #625: It is not a B2-Sequence.
+
+Case #626: It is a B2-Sequence.
+
+Case #627: It is not a B2-Sequence.
+
+Case #628: It is a B2-Sequence.
+
+Case #629: It is not a B2-Sequence.
+
+Case #630: It is not a B2-Sequence.
+
+Case #631: It is not a B2-Sequence.
+
+Case #632: It is not a B2-Sequence.
+
+Case #633: It is not a B2-Sequence.
+
+Case #634: It is not a B2-Sequence.
+
+Case #635: It is not a B2-Sequence.
+
+Case #636: It is not a B2-Sequence.
+
+Case #637: It is a B2-Sequence.
+
+Case #638: It is not a B2-Sequence.
+
+Case #639: It is not a B2-Sequence.
+
+Case #640: It is a B2-Sequence.
+
+Case #641: It is not a B2-Sequence.
+
+Case #642: It is not a B2-Sequence.
+
+Case #643: It is not a B2-Sequence.
+
+Case #644: It is not a B2-Sequence.
+
+Case #645: It is not a B2-Sequence.
+
+Case #646: It is not a B2-Sequence.
+
+Case #647: It is not a B2-Sequence.
+
+Case #648: It is not a B2-Sequence.
+
+Case #649: It is not a B2-Sequence.
+
+Case #650: It is not a B2-Sequence.
+
+Case #651: It is not a B2-Sequence.
+
+Case #652: It is not a B2-Sequence.
+
+Case #653: It is not a B2-Sequence.
+
+Case #654: It is not a B2-Sequence.
+
+Case #655: It is not a B2-Sequence.
+
+Case #656: It is not a B2-Sequence.
+
+Case #657: It is not a B2-Sequence.
+
+Case #658: It is a B2-Sequence.
+
+Case #659: It is not a B2-Sequence.
+
+Case #660: It is not a B2-Sequence.
+
+Case #661: It is not a B2-Sequence.
+
+Case #662: It is not a B2-Sequence.
+
+Case #663: It is a B2-Sequence.
+
+Case #664: It is not a B2-Sequence.
+
+Case #665: It is not a B2-Sequence.
+
+Case #666: It is not a B2-Sequence.
+
+Case #667: It is a B2-Sequence.
+
+Case #668: It is not a B2-Sequence.
+
+Case #669: It is not a B2-Sequence.
+
+Case #670: It is not a B2-Sequence.
+
+Case #671: It is not a B2-Sequence.
+
+Case #672: It is a B2-Sequence.
+
+Case #673: It is not a B2-Sequence.
+
+Case #674: It is not a B2-Sequence.
+
+Case #675: It is not a B2-Sequence.
+
+Case #676: It is not a B2-Sequence.
+
+Case #677: It is not a B2-Sequence.
+
+Case #678: It is not a B2-Sequence.
+
+Case #679: It is not a B2-Sequence.
+
+Case #680: It is not a B2-Sequence.
+
+Case #681: It is not a B2-Sequence.
+
+Case #682: It is not a B2-Sequence.
+
+Case #683: It is not a B2-Sequence.
+
+Case #684: It is not a B2-Sequence.
+
+Case #685: It is a B2-Sequence.
+
+Case #686: It is not a B2-Sequence.
+
+Case #687: It is a B2-Sequence.
+
+Case #688: It is not a B2-Sequence.
+
+Case #689: It is not a B2-Sequence.
+
+Case #690: It is not a B2-Sequence.
+
+Case #691: It is not a B2-Sequence.
+
+Case #692: It is not a B2-Sequence.
+
+Case #693: It is not a B2-Sequence.
+
+Case #694: It is not a B2-Sequence.
+
+Case #695: It is not a B2-Sequence.
+
+Case #696: It is not a B2-Sequence.
+
+Case #697: It is not a B2-Sequence.
+
+Case #698: It is a B2-Sequence.
+
+Case #699: It is not a B2-Sequence.
+
+Case #700: It is not a B2-Sequence.
+
+Case #701: It is a B2-Sequence.
+
+Case #702: It is not a B2-Sequence.
+
+Case #703: It is not a B2-Sequence.
+
+Case #704: It is not a B2-Sequence.
+
+Case #705: It is a B2-Sequence.
+
+Case #706: It is not a B2-Sequence.
+
+Case #707: It is not a B2-Sequence.
+
+Case #708: It is not a B2-Sequence.
+
+Case #709: It is not a B2-Sequence.
+
+Case #710: It is not a B2-Sequence.
+
+Case #711: It is not a B2-Sequence.
+
+Case #712: It is not a B2-Sequence.
+
+Case #713: It is not a B2-Sequence.
+
+Case #714: It is not a B2-Sequence.
+
+Case #715: It is not a B2-Sequence.
+
+Case #716: It is not a B2-Sequence.
+
+Case #717: It is not a B2-Sequence.
+
+Case #718: It is not a B2-Sequence.
+
+Case #719: It is a B2-Sequence.
+
+Case #720: It is a B2-Sequence.
+
+Case #721: It is not a B2-Sequence.
+
+Case #722: It is not a B2-Sequence.
+
+Case #723: It is not a B2-Sequence.
+
+Case #724: It is not a B2-Sequence.
+
+Case #725: It is not a B2-Sequence.
+
+Case #726: It is not a B2-Sequence.
+
+Case #727: It is not a B2-Sequence.
+
+Case #728: It is not a B2-Sequence.
+
+Case #729: It is a B2-Sequence.
+
+Case #730: It is not a B2-Sequence.
+
+Case #731: It is not a B2-Sequence.
+
+Case #732: It is not a B2-Sequence.
+
+Case #733: It is not a B2-Sequence.
+
+Case #734: It is not a B2-Sequence.
+
+Case #735: It is not a B2-Sequence.
+
+Case #736: It is not a B2-Sequence.
+
+Case #737: It is a B2-Sequence.
+
+Case #738: It is a B2-Sequence.
+
+Case #739: It is not a B2-Sequence.
+
+Case #740: It is not a B2-Sequence.
+
+Case #741: It is not a B2-Sequence.
+
+Case #742: It is not a B2-Sequence.
+
+Case #743: It is not a B2-Sequence.
+
+Case #744: It is not a B2-Sequence.
+
+Case #745: It is not a B2-Sequence.
+
+Case #746: It is not a B2-Sequence.
+
+Case #747: It is a B2-Sequence.
+
+Case #748: It is not a B2-Sequence.
+
+Case #749: It is not a B2-Sequence.
+
+Case #750: It is not a B2-Sequence.
+
+Case #751: It is not a B2-Sequence.
+
+Case #752: It is not a B2-Sequence.
+
+Case #753: It is not a B2-Sequence.
+
+Case #754: It is not a B2-Sequence.
+
+Case #755: It is not a B2-Sequence.
+
+Case #756: It is a B2-Sequence.
+
+Case #757: It is not a B2-Sequence.
+
+Case #758: It is not a B2-Sequence.
+
+Case #759: It is not a B2-Sequence.
+
+Case #760: It is not a B2-Sequence.
+
+Case #761: It is not a B2-Sequence.
+
+Case #762: It is not a B2-Sequence.
+
+Case #763: It is not a B2-Sequence.
+
+Case #764: It is not a B2-Sequence.
+
+Case #765: It is a B2-Sequence.
+
+Case #766: It is not a B2-Sequence.
+
+Case #767: It is not a B2-Sequence.
+
+Case #768: It is not a B2-Sequence.
+
+Case #769: It is not a B2-Sequence.
+
+Case #770: It is not a B2-Sequence.
+
+Case #771: It is a B2-Sequence.
+
+Case #772: It is a B2-Sequence.
+
+Case #773: It is not a B2-Sequence.
+
+Case #774: It is not a B2-Sequence.
+
+Case #775: It is not a B2-Sequence.
+
+Case #776: It is not a B2-Sequence.
+
+Case #777: It is not a B2-Sequence.
+
+Case #778: It is not a B2-Sequence.
+
+Case #779: It is not a B2-Sequence.
+
+Case #780: It is not a B2-Sequence.
+
+Case #781: It is not a B2-Sequence.
+
+Case #782: It is a B2-Sequence.
+
+Case #783: It is not a B2-Sequence.
+
+Case #784: It is not a B2-Sequence.
+
+Case #785: It is not a B2-Sequence.
+
+Case #786: It is not a B2-Sequence.
+
+Case #787: It is not a B2-Sequence.
+
+Case #788: It is not a B2-Sequence.
+
+Case #789: It is not a B2-Sequence.
+
+Case #790: It is a B2-Sequence.
+
+Case #791: It is not a B2-Sequence.
+
+Case #792: It is not a B2-Sequence.
+
+Case #793: It is not a B2-Sequence.
+
+Case #794: It is not a B2-Sequence.
+
+Case #795: It is not a B2-Sequence.
+
+Case #796: It is not a B2-Sequence.
+
+Case #797: It is not a B2-Sequence.
+
+Case #798: It is not a B2-Sequence.
+
+Case #799: It is not a B2-Sequence.
+
+Case #800: It is not a B2-Sequence.
+
+Case #801: It is not a B2-Sequence.
+
+Case #802: It is not a B2-Sequence.
+
+Case #803: It is not a B2-Sequence.
+
+Case #804: It is not a B2-Sequence.
+
+Case #805: It is not a B2-Sequence.
+
+Case #806: It is a B2-Sequence.
+
+Case #807: It is not a B2-Sequence.
+
+Case #808: It is not a B2-Sequence.
+
+Case #809: It is not a B2-Sequence.
+
+Case #810: It is not a B2-Sequence.
+
+Case #811: It is not a B2-Sequence.
+
+Case #812: It is not a B2-Sequence.
+
+Case #813: It is a B2-Sequence.
+
+Case #814: It is not a B2-Sequence.
+
+Case #815: It is not a B2-Sequence.
+
+Case #816: It is not a B2-Sequence.
+
+Case #817: It is a B2-Sequence.
+
+Case #818: It is a B2-Sequence.
+
+Case #819: It is not a B2-Sequence.
+
+Case #820: It is not a B2-Sequence.
+
+Case #821: It is not a B2-Sequence.
+
+Case #822: It is not a B2-Sequence.
+
+Case #823: It is not a B2-Sequence.
+
+Case #824: It is not a B2-Sequence.
+
+Case #825: It is not a B2-Sequence.
+
+Case #826: It is not a B2-Sequence.
+
+Case #827: It is not a B2-Sequence.
+
+Case #828: It is not a B2-Sequence.
+
+Case #829: It is not a B2-Sequence.
+
+Case #830: It is a B2-Sequence.
+
+Case #831: It is not a B2-Sequence.
+
+Case #832: It is not a B2-Sequence.
+
+Case #833: It is not a B2-Sequence.
+
+Case #834: It is not a B2-Sequence.
+
+Case #835: It is not a B2-Sequence.
+
+Case #836: It is not a B2-Sequence.
+
+Case #837: It is not a B2-Sequence.
+
+Case #838: It is not a B2-Sequence.
+
+Case #839: It is a B2-Sequence.
+
+Case #840: It is not a B2-Sequence.
+
+Case #841: It is not a B2-Sequence.
+
+Case #842: It is not a B2-Sequence.
+
+Case #843: It is not a B2-Sequence.
+
+Case #844: It is not a B2-Sequence.
+
+Case #845: It is a B2-Sequence.
+
+Case #846: It is not a B2-Sequence.
+
+Case #847: It is not a B2-Sequence.
+
+Case #848: It is not a B2-Sequence.
+
+Case #849: It is not a B2-Sequence.
+
+Case #850: It is a B2-Sequence.
+
+Case #851: It is not a B2-Sequence.
+
+Case #852: It is not a B2-Sequence.
+
+Case #853: It is a B2-Sequence.
+
+Case #854: It is not a B2-Sequence.
+
+Case #855: It is not a B2-Sequence.
+
+Case #856: It is a B2-Sequence.
+
+Case #857: It is a B2-Sequence.
+
+Case #858: It is not a B2-Sequence.
+
+Case #859: It is a B2-Sequence.
+
+Case #860: It is not a B2-Sequence.
+
+Case #861: It is not a B2-Sequence.
+
+Case #862: It is not a B2-Sequence.
+
+Case #863: It is not a B2-Sequence.
+
+Case #864: It is not a B2-Sequence.
+
+Case #865: It is a B2-Sequence.
+
+Case #866: It is not a B2-Sequence.
+
+Case #867: It is not a B2-Sequence.
+
+Case #868: It is not a B2-Sequence.
+
+Case #869: It is not a B2-Sequence.
+
+Case #870: It is not a B2-Sequence.
+
+Case #871: It is not a B2-Sequence.
+
+Case #872: It is not a B2-Sequence.
+
+Case #873: It is not a B2-Sequence.
+
+Case #874: It is not a B2-Sequence.
+
+Case #875: It is not a B2-Sequence.
+
+Case #876: It is not a B2-Sequence.
+
+Case #877: It is not a B2-Sequence.
+
+Case #878: It is not a B2-Sequence.
+
+Case #879: It is a B2-Sequence.
+
+Case #880: It is not a B2-Sequence.
+
+Case #881: It is not a B2-Sequence.
+
+Case #882: It is not a B2-Sequence.
+
+Case #883: It is a B2-Sequence.
+
+Case #884: It is not a B2-Sequence.
+
+Case #885: It is not a B2-Sequence.
+
+Case #886: It is not a B2-Sequence.
+
+Case #887: It is not a B2-Sequence.
+
+Case #888: It is not a B2-Sequence.
+
+Case #889: It is not a B2-Sequence.
+
+Case #890: It is not a B2-Sequence.
+
+Case #891: It is a B2-Sequence.
+
+Case #892: It is not a B2-Sequence.
+
+Case #893: It is a B2-Sequence.
+
+Case #894: It is not a B2-Sequence.
+
+Case #895: It is not a B2-Sequence.
+
+Case #896: It is not a B2-Sequence.
+
+Case #897: It is not a B2-Sequence.
+
+Case #898: It is not a B2-Sequence.
+
+Case #899: It is not a B2-Sequence.
+
+Case #900: It is not a B2-Sequence.
+
+Case #901: It is not a B2-Sequence.
+
+Case #902: It is not a B2-Sequence.
+
+Case #903: It is a B2-Sequence.
+
+Case #904: It is not a B2-Sequence.
+
+Case #905: It is a B2-Sequence.
+
+Case #906: It is a B2-Sequence.
+
+Case #907: It is not a B2-Sequence.
+
+Case #908: It is not a B2-Sequence.
+
+Case #909: It is not a B2-Sequence.
+
+Case #910: It is not a B2-Sequence.
+
+Case #911: It is a B2-Sequence.
+
+Case #912: It is not a B2-Sequence.
+
+Case #913: It is not a B2-Sequence.
+
+Case #914: It is not a B2-Sequence.
+
+Case #915: It is not a B2-Sequence.
+
+Case #916: It is a B2-Sequence.
+
+Case #917: It is not a B2-Sequence.
+
+Case #918: It is not a B2-Sequence.
+
+Case #919: It is not a B2-Sequence.
+
+Case #920: It is not a B2-Sequence.
+
+Case #921: It is a B2-Sequence.
+
+Case #922: It is not a B2-Sequence.
+
+Case #923: It is not a B2-Sequence.
+
+Case #924: It is not a B2-Sequence.
+
+Case #925: It is not a B2-Sequence.
+
+Case #926: It is not a B2-Sequence.
+
+Case #927: It is not a B2-Sequence.
+
+Case #928: It is a B2-Sequence.
+
+Case #929: It is not a B2-Sequence.
+
+Case #930: It is not a B2-Sequence.
+
+Case #931: It is not a B2-Sequence.
+
+Case #932: It is not a B2-Sequence.
+
+Case #933: It is not a B2-Sequence.
+
+Case #934: It is a B2-Sequence.
+
+Case #935: It is not a B2-Sequence.
+
+Case #936: It is not a B2-Sequence.
+
+Case #937: It is a B2-Sequence.
+
+Case #938: It is not a B2-Sequence.
+
+Case #939: It is not a B2-Sequence.
+
+Case #940: It is not a B2-Sequence.
+
+Case #941: It is not a B2-Sequence.
+
+Case #942: It is not a B2-Sequence.
+
+Case #943: It is not a B2-Sequence.
+
+Case #944: It is not a B2-Sequence.
+
+Case #945: It is a B2-Sequence.
+
+Case #946: It is not a B2-Sequence.
+
+Case #947: It is not a B2-Sequence.
+
+Case #948: It is not a B2-Sequence.
+
+Case #949: It is not a B2-Sequence.
+
+Case #950: It is a B2-Sequence.
+
+Case #951: It is a B2-Sequence.
+
+Case #952: It is not a B2-Sequence.
+
+Case #953: It is not a B2-Sequence.
+
+Case #954: It is not a B2-Sequence.
+
+Case #955: It is not a B2-Sequence.
+
+Case #956: It is not a B2-Sequence.
+
+Case #957: It is not a B2-Sequence.
+
+Case #958: It is not a B2-Sequence.
+
+Case #959: It is not a B2-Sequence.
+
+Case #960: It is not a B2-Sequence.
+
+Case #961: It is not a B2-Sequence.
+
+Case #962: It is not a B2-Sequence.
+
+Case #963: It is not a B2-Sequence.
+
+Case #964: It is not a B2-Sequence.
+
+Case #965: It is not a B2-Sequence.
+
+Case #966: It is not a B2-Sequence.
+
+Case #967: It is not a B2-Sequence.
+
+Case #968: It is not a B2-Sequence.
+
+Case #969: It is not a B2-Sequence.
+
+Case #970: It is a B2-Sequence.
+
+Case #971: It is not a B2-Sequence.
+
+Case #972: It is not a B2-Sequence.
+
+Case #973: It is not a B2-Sequence.
+
+Case #974: It is not a B2-Sequence.
+
+Case #975: It is not a B2-Sequence.
+
+Case #976: It is not a B2-Sequence.
+
+Case #977: It is not a B2-Sequence.
+
+Case #978: It is a B2-Sequence.
+
+Case #979: It is not a B2-Sequence.
+
+Case #980: It is not a B2-Sequence.
+
+Case #981: It is not a B2-Sequence.
+
+Case #982: It is not a B2-Sequence.
+
+Case #983: It is not a B2-Sequence.
+
+Case #984: It is not a B2-Sequence.
+
+Case #985: It is not a B2-Sequence.
+
+Case #986: It is not a B2-Sequence.
+
+Case #987: It is not a B2-Sequence.
+
+Case #988: It is not a B2-Sequence.
+
+Case #989: It is not a B2-Sequence.
+
+Case #990: It is not a B2-Sequence.
+
+Case #991: It is not a B2-Sequence.
+
+Case #992: It is not a B2-Sequence.
+
+Case #993: It is not a B2-Sequence.
+
+Case #994: It is a B2-Sequence.
+
+Case #995: It is not a B2-Sequence.
+
+Case #996: It is not a B2-Sequence.
+
+Case #997: It is not a B2-Sequence.
+
+Case #998: It is not a B2-Sequence.
+
+Case #999: It is not a B2-Sequence.
+
+Case #1000: It is not a B2-Sequence.
+
