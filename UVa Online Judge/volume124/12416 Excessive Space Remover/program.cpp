@@ -1,5 +1,5 @@
-// Save from Radiation
-// UVa ID: 11986
+// Excessive Space Remover
+// UVa ID: 12416
 // Verdict: Accepted
 // Submission Date: 2018-03-07
 // UVa Run Time: 0.000s
@@ -30,17 +30,26 @@ using namespace std;
 int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
-
-    int cases;
-    long long n, x, t, r;
-
-    cin >> cases;
-    for (int c = 1; c <= cases; c++)
+    cin.unsetf(ios::skipws);
+    
+    char letter;
+    while (cin >> letter)
     {
-        cin >> n;
+        int spaces = 0, n = 0;
+        if (letter == ' ') n++;
+        while (cin >> letter)
+        {
+            if (letter == ' ') n++;
+            else
+            {
+                spaces = max(spaces, n);
+                n = 0;
+            }
+            if (letter == '\n') break;
+        }
         int x = 0;
-        while (n) x++, n /= 2;
-        cout << "Case " << c << ": " << x << '\n';
+        while (spaces > 1) x++, spaces = (spaces + 1) / 2;
+        cout << x << '\n';
     }
 
     return 0;

@@ -1,0 +1,100 @@
+        a                 b                                 c           b          a                                                    c                    b      c                                           .
+        b     b      b .
+           c         a                c          b                     cb             c                  ba             a                          b        b   c                       .
+                 a        a      c                             a        b cb     b                             c        b      b b                   bc                                               b b               b .
+                           b    .
+      b            c                         a        b  c                   c c           b   b                    a     b         b                                     .
+    b               b      c                              c  a                            a          a           b                                                         a                                            a                     a                    a     a                b  .
+           .
+ c   c     c c c      c          b                             b           a          b                  bcb                          a                        b        cb              a              .
+    c .
+a                    c       c       .
+                b           .
+                                                 b                b                    c          .
+         a       a         a  b                                     a      a                                                .
+                   b    c   .
+                         cc    b                c                     ca         a          a                                            c       a         c                 b      a    c                b                b     b            c        c     .
+        a       c        b   b       a   b    b                                a              a                              c   .
+                             c   a                                                                                      b                                         .
+         c                             a        c             b       c     a                    b                          a c    b   b         bb      .
+       c b              b                                          a                         c                                                                                b                                               a   a                c c   b      b                b   .
+b    b         a                            cccb                               .
+     c        bc      c                   c           b                                              b      a c                           c                 a                               ac             a      b   a     b          c      c           b     .
+       a a                        a                c      b c              c                   c              a           cc         a     c                 b           c          b  b                         b                                 a                       a   c                    .
+             .
+b             a         c        a       b                   c       a                                        ba           c a        a        a                                       a    c        bc       c     ac                                               c            c                    .
+                          b  ca    c c  a              aa            a    b      c       cc    c           c               a    a  a                    b        a b                       b                                      b        b                    .
+         c      a        .
+  a c                b        b       a                                                    c  a             b           c       c                                       a                  a      a              .
+     b               ab           c            c          c                         a              a     a ba       b b                                a                      a c        c                   b             a          c
+ a            a                 c   a     c  b                            a              .
+  b              a  b b                    c                                c                                      c  b   b     ba              a  b   b                                                            ab .
+    b  c                          a              .
+              a            c     c      b a        cbb                           c            .
+    a                                                          .
+                a    a                 c                                         a                 c a              a                        b      .
+       c  a                 a                                       c    b              a                          c         a    c                                       c b    b               a                                                   a c               .
+              .
+          .
+ c      a        b  b       a       c   a                   cc       a                       b          b                                                             b                      b                                                      c    c      .
+                  b   a     a       c a      c              a    b                a      c   c c                              .
+       b       a     c                  aa      b   b                                aa              ac      b                                         b         a  c                            a   c            c  c                                    a                     .
+         c     a a          a      b                              b                                                 cc c     c  a             .
+        a               b     .
+    a                  c  b                              c                                     a                  b                          a    b c          a  b                  b                         c                                     c    a                 c                              .
+                                     a             .
+                    a                b                 c            b    a          c  b                                         c    a                    a                                bc     .
+   b    a                                        c                c                      b                             b     .
+    a                       b    c       c  b          .
+  a c                                                    c   c                    c     c    b                                                     .
+              c      a                         a                                                   b           b       b  ac                     c                     c  .
+     c        c     c         b       b       .
+a                                                   c                            b                   c                                 a                                                                 b                 a                          .
+     a                        a          c       b                       b                                  a             b                         b                     ac                            c                     a                            c    a     b c                       a          .
+a      a       c                   b             c     a                        b                             a    b            b  bc                        c b  c        .
+                 b      c                        c     c                   b                              c       .
+                                    c                                                    a  b           b  c      c        b       b    c      a             b   .
+                         a    c        c                c     c                c                   b    b     ac                         c                    .
+       b     .
+                b                                ac       a                                      acb    c a          a                a  b   .
+                         c                                      ca   a  b                     b                                                b                     c    b     ba  a            a   b c                  b         c c   c       a             a                c             a  .
+  b b          c              a                             c                         b    a           b                  c  c             a                   b           a    b                                                c              a                  c   .
+                           a c           a     a     b  b         c           a                              a a       b       a    a    c c     a                                                           a c
+                                                          a         b            b        b
+  b           a b         a                     b        c  b      a                                ba          c ba   b          a a c            b       c                  .
+      a       b                 b         c  a      b     c     b    c   c       b  c        b     a                                             b                         a
+                                                       b       a   aa                   b                                   b               a   b    b              b               a              c                .
+                                       b      b                         c c    b                  c      c                       b                  c                                    .
+a                    c           b  bb    b c                      ca        c                                      a    c                       b         b    c   b                    .
+ b            c  c           a  a             b    a         c            .
+ a    a     a                   b        ac                    c                  b     ba                       a    .
+                                          c             a                                           b            c                                                                    c        b       b c            b    c      a b       a  c                  .
+  .
+        a    .
+                       c  b                                         b aa                          c    a   c     a  c                 c a  c       b        b                                  .
+       b                b                                                            b a          c                a               c        c        a                   c  b                          c        b                         c  b     c   b a              c   .
+            c       c                    a       c                               b                    c                b     a      b                   a                                        c .
+                 b    b  b    a           a       bc            .
+   b    a  c         a          b                                    b         a           c                    c                  b     .
+    c         c                     bc                            b      c           bb .
+   b     a           c        b               b        a            ab   c                               a  ab                               b
+        .
+                c     a                                                    c                      c  c                                    a              .
+                                                 a     b       c   c                                                a         b                       a           c        a               a .
+                      a   b    b      c                           b         b                  c   b                                                              c     a    a          .
+                     .
+             b               b
+                          c                                  c  b  a            .
+               cb                 c                  c c                                             a         c b                     .
+                 bb                   aa        c  .
+                         a b      b               c       b       b                                                                      b          a          .
+  ca               a                  b         b a     .
+    c                       ba                          ba                                c            c             c                                     .
+                   c        c                     a        a  a                                                        .
+                                    a       c         ba             c                                                           b a    b      b  c      a        b       c         c     c      b                       b           b    a       a a            a  .
+         ab        c           a        b       a                   bcb                      .
+ c             c                       c                  b b      b                     c               ac         c    .
+                      b c        c         a                          aa        a                 c      a                 b       a        c       a        b  .
+                                            c                              c        c   c                          a     a               .
+              b     .
+    b                           b         a              c                        c                          ac         c      a               b     cb                      c                         b b                c      c .

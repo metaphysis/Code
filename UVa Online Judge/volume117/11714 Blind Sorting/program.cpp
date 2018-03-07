@@ -1,8 +1,8 @@
-// Save from Radiation
-// UVa ID: 11986
+// Blind Sorting
+// UVa ID: 11714
 // Verdict: Accepted
 // Submission Date: 2018-03-07
-// UVa Run Time: 0.000s
+// UVa Run Time: 0.020s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
@@ -31,17 +31,7 @@ int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    int cases;
-    long long n, x, t, r;
-
-    cin >> cases;
-    for (int c = 1; c <= cases; c++)
-    {
-        cin >> n;
-        int x = 0;
-        while (n) x++, n /= 2;
-        cout << "Case " << c << ": " << x << '\n';
-    }
-
+    int n;
+    while (cin >> n) cout << (n + (int)ceil(log2(n)) - 2) << '\n';
     return 0;
 }
