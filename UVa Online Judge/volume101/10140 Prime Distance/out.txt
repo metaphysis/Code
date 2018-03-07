@@ -1,0 +1,22 @@
+There are no adjacent primes.
+2146483811,2146483813 are closest, 2146841093,2146841273 are most distant.
+There are no adjacent primes.
+2,3 are closest, 3,5 are most distant.
+2,3 are closest, 2,3 are most distant.
+2,3 are closest, 3,5 are most distant.
+2,3 are closest, 492113,492227 are most distant.
+569,571 are closest, 1327,1361 are most distant.
+500111,500113 are closest, 1357201,1357333 are most distant.
+There are no adjacent primes.
+5,7 are closest, 5,7 are most distant.
+5,7 are closest, 5,7 are most distant.
+There are no adjacent primes.
+There are no adjacent primes.
+There are no adjacent primes.
+There are no adjacent primes.
+1500007,1500019 are closest, 1500007,1500019 are most distant.
+There are no adjacent primes.
+There are no adjacent primes.
+1500007,1500019 are closest, 1500007,1500019 are most distant.
+There are no adjacent primes.
+There are no adjacent primes.

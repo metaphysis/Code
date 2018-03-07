@@ -30,11 +30,25 @@ void sieve(int *primes, int n, int &cnt)
         if (primes[i])
         {
             primes[cnt++] = i;
-            for (int j = i + i; j < n; j += i) primes[j] = 0;
+            for (int j = i + i; j < n; j += i)
+                primes[j] = 0;
         }
 }
 
 void sieve1(int *primes, int n, int &cnt)
+{
+    cnt = 0, memset(primes, 1, n * sizeof(int));
+
+    for (int i = 2; i * i < n; i++)
+        if (primes[i])
+            for (int j = i * i; j < n; j += i)
+                primes[j] = 0;
+    for (int i = 2; i < n; i++)
+        if (primes[i])
+            primes[cnt++] = i;
+}
+
+void sieve2(int *primes, int n, int &cnt)
 {
     cnt = 0, memset(primes, 1, n * sizeof(int));
 
@@ -82,7 +96,7 @@ vector<int> findDivisor(int n)
 
 int main(int argc, char *argv[])
 {
-    sieve1(primes, MAXN, cnt);
+    sieve2(primes, MAXN, cnt);
     
     for (int i = 0; i < cnt; i++)
     {
