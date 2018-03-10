@@ -21,33 +21,35 @@ using namespace std;
 
 const int MAXN = 1000000;
 
-int primes[MAXN], phi[MAXN] = {0, 1}, counterOfPrimes = 0;
+int primes[MAXN], phi[MAXN] = {0, 1}, cnt = 0;
 
-void sieve1(int *primes, int n, int &counterOfPrimes)
+void sieve1(int *primes, int n, int &cnt)
 {
     // 初始时假定所有数为素数，从最小的素数开始筛除。
-    counterOfPrimes = 0;
+    cnt = 0;
     memset(primes, 1, n * sizeof(int));
 
     for (int i = 2; i < n; i++)
         if (primes[i])
         {
             // 记录筛选得到的素数。
-            primes[counterOfPrimes++] = i;
+            primes[cnt++] = i;
 
             // 如果i为素数则将其倍数标记为非素数。
-            for (int j = i + i; j < n; j += i) primes[j] = 0;
+            for (int j = i + i; j < n; j += i)
+                primes[j] = 0;
         }
 }
 
 int getPhi(int m)
 {
     int phi = m;
-    for (int i = 0; i < counterOfPrimes; i++) {
+    for (int i = 0; i < cnt; i++) {
         if (primes[i] > m) break;
         if (m % primes[i] == 0)
         {
-            while (m % primes[i] == 0) m /= primes[i];
+            while (m % primes[i] == 0)
+                m /= primes[i];
             phi -= phi / primes[i];
         }
     }
@@ -55,22 +57,23 @@ int getPhi(int m)
     return phi;
 }
 
-void sieve2(int *primes, int n, int &counterOfPrimes)
+void sieve2(int *primes, int n, int &cnt)
 {
-    counterOfPrimes = 0; iota(phi, phi + n, 0);
+    cnt = 0; iota(phi, phi + n, 0);
 
     for (int i = 2; i < n; i++)
         if (phi[i] == i)
         {
-            primes[counterOfPrimes++] = i;
-            for (int j = i; j < n; j += i) phi[j] -= phi[j] / i;
+            primes[cnt++] = i;
+            for (int j = i; j < n; j += i)
+                phi[j] -= phi[j] / i;
         }
 }
 
-void sieve3(int *primes, int n, int &counterOfPrimes)
+void sieve3(int *primes, int n, int &cnt)
 {
     // 初始时假定所有数为素数，从最小的素数开始筛除。
-    counterOfPrimes = 0; iota(primes, primes + n, 0);
+    cnt = 0; iota(primes, primes + n, 0);
 
     for (int i = 2; i < n; i++)
     {
@@ -80,7 +83,7 @@ void sieve3(int *primes, int n, int &counterOfPrimes)
             phi[i] = i - 1;
 
             // 记录筛选得到的素数。
-            primes[counterOfPrimes++] = i;
+            primes[cnt++] = i;
 
             // 如果i为素数则将其倍数标记为非素数。标记的方式是i的倍数所对应的元素值
             // 设置为它的最小素因子，即i。
@@ -100,18 +103,21 @@ void sieve3(int *primes, int n, int &counterOfPrimes)
 
 int main(int argc, char *argv[])
 {
-    sieve1(primes, MAXN, counterOfPrimes);
+    sieve1(primes, MAXN, cnt);
     
     int n;
-    while (cin >> n, n > 0) cout << getPhi(n) << '\n';
+    while (cin >> n, n > 0)
+        cout << getPhi(n) << '\n';
     cout << '\n';
 
-    sieve2(primes, MAXN, counterOfPrimes);
-    for (int i = 0; i <= 1000; i++) cout << primes[i] << ' ' << getPhi(primes[i]) << '\n';
+    sieve2(primes, MAXN, cnt);
+    for (int i = 0; i <= 1000; i++)
+        cout << primes[i] << ' ' << getPhi(primes[i]) << '\n';
     cout << '\n';
 
-    sieve3(primes, MAXN, counterOfPrimes);
-    for (int i = 0; i <= 1000; i++) cout << primes[i] << ' ' << phi[primes[i]] << '\n';
+    sieve3(primes, MAXN, cnt);
+    for (int i = 0; i <= 1000; i++)
+        cout << primes[i] << ' ' << phi[primes[i]] << '\n';
 
     return 0;
 }
