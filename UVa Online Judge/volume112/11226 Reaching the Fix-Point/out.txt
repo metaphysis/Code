@@ -1,0 +1,98 @@
+Case #1:
+3
+Case #2:
+4
+Case #3:
+12
+Case #4:
+14
+Case #5:
+14
+Case #6:
+12
+Case #7:
+13
+Case #8:
+12
+Case #9:
+13
+Case #10:
+12
+Case #11:
+14
+Case #12:
+12
+Case #13:
+6
+Case #14:
+7
+Case #15:
+7
+Case #16:
+8
+Case #17:
+8
+Case #18:
+7
+Case #19:
+8
+Case #20:
+7
+Case #21:
+8
+Case #22:
+8
+Case #23:
+8
+Case #24:
+7
+Case #25:
+9
+Case #26:
+7
+Case #27:
+7
+Case #28:
+9
+Case #29:
+7
+Case #30:
+9
+Case #31:
+8
+Case #32:
+9
+Case #33:
+8
+Case #34:
+7
+Case #35:
+8
+Case #36:
+8
+Case #37:
+8
+Case #38:
+9
+Case #39:
+9
+Case #40:
+8
+Case #41:
+8
+Case #42:
+7
+Case #43:
+8
+Case #44:
+8
+Case #45:
+8
+Case #46:
+7
+Case #47:
+8
+Case #48:
+8
+Case #49:
+8
