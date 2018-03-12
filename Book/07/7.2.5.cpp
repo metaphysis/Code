@@ -57,8 +57,7 @@ int mobius[MAXN] = {0};
 void getMobius()
 {
     for (int i = 1; i < MAXN; i++) {
-        int sum = (i == 1 ? 1 : 0);
-        int delta = sum - mobius[i];
+        int sigma = (i == 1 ? 1 : 0), delta = sigma - mobius[i];
         mobius[i] = delta;
         for (int j = i + i; j < MAXN; j += i)
             mobius[j] += delta;
