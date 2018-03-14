@@ -87,8 +87,7 @@
 // 同理 left 和 right，top 和 bottom组成一个面对，若面对能增加底面颜色为 i 的塔高度，
 // 则更新底面颜色为 i 的塔高度，同时记录构成该塔的顶面颜色以便最后输出。
 
-#include <iostream>
-#include <cstring>
+#include <bits/stdc++.h>
 
 using namespace std;
 

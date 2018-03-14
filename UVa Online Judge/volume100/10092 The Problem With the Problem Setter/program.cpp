@@ -95,9 +95,7 @@
 // 之间弧的容量为 1，每道题目到各个类别之间弧的容量为 1，题目类别到汇点 sink 之间弧的
 // 容量为该类别所要求的题目数，然后求此图的最大流能否达到题目要求数。
 
-#include <iostream>
-#include <cstring>
-#include <queue>
+#include <bits/stdc++.h>
 
 using namespace std;
 

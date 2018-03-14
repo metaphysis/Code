@@ -9,10 +9,10 @@
 // Improved Shortest Augment Path 解题，使用间隙优化。网络上一篇好的文章，推荐阅读：
 // http://community.topcoder.com/tc?module=Static&d1=tutorials&d2=maxFlowRevisited。
 
-#include <iostream>
 
 #define MAXV 130
 #define MAXINT (1 << 20)
+#include <bits/stdc++.h>
 
 using namespace std;
 

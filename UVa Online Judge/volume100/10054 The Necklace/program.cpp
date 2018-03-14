@@ -76,9 +76,7 @@
 // 新输出缓存，故耗费较多时间）。在提交中还发现，UVa OnlineJudge 中的测试数据都
 // 是连通图，判断是否为连通图的一步其实可以省略掉！呵，测试数据还真是较弱......
 
-#include <iostream>
-#include <cstring>
-#include <queue>
+#include <bits/stdc++.h>
 
 using namespace std;
 

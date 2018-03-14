@@ -6,9 +6,8 @@
 //
 // 版权所有（C）2011，邱秋。metaphysis # yeah dot net
 	
-#include <iostream>
-#include <cstdlib>
-	
+#include <bits/stdc++.h>
+
 using namespace std;
 	
 char status[8][8];	// 表示国际象棋棋子的位置。

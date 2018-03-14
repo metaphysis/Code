@@ -13,9 +13,7 @@
 // 这里较为关键的是如何表示游戏的当前状态，以避免在集合 A 中添加重复的状态，可以使用字符串来表示
 // 当前的滑块状态。集合 A 可以使用 map 来判断是否已经有重复的状态产生。
 
-#include <iostream>
-#include <queue>
-#include <map>
+#include <bits/stdc++.h>
 
 using namespace std;
 

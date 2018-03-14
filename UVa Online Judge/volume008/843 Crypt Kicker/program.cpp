@@ -6,12 +6,8 @@
 //
 // 版权所有（C）2011，邱秋。metaphysis # yeah dot net
 	
-#include <iostream>
-#include <vector>
-#include <sstream>
-#include <algorithm>
-#include <map>
-	
+#include <bits/stdc++.h>
+
 using namespace std;
 	
 bool finished = false;	// 提前退出递归的标志。

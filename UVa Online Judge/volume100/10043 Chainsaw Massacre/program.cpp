@@ -11,8 +11,7 @@
 // 左边界，往右扫描确定右边界，当左右边界确定后，就可以确定其面积，然后上下再进行一次同样的扫描，即
 // 可确定最终的最大矩形面积。
 
-#include <iostream>
-#include <algorithm>
+#include <bits/stdc++.h>
 
 using namespace std;
 

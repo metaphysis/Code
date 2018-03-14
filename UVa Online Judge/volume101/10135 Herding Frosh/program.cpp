@@ -15,10 +15,7 @@
 // 算法的思想开始扫描，不过这里需要将起始点设置为原点，最后一点设置为 p2，在扫描结束时再加上点 p2，
 // 那么扫描所得到的 “包” 的形状恰恰就是题目所求丝带的形状。
 
-#include <iostream>
-#include <algorithm>
-#include <iomanip>
-#include <cmath>
+#include <bits/stdc++.h>
 
 using namespace std;
 

@@ -46,7 +46,7 @@
 // 初始时，切割点 i 到 切割点 i + 1 的棍子切割费用为 0，因为两端都为切割点，无须再切割。在递归
 // 求解时，可以使用表格式 DP 加快求解速度，因为本题的测试数据似乎很多。
 
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 

@@ -84,9 +84,7 @@
 // 但是携带血量可以是最少的，故需要遍历可能的通路来获取最少使用血量，这个可以通过使用
 // 宽度优先遍历的思想来解决。
 
-#include <iostream>
-#include <queue>
-#include <map>
+#include <bits/stdc++.h>
 
 using namespace std;
 

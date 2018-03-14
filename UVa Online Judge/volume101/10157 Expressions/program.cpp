@@ -31,11 +31,8 @@
 // 用于 How Many Pieces of Land? 问题的大数类在这个问题上，显然效率不够高，于是我改进了一下，以
 // 10000为基数，数位改用模10000的值，用无符号整数来保存数位。
 	
-#include <iostream>
-#include <vector>
-#include <algorithm>
-#include <iomanip>
-	
+#include <bits/stdc++.h>
+
 using namespace std;
 	
 #define MAXM	151

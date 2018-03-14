@@ -9,7 +9,7 @@
 // 啊哈，很有趣的一个题目。在网络上搜索一下 Nim 和 Xor，就可以了解到相关信息。若是自己想，一年也
 // 想不出来吧。
 
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 

@@ -65,9 +65,7 @@
 // 可以使用宽度优先遍历的 Ford-Fullerson增广路方法，又名 Edmonds-Karp 算法，算法效
 // 率为 O（V*E*E），后续博文会给出。
 
-#include <iostream>
-#include <algorithm>
-#include <cstring>
+#include <bits/stdc++.h>
 
 using namespace std;
 

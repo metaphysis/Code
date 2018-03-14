@@ -75,8 +75,7 @@
 // 注意第一组数据，UVa 中的测试数据应该没有包含这样的数据，在到达 501 公里时，没有再退回到 500
 // 公里处。
 
-#include <iostream>
-#include <sstream>
+#include <bits/stdc++.h>
 
 using namespace std;
 

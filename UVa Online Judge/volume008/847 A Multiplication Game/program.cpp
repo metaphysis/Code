@@ -6,9 +6,8 @@
 //
 // 版权所有（C）2011，邱秋。metaphysis # yeah dot net
 	
-#include <iostream>
-#include <cmath>
-	
+#include <bits/stdc++.h>
+
 using namespace std;
 	
 void ones(int number, bool win)

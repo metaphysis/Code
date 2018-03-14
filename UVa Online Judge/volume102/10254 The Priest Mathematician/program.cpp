@@ -18,10 +18,7 @@
 //
 // 2 的 m 次幂出现 （m + 1） 次，m >= 0。
 	
-#include <iostream>
-#include <vector>
-#include <iomanip>
-#include <algorithm>
+#include <bits/stdc++.h>
 
 using namespace std;
 

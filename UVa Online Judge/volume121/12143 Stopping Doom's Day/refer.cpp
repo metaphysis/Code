@@ -1,4 +1,3 @@
-#include <stdio.h>
 
 #if defined( _WIN32 )
 typedef __int64 az_int64_t;

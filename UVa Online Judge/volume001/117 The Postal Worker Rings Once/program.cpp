@@ -13,7 +13,7 @@
 // 之间的最短路径长度。为了简便，可以采用 Floyd-Warshall 算法来得到两点
 // 间的最短路径长度。
 
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 

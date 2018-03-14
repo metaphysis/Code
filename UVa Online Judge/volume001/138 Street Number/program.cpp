@@ -16,9 +16,7 @@
 //
 // 问题转化为：求相邻两个自然数，他们的乘积的一半为一个平方数。
 
-#include <iostream>
-#include <iomanip>
-#include <cmath>
+#include <bits/stdc++.h>
 
 using namespace std;
 

@@ -68,7 +68,7 @@
 // 有关 Floyd-Warshall 算法的更多应用，可参考网页：
 // http://aduni.org/courses/algorithms/courseware/handouts/Reciation_07.html#25504。
 
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 

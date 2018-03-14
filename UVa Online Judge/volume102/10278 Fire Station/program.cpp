@@ -49,8 +49,7 @@
 // 那么可以从编号大的路口开始枚举新消防站所处的路口，重新计算路口离消防站的最大距离，
 // 在此过程中，取能得到最小最大距离且编号最小的路口编号即为新消防站的位置。
 
-#include <iostream>
-#include <sstream>
+#include <bits/stdc++.h>
 
 using namespace std;
 

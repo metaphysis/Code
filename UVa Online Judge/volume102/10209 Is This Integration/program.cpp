@@ -23,9 +23,7 @@
 // Y = a * a * (2 * sqrt(3) - 4 + PI / 3)
 // Z = a * a * (4 - sqrt(3) - 2 * PI / 3)
 
-#include <iostream>
-#include <iomanip>
-#include <cmath>
+#include <bits/stdc++.h>
 
 using namespace std;
 

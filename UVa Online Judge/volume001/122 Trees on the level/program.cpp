@@ -9,9 +9,7 @@
 // [解题方法]
 // 本题可以归结为数据结构问题。步骤是建立树结构，检查是否完整，若完整则按深度输出节点。
 
-#include <iostream>
-#include <sstream>
-#include <cstring>
+#include <bits/stdc++.h>
 
 using namespace std;
 

@@ -55,8 +55,7 @@
 //
 // 注意解题过程中应选择 long long 型整数以避免溢出。
 
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 
 using namespace std;
 

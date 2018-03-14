@@ -21,8 +21,7 @@
 //
 // （3）perm[n - 1][p][r - 1]：由于该人比所有人矮，故可以直接放在队尾。
 
-#include <iostream>
-#include <cstring>
+#include <bits/stdc++.h>
 
 using namespace std;
 

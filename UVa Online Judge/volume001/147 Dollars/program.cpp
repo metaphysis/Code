@@ -8,9 +8,7 @@
 //
 // PDF 格式的试题描述和 UVa 网页上的试题描述有出入，主是上限提高到 300 美元。输出格式亦有改变。
 
-#include <iostream>
-#include <sstream>
-#include <iomanip>
+#include <bits/stdc++.h>
 
 using namespace std;
 

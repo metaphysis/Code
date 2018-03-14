@@ -123,8 +123,7 @@
 // 只不过在计算的时候，为了不覆盖前一次计算的值，每次都从最后一个元素开始使用转移方程往前计算即可。
 // 前面的 UVa 10069 Distinct Subsequences 也可以使用的同样的方法来优化。
 
-#include <iostream>
-#include <algorithm>
+#include <bits/stdc++.h>
 
 using namespace std;
 

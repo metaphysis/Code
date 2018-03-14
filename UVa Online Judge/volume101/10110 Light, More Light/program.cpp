@@ -10,8 +10,7 @@
 // 方数，它的因子总数是奇数，否则是偶数，对应题目则是奇数次开关灯后灯是亮的，偶数次是灭的，判断数
 // n 是否是平方数即可。
 
-#include <iostream>
-#include <cmath>
+#include <bits/stdc++.h>
 
 using namespace std;
 

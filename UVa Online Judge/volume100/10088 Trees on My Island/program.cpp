@@ -10,7 +10,7 @@
 // 运用面积不变的性质，使用多边形面积计算公式和 Pick 定理求解。Pick 定理需要计算边界上的格点数。
 // 在本题中需要一点小技巧。
 
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 

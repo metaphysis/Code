@@ -11,11 +11,7 @@
 //
 // 提交时错误了一次，因为没有注意到需要忽略的关键词可能会重复给出的情况，修正后就 AC 了。
 
-#include <algorithm>
-#include <iostream>
-#include <sstream>
-#include <vector>
-#include <set>
+#include <bits/stdc++.h>
 
 using namespace std;
 

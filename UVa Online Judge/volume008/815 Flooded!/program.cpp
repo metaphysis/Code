@@ -10,22 +10,7 @@
 // cases where the water level of the answer is equal to the elevation of any
 // region.
 
-#include <algorithm>
-#include <bitset>
-#include <cassert>
-#include <cmath>
-#include <cstring>
-#include <iomanip>
-#include <iostream>
-#include <limits>
-#include <list>
-#include <map>
-#include <numeric>
-#include <queue>
-#include <set>
-#include <sstream>
-#include <stack>
-#include <vector>
+#include <bits/stdc++.h>
 
 using namespace std;
 

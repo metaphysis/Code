@@ -10,10 +10,8 @@
 // 具体可参见维基网页 http://en.wikipedia.org/wiki/Dividing_a_circle_into_areas，
 // 以及 http://www.arbelos.co.uk/Papers/Chords-regions.pdf 。
 	
-#include <iostream>
-#include <vector>
-#include <algorithm>
-	
+#include <bits/stdc++.h>
+
 using namespace std;
 	
 #define PLUS 	1	// 正数。

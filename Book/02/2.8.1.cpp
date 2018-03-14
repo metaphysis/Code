@@ -1,5 +1,4 @@
-#include <iostream>
-#include <bitset>
+#include <bits/stdc++.h>
 
 using namespace std;
 

@@ -11,21 +11,7 @@
 // NO, you can assume that potential promotion already took place. so, a pawn in the 8th row is just a pawn.
 // The input is given as row by row, first a1 - h1, then a2 - h2, etc.
 
-#include <algorithm>
-#include <bitset>
-#include <cassert>
-#include <cmath>
-#include <cstring>
-#include <iomanip>
-#include <iostream>
-#include <limits>
-#include <list>
-#include <map>
-#include <queue>
-#include <set>
-#include <sstream>
-#include <stack>
-#include <vector>
+#include <bits/stdc++.h>
 
 using namespace std;
 

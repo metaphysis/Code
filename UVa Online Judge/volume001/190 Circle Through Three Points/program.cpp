@@ -8,12 +8,7 @@
 //
 // 当参数为 0 时忽略输出，但是题目描述中并未提到这一点。很容易让人 Wrong Answer。
 
-#include <iostream>
-#include <iomanip>
-#include <sstream>
-#include <vector>
-#include <algorithm>
-#include <cmath>
+#include <bits/stdc++.h>
 
 using namespace std;
 

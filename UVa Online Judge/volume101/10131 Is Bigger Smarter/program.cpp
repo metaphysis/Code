@@ -51,8 +51,7 @@
 // 的 LDS 最长的大象序号，更新第 i + 1 大象的 LDS 长度，并记录第 i + 1 头大象是接在那头大象后
 // 得到的 LDS，这可以通过设立一个 parnet[] 数组来记录。
 
-#include <iostream>
-#include <algorithm>
+#include <bits/stdc++.h>
 
 using namespace std;
 

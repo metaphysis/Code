@@ -9,8 +9,7 @@
 // [解题方法]
 // 模拟题。由于只需要保存父子关系，不一定要构建树。虽然方法是直接的，但是有点繁琐。
 
-#include <iostream>
-#include <map>
+#include <bits/stdc++.h>
 
 using namespace std;
 

@@ -157,15 +157,8 @@
 // 础上增加。IDA* 比单独的深度优先搜索或广度优先搜索要高效得多，因为每次计算出的开销值都是基于实
 // 际的走法序列而不是启发式函数的估计。
 	
-#include <iostream>
-#include <cstring>
-#include <limits>
-#include <vector>
-#include <queue>
-#include <stack>
-#include <set>
-#include <map>
-	
+#include <bits/stdc++.h>
+
 using namespace std;
 	
 #define SQUARES 4		// 局面横向格子数。

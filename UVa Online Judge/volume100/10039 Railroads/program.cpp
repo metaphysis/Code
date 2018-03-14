@@ -95,11 +95,7 @@
 // 个城市的路线情况来更新这个二维数组的值，最后从中间寻找是否有通路，若有通路，则找出
 // 其最晚出发时间。
 
-#include <iostream>
-#include <iomanip>
-#include <algorithm>
-#include <vector>
-#include <map>
+#include <bits/stdc++.h>
 
 using namespace std;
 

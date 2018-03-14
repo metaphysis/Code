@@ -21,9 +21,7 @@
 // Judge，需要在结果加上一个很小的常数才能 AC，而在 Programming Challenges 上加上很小的常数
 // 反而错误。
 
-#include <iostream>
-#include <iomanip>
-#include <cmath>
+#include <bits/stdc++.h>
 
 using namespace std;
 

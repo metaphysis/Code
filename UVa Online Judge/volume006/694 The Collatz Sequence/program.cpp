@@ -4,8 +4,8 @@
 // Submission Date: 2016-07-14
 // UVa Run Time: 0.020s
 	
-#include <iostream>
-	
+#include <bits/stdc++.h>
+
 using namespace std;
 
 	

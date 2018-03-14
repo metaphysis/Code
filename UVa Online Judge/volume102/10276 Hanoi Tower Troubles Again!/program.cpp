@@ -46,9 +46,7 @@
 // 10，... ，看出了什么规律？第三种是使用 DAG （有向无环图） 来对约束建模，然后使用
 // 图论方法解决。
 
-#include <iostream>
-#include <vector>
-#include <cmath>
+#include <bits/stdc++.h>
 
 using namespace std;
 

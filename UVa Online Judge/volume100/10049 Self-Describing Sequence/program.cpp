@@ -41,10 +41,7 @@
 // 列首的 n 值，若有值对应，则该数的函数值就是弹出的队列元素值 fn。
 // 5. 继续处理直到找到所有输入数的函数值，然后输出结果。
 
-#include <iostream>
-#include <vector>
-#include <algorithm>
-#include <queue>
+#include <bits/stdc++.h>
 
 using namespace std;
 	

@@ -21,8 +21,7 @@
 // 本题中数据类型的使用，因为 1 ≤ n ≤ 2,000,000,000，所以最好使用 long long 型整
 // 数以免中间计算结果出错导致 WA。
 
-#include <iostream>
-#include <cmath>
+#include <bits/stdc++.h>
 
 using namespace std;
 

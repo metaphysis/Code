@@ -1,9 +1,4 @@
-#include <iostream>
-#include <algorithm>
-#include <iomanip>
-#include <string>
-#include <cstring>
-#include <ctime>
+#include <bits/stdc++.h>
 
 using namespace std;
 

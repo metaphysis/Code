@@ -6,9 +6,8 @@
 //
 // 版权所有（C）2011，邱秋。metaphysis # yeah dot net
 	
-#include <iostream>
-#include <vector>
-	
+#include <bits/stdc++.h>
+
 using namespace std;
 	
 // 尝试用文件 file 来匹配所有的碎片。

@@ -65,7 +65,7 @@
 // 997823（440）
 	
 #include <bits/stdc++.h>
-	
+
 using namespace std;
 
 #define min(a, b) ((a) <= (b) ? (a) : (b))

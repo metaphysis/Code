@@ -14,8 +14,7 @@
 // 22，... ，其相邻编号之差形成一个初始项为 1，差为 6 的等差数列。由于起始处理蜂房编号的关系，需
 // 要适当放宽需要计算的蜂房坐标数量，否则会有一部分蜂房编号因为循环的关系而得不到计算。
 
-#include <iostream>
-#include <set>
+#include <bits/stdc++.h>
 
 using namespace std;
 

@@ -20,8 +20,7 @@
 // 历一个 n x m 矩阵中的所有元素，任何一种遍历方式都可以看作是从 nm 种有序数对到 1 和 nm 之间
 // 唯一整数的映射。
 
-#include <iostream>
-#include <cmath>
+#include <bits/stdc++.h>
 
 using namespace std;
 

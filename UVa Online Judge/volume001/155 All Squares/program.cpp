@@ -8,8 +8,7 @@
 //
 // 题目描述似乎有问题。
 
-#include <iostream>
-#include <iomanip>
+#include <bits/stdc++.h>
 
 using namespace std;
 

@@ -1,7 +1,4 @@
-#include <iostream>
-#include <map>
-#include <queue>
-#include <algorithm>
+#include <bits/stdc++.h>
 
 using namespace std;
 

@@ -9,10 +9,7 @@
 // 对数进行素因子分解即可。因为所求数小于 10E9，若某数是合数，则其素因子至少有一个小于或等于
 // sqrt(10E9)，则可先计算 2 - sqrt(10E9) 之间的素数以备用。
 
-#include <iostream>
-#include <vector>
-#include <cmath>
-#include <ctime>
+#include <bits/stdc++.h>
 
 using namespace std;
 

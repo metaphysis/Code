@@ -10,8 +10,7 @@
 // 左下角和右上角坐标，判断矩形是否至少有三个角落在多边形上，注意枚举时的坐
 // 标选择顺序，可以适当的选择自动得到最小字典序的结果。
 
-#include <iostream>
-#include <cmath>
+#include <bits/stdc++.h>
 
 using namespace std;
 

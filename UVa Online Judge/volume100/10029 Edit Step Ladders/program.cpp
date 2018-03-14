@@ -51,9 +51,7 @@
 // 一个可以通过的程序，则可以通过二分法不断提交尝试出这个最后结果来，我也试了一下，UVa 上的测试数
 // 据字典的最大递变长度为 45。
 
-#include <iostream>
-#include <string>
-#include <map>
+#include <bits/stdc++.h>
 
 using namespace std;
 

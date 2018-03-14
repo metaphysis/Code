@@ -1,6 +1,4 @@
-#include <iostream>
-#include <string>
-#include <cstring>
+#include <bits/stdc++.h>
 
 using namespace std;
 

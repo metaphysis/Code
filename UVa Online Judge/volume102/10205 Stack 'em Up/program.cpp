@@ -8,11 +8,8 @@
 //
 // 直接根据题意模拟洗牌的过程即可。
 	
-#include <iostream>
-#include <vector>
-#include <cstdlib>
-#include <cstring>
-	
+#include <bits/stdc++.h>
+
 using namespace std;
 	
 #define TOTAL 52	// 一副牌的的数量。

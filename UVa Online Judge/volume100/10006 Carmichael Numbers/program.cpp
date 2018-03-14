@@ -11,8 +11,7 @@
 // (x mod n) ^ y mod n = ((x mod n) ^ (y / 2) mod n) * ((x mod n) ^ (y / 2)
 //  mod n) * ((x mod n) ^ (y % 2) mod n) mod n，减少计算时间，否则容易TLE。
 
-#include <iostream>
-#include <cmath>
+#include <bits/stdc++.h>
 
 using namespace std;
 

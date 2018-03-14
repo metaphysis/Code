@@ -1,7 +1,4 @@
-#include <iostream>
-#include <limits>
-#include <algorithm>
-#include <iomanip>
+#include <bits/stdc++.h>
 
 using namespace std;
 

@@ -100,10 +100,7 @@
 // http://mathpuzzle.com/perkinsbestquilts.txt
 // http://mathworld.wolfram.com/MrsPerkinssQuilt.html
 
-#include <iostream>
-#include <cstring>
-#include <algorithm>
-#include <ctime>
+#include <bits/stdc++.h>
 
 using namespace std;
 

@@ -9,24 +9,7 @@
 // https://github.com/dmitrime/algorithmic-puzzles/blob/d608e78b7bbeee8e9cdfb9d80421186b984328e0/uva/910.cpp
 // 原解题代码的状态转移方程有错误，以下为经过修正后能够AC的代码。
 
-#include <algorithm>
-#include <bitset>
-#include <cassert>
-#include <cmath>
-#include <cstring>
-#include <iomanip>
-#include <iostream>
-#include <limits>
-#include <list>
-#include <map>
-#include <numeric>
-#include <queue>
-#include <set>
-#include <sstream>
-#include <stack>
-#include <unordered_map>
-#include <unordered_set>
-#include <vector>
+#include <bits/stdc++.h>
 
 using namespace std;
 

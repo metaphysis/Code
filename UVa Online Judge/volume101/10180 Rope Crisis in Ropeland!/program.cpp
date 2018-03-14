@@ -9,9 +9,7 @@
 // [解题方法]
 // 根据情况判断绳子是否需要绕过柱子，若需绕过柱子则根据边角关系计算即可。
 
-#include <iostream>
-#include <iomanip>
-#include <cmath>
+#include <bits/stdc++.h>
 
 using namespace std;
 

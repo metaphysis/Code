@@ -4,8 +4,7 @@
 // Submission Date: 2011-11-01
 // UVa Run Time: 0.016s
 
-#include <iostream>
-#include <cmath>
+#include <bits/stdc++.h>
 
 using namespace std;
 

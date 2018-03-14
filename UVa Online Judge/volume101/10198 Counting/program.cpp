@@ -6,11 +6,8 @@
 //
 // 版权所有（C）2011，邱秋。metaphysis # yeah dot net
 	
-#include <iostream>
-#include <vector>
-#include <iterator>
-#include <algorithm>
-	
+#include <bits/stdc++.h>
+
 using namespace std;
 	
 #define MAXN 1000

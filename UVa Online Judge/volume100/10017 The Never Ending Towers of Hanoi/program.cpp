@@ -10,7 +10,7 @@
 // 来表示圆盘是否在某根柱子上，因为有小圆盘总是在大圆盘上面的限制，只需记录某根柱子
 // 有哪些圆盘，在输出时，按从大到小的顺序输出圆盘序号即可。
 
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 

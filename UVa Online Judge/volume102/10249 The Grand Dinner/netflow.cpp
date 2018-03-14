@@ -13,9 +13,7 @@
 // 效率为 O（V*E*E），对于顶点数和边数较多的题目，可以使用最短扩增路 （Shortest
 // Augment Path，SAP） 算法。
 
-#include <iostream>
-#include <cstring>
-#include <queue>
+#include <bits/stdc++.h>
 
 using namespace std;
 

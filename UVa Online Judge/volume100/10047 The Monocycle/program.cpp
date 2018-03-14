@@ -15,9 +15,7 @@
 // 在遍历中更新该时间，大于等于该时间的同等状态不再继续扩展进行遍历，最后取终点 T，中心着地颜色为
 // 绿色时的到达时间最小值，若最小值还是预设的 MAXINT，则表示目标不可达。
 
-#include <iostream>
-#include <queue>
-#include <set>
+#include <bits/stdc++.h>
 
 using namespace std;
 

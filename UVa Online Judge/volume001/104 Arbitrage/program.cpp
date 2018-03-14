@@ -17,7 +17,7 @@
 // 条件是：profit(i, k, step-1) * profit(k, j, 1) > profit(i, j, step)
 // 递推初始值：profit(i, i, 1) = 1.0
 
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 

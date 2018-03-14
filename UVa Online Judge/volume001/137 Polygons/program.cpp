@@ -6,10 +6,7 @@
 //
 // 版权所有（C）2016 - 2017，邱秋。metaphysis # yeah dot net
 
-#include <iostream>
-#include <algorithm>
-#include <iomanip>
-#include <cmath>
+#include <bits/stdc++.h>
 
 using namespace std;
 

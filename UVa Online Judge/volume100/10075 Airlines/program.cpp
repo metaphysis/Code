@@ -15,10 +15,7 @@
 //
 // d(p, q) = R * arccos((sin(plat)sin(qlat) + cos(plat)cos(qlat)cos(plong − qlong))
 
-#include <iostream>
-#include <cmath>
-#include <map>
-#include <set>
+#include <bits/stdc++.h>
 
 using namespace std;
 

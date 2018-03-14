@@ -6,12 +6,8 @@
 //
 // 版权所有（C）2011，邱秋。metaphysis # yeah dot net
 
-#include <iostream>
-#include <string>
-#include <sstream>
-#include <vector>
-#include <iterator>
-	
+#include <bits/stdc++.h>
+
 using namespace std;
 	
 #define SWAP(x, y, type) \

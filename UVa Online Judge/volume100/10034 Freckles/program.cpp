@@ -43,10 +43,7 @@
 // [解题方法]
 // 该题是典型的求最小生成树问题，其中的边权即为两点的距离，利用 Prim 算法解决。
 
-#include <iostream>
-#include <cstring>
-#include <vector>
-#include <cmath>
+#include <bits/stdc++.h>
 
 using namespace std;
 

@@ -6,9 +6,8 @@
 //
 // 版权所有（C）2011，邱秋。metaphysis # yeah dot net
 	
-#include <iostream>
-#include <vector>
-	
+#include <bits/stdc++.h>
+
 using namespace std;
 	
 // 判断一个数是否是回文数。该数的每一位逆序存放在动态数组中。

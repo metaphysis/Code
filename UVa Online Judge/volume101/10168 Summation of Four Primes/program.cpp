@@ -11,8 +11,7 @@
 // 数，当 n 为奇数时，n - 2 - 3 为偶数，按照哥德巴赫猜想，任何大于等于 4 的偶数都可以
 // 表示成 2 个素数之和。
 
-#include <iostream>
-#include <cmath>
+#include <bits/stdc++.h>
 
 using namespace std;
 

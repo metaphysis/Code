@@ -9,8 +9,7 @@
 // [解题方法]
 // 可以将问题转化为求最长上升子序列的问题。
 
-#include <iostream>
-#include <sstream>
+#include <bits/stdc++.h>
 
 using namespace std;
 

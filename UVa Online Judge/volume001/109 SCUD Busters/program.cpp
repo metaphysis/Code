@@ -11,11 +11,7 @@
 // 和 UVa 12016 类似。求出每个王国的凸包顶点，判断导弹的落点是否在某个王国的凸
 // 包范围内，若在其范围内，则该王国电丧失，该王国的面积计入丧失电力的总面积之中。
 
-#include <iostream>
-#include <algorithm>
-#include <iomanip>
-#include <cstring>
-#include <cmath>
+#include <bits/stdc++.h>
 
 using namespace std;
 

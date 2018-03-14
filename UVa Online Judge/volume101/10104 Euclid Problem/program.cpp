@@ -37,8 +37,7 @@
 // 最小的（这一点为什么成立？因为起始条件 a * 1 + 0 * 0 = GCD(a, 0) 决定了它必将是绝对值和
 // 最小的）。另外题目的叙述有点让人疑惑，应该是先考虑绝对值最小的，然后再考虑 x <= y 这个条件。
 
-#include <iostream>
-#include <cmath>
+#include <bits/stdc++.h>
 
 using namespace std;
 

@@ -89,12 +89,7 @@
 // 摄像头的位置对应图论的割顶（articulation vertex）概念，求图的割顶即可，需要注意
 // 的是，测试数据所给的可能不是连通图，故需要找到其中的所有连通子图的割顶。
 
-#include <iostream>
-#include <cstring>
-#include <vector>
-#include <algorithm>
-#include <queue>
-#include <map>
+#include <bits/stdc++.h>
 
 using namespace std;
 

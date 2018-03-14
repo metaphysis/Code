@@ -14,11 +14,8 @@
 // 2 * （n - 1） + 1 = 2 * n - 1 步，否则若剩余距离 distance - n^2 在 1 - （n + 1），
 // 只需插入一步即可，若 distance - n^2 大于 （n + 1），则需多插入两步即可。
 	
-#include <iostream>
-#include <vector>
-#include <algorithm>
-#include <cmath>
-	
+#include <bits/stdc++.h>
+
 using namespace std;
 	
 int main(int ac, char *av[])

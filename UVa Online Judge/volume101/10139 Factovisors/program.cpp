@@ -12,8 +12,7 @@
 // 了一句素数测试的语句才 AC，应该是有特殊的测试数据造成的，故需要在循环中及时检查条件，退出
 // 循环，以免 TLE。
 
-#include <iostream>
-#include <cmath>
+#include <bits/stdc++.h>
 
 using namespace std;
 

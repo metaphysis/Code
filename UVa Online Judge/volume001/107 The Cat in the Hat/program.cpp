@@ -45,9 +45,7 @@
 //
 // 另外一种解题的方法是根据方程使用二分法搜索 M 和 N 的值，这种方法我没有具体尝试过。
 
-#include <iostream>
-#include <cstring>
-#include <cmath>
+#include <bits/stdc++.h>
 
 using namespace std;
 

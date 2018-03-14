@@ -63,10 +63,7 @@
 // 	return 0;
 // }
 
-#include <iostream>
-#include <vector>
-#include <iomanip>
-#include <cstdlib>
+#include <bits/stdc++.h>
 
 using namespace std;
 	

@@ -42,10 +42,7 @@
 // 长度为必定为 sum[i] - m，记为 memo[i][sum[i] - m]，若都能放置，则都为 true，初始条件为
 // memo[0][0] = true，从下往上 DP 求 memo[i][length] = true 时最大可能的 i。
 
-#include <iostream>
-#include <algorithm>
-#include <cstring>
-#include <set>
+#include <bits/stdc++.h>
 
 using namespace std;
 

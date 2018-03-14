@@ -6,13 +6,7 @@
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
-#include <bitset>
-#include <cstring>
-#include <iostream>
-#include <map>
-#include <queue>
-#include <set>
-#include <vector>
+#include <bits/stdc++.h>
 
 using namespace std;
 

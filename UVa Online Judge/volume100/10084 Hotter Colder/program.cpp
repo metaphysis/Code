@@ -10,10 +10,7 @@
 // 本题的实质是半平面与凸多边形求交问题，表示半平面的直线即相邻两个位置连线的垂直平分线。由于初始
 // 区域为凸多边形，每次切割后仍为凸多边形。
 
-#include <iostream>
-#include <iomanip>
-#include <cmath>
-#include <queue>
+#include <bits/stdc++.h>
 
 using namespace std;
 

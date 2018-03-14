@@ -125,9 +125,8 @@
 // UVa 10237 Bishops 和本题是类似的，但是 n 和 k 已经足够大，通过回溯已经不可能在
 // 规定时间内找到答案，使用组合方法和大数运算成为必须。
 	
-#include <iostream>
-#include <algorithm>
-	
+#include <bits/stdc++.h>
+
 using namespace std;
 	
 #define MAXN 8

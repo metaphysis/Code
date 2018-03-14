@@ -22,7 +22,7 @@
 // 与其他筷子组成的筷子难用度都要小，与最优方案相矛盾。故在选择第一支和第二支筷子时，总是选择相邻
 // 筷子进行组合，可以获得最小的难用度。
 
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 

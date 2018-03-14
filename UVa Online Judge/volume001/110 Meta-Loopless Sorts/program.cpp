@@ -9,7 +9,7 @@
 // [解题方法]
 // 啊哈，又是一道很有意思的模拟题。本题解是依照题目所给的示例模拟生成插入排序的 Pascal 程序。
 
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 

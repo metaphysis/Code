@@ -39,11 +39,8 @@
 //
 // 可以看出涉及到大数的乘以及除运算。
 	
-#include <iostream>
-#include <vector>
-#include <iomanip>
-#include <algorithm>
-	
+#include <bits/stdc++.h>
+
 using namespace std;
 	
 class integer

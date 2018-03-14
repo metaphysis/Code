@@ -9,8 +9,7 @@
 // [解题方法]
 // 简单的模拟题。
 
-#include <iostream>
-#include <map>
+#include <bits/stdc++.h>
 
 using namespace std;
 

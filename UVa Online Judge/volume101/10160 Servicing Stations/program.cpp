@@ -22,10 +22,7 @@
 // 枚举方法参考了 [J. Loughry, J.I. van Hemert, L. Schoofs, Efficiently Enumerating
 // the Subsets of a Set, 2000]
 
-#include <iostream>
-#include <vector>
-#include <algorithm>
-#include <set>
+#include <bits/stdc++.h>
 
 using namespace std;
 

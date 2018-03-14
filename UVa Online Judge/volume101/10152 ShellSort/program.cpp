@@ -6,8 +6,8 @@
 //
 // 版权所有（C）2011，邱秋。metaphysis # yeah dot net
 	
-#include <iostream>
-	
+#include <bits/stdc++.h>
+
 using namespace std;
 	
 #define MAXSIZE 200

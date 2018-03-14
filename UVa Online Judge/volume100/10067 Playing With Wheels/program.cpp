@@ -83,10 +83,7 @@
 // 8 1 9 8
 // 9 7 2 2
 
-#include <iostream>
-#include <algorithm>
-#include <cstring>
-#include <queue>
+#include <bits/stdc++.h>
 
 using namespace std;
 

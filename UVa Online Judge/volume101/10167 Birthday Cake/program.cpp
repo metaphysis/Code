@@ -9,8 +9,7 @@
 // [解题方法]
 // 枚举所有可能的 A 和 B，判断是否符合条件。
 
-#include <iostream>
-#include <cmath>
+#include <bits/stdc++.h>
 
 using namespace std;
 

@@ -11,9 +11,7 @@
 // 确定处于这个模具内的巧克力片数量就变得相对容易了，由于要使得模具内的巧克力片最多，只需枚举所有
 // 这样的模具位置，求其模具内巧克力片的最大值即可。
 
-#include <iostream>
-#include <sstream>
-#include <cmath>
+#include <bits/stdc++.h>
 
 using namespace std;
 

@@ -95,7 +95,7 @@
 // Union-Find 算法介绍：
 // http://www.cs.princeton.edu/~rs/AlgsDS07/01UnionFind.pdf。
 
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 

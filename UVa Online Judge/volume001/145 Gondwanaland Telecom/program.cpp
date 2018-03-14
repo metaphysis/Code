@@ -10,10 +10,7 @@
 // may last more than 24 hours. "
 // I miss the case of whole 24 hours! (start time == end time)
 
-#include <iostream>
-#include <sstream>
-#include <iomanip>
-#include <cmath>
+#include <bits/stdc++.h>
 
 using namespace std;
 

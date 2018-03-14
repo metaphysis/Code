@@ -8,24 +8,7 @@
 //
 // Please refer to: https://github.com/morris821028/UVa/blob/master/volume010/1051%20-%20Bipartite%20Numbers%5Bbfs2%5D.cpp
 
-#include <algorithm>
-#include <bitset>
-#include <cassert>
-#include <cmath>
-#include <cstring>
-#include <iomanip>
-#include <iostream>
-#include <limits>
-#include <list>
-#include <map>
-#include <numeric>
-#include <queue>
-#include <set>
-#include <sstream>
-#include <stack>
-#include <unordered_map>
-#include <unordered_set>
-#include <vector>
+#include <bits/stdc++.h>
 
 using namespace std;
 

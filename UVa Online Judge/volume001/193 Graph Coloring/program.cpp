@@ -8,9 +8,7 @@
 //
 // The test data on UVa is so weak that backtracking can be accepted.
 
-#include <iostream>
-#include <vector>
-#include <algorithm>
+#include <bits/stdc++.h>
 
 using namespace std;
 

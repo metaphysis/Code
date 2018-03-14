@@ -44,9 +44,7 @@
 //
 // 本题解法在 Progrmming Challenges 上通过，在 UVa Online Judge 上为 WA。
 
-#include <iostream>
-#include <vector>
-#include <algorithm>
+#include <bits/stdc++.h>
 
 using namespace std;
 

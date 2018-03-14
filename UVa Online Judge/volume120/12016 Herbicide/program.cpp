@@ -10,9 +10,7 @@
 // 由于本题给定的坐标均为整数，同时数据量大，容易 TLE，故使用叉积判断点在直线上或
 // 射线与线段有交点。不检测多边形上的点以提高效率。
 
-#include <iostream>
-#include <algorithm>
-#include <cmath>
+#include <bits/stdc++.h>
 
 using namespace std;
 

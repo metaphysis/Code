@@ -85,7 +85,7 @@
 // [0，N - 1] 的朋友，元素 [N，2 * N - 1] 存放的是国家 [0，N - 1] 的敌人，x 和 x + n
 // 均标记 x，x + n 的作用是放置在敌对国家下的副本以便记录敌对关系。
 
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 

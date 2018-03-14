@@ -17,8 +17,7 @@
 //
 // 更多信息可参考：http://mathworld.wolfram.com/ElementaryCellularAutomaton.html 。
 
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 
 using namespace std;
 
