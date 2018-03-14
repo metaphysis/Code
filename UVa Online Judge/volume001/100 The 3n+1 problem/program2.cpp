@@ -2,9 +2,6 @@
 
 using namespace std;
 
-#define min(a, b) (((a) < (b)) ? (a) : (b))
-#define max(a, b) (((a) > (b)) ? (a) : (b))
-
 const int MAX_SIZE = 1000000;
 
 int cache[MAX_SIZE];
@@ -28,9 +25,7 @@ string space(int number)
 
 int main(int ac, char *av[])
 {
-    cout << "#include <iostream>\n";
-    cout << "#define min(a, b) (((a) < (b)) ? (a) : (b))\n";
-    cout << "#define max(a, b) (((a) > (b)) ? (a) : (b))\n";
+    cout << "#include <bits/stdc++.h>\n";
     cout << "using namespace std;\n";
     cout << "int main(int ac, char *av[])\n";
     cout << "{\n";

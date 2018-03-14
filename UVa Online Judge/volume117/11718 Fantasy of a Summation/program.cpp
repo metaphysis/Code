@@ -10,15 +10,12 @@
 
 using namespace std;
 
-int powMod(int n, int K, int MOD)
+int powMod(int x, int k, int mod)
 {
-    if (K == 0) return 1;
-    if (K == 1) return (n % MOD);
-    int r = powMod(n, K / 2, MOD);
-    if (K % 2 == 1)
-        return (((r * r) % MOD) * (n % MOD)) % MOD;
-    else
-        return (r * r) % MOD;
+    if (k == 0) return 1;
+    int r = powMod(x * x % mod, k >> 1, mod);
+    if (k & 1) r = r * x % mod;
+    return r;
 }
 
 int main(int argc, char *argv[])

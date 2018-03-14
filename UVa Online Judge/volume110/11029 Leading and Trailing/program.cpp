@@ -10,13 +10,12 @@
 
 using namespace std;
 
-int powMod(int n, int k)
+long long powMod(long long x, long long k, long long mod)
 {
-    if (k == 1) return n % 1000;
-    int half = powMod(n, k / 2);
-    half = (half * half) % 1000;
-    if (k % 2 == 1) half = (half * (n % 1000)) % 1000;
-    return half;
+    if (k == 0) return 1;
+    long long r = powMod(x * x % mod, k >> 1, mod);
+    if (k & 1) r = r * x % mod;
+    return r;
 }
 
 int main(int argc, char *argv[])
@@ -35,7 +34,7 @@ int main(int argc, char *argv[])
         cout << setw(3) << left << integer;
         cout << "...";
         // TTT
-        cout << setw(3) << right << setfill('0') << powMod(n, k) % 1000 << '\n';
+        cout << setw(3) << right << setfill('0') << powMod(n, k, 1000) << '\n';
     }
 
     return 0;

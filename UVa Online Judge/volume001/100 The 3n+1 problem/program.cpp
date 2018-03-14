@@ -68,9 +68,6 @@
 
 using namespace std;
 
-#define min(a, b) ((a) <= (b) ? (a) : (b))
-#define max(a, b) ((a) >= (b) ? (a) : (b))
-
 #define MAXSIZE 1000000
 	
 int cache[MAXSIZE];
