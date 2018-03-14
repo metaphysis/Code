@@ -1,0 +1,6 @@
+homogeneous
+not homogeneous
+not homogeneous
+not homogeneous
+homogeneous
+not homogeneous

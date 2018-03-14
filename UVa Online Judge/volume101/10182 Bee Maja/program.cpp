@@ -21,7 +21,7 @@ using namespace std;
 #define MAXN 100200
 
 int offset[5][2] = { { -1, 0 }, { 0, -1 }, { 1, -1 }, { 1, 0 }, { 0, 1 } };
-pair < int, int > maja[MAXN + 2000];
+pair<int, int> maja[MAXN + 2000];
 
 int main(int ac, char *av[])
 {
