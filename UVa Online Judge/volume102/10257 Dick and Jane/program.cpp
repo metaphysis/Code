@@ -1,29 +1,14 @@
 // Dick and Jane
 // UVa ID: 10257
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2018-03-13
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
+//
+// It is a weird problem!
 
-#include <algorithm>
-#include <bitset>
-#include <cassert>
-#include <cmath>
-#include <cstring>
-#include <iomanip>
-#include <iostream>
-#include <limits>
-#include <list>
-#include <map>
-#include <numeric>
-#include <queue>
-#include <set>
-#include <sstream>
-#include <stack>
-#include <unordered_map>
-#include <unordered_set>
-#include <vector>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -34,9 +19,9 @@ int main(int argc, char *argv[])
     int s, p, y, j;
     while (cin >> s >> p >> y >> j)
     {
-        int turtle = (j + 12 - y - p) / 3;
-        int cat = (j + 12 - s - turtle) / 2;
-        int dog = (j + 12 - cat - turtle);
+        int turtle = (12 + j - p - y) / 3;
+        int cat = (12 + j - s - turtle) / 2;
+        int dog = (12 + j - cat - turtle);
         cout << dog << ' ' << cat << ' ' << turtle << '\n';
     }
 

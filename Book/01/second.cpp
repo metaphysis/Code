@@ -1,6 +1,4 @@
-#include <iostream>
-#include <iomanip>
-#include <limits>
+#include <bits/stdc++.h>
 using namespace std;
 int main(int argc, char *argv[])
 {

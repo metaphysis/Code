@@ -1,14 +1,10 @@
-#include <iostream>
-#include <iomanip>
-#include <vector>
+#include <bits/stdc++.h>
 
 using namespace std;
 
 int main(int argc, char *argv[])
 {
-    cout << "#include <iostream>\n"
-         << "#include <iomanip>\n"
-         << "#include <limits>\n"
+    cout << "#include <bits/stdc++.h>\n"
          << "using namespace std;\n"
          << "int main(int argc, char *argv[])\n"
          << "{\n";

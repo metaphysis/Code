@@ -64,7 +64,7 @@
 // 945791（238）  974079（383）  975015（321）  983039（290）  984623（290）
 // 997823（440）
 	
-#include <iostream>
+#include <bits/stdc++.h>
 	
 using namespace std;
 
