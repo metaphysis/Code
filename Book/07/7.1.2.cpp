@@ -49,8 +49,9 @@ void sieve2(int *primes, int n, int &cnt)
 vector<int> findDivisor(int n)
 {
     map<int, int> factors;
-    for (int i = 0; i < cnt && n > 1; i++)
+    for (int i = 0; i < cnt; i++)
     {
+        if (primes[i] * primes[i] > n) break;
         while (n % primes[i] == 0)
         {
             n /= primes[i];
