@@ -10,10 +10,10 @@
 
 using namespace std;
 
-long long powMod(long long x, long long k, long long mod)
+long long modPow(long long x, long long k, long long mod)
 {
     if (k == 0) return 1;
-    long long r = powMod(x * x % mod, k >> 1, mod);
+    long long r = modPow(x * x % mod, k >> 1, mod);
     if (k & 1) r = r * x % mod;
     return r;
 }
@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
         cout << setw(3) << left << integer;
         cout << "...";
         // TTT
-        cout << setw(3) << right << setfill('0') << powMod(n, k, 1000) << '\n';
+        cout << setw(3) << right << setfill('0') << modPow(n, k, 1000) << '\n';
     }
 
     return 0;

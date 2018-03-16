@@ -1,16 +1,14 @@
-// Modular Fibonacci
-// UVa ID: 10229
+// Yet Another Number Sequence
+// UVa ID: 10689
 // Verdict: Accepted
-// Submission Date: 2017-06-27
-// UVa Run Time: 0.000s
+// Submission Date: 2018-03-16
+// UVa Run Time: 0.010s
 //
-// 版权所有（C）2017，邱秋。metaphysis # yeah dot net
+// 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
 
 using namespace std;
-
-long long n, m, fmodm;
 
 struct matrix
 {
@@ -21,12 +19,14 @@ struct matrix
     }
 } one(1, 1, 1, 0);
 
+int mod;
+
 matrix multiply(const matrix &a, const matrix &b)
 {
     matrix r;
     for (int i = 0; i < 2; i++)
         for (int j = 0; j < 2; j++)
-            r.cell[i][j] = (a.cell[i][0] * b.cell[0][j] + a.cell[i][1] * b.cell[1][j]) % m;
+            r.cell[i][j] = (a.cell[i][0] * b.cell[0][j] + a.cell[i][1] * b.cell[1][j]) % mod;
     return r;
 }
 
@@ -43,22 +43,19 @@ int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    while (cin >> n >> m)
+    int cases, a, b, n, m;
+    cin >> cases;
+    while (cases--)
     {
-        if (n == 0 || m == 0) fmodm = 0;
-        else if (n == 1)
-        {
-            m = 1 << m;
-            fmodm = 1 % m;
-        }
+        cin >> a >> b >> n >> m;
+        mod = pow(10, m);
+        if (n == 0) cout << a % mod << '\n';
+        else if (n == 1) cout << b % mod << '\n';
         else
         {
-            m = 1 << m;
             matrix r = matrixPow(n - 1);
-            fmodm = r.cell[0][0];
+            cout << (r.cell[0][0] * b + r.cell[0][1] * a) % mod << '\n';
         }
-
-        cout << fmodm << '\n';
     }
 
     return 0;

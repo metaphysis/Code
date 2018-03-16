@@ -12,10 +12,10 @@
 
 using namespace std;
 
-long long powMod(long long x, long long k, long long mod)
+long long modPow(long long x, long long k, long long mod)
 {
     if (k == 0) return 1;
-    long long r = powMod(x * x % mod, k >> 1, mod);
+    long long r = modPow(x * x % mod, k >> 1, mod);
     if (k & 1) r = r * x % mod;
     return r;
 }
@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
     while (cin >> n, n > 0)
     {
         cout << n;
-        if (powMod(2, n - 1, n) == 1) cout << " is a Jimmy-number\n";
+        if (modPow(2, n - 1, n) == 1) cout << " is a Jimmy-number\n";
         else cout << " is not a Jimmy-number\n";
     }
 

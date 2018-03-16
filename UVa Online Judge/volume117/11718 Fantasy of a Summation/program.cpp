@@ -10,10 +10,10 @@
 
 using namespace std;
 
-int powMod(int x, int k, int mod)
+int modPow(int x, int k, int mod)
 {
     if (k == 0) return 1;
-    int r = powMod(x * x % mod, k >> 1, mod);
+    int r = modPow(x * x % mod, k >> 1, mod);
     if (k & 1) r = r * x % mod;
     return r;
 }
@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
             l %= MOD;
         }
         
-        int r = ((K % MOD) * powMod(n, K - 1, MOD)) % MOD;
+        int r = ((K % MOD) * modPow(n, K - 1, MOD)) % MOD;
         
         cout << (l * r) % MOD << '\n';
     }
