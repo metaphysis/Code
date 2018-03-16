@@ -16,9 +16,8 @@ int main(int argc, char *argv[])
 {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
 
-    int fibs[MAXN] = { 1, 2 };
-    for (int i = 2; i < MAXN; i++)
-        fibs[i] = fibs[i - 1] + fibs[i - 2];
+    int fibs[MAXN] = {1, 2};
+    for (int i = 2; i < MAXN; i++) fibs[i] = fibs[i - 1] + fibs[i - 2];
 
     int n, m;
     cin >> n;
