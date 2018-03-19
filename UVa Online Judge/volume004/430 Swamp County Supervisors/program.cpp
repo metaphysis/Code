@@ -1,25 +1,20 @@
 // Swamp County Supervisors
 // UVa ID: 430
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2018-03-19
+// UVa Run Time: 0.000s
 //
-// 版权所有（C）2016，邱秋。metaphysis # yeah dot net
+// 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
 
 using namespace std;
 
-struct party
-{
-    int label, members, id, power_index;
-};
+const int MAXN = 10010;
 
-struct state
-{
-    int index, visited, members;
-};
-
+int dp[MAXN];
+int votes[30], majority = 0, members = 0, cnt = 0;
+        
 int main(int argc, char *argv[])
 {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
@@ -27,46 +22,33 @@ int main(int argc, char *argv[])
     string line;
     while (getline(cin, line))
     {
-        vector<party> parties;
-        int majority_of_total = 0, members, count_of_party = 0;
-
+        // Read input.
         istringstream iss(line);
-        iss >> majority_of_total;
-
+        iss >> majority;
+        cnt = 0;
         while (iss >> members)
-        {
-            parties.push_back((party){count_of_party, members, 1 << count_of_party, 0});
-            count_of_party++;
-        }
+            votes[cnt++] = members;
         
-        for (int j = 1; j <= count_of_party; j++)
-            parties[j - 1].id = 1 << (count_of_party - j);
-        
-        // generate all subsets which sum less than majority of total
-        queue<state> unvisited;
-        unvisited.push((state){0, 0, 0});
-        while (!unvisited.empty())
+        // DP, knapsack, count of different subset sum.
+        for (int k = 0; k < cnt; k++)
         {
-            state current = unvisited.front();
-            unvisited.pop();
-            
-            if (current.members < majority_of_total)
+            memset(dp, 0, sizeof(dp));
+            dp[0] = 1;
+            for (int i = 0; i < cnt; i++)
             {
-                for (int j = 0; j < count_of_party; j++)
-                    if ((current.visited & parties[j].id) == 0 && current.members + parties[j].members >= majority_of_total)
-                        parties[j].power_index++;
-
-                for (int binary_index = current.index; binary_index < count_of_party; binary_index++)
-                    if ((current.visited & (1 << (count_of_party - binary_index - 1))) == 0)
-                    {
-                        int next_visited = current.visited | (1 << (count_of_party - binary_index - 1));
-                        unvisited.push((state){binary_index + 1, next_visited, current.members + parties[binary_index].members});
-                    }
+                if (i == k) continue;
+                for (int j = majority; j >= votes[i]; j--)
+                    if (dp[j - votes[i]])
+                        dp[j] += dp[j - votes[i]];
             }
+
+            // Print.
+            int powerIndex = 0;
+            for (int i = max(0, majority - votes[k]); i < majority; i++)
+                powerIndex += dp[i];
+            if (k) cout << ' ';
+            cout << powerIndex;
         }
-        
-        for (int j = 0; j < count_of_party; j++)
-            cout << (j > 0 ? " " : "") << parties[j].power_index;
         cout << '\n';
     }
     
