@@ -1,8 +1,8 @@
 // Flavius Josephus Reloaded
 // UVa ID: 11053
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2018-03-19
+// UVa Run Time: 0.910s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
@@ -19,18 +19,17 @@ int main(int argc, char *argv[])
     {
         if (N == 0) break;
         cin >> a >> b;
-        map<int, int> calculated;
-
         x = 0;
-        int suicide = 0;
+        int steps = 0;
+        map<int, int> indexer;
         while (true)
         {
             x = ((a * x % N) * x % N + b) % N;
-            calculated[x]++;
-            if (calculated[x] == 3) break;
-            if (calculated[x] == 2) suicide++;
+            if (indexer.find(x) != indexer.end())
+                break;
+            indexer[x] = steps++;
         }
-        cout << (N - suicide) << '\n';
+        cout << (N - (steps - indexer[x])) << '\n';
     }
 
     return 0;
