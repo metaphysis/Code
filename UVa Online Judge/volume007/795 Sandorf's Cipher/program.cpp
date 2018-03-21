@@ -1,8 +1,8 @@
 // Sandorf's Cipher
 // UVa ID: 795
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2018-03-21
+// UVa Run Time: 0.010s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
@@ -26,10 +26,10 @@ string decode(string encrypted)
         string decrypted;
         for (int i = 0; i < 36; i++)
             decrypted += square[mapping[i]];
-        while (decrypted.front() == '#') decrypted.erase(decrypted.begin());
         reverse(decrypted.begin(), decrypted.end());
         message.insert(0, decrypted);
     }
+    while (message.back() == '#') message.pop_back();
     return message;
 }
 
