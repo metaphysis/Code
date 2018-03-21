@@ -1,0 +1,15 @@
+4
+
+note the space after the last word of the next line
+
+second line 
+
+The first line of input gives the number of cases T  one
+less than or equals to  T less than or equals to thirty
+    then there is a blank line before the first test
+
+case Each test case represents a message  which is composed
+ by one less than or equals to  N  less than or equals to
+ hundred  lines and each line is composed by one to thirty 
+ words
+

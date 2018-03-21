@@ -1,0 +1,281 @@
+___________
+|  o  . o |
+|  oo .   |
+|  oo .  o|
+|  oo . o |
+|  oo . oo|
+|  oo .o  |
+|  oo .o o|
+|  oo .oo |
+|  oo .ooo|
+|  ooo.   |
+|  ooo.  o|
+| o   .  o|
+| o   . o |
+| o   . oo|
+| o   .o  |
+| o   .o o|
+| o   .oo |
+| o   .ooo|
+| o  o.   |
+| o  o.  o|
+| o  o. o |
+| o  o. oo|
+| o  o.o  |
+| o  o.o o|
+| o  o.oo |
+| o  o.ooo|
+| o o .   |
+| o o .  o|
+| o o . o |
+| o o . oo|
+| o o .o  |
+| o o .o o|
+| o o .oo |
+| o o .ooo|
+| o oo.   |
+| o oo.  o|
+| o oo. o |
+| oo  .  o|
+| oo  . o |
+| oo  . oo|
+| oo  .o  |
+| oo  .o o|
+| oo  .oo |
+| oo  .ooo|
+| oo o.   |
+| oo o.  o|
+| oo o. o |
+| oo o. oo|
+| oo o.o  |
+| oo o.o o|
+| oo o.oo |
+| oo o.ooo|
+| ooo .   |
+| ooo .  o|
+| ooo . o |
+| ooo . oo|
+| ooo .o  |
+| ooo .o o|
+| ooo .oo |
+| ooo .ooo|
+| oooo.   |
+| oooo.  o|
+| oooo. o |
+|  o  . o |
+|    o. o |
+|    o.o o|
+| o oo.o  |
+|  ooo. o |
+|  ooo. oo|
+|  ooo.o  |
+|  ooo.o o|
+|  ooo.oo |
+|  ooo.ooo|
+| o   .   |
+|  o  .   |
+| o oo. oo|
+| o oo.o  |
+| o oo.o o|
+| o oo.oo |
+| o oo.ooo|
+| oo  .   |
+| o oo.o  |
+|    o. o |
+|    o.o o|
+|  o  .  o|
+|  o  . o |
+|  o  . oo|
+|  o  .o  |
+|  o  .o o|
+|  o  .oo |
+|  o  .ooo|
+|  o o.   |
+|  o o.  o|
+|  o o. o |
+|  o o. oo|
+|  o o.o  |
+|  o o.o o|
+|  o o.oo |
+|  o o.ooo|
+| oooo. oo|
+| oooo.o  |
+| oooo.o o|
+| oooo.oo |
+|    o. o |
+|    o.o o|
+| o   .  o|
+| o   . o |
+| o   . oo|
+| o   .o  |
+| o   .o o|
+| o   .oo |
+| o   .ooo|
+| o  o.   |
+| o  o.  o|
+| o  o. o |
+| o  o. oo|
+| o  o.o  |
+| o  o.o o|
+| o  o.oo |
+| o  o.ooo|
+| o o .   |
+| o o .  o|
+| o o . o |
+| o o . oo|
+| o o .o  |
+| o o .o o|
+| o o .oo |
+| o o .ooo|
+| o oo.   |
+| o oo.  o|
+| o oo. o |
+|    o. o |
+| oo  .  o|
+| oo  . o |
+| oo  . oo|
+| oo  .o  |
+| oo  .o o|
+| oo  .oo |
+| oo  .ooo|
+| oo o.   |
+| oo o.  o|
+| oo o. o |
+| oo o. oo|
+| oo o.o  |
+| oo o.o o|
+| oo o.oo |
+| oo o.ooo|
+| ooo .   |
+| ooo .  o|
+| ooo . o |
+| ooo . oo|
+| ooo .o  |
+| ooo .o o|
+| ooo .oo |
+| ooo .ooo|
+| oooo.   |
+| oooo.  o|
+| oooo. o |
+|    o. o |
+|    o.o o|
+| o   .  o|
+| o   . o |
+| o   . oo|
+| o   .o  |
+| o   .o o|
+| o   .oo |
+| o   .ooo|
+| o  o.   |
+| o  o.  o|
+| o  o. o |
+| o  o. oo|
+| o  o.o  |
+| o  o.o o|
+| o  o.oo |
+| o  o.ooo|
+| o o .   |
+| o o .  o|
+| o o . o |
+| o o . oo|
+| o o .o  |
+| o o .o o|
+| o o .oo |
+| o o .ooo|
+| o oo.   |
+| o oo.  o|
+| o oo. o |
+|    o.o o|
+|  oo .   |
+|  oo .  o|
+|  oo . o |
+|  oo . oo|
+|  oo .o  |
+|  oo .o o|
+|  oo .oo |
+|  oo .ooo|
+|  ooo.   |
+|  ooo.  o|
+|    o. o |
+|    o.o o|
+|  o  . o |
+|  o  .ooo|
+|  oo .   |
+|  oo .  o|
+|  oo . o |
+|  oo . oo|
+|  oo .o  |
+|  oo .o o|
+|  oo .oo |
+|  oo .ooo|
+|  ooo.   |
+|  ooo.  o|
+|    o.  o|
+|  oo .   |
+|  oo .  o|
+|  oo . o |
+|  oo . oo|
+|  oo .o  |
+|  oo .o o|
+|  oo .oo |
+|  oo .ooo|
+|  ooo.   |
+|  ooo.  o|
+|    o.   |
+|  oo .   |
+|  oo .  o|
+|  oo . o |
+|  oo . oo|
+|  oo .o  |
+|  oo .o o|
+|  oo .oo |
+|  oo .ooo|
+|  ooo.   |
+|  ooo.  o|
+|  o  .ooo|
+|  o  . o |
+|    o. o |
+| o   .  o|
+|  o  .   |
+| ooo .  o|
+| ooo .o o|
+| oo o.  o|
+| oo  . oo|
+| oo o. oo|
+|  o  .   |
+| oo  . o |
+| ooo . o |
+| oo o.ooo|
+| ooo .ooo|
+| oo o.oo |
+|  o  .   |
+| oo  .oo |
+| oo o.ooo|
+| oooo.   |
+|  o  .   |
+| oo o. o |
+| ooo .o o|
+| oo o.o o|
+| ooo .   |
+| ooo . oo|
+|  o  .   |
+| oo o.ooo|
+| ooo .oo |
+| oo  .o o|
+| ooo . o |
+|  o  .   |
+| ooo .o  |
+| oo o.   |
+| oo  .o o|
+|  o  .   |
+| oo o.o  |
+| oo  .  o|
+| oooo. o |
+| oooo.  o|
+|  o  .   |
+| oo  .o  |
+| oo o.ooo|
+| oo  .ooo|
+|  o o.oo |
+|    o. o |
+___________
