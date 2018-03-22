@@ -1,0 +1,15 @@
+An online judge is an online system to test programs in programming contests. They are also used to practice for such contests. Many of these systems organize their own contests.
+
+The system can compile and execute code, and test them with pre-constructed data.
+Submitted code may be run with restrictions, including time limit, memory limit, security restriction and so on. The output of the code will be captured by the system, and compared with the standard output. The system will then return the result.
+When mistakes were found in a standard output, rejudgement using the same method must be made.
+
+Online Judges have ranklists showing users with the biggest number of accepted solutions and shortest execution time for a particular problem.
+
+UVa Online Judge is an online automated judge for programming problems hosted by University of Valladolid.
+Its problem archive has over 4300 problems and user registration is open to everyone. There are currently over 100000 registered users. A user may submit a solution in ANSI C (C89), C++ (C++98), Pascal, Java or C++11. Originally it began without the last two options, but the Java option was added in 2001, then the C++11 option was added in 2014.
+
+The UVa OJ was created in 1995 by Miguel Angel Revilla, a mathematician teaching algorithms at the University of Valladolid in Spain. Ciriaco García de Celis, a student of informatics of University of Valladolid wrote the whole code for the first version of the judge. The judge became open to the public only in April 1997. In November 1999 and 2000 UVa hosted the ACM ICPC SWERC programming contest. In 2007 a new system, developed by Miguel Revilla Rodríguez, and server replaced the old system.
+
+[From Wikipedia.]
+E-N-D

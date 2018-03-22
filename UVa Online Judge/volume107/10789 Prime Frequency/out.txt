@@ -1,0 +1,10 @@
+Case 1: 16k
+Case 2: 234789dklu
+Case 3: JKhijs
+Case 4: 37Hek
+Case 5: nv
+Case 6: empty
+Case 7: empty
+Case 8: empty
+Case 9: 0A
+Case 10: Ba
