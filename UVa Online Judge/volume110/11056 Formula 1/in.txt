@@ -1,0 +1,18 @@
+4
+a1 : 1 min 1 sec 1 ms
+aa : 1 min 1 sec 1 ms
+Aa : 1 min 1 sec 1 ms
+aA : 1 min 1 sec 1 ms
+
+7
+a1 : 1 min 1 sec 1 ms
+aa : 1 min 1 sec 1 ms
+aaa : 0 min 1 sec 1 ms
+aaa : 2 min 1 sec 1 ms
+aaa : 2 min 1 sec 1 ms
+aAa : 2 min 1 sec 1 ms
+a1a : 2 min 1 sec 1 ms
+
+2
+a : 1 min 23 sec 172 ms
+bb : 1 min 23 sec 172 ms
