@@ -1,4 +1,4 @@
-// I Love String!
+// I Love String
 // UVa ID: 10679
 // Verdict: Accepted
 // Submission Date: 2018-03-27

@@ -1,0 +1,71 @@
+5 5
+6 7 8 9 10
+the
+stewardesses
+have
+funny
+hair
+3 19
+7 8 9
+waxers
+wax
+waxed
+waxen
+waxer
+waxers
+waxes
+waxing
+waxy
+we
+wear
+wearable
+wearer
+wearing
+wears
+weave
+weaver
+weaves
+weaving
+10 1 
+1 2 3 4 5 6 7 8 9 10
+prince
+1 10
+1
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+9 1
+1 2 3 4 5 6 7 8 9
+mohiulalamprince
+5 1
+1 3 5 7 9
+thatisnotenough
+8 2
+4 5 6 7 8 9 1 2
+sososososososososososososososo
+sososososososososososososososo
+9 3
+1 2 3 4 6 7 8 9 10
+eeeeeeeeeeeeeeeeeeee
+eeeeeeeeeeeeeeeeeeee
+aaaaaaaaaaaaaaaaaaaa
+9 3
+1 2 4 6 5 7 8 9 10
+eeeeeeeeeeeeeeeeeeee
+eeeeeeeeeeeeeeeeeeee
+aaaaaaaaaaaaaaaaaaaa
+9 3
+2 3 4 6 5 7 8 9 10
+eeeeeeeeeeeeeeeeeeee
+eeeeeeeeeeeeeeeeeeee
+aaaaaaaaaaaaaaaaaaaa
+1 1
+1
+a
