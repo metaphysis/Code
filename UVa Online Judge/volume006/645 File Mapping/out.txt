@@ -1,0 +1,41 @@
+DATA SET 1:
+ROOT
+|     dir3
+|     |     dir2
+|     |     file1
+|     |     file2
+|     dir1
+file1
+file2
+file3
+file4
+
+DATA SET 2:
+ROOT
+file1
+file2
+
+DATA SET 3:
+ROOT
+
+DATA SET 4:
+ROOT
+|     dOMGZ
+|     fTHEFILE
+|     fTHEFILE2
+|     dOMGZOMGZOMGZ
+|     |     dOMG
+fILE2
+file1
+
+DATA SET 5:
+ROOT
+|     dir1
+|     |     dir
+|     |     file1
+|     file2
+|     dir2
+|     |     dir
+|     |     file3
+|     file4
+file5
