@@ -14,14 +14,14 @@ vector<int> order, events;
 
 int getScores()
 {
-    vector<int> length; length.push_back(events.front());
+    vector<int> M; M.push_back(events.front());
     for (auto it = events.begin() + 1; it != events.end(); it++)
-        if (*it > length.back()) length.push_back(*it);
+        if (*it > M.back()) M.push_back(*it);
         else {
-            auto location = upper_bound(length.begin(), length.end(), *it);
+            auto location = upper_bound(M.begin(), M.end(), *it);
             *location = *it;
         }
-    return length.size();
+    return M.size();
 }
 
 int main(int argc, char *argv[])

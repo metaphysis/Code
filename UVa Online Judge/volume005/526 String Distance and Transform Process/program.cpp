@@ -18,28 +18,28 @@ struct cell
     int cost, operation;
 };
 
-cell cells[100][100];
+cell dp[100][100];
 string S, T, operationCode[3] = {" Delete ", " Insert ", " Replace "};
-int M, N, deletions, insertions, index;
+int M, N, deletions, insertions, indexer;
 
 // 显示操作步骤，注意删除操作其序号会因为已有的删除和插入操作而发生变化。
 void displayPath(int i, int j)
 {
-    if (cells[i][j].operation >= DELETE && cells[i][j].operation <= CHANGE)
+    if (dp[i][j].operation >= DELETE && dp[i][j].operation <= CHANGE)
     {
-        cout << index++;
-        cout << operationCode[cells[i][j].operation];
+        cout << indexer++;
+        cout << operationCode[dp[i][j].operation];
 
-        if (cells[i][j].operation == CHANGE)
+        if (dp[i][j].operation == CHANGE)
         {
             cout << j << "," << T[j] << "\n";
         }
-        else if (cells[i][j].operation == DELETE)
+        else if (dp[i][j].operation == DELETE)
         {
             cout << (i + insertions - deletions) << "\n";
             deletions++;
         }
-        else if (cells[i][j].operation == INSERT)
+        else if (dp[i][j].operation == INSERT)
         {
             cout << j << "," << T[j] << "\n";
             insertions++;
@@ -50,11 +50,11 @@ void displayPath(int i, int j)
 // 利用递归构建操作步骤。
 void findPath(int i, int j)
 {
-    if (cells[i][j].operation != NONE)
+    if (dp[i][j].operation != NONE)
     {
-        if (cells[i][j].operation == DELETE)
+        if (dp[i][j].operation == DELETE)
             findPath(i - 1, j);
-        else if (cells[i][j].operation == INSERT)
+        else if (dp[i][j].operation == INSERT)
             findPath(i, j - 1);
         else
             findPath(i - 1, j - 1);
@@ -72,39 +72,38 @@ void minimumEditDistance()
     M = S.length() - 1;
     N = T.length() - 1;
 
-    // 初始化表格。
-    cells[0][0] = (cell){0, NONE};
+    dp[0][0] = (cell){0, NONE};
     for (int i = 1; i <= M; i++)
-        cells[i][0] = (cell){i, DELETE};
+        dp[i][0] = (cell){i, DELETE};
     for (int j = 1; j <= N; j++)
-        cells[0][j] = (cell){j, INSERT};
+        dp[0][j] = (cell){j, INSERT};
 
     // 自底向上动态规划求解。
     for (int i = 1; i <= M; i++)
         for (int j = 1; j <= N; j++)
         {
-            cells[i][j] = (cell){cells[i - 1][j].cost + 1, DELETE};
+            dp[i][j] = (cell){dp[i - 1][j].cost + 1, DELETE};
 
-            if (cells[i][j].cost > (cells[i][j - 1].cost + 1))
-                cells[i][j] = (cell){cells[i][j - 1].cost + 1, INSERT};
+            if (dp[i][j].cost > (dp[i][j - 1].cost + 1))
+                dp[i][j] = (cell){dp[i][j - 1].cost + 1, INSERT};
 
             if (S[i] == T[j])
             {
-                if (cells[i][j].cost > cells[i - 1][j - 1].cost)
-                    cells[i][j] = (cell){cells[i - 1][j - 1].cost, MATCH};
+                if (dp[i][j].cost > dp[i - 1][j - 1].cost)
+                    dp[i][j] = (cell){dp[i - 1][j - 1].cost, MATCH};
             }
             else
             {
-                if (cells[i][j].cost > (cells[i - 1][j - 1].cost + 1))
-                    cells[i][j] = (cell){cells[i - 1][j - 1].cost + 1, CHANGE};
+                if (dp[i][j].cost > (dp[i - 1][j - 1].cost + 1))
+                    dp[i][j] = (cell){dp[i - 1][j - 1].cost + 1, CHANGE};
             }
         }
 
     // 反向构建操作步骤。
     deletions = 0;
     insertions = 0;
-    index = 1;
-    cout << cells[M][N].cost << "\n";
+    indexer = 1;
+    cout << dp[M][N].cost << "\n";
     findPath(M, N);
 }
 

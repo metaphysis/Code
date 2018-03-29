@@ -1,3 +1,15 @@
+// AGTC
+// UVa ID: 1207
+// Verdict: Accepted
+// Submission Date: 2018-03-29
+// UVa Run Time: 0.000s
+//
+// 版权所有（C）2018，邱秋。metaphysis # yeah dot net
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
 int dp[1024][1024];
 
 int med(string &S, string &T)
@@ -16,4 +28,19 @@ int med(string &S, string &T)
             dp[i][j] = min(min(deleted, inserted), replaced);
         }
     return dp[M][N];
+}
+
+int main(int argc, char *argv[])
+{
+    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
+
+    int n1, n2;
+    string s1, s2;
+    while (cin >> n1)
+    {
+        cin >> s1 >> n2 >> s2;
+        cout << med(s1, s2) << '\n';
+    }
+
+    return 0;
 }
