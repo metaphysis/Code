@@ -15,8 +15,6 @@ bool manacher(string word)
     for (int i = word.length() - 1; i >= 0; i--)
         word.insert(word.begin() + i, '#');
     word.push_back('#');
-
-    //cout << word << endl;
     
     vector < int > P(word.size());
     set < string > palindromes;
@@ -59,8 +57,6 @@ bool manacher(string word)
             rightmost = i + P[i];
         }
         
-        //cout << P[i];
-        
         if (P[i] >= 3)
         {
             string palindrome;
@@ -84,18 +80,13 @@ bool manacher(string word)
                         for (auto it = palindromes.begin(); it != palindromes.end(); it++)
                             if (palindrome.find(*it) == palindrome.npos &&
                                 (*it).find(palindrome) == palindrome.npos)
-                                {
-                                    //cout << endl;
                                     return true;
-                                }
 
                         palindromes.insert(palindrome);
                     }
                 }
         }
     }
-
-    //cout << endl;
     
     return false;
 }

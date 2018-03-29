@@ -2,49 +2,39 @@
 
 using namespace std;
 
+int P[10240] = {};
+
 void manacher(string &line)
 {
-    string word;
-    word.push_back('$');
+    string modified = {'$'};
     for (int i = 0; i < line.length(); i++)
-    {
-        word.push_back(line[i]);
-        word.push_back('#');
-    }
-    word.back() = '|';
-    
-    vector<int> P(word.size());
+        modified.push_back(line[i]), modified.push_back('#');
+    modified.back() = '|';
     
     int rightmost = 0, center = 0;
-    for (int i = 1; i < word.size(); i++)
+    for (int i = 0; i < modified.size(); i++)
     {
-        P[i] = (rightmost > i) ? P[2 * center - i] : 1;
-        
-        while (word[i - P[i]] == word[i + P[i]])
-            P[i]++;
-        
+        int x = 2 * center - i, y = rightmost - i;
+        P[i] = (rightmost > i) ? (P[x] < y ? P[x] : y) : 1;
+        while (modified[i - P[i]] == modified[i + P[i]]) P[i]++;        
         if (i + P[i] > rightmost)
         {
             rightmost = i + P[i] - 1;
             center = i;
         }
     }
+    
+    for (auto c : modified)
+        cout << setw(3) << right << c;
+    cout << '\n';
+    for (int i = 0; i < modified.size(); i++)
+        cout << setw(3) << right << P[i];
+    cout << '\n';
 }
 
 int main(int argc, char *argv[])
 {
     string line;
-    while (getline(cin, line))
-    {
-        if (line.length() == 0)
-            continue;
-
-        string word;
-        istringstream iss(line);
-        while (iss >> word)
-            if (manacher(word))
-                cout << word << endl;
-    }
-
+    while (getline(cin, line)) manacher(line);
     return 0;
 }

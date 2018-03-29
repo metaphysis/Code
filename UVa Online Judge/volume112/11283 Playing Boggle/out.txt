@@ -1,0 +1,3 @@
+Score for Boggle game #1: 6
+Score for Boggle game #2: 1
+Score for Boggle game #3: 166

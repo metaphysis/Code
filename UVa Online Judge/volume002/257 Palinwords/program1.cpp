@@ -10,25 +10,23 @@
 
 using namespace std;
 
+int P[10240];
+
 bool manacher(string word)
 {
     for (int i = word.length() - 1; i >= 0; i--)
-        word.insert(word.begin() + i, '#');
-        
+        word.insert(word.begin() + i, '#');        
     word.push_back('|');
     word.front() = '$';
 
-    vector < int > P (word.size());
-    set < string > palindromes;
+    set<string> palindromes;
 
     int center = 0, rightmost = 0;
     for (int i = 1; i < word.size(); i++)
     {
-        P[i] = (rightmost > i) ? P[2 * center - i] : 1;
-
-        while (word[i - P[i]] == word[i + P[i]])
-            P[i]++;
-
+        int x = 2 * center - i, y = rightmost - i;
+        P[i] = (rightmost > i) ? (P[x] < y ? P[x] : y) : 1;
+        while (word[i - P[i]] == word[i + P[i]]) P[i]++;
         if (i + P[i] > rightmost)
         {
             center = i;

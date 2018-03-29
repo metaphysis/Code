@@ -2,49 +2,26 @@
 
 using namespace std;
 
+int P[10240] = {};
+
 void manacher(string &line)
 {
-    string word;
-    word.push_back('#');
+    string modified = {'#'};
     for (int i = 0; i < line.length(); i++)
-    {
-        word.push_back(line[i]);
-        word.push_back('#');
-    }
-    
-    vector<int> P(word.size());
+        modified.push_back(line[i]), modified.push_back('#');
     
     int center = 0, rightmost = 0, low = 0, high = 0;
-    for (int i = 1; i < word.length(); i++)
+    for (int i = 0; i < modified.length(); i++)
     {
         if (rightmost > i)
         {
-            int j = center * 2 - i;
-            if (P[j] < (rightmost - i))
-            {
-                P[i] = P[j];
-                low = -1;
-            }
-            else
-            {
-                P[i] = rightmost - i;
-                high = rightmost + 1;
-                low = i * 2 - high;
-            }
+            if (P[2 * center - i] < (rightmost - i)) P[i] = P[2 * center - i], high = low = -1;
+            else P[i] = rightmost - i, high = rightmost + 1, low = 2 * i - high;
         }
-        else
-        {
-            P[i] = 0;
-            low = i - 1;
-            high = i + 1;
-        }
+        else P[i] = 0, low = i - 1, high = i + 1;
 
-        while (low >= 0 && high < word.length() && word[low] == word[high])
-        {
-            P[i]++;
-            low--;
-            high++;
-        }
+        while (low >= 0 && high < modified.length() && modified[low] == modified[high])
+            P[i]++, low--, high++;
 
         if ((i + P[i]) > rightmost)
         {
@@ -52,22 +29,18 @@ void manacher(string &line)
             rightmost = i + P[i];
         }
     }
+    
+    for (auto c : modified)
+        cout << setw(3) << right << c;
+    cout << '\n';
+    for (int i = 0; i < modified.size(); i++)
+        cout << setw(3) << right << P[i];
+    cout << '\n';
 }
 
 int main(int argc, char *argv[])
 {
     string line;
-    while (getline(cin, line))
-    {
-        if (line.length() == 0)
-            continue;
-
-        string word;
-        istringstream iss(line);
-        while (iss >> word)
-            if (manacher(word))
-                cout << word << "\n";
-    }
-
+    while (getline(cin, line)) manacher(line);
     return 0;
 }
