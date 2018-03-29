@@ -1,0 +1,17 @@
+2
+3
+ABC
+ABC
+ABC
+A
+3
+BAC
+BAC
+BAC
+A
+
+3
+ABC
+ABC
+ABC
+A
