@@ -1,0 +1,100 @@
+Case 1: 2066
+Case 2: sequence nai
+Case 3: sequence nai
+Case 4: 576
+Case 5: sequence nai
+Case 6: 894
+Case 7: 2507
+Case 8: sequence nai
+Case 9: 1587
+Case 10: sequence nai
+Case 11: 1145
+Case 12: 320
+Case 13: 1191
+Case 14: 737
+Case 15: sequence nai
+Case 16: sequence nai
+Case 17: sequence nai
+Case 18: 273
+Case 19: sequence nai
+Case 20: 2211
+Case 21: 277
+Case 22: 516
+Case 23: 2693
+Case 24: 414
+Case 25: sequence nai
+Case 26: sequence nai
+Case 27: 1544
+Case 28: 171
+Case 29: 2376
+Case 30: 1837
+Case 31: 117
+Case 32: 2541
+Case 33: sequence nai
+Case 34: sequence nai
+Case 35: 607
+Case 36: 3
+Case 37: sequence nai
+Case 38: 1001
+Case 39: sequence nai
+Case 40: 1284
+Case 41: 2693
+Case 42: sequence nai
+Case 43: sequence nai
+Case 44: sequence nai
+Case 45: 1581
+Case 46: 661
+Case 47: 1343
+Case 48: 1847
+Case 49: 7
+Case 50: 1545
+Case 51: 560
+Case 52: 1180
+Case 53: 1241
+Case 54: sequence nai
+Case 55: 541
+Case 56: 573
+Case 57: sequence nai
+Case 58: sequence nai
+Case 59: sequence nai
+Case 60: sequence nai
+Case 61: sequence nai
+Case 62: 433
+Case 63: 609
+Case 64: sequence nai
+Case 65: sequence nai
+Case 66: sequence nai
+Case 67: sequence nai
+Case 68: 163
+Case 69: 818
+Case 70: 1773
+Case 71: sequence nai
+Case 72: sequence nai
+Case 73: sequence nai
+Case 74: 1255
+Case 75: 2135
+Case 76: 1757
+Case 77: 1519
+Case 78: 1365
+Case 79: sequence nai
+Case 80: 136
+Case 81: 763
+Case 82: sequence nai
+Case 83: sequence nai
+Case 84: sequence nai
+Case 85: sequence nai
+Case 86: 113
+Case 87: 1246
+Case 88: 1545
+Case 89: 887
+Case 90: sequence nai
+Case 91: 2
+Case 92: sequence nai
+Case 93: sequence nai
+Case 94: sequence nai
+Case 95: 1713
+Case 96: sequence nai
+Case 97: 2812
+Case 98: 2917
+Case 99: sequence nai
+Case 100: 282
