@@ -1,4 +1,0 @@
-Result : 0
-Solution doesn't exist
-Result : 6
-Result : 4

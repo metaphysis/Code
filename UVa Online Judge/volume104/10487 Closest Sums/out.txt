@@ -1,8 +1,0 @@
-Case 1:
-Closest sum to 42 is 45.
-Closest sum to 46 is 46.
-Closest sum to 49 is 50.
-Case 2:
-Closest sum to 42 is 45.
-Closest sum to 46 is 46.
-Closest sum to 47 is 46.

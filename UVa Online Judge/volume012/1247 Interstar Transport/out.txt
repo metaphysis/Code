@@ -1,4 +1,0 @@
-B A D
-A D
-E A B C
-C F K

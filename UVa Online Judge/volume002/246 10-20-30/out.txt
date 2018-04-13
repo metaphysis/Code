@@ -1,3 +1,0 @@
-Win : 66
-Loss: 82
-Draw: 73

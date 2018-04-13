@@ -1,8 +1,0 @@
-"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
-\:;<=>?@ [\]^_`\
-!"#$%&'()*+,-./{|}~
-ABCDEFGHIJKLMNOPQRSTUVWXYZ
-abcdefghijklmnopqrstuvwxyz
-ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
-"'0123456789	01234567890123456789'"
-A quick brown fox jumps over the lazy dog.

@@ -1,5 +1,0 @@
-Synchronous design. Maximum delay: 28.
-Synchronous design. Maximum delay: 30.
-Clock period exceeded.
-Circuit contains cycle.
-Synchronous design. Maximum delay: 0.

@@ -1,3 +1,0 @@
-Scenario 1: Position cannot be determined
-Scenario 2: Position is (6.00, 5.00)
-Scenario 3: Position cannot be determined

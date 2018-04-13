@@ -1,6 +1,0 @@
-Ser-Ile-Lys
-Cys-Leu-His
-Leu-Tyr
-*** No translatable DNA found ***
-Leu-Asn-Tyr-Ile-Lys-Arg-Ala
-Met-Met-Ala

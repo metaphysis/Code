@@ -1,5 +1,0 @@
-Term 5 of the sequence is 21
-Term 6 of the sequence is 28
-Term 23 of the sequence is 46
-Term 16 of the sequence is -319268
-Term 10000010 of the sequence is 1001286656509495806

@@ -1,9 +1,0 @@
-Case 1:
-#include<string.h>
-#include<stdio.h>
-int main()
-{
-printf("Only \\ will use b4 \\ and \"\n");
-printf("\n");
-return 0;
-}

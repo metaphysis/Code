@@ -1,4 +1,0 @@
-draw
-checkmate
-game is not over
-checkmate

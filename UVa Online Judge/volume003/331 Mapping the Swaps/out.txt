@@ -1,5 +1,0 @@
-There are 1 swap maps for input data 1.
-There are 5 swap maps for input data 2.
-There are 2 swap maps for input data 3.
-There are 3 swap maps for input data 4.
-There are 21 swap maps for input data 5.

@@ -1,9 +1,0 @@
-INFIX   => a + b - c
-PREFIX  => + a - b c
-POSTFIX => a b c - +
-INFIX   => a + b $ d - c
-PREFIX  => + a - $ b d c
-POSTFIX => a b d $ c - +
-INFIX   => a + ! b $ d - c
-PREFIX  => + a ! - $ b d c
-POSTFIX => a b d $ c - ! +

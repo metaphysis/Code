@@ -1,9 +1,0 @@
-Point 1 is contained in figure 2
-Point 2 is contained in figure 2
-Point 2 is contained in figure 3
-Point 3 is contained in figure 3
-Point 4 is not contained in any figure
-Point 5 is contained in figure 1
-Point 6 is not contained in any figure
-Point 7 is not contained in any figure
-Point 8 is contained in figure 1

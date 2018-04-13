@@ -1,9 +1,0 @@
-Unsolvable in less than 11 move(s).
-Solvable in 7 move(s).
-Solvable in 0 move(s).
-Solvable in 3 move(s).
-Solvable in 1 move(s).
-Solvable in 8 move(s).
-Unsolvable in less than 11 move(s).
-Solvable in 2 move(s).
-Solvable in 4 move(s).

@@ -1,4 +1,0 @@
-0 base 2 = 0 base 10
-0000 base 10 = 0 base 10
-FFFFFFFFFF base 16 = 1111111111111111111111111111111111111111 base 2
-FFFFFFFFFF is an illegal base 15 number

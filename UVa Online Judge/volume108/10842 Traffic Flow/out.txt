@@ -1,6 +1,0 @@
-Case #1: 20
-Case #2: 3
-Case #3: 0
-Case #4: 100
-Case #5: 50
-Case #6: 60

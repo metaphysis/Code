@@ -1,6 +1,0 @@
-Data set 1
-  Order: 15 45 30 45
-  Error: 0
-Data set 2
-  Order: 15 13 33 10 18 25
-  Error: 19

@@ -1,9 +1,0 @@
-2 5 9
-3 4 Impossible
-3 3 4
-1 1 Multiple
-5 1 1
-6 2 Impossible
-1 5 Impossible
-99999 99999 100000
-2 500 999
