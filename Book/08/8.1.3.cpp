@@ -72,12 +72,12 @@ void fillMagic3()
     fillHelper(n / 2, n / 2, 0, n * n / 4 * 3);
     for (int i = 0; i < n / 2; i++)
         for (int j = 0; j < n / 4; j++)
-            if (i != n / 4 || j)
-                swap(magic[i][j], magic[i + n / 2][j]);
-    swap(magic[n / 4][n / 4], magic[n / 4 + n / 2][n / 4]);
+            swap(magic[i][j], magic[i + n / 2][j]);
     for (int i = 0; i < n / 2; i++)
         for (int j = n - n / 4 + 1; j < n; j++)
             swap(magic[i][j], magic[i + n / 2][j]);
+    for (int j = 0; j <= n / 4; j += n / 4)
+        swap(magic[n / 4][j], magic[n / 4 + n / 2][j]);
 }
 
 bool check()
