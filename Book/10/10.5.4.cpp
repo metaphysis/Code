@@ -1,3 +1,7 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
 const int INF = 0x7fffffff;
 
 struct arc
@@ -9,7 +13,7 @@ class Dinic
 {
 private:
     arc *arcs;
-    int vertices, idx, source, sink, *head, *dist;
+    int vertices, source, sink, idx, *head, *dist, *current;
 
     bool bfs()
     {
@@ -21,6 +25,7 @@ private:
         while (!q.empty())
         {
             int u = q.front(); q.pop();
+            if (u == sink) break;
             for (int i = head[u]; ~i; i = arcs[i].next)
                 if (arcs[i].residual > 0 && dist[arcs[i].v] < 0)
                 {
@@ -35,8 +40,7 @@ private:
     int dfs(int u, int flow)
     {
         if (u == sink) return flow;
-
-        for (int i = head[u]; ~i; i = arcs[i].next)
+        for (int &i = current[u]; ~i; i = arcs[i].next)
         {
             int v = arcs[i].v, r = arcs[i].residual;
             if (dist[v] == (dist[u] + 1) && r > 0)
@@ -57,15 +61,16 @@ private:
 public:
     Dinic(int v, int e, int s, int t)
     {
+        arcs = new arc[e];
         vertices = v;
-        head = new int[v], dist = new int[v], arcs = new arc[e];
-        idx = 0, source = s, sink = t;
+        source = s, sink = t;
+        idx = 0, head = new int[v], dist = new int[v], current = new int[v];
         memset(head, -1, vertices * sizeof(int));
     }
 
     ~Dinic()
     {
-        delete [] head, dist, arcs;
+        delete [] arcs, head, dist, current;
     }
 
     int maxFlow()
@@ -73,8 +78,11 @@ public:
         int flow = 0;
 
         while (bfs())
+        {
+            for (int i = 0; i <= sink; i++) current[i] = head[i];
             while (int delta = dfs(0, INF))
                 flow += delta;
+        }
 
         return flow;
     }
@@ -87,3 +95,10 @@ public:
         head[v] = idx++;
     }
 };
+
+int main(int argc, char const* argv[])
+{
+    Dinic dinic(100, 10000, 0, 101);
+    
+    return 0;
+}

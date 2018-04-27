@@ -10,7 +10,7 @@
 
 using namespace std;
 
-const int MAX_V = 2010;
+const int MAXV = 2010;
 
 struct edge
 {
@@ -25,9 +25,9 @@ struct edge
     }
 };
 
-vector<int> edges[MAX_V];
+vector<int> edges[MAXV];
 vector<edge> bridge;
-int dfn[MAX_V], low[MAX_V], visited[MAX_V];
+int dfn[MAXV], low[MAXV], visited[MAXV];
 
 void dfs(int u, int parent, int depth)
 {
