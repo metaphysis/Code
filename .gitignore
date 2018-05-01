@@ -6,4 +6,4 @@
 *.orig
 *.java~
 *.class
-out.txt
+out*.txt
