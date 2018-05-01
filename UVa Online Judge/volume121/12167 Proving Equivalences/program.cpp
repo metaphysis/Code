@@ -22,7 +22,7 @@ void initialize()
 {
     dfstime = 0, cscc = 0;
     while (!s.empty()) s.pop();
-    for (int u = 1; u <= n; u++) edges[u].clear();
+    for (int u = 0; u <= n; u++) edges[u].clear();
     memset(dfn, 0, sizeof(dfn)); memset(scc, 0, sizeof(scc));
 }
 
