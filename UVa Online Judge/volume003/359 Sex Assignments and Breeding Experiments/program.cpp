@@ -1,8 +1,8 @@
 // Sex Assignments and Breeding Experiments
 // UVa ID: 359
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2018-05-04
+// UVa Run Time: 0.060s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
@@ -10,22 +10,11 @@
 
 using namespace std;
 
-const int MAXV = 10240;
-
 bool sexy;
-int color[MAXV], degree[MAXV];
-vector<int> parents[MAXV];
-int dfn[MAXV], low[MAXV], scc[MAXV], dfstime, cscc;
-vector<list<int>> edges(MAXV);
+vector<int> color, degree, dfn, low, scc;
+int dfstime, cscc;
+vector<vector<int>> edges, parents;
 stack<int> s;
-
-void initialize()
-{
-    dfstime = 0, cscc = 0;
-    while (!s.empty()) s.pop();
-    for (int u = 0; u < MAXV; u++) edges[u].clear();
-    memset(dfn, 0, sizeof(dfn)); memset(scc, 0, sizeof(scc));
-}
 
 void tarjan(int u)
 {
@@ -70,14 +59,11 @@ int main(int argc, char *argv[])
     int cases = 0, x, y, n, m;
     while (cin >> n >> m)
     {
-        for (int i = 0; i < n; i++)
-        {
-            edges[i].clear();
-            parents[i].clear();
-        }
-        
+        edges.assign(n, vector<int>());
+        parents.assign(n, vector<int>());
+        degree.assign(n, 0);
+
         sexy = true;
-        memset(degree, 0, sizeof(degree));
         for (int i = 1; i <= m; i++)
         {
             cin >> x >> y;
@@ -92,7 +78,7 @@ int main(int argc, char *argv[])
         if (sexy)
         {
             // Check DAG.
-            memset(color, -1, sizeof(color));
+            color.assign(n, -1);
             for (int i = 0; i < n; i++)
                 if (color[i] == -1)
                     dfs(i);
@@ -101,7 +87,12 @@ int main(int argc, char *argv[])
         // 2-SAT.
         if (sexy)
         {
-            initialize();
+            dfstime = 0, cscc = 0;
+            while (!s.empty()) s.pop();
+            edges.assign(2 * n, vector<int>());
+            dfn.assign(2 * n, 0);
+            low.assign(2 * n, 0);
+            scc.assign(2 * n, 0);
             
             for (int i = 0; i < n; i++)
                 if (parents[i].size() > 1)
@@ -117,7 +108,7 @@ int main(int argc, char *argv[])
                 if (!dfn[i])
                     tarjan(i);
 
-            for (int i = 0; i < 2 * n; i++)
+            for (int i = 0; i < n; i++)
                 if (scc[i] == scc[i + n])
                 {
                     sexy = false;
