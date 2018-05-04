@@ -1,0 +1,9 @@
+Graph number 1 is sexy
+Graph number 2 is not sexy
+Graph number 3 is not sexy
+Graph number 4 is sexy
+Graph number 5 is sexy
+Graph number 6 is sexy
+Graph number 7 is not sexy
+Graph number 8 is not sexy
+Graph number 9 is not sexy
