@@ -1,8 +1,8 @@
 // Astronauts
 // UVa ID: 1391
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2018-05-05
+// UVa Run Time: 0.660s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
@@ -54,6 +54,35 @@ int getValue(int idx)
     int x = idx > n ? idx - n : idx;
     if (value[x] == -1) return -1;
     return idx > n ? !value[x] : value[x];
+}
+
+void assignValue()
+{
+    components.assign(cscc, vector<int>());
+    for (int i = 0; i < 2 * n; i++)
+        components[scc[i] - 1].push_back(i);
+
+    value.assign(n, -1);
+    for (int i = 0; i < cscc; i++)
+    {
+        int boolean = 1;
+        for (auto u : components[i])
+        {
+            if (getValue(u) == 0) boolean = 0;
+            for (auto v : edges[u])
+                if (getValue(v) == 0)
+                {
+                    boolean = 0;
+                    break;
+                }
+            if (boolean == 0) break;
+        }
+        for (auto u : components[i])
+            if (u > n)
+                value[u - n] = !boolean;
+            else
+                value[u] = boolean;
+    }
 }
 
 int main(int argc, char *argv[])
@@ -119,31 +148,7 @@ int main(int argc, char *argv[])
             continue;
         }
 
-        components.assign(cscc, vector<int>());
-        for (int i = 0; i < 2 * n; i++)
-            components[scc[i] - 1].push_back(i);
-
-        value.assign(n, -1);
-        for (int i = 0; i < cscc; i++)
-        {
-            int boolean = 1;
-            for (auto u : components[i])
-            {
-                if (getValue(u) == 0) boolean = 0;
-                for (auto v : edges[u])
-                    if (getValue(v) == 0)
-                    {
-                        boolean = 0;
-                        break;
-                    }
-                if (boolean == 0) break;
-            }
-            for (auto u : components[i])
-                if (u > n)
-                    value[u - n] = !boolean;
-                else
-                    value[u] = boolean;
-        }
+        assignValue();
 
         for (int i = 0; i < n; i++)
             if (value[i]) cout << 'C' << '\n';
