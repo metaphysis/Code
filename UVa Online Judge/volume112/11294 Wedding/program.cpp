@@ -1,8 +1,8 @@
 // Wedding
 // UVa ID: 11294
 // Verdict: Accepted
-// Submission Date: 2018-05-05
-// UVa Run Time: 0.660s
+// Submission Date: 2018-05-07
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
@@ -34,16 +34,15 @@ void tarjan(int u)
     }
     if (dfn[u] == low[u])
     {
+        ++cscc;
         while (true)
         {
             int v = s.top(); s.pop();
             scc[v] = cscc;
             if (u == v) break;
         }
-        cscc++;
     }
 }
-
 
 int n, m;
 vector<int> value;
@@ -56,14 +55,14 @@ int getValue(int idx)
     return (idx & 1) ? !value[x] : value[x];
 }
 
-void assignValue()
+void setValue()
 {
-    components.assign(cscc, vector<int>());
+    components.assign(cscc + 1, vector<int>());
     for (int i = 0; i < 4 * n; i++)
         components[scc[i]].push_back(i);
 
     value.assign(4 * n, -1);
-    for (int i = 0; i < cscc; i++)
+    for (int i = 1; i <= cscc; i++)
     {
         int boolean = 1;
         for (auto u : components[i])
@@ -89,21 +88,24 @@ int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    int ages[MAXV];
     while (cin >> n >> m, n > 0)
     {
         initialize();
 
-        // Index of Groom: 0 to (n - 1), index of bride: n to (2 * n - 1)
+        // Assume seat left be TRUE, seat right be FALSE.
 
-        // Groom must be FALSE, bride must be TRUE.
-        edges[0].push_back(1);
-        edges[2 * n + 1].push_back(2 * n);
+        // Index of bride: 0(even), index of groom: 1(odd).
+
+        // Bride set to TRUE, Groom set to FALSE.
+        edges[1].push_back(0);
+        edges[2].push_back(3);
 
         // For other couples, one must be TRUE, another must be FALSE.
+        // (x OR y) AND (!x OR !y)
         for (int i = 1; i < n; i++)
         {
-            int x = 2 * i, y = 2 * (i + n);
+            int x = 2 * i, y = 2 * i + 1;
+            x *= 2, y *= 2;
             edges[x ^ 1].push_back(y);
             edges[y ^ 1].push_back(x);
             edges[x].push_back(y ^ 1);
@@ -112,6 +114,7 @@ int main(int argc, char *argv[])
 
         // Avoid to see both members with adulterous relationships.
         // Two must not be FALSE at same time.
+        // x OR y
         string p1, p2;
         for (int i = 0; i < m; i++)
         {
@@ -121,8 +124,9 @@ int main(int argc, char *argv[])
             p1.pop_back();
             p2.pop_back();
             int x = stoi(p1), y = stoi(p2);
-            if (!h1) x += n;
-            if (!h2) y += n;
+            x *= 2, y *= 2;
+            if (h1) x++;
+            if (h2) y++;
             x *= 2, y *= 2;
             edges[x ^ 1].push_back(y);
             edges[y ^ 1].push_back(x);
@@ -140,20 +144,14 @@ int main(int argc, char *argv[])
                 break;
             }
 
-        if (!flag)
-        {
-            cout << "bad luck" << '\n';
-            continue;
-        }
+        if (!flag) { cout << "bad luck" << '\n'; continue; }
 
-        assignValue();
+        setValue();
 
         for (int i = 1; i < n; i++)
         {
             if (i > 1) cout << ' ';
-            cout << i;
-            if (value[2 * i]) cout << 'h';
-            else cout << 'w';
+            cout << i << (value[4 * i] ? 'w' : 'h');
         }
         cout << '\n';
     }

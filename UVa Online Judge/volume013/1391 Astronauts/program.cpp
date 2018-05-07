@@ -44,7 +44,6 @@ void tarjan(int u)
     }
 }
 
-
 int n, m;
 vector<int> value;
 vector<vector<int>> components;
@@ -56,14 +55,14 @@ int getValue(int idx)
     return idx > n ? !value[x] : value[x];
 }
 
-void assignValue()
+void setValue()
 {
-    components.assign(cscc, vector<int>());
+    components.assign(cscc + 1, vector<int>());
     for (int i = 0; i < 2 * n; i++)
-        components[scc[i] - 1].push_back(i);
+        components[scc[i]].push_back(i);
 
     value.assign(n, -1);
-    for (int i = 0; i < cscc; i++)
+    for (int i = 1; i <= cscc; i++)
     {
         int boolean = 1;
         for (auto u : components[i])
@@ -148,7 +147,7 @@ int main(int argc, char *argv[])
             continue;
         }
 
-        assignValue();
+        setValue();
 
         for (int i = 0; i < n; i++)
             if (value[i]) cout << 'C' << '\n';
