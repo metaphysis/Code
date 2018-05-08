@@ -1,8 +1,8 @@
 // Delta Wave
 // UVa ID: 1478
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2016-12-24
+// UVa Run Time: 1.480s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
