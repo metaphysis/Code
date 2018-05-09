@@ -118,6 +118,7 @@ polygon grahamConvexHull(polygon &pg)
 	            ch[top++] = ch[next++];
         }
 	}
+	top--;
 	ch.erase(ch.begin() + top, ch.end());
 
 	return ch;

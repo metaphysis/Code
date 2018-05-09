@@ -14,6 +14,10 @@ struct point
 {
 	int x, y;
     point(int x = 0, int y = 0): x(x), y(y) {}
+    point operator+(point i) { return point(x + i.x, y + i.y); };
+    point operator-(point i) { return point(x - i.x, y - i.y); };
+    point operator*(double k) { return point(x * k, y * k); };
+    point operator/(double k) { return point(x / k, y / k); };
 	bool operator<(const point &p) const
 	{
 	    if (y != p.y) return y < p.y;
@@ -21,37 +25,16 @@ struct point
 	}
 	bool operator==(const point &p) const { return x == p.x && y == p.y; }
 	int distTo(const point &p) { return (x - p.x) * (x - p.x) + (y - p.y) * (y - p.y); }
-};
+} pr;
 
 typedef vector<point> polygon;
 
-point pr;
-
-int cp(point a, point b, point c)
-{
-	return (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x);
-}
-
-bool cw(point a, point b, point c)
-{
-	return cp(a, b, c) < 0;
-}
-
-bool ccw(point a, point b, point c)
-{
-	return cp(a, b, c) > 0;
-}
-
-bool collinear(point a, point b, point c)
-{
-	return abs(cp(a, b, c)) == 0;
-}
-
-bool ccwOrCollinear(point a, point b, point c)
-{
-	return ccw(a, b, c) || collinear(a, b, c);
-}
-
+int cross(point a, point b) { return a.x * b.y - a.y * b.x; }
+int dot(point a, point b) { return a.x * b.x + a.y * b.y; }
+int cp(point a, point b, point c) {	return cross(b - a, c - a); }
+bool cw(point a, point b, point c) { return cp(a, b, c) < 0; }
+bool ccw(point a, point b, point c) { return cp(a, b, c) > 0; }
+bool collinear(point a, point b, point c) { return abs(cp(a, b, c)) == 0; }
 bool cmpAngle(point &a, point &b)
 {
     if (collinear(pr, a, b)) return pr.distTo(a) <= pr.distTo(b);
@@ -82,9 +65,23 @@ polygon grahamConvexHull(polygon &pg)
 	            ch[top++] = ch[next++];
         }
 	}
+	top--;
 	ch.erase(ch.begin() + top, ch.end());
 
 	return ch;
+}
+
+int rotatingCalipers(polygon pg)
+{
+    int dist = 0;
+    pg.push_back(pg.front());
+    for (int i = 0, j = 1, n = pg.size() - 1; i < n; i++)
+    {
+        while (cross(pg[i + 1] - pg[i], pg[j + 1] - pg[j]) > 0)
+            j = (j + 1) % n;
+        dist = max(dist, max(pg[i].distTo(pg[j]), pg[i + 1].distTo(pg[j + 1])));
+    }
+    return dist;
 }
 
 int main(int argc, char *argv[])
@@ -108,12 +105,13 @@ int main(int argc, char *argv[])
         
         polygon hull = grahamConvexHull(pg);
         
-        int maxDist = 0;
-        for (int i = 0; i < hull.size(); i++)
-            for (int j = i + 1; j < hull.size(); j++)
-                maxDist = max(maxDist, hull[i].distTo(hull[j]));
-                    
-        cout << maxDist << '\n';
+        //int maxDist = 0;
+        //for (int i = 0; i < hull.size(); i++)
+        //    for (int j = i + 1; j < hull.size(); j++)
+        //        maxDist = max(maxDist, hull[i].distTo(hull[j]));          
+        //cout << maxDist << '\n';
+
+        cout << rotatingCalipers(hull) << '\n';
     }
 
     return 0;
