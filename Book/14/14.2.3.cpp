@@ -1,5 +1,6 @@
-// double version
 const double EPSILON = 1e-7;
+
+double cross(point a, point b) { return a.x * b.y - a.y * b.x; }
 
 // 叉积。
 double cp(point a, point b, point c)

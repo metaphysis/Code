@@ -1,4 +1,4 @@
-// Diving for gold
+// Diving for Gold
 // UVa ID: 990
 // Verdict: Accepted
 // Submission Date: 2017-02-08
