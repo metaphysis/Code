@@ -13,14 +13,14 @@ struct point
     point operator*(double k) { return point(x * k, y * k); };
     point operator/(double k) { return point(x / k, y / k); };
     bool operator<(const point &p) const
-	{
+    {
 	    if (fabs(y - p.y) > EPSILON) return y < p.y;
 	    return x < p.x;
-	}
+    }
 	bool operator==(const point &p) const
-	{
+    {
 	    return fabs(x - p.x) <= EPSILON && fabs(y - p.y) <= EPSILON;
-	}
+    }
     double distTo(point i) { return sqrt(pow(x - i.x, 2) + pow(y - i.y, 2)); }
 } pr;
 
