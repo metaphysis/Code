@@ -30,7 +30,6 @@ double cross(point a, point b) { return a.x * b.y - a.y * b.x; }
 double dot(point a, point b) { return a.x * b.x + a.y * b.y; }
 double norm(point a) { return dot(a, a); }
 double abs(point a) { return sqrt(norm(a)); }
-double cp(point a, point b, point c) { return cross(b - a, c - a); }
 
 double rotatingCalipers1(polygon pg)
 {
