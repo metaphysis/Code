@@ -1,0 +1,12 @@
+Product 1
+Fastest sequence takes 2621430 seconds.
+
+Product 2
+Fastest sequence takes 1310710 seconds.
+
+Product 3
+Fastest sequence takes 655350 seconds.
+
+Product 4
+Fastest sequence takes 327670 seconds.
+

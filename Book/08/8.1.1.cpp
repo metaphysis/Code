@@ -6,7 +6,6 @@ const int MAXV = 8;
 
 int column[MAXV] = {0}, used[MAXV] = {0}, solutions = 0;
 
-// 检查是否满足对角线规则。
 bool safe()
 {
     for (int i = 0; i < MAXV; i++)
@@ -16,7 +15,6 @@ bool safe()
     return true;
 }
 
-// 输出放置方案，放置皇后的位置以Q表示。
 void display()
 {
     for (int i = 0; i < MAXV; i++)
@@ -30,14 +28,12 @@ void display()
 
 void backtrack(int depth)
 {
-    // 当行数达到棋盘的最大行数时进行验证。
     if (depth == MAXV && safe()) {
         display();
         solutions++;
         return;
     }
 
-    // 未达到棋盘最大行数，继续进行递归回溯。注意在递归的前后设置对应位向量的值。
     for (int i = 0; i < MAXV; i++) if (!used[i]) {
         used[i] = 1, column[depth] = i;
         backtrack(depth + 1);
@@ -48,7 +44,6 @@ void backtrack(int depth)
 
 int main(int argc, char *argv[])
 {
-    // 回溯并输出具体放置方案和总的方案数。
     solutions = 0;
     backtrack(0);
     cout << solutions << '\n';

@@ -23,11 +23,10 @@ int findSet1(int x)
 
 int findSet2(int x)
 {
-    int ancestor = x, temp;
-
+    int ancestor = x;
     while (ancestor != parent[ancestor]) ancestor = parent[ancestor];
     while (x != ancestor) {
-        temp = parent[x];
+        int temp = parent[x];
         parent[x] = ancestor;
         x = temp;
     }

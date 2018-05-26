@@ -70,12 +70,12 @@ int main(int argc, char *argv[])
         bfs(1);
 
         // 输出各顶点的父顶点以及和起始顶点间的最短距离。
-        cout << "vertex  parent  distance\n";
+        cout << "vertex    parent    distance\n";
         for (int i = 1; i <= numberOfVertices; i++)
         {
-            cout << setw(3) << right << i;
-            cout << setw(8) << right << parent[i];
-            cout << setw(9) << right << dist[i];
+            cout << setw(6) << right << i;
+            cout << setw(10) << right << parent[i];
+            cout << setw(12) << right << dist[i];
             cout << '\n';
         }
     }

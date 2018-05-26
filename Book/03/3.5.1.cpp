@@ -2,29 +2,42 @@
 
 using namespace std;
 
-int main(int argc, char *argv[])
+const int MAXN = 102400, CHILDREN = 26, OFFSET = 'a';
+
+struct Trie
 {
-    string something = "abc";
+    int cnt, root, child[MAXN][CHILDREN], ending[MAXN];
 
-    cout << something << endl;
-    while (next_permutation(something.begin(), something.end()))
-        cout << something << endl;
+    Trie()
+    {
+        memset(child[0], 0, sizeof(child[0]));
+        root = cnt = ending[0] = 0;
+    }
 
-    cout << endl;
-    cout << "after next_permutation: " << something << endl;
-    cout << endl;
+    void insert(const string s)
+    {
+        int *current = &root;
+        for (auto c : s)
+        {
+            current = &child[*current][c - OFFSET];
+            if (!(*current))
+            {
+                *current = ++cnt;
+                memset(child[cnt], 0, sizeof(child[cnt]));
+                ending[cnt] = 0;
+            }
+        }
+        ending[*current] = 1;
+    }
 
-    something.assign("cba");
-    while (prev_permutation(something.begin(), something.end()))
-        cout << something << endl;
-    cout << something << endl;
-
-    cout << endl;
-    cout << "after prev_permutation: " << something << endl;
-
-    something.assign("abcdefgh");
-    while (next_permutation(something.begin(), something.begin() + 3))
-        cout << something << endl;
-    
-    return 0;
-}
+    bool query(const string s)
+    {
+        int *current = &root;
+        for (auto c : s)
+        {
+            if (!(*current)) break;
+            current = &child[*current][c - OFFSET];
+        }
+        return (*current && ending[*current]);
+    }
+};

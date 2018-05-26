@@ -1,0 +1,300 @@
+Collection #1:
+Can be divided.
+
+Collection #2:
+Can't be divided.
+
+Collection #3:
+Can't be divided.
+
+Collection #4:
+Can be divided.
+
+Collection #5:
+Can be divided.
+
+Collection #6:
+Can be divided.
+
+Collection #7:
+Can be divided.
+
+Collection #8:
+Can't be divided.
+
+Collection #9:
+Can't be divided.
+
+Collection #10:
+Can't be divided.
+
+Collection #11:
+Can be divided.
+
+Collection #12:
+Can be divided.
+
+Collection #13:
+Can't be divided.
+
+Collection #14:
+Can't be divided.
+
+Collection #15:
+Can't be divided.
+
+Collection #16:
+Can't be divided.
+
+Collection #17:
+Can be divided.
+
+Collection #18:
+Can't be divided.
+
+Collection #19:
+Can be divided.
+
+Collection #20:
+Can be divided.
+
+Collection #21:
+Can't be divided.
+
+Collection #22:
+Can't be divided.
+
+Collection #23:
+Can be divided.
+
+Collection #24:
+Can't be divided.
+
+Collection #25:
+Can be divided.
+
+Collection #26:
+Can be divided.
+
+Collection #27:
+Can't be divided.
+
+Collection #28:
+Can be divided.
+
+Collection #29:
+Can be divided.
+
+Collection #30:
+Can be divided.
+
+Collection #31:
+Can't be divided.
+
+Collection #32:
+Can't be divided.
+
+Collection #33:
+Can be divided.
+
+Collection #34:
+Can't be divided.
+
+Collection #35:
+Can be divided.
+
+Collection #36:
+Can't be divided.
+
+Collection #37:
+Can't be divided.
+
+Collection #38:
+Can't be divided.
+
+Collection #39:
+Can't be divided.
+
+Collection #40:
+Can be divided.
+
+Collection #41:
+Can't be divided.
+
+Collection #42:
+Can be divided.
+
+Collection #43:
+Can't be divided.
+
+Collection #44:
+Can't be divided.
+
+Collection #45:
+Can't be divided.
+
+Collection #46:
+Can be divided.
+
+Collection #47:
+Can't be divided.
+
+Collection #48:
+Can be divided.
+
+Collection #49:
+Can be divided.
+
+Collection #50:
+Can be divided.
+
+Collection #51:
+Can't be divided.
+
+Collection #52:
+Can't be divided.
+
+Collection #53:
+Can't be divided.
+
+Collection #54:
+Can't be divided.
+
+Collection #55:
+Can be divided.
+
+Collection #56:
+Can be divided.
+
+Collection #57:
+Can be divided.
+
+Collection #58:
+Can't be divided.
+
+Collection #59:
+Can't be divided.
+
+Collection #60:
+Can be divided.
+
+Collection #61:
+Can't be divided.
+
+Collection #62:
+Can't be divided.
+
+Collection #63:
+Can't be divided.
+
+Collection #64:
+Can't be divided.
+
+Collection #65:
+Can be divided.
+
+Collection #66:
+Can be divided.
+
+Collection #67:
+Can't be divided.
+
+Collection #68:
+Can't be divided.
+
+Collection #69:
+Can be divided.
+
+Collection #70:
+Can be divided.
+
+Collection #71:
+Can be divided.
+
+Collection #72:
+Can be divided.
+
+Collection #73:
+Can't be divided.
+
+Collection #74:
+Can't be divided.
+
+Collection #75:
+Can be divided.
+
+Collection #76:
+Can't be divided.
+
+Collection #77:
+Can't be divided.
+
+Collection #78:
+Can be divided.
+
+Collection #79:
+Can be divided.
+
+Collection #80:
+Can't be divided.
+
+Collection #81:
+Can't be divided.
+
+Collection #82:
+Can't be divided.
+
+Collection #83:
+Can be divided.
+
+Collection #84:
+Can be divided.
+
+Collection #85:
+Can't be divided.
+
+Collection #86:
+Can't be divided.
+
+Collection #87:
+Can be divided.
+
+Collection #88:
+Can be divided.
+
+Collection #89:
+Can be divided.
+
+Collection #90:
+Can be divided.
+
+Collection #91:
+Can be divided.
+
+Collection #92:
+Can be divided.
+
+Collection #93:
+Can't be divided.
+
+Collection #94:
+Can't be divided.
+
+Collection #95:
+Can be divided.
+
+Collection #96:
+Can't be divided.
+
+Collection #97:
+Can be divided.
+
+Collection #98:
+Can be divided.
+
+Collection #99:
+Can't be divided.
+
+Collection #100:
+Can be divided.
+
