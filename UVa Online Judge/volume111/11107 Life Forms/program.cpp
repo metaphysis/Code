@@ -1,8 +1,8 @@
 // Life Forms
 // UVa ID: 11107
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2018-05-29
+// UVa Run Time: 0.330s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
@@ -10,12 +10,12 @@
 
 using namespace std;
 
-const int MAXN = 100010, OFFSET = 100, CHARSET = 256;
+const int MAXN = 100200, OFFSET = 100, CHARSET = 256;
 
 void radixSort(int *s, int *a, int *b, int n, int m)
 {
     static int cnt[MAXN];
-    memset(cnt, 0, (max(n, m) + 1) * sizeof(int));
+    memset(cnt, 0, (max(n, m) + 10) * sizeof(int));
     for (int i = 0; i < n; i++) cnt[s[a[i]]]++;
     for (int i = 1; i <= m; i++) cnt[i] += cnt[i - 1];
     for (int i = n - 1; i >= 0; i--) b[--cnt[s[a[i]]]] = a[i];
@@ -25,7 +25,7 @@ void suffixArray(int *s, int *sa, int n, int m)
 {
     static int ranks[MAXN] = {}, a[MAXN] = {}, b[MAXN] = {};
 
-    iota(ranks, ranks + max(n, m) + 1, 0);
+    iota(ranks, ranks + max(n, m) + 10, 0);
     radixSort(s, ranks, sa, n, m);
 
     ranks[sa[0]] = 0;
@@ -80,7 +80,7 @@ bool validate(int *s, int *sa, int *height, int n, int total, int longest, bool 
             int start = i;
             while (start < total && height[start] >= longest)
                 start++;
-            if (start - i + 1 >= needed)
+            if ((start - i + 1) >= needed)
             { 
                 mark++, cnt = 0;
                 for (int j = i - 1; j < start; j++)
