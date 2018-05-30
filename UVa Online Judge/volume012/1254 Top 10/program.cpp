@@ -1,8 +1,8 @@
-// GATTACA
-// UVa ID: 11512
-// Verdict: Accepted
-// Submission Date: 2018-05-29
-// UVa Run Time: 0.010s
+// Top 10
+// UVa ID: 1254
+// Verdict: TLE
+// Submission Date: 2018-05-30
+// UVa Run Time: 
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
@@ -10,7 +10,7 @@
 
 using namespace std;
 
-const int MAXN = 1010, CHARSET = 128;
+const int MAXN = 120010;
 
 void countSort(int *s, int *a, int *b, int n, int m)
 {
@@ -69,50 +69,87 @@ void getHeight(int *s, int *sa, int *height, int n)
     }
 }
 
+struct WORD
+{
+    int idx;
+    string word;
+    bool operator<(const WORD &w) const
+    {
+        if (word.length() != w.word.length()) return word.length() < w.word.length();
+        if (word != w.word) return word < w.word;
+        return idx < w.idx;
+    }
+};
+
+vector<WORD> words;
+
 int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    int cases, n, s[MAXN], sa[MAXN], height[MAXN];
-    string line;
+    int N, Q, n, m, s[MAXN], sa[MAXN], height[MAXN], charset = 200;
+    int belong[MAXN];
+    string word;
 
-    cin >> cases;
-    for (int cs = 1; cs <= cases; cs++)
+    cin >> N;
+    for (int i = 1; i <= N; i++)
     {
-        cin >> line;
+        cin >> word;
+        words.push_back((WORD){i, word});
+    }
 
-        copy(line.begin(), line.end(), s);
-        n = (int)line.length();
+    sort(words.begin(), words.end());
+    m = 0;
+    for (int i = 0; i < N; i++)
+    {
+        for (char c : words[i].word)
+        {
+            belong[m] = i;
+            s[m++] = c;
+        }
+        s[m++] = charset++;
+    }
+
+    cin >> Q;
+    for (int i = 1; i <= Q; i++)
+    {
+        cin >> word;
+        n = m;
+        for (char c : word)
+            s[n++] = c;
         s[n] = 0;
-        suffixArray(s, sa, n, CHARSET);
+
+        suffixArray(s, sa, n, charset);
         getHeight(s, sa, height, n);
 
-        int longest = 0, ocurrences = 0, startAt = -1, continued = 0;
-        for (int i = 1; i < n; i++)
-        {
-            if (height[i] > longest)
+        int r = -1;
+        for (int i = 0; i < n; i++)
+            if (sa[i] == m)
             {
-                longest = height[i];
-                ocurrences = 2;
-                startAt = sa[i - 1];
-                continued = 1;
+                r = i;
+                break;
             }
-            else if (height[i] == longest)
-            {
-                if (continued) ocurrences++;
-            }
-            else
-                continued = 0;
-        }
-        
-        if (startAt != -1)
+
+        vector<int> candidate;
+        for (int j = r; j >= 1 && height[j] >= word.length(); j--)
+            candidate.push_back(belong[sa[j - 1]]);
+        for (int j = r + 1; j < m && height[j] >= word.length(); j++)
+            candidate.push_back(belong[sa[j]]);
+
+        sort(candidate.begin(), candidate.end());
+        candidate.erase(unique(candidate.begin(), candidate.end()), candidate.end());
+
+        if (candidate.size() > 0)
         {
-            for (int i = 0; i < longest; i++)
-                cout << (char)(s[startAt + i]);
-            cout << ' ' << ocurrences << '\n';
+            for (int i = 0; i < min((int)candidate.size(), 10); i++)
+            {
+                if (i) cout << ' ';
+                cout << words[candidate[i]].idx;
+            }
+            cout << '\n';
         }
-        else
-            cout << "No repetitions found!\n";
+        else 
+            cout << "-1\n";
     }
 
     return 0;

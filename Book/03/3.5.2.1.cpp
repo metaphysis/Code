@@ -4,7 +4,7 @@ using namespace std;
 
 const int MAXN = 100010;
 
-void radixSort(int *s, int *a, int *b, int n, int m)
+void countSort(int *s, int *a, int *b, int n, int m)
 {
     static int cnt[MAXN];
     memset(cnt, 0, sizeof(cnt));
@@ -18,7 +18,7 @@ void suffixArray(int *s, int *sa, int n, int m)
     static int ranks[MAXN] = {}, a[MAXN] = {}, b[MAXN] = {};
 
     iota(ranks, ranks + MAXN, 0);
-    radixSort(s, ranks, sa, n, m);
+    countSort(s, ranks, sa, n, m);
 
     ranks[sa[0]] = 0;
     for (int i = 1; i < n; i++)
@@ -36,8 +36,8 @@ void suffixArray(int *s, int *sa, int n, int m)
             sa[j] = j;
         }
 
-        radixSort(b, sa, ranks, n, n);
-        radixSort(a, ranks, sa, n, n);
+        countSort(b, sa, ranks, n, n);
+        countSort(a, ranks, sa, n, n);
 
         ranks[sa[0]] = 0;
         for (int j = 1; j < n; j++)
