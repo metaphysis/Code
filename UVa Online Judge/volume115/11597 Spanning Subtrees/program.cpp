@@ -14,9 +14,8 @@ int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    int cases = 0;
-    int n;
-    
+    int cases = 0, n;
+
     while (cin >> n, n > 0)
     {
         cout << "Case " << ++cases << ": " << n / 2 << '\n';
