@@ -1,8 +1,8 @@
-// Find the Winning Move
+// Find the Winning player
 // UVa ID: 10111
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2018-06-16
+// UVa Run Time: 0.010s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
@@ -10,7 +10,7 @@
 
 using namespace std;
 
-const int X_MOVE = 0, O_MOVE = 1;
+const int X = 0, O = 1, X_WIN = 0, X_LOSE = 1, O_WIN = 2, O_LOSE = 3;
 
 string bits[] = {
     "1111000000000000", "0000111100000000", "0000000011110000", "0000000000001111",
@@ -18,46 +18,63 @@ string bits[] = {
     "1000010000100001", "0001001001001000"
 };
 
-int status[10], mask = 0xff;
-int board, empty[16], used[16], total = 0, cnt = 0;
+int wins[10], mask = 0xffff;
+int board, empty[16], used[16] = {}, total = 0, cnt = 0, indent = 0;
 
-set<int> win, lose;
+set<int> Ps, Ns;
 
-bool dfs(int move)
+inline bool isWin(int tag)
 {
     for (int i = 0; i < 10; i++)
-    {
-        if (status == (board >> 16))
-        {
-            win.insert(board);
+        if ((tag & wins[i]) == wins[i])
             return true;
-        }
-        if (status == (board & mask))
-        {
-            lose.insert(board);
-            return false;
-        }
+    return false;
+}
+
+int dfs(int player)
+{
+    if (player == X)
+    {
+        if (Ps.find(board) != Ps.end()) return X_WIN;
+        if (Ns.find(board) != Ns.end()) return X_LOSE;
     }
-    
+
+    if (player == X && isWin(board & mask)) return X_LOSE;
+    if (player == O && isWin(board >> 16)) return O_LOSE;
+
     for (int i = 0; i < total; i++)
         if (!used[i])
         {
             used[i] = 1;
-            if (move == X_MOVE)
-                board |= (1 << (15 + empty[i]));
-            else
-                board |= (1 << empty[i]);
-            
-            if (dfs(1 - move)) return true;
-            if (move == X_MOVE)
-                board ^= (1 << (15 + empty[i]));
-            else
-                board ^= (1 << empty[i]);
+            if (player == X) board |= (1 << (16 + empty[i]));
+            else board |= (1 << empty[i]);
+
+            indent += 4;
+            int next = dfs(1 - player);
+            indent -= 4;
+
+            if (player == X) board ^= (1 << (16 + empty[i]));
+            else board ^= (1 << empty[i]);
             used[i] = 0;
+
+            if (player == X && next == O_LOSE)
+            {
+                Ps.insert(board);
+                return X_WIN;
+            }
+            if (player == O && next == X_LOSE)
+            {
+                return O_WIN;
+            }
         }
-        
-    lose.insert(board);
-    return false;
+
+    if (player == X)
+    {
+        Ns.insert(board);
+        return X_LOSE;
+    }
+
+    return O_LOSE;
 }
 
 int main(int argc, char *argv[])
@@ -66,8 +83,8 @@ int main(int argc, char *argv[])
 
     for (int i = 0; i < 10; i++)
     {
-        bitset<32> binary(bits[i]);
-        status[i] = binary.to_ulong();
+        bitset<16> binary(bits[i]);
+        wins[i] = (int)(binary.to_ulong());
     }
     
     char piece;
@@ -75,33 +92,33 @@ int main(int argc, char *argv[])
     {
         if (piece != '?') continue;
 
-        win.clear(); lose.clear();
         board = cnt = total = 0;
         while (cnt < 16)
         {
             cin >> piece;
             if (piece != '.' && piece != 'x' && piece != 'o') continue;
             if (piece == '.') empty[total++] = cnt;
-            else if (piece == 'x') board |= (1 << (15 + cnt));
+            else if (piece == 'x') board |= (1 << (16 + cnt));
             else board |= (1 << cnt);
             cnt++;
         }
 
-        bool found = false;
+        bool flag = false;
+        memset(used, 0, sizeof(used));
         for (int i = 0; i < total; i++)
         {
             used[i] = 1;
-            board |= (1 << (15 + empty[i]));
-            if (dfs(O_MOVE))
+            board |= (1 << (16 + empty[i]));
+            if (dfs(O) == O_LOSE)
             {
                 cout << '(' << empty[i] / 4 << ',' << empty[i] % 4 << ")\n";
-                found = true;
+                flag = true;
+                break;
             }
-            board ^= (1 << (15 + empty[i]));
+            board ^= (1 << (16 + empty[i]));
             used[i] = 0;
         }
-        if (!found)
-            cout << "####\n";
+        if (!flag) cout << "#####\n";
     }
 
     return 0;
