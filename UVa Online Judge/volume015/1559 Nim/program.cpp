@@ -1,8 +1,8 @@
 // Nim
 // UVa ID: 1559
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2018-06-21
+// UVa Run Time: 0.010s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
@@ -10,15 +10,15 @@
 
 using namespace std;
 
-int N, S, mi, M[2], cache[1 << 13];
+int N, S, Mi[21], cache[21][1 << 13];
 
-int dfs(int s, int player)
+int dfs(int n, int s)
 {
-    if (s <= 1) return cache[s] = 0;
-    if (~cache[s]) return cache[s];
-    for (int i = min(s, N); i <= min(s, M[player]); i++)
-        if (!dfs(s - i, !player)) return cache[s] = 1;
-    return cache[s] = 0;
+    if (s <= 1) return cache[n][s] = 0;
+    if (~cache[n][s]) return cache[n][s];
+    for (int i = 1; i <= min(s, Mi[n]); i++)
+        if (!dfs((n + 1) % N, s - i)) return cache[n][s] = 1;
+    return cache[n][s] = 0;
 }
 
 int main(int argc, char *argv[])
@@ -28,14 +28,11 @@ int main(int argc, char *argv[])
     while (cin >> N, N > 0)
     {
         cin >> S;
-        M[0] = M[1] = 0;
         for (int i = 0; i < 2 * N; i++)
-        {
-            cin >> mi;
-            M[i % 2] += mi;
-        }
+            cin >> Mi[i];
+        N *= 2;
         memset(cache, -1, sizeof(cache));
-        cout << dfs(S, 0) << '\n';
+        cout << dfs(0, S) << '\n';
     }
 
     return 0;
