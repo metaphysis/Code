@@ -5,36 +5,35 @@
 // UVa Run Time: 0.012s
 //
 // 版权所有（C）2011，邱秋。metaphysis # yeah dot net
-	
+
 #include <bits/stdc++.h>
 
 using namespace std;
-	
-void ones(int number, bool win)
+
+const int N = 0, P = 1;
+
+void dfs(int n, int flag)
 {
-	if (number <= 9 && win)
-	{
-		cout << "Stan wins." << endl;
-		return;
-	}
-	if (number <= 2 && !win)
-	{
-		cout << "Ollie wins." << endl;
-		return;
-	}
-	
-	if (win)
-		ones(ceil(number / 9.0), !win);
-	else
-		ones(ceil(number / 2.0), !win);
+    if (n <= 9 && flag == P)
+    {
+        cout << "Stan wins." << '\n';
+        return;
+    }
+    if (n <= 2 && flag == N)
+    {
+        cout << "Ollie wins." << '\n';
+        return;
+    }
+
+    if (flag == P)
+        dfs(n / 9 + (n % 9 != 0), N);
+    else
+        dfs(n / 2 + (n % 2 != 0), P);
 }
-	
+
 int main(int ac, char *av[])
 {
-	int number;
-	
-	while (cin >> number)
-		ones(number, true);
-	
-	return 0;
+    int n;
+    while (cin >> n) dfs(n, P);
+    return 0;
 }

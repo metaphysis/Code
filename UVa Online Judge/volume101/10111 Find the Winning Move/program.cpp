@@ -1,4 +1,4 @@
-// Find the Winning player
+// Find the Winning Move
 // UVa ID: 10111
 // Verdict: Accepted
 // Submission Date: 2018-06-16
@@ -19,7 +19,7 @@ string bits[] = {
 };
 
 int wins[10], mask = 0xffff;
-int board, empty[16], used[16] = {}, total = 0, cnt = 0, indent = 0;
+int board, empty[16], used[16] = {}, total = 0, cnt = 0;
 
 set<int> Ps, Ns;
 
@@ -49,9 +49,7 @@ int dfs(int player)
             if (player == X) board |= (1 << (16 + empty[i]));
             else board |= (1 << empty[i]);
 
-            indent += 4;
             int next = dfs(1 - player);
-            indent -= 4;
 
             if (player == X) board ^= (1 << (16 + empty[i]));
             else board ^= (1 << empty[i]);

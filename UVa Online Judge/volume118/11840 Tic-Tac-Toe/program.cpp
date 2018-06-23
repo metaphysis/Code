@@ -14,8 +14,7 @@ int sg[10001], visited[512];
 
 void grundy()
 {
-    sg[0] = 0;
-    sg[1] = sg[2] = sg[3] = 1;
+    sg[0] = 0, sg[1] = sg[2] = sg[3] = 1;
     for (int i = 4; i <= 10000; i++)
     {
         memset(visited, 0, sizeof(visited));
