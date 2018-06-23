@@ -12,7 +12,7 @@ using namespace std;
 
 const int N = 0, P = 1;
 
-void dfs(int n, int flag)
+void dfs(long long n, int flag)
 {
     if (n <= 9 && flag == P)
     {
@@ -33,7 +33,7 @@ void dfs(int n, int flag)
 
 int main(int ac, char *av[])
 {
-    int n;
+    long long n;
     while (cin >> n) dfs(n, P);
     return 0;
 }
