@@ -1,0 +1,9 @@
+Sector #1: contain 1 freedom fighter group(s) & 0 enemy group(s)
+Sector #2: contain 1 freedom fighter group(s) & 0 enemy group(s)
+Sector #3: contain 1 freedom fighter group(s) & 1 enemy group(s)
+Sector #4: contain 0 freedom fighter group(s) & 1 enemy group(s)
+Sector #5: contain 1 freedom fighter group(s) & 0 enemy group(s)
+Sector #6: contain 0 freedom fighter group(s) & 1 enemy group(s)
+Sector #7: contain 0 freedom fighter group(s) & 1 enemy group(s)
+Total 2 group(s) are in fighting position.
+
