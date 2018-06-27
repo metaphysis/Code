@@ -4,45 +4,49 @@ using namespace std;
 
 const int MAXN = 8;
 
-int column[MAXN] = {0}, used[MAXN] = {0};
+int board[MAXN] = {0}, columnUsed[MAXN] = {0}, cntOfSolutions = 0;
 
-bool safe()
+bool checkBoard(int row, int selected)
 {
-    for (int i = 0; i < MAXN; i++)
-        for (int j = 0; j < i; j++)
-            if (abs(i - j) == abs(column[i] - column[j]))
-                return false;
+    for (int cln = 0; cln < row; cln++)
+        if (abs(row - cln) == abs(selected - board[cln]))
+            return false;
     return true;
 }
 
-void render()
+void printBoard()
 {
-    for (int i = 0; i < MAXN; i++)
+    for (int row = 0; row < MAXN; row++)
     {
-        for (int j = 0; j < MAXN; j++)
-            cout << (column[i] == j ? " Q" : " *");
+        for (int cln = 0; cln < MAXN; cln++)
+            cout << (board[row] == cln ? " Q" : " *");
         cout << '\n';
     }
     cout << '\n';
 }
 
-int dfs(int depth)
+void dfs(int row)
 {
-    if (depth == MAXN && safe()) { render(); return 1; }
+    if (row == MAXN)
+    {
+        printBoard();
+        cntOfSolutions++;
+        return;
+    }
 
-    int cnt = 0;
-    for (int i = 0; i < MAXN; i++)
-        if (!used[i]) {
-            used[i] = 1, column[depth] = i;
-            cnt += dfs(depth + 1);
-            used[i] = 0, column[depth] = -1;
-        }
-    return cnt;
+    for (int cln = 0; cln < MAXN; cln++)
+    {
+        if (columnUsed[cln] || !checkBoard(row, cln)) continue;
+        columnUsed[cln] = 1, board[row] = cln;
+        dfs(row + 1);
+        columnUsed[cln] = 0;
+    }
 }
 
 
 int main(int argc, char *argv[])
 {
-    cout << dfs(0) << '\n';
+    dfs(0);
+    cout << cntOfSolutions << '\n';
     return 0;
 }
