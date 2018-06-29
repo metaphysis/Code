@@ -10,113 +10,102 @@
 
 using namespace std;
 
+vector<string> En;
+string jury, submit;
+
+void removeTrailingEmptyLines(string &s)
+{
+    while (s.length() >= 2 && s[s.length() - 1] == '\n' && s[s.length() - 2] == '\n')
+        s.pop_back();
+}
+
+void toUpper(string &s)
+{
+    for (int i = 0; i < s.length(); i++)
+        if (isalpha(s[i]))
+            s[i] = (char)(toupper(s[i]));
+}
+
+void addEssential(string &s)
+{
+    int idx = 0;
+    while (idx < s.length())
+    {
+        if (s[idx] == '[')
+        {
+            idx++;
+            string block;
+            while (s[idx] != ']')
+            {
+                block += s[idx];
+                idx++;
+            }
+            toUpper(block);
+            En.push_back(block);
+        }
+        idx++;
+    }
+}
+
+bool dfs(int i, int j)
+{
+    if (j == En.size()) return true;
+    int idx = i;
+    while (idx < submit.length())
+    {
+        idx = submit.find(En[j], idx);
+        if (idx != submit.npos)
+        {
+            idx += En[j].length();
+            if (dfs(idx, j + 1)) return true;
+        } 
+    }
+    
+    return false;
+}
+
 int main(int argc, char *argv[])
 {
+    int cases, n1, n2;
     string line;
-    getline(cin, line);
-    
-    int cases = stoi(line);
-    while (cases--)
+
+    cin >> cases;
+    for (int cs = 1; cs <= cases; cs++)
     {
-        getline(cin, line);
-        
-        istringstream iss(line);
-        
-        int jury_line, submit_line;
-        iss >> jury_line >> submit_line;
-        
-        vector <string> jury, submit;
-        for (int i = 1; i <= jury_line; i++)
+        cin >> n1 >> n2;
+        cin.ignore(256, '\n');
+
+        jury.clear(), submit.clear(), En.clear();
+        for (int i = 1; i <= n1; i++)
         {
             getline(cin, line);
-            while (isblank(line.back()))
-                line.erase(line.end() - 1);
-            if (line.length() > 0)
-                jury.push_back(line);
+            addEssential(line);
+            while (line.length() > 0 && isblank(line.back())) line.pop_back();
+            jury += line;
+            jury += '\n';
         }
-        
-        bool is_wa = false;
-        for (int i = 1; i <= submit_line; i++)
+
+        for (int i = 1; i <= n2; i++)
         {
             getline(cin, line);
-            while (isblank(line.back()))
-                line.erase(line.end() - 1);
-            if (line.length() > 0)
-                submit.push_back(line);
-            if (line.find('[') != line.npos || line.find(']') != line.npos)
-                is_wa = true;
+            while (line.length() > 0 && isblank(line.back())) line.pop_back();
+            submit += line;
+            submit += '\n';
         }
-        
-        if (is_wa)
+
+        removeTrailingEmptyLines(jury);
+        removeTrailingEmptyLines(submit);
+
+        if (jury == submit)
         {
-            cout << "Wrong Answer" << endl;
+            cout << "Accepted\n";
             continue;
         }
         
-        if (jury.size() == submit.size())
-        {
-            bool is_same = true;
-            for (int i = 0; i < jury.size(); i++)
-                if (jury[i] != submit[i])
-                {
-                    is_same = false;
-                    break;
-                }
-            if (is_same)
-            {
-                cout << "Accepted" << endl;
-                continue;
-            }
-        }
-        
-        string juryText, submitText;
-        for (int i = 0; i < jury.size(); i++)
-            juryText += jury[i];
-            
-        for (int i = 0; i < submit.size(); i++)
-            submitText += submit[i] + ']';
-            
-        for (int i = 0; i < juryText.length(); i++)
-            if (isalpha(juryText[i]))
-                juryText[i] = toupper(juryText[i]);
-                    
-        for (int i = 0; i < submitText.length(); i++)
-            if (isalpha(submitText[i]))
-                submitText[i] = toupper(submitText[i]);
-                
-        vector <string> essentials;
-        int indexer = 0;
-        while (indexer < juryText.length())
-        {
-            if (juryText[indexer] == '[')
-            {
-                indexer++;
-                string block;
-                while (juryText[indexer] != ']')
-                {
-                    block += juryText[indexer];
-                    indexer++;
-                }
-                essentials.push_back(block);
-            }
-            
-            indexer++;
-        }
-        
-        int start = 0, key = 0;
-        while (start < submitText.length() && key < essentials.size())
-        { 
-            start = submitText.find(essentials[key], start);
-            if (start == submitText.npos)
-                break;
-            start += essentials[key].length();
-            key++;
-        }
-        
-        if (key < essentials.size())
-            cout << "Wrong Answer" << endl;
-        else
-            cout << "Presentation Error" << endl;
+        toUpper(submit);
+
+        if (dfs(0, 0)) cout << "Presentation Error\n";
+        else cout << "Wrong Answer\n";
     }
     
 	return 0;

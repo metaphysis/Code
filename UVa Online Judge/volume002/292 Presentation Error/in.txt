@@ -7,9 +7,9 @@ Just one line?
 The first characters of the alphabet are:
 [abcde]
 Here they come:
-[a b c d e]
+a b c d e
 1 1
-That's it: [abcde]
+That's it: [ abcde]
 That's it: AbCdE
 1 1
 [2] and [3] make [5]
@@ -34,13 +34,18 @@ The first character [abc]
 ahbegoluhcccc
 1 1
 susumu ueda [2] [a] [b] [c] [a] [b]
-32 aihbihcihaihbihcih
-1 2
-[abcde]
-abc
-de
-1 3
-[aa][b]
-aa
-b
+32 aihbiachcihaihbihcih
+1 5
+[abcde] [de]
+abcde
 
+[de]
+
+
+4 2
+aas
+
+ee
+
+aassssss
+ee
