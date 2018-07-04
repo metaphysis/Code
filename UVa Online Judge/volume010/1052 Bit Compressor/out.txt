@@ -1,16 +1,15 @@
-Case #1: YES
-Case #2: NO
+Case #1: NO
+Case #2: YES
 Case #3: YES
 Case #4: YES
-Case #5: YES
-Case #6: NO
-Case #7: NOT UNIQUE
-Case #8: NO
+Case #5: NO
+Case #6: NOT UNIQUE
+Case #7: NO
+Case #8: YES
 Case #9: YES
-Case #10: YES
-Case #11: NO
-Case #12: YES
-Case #13: NO
-Case #14: YES
-Case #15: NO
-Case #16: YES
+Case #10: NO
+Case #11: YES
+Case #12: NO
+Case #13: YES
+Case #14: NO
+Case #15: YES

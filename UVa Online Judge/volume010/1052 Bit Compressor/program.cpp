@@ -1,8 +1,8 @@
 // Bit Compressor
 // UVa ID: 1052
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2018-07-04
+// UVa Run Time: 0.010s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
@@ -17,30 +17,33 @@ void dfs(int idx, int cLength, int cOnes)
 {
     if (matched > 1) return;
     if (cLength + (S.length() - idx) > L || cOnes + onesAt[idx] > N) return;
-    if (cLength + (S.length() - idx) == L && cOnes + onesAt[idx] == N) { matched++; return; }
+    if (idx == S.length() && cLength == L && cOnes == N) { matched++; return; }
     if (idx >= S.length()) return;
-    
+
     while (idx < S.length() && S[idx] == '0') idx++, cLength++;
 
-    int nextIdx = idx, nextLength = cLength, nextOnes = cOnes;
-    while (nextIdx < S.length() && S[nextIdx] == '1')
-        nextIdx++, nextLength++, nextOnes++;
-    dfs(nextIdx, nextLength, nextOnes);
-    
-    int bits = 0;
-    while (idx < S.length())
+    if (idx < S.length())
     {
-        bits = (bits << 1) | (S[idx] - '0');
-        if (bits > 2)
+        int bits = 0;
+        while (idx < S.length())
         {
-            if (cLength + bits > L) break;
-            if ((idx + 1 < S.length() && S[idx + 1] == '0') || (idx + 1) == S.length())
+            bits = (bits << 1) | (S[idx] - '0');
+            if (bits != 2)
             {
-                dfs(idx + 1, cLength + bits, cOnes + bits);
+                if (bits == 3)
+                {
+                    if ((idx + 1 < S.length() && S[idx + 1] == '0') || (idx + 1) == S.length())
+                        dfs(idx + 1, cLength + 2, cOnes + 2);
+                }
+                if (cLength + bits > L) break;
+                if ((idx + 1 < S.length() && S[idx + 1] == '0') || (idx + 1) == S.length())
+                    dfs(idx + 1, cLength + bits, cOnes + bits);
             }
+            idx++;
         }
-        idx++; 
-    } 
+    }
+    else
+        dfs(idx, cLength, cOnes);
 }
 
 int main(int argc, char *argv[])
@@ -58,7 +61,7 @@ int main(int argc, char *argv[])
         for (int i = 0; i < S.length(); i++)
             if (S[i] == '1') onesAt[i] = ones--;
             else onesAt[i] = ones;
-        
+
         matched = 0;
         dfs(0, 0, 0);
 
