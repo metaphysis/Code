@@ -1,41 +1,36 @@
 // Arrange the Tiles
 // UVa ID: 11471
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2018-07-08
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
+//
+// https://github.com/arash16/prays/blob/master/UVA/vol-114/11471.cpp
 
 #include <bits/stdc++.h>
 
 using namespace std;
 
-const int ALL = 479001600, FACT10 = 3628800;
+int typesOfTiles, cntOfTiles[12], grid[4][3];
+string tiles[12];
 
-int fragile = 0, used[12], selected[2];
-char tiles[12][4];
-
-void addFragile()
+int dfs(int i, int j)
 {
-    if (tiles[selected[0]][1] != tiles[selected[1]][3]) fragile += 8 * FACT10;
-    if (tiles[selected[0]][2] != tiles[selected[1]][0]) fragile += 9 * FACT10;
-    
-}
+    if (j == 3) i += 1, j = 0;
+    if (i == 4) return 1;
 
-void dfs(int depth)
-{
-    if (depth == 2)
+    int cnt = 0;
+    for (int type = 0; type < typesOfTiles; type++)
     {
-        addFragile();
-        return;
+        if (cntOfTiles[type] <= 0) continue;
+        if (i && tiles[grid[i - 1][j]][2] != tiles[type][0]) continue;
+        if (j && tiles[grid[i][j - 1]][1] != tiles[type][3]) continue;
+        grid[i][j] = type;
+        cnt += (cntOfTiles[type]--) * dfs(i, j + 1);
+        cntOfTiles[type]++;
     }
-    for (int i = 0; i < 12; i++)
-    {
-        if (used[i]) continue;
-        used[i] = 1, selected[depth] = i;
-        dfs(depth + 1);
-        used[i] = 0, selected[depth] = -1;
-    }
+    return cnt;
 }
 
 int main(int argc, char *argv[])
@@ -46,15 +41,21 @@ int main(int argc, char *argv[])
     cin >> cases;
     for (int cs = 1; cs <= cases; cs++)
     {
-        char color;
-        for (int i = 0; i < 12; i++)
-            for (int j = 0; j < 4; j++)
-                cin >> tiles[i][j];
+        for (int i = 0; i < 12; i++) cin >> tiles[i];
 
-        memset(used, 0, sizeof(used));
-        fragile = 0;
-        dfs(0);
-        cout << "Case " << cs << ": " << (ALL - fragile) << '\n';
+        sort(tiles, tiles + 12);
+
+        cntOfTiles[0] = 1, typesOfTiles = 1;
+        for (int i = 1; i < 12; i++)
+            if (tiles[i] == tiles[typesOfTiles - 1])
+                cntOfTiles[typesOfTiles - 1]++;
+            else
+            {
+                tiles[typesOfTiles] = tiles[i];
+                cntOfTiles[typesOfTiles++] = 1;
+            }
+
+        cout << "Case " << cs << ": " << dfs(0, 0) << '\n';
     }
 
     return 0;
