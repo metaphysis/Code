@@ -118,7 +118,7 @@ public:
 };
 
 // 城市之间的火车路线。
-vector < route > edges[MAXN + 1];
+vector<route> edges[MAXN + 1];
 
 // 使用优先队列的方法来遍历所有从起始城市 from 到 终点城市 to 的路线。在此过程中，
 // 先处理使用血量少的路线，当发现当前路线的状态 state 所标志的城市 city 已经为目标

@@ -166,8 +166,7 @@ void search(int tdeparture, int from, int to, string cstart, string cdestination
 				int next = edges[j][k].to;
 
 				// 更新到达时间为 arrival，到达城市为 next 时的最晚出发时间。
-				cache[arrival][next] =
-					max(cache[arrival][next], cache[i][j]);
+				cache[arrival][next] = max(cache[arrival][next], cache[i][j]);
 			}
 		}
 
@@ -230,8 +229,7 @@ int main(int ac, char *av[])
 		// 读入出发时间，出发城市和终点城市。
 		cin >> tdeparture >> cstart >> cdestination;
 		// 使用动态规划找到从出发城市到终点城市最晚出发最早到达时间。
-		search(tdeparture, cities[cstart], cities[cdestination],
-							cstart, cdestination);
+		search(tdeparture, cities[cstart], cities[cdestination], cstart, cdestination);
 		cout << endl;
 	}
 

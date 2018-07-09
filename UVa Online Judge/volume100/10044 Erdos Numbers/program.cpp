@@ -16,15 +16,15 @@ struct erdos_number
 	int number;	// 作者的 Erdos 数。
 };
 	
-vector < erdos_number > erdos;	// 记录结果集的一个类型为 erdos_number 的动态数组。
-vector < string > author;	// 记录一篇论文中出现的作者姓名。
-map < string, int > exist;	// 查询指定作者是否在结果集中的字典，用于提高程序性能。
-vector < bool > processed;
+vector<erdos_number> erdos;	// 记录结果集的一个类型为 erdos_number 的动态数组。
+vector<string> author;	// 记录一篇论文中出现的作者姓名。
+map<string, int> exist;	// 查询指定作者是否在结果集中的字典，用于提高程序性能。
+vector<bool> processed;
 	
 // 从字典中找到姓名为 name 的作者的序号。如果找不到，则返回-1。
 int find_index(string &name)
 {
-	map < string, int >::iterator it = exist.find(name);
+	map<string, int>::iterator it = exist.find(name);
 	if (it != exist.end())
 		return (*it).second;
 	return -1;
@@ -35,7 +35,7 @@ int find_index(string &name)
 // 根据该格式截取。
 vector < string > extract_name(string &line)
 {
-	vector < string > list;
+	vector<string> list;
 	string::size_type begin(0);
 	string::size_type end = line.find(".,", begin);
 	
@@ -58,7 +58,7 @@ vector < string > extract_name(string &line)
 void set_erdos_number(string &author, int number)
 {
 	// 从论文的作者部分提取出每个作者的姓名。
-	vector <string> list = extract_name(author);
+	vector<string> list = extract_name(author);
 	
 	// 逐个将尚未添加到结果集中的作者添加到结果集中。
 	// 在结果集中已存在的作者不需添加，因为是在之前的
