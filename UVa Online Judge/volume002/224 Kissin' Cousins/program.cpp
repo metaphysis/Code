@@ -16,10 +16,10 @@ struct relation
     int k;
 };
 
-map <string, vector<relation>> child;
-map <string, vector<relation>> parent;
+map<string, vector<relation>> child;
+map<string, vector<relation>> parent;
 
-void bfs(string start, map <string, int>& distances, map<string, vector<relation>>& edges)
+void bfs(string start, map<string, int>& distances, map<string, vector<relation>>& edges)
 {
     set<string> visited;
     queue<string> unvisited;
@@ -46,7 +46,7 @@ void bfs(string start, map <string, int>& distances, map<string, vector<relation
 
 bool is_descendant(string firstname, string secondname)
 {
-    map <string, int> first_distances, second_distances;
+    map<string, int> first_distances, second_distances;
 
     bfs(firstname, first_distances, child);
     bfs(secondname, second_distances, child);
@@ -80,7 +80,7 @@ bool is_descendant(string firstname, string secondname)
 
 bool is_cousin(string firstname, string secondname)
 {
-    map <string, int> first_distances, second_distances;
+    map<string, int> first_distances, second_distances;
 
     bfs(firstname, first_distances, parent);
     bfs(secondname, second_distances, parent);

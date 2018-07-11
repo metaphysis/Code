@@ -1,8 +1,8 @@
 // Seven Seas
 // UVa ID: 10923
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2018-07-11
+// UVa Run Time: 0.020s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
@@ -10,102 +10,62 @@
 
 using namespace std;
 
-struct package
-{
-    int grid[9][8], si, sj, enemies, moves;
-};
-
 int offset[8][2] = {{-1, -1}, {-1, 0}, {-1, 1}, {0, -1}, {0, 1}, {1, -1}, {1, 0}, {1, 1}};
-    
-bool getNextState(package pack, package &next, int nexti, int nextj)
-{
-    next.si = nexti, next.sj = nextj, next.enemies = pack.enemies, next.moves = pack.moves + 1;
-    memset(next.grid, 0, sizeof(next.grid));
-    for (int i = 0; i < 9; i++)
-        for (int j = 0; j < 8; j++)
-        {
-            if (pack.grid[i][j] != 1) continue;
-            int besti = -1, bestj = -1, bestDist = INT_MAX, currentDist;
-            for (int k = 0; k < 8; k++)
-            {
-                int ii = i + offset[k][0], jj = j + offset[k][1];
-                if (ii < 0 || ii >= 9 || jj < 0 || jj >= 8) continue;
-                if ((currentDist = (ii - nexti) * (ii - nexti) + (jj - nextj) * (jj - nextj)) < bestDist)
-                {
-                    bestDist = currentDist;
-                    besti = ii, bestj = jj;
-                }
-            }
-            if (besti == nexti && bestj == nextj) return false;
-            next.grid[besti][bestj]++;
-        }
-    for (int i = 0; i < 9; i++)
-        for (int j = 0; j < 8; j++)
-        {
-            if (next.grid[i][j] == 1)
-            {
-                if (pack.grid[i][j] == 2)
-                {
-                    next.enemies -= next.grid[i][j];
-                    next.grid[i][j] = 2;
-                }
-            }
-            if (next.grid[i][j] >= 2)
-            {
-                next.enemies -= next.grid[i][j];
-                next.grid[i][j] = 2;
-            }
-        }
 
-    return true;
+bool dfs(int depth, bitset<72> enemies, bitset<72> rocks, int si, int sj)
+{
+    if (depth > 9) return false;
+    if (enemies.count() == 0) return true;
+    for (int k = 0; k < 8; k++)
+    {
+        int nexti = si + offset[k][0], nextj = sj + offset[k][1];
+        if (nexti < 0 || nexti >= 9 || nextj < 0 || nextj >= 8) continue;
+        if (enemies.test(nexti * 8 + nextj) || rocks.test(nexti * 8 + nextj)) continue;
+        bitset<72> nexte, nextr(rocks);
+        bool destroyed = false;
+        for (int p = 0; p < 72; p++)
+        {
+            if (!enemies.test(p)) continue;
+            int pi = p / 8, pj = p % 8;
+            if (pi < nexti) pi += 1;
+            else if (pi > nexti) pi -= 1;
+            if (pj < nextj) pj += 1;
+            else if (pj > nextj) pj -= 1;
+            if (pi == nexti && pj == nextj) { destroyed = true; break; }
+            if (nextr.test(pi * 8 + pj)) continue;
+            if (nexte.test(pi * 8 + pj))
+            {
+                nexte.set(pi * 8 + pj, 0);
+                nextr.set(pi * 8 + pj);
+            }
+            else nexte.set(pi * 8 + pj);
+        }
+        if (destroyed) continue;
+        if (dfs(depth + 1, nexte, nextr, nexti, nextj)) return true;
+    }
+    
+    return false;
 }
 
 int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    int cases;
-
+    int cases, si, sj;
     cin >> cases;
     for (int cs = 1; cs <= cases; cs++)
     {
-        package pack;
-        pack.moves = pack.enemies = 0;
-        memset(pack.grid, 0, sizeof(pack.grid));
+        bitset<72> enemies, rocks;
         char c;
         for (int i = 0; i < 9; i++)
             for (int j = 0; j < 8; j++)
             {
                 cin >> c;
-                if (c == 'E') pack.grid[i][j] = 1, pack.enemies++;
-                else if (c == '#') pack.grid[i][j] = 2;
-                else if (c == 'S') pack.si = i, pack.sj = j;
+                if (c == 'E') enemies.set(i * 8 + j);
+                else if (c == '#') rocks.set(i * 8 + j);
+                else if (c == 'S') si = i, sj = j;
             }
-
-        queue<package> q;
-        q.push(pack);
-        bool flag = false;
-        while (!q.empty())
-        {
-            pack = q.front(); q.pop();
-            if (!pack.enemies)
-            {
-                flag = true;
-                break;
-            }
-            if (pack.moves >= 9) continue;
-            for (int k = 0; k < 8; k++)
-            {
-                int nexti = pack.si + offset[k][0], nextj = pack.sj + offset[k][1];
-                if (nexti < 0 || nexti >= 9 || nextj < 0 || nextj >= 8) continue;
-                if (pack.grid[nexti][nextj]) continue;
-                package next;
-                if (!getNextState(pack, next, nexti, nextj)) continue;
-                q.push(next);
-            }
-        }
-
-        if (flag) cout << "I'm the king of the Seven Seas!\n";
+        if (dfs(0, enemies, rocks, si, sj)) cout << "I'm the king of the Seven Seas!\n";
         else cout << "Oh no! I'm a dead man!\n";
     }
 
