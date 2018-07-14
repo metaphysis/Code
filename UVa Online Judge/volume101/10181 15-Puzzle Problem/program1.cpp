@@ -214,6 +214,7 @@ bool IDAStar(unsigned long long board, int blanki, int blankj)
         while (!open.empty())
         {
             current = open.top(), open.pop();
+            // 空滑块移动方向遍历顺序的不同会导致解有差异。
             for (int dir = 0; dir < SQUARES; dir++)
             {
                 if (current.depth && ((dir + 2) % 4) == GET(current.hmove, current.lmove, (current.depth - 1))) continue;
