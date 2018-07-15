@@ -46,7 +46,7 @@ bool solvable(vector<int> tiles)
 }
 
 // 后续移动。
-int moves[SQUARES];
+int moves[4];
 
 // 得到当前局面的后继走法。
 inline void getMoves(state &current)
@@ -174,7 +174,7 @@ bool bfs(vector<int> tiles, int dir[])
         closed.insert(getKey(current.board));
 
         getMoves(current);
-        for (int i = 0; i < SQUARES; i++)
+        for (int i = 0; i < 4; i++)
         {
             if (moves[i] == MOVE_NONE) continue;
             state successor = execute(current, moves[i]);
@@ -306,7 +306,7 @@ bool IDAStar(vector<int> tiles, int dir[])
 
 void solvePuzzle(vector<int> tiles)
 {
-    int moves[STEPS_BOUND];
+    int dir[STEPS_BOUND] = {};
 
     // 深度优先搜索。
     // dfs(tiles, moves);
@@ -323,8 +323,8 @@ void solvePuzzle(vector<int> tiles)
     // 输出走法步骤。
     for (int i = 0; i < STEPS_BOUND; i++)
     {
-        if (moves[i] == MOVE_NONE) break;
-        switch (moves[i])
+        if (dir[i] == MOVE_NONE) break;
+        switch (dir[i])
         {
             case MOVE_LEFT:  cout << "L"; break;
             case MOVE_RIGHT: cout << "R"; break;
