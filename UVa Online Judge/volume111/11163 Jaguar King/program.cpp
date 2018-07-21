@@ -18,7 +18,7 @@ int offset[4][4] = {
 };
 
 int tiger[50], jumps[45][45] = {}, n;
-int best, maxDepth, minDepth;
+int sorted, maxDepth;
 
 int getTotalScore()
 {
@@ -28,53 +28,57 @@ int getTotalScore()
     return fn;
 }
 
+bool cmp(pair<int, int> &a, pair<int, int> &b)
+{
+    return a.second < b.second;
+}
+
 void dfs(int hn, int gn, int preKing, int nowKing)
 {
+    if (hn + gn > maxDepth) return;
     if (hn == 0)
     {
-        best = min(best, gn);
+        sorted = 1;
+        maxDepth = gn;
         return;
     }
-    if (hn + gn >= best) return;
-
-    int nextHn, nextKing, mod = (nowKing + 1) % 4;
+    int mod = (nowKing + 1) % 4, cnt = 0;
+    pair<int, int> saved[4];
     for (int k = 0; k < 4; k++)
     {
-        nextKing = nowKing + offset[mod][k];
+        int nextKing = nowKing + offset[mod][k];
         if (nextKing < 0 || nextKing >= n || nextKing == preKing) continue;
-        nextHn = hn - (jumps[tiger[nowKing]][nowKing] + jumps[tiger[nextKing]][nextKing]);
-        //cout << "Before Exchanged nextHn = " << nextHn << '\n';
-        // Jump
-        swap(tiger[nowKing], tiger[nextKing]);
-        nextHn += (jumps[tiger[nowKing]][nowKing] + jumps[tiger[nextKing]][nextKing]);
-        //print();
-        //cout << "After Changed nextHn = " << nextHn << '\n';
-        if (nextHn + gn < min(best, maxDepth))
-            dfs(nextHn, gn + 1, nowKing, nextKing);
-        else
-            minDepth = min(minDepth, nextHn + gn);
-        // Restore
-        swap(tiger[nowKing], tiger[nextKing]);
+        int nextHn = hn;
+        nextHn -= (jumps[tiger[nowKing]][nowKing] + jumps[tiger[nextKing]][nextKing]);
+        nextHn += (jumps[tiger[nextKing]][nowKing] + jumps[tiger[nowKing]][nextKing]);
+        saved[cnt++] = make_pair(nextKing, nextHn);
+    }
+    sort(saved, saved + cnt, cmp);
+    for (int k = 0; k < cnt; k++)
+    {
+        swap(tiger[nowKing], tiger[saved[k].first]);
+        dfs(saved[k].second, gn + 1, nowKing, saved[k].first);
+        if (sorted) return;
+        swap(tiger[nowKing], tiger[saved[k].first]);
     }
 }
 
 void idaStar(int king)
 {
     maxDepth = 0;
-    minDepth = getTotalScore();
-
     while (true)
     {
-        maxDepth = maxDepth < minDepth ? minDepth : maxDepth + 1;
-        minDepth = INT_MAX;
-
-        best = 0x3f3f3f3f;
-
+        maxDepth++;
+        sorted = 0;
         dfs(getTotalScore(), 0, -10, king);
-
-        if (best != 0x3f3f3f3f)
+        if (maxDepth >= 35)
         {
-            cout << best << '\n';
+            sorted = 1;
+            maxDepth = -1;
+        }
+        if (sorted)
+        {
+            cout << maxDepth << '\n';
             break;
         }
     }
