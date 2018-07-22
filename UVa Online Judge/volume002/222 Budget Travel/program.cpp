@@ -28,7 +28,7 @@ double totalDistance, capacityOfTank, costAtStart;
 double milesPerGallon, milesFromOrigin, pricePerGallon;
 int counter, minimumCost;
 
-vector < station > stations;
+vector<station> stations;
 
 void dfs(driver aDriver)
 {
