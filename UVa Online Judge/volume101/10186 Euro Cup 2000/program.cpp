@@ -1,8 +1,8 @@
 // Euro Cup 2000
 // UVa ID: 10186
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2018-07-23
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
@@ -42,24 +42,29 @@ void dfs(int depth)
             points.push_back(make_pair(i, temp[i]));
         sort(points.begin(), points.end(), cmp);
 
-        int pos = 1;
-        tempRank[points[0].first] = pos;
-        for (int i = 1; i < n; i++)
-        {
-            if (points[i].second != points[i - 1].second) pos++;
-            tempRank[points[i].first] = pos;
-        }
         for (int i = 0; i < n; i++)
         {
-            ranks[i][0] = min(ranks[i][0], tempRank[i]);
-            ranks[i][1] = max(ranks[i][1], tempRank[i]);
+            for (int k = i; k >= 0; k--)
+            {
+                if (points[k].second != points[i].second)
+                    break;
+                ranks[points[i].first][0] = min(ranks[points[i].first][0], k + 1);
+            }
+            for (int k = i; k < n; k++)
+            {
+                if (points[k].second != points[i].second)
+                    break;
+                ranks[points[i].first][1] = max(ranks[points[i].first][1], k + 1);
+            }
         }
-        return;
     }
-    for (int i = 0; i <= 2; i++)
+    else
     {
-        win[depth] = i;
-        dfs(depth + 1);
+        for (int i = 0; i <= 2; i++)
+        {
+            win[depth] = i;
+            dfs(depth + 1);
+        }
     }
 }
 
@@ -97,12 +102,15 @@ int main(int argc, char *argv[])
             }
             played[indexer[team1]][indexer[team2]] = 1;
         }
-        
+
         unplayed.clear();
         for (int i = 0; i < n; i++)
             for (int j = 0; j < n; j++)
+            {
+                if (i == j) continue;
                 if (!played[i][j])
                     unplayed.push_back(make_pair(i, j));
+            }
 
         for (int i = 0; i < n; i++)
         {
