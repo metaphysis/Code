@@ -1,0 +1,11 @@
+Group #1
+A 1-2
+B 1-2
+
+Group #2
+Ger 1-3
+Tur 1-3
+Fin 1-4
+Nor 1-5
+Mol 2-5
+

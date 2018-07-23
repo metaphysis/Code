@@ -1,0 +1,27 @@
+2
+A
+B
+1
+A B 1 0
+5
+Ger
+Tur
+Fin
+Nor
+Mol
+14
+Fin Mol 3 2
+Tur Nor 3 0
+Tur Ger 1 0
+Nor Fin 1 0
+Mol Ger 1 3
+Tur Fin 1 3
+Nor Mol 2 2
+Nor Ger 0 3
+Tur Mol 2 0
+Ger Fin 2 0
+Mol Fin 0 0
+Ger Mol 6 1
+Fin Tur 2 4
+Mol Nor 0 0
+0
