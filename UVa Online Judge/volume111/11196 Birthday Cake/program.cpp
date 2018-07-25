@@ -12,25 +12,27 @@ using namespace std;
 
 int n, m, best;
 
-void dfs(int depth, int volume, int surface, int r, int h, int lastr)
+void dfs(int depth, int volume, int surface, int r, int h)
 {
-    if (volume > n) return;
+    if (volume > n || surface >= best) return;
     if (depth == m)
     {
-        if (volume == n) best = min(best, surface - lastr * lastr);
+        if (volume == n) best = min(best, surface);
         return;
     }
-    for (int ri = r; ; ri++)
+    int maxr = sqrt(1.0 * (n - volume) / (m - depth));
+    for (int ri = min(maxr, r); ri >= (m - depth); ri--)
     {
-        for (int hi = h; ; hi++)
+        if (volume + ri * ri * (m - depth) > n) break;
+        int maxh = floor(1.0 * (n - volume) / ri / ri);
+        for (int hi = min(maxh, h); hi >= (m - depth); hi--)
         {
-            int v = ri * ri * hi;
-            if (volume + (m - depth) * v > n) break;
-            int s = 2 * ri * ri + 2 * ri * hi;
-            if (depth) s -= 2 * lastr * lastr;
-            dfs(depth + 1, volume + v, surface + s, ri + 1, hi + 1, ri);
+            if (volume + (m - depth) * (m - depth) * hi > n) break;
+            int volumeDiff = ri * ri * hi;
+            int areaDiff = 2 * ri * hi;
+            if (!depth) areaDiff += ri * ri;
+            dfs(depth + 1, volume + volumeDiff, surface + areaDiff, ri - 1, hi - 1);
         }
-        if (volume + (m - depth) * ri * ri * h > n) break;
     }
 }
 
@@ -43,8 +45,9 @@ int main(int argc, char *argv[])
     {
         if (n == 0) break;
         cin >> m;
+
         best = 0x3f3f3f3f;
-        dfs(0, 0, 0, 1, 1, 0);
+        dfs(0, 0, 0, 320, 100000);
         if (best == 0x3f3f3f3f) best = 0;
         cout << "Case " << ++cases << ": " << best << '\n';
     }
