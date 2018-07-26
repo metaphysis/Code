@@ -70,9 +70,9 @@ using namespace std;
 
 #define MAXSIZE 1000000
 	
-int cache[MAXSIZE];
+int cache[MAXSIZE] = {};
 
-int cycle1(int n)
+int getCycle1(int n)
 {
     long long int nn = n;
     int length = 1;
@@ -85,7 +85,7 @@ int cycle1(int n)
 }
 
 // 计算循环节长度。
-int cycle(long long number)
+int getCycle(long long number)
 {
 	if (number == 1) return 1;
 	
@@ -96,11 +96,11 @@ int cycle(long long number)
 	// 若 number 在缓存范围内则根据情况取用。
 	if (number < MAXSIZE )
 	{
-		if (!cache[number]) cache[number] = cycle(number);
+		if (!cache[number]) cache[number] = getCycle(number);
 		return 1 + cache[number];
 	}
 	
-	return 1 + cycle(number);
+	return 1 + getCycle(number);
 }
 	
 int main(int ac, char *av[])
@@ -123,7 +123,7 @@ int main(int ac, char *av[])
 		// 查找最大步长值。
 		int result = 0, steps;
 		for (int i = start; i <= end; i++)
-			if ((steps = cycle(i)) > result)
+			if ((steps = getCycle(i)) > result)
 				result = steps;
 
 		// 输出。

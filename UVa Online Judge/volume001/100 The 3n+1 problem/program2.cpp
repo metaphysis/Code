@@ -6,16 +6,16 @@ const int MAX_SIZE = 1000000;
 
 int cache[MAX_SIZE];
 
-int cycle(long long int n)
+int getCycle(long long int n)
 {
     if (n == 1) return 1;
     n = (n & 1) ? (n + (n << 1) + 1) : (n >> 1);
     if (n < MAX_SIZE)
     {
-        if (!cache[n]) cache[n] = cycle(n);
+        if (!cache[n]) cache[n] = getCycle(n);
         return (1 + cache[n]);
     }
-    return (1 + cycle(n));
+    return (1 + getCycle(n));
 }
 
 string space(int number)
@@ -32,7 +32,7 @@ int main(int ac, char *av[])
     cout << space(4) << "int cln[1000000] = {0\n";
     for (int i = 1; i < 1000000; i++)
     {
-        cout << "," << cycle(i);
+        cout << "," << getCycle(i);
         if (i % 1000 == 0)
         {
             cout << "\n";

@@ -15,7 +15,7 @@ using namespace std;
 int cache[MAXSIZE];
 
 // 计算循环节长度。
-int counter(long long number)
+int getCycle(long long number)
 {
 	if (number == 1)
 		return 1;
@@ -30,11 +30,11 @@ int counter(long long number)
 	if (number < MAXSIZE )
 	{
 		if (!cache[number])
-			cache[number] = counter(number);
+			cache[number] = getCycle(number);
 		return 1 + cache[number];
 	}
 	
-	return 1 + counter(number);
+	return 1 + getCycle(number);
 }
 	
 int main(int ac, char *av[])
@@ -56,7 +56,7 @@ int main(int ac, char *av[])
 		// 查找最大步长值。
 		int result = 0, steps;
 		for (int i = start; i <= end; i++)
-			if ((steps = counter(i)) > result)
+			if ((steps = getCycle(i)) > result)
 				result = steps;
 
 		// 输出。
