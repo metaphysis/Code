@@ -1,8 +1,8 @@
 // Sum-up the Primes
 // UVa ID: 10419
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2018-07-26
+// UVa Run Time: 3.410s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
@@ -10,39 +10,23 @@
 
 using namespace std;
 
-int flag[1001][15] = {};
-int primes[301] = {}, sorted[301], cnt = 0;
+int primes[301] = {}, cnt = 0;
 int n, t;
-int used[64], cache[16];
-bool printed = false;
+int marked[128][1001][15], cache[16];
 
-void dfs(int depth, int sum)
+bool dfs(int idx, int sum, int used)
 {
-    if (printed) return;
-    if (sum > n) return;
-    if (depth == t)
+    if (marked[idx][sum][used]) return false;
+    if (sum > n || idx == cnt) return false;
+    if (used == t)
     {
-        if (sum == n)
-        {
-            for (int i = 0; i < t; i++)
-            {
-                if (i) cout << '+';
-                cout << cache[i];
-            }
-            cout << '\n';
-            printed = true;
-        }
-        return;
+        if (sum == n) return true;
+        return false;
     }
-    for (int i = 0; i < cnt; i++)
-    {
-        if (sorted[i] == 2 && used[i] >= 1) continue;
-        if (used[i] >= 2) continue;
-        if (sum + (t - depth) * 2 > n) break;
-        used[i]++, cache[depth] = sorted[i];
-        dfs(depth + 1, sum + sorted[i]);
-        used[i]--;
-    }
+    cache[used] = primes[idx];
+    if (dfs(idx + 1, sum + primes[idx], used + 1)) return true;
+    if (dfs(idx + 1, sum, used)) return true;
+    return !(marked[idx][sum][used] = 1);
 }
 
 bool cmp(int a, int b)
@@ -52,66 +36,46 @@ bool cmp(int a, int b)
 
 int main(int argc, char *argv[])
 {
-    //cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
+    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
     for (int i = 2; i <= 300; i++)
         if (!primes[i])
         {
-            primes[cnt++] = i;
             for (int j = i + i; j <= 300; j += i)
                 primes[j] = 1;
         }
 
-    copy(primes, primes + cnt, sorted);
-    sort(sorted, sorted + cnt, cmp);
-
-    int yes = 0;
-    for (int i = 1; i <= 1000; i++)
-        for (int j = 1; j <= 14; j++)
+    primes[cnt++] = 2;
+    for (int i = 3; i <= 300; i++)
+        if (!primes[i])
         {
-            cout << i << ' ' << j << endl;
-            if (i == 4) continue;
-            if (j == 1)
-            {
-                flag[i][j] = binary_search(primes, primes + cnt, i);
-            }
-            else if (j == 2)
-            {
-                for (int k = 0; k < cnt; k++)
-                {
-                    if (binary_search(primes, primes + cnt, i - sorted[k]))
-                    {
-                        flag[i][j] = 1;
-                        break;
-                    }
-                }
-            }
-            else
-            {
-                n = i, t = j;
-                printed = false;
-                memset(used, 0, sizeof(used));
-                dfs(0, 0);
-                flag[i][j] = printed;
-            }
-            yes += flag[i][j];
+            primes[cnt++] = i;
+            primes[cnt++] = i;
         }
-    cout << "yes = " << yes << '\n';
 
-    return 0;
+    sort(primes, primes + cnt, cmp);
 
     int cases = 0;
     while (cin >> n >> t)
     {
         if (n == 0) break;
         cout << "CASE " << ++cases << ":\n";
-        if (!flag[n][t]) cout << "No Solution.\n";
-        else
+
+        for (int i = 0; i < cnt; i++)
+            for (int j = 0; j <= n; j++)
+                for (int k = 0; k <= t; k++)
+                    marked[i][j][k] = 0;
+
+        if (dfs(0, 0, 0))
         {
-            printed = false;
-            memset(used, 0, sizeof(used));
-            dfs(0, 0);
+            for (int i = 0; i < t; i++)
+            {
+                if (i) cout << '+';
+                cout << cache[i];
+            }
+            cout << '\n';
         }
+        else cout << "No Solution.\n";
     }
 
     return 0;
