@@ -1,4 +1,4 @@
-// Simple division
+// Simple Division
 // UVa ID: 10407
 // Verdict: Accepted
 // Submission Date: 2017-03-17
