@@ -2,16 +2,16 @@
 
 using namespace std;
 
-int n, cnt, ONES;
+int n, cnt, N_ONES;
 
 void dfs(int L, int M, int R)
 {
-    int empty, cln;
-    if (M != ONES) {
-        empty = ONES & (~(L | M | R));
-        while (empty) {
-            cln = empty & (~empty + 1);
-            empty ^= cln;
+    int available, cln;
+    if (M != N_ONES) {
+        available = N_ONES & (~(L | M | R));
+        while (available) {
+            cln = available & (~available + 1);
+            available ^= cln;
             dfs((L | cln) << 1, M | cln, (R | cln) >> 1);
         }
     }
@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
     while (cin >> n)
     {
         cnt = 0;
-        ONES = (1 << n) - 1;
+        N_ONES = (1 << n) - 1;
         dfs(0, 0, 0);
         cout << "N = " << n << ": " << cnt << '\n';
     }
