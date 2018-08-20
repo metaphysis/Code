@@ -1,8 +1,8 @@
 // Lex Smallest Drive
 // UVa ID: 10802
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2018-08-21
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
@@ -10,36 +10,21 @@
 
 using namespace std;
 
-int n, m, s, successed, failed, depth;
-int g[110][110], walk[256];
+int n, m, s;
+int g[110][110], walk[256], sink, moves;
 
-void dfs(int previous, int u, int sink)
-{
-    if (failed || successed) return;
-    if (depth > 150)
-    {
-        failed = 1;
-        return;
-    }
-    if (u == sink)
-    {
-        for (int i = 0; i <= depth; i++)
-        {
-            if (i) cout << ' ';
-            cout << walk[i];
-        }
-        cout << '\n';
-        successed = 1;
-        return;
-    }
-    for (int v = 0; v < n; v++)
-    {
-        if (!g[u][v]) continue;
-        if (v == previous) continue;
-        walk[++depth] = v;
-        dfs(u, v, sink);
-        depth--;
-    }
+bool dfs(int previous, int u){
+	if (u == sink)	return true;
+	if (moves >= 200)	return false;
+	for (int v = 0; v < n; v++)
+	{
+		if (v == previous || !g[u][v])	continue;
+		walk[moves++] = v;
+		if (dfs(u, v)) return true;
+		if (moves >= 200) return false;
+		moves--;
+	}
+	return false;
 }
 
 int main(int argc, char *argv[])
@@ -61,11 +46,17 @@ int main(int argc, char *argv[])
         cout << "Case #" << cs << ":\n";
         for (int i = 0; i < n; i++)
         {
-            successed = failed = depth = 0;
-            walk[0] = s;
-            dfs(-1, s, i);
-            if (failed)
-                cout << "No drive.\n";
+			moves = 0;
+			walk[moves++] = s;
+			sink = i;
+			if (dfs(-1, s)){
+				cout << s;
+				for (int j = 1; j < moves; j++)
+					cout << ' ' << walk[j];
+				cout << '\n';
+			}
+			else
+				cout << "No drive.\n";
         }
         cout << '\n';
     }
