@@ -10,105 +10,168 @@
 
 using namespace std;
 
-int n, used[16], oops, cntOfAppeared;
-string exps[24];
-char cache[16], mapping[16];
-char letter[13] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '+', '*', '='};
+const int debug1 = 0, debug2 = 0, debug3 = 1;
 
-bool cmp(string &a, string b)
+int n, used[16], oops, cnt;
+string exps[24], clean[24];
+char cache[16], mapping[16];
+char letter[12] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '+', '*'};
+
+bool cmp1(string &a, string b)
 {
     if (a.length() != b.length()) return a.length() < b.length();
     return a < b;
 }
 
-int evaluate(string &s)
+bool cmp2(string &a, string b)
 {
-    vector<int> r;
-    int number = 0;
-    for (int i = 0; i < s.length(); i++)
+    if (a.length() != b.length()) return a.length() > b.length();
+    return a < b;
+}
+
+int maxNumber[24], leftPart[24], rightPart[24];
+int nopd1, nopd2, nopd3;
+char nopr1, nopr2;
+
+int evaluate(int opd1, int opd2, char opr1)
+{
+    if (opr1 == '*') return opd1 * opd2;
+    return opd1 + opd2;
+}
+
+int calculate(int opd1, int opd2, int opd3, char opr1, char opr2)
+{
+    if (opr2 == '*')
+        return evaluate(opd1, evaluate(opd2, opd3, opr2), opr1);
+    else
+        return evaluate(evaluate(opd1, opd2, opr1), opd3, opr2);
+}
+
+void update(int depth, int opd1, int opd2, int opd3, char opr1, char opr2, char opr3)
+{
+    nopd1 = opd1, nopd2 = opd2, nopd3 = opd3, nopr1 = opr1, nopr2 = opr2;
+    if (isdigit(opr3))
     {
-        if (s[i] == '*')
-        {
-            r.push_back(number);
-            r.push_back(-1);
-            number = 0;
-        }
-        else if (s[i] == '+')
-        {
-            r.push_back(number);
-            r.push_back(-2);
-            number = 0;
-        }
-        else
-        {
-            number = number * 10 + s[i] - '0';
-        }
+        nopd3 = opd3 * 10 + opr3 - '0';
     }
-    r.push_back(number);
-    while (true)
+    else if (opr3 == '=')
     {
-        bool updated = false;
-        for (int i = 0; i < r.size(); i++)
-            if (r[i] == -1)
+        leftPart[depth] = calculate(opd1, opd2, opd3, opr1, opr2);
+        nopd1 = nopd2 = nopd3 = 0;
+        nopr1 = nopr2 = '+';
+    }
+    else if (opr3 == '#')
+    {
+        rightPart[depth] = calculate(opd1, opd2, opd3, opr1, opr2);
+        nopd1 = nopd2 = nopd3 = 0;
+        nopr1 = nopr2 = '+';
+    }
+    else if (opr3 == '*')
+    {
+        if (opr2 == '*')
+        {
+            if (opr1 == '*')
             {
-                r[i - 1] *= r[i + 1];
-                r.erase(r.begin() + i);
-                r.erase(r.begin() + i);
-                updated = true;
+                nopd1 = opd1 * opd2;
+                nopd2 = opd3;
+                nopd3 = 0;
+                nopr1 = '*';
+                nopr2 = '*';
             }
-        if (!updated) break;
-    }
-    while (r.size() > 1)
-    {
-        for (int i = 0; i < r.size(); i++)
-            if (r[i] == -2)
+            else if (opr1 == '+')
             {
-                r[i - 1] += r[i + 1];
-                r.erase(r.begin() + i);
-                r.erase(r.begin() + i);
+                nopd1 = opd1;
+                nopd2 = opd2 * opd3;
+                nopd3 = 0;
+                nopr1 = '+';
+                nopr2 = '*';
             }
-    }
-    return r.front();
-}
-
-bool error(string &s)
-{
-    if (s.length() == 0) return true;
-    if (!isdigit(s.front()) || !isdigit(s.back())) return true;
-    return false;
-}
-
-bool validate(int depth)
-{
-    string leftPart, rightPart;
-    bool equalMeeted = false;
-    for (int i = 0; i < exps[depth].length(); i++)
-    {
-        if (cache[exps[depth][i] - 'a'] == '=')
-        {
-            equalMeeted = true;
-            continue;
         }
-        if (equalMeeted)
-            rightPart += cache[exps[depth][i] - 'a'];
-        else
-            leftPart += cache[exps[depth][i] - 'a'];
+        else if (opr2 == '+')
+        {
+            if (opr1 == '*')
+            {
+                nopd1 = opd1 * opd2;
+                nopd2 = opd2;
+                nopd3 = 0;
+                nopr1 = '+';
+                nopr2 = '*';
+            }
+            else if (opr1 == '+')
+            {
+                nopd1 = opd1 + opd2;
+                nopd2 = opd3;
+                nopd3 = 0;
+                nopr1 = '+';
+                nopr2 = '*';
+            }
+        }
     }
-    if (error(leftPart) || error(rightPart)) return false;
-    return evaluate(leftPart) == evaluate(rightPart);
+    else if (opr3 == '+')
+    {
+        if (opr2 == '*')
+        {
+            if (opr1 == '*')
+            {
+                nopd1 = opd1 * opd2;
+                nopd2 = opd3;
+                nopd3 = 0;
+                nopr1 = '*';
+                nopr2 = '+';
+            }
+            else if (opr1 == '+')
+            {
+                nopd1 = opd1;
+                nopd2 = opd2 * opd3;
+                nopd3 = 0;
+                nopr1 = '+';
+                nopr2 = '+';
+            }
+        }
+        else if (opr2 == '+')
+        {
+            if (opr1 == '*')
+            {
+                nopd1 = opd1 * opd2;
+                nopd2 = opd3;
+                nopd3 = 0;
+                nopr1 = '+';
+                nopr2 = '+';
+            }
+            else if (opr1 == '+')
+            {
+                nopd1 = opd1 + opd2;
+                nopd2 = opd3;
+                nopd3 = 0;
+                nopr1 = '+';
+                nopr2 = '+';
+            }
+        }
+    }
 }
 
-void dfs(int depth, int level)
+void dfs(int depth, int level, int opd1, int opd2, int opd3, char opr1, char opr2)
 {
+    if (level == 0) leftPart[depth] = rightPart[depth] = -1;
+
+    // Puring
+    if (depth && leftPart[depth] >= maxNumber[depth - 1]) return;
     if (oops) return;
+
+    // All expression matched
     if (depth == n)
     {
-        //for (int i = 0; i < depth; i++)
-        //{
-        //    for (int j = 0; j < exps[i].length(); j++)
-        //        cout << cache[exps[i][j] - 'a'];
-        //    cout << endl;
-        //}
+        if (debug3)
+        {
+            cout << "----------\n";
+            for (int i = 0; i < depth; i++)
+            {
+                for (int j = 0; j < exps[i].length(); j++)
+                    cout << cache[exps[i][j] - 'a'];
+                cout << '\n';
+            }
+            cout << "----------\n";
+        }
         for (int i = 0; i < 13; i++)
         {
             if (mapping[i] == -2) continue;
@@ -123,49 +186,108 @@ void dfs(int depth, int level)
                     mapping[i] = -2;
             }
         }
-        oops = (count(mapping, mapping + 13, -2) == cntOfAppeared);
+        oops = (count(mapping, mapping + 13, -2) == cnt);
         return;
     }
-    
+
+    // At the end of an expression
     if (level == exps[depth].length())
     {
-        if (validate(depth))
-            dfs(depth + 1, 0);
+        update(depth, opd1, opd2, opd3, opr1, opr2, '#');
+        if (debug2)
+        {
+            cout << "# ";
+            for (int j = 0; j < exps[depth].length(); j++)
+                cout << cache[exps[depth][j] - 'a'];
+            cout << '\n';
+            cout << "L = " << leftPart[depth] << " R = " << rightPart[depth] << '\n';
+        }
+        if (leftPart[depth] == rightPart[depth])
+        {
+            dfs(depth + 1, 0, nopd1, nopd2, nopd3, nopr1, nopr2);
+        }
     }
     else
-    {
-        // Matched, continue to next expression
+    {       
+        // A symbol have matched, continue to next char of expression
         if (cache[exps[depth][level] - 'a'] != -1)
         {
-            dfs(depth, level + 1);
+            char now = cache[exps[depth][level] - 'a'];
+            char pre = cache[exps[depth][level - 1] - 'a'];
+            if (level)
+            {
+                if (!isdigit(pre) && !isdigit(now))
+                    return;
+            }
+            if (level == 1)
+            {
+                if (pre == '0')
+                    return;
+            }
+            if (level >= 2)
+            {
+                if (now != '=')
+                    if (pre == '0' && !isdigit(cache[exps[depth][level - 2] - 'a']))
+                        return;
+            }
+            if (level == 0 || level == exps[depth].length() - 1)
+            {
+                if (!isdigit(now))
+                    return;
+            }
+
+            update(depth, opd1, opd2, opd3, opr1, opr2, now);
+            dfs(depth, level + 1, nopd1, nopd2, nopd3, nopr1, nopr2);
         }
-        // Unmatched
+        // Unmatched, try mapping a char to a symbol
         else
         {
-            for (int i = 0; i <= 12; i++)
+            for (int i = 0; i < 12; i++)
             {
                 if (used[i]) continue;
-                // The start of an expression can't be a sign or zero
+                
+                // The start of an expression can't be a operator
                 if (level == 0)
                 {
-                    if (letter[i] == '0' || !isdigit(letter[i]))
+                    if (!isdigit(letter[i]))
                         continue;
                 }
-                // The end of an expression can't be a sign
+                // The end of an expression can't be a operator
                 if (level == exps[depth].length() - 1)
                 {
                     if (!isdigit(letter[i]))
                         continue;
                 }
-                // After a sign must be a non zero digit
-                if (level > 0 && !isdigit(cache[exps[depth][level - 1] - 'a']))
+                // After a operator must be a non operator
+                if (level && !isdigit(cache[exps[depth][level - 1] - 'a']))
                 {
-                    if (letter[i] == '0' || !isdigit(letter[i]))
+                    if (!isdigit(letter[i]))
                         continue;
                 }
+                // Before a operator must be a digit
+                if (level < exps[depth].length() - 1)
+                {
+                    if (cache[exps[depth][level + 1] - 'a'] == '=')
+                    {
+                        if (!isdigit(letter[i]))
+                            continue;
+                    }
+                }
+                if (level == 1)
+                {
+                    if (cache[exps[depth][level - 1] - 'a'] == '0')
+                        continue;
+                }
+                if (level >= 2)
+                {
+                    if (cache[exps[depth][level - 1] - 'a'] == '0' && !isdigit(cache[exps[depth][level - 2] - 'a']))
+                        continue;
+                }
+
                 cache[exps[depth][level] - 'a'] = letter[i];
                 used[i] = 1;
-                dfs(depth, level + 1);
+                update(depth, opd1, opd2, opd3, opr1, opr2, letter[i]);
+                dfs(depth, level + 1, nopd1, nopd2, nopd3, nopr1, nopr2);
                 used[i] = 0;
                 cache[exps[depth][level] - 'a'] = -1;
             }
@@ -175,7 +297,7 @@ void dfs(int depth, int level)
 
 int main(int argc, char *argv[])
 {
-    //cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
+    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
     int cases = 0;
     while (cin >> n, n > 0)
@@ -193,6 +315,8 @@ int main(int argc, char *argv[])
             {
                 appeared.insert(exps[i][j]);
                 if (available[exps[i][j] - 'a'] == -2) continue;
+                // Start and end of expression can't be a equal sign
+                if (j == 0 || j == exps[i].length() - 1) continue;
                 available[exps[i][j] - 'a']++;
             }
             for (int j = 0; j < 16; j++)
@@ -200,7 +324,8 @@ int main(int argc, char *argv[])
                     available[j] = -2;
         }
 
-        sort(exps, exps + n, cmp);
+        // Get the shortest expression and possible equal sign
+        sort(exps, exps + n, cmp1);
         string equal = exps[0];
         sort(equal.begin(), equal.end());
         equal.erase(unique(equal.begin(), equal.end()), equal.end());
@@ -221,15 +346,23 @@ int main(int argc, char *argv[])
         }
 
         // Backtracking
-        oops = 0, cntOfAppeared = appeared.size();
+        sort(exps, exps + n, cmp2);
+        oops = 0, cnt = appeared.size();
         memset(mapping, -1, sizeof(mapping));
+
         for (auto es : possible)
         {
             memset(cache, -1, sizeof(cache));
             memset(used, 0, sizeof(used));
             cache[es - 'a'] = '=';
-            used[12] = 1;
-            dfs(0, 0);
+
+            for (int i = 0; i < n; i++)
+            {
+                int posOfEqual = exps[i].find(es);
+                maxNumber[i] = pow(10, exps[i].length() - 1 - posOfEqual);
+            }
+
+            dfs(0, 0, 0, 0, 0, '+', '+');
         }
 
         // Check the solution exist or not
@@ -239,18 +372,18 @@ int main(int argc, char *argv[])
             continue;
         }
         
-        bool outputed = false;
+        bool printed = false;
         for (int i = 0; i < 16; i++)
         {
             if (mapping[i] > 0)
             {
-                if (outputed) cout << ' ';
+                if (printed) cout << ' ';
                 cout << (char)('a' + i);
                 cout << mapping[i];
-                outputed = true;
+                printed = true;
             }
         }
-        if (!outputed) cout << "No";
+        if (!printed) cout << "No";
         cout << '\n';
     }
 
