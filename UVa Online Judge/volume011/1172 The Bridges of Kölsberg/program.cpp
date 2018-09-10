@@ -10,55 +10,61 @@
 
 using namespace std;
 
-bool use_bottom_to_up = false;
+bool useBottomUp = false;
 
 const int INF = 0x3f3f3f3f;
 
 struct city
 {
-    string city_name, os_type;
-    int trade_value;
+    string cityName, osType;
+    int tradeValue;
 } north[1001], south[1001];
 
-int max_value[1001][1001], min_bridge[1001][1001];
+int maxValue[1001][1001], minBridge[1001][1001];
 
 void update(int i, int j, int ii, int jj)
 {
-    if (max_value[ii][jj] > max_value[i][j])
+    if (maxValue[i][j] < maxValue[ii][jj])
     {
-        max_value[i][j] = max_value[ii][jj];
-        min_bridge[i][j] = min_bridge[ii][jj];
+        maxValue[i][j] = maxValue[ii][jj];
+        minBridge[i][j] = minBridge[ii][jj];
     }
-    else if (max_value[ii][jj] == max_value[i][j])
+    else if (maxValue[i][j] == maxValue[ii][jj])
     {
-        if (min_bridge[ii][jj] < min_bridge[i][j])
-            min_bridge[i][j] = min_bridge[ii][jj];
+        if (minBridge[i][j] > minBridge[ii][jj])
+            minBridge[i][j] = minBridge[ii][jj];
     }
 }
 
 void dp(int i, int j)
 {
-    if (max_value[i - 1][j] == -1) dp(i - 1, j);
-    if (max_value[i][j - 1] == -1) dp(i, j - 1);
-    if (max_value[i - 1][j - 1] == -1) dp(i - 1, j - 1);
+    if (i == 0 || j == 0)
+    {
+        maxValue[i][j] = minBridge[i][j] = 0;
+        return;
+    }
+
+    if (maxValue[i - 1][j] == -1) dp(i - 1, j);
+    if (maxValue[i][j - 1] == -1) dp(i, j - 1);
+    if (maxValue[i - 1][j - 1] == -1) dp(i - 1, j - 1);
     
-    update(i, j, i - 1, j - 1);
     update(i, j, i - 1, j);
     update(i, j, i, j - 1);
+    update(i, j, i - 1, j - 1);
     
-    if (north[i].os_type == south[j].os_type)
+    if (north[i].osType == south[j].osType)
     {
-        int new_value = max_value[i - 1][j - 1] + north[i].trade_value + south[j].trade_value;
-        int new_bridge = min_bridge[i - 1][j - 1] + 1;
-        if (new_value > max_value[i][j])
+        int new_value = maxValue[i - 1][j - 1] + north[i].tradeValue + south[j].tradeValue;
+        int new_bridge = minBridge[i - 1][j - 1] + 1;
+        if (maxValue[i][j] < new_value)
         {
-            max_value[i][j] = new_value;
-            min_bridge[i][j] = new_bridge;
+            maxValue[i][j] = new_value;
+            minBridge[i][j] = new_bridge;
         }
-        else if (new_value == max_value[i][j])
+        else if (maxValue[i][j] == new_value)
         {
-            if (min_bridge[i][j] > new_bridge)
-                min_bridge[i][j] = new_bridge;
+            if (minBridge[i][j] > new_bridge)
+                minBridge[i][j] = new_bridge;
         }
     }
 }
@@ -73,60 +79,61 @@ int main(int argc, char *argv[])
     {
         cin >> n1;
         for (int i = 1; i <= n1; i++)
-            cin >> north[i].city_name >> north[i].os_type >> north[i].trade_value;
+            cin >> north[i].cityName >> north[i].osType >> north[i].tradeValue;
         cin >> n2;
         for (int i = 1; i <= n2; i++)
-            cin >> south[i].city_name >> south[i].os_type >> south[i].trade_value;
+            cin >> south[i].cityName >> south[i].osType >> south[i].tradeValue;
             
         // initialize
         for (int i = 0; i <= n1; i++)
             for (int j = 0; j <= n2; j++)
             {
-                max_value[i][j] = -1;
-                min_bridge[i][j] = INF;
+                maxValue[i][j] = -1;
+                minBridge[i][j] = INF;
             }
-        for (int i = 0; i <= n1; i++)
-        {
-            max_value[i][0] = 0;
-            min_bridge[i][0] = 0;
-        }
-        for (int i = 0; i <= n2; i++)
-        {
-            max_value[0][i] = 0;
-            min_bridge[0][i] = 0;
-        }
 
-        // bottom to up
-        if (use_bottom_to_up)
+        // bottom-up
+        if (useBottomUp)
         {
+            for (int i = 0; i <= n1; i++)
+            {
+                maxValue[i][0] = 0;
+                minBridge[i][0] = 0;
+            }
+            for (int i = 0; i <= n2; i++)
+            {
+                maxValue[0][i] = 0;
+                minBridge[0][i] = 0;
+            }
+
             for (int i = 1; i <= n1; i++)
                 for (int j = 1; j <= n2; j++)
                 {
                     update(i, j, i - 1, j - 1);
                     update(i, j, i - 1, j);
                     update(i, j, i, j - 1);
-                    if (north[i].os_type == south[j].os_type)
+                    if (north[i].osType == south[j].osType)
                     {
-                        int new_value = max_value[i - 1][j - 1] + north[i].trade_value + south[j].trade_value;
-                        int new_bridge = min_bridge[i - 1][j - 1] + 1;
-                        if (new_value > max_value[i][j])
+                        int new_value = maxValue[i - 1][j - 1] + north[i].tradeValue + south[j].tradeValue;
+                        int new_bridge = minBridge[i - 1][j - 1] + 1;
+                        if (maxValue[i][j] < new_value)
                         {
-                            max_value[i][j] = new_value;
-                            min_bridge[i][j] = new_bridge;
+                            maxValue[i][j] = new_value;
+                            minBridge[i][j] = new_bridge;
                         }
-                        else if (new_value == max_value[i][j])
+                        else if (maxValue[i][j] == new_value)
                         {
-                            if (min_bridge[i][j] > new_bridge)
-                                min_bridge[i][j] = new_bridge;
+                            if (minBridge[i][j] > new_bridge)
+                                minBridge[i][j] = new_bridge;
                         }
                     }
                 }
         }
-        // top to bottom
+        // top-down
         else
             dp(n1, n2);
 
-        cout << max_value[n1][n2] << ' ' << min_bridge[n1][n2] << '\n';
+        cout << maxValue[n1][n2] << ' ' << minBridge[n1][n2] << '\n';
     }
 
     return 0;
