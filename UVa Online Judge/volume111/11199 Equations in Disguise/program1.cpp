@@ -14,7 +14,7 @@ int debug = 1;
 int n, used[16], oops, cntOfAppeared;
 string exps[24];
 char cache[16], mapping[16];
-char letter[13] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '+', '*'};
+char letter[12] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '+', '*'};
 
 bool cmp(string &a, string b)
 {
@@ -128,7 +128,7 @@ void dfs(int depth, int level)
                 cout << endl;
             }
         }
-        for (int i = 0; i < 13; i++)
+        for (int i = 0; i < 12; i++)
         {
             if (mapping[i] == -2) continue;
             if (cache[i] == -1) continue;
