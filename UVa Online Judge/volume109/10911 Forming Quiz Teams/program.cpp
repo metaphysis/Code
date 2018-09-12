@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
 
         for (int i = 0; i < n; i++)
             for (int j = i + 1; j < n; j++)
-                dist[i][j] = dist[j][i] = sqrt(pow(xs[i] - xs[j], 2) + pow(ys[i] - ys[j], 2));
+                dist[i][j] = dist[j][i] = hypot(xs[i] - xs[j], ys[i] - ys[j]);
 
         minDist = INF;
         memset(used, 0, sizeof(used));
