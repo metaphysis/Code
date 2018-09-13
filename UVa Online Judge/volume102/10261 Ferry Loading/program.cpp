@@ -75,7 +75,7 @@ public:
 	}
 };
 
-set < state > cache;
+set<state> cache;
 bool port[MAXN + 1], answer[MAXN + 1];
 int cars[MAXN + 1], nCars, maxCars;
 
@@ -183,7 +183,7 @@ void solve_by_dynamic_programming(void)
 		}
 		nCars--;
 
-		pair < int, int > longest;
+		pair<int, int> longest;
 
 		memset(memo, false, sizeof(memo));
 		memset(choice, EMPTY, sizeof(choice));
@@ -223,10 +223,10 @@ void solve_by_dynamic_programming(void)
 int main(int ac, char *av[])
 {
 	// 回溯法，差强人意，UVa RT：2.404s。
-	// solve_by_backtrack();
+	solve_by_backtrack();
 	
 	// 动态规划，UVa RT：0.536s。
-	solve_by_dynamic_programming();
+	//solve_by_dynamic_programming();
 
 	return 0;
 }
