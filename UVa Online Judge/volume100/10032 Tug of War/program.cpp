@@ -30,19 +30,19 @@
 // 10
 // 20
 //
-// 为什么失效了？因为对于差为 0 时也发生了交换。
+// 为什么失效了？因为对于差为 0 的数据也进行了交换。
 //
 // 有意思的是，别人使用动态规划算法得到的解法虽然在 Programming Challenges 和 UVa 获得 AC，
-// 但是某些测试数据却无法通过，我使用这个算法，通过了 UVa 论坛上的所有数据，而且一些 AC 程序都
+// 但是某些测试数据却无法通过，我使用这个算法，通过了 UVa 论坛上的所有数据，而且一些连 AC 程序都
 // 错误的数据也通过了。可见 PC 和 UVa 上的测试数据并不是很强。使用动态规划解题的程序示例可参考
-// http://tausiq.wordpress.com/2011/03/07/uva-10032-tug-of-war/ ，评论里有不能通过
-// 的测试数据。
+// http://tausiq.wordpress.com/2011/03/07/uva-10032-tug-of-war/（目前已经无法访问），评论里
+// 有不能通过的测试数据。
 //
 // 在 UVa 上的另外一个问题（题号 562）和此题非常类似，是分硬币的问题，不过和本题不同，分成两部
 // 分的硬币没有数目最多相差 1 枚的限制。更一般的这类问题称为平衡划分问题，可以使用动态规划解决，可
 // 参考： http://people.csail.mit.edu/bdean/6.046/dp/ 。
 //
-// 本题解法在 Progrmming Challenges 上通过，在 UVa Online Judge 上为 WA。
+// 本题解法在Progrmming Challenges上通过，在UVa Online Judge上为WA。
 
 #include <bits/stdc++.h>
 
