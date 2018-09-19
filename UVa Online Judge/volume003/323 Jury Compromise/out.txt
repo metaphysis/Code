@@ -1,0 +1,20 @@
+Jury #1
+Best jury has value 14 for prosecution and value 4 for defence:
+ 1
+
+Jury #2
+Best jury has value 195 for prosecution and value 192 for defence:
+ 1 2 3 6 7 8 10 11 12 13 14 15 16 17 18 20 21 22 23 24
+
+Jury #3
+Best jury has value 29 for prosecution and value 28 for defence:
+ 1 2 6
+
+Jury #4
+Best jury has value 237 for prosecution and value 237 for defence:
+ 1 2 4 5 6 7 9 10 13 14 16 17 18 19 21 22 23 24 25 26
+
+Jury #5
+Best jury has value 109 for prosecution and value 111 for defence:
+ 1 2 4 5 7 8 9 10 13
+
