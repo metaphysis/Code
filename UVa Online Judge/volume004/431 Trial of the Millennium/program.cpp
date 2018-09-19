@@ -19,46 +19,39 @@ struct evidence
     {
         if (hour != data.hour)
             return hour < data.hour;
-        else if (score != data.score)
+        if (score != data.score)
             return score > data.score;
-        else
-            return index < data.index;
+        return description < data.description;
     }
 };
 
 int main(int argc, char *argv[])
 {
-    cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
-
     string line;
-    int scores[110][250], choices[110][250], n;
-        
-    getline(cin, line);
-    int cases = stoi(line);
+    int scores[110][250], choices[110][250], n, cases;
     
-    getline(cin, line);
-    for (int c = 1; c <= cases; c++)
+    cin >> cases;
+    for (int cs = 1; cs <= cases; cs++)
     {
-        getline(cin, line);
-        int time_limit = stoi(line);
-        
+        int time_limit;
+        cin >> time_limit;
+        cin.ignore(256, '\n');
+
         vector<evidence> evidences;
         int count = 1;
         while (getline(cin, line), line.length() > 0)
         {
+            if (line.length() == 0) break;
             evidence data;
-            
             data.index = count++;
-
             istringstream iss(line);
             iss >> data.score >> data.hour;
             getline(iss, data.description);
             data.description.erase(data.description.begin());
-            
             evidences.push_back(data);
         }
         
-        if (c > 1) cout << '\n';
+        if (cs > 1) cout << '\n';
 
         sort(evidences.begin(), evidences.end());
         evidence empty;
@@ -83,7 +76,7 @@ int main(int argc, char *argv[])
         int last_index = n, pre_time_limit = time_limit;
         int used_hours = 0, max_points = 0;
 
-        while (last_index > 0)
+        while (last_index)
         {
             if (choices[last_index][pre_time_limit])
             {
@@ -101,7 +94,7 @@ int main(int argc, char *argv[])
             cout << "There is not enough time to present any evidence. Drop the charges.\n";
             continue;
         }
-        
+
         cout << "Score  Time  Description\n";
         cout << "-----  ----  -----------\n";
         for (auto item : selected)
@@ -113,7 +106,6 @@ int main(int argc, char *argv[])
             cout << evidences[item].description << '\n';
         }
         cout << '\n';
-
         cout << "Total score: " << max_points << " points\n";
         cout << " Total time: " << used_hours << " hours\n";
     }
