@@ -89,6 +89,18 @@ int main(int argc, char *argv[])
         }
         reverse(selected.begin(), selected.end());
 
+        if (time_limit == 0)
+        {
+            max_points = 0;
+            selected.clear();
+            for (int i = 1; i <= n; i++)
+                if (evidences[i].hour == 0)
+                {
+                    selected.push_back(i);
+                    max_points += evidences[i].score;
+                }
+        }
+
         if (max_points == 0)
         {
             cout << "There is not enough time to present any evidence. Drop the charges.\n";

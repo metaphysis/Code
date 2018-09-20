@@ -1,5 +1,21 @@
 Score  Time  Description
 -----  ----  -----------
+  9      0   B
+  8      0   A
+
+Total score: 17 points
+ Total time: 0 hours
+
+Score  Time  Description
+-----  ----  -----------
+  9      0   B
+  8      0   A
+
+Total score: 17 points
+ Total time: 0 hours
+
+Score  Time  Description
+-----  ----  -----------
  10      1   A
 
 Total score: 10 points

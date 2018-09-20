@@ -1,8 +1,8 @@
 // Jury Compromise
 // UVa ID: 323
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2018-09-19
+// UVa Run Time: 0.020s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
@@ -10,7 +10,7 @@
 
 using namespace std;
 
-struct detail
+struct person
 {
     int prosecution, defence, sum, diff;
 };
@@ -21,14 +21,15 @@ struct data
     vector<int> selected;
 };
 
-int n, m, cases = 0, sum, offset;
-detail jury[210];
+int n, m, cases = 0, offset;
+person jury[210];
 data cache[21][810];
 
 void knapsack()
 {
+    int top = 2 * offset * m;
     for (int i = 0; i <= m; i++)
-        for (int j = 0; j <= sum; j++)
+        for (int j = 0; j <= top; j++)
         {
             cache[i][j].sum = -1;
             cache[i][j].selected.clear();
@@ -36,8 +37,8 @@ void knapsack()
     cache[0][0].sum = 0;
 
     for (int i = 1; i <= n; i++)
-        for (int j = m; j >= 1; j--)
-            for (int k = (jury[i].diff + offset); k <= sum; k++)
+        for (int j = min(i, m); j >= 1; j--)
+            for (int k = (jury[i].diff + offset); k <= top; k++)
             {
                 int pre_diff = k - (jury[i].diff + offset);
                 if (cache[j - 1][pre_diff].sum != -1)
@@ -81,7 +82,6 @@ void knapsack()
     sort(cache[m][last_diff].selected.begin(), cache[m][last_diff].selected.end());
     for (auto k : cache[m][last_diff].selected)
     {
-    
         sum_of_prosecution += jury[k].prosecution;
         sum_of_defence += jury[k].defence;
     }
@@ -97,16 +97,14 @@ int main(int argc, char *argv[])
 {
     while (cin >> n >> m, n > 0)
     {
-        sum = offset = 0;
+        offset = 0;
         for (int i = 1; i <= n; i++)
         {
             cin >> jury[i].prosecution >> jury[i].defence;
             jury[i].sum = jury[i].prosecution + jury[i].defence;
             jury[i].diff = jury[i].prosecution - jury[i].defence;
-            sum += jury[i].prosecution;
             offset = max(offset, max(jury[i].prosecution, jury[i].defence));
         }
-        sum *= 2;
         knapsack();
     }
     
