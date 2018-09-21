@@ -1,8 +1,8 @@
 // Optimal Binary Search Tree
 // UVa ID: 10304
 // Verdict: Accepted
-// Submission Date: 2018-09-20
-// UVa Run Time: 1.620s
+// Submission Date: 2018-09-21
+// UVa Run Time: 0.610s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
@@ -13,16 +13,6 @@ using namespace std;
 const int INF = 0x7f7f7f7f;
 
 int n, e[256], dp[256][256], sum[256];
-
-int dfs(int l, int r)
-{
-    if (~dp[l][r]) return dp[l][r];
-    if (l >= r) return dp[l][r] = 0;
-    dp[l][r] = INF;
-    for (int k = l; k <= r; k++)
-        dp[l][r] = min(dp[l][r], dfs(l, k - 1) + dfs(k + 1, r) + sum[r] - sum[l - 1] - e[k]);
-    return dp[l][r];
-}
 
 int main(int argc, char *argv[])
 {
@@ -37,8 +27,18 @@ int main(int argc, char *argv[])
             sum[i] = e[i] + sum[i - 1];
         }
 
-        memset(dp, -1, sizeof(dp));
-        cout << dfs(1, n) << '\n';
+        memset(dp, 0, sizeof(dp));
+        for (int L = 2; L <= n; L++)
+            for (int i = 1, j = L; j <= n; i++, j++)
+            {
+                dp[i][j] = INF;
+                for (int k = i; k <= j; k++)
+                {
+                    int next = dp[i][k - 1] + dp[k + 1][j] + sum[j] - sum[i - 1] - e[k];
+                    dp[i][j] = min(dp[i][j], next);
+                }
+            }
+        cout << dp[1][n] << '\n';
     }
 
     return 0;
