@@ -1,0 +1,299 @@
+240, 0
+Number of fish expected: 58
+
+360, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 22
+
+840, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 16
+
+90, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 177
+
+75, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 123
+
+480, 0, 0
+Number of fish expected: 9
+
+960, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 1
+
+180, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 1116
+
+100, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 267
+
+240, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 238
+
+475, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 169
+
+780, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 3
+
+480, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 22
+
+185, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 151
+
+110, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 144
+
+240, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 250
+
+480, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 81
+
+300, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 328
+
+660, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 15
+
+120, 0, 0, 0
+Number of fish expected: 159
+
+180, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 11
+
+480, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 192
+
+585, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 131
+
+420, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 20
+
+145, 5, 0, 0, 0, 0, 0
+Number of fish expected: 83
+
+840, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 7
+
+120, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 183
+
+600, 0
+Number of fish expected: 304
+
+60, 0, 0, 0, 0
+Number of fish expected: 26
+
+360, 0, 0, 0, 0, 0, 0
+Number of fish expected: 187
+
+250, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 342
+
+115, 15, 10, 0
+Number of fish expected: 833
+
+555, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 1536
+
+600, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 120
+
+140, 5, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 110
+
+720, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 138
+
+180, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 316
+
+540, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 25
+
+720, 0, 0, 0, 0, 0, 0
+Number of fish expected: 20
+
+100, 10
+Number of fish expected: 71
+
+50, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 283
+
+60, 0, 0, 0, 0, 0, 0
+Number of fish expected: 168
+
+90, 55, 0
+Number of fish expected: 207
+
+480, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 8
+
+410, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 22
+
+235, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 96
+
+900, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 81
+
+665, 15, 5, 0, 0, 0, 0
+Number of fish expected: 189
+
+60, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 90
+
+95, 20, 65, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 682
+
+115, 15, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 178
+
+570, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 147
+
+660, 0, 0, 0, 0
+Number of fish expected: 279
+
+840, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 90
+
+840, 0
+Number of fish expected: 352
+
+300, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 9
+
+5, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 28
+
+295, 5, 20, 0, 0, 0, 0, 0, 0
+Number of fish expected: 67
+
+300, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 23
+
+215, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 897
+
+120, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 147
+
+750, 0, 50, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 968
+
+120, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 600
+
+785, 30, 0, 0
+Number of fish expected: 360
+
+900, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 68
+
+230, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 765
+
+65, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 255
+
+240, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 245
+
+240, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 28
+
+60, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 155
+
+90, 25, 5, 10, 0, 0, 0
+Number of fish expected: 534
+
+150, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 285
+
+240, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 35
+
+660, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 183
+
+285, 150, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 1390
+
+540, 0, 0, 0, 0, 0
+Number of fish expected: 11
+
+180, 0, 0, 0, 0, 0, 0
+Number of fish expected: 198
+
+720, 0
+Number of fish expected: 30
+
+480, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 128
+
+100, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 98
+
+60, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 184
+
+5, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 147
+
+5, 10, 0, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 375
+
+5, 0, 25, 0, 0
+Number of fish expected: 570
+
+280, 20, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 471
+
+0, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 411
+
+340, 15, 5, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 260
+
+540, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 75
+
+120, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 2
+
+65, 10, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 242
+
+120, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 28
+
+130, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 7
+
+520, 10, 0, 0
+Number of fish expected: 408
+
+55, 20, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 343
+
+300, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 5
+
+200, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 27
+
+660, 0, 0, 0, 0, 0
+Number of fish expected: 34
+
+405, 30, 20, 0, 0, 0, 0, 0
+Number of fish expected: 302
+
+600, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+Number of fish expected: 200
+
+390, 10, 0, 0
+Number of fish expected: 57
