@@ -1,4 +1,4 @@
-// Always on the run
+// Always on the Run
 // UVa ID: 590
 // Verdict: Accepted
 // Submission Date: 2016-09-26
