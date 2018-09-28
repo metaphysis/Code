@@ -12,22 +12,20 @@ using namespace std;
 
 vector<int> songs;
 int cache[1024][128][128];
-int N, T, M;
+int n, t, m;
 
-int dfs(int n, int t, int m)
+int dfs(int nSong, int mDisk, int tMinute)
 {
-    if (n >= N || m >= M) return 0;
-    if (~cache[n][t][m]) return cache[n][t][m];
-    // Skip the song.
-    int r = max(dfs(n + 1, t, m), dfs(n + 1, 0, m + 1));
-    // Try to record the song on current disk.
-    if (t + songs[n] < T)
-        r = max(r, 1 + dfs(n + 1, t + songs[n], m));
-    else if (t + songs[n] == T)
-        r = max(r, 1 + dfs(n + 1, 0, m + 1));
-    // Try to record the song on next disk.
-    r = max(r, dfs(n, 0, m + 1));
-    return cache[n][t][m] = r;
+    if (nSong >= n || mDisk >= m) return 0;
+    if (~cache[nSong][mDisk][tMinute]) return cache[nSong][mDisk][tMinute];
+    int r = dfs(nSong + 1, mDisk, tMinute);
+    if (tMinute + songs[nSong] < t)
+        r = max(r, 1 + dfs(nSong + 1, mDisk, tMinute + songs[nSong]));
+    if (tMinute + songs[nSong] == t)
+        r = max(r, 1 + dfs(nSong + 1, mDisk + 1, 0));
+    if (tMinute + songs[nSong] > t)
+        r = max(r, dfs(nSong, mDisk + 1, 0));
+    return cache[nSong][mDisk][tMinute] = r;
 }
 
 int main(int argc, char *argv[])
@@ -40,18 +38,18 @@ int main(int argc, char *argv[])
     cin >> cases;
     for (int cs = 0; cs < cases; cs++)
     {  
-        cin >> N >> T >> M;
+        cin >> n >> t >> m;
         songs.clear();
-        for (int i = 0; i < N; i++)
+        for (int nSong = 0; nSong < n; nSong++)
         {
-            if (i) cin >> comma;
+            if (nSong) cin >> comma;
             cin >> ti;
             songs.push_back(ti);
         }
         if (cs) cout << '\n';
-        for (int i = 0; i <= N; i++)
-            for (int j = 0; j <= T; j++)
-                for (int k = 0; k <= M; k++)
+        for (int i = 0; i <= n; i++)
+            for (int j = 0; j <= m; j++)
+                for (int k = 0; k <= t; k++)
                     cache[i][j][k] = -1;
         cout << dfs(0, 0, 0) << '\n';
     }

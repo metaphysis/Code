@@ -13,17 +13,17 @@ using namespace std;
 const int MAXN = 56;
 
 int labels[MAXN];
-long long cnt[MAXN][MAXN];
+long long cache[MAXN][MAXN];
 
-long long dp(int n, int r)
+long long dfs(int n, int r)
 {
     if (n == 0 && r == 0) return 1LL;
     if (n == 0) return 0;
-    if (~cnt[n][r]) return cnt[n][r];
-    cnt[n][r] = 0;
+    if (~cache[n][r]) return cache[n][r];
+    cache[n][r] = 0;
     for (int i = 0; i <= labels[n]; i++)
-        cnt[n][r] += dp(n - 1, r - i);
-    return cnt[n][r];
+        cache[n][r] += dfs(n - 1, r - i);
+    return cache[n][r];
 }
 
 int main(int argc, char *argv[])
@@ -44,9 +44,8 @@ int main(int argc, char *argv[])
         for (int i = 0; i < m; i++)
         {
             cin >> r;
-            memset(cnt, -1, sizeof(cnt));
-            dp(n, r);
-            cout << cnt[n][r] << '\n';
+            memset(cache, -1, sizeof(cache));
+            cout << dfs(n, r) << '\n';
         }
     }
 

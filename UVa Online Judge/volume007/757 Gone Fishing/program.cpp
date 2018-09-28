@@ -27,7 +27,7 @@ int dfs(int idx, int minutes)
         most = temp;
         used[idx][minutes] = 0;
     }
-    
+
     // Stay and fishing.
     for (int m = minutes + 5; m <= h; m += 5)
     {
@@ -51,7 +51,6 @@ int main(int argc, char *argv[])
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
     int cases = 0;
-    
     while (cin >> n, n > 0)
     {
         cin >> h;
@@ -82,7 +81,6 @@ int main(int argc, char *argv[])
         }
         cout << '\n';
         cout << "Number of fish expected: " << cache[0][0] << '\n';
-        
     }
 
     return 0;

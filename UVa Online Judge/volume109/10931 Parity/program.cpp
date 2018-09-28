@@ -24,7 +24,6 @@ int main(int argc, char *argv[])
         for (auto d : s)
             if (d == '1')
                 parity++;
-                
         cout << "The parity of " << s << " is " << parity << " (mod 2).\n";
     }
 
