@@ -4,7 +4,7 @@
 // Submission Date: 2018-09-29
 // UVa Run Time: 0.010s
 //
-// 版权所有（C）2016，邱秋。metaphysis # yeah dot net
+// 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
 
