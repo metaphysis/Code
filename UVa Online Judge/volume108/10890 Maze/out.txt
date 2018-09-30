@@ -1,4 +1,0 @@
-Case 1: 58
-Case 2: 58
-Case 3: 60
-Case 4: 58

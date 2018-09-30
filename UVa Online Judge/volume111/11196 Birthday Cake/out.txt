@@ -1,4 +1,0 @@
-Case 1: 68
-Case 2: 316
-Case 3: 3
-Case 4: 5222

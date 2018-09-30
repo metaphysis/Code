@@ -1,3 +1,0 @@
-Network 1
-Minimum number of nodes = 4
-
