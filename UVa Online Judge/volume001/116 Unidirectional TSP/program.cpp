@@ -70,7 +70,7 @@ int main(int ac, char *av[])
                 minRow = i;
             }
 
-        // 输出路径和最小权和。
+        // 输出路径与最小权和。
         cout << minRow;
         int next = 1, preRow = minRow;
         while (next < n)
