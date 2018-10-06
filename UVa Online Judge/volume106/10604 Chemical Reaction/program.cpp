@@ -1,8 +1,8 @@
 // Chemical Reaction
 // UVa ID: 10604
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2018-10-06
+// UVa Run Time: 0.100s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
@@ -10,57 +10,66 @@
 
 using namespace std;
 
-const int INF = 0x3f3f3f3f;
-
-int dp[10][10][7], cr[10][10][2], marker[10][10];
-int m, n, tubes[10];
-
-void dfs(int l, int r)
+struct reaction
 {
-    if (l == r) return 0;
-    if (marked[l][r]) return;
-    marked[l][r] = 1;
-    for (int k = l; k <= r; k++)
-    {
-        dfs(l, k);
-        dfs(k + 1, r);
-        for (int i = 1; i <= m; i++)
-            for (int j = 1; j <= m;j++)
-            {
-                if (dp[l][k][i] != INF && dp[k][r][j] != INF)
-                {
-                    int combined = cr[i][j][0];
-                    int hear = cr[i][j][1];
-                    dp[l][r][combined] = min(dp[l][r][combined], dp[l][k][i] + dp[k][r][j] + heat);
-                }
-            }
-    }
+    int chemical_type, heat_emitted;
+} cr[10][10];
+
+map<string, int> dp;
+
+const int INF = 0x7f7f7f7f;
+
+int dfs(string mark)
+{
+    if (mark.length() == 1) return 0;
+    if (dp.find(mark) != dp.end()) return dp[mark];
+    int r = INF;
+    for (int i = 0; i < mark.length(); i++)
+        for (int j = 0; j < mark.length(); j++)
+        {
+            if (i == j) continue;
+            int new_r = cr[mark[i] - '0'][mark[j] - '0'].heat_emitted;
+            string next_mark = mark;
+            int ii = i, jj = j;
+            if (ii > jj) swap(ii, jj);
+            next_mark.erase(next_mark.begin() + jj);
+            next_mark.erase(next_mark.begin() + ii);
+            next_mark.push_back('0' + cr[mark[i] - '0'][mark[j] - '0'].chemical_type);
+            sort(next_mark.begin(), next_mark.end());
+            new_r += dfs(next_mark);
+            r = min(r, new_r);
+        }
+    return dp[mark] = r;   
 }
 
 int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    int cases;
+    int M, N, cases;
     cin >> cases;
     for (int cs = 1; cs <= cases; cs++)
     {
-        cin >> m;
-        for (int i = 1; i <= m; i++)
-            for (int j = 1; j <= m; j++)
+        cin >> M;
+        for (int i = 0; i < M; i++)
+            for (int j = 0; j < M; j++)
             {
-                cin >> cr[i][j][0];
-                cin >> cr[i][j][1];
+                cin >> cr[i][j].chemical_type;
+                cr[i][j].chemical_type -= 1;
+                cin >> cr[i][j].heat_emitted;
             }
-        cin >> n;
-        for (int i = 0; i < n; i++)
-            cin >> tubes[i];
-        memset(marked, 0, sizeof(marked));
-        memset(dp, 0x3f, sizeof(dp));
-        int minimal = INF;
-        for (int i = 1; i <= m; i++)
-            minimal = min(minimal, dp[0][n - 1][i]);
-        cout << minimal << '\n';
+        cin >> N;
+        string mark;
+        for (int i = 0, k; i < N; i++)
+        {
+            cin >> k;
+            mark.push_back('0' + k - 1);
+        }
+        char separator;
+        cin >> separator;
+
+        dp.clear();
+        cout << dfs(mark) << '\n';
     }
 
     return 0;
