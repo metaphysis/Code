@@ -22,20 +22,18 @@ long long dfs(int mask, int last, int mode)
     long long r = 0;
     if (mode == HIGHER)
     {
-        for (int bit = 0; bit < N; bit++)
+        for (int bit = last + 1; bit < N; bit++)
         {
             if (mask & (1 << bit)) continue;
-            if (bit > last)
-                r += dfs(mask | (1 << bit), bit, LOWER);
+            r += dfs(mask | (1 << bit), bit, LOWER);
         }
     }
     else
     {
-        for (int bit = 0; bit < N; bit++)
+        for (int bit = 0; bit < last; bit++)
         {
             if (mask & (1 << bit)) continue;
-            if (bit < last)
-                r += dfs(mask | (1 << bit), bit, HIGHER);
+            r += dfs(mask | (1 << bit), bit, HIGHER);
         }
     }
     return cache[mask][last][mode] = r;
