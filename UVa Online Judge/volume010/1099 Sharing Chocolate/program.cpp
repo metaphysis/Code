@@ -10,7 +10,7 @@
 
 using namespace std;
 
-int n, x, y, A[20], sum[1 << 16] = {};
+int n, x, y, A[20], area[1 << 16] = {};
 int dp[128][1 << 16];
 list<int> L[10240];
 
@@ -18,12 +18,12 @@ void initialize()
 {
     for (int i = 0; i <= (x * y); i++)
         L[i].clear();
-    sum[0] = 0;
+    area[0] = 0;
     for (int i = 1; i < (1 << n); i++)
     {
         int j = 31 - __builtin_clz(i);
-        sum[i] = sum[i ^ (1 << j)] + A[j];
-        L[sum[i]].push_back(i);
+        area[i] = area[i ^ (1 << j)] + A[j];
+        L[area[i]].push_back(i);
     }
 
     for (int i = 0; i <= max(x, y); i++)
@@ -42,8 +42,8 @@ void initialize()
 int dfs(int w, int mask)
 {
     if (~dp[w][mask]) return dp[w][mask];
-    if (sum[mask] % w != 0) return dp[w][mask] = 0;
-    int h = sum[mask] / w;
+    if (area[mask] % w != 0) return dp[w][mask] = 0;
+    int h = area[mask] / w;
     for (int i = 1; i <= w / 2; i++)
         for (auto j : L[i * h])
             if ((mask | j) == mask)
@@ -67,13 +67,13 @@ int main(int argc, char *argv[])
         if (n == 0) break;
         cout << "Case " << ++cases << ": ";
         cin >> x >> y;
-        int s = 0;
+        int sum = 0;
         for (int i = 0; i < n; i++)
         {
             cin >> A[i];
-            s += A[i];
+            sum += A[i];
         }
-        if (x * y != s)
+        if (x * y != sum)
         {
             cout << "No\n";
             continue;

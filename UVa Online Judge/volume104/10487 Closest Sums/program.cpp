@@ -16,11 +16,11 @@ int main(int argc, char *argv[])
 
     int n, data[1010], sum[1000010], m, q;
     int cases = 0;
-    
+
     while (cin >> n, n > 0)
     {
         cout << "Case " << ++cases << ":\n";
-        
+
         int cnt = 0;
         for (int i = 0; i < n; i++)
         {
@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
                 if (data[j] != data[i])
                     sum[cnt++] = data[j] + data[i];
         }
-        
+
         sort(sum, sum + cnt);
         cnt = unique(sum, sum + cnt) - sum;
 

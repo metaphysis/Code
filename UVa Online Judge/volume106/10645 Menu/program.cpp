@@ -33,22 +33,14 @@ data dfs(int k, int n, int m)
         {
             data new_r = dfs(k + j, i, m + j * costs[i]);
             if (new_r.bft == NONE) continue;
-            int v = (j == 1 ? values[i] * 2 : values[i] * 3);
-            if (r.bft < new_r.bft + v)
+            new_r.bft += (j == 1 ? values[i] * 2 : values[i] * 3);
+            new_r.cst += j * costs[i];
+            if (r.bft < new_r.bft || (r.bft == new_r.bft && r.cst > new_r.cst))
             {
-                r.bft = new_r.bft + v;
-                r.cst = new_r.cst + j * costs[i];
+                r.bft = new_r.bft;
+                r.cst = new_r.cst;
                 r.idx = i;
                 r.cnt = j;
-            }
-            else if (r.bft == new_r.bft + v)
-            {
-                if (r.cst > new_r.cst + j * costs[i])
-                {
-                    r.cst = new_r.cst + j * costs[i];
-                    r.idx = i;
-                    r.cnt = j;
-                }
             }
         }
     }
@@ -63,13 +55,9 @@ int main(int argc, char *argv[])
     while (cin >> K >> N >> M)
     {
         if (K == 0) break;
-        for (int i = 0; i < N; i++)
-            cin >> costs[i] >> values[i];
+        for (int i = 0; i < N; i++) cin >> costs[i] >> values[i];
 
-        for (int i = 0; i <= K; i++)
-            for (int j = 0; j <= N; j++)
-                for (int k = 0; k <= M; k++)
-                    dp[i][j][k].bft = INF;
+        memset(dp, INF, sizeof(dp));
         data r = dfs(0, NONE, 0);
 
         if (r.bft == NONE) cout << "0.0\n\n";
@@ -90,10 +78,7 @@ int main(int argc, char *argv[])
             while (k < K)
             {
                 r = dp[k][n][m];
-                for (int i = 0; i < r.cnt; i++)
-                {
-                    cout << ' ' << (r.idx + 1);
-                }
+                for (int i = 0; i < r.cnt; i++) cout << ' ' << (r.idx + 1);
                 k += r.cnt;
                 n = r.idx;
                 m += r.cnt * costs[r.idx];
