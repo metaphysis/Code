@@ -22,7 +22,6 @@ void dfs(int u)
         cnt[u] = 1;
         return;
     }
-
     vector<int> needed;
     for (auto v : edges[u])
     {
