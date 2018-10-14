@@ -108,7 +108,7 @@ string subtract(string number1, string number2)
 }
 
 // 两个非负整数的乘法。
-string multiplicate(string number1, string number2)
+string multiply(string number1, string number2)
 {
     int sign = 1;
     
