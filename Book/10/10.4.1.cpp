@@ -23,9 +23,9 @@ void mooreDijkstra(int u)
     while (!visited[u])
     {
         visited[u] = 1;
-        for (auto e : edges[u])
-            if (!visited[e.to] && dist[e.to] > dist[u] + e.weight)
-                dist[e.to] = dist[u] + e.weight, parent[e.to] = u;
+        for (auto ve : edges[u])
+            if (!visited[ve.to] && dist[ve.to] > dist[u] + ve.weight)
+                dist[ve.to] = dist[u] + ve.weight, parent[ve.to] = u;
 
         int minDist = INF;
         for (int i = 0; i < n; i++)
@@ -44,13 +44,14 @@ void mooreDijkstra1(int u)
 
     while (!q.empty())
     {
-        edge v = q.top(); q.pop();
-        for (auto e : edges[v.to])
-            if (dist[e.to] > dist[v.to] + e.weight)
+        edge ue = q.top(); q.pop();
+        if (dist[ue.to] < ue.weight) continue;
+        for (auto ve : edges[ue.to])
+            if (dist[ve.to] > dist[ue.to] + ve.weight)
             {
-                dist[e.to] = dist[v.to] + e.weight;
-                parent[e.to] = v.to;
-                q.push(edge(e.to, dist[e.to]));
+                dist[ve.to] = dist[ue.to] + ve.weight;
+                parent[ve.to] = ue.to;
+                q.push(edge(ve.to, dist[ve.to]));
             }
     }
 }

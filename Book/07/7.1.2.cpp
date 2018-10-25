@@ -93,7 +93,7 @@ vector<int> findDivisor(int n)
 
 int main(int argc, char *argv[])
 {
-    sieve3(primes, MAXN, cnt);
+    sieve2(primes, MAXN, cnt);
     
     for (int i = 0; i < cnt; i++)
     {
