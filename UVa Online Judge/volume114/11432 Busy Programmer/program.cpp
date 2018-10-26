@@ -1,8 +1,8 @@
 // Busy Programmer
 // UVa ID: 11432
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2018-10-26
+// UVa Run Time: 0.350s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
@@ -11,23 +11,24 @@
 using namespace std;
 
 int D, G;
-int dp[34][34][34][34][2];
+long long dp[34][34][34][34];
 
-int dfs(int d1, int d2, int g1, int g2, int k)
+long long dfs(int d1, int d2, int g1, int g2)
 {
     if (d1 == D || d2 == D)
     {
-        if (k == 0 && d1 == D && d2 < D)
-            return dp[d1][d2][g1][g2][k] = 1;
-        if (k == 1 && d2 == D && d1 < D)
-            return dp[d1][d2][g1][g2][k] = 1;
+        if (d2 < D) return dp[d1][d2][g1][g2] = 1LL;
         return 0;
     }
-    if (~dp[d1][d2][g1][g2][k]) return dp[d1][d2][g1][g2][k];
-    if (g1 == G) return dp[d1][d2][g1][g2][k] = dfs(d1, d2 + 1, 0, 1, k);
-    if (g2 == G) return dp[d1][d2][g1][g2][k] = dfs(d1 + 1, d2, 1, 0, k);
-    int r = dfs(d1 + 1, d2, g1 + 1, g2, k) + dfs(d1, d2 + 1, g1, g2 + 1, k);
-    return dp[d1][d2][g1][g2][k] = r;
+    if (~dp[d1][d2][g1][g2]) return dp[d1][d2][g1][g2];
+    if (g1 == G) return dp[d1][d2][g1][g2] = dfs(d1, d2 + 1, 0, 1);
+    if (g2 == G) return dp[d1][d2][g1][g2] = dfs(d1 + 1, d2, 1, 0);
+    long long r = 0;
+    if (g1)
+        r = dfs(d1 + 1, d2, g1 + 1, g2) + dfs(d1, d2 + 1, 0, 1);
+    else
+        r = dfs(d1, d2 + 1, g1, g2 + 1) + dfs(d1 + 1, d2, 1, 0);
+    return dp[d1][d2][g1][g2] = r;
 }
 
 int main(int argc, char *argv[])
@@ -39,11 +40,17 @@ int main(int argc, char *argv[])
     {
         if (D == -1) break;
         cout << "Case " << ++cases << ": ";
-        memset(dp, -1, sizeof(dp));
-        int r = dfs(1, 0, 1, 0, 0);
-        memset(dp, -1, sizeof(dp));
-        r += dfs(0, 1, 0, 1, 1);
-        cout << r << '\n';
+        if (D == 0 || G == 0)
+        {
+            cout << "0\n";
+            continue;
+        }
+        for (int i = 0; i <= D; i++)
+            for (int j = 0; j <= D; j++)
+                for (int k = 0; k <= G; k++)
+                    for (int l = 0; l <= G; l++)
+                        dp[i][j][k][l] = -1LL;
+        cout << (dfs(1, 0, 1, 0) * 2) << '\n';
     }
 
     return 0;
