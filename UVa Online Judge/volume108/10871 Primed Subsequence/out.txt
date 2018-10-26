@@ -1,0 +1,33 @@
+Shortest primed subsequence is length 2: 5 6
+Shortest primed subsequence is length 3: 4 5 4
+This sequence is anti-primed.
+Shortest primed subsequence is length 2: 6369 9734
+Shortest primed subsequence is length 4: 1903 2516 6149 4515
+This sequence is anti-primed.
+This sequence is anti-primed.
+This sequence is anti-primed.
+Shortest primed subsequence is length 2: 3285 7604
+This sequence is anti-primed.
+This sequence is anti-primed.
+Shortest primed subsequence is length 2: 2460 5293
+This sequence is anti-primed.
+Shortest primed subsequence is length 2: 8438 8979
+Shortest primed subsequence is length 3: 8140 1612 4961
+Shortest primed subsequence is length 6: 8300 2350 7458 9904 9506 1615
+Shortest primed subsequence is length 2: 1501 4438
+Shortest primed subsequence is length 2: 9086 2091
+Shortest primed subsequence is length 2: 3919 4018
+Shortest primed subsequence is length 2: 3001 6280
+Shortest primed subsequence is length 2: 8621 7110
+Shortest primed subsequence is length 2: 4344 1829
+Shortest primed subsequence is length 2: 5854 1539
+Shortest primed subsequence is length 2: 1615 1084
+Shortest primed subsequence is length 4: 8682 4934 9762 7403
+Shortest primed subsequence is length 2: 412 5635
+Shortest primed subsequence is length 2: 7770 937
+Shortest primed subsequence is length 2: 1871 9390
+Shortest primed subsequence is length 3: 4931 1118 5530
+Shortest primed subsequence is length 3: 792 9968 7497
+Shortest primed subsequence is length 2: 5332 997
+This sequence is anti-primed.
+This sequence is anti-primed.

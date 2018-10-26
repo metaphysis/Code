@@ -1,8 +1,8 @@
 // Erasing and Winning
 // UVa ID: 11491
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2018-10-26
+// UVa Run Time: 0.140s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
@@ -11,40 +11,56 @@
 using namespace std;
 
 int N, D;
-string numbers;
-    
-void dfs(int idx, int n, int d, int idx)
+string A;
+
+struct NODE
 {
-    int last = idx;
-    vector<int> tails;
-    for (int i = idx; i < numbers.size(); i++)
-    {
-        int digit = numbers[i + idx] - '0';
-        if (tails.size() == 0 || digit > tails.back())
-        {
-            tails.clear();
-            tails.push_back(digit);
-            last = i;
-        }
-        else if (digit == tails.back())
-        {
-            tails.push_back(digit);
-            last = i;
-        }
-    }
-    for (auto digit : tails) cout << digit;
-    for (last + 1, d - tails.size());
+    int field, idx;
+};
+
+const int MAXN = (1 << 18), K = 18;
+
+int log2t[MAXN + 1] = {};
+NODE st[MAXN][K];
+
+NODE maxSelf(NODE x, NODE y)
+{
+    if (x.field != y.field) return x.field > y.field ? x : y;
+    return x.idx < y.idx ? x : y;
+}
+
+void prepare()
+{
+    log2t[1] = 0;
+    for (int i = 2; i <= N; i++) log2t[i] = log2t[i / 2] + 1;
+    for (int i = 0; i < N; i++) st[i][0].field = A[i] - '0', st[i][0].idx = i;
+    for (int j = 1; j < K; j++)
+	    for (int i = 0; i + (1 << j) <= N; i++)
+		    st[i][j] = maxSelf(st[i][j - 1], st[i + (1 << (j - 1))][j - 1]);
+}
+
+NODE query(int L, int R)
+{
+    int j = log2t[R - L + 1];
+    return maxSelf(st[L][j], st[R - (1 << j) + 1][j]);
 }
 
 int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
     
-    whiel (cin >> N >> D)
+    while (cin >> N >> D)
     {
         if (N == 0) break;
-        cin >> numbers;
-        dfs(0, D);
+        cin >> A;
+        prepare();
+        D = N - D;
+        for (int d = D, S = 0; d >= 1; d--)
+        {
+            NODE r = query(S, N - d);
+            cout << r.field;
+            S = r.idx + 1;
+        }
         cout << '\n';
     }
 

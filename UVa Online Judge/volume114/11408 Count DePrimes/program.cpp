@@ -1,8 +1,8 @@
 // Count DePrimes
 // UVa ID: 11408
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2018-10-26
+// UVa Run Time: 0.240s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
@@ -10,10 +10,9 @@
 
 using namespace std;
 
-const int MAXN = 5000001;
+const int PRIME = 1, DE_PRIME = 2, COMPOSITE = 3, MAXN = 5000001;
 
 int numbers[MAXN] = {}, sum[MAXN] = {};
-int primes[400000], cnt = 0;
 
 int main(int argc, char *argv[])
 {
@@ -23,30 +22,26 @@ int main(int argc, char *argv[])
     {
         if (!numbers[i])
         {
-            primes[cnt++] = i;
-            numbers[i] = 1 + numbers[i - 1];
+            numbers[i] = PRIME;
+            for (int j = i + i; j < MAXN; j += i)
+            {
+                sum[j] += i;
+                numbers[j] = COMPOSITE;
+            }
         }
         else
         {
-            sum[i] = 0, n = i;
-            for (int j = 0; j < cnt && n > primes[j]; j++)
-                if (n % primes[j] == 0)
-                {
-                    sum += primes[j];
-                    while (n % primes[j] == 0)
-                        n /= primes[j];
-                    break;
-                }
-            if (n != 1) sum[i] += sum[n];
-            if (binary_search(primes, primes + cnt, sum)) numbers[i] = 1 + numbers[i - 1];
-            else numbers[i] = numbers[i - 1];
-        }
-        for (int j = 0; j < cnt && i * primes[j] < MAXN; j++)
-        {
-            numbers[i * primes[j]] = 1;
-            if (i % primes[j] == 0) break;
+            if (numbers[sum[i]] == PRIME)
+                numbers[i] = DE_PRIME;
+            else
+                numbers[i] = COMPOSITE;
         }
     }
+    for (int i = 2; i < MAXN; i++)
+        if (numbers[i] == PRIME || numbers[i] == DE_PRIME)
+            numbers[i] = 1 + numbers[i - 1];
+        else
+            numbers[i] = numbers[i - 1];
 
     int a, b;
     while (cin >> a, a > 0)
