@@ -1,24 +1,23 @@
 // Intervals
 // UVa ID: 1723
-// Verdict: TLE
-// Submission Date: 2017-05-10
-// UVa Run Time: 3.000s
+// Verdict: Accepted
+// Submission Date: 2018-10-27
+// UVa Run Time: 0.080s
 //
-// 版权所有（C）2017，邱秋。metaphysis # yeah dot net
+// 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
 
 using namespace std;
 
-const int INF = 1000000, MAXN = 50002;
+const int INF = 0x3f3f3f3f, MAXN = 50002;
 
 struct edge
 {
     int u, v, w;
-};
+} edges[MAXN];
 
-edge edges[MAXN];
-int n, dist[MAXN], mn, mx;
+int n, dist[MAXN], mi, mx;
 
 void bellmanFord()
 {
@@ -40,7 +39,7 @@ void bellmanFord()
             }
         }
         
-        for (int i = mn; i <= mx; i++)
+        for (int i = mi; i <= mx; i++)
         {
             int t = dist[i - 1] + 1;
             if (dist[i] > t)
@@ -50,7 +49,7 @@ void bellmanFord()
             }
         }
         
-        for (int i = mx; i >= mn; i--)
+        for (int i = mx; i >= mi; i--)
             if (dist[i - 1] > dist[i])
             {
                 dist[i - 1] = dist[i];
@@ -63,22 +62,25 @@ int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    cin >> n;
-
-    mx = 0, mn = INF;
-
-    int u, v, w;
-    for (int i = 0; i < n; i++)
+    int cases;
+    cin >> cases;
+    for (int cs = 0; cs < cases; cs++)
     {
-        cin >> u >> v >> w;
-        assert(u > 0);
-        edges[i].u = v, edges[i].v = u - 1, edges[i].w = -w;
-        mn = min(mn, u), mx = max(mx, v);
+        cin >> n;
+        mx = 0, mi = INF;
+        int u, v, w;
+        for (int i = 0; i < n; i++)
+        {
+            cin >> u >> v >> w;
+            u++, v++;
+            assert(u > 0);
+            edges[i].u = v, edges[i].v = u - 1, edges[i].w = -w;
+            mi = min(mi, u), mx = max(mx, v);
+        }
+        bellmanFord();
+        if (cs) cout << '\n';
+        cout << (dist[mx] - dist[mi - 1]) << '\n';
     }
-
-    bellmanFord();
- 
-    cout << (dist[mx] - dist[mn - 1]) << '\n';
 
     return 0;
 }

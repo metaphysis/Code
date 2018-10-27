@@ -1,95 +1,88 @@
 // Intervals
 // UVa ID: 1723
-// Verdict: TLE
-// Submission Date: 2017-05-10
-// UVa Run Time: 3.000s
+// Verdict: Accepted
+// Submission Date: 2018-10-27
+// UVa Run Time: 0.100s
 //
-// 版权所有（C）2017，邱秋。metaphysis # yeah dot net
+// 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
 
 using namespace std;
 
-const int INF = 1000000, MAXN = 50002;
+const int INF = 0x3f3f3f3f, MAXN = 50010, MAXE = 150010;
 
 struct edge
 {
-    int v, w;
-};
+    int v, w, next;
+    edge (int v = 0, int w = 0, int next = 0): v(v), w(w), next(next) {}
+} edges[MAXE];
 
-vector<edge> edges[MAXN];
-int n, dist[MAXN], visited[MAXN], counter[MAXN], mn, mx;
+int idx, n, head[MAXN], dist[MAXN], in[MAXN], mi, mx;
 
-bool spfa()
+void addEdge(int u, int v, int w)
 {
-    for (int i = 0; i <= mx; i++)
-    {
-        visited[i] = 0;
-        counter[i] = 0;
-        dist[i] = -INF;
-    }
-    
-    queue<int> unvisited;
+    edges[idx] = edge(v, w, head[u]);
+    head[u] = idx++;
+}
 
-    // choose mn - 1 as source vertex.
-    unvisited.push(mn - 1);
-    dist[mn - 1] = 0;
-    visited[mn - 1] = 1;
+void spfa()
+{
+    memset(in, 0, sizeof(in));
+    memset(dist, 0x3f, sizeof(dist));
+
+    queue<int> q;
+    dist[mx] = 0, in[mx] = 1;
+    q.push(mx);
     
-    while (!unvisited.empty())
+    while (!q.empty())
     {
-        int u = unvisited.front();
-        unvisited.pop();
-        
-        if (counter[u] > mx) return true;
-        
-        for (auto e : edges[u])
+        int u = q.front(); q.pop();
+        in[u] = 0;
+        for (int i = head[u]; ~i; i = edges[i].next)
         {
-            int t = dist[u] + e.w;
-            if (dist[e.v] < t)
+            edge e = edges[i];
+            if (dist[e.v] > dist[u] + e.w)
             {
-                dist[e.v] = t;
-                if (!visited[e.v])
+                dist[e.v] = dist[u] + e.w;
+                if (!in[e.v])
                 {
-                    unvisited.push(e.v);
-                    counter[e.v]++;
-                    visited[e.v] = 1;
+                    q.push(e.v);
+                    in[e.v] = 1;
                 }
             }
         }
-        
-        visited[u] = 0;
     }
-    
-    return false;
 }
 
 int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    cin >> n;
-
-    mx = 0, mn = INF;
-    for (int i = 0; i < MAXN; i++)
-        edges[i].clear();
-
-    int u, v, w;
-    for (int i = 0; i < n; i++)
+    int cases;
+    cin >> cases;
+    for (int cs = 0; cs < cases; cs++)
     {
-        cin >> u >> v >> w;
-        assert(u > 0);
-        edges[u - 1].push_back(edge{v, w});
-        mn = min(mn, u), mx = max(mx, v);
+        cin >> n;
+        idx = 0, mi = INF, mx = -INF;
+        memset(head, -1, sizeof(head));
+        int u, v, w;
+        for (int i = 0; i < n; i++)
+        {
+            cin >> u >> v >> w;
+            u++, v++;
+            addEdge(v, u - 1, -w);
+            mi = min(mi, u), mx = max(mx, v);
+        }
+        for (int i = mi; i <= mx; i++)
+        {
+            addEdge(i - 1, i, 1);
+            addEdge(i, i - 1, 0);
+        }
+        spfa();
+        if (cs) cout << '\n';
+        cout << (dist[mx] - dist[mi - 1]) << '\n';
     }
-
-    for (int i = mn; i <= mx; i++)
-    {
-        edges[i].push_back(edge{i - 1, -1});
-        edges[i - 1].push_back(edge{i, 0});
-    }
-
-    cout << (spfa() ? -1 : dist[mx]) << '\n';
     
     return 0;
 }
