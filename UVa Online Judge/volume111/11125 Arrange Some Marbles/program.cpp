@@ -1,8 +1,8 @@
 // Arrange Some Marbles
 // UVa ID: 11125
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2018-10-27
+// UVa Run Time: 0.020s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
@@ -10,10 +10,27 @@
 
 using namespace std;
 
-struct package
+int B, C, N[4], dp[4][4][4][4][5000];
+
+int dfs(int d, int sc, int sn, int ec, int en, int mask)
 {
-    long long total, used[4], start_color, start_cnt, last_color, last_cnt, ways;
-};
+    if (mask == 0)
+    {
+        if (d == 0 || (sc != ec && sn != en)) return 1;
+        return 0;
+    }
+    if (~dp[sc][sn][ec][en][mask]) return dp[sc][sn][ec][en][mask];
+    int r = 0;
+    for (int c = 0; c < C; c++)
+        for (int n = 1; n <= 3 && n <= N[c]; n++)
+            if (c != ec && n != en)
+            {
+                N[c] -= n;
+                r += dfs(d + 1, sc, sn, c, n, mask - (n << (c * 3)));
+                N[c] += n;
+            }
+    return dp[sc][sn][ec][en][mask] = r;
+}
 
 int main(int argc, char *argv[])
 {
@@ -21,55 +38,27 @@ int main(int argc, char *argv[])
 
     int cases;
     cin >> cases;
+    memset(dp, -1, sizeof(dp));
     for (int cs = 1; cs <= cases; cs++)
     {
-        int cnt[4], all = 0, colors;
-        cin >> colors;
-        for (int i = 0; i < colors; i++)
+        cin >> C;
+        memset(N, 0, sizeof(N));
+        B = 0;
+        for (int c = 0; c < C; c++)
         {
-            cin >> cnt[i];
-            all += cnt[i];
+            cin >> N[c];
+            B |= (N[c] << (c * 3));
         }
-        
-        queue<package> q;
-        package p;
-        memset(p.used, 0, sizeof(p.used));
-        p.total = 0;
-        p.start_color = p.last_color = -1;
-        p.start_cnt = p.last_cnt = 0;
-        q.push(p);
-                
-        long long sum = 0;
-        while (!q.empty())
+        if (B == 0)
         {
-            package p = q.front(); q.pop();
-            if (q.front().total == all)
-            {
-                if (p.start_color != p.last_color && p.start_cnt != p.last_cnt)
-                    sum += p.ways;
-                continue;
-            }
-            if (p.start_cnt == 0)
-            {
-                for (int i = 0; i < colors; i++)
-                {
-                    for (int j = 1; j <= 3; j++)
-                    {
-                        package next;
-                        memset(next.used, 0, sizeof(next.used));
-                        next.used[i] = j;
-                        next.start_color = i;
-                        next_start_cnt = j;
-                        q.push(next);
-                    }
-                }
-            }
-            if (p.last_cnt == 0)
-            {
-                
-            }
+            cout << "1\n";
+            continue;
         }
-        cout << sum << '\n';
+        int r = 0;
+        for (int c = 0; c < C; c++)
+            for (int n = 1; n <= 3 && n <= N[c]; n++)
+            r += dfs(0, c, n, c, n, B - (n << (c * 3)));
+        cout << r << '\n';
     }
 
     return 0;
