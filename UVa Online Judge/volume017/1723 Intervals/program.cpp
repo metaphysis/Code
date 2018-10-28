@@ -73,7 +73,6 @@ int main(int argc, char *argv[])
         {
             cin >> u >> v >> w;
             u++, v++;
-            assert(u > 0);
             edges[i].u = v, edges[i].v = u - 1, edges[i].w = -w;
             mi = min(mi, u), mx = max(mx, v);
         }
