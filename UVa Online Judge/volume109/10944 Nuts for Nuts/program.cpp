@@ -32,7 +32,7 @@ int dfs(int u, int mask)
     return dp[u][mask] = r;
 }
 
-int bfs(NODE u, int i)
+void bfs(NODE u, int id)
 {
     queue<NODE> q;
     q.push(u);
@@ -42,10 +42,7 @@ int bfs(NODE u, int i)
     {
         u = q.front(); q.pop();
         if (grid[u.x][u.y] == '#' || grid[u.x][u.y] == 'L')
-        {
-            dist[i][indexer[u.x * Y + u.y]] = u.w;
-            dist[indexer[u.x * Y + u.y]][i] = u.w;
-        }
+            dist[id][indexer[u.x * Y + u.y]] = u.w;
         for (int i = -1; i <= 1; i++)
             for (int j = -1; j <= 1; j++)
             {
@@ -91,9 +88,7 @@ int main(int argc, char *argv[])
         //    for (int j = 0; j < N; j++)
         //        dist[i][j] = max(abs(nuts[i].x - nuts[j].x), abs(nuts[i].y - nuts[j].y));
 
-        for (int i = 0; i < N; i++)
-            for (int j = 0; j < (1 << N); j++)
-                dp[i][j] = -1;
+        memset(dp, -1, sizeof(dp));
         cout << dfs(0, 1) << '\n';
     }
 
