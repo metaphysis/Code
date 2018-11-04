@@ -2,7 +2,7 @@
 
 using namespace std;
 
-const int MAXV = 10240;
+const int MAXV = 2048;
 
 vector<int> edges[MAXV], sequence;
 int n, m, visited[MAXV], parent[MAXV], in[MAXV];
@@ -24,17 +24,15 @@ int greedy()
     memset(visited, 0, sizeof(visited));
     memset(in, 0, sizeof(visited));
     int r = 0;
-    for (int i = n - 1; i >= 0; i--)
+    // Root node can not be checked, or lead to wrong answer.
+    for (int i = n - 1; i >= 1; i--)
     {
         int u = sequence[i];
-        if (!visited[u])
+        if (!visited[u] && !visited[parent[u]])
         {
-            if (!in[parent[u]])
-            {
-                in[parent[u]] = 1;
-                r += 1;
-            }
-            visited[u] = visited[parent[u]] = visited[parent[parent[u]]] = 1;
+            in[parent[u]] = 1;
+            r += 1;
+            visited[u] = visited[parent[u]] = 1;
         }
     }
     return r;

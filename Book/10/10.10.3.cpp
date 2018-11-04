@@ -2,7 +2,7 @@
 
 using namespace std;
 
-const int MAXV = 10240;
+const int MAXV = 2048;
 
 vector<int> edges[MAXV], sequence;
 int n, m, visited[MAXV], parent[MAXV], in[MAXV];
@@ -29,12 +29,9 @@ int greedy()
         int u = sequence[i];
         if (!visited[u])
         {
-            if (!in[parent[u]])
-            {
-                in[parent[u]] = 1;
-                r += 1;
-            }
-            visited[u] = visited[parent[u]] = visited[parent[parent[u]]] = 1;
+            in[parent[u]] = 1;
+            r += 1;
+            visited[u] = visited[parent[u]] = 1;
         }
     }
     return r;
