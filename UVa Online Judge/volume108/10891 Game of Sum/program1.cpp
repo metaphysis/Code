@@ -12,31 +12,19 @@ using namespace std;
 
 const int INF = 0x7f7f7f7f;
 int n, visited[110][110];
-int xi[110], sum[110], mx[110][110], mi[110][110];
+int xi[110], sum[110], dp[110][110];
 
-void dfs(int i, int j)
+int dfs(int i, int j)
 {
-    if (visited[i][j] || i > j) return;
+    if (visited[i][j] || i > j) return dp[i][j];
     visited[i][j] = 1;
-    int rmx = -INF, rmi = INF;
+    int r = -INF;
     for (int k = i; k <= j; k++)
     {
-        int s = sum[k] - sum[i - 1];
-        dfs(k + 1, j);
-        if (s + mi[k + 1][j] > rmx)
-        {
-            rmx = s + mi[k + 1][j];
-            rmi = mx[k + 1][j];
-        }
-        s = sum[j] - sum[k - 1];
-        dfs(i, k - 1);
-        if (s + mi[i][k - 1] > rmx)
-        {
-            rmx = s + mi[i][k - 1];
-            rmi = mx[i][k - 1];
-        }
+        r = max(r, sum[j] - sum[i - 1] - dfs(k + 1, j));
+        r = max(r, sum[j] - sum[i - 1] - dfs(i, k - 1));
     }
-    mx[i][j] = rmx, mi[i][j] = rmi;
+    return dp[i][j] = r;
 }
 
 int main(int argc, char *argv[])
@@ -52,10 +40,9 @@ int main(int argc, char *argv[])
             sum[i] = xi[i] + sum[i - 1];
         }
         memset(visited, 0, sizeof(visited));
-        memset(mx, 0, sizeof(mx));
-        memset(mi, 0, sizeof(mi));
-        dfs(1, n);
-        cout << (mx[1][n] - mi[1][n]) << '\n';
+        memset(dp, 0, sizeof(dp));
+        int r = dfs(1, n);
+        cout << (2 * r - sum[n]) << '\n';
     }
 
     return 0;
