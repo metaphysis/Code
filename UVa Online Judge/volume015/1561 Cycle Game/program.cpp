@@ -10,7 +10,12 @@
 
 using namespace std;
 
-map<int, set<int>> cache[21];
+int numbers[24], dp[24][32][32];
+
+int dfs(int u, int left, int right)
+{
+    if (~dp[u][left][right]) return dp[u][left][right];
+}
 
 int main(int argc, char *argv[])
 {
@@ -21,11 +26,10 @@ int main(int argc, char *argv[])
     for (int cs = 1; cs <= cases; cs++)
     {
         cin >> n;
-        for (int i = 1; i <= n; i++)
-        {
-            cache[n].clear();
-            cin >> ai;
-        }
+        for (int i = 0; i < n; i++)
+            cin >> numbers[i];
+        memset(dp, -1, sizeof(dp));
+        dfs(0, numbers[n - 1], numbers[0]);
     }
 
     return 0;
