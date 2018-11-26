@@ -1,8 +1,8 @@
 // Cycle Game
 // UVa ID: 1561
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2018-11-09
+// UVa Run Time: 0.040s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
@@ -10,26 +10,43 @@
 
 using namespace std;
 
-int numbers[24], dp[24][32][32];
+int n, numbers[24], dp[24][32][32];
 
-int dfs(int u, int left, int right)
+int dfs(int u)
 {
-    if (~dp[u][left][right]) return dp[u][left][right];
+    int v = (u - 1 + n) % n;
+    int &r = dp[u][numbers[v]][numbers[u]];
+    if (~r) return r;
+    for (int c = 1; c <= numbers[v]; c++)
+    {
+        numbers[v] -= c;
+        if (!dfs(v)) r = 1;
+        numbers[v] += c;
+        if (~r) return r;
+    }
+    for (int c = 1; c <= numbers[u]; c++)
+    {
+        numbers[u] -= c;
+        if (!dfs((u + 1) % n)) r = 1;
+        numbers[u] += c;
+        if (~r) return r;
+    }
+    return r = 0;
 }
 
 int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    int cases, n, ai;
+    int cases;
     cin >> cases;
     for (int cs = 1; cs <= cases; cs++)
     {
         cin >> n;
-        for (int i = 0; i < n; i++)
-            cin >> numbers[i];
+        for (int i = 0; i < n; i++) cin >> numbers[i];
         memset(dp, -1, sizeof(dp));
-        dfs(0, numbers[n - 1], numbers[0]);
+        cout << (dfs(0) ? "YES" : "NO");
+        cout << '\n';
     }
 
     return 0;

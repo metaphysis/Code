@@ -1,0 +1,11 @@
+Team #1:
+Maximum Effective Score = -1
+Batsmen :
+Bowlers :
+All-rounders :
+
+Team #2:
+Maximum Effective Score = -1
+Batsmen :
+Bowlers :
+All-rounders :
