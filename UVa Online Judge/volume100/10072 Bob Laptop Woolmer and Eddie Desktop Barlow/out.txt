@@ -1,11 +1,299 @@
-Team #1:
-Maximum Effective Score = -1
-Batsmen :
+Team #1
+Maximum Effective Score = 736
+Batsmen : 6 7 9 12 19 21 22 25
+Bowlers : 3
+All-rounders :
+
+Team #2
+Maximum Effective Score = 776
+Batsmen : 2 3 5 31
+Bowlers : 9 11 26 32
+All-rounders : 4 13
+
+Team #3
+Maximum Effective Score = 845
+Batsmen : 4 11 25 26 30 32 53 58 69
+Bowlers :
+All-rounders : 15
+
+Team #4
+Maximum Effective Score = 775
+Batsmen : 17 70
+Bowlers : 2 10 24 41 72 79 82
+All-rounders :
+
+Team #5
+Maximum Effective Score = 780
+Batsmen : 9 12 13 14 15 22 23 24 26
+Bowlers : 20
+All-rounders :
+
+Team #6
+Maximum Effective Score = 862
+Batsmen : 10 29 35 44
+Bowlers : 5 21 37 42 59
+All-rounders : 7
+
+Team #7
+Maximum Effective Score = 701
+Batsmen : 2 11 29 52 80 86 97
+Bowlers :
+All-rounders : 57
+
+Team #8
+Maximum Effective Score = 813
+Batsmen : 25 40
+Bowlers : 11 15 24 28 31 32 39 43
+All-rounders :
+
+Team #9
+Maximum Effective Score = 519
+Batsmen : 19
+Bowlers : 11 15
+All-rounders : 10 22 23
+
+Team #10
+Maximum Effective Score = 703
+Batsmen : 19
+Bowlers : 3 10 12 15 17 20 21
+All-rounders : 2
+
+Team #11
+Maximum Effective Score = 816
+Batsmen : 9 10 11 13 16 29 35 37
+Bowlers : 36
+All-rounders : 24
+
+Team #12
+Maximum Effective Score = 758
+Batsmen : 3 12 14 20 22 23 24 26 29 30
 Bowlers :
 All-rounders :
 
-Team #2:
-Maximum Effective Score = -1
-Batsmen :
+Team #13
+Maximum Effective Score = 805
+Batsmen : 4 15 25 41 52 60 76 77 82
 Bowlers :
 All-rounders :
+
+Team #14
+Maximum Effective Score = 659
+Batsmen : 13
+Bowlers : 52 80
+All-rounders : 43 63 64 69 78
+
+Team #15
+Maximum Effective Score = 886
+Batsmen : 13 20 28 70 77 78 81 84 94
+Bowlers : 48
+All-rounders :
+
+Team #16
+Maximum Effective Score = 842
+Batsmen : 5 6 9 14 19 20 33 37
+Bowlers : 3 32
+All-rounders :
+
+Team #17
+Maximum Effective Score = 685
+Batsmen : 3 4 7 10 11 12 13 18 19
+Bowlers :
+All-rounders : 5
+
+Team #18
+Maximum Effective Score = 639
+Batsmen : 2
+Bowlers :
+All-rounders : 1 11 12 13 26 27 31 38
+
+Team #19
+Maximum Effective Score = 545
+Batsmen : 40 44 68 75
+Bowlers : 36 52
+All-rounders :
+
+Team #20
+Maximum Effective Score = 430
+Batsmen : 9 52 80
+Bowlers :
+All-rounders : 17 18
+
+Team #21
+Maximum Effective Score = 551
+Batsmen : 10 15 16 39
+Bowlers : 1 22
+All-rounders : 4
+
+Team #22
+Maximum Effective Score = 876
+Batsmen : 1 13 21 28 35 69 70
+Bowlers : 5 23 80
+All-rounders :
+
+Team #23
+Maximum Effective Score = 785
+Batsmen : 4 5 14 16 22 23
+Bowlers : 3 11
+All-rounders : 6 15
+
+Team #24
+Maximum Effective Score = 726
+Batsmen : 24 25 27 29 39
+Bowlers : 18 46
+All-rounders : 5 19
+
+Team #25
+Maximum Effective Score = 878
+Batsmen : 10 22 27 38 91
+Bowlers : 6 14 45 59 77
+All-rounders :
+
+Team #26
+Maximum Effective Score = 788
+Batsmen : 27 33 38 43
+Bowlers : 8 12 20 23 39
+All-rounders :
+
+Team #27
+Maximum Effective Score = 697
+Batsmen : 3 13 31
+Bowlers :
+All-rounders : 4 10 18 19 23 24
+
+Team #28
+Maximum Effective Score = 537
+Batsmen : 2 5 9 12 14 21
+Bowlers : 20
+All-rounders :
+
+Team #29
+Maximum Effective Score = 850
+Batsmen : 7 14 32 52 54 66
+Bowlers : 13
+All-rounders : 12 45 59
+
+Team #30
+Maximum Effective Score = 854
+Batsmen : 2 30 53
+Bowlers : 21 33 40 43 44 46 66
+All-rounders :
+
+Team #31
+Maximum Effective Score = 830
+Batsmen : 19 22 24 29 38 44 47 54 55 64
+Bowlers :
+All-rounders :
+
+Team #32
+Maximum Effective Score = 369
+Batsmen : 13 20 72
+Bowlers : 15
+All-rounders :
+
+Team #33
+Maximum Effective Score = 814
+Batsmen : 40 74 77 83
+Bowlers : 7 11 22 44 85
+All-rounders :
+
+Team #34
+Maximum Effective Score = 681
+Batsmen : 8 10 11 19 25 46 65
+Bowlers :
+All-rounders : 52
+
+Team #35
+Maximum Effective Score = 829
+Batsmen : 58
+Bowlers : 2 10 17 20 29 42 49 52 67
+All-rounders :
+
+Team #36
+Maximum Effective Score = 507
+Batsmen : 2 6 11 12
+Bowlers : 24 32
+All-rounders :
+
+Team #37
+Maximum Effective Score = 770
+Batsmen : 1 8 10 11 18 19 20 21 22 30
+Bowlers :
+All-rounders :
+
+Team #38
+Maximum Effective Score = 590
+Batsmen : 3 13
+Bowlers : 1 8 10
+All-rounders : 6 7 14
+
+Team #39
+Maximum Effective Score = 844
+Batsmen : 1 6 9 13 17 20 28 29 62
+Bowlers : 43
+All-rounders :
+
+Team #40
+Maximum Effective Score = 807
+Batsmen : 12 32 59 75 79
+Bowlers : 42 70
+All-rounders : 50 55
+
+Team #41
+Maximum Effective Score = 714
+Batsmen : 21 29 60
+Bowlers : 9 33 45 74 83
+All-rounders :
+
+Team #42
+Maximum Effective Score = 726
+Batsmen : 44
+Bowlers : 10 22 32 40 41 42
+All-rounders : 8 43
+
+Team #43
+Maximum Effective Score = 808
+Batsmen : 7 8 15 19 21
+Bowlers : 16 30 31 32
+All-rounders : 13
+
+Team #44
+Maximum Effective Score = 774
+Batsmen : 11 26 33 54 68 82 86
+Bowlers : 8
+All-rounders : 58
+
+Team #45
+Maximum Effective Score = 316
+Batsmen : 7 9
+Bowlers : 1 8
+All-rounders :
+
+Team #46
+Maximum Effective Score = 454
+Batsmen : 3 42 44 72
+Bowlers :
+All-rounders : 69
+
+Team #47
+Maximum Effective Score = 871
+Batsmen : 21 34 39 48 51 67 73
+Bowlers : 38
+All-rounders : 25 66
+
+Team #48
+Maximum Effective Score = 707
+Batsmen : 3 4 5 8 13 14 20 23 26
+Bowlers :
+All-rounders :
+
+Team #49
+Maximum Effective Score = 843
+Batsmen : 4 12 25 37
+Bowlers : 29 33 40
+All-rounders : 1 9 36
+
+Team #50
+Maximum Effective Score = 842
+Batsmen : 17 33 41 44 45 50 59
+Bowlers : 27
+All-rounders : 30 43

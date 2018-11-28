@@ -1,8 +1,8 @@
 // Secret Word
 // UVa ID: 12467
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2018-11-27
+// UVa Run Time: 0.100s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
@@ -14,29 +14,31 @@ int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    int cases;
-    string line;
+    int cases, z[MAXN];
+    string A, S;
 
     cin >> cases;
-    for (int c = 1; c <= cases; c++)
+    for (int cs = 1; cs <= cases; cs++)
     {
-        cin >> line;
-        int longest = 0;
-        for (int i = line.length() - 1; i >= 0; i--)
+        cin >> A;
+        S = A;
+        S += '$';
+        for (int i = A.length() - 1; i >= 0; i--)
+            S += A[i];
+        int n = S.length(), longest = 0;
+        z[0] = n;
+        for (int i = 1, j = 1, k; i < n; i = k)
         {
-            if (line[i] == line[0])
-            {
-                int j = 0, k = i;
-                while (j <= k && line[j] == line[k]) j++, k--;
-                if (j > k)
-                    longest = max(longest, i + 1);
-                else
-                    longest = max(longest, j);
-            }
+            if (j < i) j = i;
+            while (j < n && S[j] == S[j - i]) j++;
+            z[i] = j - i;
+            k = i + 1;
+            while (k + z[k - i] < j) z[k] = z[k - i], k++;
+            if (i > A.length() && z[i] > longest) longest = z[i];
         }
-        string sub = line.substr(0, longest);
-        reverse(sub.begin(), sub.end());
-        cout << sub << '\n';
+        for (int i = longest - 1; i >= 0; i--)
+            cout << A[i];
+        cout << '\n';
     }
 
     return 0;
