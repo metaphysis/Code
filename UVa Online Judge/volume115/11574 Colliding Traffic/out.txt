@@ -1,0 +1,1000 @@
+1077
+No collision.
+103395
+No collision.
+140947
+No collision.
+No collision.
+No collision.
+16539
+22608
+147451
+67792
+25007
+No collision.
+33882
+0
+No collision.
+71029
+54143
+56143
+82583
+19373
+15469
+40853
+17778
+46619
+No collision.
+No collision.
+48367
+0
+No collision.
+0
+6007
+1465
+No collision.
+44429
+37744
+30613
+169359
+11599
+No collision.
+61181
+No collision.
+No collision.
+No collision.
+No collision.
+35461
+28986
+No collision.
+103511
+64620
+No collision.
+26204
+83177
+192917
+26372
+37033
+10279
+61604
+No collision.
+31648
+63140
+132120
+No collision.
+75347
+140084
+0
+32735
+No collision.
+50255
+47273
+No collision.
+10077
+11235
+No collision.
+No collision.
+No collision.
+22776
+No collision.
+0
+118519
+No collision.
+48019
+No collision.
+No collision.
+0
+27869
+No collision.
+0
+9182
+14664
+159364
+28570
+79078
+32424
+No collision.
+142155
+102189
+18133
+36723
+16236
+125581
+25427
+No collision.
+No collision.
+4405
+1790
+57943
+No collision.
+406318
+No collision.
+247782
+20
+33016
+0
+12712
+85269
+35132
+52140
+23036
+58275
+18079
+No collision.
+123635
+No collision.
+21641
+No collision.
+4916
+No collision.
+No collision.
+43259
+No collision.
+No collision.
+0
+554302
+3494
+No collision.
+530522
+10667
+0
+No collision.
+75891
+32082
+2316
+420300
+24306
+8441
+62473
+No collision.
+1434
+No collision.
+No collision.
+45956
+90848
+2229
+17081
+No collision.
+No collision.
+41735
+81377
+796
+32171
+No collision.
+No collision.
+No collision.
+11651
+57508
+No collision.
+No collision.
+No collision.
+35202
+191313
+3598
+88487
+96601
+1069
+No collision.
+No collision.
+No collision.
+3862
+81222
+No collision.
+23683
+No collision.
+22506
+12263
+0
+11432
+No collision.
+96560
+31577
+No collision.
+11389
+52835
+101721
+13730
+126741
+3416
+2129
+0
+7582
+No collision.
+No collision.
+No collision.
+No collision.
+63495
+11014
+No collision.
+15021
+No collision.
+183380
+11644
+577160
+32175
+40293
+18610
+No collision.
+No collision.
+51704
+14545
+61562
+26815
+No collision.
+210946
+12837
+No collision.
+15790
+420954
+0
+15048
+No collision.
+No collision.
+111641
+No collision.
+No collision.
+30887
+2997
+14982
+8406
+125999
+69022
+57372
+No collision.
+15777
+No collision.
+117492
+No collision.
+100982
+20239
+14567
+No collision.
+37623
+13064
+8767
+No collision.
+0
+116863
+9017
+92904
+No collision.
+459456
+18895
+No collision.
+17608
+36957
+No collision.
+121960
+21109
+74207
+No collision.
+No collision.
+72893
+427621
+15640
+214675
+No collision.
+No collision.
+No collision.
+9485
+77020
+No collision.
+23206
+8968
+142383
+No collision.
+41444
+165180
+35375
+36629
+64813
+334825
+0
+141442
+28381
+No collision.
+107572
+No collision.
+No collision.
+No collision.
+No collision.
+73496
+No collision.
+9545
+No collision.
+0
+110288
+No collision.
+No collision.
+19475
+No collision.
+No collision.
+No collision.
+No collision.
+37086
+No collision.
+1312850
+128377
+No collision.
+No collision.
+No collision.
+127566
+0
+55528
+No collision.
+No collision.
+No collision.
+No collision.
+12168
+100921
+No collision.
+No collision.
+82758
+34728
+203792
+98546
+No collision.
+No collision.
+18998
+No collision.
+120657
+40640
+41
+No collision.
+0
+No collision.
+No collision.
+110522
+72463
+38557
+0
+40511
+42015
+No collision.
+0
+45343
+No collision.
+186603
+12543
+68420
+106276
+113697
+27857
+No collision.
+73854
+5001
+5203
+No collision.
+No collision.
+No collision.
+119131
+848
+No collision.
+16268
+46860
+No collision.
+No collision.
+No collision.
+31460
+17181
+No collision.
+No collision.
+No collision.
+No collision.
+6108
+No collision.
+16179
+No collision.
+44677
+26781
+No collision.
+17049
+7315
+No collision.
+No collision.
+No collision.
+No collision.
+21011
+148410
+225558
+9485
+No collision.
+No collision.
+52297
+45753
+No collision.
+7556
+15139
+No collision.
+No collision.
+6935
+No collision.
+11477
+90607
+140819
+36131
+143988
+No collision.
+No collision.
+No collision.
+18534
+No collision.
+2468
+180210
+No collision.
+22642
+No collision.
+69559
+56737
+33178
+8614
+32010
+No collision.
+124909
+33267
+No collision.
+48456
+No collision.
+135264
+13923
+23507
+67675
+No collision.
+48589
+62910
+No collision.
+No collision.
+20633
+No collision.
+38553
+No collision.
+176544
+No collision.
+38630
+408265
+35216
+35587
+No collision.
+4760
+50245
+No collision.
+177324
+6275
+No collision.
+70648
+60080
+No collision.
+85
+No collision.
+No collision.
+39960
+3988
+3424
+31311
+6412
+No collision.
+192551
+790472
+1471134
+0
+No collision.
+No collision.
+32426
+No collision.
+0
+84621
+No collision.
+No collision.
+61136
+No collision.
+No collision.
+44764
+232940
+83379
+No collision.
+No collision.
+No collision.
+18724
+32095
+No collision.
+122302
+No collision.
+No collision.
+104528
+4310
+No collision.
+No collision.
+38555
+No collision.
+9935
+No collision.
+No collision.
+No collision.
+138818
+43269
+No collision.
+21585
+No collision.
+No collision.
+70588
+52008
+5142
+51593
+11804
+20366
+14802
+236452
+No collision.
+45063
+18316
+0
+No collision.
+1581
+62757
+20697
+No collision.
+0
+No collision.
+30054
+47905
+17346
+No collision.
+11285
+62567
+0
+51189
+11096
+No collision.
+No collision.
+No collision.
+51761
+32657
+No collision.
+No collision.
+No collision.
+54072
+No collision.
+No collision.
+No collision.
+56125
+75497
+206640
+No collision.
+No collision.
+No collision.
+14167
+52679
+18806
+0
+No collision.
+No collision.
+141785
+No collision.
+26075
+3584
+13880
+0
+54218
+No collision.
+7589
+No collision.
+146767
+0
+No collision.
+No collision.
+No collision.
+No collision.
+103541
+15206
+12468
+17951
+177759
+No collision.
+No collision.
+0
+No collision.
+64132
+32508
+16724
+147836
+33657
+No collision.
+26927
+22768
+17962
+26312
+92896
+No collision.
+40811
+No collision.
+12956
+No collision.
+5905
+No collision.
+No collision.
+212893
+2301
+No collision.
+No collision.
+13135
+60410
+No collision.
+18362
+No collision.
+214455
+65921
+275599
+12665
+51135
+46695
+No collision.
+55747
+0
+24664
+No collision.
+5660
+2717
+130007
+No collision.
+174593
+13750
+No collision.
+78809
+No collision.
+28376
+160019
+No collision.
+No collision.
+457948
+70589
+121939
+No collision.
+No collision.
+44135
+47616
+17530
+21014
+No collision.
+20851
+37348
+4911
+63122
+39807
+6204
+10351
+75256
+55657
+6567
+No collision.
+29434
+84247
+5082
+No collision.
+No collision.
+112284
+2025
+183977
+20200
+88713
+No collision.
+No collision.
+45844
+210601
+No collision.
+77464
+4953
+78584
+21633
+No collision.
+386246
+57114
+21653
+69196
+No collision.
+No collision.
+33417
+2346
+20066
+No collision.
+No collision.
+No collision.
+No collision.
+734
+No collision.
+12657
+184138
+No collision.
+No collision.
+35998
+No collision.
+20669
+0
+No collision.
+9648
+2363
+No collision.
+No collision.
+No collision.
+22378
+No collision.
+13350
+0
+14062
+37237
+No collision.
+34770
+84243
+86897
+33658
+160622
+7450
+7473
+No collision.
+108417
+No collision.
+37095
+20531
+No collision.
+24609
+0
+No collision.
+13187
+34141
+No collision.
+No collision.
+No collision.
+38656
+No collision.
+45921
+21965
+71818
+22900
+86314
+14852
+No collision.
+71116
+1181684
+38928
+10683
+8342
+10341
+232857
+184049
+21138
+8769
+No collision.
+5941
+21024
+No collision.
+No collision.
+24829
+21033
+No collision.
+10808
+No collision.
+122851
+No collision.
+153461
+30986
+38663
+No collision.
+19754
+No collision.
+16639
+17861
+561283
+78794
+No collision.
+No collision.
+No collision.
+No collision.
+19769
+36811
+15545
+No collision.
+287430
+7284
+10914
+95476
+No collision.
+No collision.
+102509
+No collision.
+197370
+6805
+153185
+19473
+13926
+30855
+39234
+61654
+42886
+No collision.
+17515
+No collision.
+0
+44025
+No collision.
+67671
+53070
+57176
+6332
+20484
+38404
+No collision.
+35013
+31685
+No collision.
+9641
+No collision.
+0
+0
+No collision.
+28452
+No collision.
+No collision.
+38064
+35261
+No collision.
+528798
+No collision.
+117932
+89181
+1680
+38891
+127
+70835
+No collision.
+367748
+5832
+No collision.
+No collision.
+534458
+80393
+13765
+254
+No collision.
+21669
+13508
+No collision.
+72322
+No collision.
+No collision.
+198871
+No collision.
+7766
+No collision.
+28947
+No collision.
+4736
+49270
+0
+133838
+No collision.
+No collision.
+No collision.
+63167
+102794
+257249
+233582
+458996
+No collision.
+41355
+302134
+No collision.
+6057
+No collision.
+No collision.
+No collision.
+No collision.
+No collision.
+17294
+No collision.
+157875
+14453
+17350
+19034
+17636
+8511
+388869
+No collision.
+2969
+2485
+27970
+11103
+10083
+27180
+3268
+No collision.
+No collision.
+16785
+8211
+No collision.
+45050
+28352
+No collision.
+10934
+3302
+24342
+612352
+41096
+No collision.
+110550
+23589
+No collision.
+193923
+4637
+75078
+No collision.
+13603
+No collision.
+No collision.
+386110
+61337
+46900
+No collision.
+105623
+No collision.
+17467
+No collision.
+112181
+21022
+No collision.
+No collision.
+15671
+No collision.
+No collision.
+30453
+No collision.
+51740
+46640
+3180
+21838
+147110
+56592
+No collision.
+No collision.
+No collision.
+No collision.
+42930
+No collision.
+261
+No collision.
+19599
+No collision.
+237061
+0
+13930
+6702
+73501
+33409
+No collision.
+No collision.
+No collision.
+45288
+No collision.
+110763
+No collision.
+190862
+148055
+46344
+6936
+No collision.
+6335
+No collision.
+9833
+3026
+25414
+No collision.
+54115
+0
+54742
+1052
+50485
+157280
+115319
+No collision.
+34868
+21748
+5647
+No collision.
