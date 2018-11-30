@@ -21,14 +21,14 @@ int main(int argc, char *argv[])
         long long cnt = 0;
         for (int i = 1; i < (1 << M); i++)
         {
-            long long p = 1;
+            long long lcm = 1;
             for (int j = 0; j < M; j++)
                 if (i & (1 << j))
                 {
-                    p = p / __gcd(p, numbers[j]) * numbers[j];
-                    if (p > N) break;
+                    lcm = lcm / __gcd(lcm, numbers[j]) * numbers[j];
+                    if (lcm > N) break;
                 }
-            cnt += (N / p) * ((__builtin_popcount(i) % 2) ? 1 : (-1));
+            cnt += (N / lcm) * ((__builtin_popcount(i) % 2) ? 1 : (-1));
         }
         cout << (N - cnt) << '\n';
     }

@@ -1,4 +1,5 @@
-// UVa Problem 922 - Rectangle by the Ocean
+// Rectangle by the Ocean
+// UVa ID: 922
 // Verdict: Accepted
 // Submission Date: 2011-11-08
 // UVa Run Time: 0.028s
