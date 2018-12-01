@@ -23,14 +23,14 @@ void mooreDijkstra(int u)
     while (!visited[u])
     {
         visited[u] = 1;
-        for (auto ve : edges[u])
-            if (!visited[ve.to] && dist[ve.to] > dist[u] + ve.weight)
-                dist[ve.to] = dist[u] + ve.weight, parent[ve.to] = u;
+        for (auto e : edges[u])
+            if (!visited[e.to] && dist[e.to] > dist[u] + e.weight)
+                dist[e.to] = dist[u] + e.weight, parent[e.to] = u;
 
-        int minDist = INF;
+        int least = INF;
         for (int i = 0; i < n; i++)
-            if (!visited[i] && minDist > dist[i])
-                minDist = dist[i], u = i;
+            if (!visited[i] && least > dist[i])
+                least = dist[i], u = i;
     }
 }
 

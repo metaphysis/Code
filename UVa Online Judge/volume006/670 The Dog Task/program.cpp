@@ -1,4 +1,4 @@
-// The dog task
+// The Dog Task
 // UVa ID: 670
 // Verdict: Accepted
 // Submission Date: 2016-11-09
