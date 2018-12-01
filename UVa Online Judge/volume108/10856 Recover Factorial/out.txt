@@ -1,0 +1,100 @@
+Case 1: 0!
+Case 2: 2!
+Case 3: Not possible.
+Case 4: Not possible.
+Case 5: 2526985!
+Case 6: 1305757!
+Case 7: 99559!
+Case 8: Not possible.
+Case 9: Not possible.
+Case 10: Not possible.
+Case 11: 1620210!
+Case 12: Not possible.
+Case 13: 1617298!
+Case 14: Not possible.
+Case 15: 1528502!
+Case 16: 2076272!
+Case 17: Not possible.
+Case 18: Not possible.
+Case 19: Not possible.
+Case 20: Not possible.
+Case 21: Not possible.
+Case 22: Not possible.
+Case 23: Not possible.
+Case 24: Not possible.
+Case 25: Not possible.
+Case 26: Not possible.
+Case 27: Not possible.
+Case 28: 664726!
+Case 29: 2384746!
+Case 30: Not possible.
+Case 31: Not possible.
+Case 32: Not possible.
+Case 33: Not possible.
+Case 34: Not possible.
+Case 35: Not possible.
+Case 36: Not possible.
+Case 37: Not possible.
+Case 38: Not possible.
+Case 39: 1998729!
+Case 40: 717687!
+Case 41: Not possible.
+Case 42: Not possible.
+Case 43: Not possible.
+Case 44: Not possible.
+Case 45: Not possible.
+Case 46: Not possible.
+Case 47: 1670714!
+Case 48: 377370!
+Case 49: Not possible.
+Case 50: Not possible.
+Case 51: Not possible.
+Case 52: Not possible.
+Case 53: Not possible.
+Case 54: Not possible.
+Case 55: Not possible.
+Case 56: Not possible.
+Case 57: Not possible.
+Case 58: Not possible.
+Case 59: Not possible.
+Case 60: Not possible.
+Case 61: 1963344!
+Case 62: Not possible.
+Case 63: Not possible.
+Case 64: Not possible.
+Case 65: Not possible.
+Case 66: Not possible.
+Case 67: Not possible.
+Case 68: Not possible.
+Case 69: Not possible.
+Case 70: Not possible.
+Case 71: Not possible.
+Case 72: Not possible.
+Case 73: Not possible.
+Case 74: Not possible.
+Case 75: Not possible.
+Case 76: Not possible.
+Case 77: Not possible.
+Case 78: 1190545!
+Case 79: Not possible.
+Case 80: Not possible.
+Case 81: Not possible.
+Case 82: Not possible.
+Case 83: Not possible.
+Case 84: Not possible.
+Case 85: Not possible.
+Case 86: Not possible.
+Case 87: 217222!
+Case 88: Not possible.
+Case 89: 2218066!
+Case 90: Not possible.
+Case 91: 1565384!
+Case 92: Not possible.
+Case 93: Not possible.
+Case 94: 434025!
+Case 95: 2691112!
+Case 96: Not possible.
+Case 97: Not possible.
+Case 98: Not possible.
+Case 99: 474864!
+Case 100: 2703663!

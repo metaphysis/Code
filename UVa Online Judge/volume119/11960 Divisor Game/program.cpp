@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
         if (factors[i] >= factors[most[i - 1]]) most[i] = i;
         else most[i] = most[i - 1];
     }
-    
+
     int T, N;
     cin >> T;
     for (int cs = 1; cs <= T; cs++)
