@@ -35,6 +35,15 @@ private:
         return visited[sink];
     }
 
+    void restoreFlowNetwork()
+    {
+        for (int i = 0; i < idx; i++)
+        {
+            if (i & 1) arcs[i].residual = 0;
+            else arcs[i].residual = arcs[i].capacity;
+        }
+    }
+
 public:
     EdmondsKarp(int v, int e, int s, int t)
     {
@@ -52,6 +61,8 @@ public:
 
     int maxFlow()
     {
+        restoreFlowNetwork();
+
         int flow = 0;
 
         while (bfs())

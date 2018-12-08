@@ -1,4 +1,4 @@
-// Flea circus
+// Flea Circus
 // UVa ID: 10938
 // Verdict: Accepted
 // Submission Date: 2017-02-26
