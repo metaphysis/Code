@@ -12,12 +12,12 @@
 
 using namespace std;
 
-vector < pair < int, int > > obstacles;
-vector < vector < int > > edges;
-vector < bool > visited;
+vector<pair<int, int>> obstacles;
+vector<vector<int>> edges;
+vector<bool> visited;
 int L, W, N, top, bottom;
 
-double distances(pair < int, int > x, pair < int, int > y)
+double distances(pair<int, int> x, pair<int, int> y)
 {
     return sqrt(pow(x.first - y.first, 2) + pow(x.second - y.second, 2));
 }
@@ -27,7 +27,7 @@ void build(double diameter)
     edges.clear();
 
     for (int i = 0; i < obstacles.size() + 2; i++)
-        edges.push_back(vector < int >());
+        edges.push_back(vector<int>());
 
     for (int i = 0; i < obstacles.size(); i++)
     {

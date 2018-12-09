@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
     for (int cs = 1; cs <= T; cs++)
     {
         cin >> N >> M;
-        long long low = 0, high = N, mid, answer;
+        long long low = 0, high = N - 1, mid, answer;
         while (low <= high)
         {
             mid = (low + high) >> 1;
@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
             }
             else high = mid - 1;
         }
-        cout << min(answer, M) << '\n';
+        cout << answer << '\n';
     }
 
     return 0;
