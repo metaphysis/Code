@@ -1,0 +1,100 @@
+Case #1: Selected city (11,2) with minimum cost 798.
+Case #2: Selected city (2,16) with minimum cost 386.
+Case #3: Impossible.
+Case #4: Selected city (2,6) with minimum cost 473.
+Case #5: Selected city (4,3) with minimum cost 422.
+Case #6: Impossible.
+Case #7: Selected city (2,1) with minimum cost 557.
+Case #8: Selected city (1,0) with minimum cost 228.
+Case #9: Selected city (2,3) with minimum cost 0.
+Case #10: Selected city (0,0) with minimum cost 0.
+Case #11: Selected city (3,3) with minimum cost 371.
+Case #12: Selected city (15,4) with minimum cost 548.
+Case #13: Selected city (11,10) with minimum cost 1071.
+Case #14: Selected city (1,6) with minimum cost 968.
+Case #15: Impossible.
+Case #16: Selected city (16,9) with minimum cost 777.
+Case #17: Selected city (1,2) with minimum cost 139.
+Case #18: Selected city (0,0) with minimum cost 0.
+Case #19: Selected city (19,4) with minimum cost 0.
+Case #20: Selected city (0,7) with minimum cost 0.
+Case #21: Selected city (16,0) with minimum cost 0.
+Case #22: Selected city (12,12) with minimum cost 0.
+Case #23: Selected city (4,4) with minimum cost 140.
+Case #24: Selected city (4,7) with minimum cost 589.
+Case #25: Selected city (4,7) with minimum cost 193.
+Case #26: Selected city (4,0) with minimum cost 561.
+Case #27: Selected city (2,2) with minimum cost 68.
+Case #28: Selected city (0,1) with minimum cost 293.
+Case #29: Selected city (2,1) with minimum cost 156.
+Case #30: Selected city (1,0) with minimum cost 218.
+Case #31: Selected city (9,10) with minimum cost 471.
+Case #32: Selected city (1,1) with minimum cost 373.
+Case #33: Impossible.
+Case #34: Impossible.
+Case #35: Selected city (9,11) with minimum cost 479.
+Case #36: Selected city (2,1) with minimum cost 473.
+Case #37: Selected city (12,4) with minimum cost 0.
+Case #38: Selected city (10,11) with minimum cost 1680.
+Case #39: Selected city (7,10) with minimum cost 977.
+Case #40: Selected city (7,12) with minimum cost 1612.
+Case #41: Selected city (3,11) with minimum cost 130.
+Case #42: Impossible.
+Case #43: Selected city (0,0) with minimum cost 79.
+Case #44: Selected city (4,3) with minimum cost 423.
+Case #45: Impossible.
+Case #46: Selected city (2,15) with minimum cost 0.
+Case #47: Selected city (17,10) with minimum cost 482.
+Case #48: Selected city (6,8) with minimum cost 1358.
+Case #49: Selected city (2,2) with minimum cost 121.
+Case #50: Selected city (4,18) with minimum cost 1014.
+Case #51: Selected city (10,7) with minimum cost 0.
+Case #52: Selected city (2,1) with minimum cost 43.
+Case #53: Selected city (5,4) with minimum cost 701.
+Case #54: Selected city (3,7) with minimum cost 107.
+Case #55: Selected city (8,7) with minimum cost 853.
+Case #56: Selected city (10,9) with minimum cost 1008.
+Case #57: Selected city (8,5) with minimum cost 0.
+Case #58: Selected city (4,2) with minimum cost 463.
+Case #59: Selected city (2,3) with minimum cost 0.
+Case #60: Selected city (9,15) with minimum cost 0.
+Case #61: Impossible.
+Case #62: Selected city (6,5) with minimum cost 918.
+Case #63: Selected city (3,2) with minimum cost 664.
+Case #64: Selected city (6,2) with minimum cost 0.
+Case #65: Selected city (3,3) with minimum cost 628.
+Case #66: Selected city (11,5) with minimum cost 868.
+Case #67: Selected city (7,19) with minimum cost 427.
+Case #68: Impossible.
+Case #69: Selected city (2,3) with minimum cost 332.
+Case #70: Selected city (12,8) with minimum cost 922.
+Case #71: Impossible.
+Case #72: Selected city (8,0) with minimum cost 259.
+Case #73: Selected city (2,2) with minimum cost 20.
+Case #74: Selected city (0,1) with minimum cost 0.
+Case #75: Selected city (0,0) with minimum cost 0.
+Case #76: Selected city (7,10) with minimum cost 1137.
+Case #77: Selected city (3,6) with minimum cost 53.
+Case #78: Impossible.
+Case #79: Selected city (10,6) with minimum cost 0.
+Case #80: Selected city (2,6) with minimum cost 175.
+Case #81: Selected city (1,0) with minimum cost 138.
+Case #82: Selected city (0,0) with minimum cost 0.
+Case #83: Selected city (3,12) with minimum cost 0.
+Case #84: Selected city (11,4) with minimum cost 0.
+Case #85: Selected city (1,1) with minimum cost 219.
+Case #86: Selected city (5,8) with minimum cost 756.
+Case #87: Selected city (9,4) with minimum cost 324.
+Case #88: Selected city (2,5) with minimum cost 511.
+Case #89: Selected city (4,5) with minimum cost 507.
+Case #90: Impossible.
+Case #91: Impossible.
+Case #92: Selected city (1,1) with minimum cost 12.
+Case #93: Selected city (6,4) with minimum cost 570.
+Case #94: Selected city (16,12) with minimum cost 618.
+Case #95: Selected city (10,11) with minimum cost 1417.
+Case #96: Selected city (3,2) with minimum cost 0.
+Case #97: Selected city (0,0) with minimum cost 166.
+Case #98: Impossible.
+Case #99: Selected city (4,4) with minimum cost 315.
+Case #100: Selected city (5,8) with minimum cost 1325.
