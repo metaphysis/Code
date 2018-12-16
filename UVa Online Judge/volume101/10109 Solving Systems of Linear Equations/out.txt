@@ -1,0 +1,16 @@
+Solution for Matrix System # 1
+X[1] = -2/1
+X[2] = -2/1
+X[3] = -2/1
+
+Solution for Matrix System # 2
+X[1] = 1/1
+X[2] = 1/1
+X[3] = 1/1
+
+Solution for Matrix System # 3
+X[1] = 10/1
+X[2] = 10/1
+
+Solution for Matrix System # 4
+X[1] = 10/3

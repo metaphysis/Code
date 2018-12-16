@@ -2,7 +2,7 @@
 
 using namespace std;
 
-const int MAXV = 1010, INF = 0x3fffffff;
+const int MAXV = 1010, INF = 0x3f3f3f3f;
 
 struct edge
 {
@@ -44,14 +44,14 @@ void mooreDijkstra1(int u)
 
     while (!q.empty())
     {
-        edge ue = q.top(); q.pop();
-        if (dist[ue.to] < ue.weight) continue;
-        for (auto ve : edges[ue.to])
-            if (dist[ve.to] > dist[ue.to] + ve.weight)
+        edge e1 = q.top(); q.pop();
+        if (dist[e1.to] < e1.weight) continue;
+        for (auto e2 : edges[e1.to])
+            if (dist[e2.to] > dist[e1.to] + e2.weight)
             {
-                dist[ve.to] = dist[ue.to] + ve.weight;
-                parent[ve.to] = ue.to;
-                q.push(edge(ve.to, dist[ve.to]));
+                dist[e2.to] = dist[e1.to] + e2.weight;
+                parent[e2.to] = e1.to;
+                q.push(edge(e2.to, dist[e2.to]));
             }
     }
 }

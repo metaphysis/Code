@@ -1,0 +1,11 @@
+pair 1: no
+pair 2: no
+pair 3: yes
+pair 4: yes
+pair 5: yes
+pair 6: yes
+pair 7: yes
+pair 8: yes
+pair 9: no
+pair 10: no
+pair 11: no

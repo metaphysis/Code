@@ -2,7 +2,7 @@
 // UVa ID: 718
 // Verdict: Accepted
 // Submission Date: 2018-12-15
-// UVa Run Time: 0.000s
+// UVa Run Time: 0.010s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
