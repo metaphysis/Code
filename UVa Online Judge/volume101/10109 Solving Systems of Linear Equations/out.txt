@@ -1,16 +1,3465 @@
 Solution for Matrix System # 1
-X[1] = -2/1
-X[2] = -2/1
-X[3] = -2/1
+Infinitely many solutions containing 2 arbitrary constants.
 
 Solution for Matrix System # 2
-X[1] = 1/1
-X[2] = 1/1
-X[3] = 1/1
+No Solution.
 
 Solution for Matrix System # 3
-X[1] = 10/1
-X[2] = 10/1
+x[1] = 1505/419
+x[2] = -935/838
+x[3] = 163/838
+x[4] = -1710/419
+x[5] = 1903/838
 
 Solution for Matrix System # 4
-X[1] = 10/3
+No Solution.
+
+Solution for Matrix System # 5
+x[1] = 84608/12395
+x[2] = -65316/2479
+x[3] = 61470/2479
+x[4] = 38814/12395
+x[5] = 17653/2479
+
+Solution for Matrix System # 6
+x[1] = 3/19
+x[2] = 62/95
+x[3] = -3/19
+
+Solution for Matrix System # 7
+No Solution.
+
+Solution for Matrix System # 8
+No Solution.
+
+Solution for Matrix System # 9
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 10
+No Solution.
+
+Solution for Matrix System # 11
+No Solution.
+
+Solution for Matrix System # 12
+No Solution.
+
+Solution for Matrix System # 13
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 14
+x[1] = -20672/13333
+x[2] = 20220/13333
+x[3] = -1922/13333
+x[4] = 118115/13333
+x[5] = -37827/13333
+
+Solution for Matrix System # 15
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 16
+x[1] = 48/13
+x[2] = -5/2
+x[3] = 2
+x[4] = -246/13
+x[5] = 207/26
+
+Solution for Matrix System # 17
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 18
+x[1] = 9/2
+x[2] = -5/2
+
+Solution for Matrix System # 19
+x[1] = -67/312
+x[2] = -1/13
+x[3] = 32/39
+x[4] = -3/26
+
+Solution for Matrix System # 20
+x[1] = 309/322
+x[2] = -177/1610
+x[3] = 806/805
+x[4] = 183/322
+x[5] = -1/161
+
+Solution for Matrix System # 21
+x[1] = -7/18
+x[2] = 5/6
+
+Solution for Matrix System # 22
+x[1] = 157/216
+x[2] = -13/54
+
+Solution for Matrix System # 23
+No Solution.
+
+Solution for Matrix System # 24
+x[1] = 7609/21132
+x[2] = -2783/14088
+x[3] = -78341/10566
+x[4] = 18559/7044
+x[5] = -1195/1761
+
+Solution for Matrix System # 25
+No Solution.
+
+Solution for Matrix System # 26
+x[1] = -4479/610
+x[2] = 227/61
+x[3] = -19233/305
+x[4] = 10212/305
+x[5] = -2266/61
+
+Solution for Matrix System # 27
+x[1] = -4/3
+x[2] = 1
+
+Solution for Matrix System # 28
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 29
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 30
+No Solution.
+
+Solution for Matrix System # 31
+No Solution.
+
+Solution for Matrix System # 32
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 33
+No Solution.
+
+Solution for Matrix System # 34
+No Solution.
+
+Solution for Matrix System # 35
+No Solution.
+
+Solution for Matrix System # 36
+No Solution.
+
+Solution for Matrix System # 37
+x[1] = -2052633/1816942
+x[2] = 66405/1816942
+x[3] = 278326/908471
+x[4] = 1496640/908471
+x[5] = 458655/908471
+
+Solution for Matrix System # 38
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 39
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 40
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 41
+No Solution.
+
+Solution for Matrix System # 42
+No Solution.
+
+Solution for Matrix System # 43
+x[1] = 2/3
+
+Solution for Matrix System # 44
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 45
+No Solution.
+
+Solution for Matrix System # 46
+x[1] = 0
+x[2] = 0
+
+Solution for Matrix System # 47
+No Solution.
+
+Solution for Matrix System # 48
+No Solution.
+
+Solution for Matrix System # 49
+x[1] = 105/26
+x[2] = -245/312
+x[3] = -3/26
+
+Solution for Matrix System # 50
+No Solution.
+
+Solution for Matrix System # 51
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 52
+No Solution.
+
+Solution for Matrix System # 53
+Infinitely many solutions containing 4 arbitrary constants.
+
+Solution for Matrix System # 54
+Infinitely many solutions containing 4 arbitrary constants.
+
+Solution for Matrix System # 55
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 56
+x[1] = 2/3
+
+Solution for Matrix System # 57
+No Solution.
+
+Solution for Matrix System # 58
+No Solution.
+
+Solution for Matrix System # 59
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 60
+x[1] = 9/2
+
+Solution for Matrix System # 61
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 62
+No Solution.
+
+Solution for Matrix System # 63
+No Solution.
+
+Solution for Matrix System # 64
+No Solution.
+
+Solution for Matrix System # 65
+No Solution.
+
+Solution for Matrix System # 66
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 67
+No Solution.
+
+Solution for Matrix System # 68
+No Solution.
+
+Solution for Matrix System # 69
+No Solution.
+
+Solution for Matrix System # 70
+No Solution.
+
+Solution for Matrix System # 71
+No Solution.
+
+Solution for Matrix System # 72
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 73
+x[1] = -249/37
+x[2] = 17/20
+x[3] = 286/185
+
+Solution for Matrix System # 74
+No Solution.
+
+Solution for Matrix System # 75
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 76
+No Solution.
+
+Solution for Matrix System # 77
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 78
+No Solution.
+
+Solution for Matrix System # 79
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 80
+No Solution.
+
+Solution for Matrix System # 81
+No Solution.
+
+Solution for Matrix System # 82
+No Solution.
+
+Solution for Matrix System # 83
+Infinitely many solutions containing 4 arbitrary constants.
+
+Solution for Matrix System # 84
+No Solution.
+
+Solution for Matrix System # 85
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 86
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 87
+x[1] = 203/305
+x[2] = 17/61
+x[3] = -168/305
+x[4] = 64/61
+
+Solution for Matrix System # 88
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 89
+x[1] = -36/175
+x[2] = 706/525
+x[3] = -11/175
+
+Solution for Matrix System # 90
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 91
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 92
+x[1] = 13/66
+x[2] = 59/88
+x[3] = -25/22
+x[4] = 1
+
+Solution for Matrix System # 93
+x[1] = -9817/34989
+x[2] = -3728/11663
+x[3] = 32954/11663
+x[4] = 31180/34989
+x[5] = 5209/11663
+
+Solution for Matrix System # 94
+No Solution.
+
+Solution for Matrix System # 95
+x[1] = 9/2
+x[2] = -2/3
+
+Solution for Matrix System # 96
+No Solution.
+
+Solution for Matrix System # 97
+No Solution.
+
+Solution for Matrix System # 98
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 99
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 100
+x[1] = -35/3
+x[2] = 6
+
+Solution for Matrix System # 101
+No Solution.
+
+Solution for Matrix System # 102
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 103
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 104
+No Solution.
+
+Solution for Matrix System # 105
+No Solution.
+
+Solution for Matrix System # 106
+x[1] = 1/3
+
+Solution for Matrix System # 107
+x[1] = -85/3336
+x[2] = 9/139
+x[3] = 1300/417
+x[4] = 251/278
+
+Solution for Matrix System # 108
+x[1] = -547/661
+x[2] = -145/1322
+x[3] = 1391/1322
+x[4] = 336/661
+
+Solution for Matrix System # 109
+No Solution.
+
+Solution for Matrix System # 110
+x[1] = -825/733
+x[2] = 3783/3665
+x[3] = -2976/3665
+x[4] = 366/733
+x[5] = -122/733
+
+Solution for Matrix System # 111
+Infinitely many solutions containing 4 arbitrary constants.
+
+Solution for Matrix System # 112
+x[1] = 1/5
+
+Solution for Matrix System # 113
+No Solution.
+
+Solution for Matrix System # 114
+No Solution.
+
+Solution for Matrix System # 115
+No Solution.
+
+Solution for Matrix System # 116
+Infinitely many solutions containing 4 arbitrary constants.
+
+Solution for Matrix System # 117
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 118
+x[1] = 6/5
+
+Solution for Matrix System # 119
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 120
+No Solution.
+
+Solution for Matrix System # 121
+No Solution.
+
+Solution for Matrix System # 122
+x[1] = 0
+
+Solution for Matrix System # 123
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 124
+x[1] = 0
+
+Solution for Matrix System # 125
+No Solution.
+
+Solution for Matrix System # 126
+No Solution.
+
+Solution for Matrix System # 127
+No Solution.
+
+Solution for Matrix System # 128
+No Solution.
+
+Solution for Matrix System # 129
+No Solution.
+
+Solution for Matrix System # 130
+No Solution.
+
+Solution for Matrix System # 131
+No Solution.
+
+Solution for Matrix System # 132
+No Solution.
+
+Solution for Matrix System # 133
+No Solution.
+
+Solution for Matrix System # 134
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 135
+No Solution.
+
+Solution for Matrix System # 136
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 137
+x[1] = -2/35
+x[2] = 37/35
+x[3] = -2/35
+
+Solution for Matrix System # 138
+No Solution.
+
+Solution for Matrix System # 139
+No Solution.
+
+Solution for Matrix System # 140
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 141
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 142
+x[1] = 377/736
+x[2] = -141/1472
+x[3] = 227/368
+x[4] = -9/184
+
+Solution for Matrix System # 143
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 144
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 145
+x[1] = 89300/130007
+x[2] = 443600/1170063
+x[3] = 683276/1170063
+x[4] = -57755/390021
+x[5] = -457300/1170063
+
+Solution for Matrix System # 146
+x[1] = 33649/122905
+x[2] = -25922/122905
+x[3] = 25789/245810
+x[4] = 105156/122905
+x[5] = -22221/245810
+
+Solution for Matrix System # 147
+No Solution.
+
+Solution for Matrix System # 148
+No Solution.
+
+Solution for Matrix System # 149
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 150
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 151
+No Solution.
+
+Solution for Matrix System # 152
+No Solution.
+
+Solution for Matrix System # 153
+No Solution.
+
+Solution for Matrix System # 154
+x[1] = 764/551
+x[2] = 3877/7714
+x[3] = -480/551
+x[4] = -5865/7714
+
+Solution for Matrix System # 155
+No Solution.
+
+Solution for Matrix System # 156
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 157
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 158
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 159
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 160
+No Solution.
+
+Solution for Matrix System # 161
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 162
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 163
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 164
+x[1] = 2/3
+
+Solution for Matrix System # 165
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 166
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 167
+No Solution.
+
+Solution for Matrix System # 168
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 169
+Infinitely many solutions containing 4 arbitrary constants.
+
+Solution for Matrix System # 170
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 171
+No Solution.
+
+Solution for Matrix System # 172
+No Solution.
+
+Solution for Matrix System # 173
+No Solution.
+
+Solution for Matrix System # 174
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 175
+Infinitely many solutions containing 4 arbitrary constants.
+
+Solution for Matrix System # 176
+x[1] = 0
+
+Solution for Matrix System # 177
+No Solution.
+
+Solution for Matrix System # 178
+No Solution.
+
+Solution for Matrix System # 179
+x[1] = 0
+x[2] = 0
+x[3] = 1/2
+
+Solution for Matrix System # 180
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 181
+Infinitely many solutions containing 4 arbitrary constants.
+
+Solution for Matrix System # 182
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 183
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 184
+No Solution.
+
+Solution for Matrix System # 185
+Infinitely many solutions containing 4 arbitrary constants.
+
+Solution for Matrix System # 186
+Infinitely many solutions containing 4 arbitrary constants.
+
+Solution for Matrix System # 187
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 188
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 189
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 190
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 191
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 192
+No Solution.
+
+Solution for Matrix System # 193
+x[1] = -4433/9730
+x[2] = -42741/4865
+x[3] = -2257/1946
+x[4] = 29949/4865
+x[5] = 2603/1946
+
+Solution for Matrix System # 194
+No Solution.
+
+Solution for Matrix System # 195
+No Solution.
+
+Solution for Matrix System # 196
+No Solution.
+
+Solution for Matrix System # 197
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 198
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 199
+No Solution.
+
+Solution for Matrix System # 200
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 201
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 202
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 203
+x[1] = -3351/12070
+x[2] = -8557/241400
+x[3] = 4469/12070
+x[4] = -381/24140
+x[5] = 12451/24140
+
+Solution for Matrix System # 204
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 205
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 206
+Infinitely many solutions containing 4 arbitrary constants.
+
+Solution for Matrix System # 207
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 208
+No Solution.
+
+Solution for Matrix System # 209
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 210
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 211
+x[1] = 390/121
+x[2] = -92/121
+x[3] = 284/363
+x[4] = -1352/363
+
+Solution for Matrix System # 212
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 213
+No Solution.
+
+Solution for Matrix System # 214
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 215
+No Solution.
+
+Solution for Matrix System # 216
+No Solution.
+
+Solution for Matrix System # 217
+No Solution.
+
+Solution for Matrix System # 218
+No Solution.
+
+Solution for Matrix System # 219
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 220
+No Solution.
+
+Solution for Matrix System # 221
+No Solution.
+
+Solution for Matrix System # 222
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 223
+x[1] = 4/3
+
+Solution for Matrix System # 224
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 225
+Infinitely many solutions containing 4 arbitrary constants.
+
+Solution for Matrix System # 226
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 227
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 228
+No Solution.
+
+Solution for Matrix System # 229
+x[1] = 3/2
+x[2] = -20
+
+Solution for Matrix System # 230
+x[1] = -25/72
+x[2] = 25/24
+
+Solution for Matrix System # 231
+No Solution.
+
+Solution for Matrix System # 232
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 233
+No Solution.
+
+Solution for Matrix System # 234
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 235
+No Solution.
+
+Solution for Matrix System # 236
+No Solution.
+
+Solution for Matrix System # 237
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 238
+No Solution.
+
+Solution for Matrix System # 239
+No Solution.
+
+Solution for Matrix System # 240
+x[1] = 654/631
+x[2] = -192/631
+x[3] = -654/631
+x[4] = 553/631
+
+Solution for Matrix System # 241
+Infinitely many solutions containing 4 arbitrary constants.
+
+Solution for Matrix System # 242
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 243
+No Solution.
+
+Solution for Matrix System # 244
+No Solution.
+
+Solution for Matrix System # 245
+No Solution.
+
+Solution for Matrix System # 246
+No Solution.
+
+Solution for Matrix System # 247
+No Solution.
+
+Solution for Matrix System # 248
+x[1] = 25591/37726
+x[2] = -46734/18863
+x[3] = 2191/1451
+x[4] = -89781/37726
+x[5] = 99707/18863
+
+Solution for Matrix System # 249
+No Solution.
+
+Solution for Matrix System # 250
+No Solution.
+
+Solution for Matrix System # 251
+Infinitely many solutions containing 4 arbitrary constants.
+
+Solution for Matrix System # 252
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 253
+No Solution.
+
+Solution for Matrix System # 254
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 255
+x[1] = -2745/1759
+x[2] = 540/1759
+x[3] = 291/1759
+x[4] = 1936/1759
+x[5] = 6420/1759
+
+Solution for Matrix System # 256
+No Solution.
+
+Solution for Matrix System # 257
+No Solution.
+
+Solution for Matrix System # 258
+x[1] = 1/25
+
+Solution for Matrix System # 259
+No Solution.
+
+Solution for Matrix System # 260
+No Solution.
+
+Solution for Matrix System # 261
+No Solution.
+
+Solution for Matrix System # 262
+No Solution.
+
+Solution for Matrix System # 263
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 264
+No Solution.
+
+Solution for Matrix System # 265
+No Solution.
+
+Solution for Matrix System # 266
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 267
+No Solution.
+
+Solution for Matrix System # 268
+x[1] = -679/45
+x[2] = 1561/15
+x[3] = -3194/45
+x[4] = -1636/45
+x[5] = -1411/9
+
+Solution for Matrix System # 269
+x[1] = 1565/10068
+x[2] = 14575/40272
+x[3] = -539/2517
+x[4] = 6173/10068
+x[5] = -5255/10068
+
+Solution for Matrix System # 270
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 271
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 272
+No Solution.
+
+Solution for Matrix System # 273
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 274
+x[1] = 1/3
+
+Solution for Matrix System # 275
+x[1] = 4737/1402
+x[2] = 2684/701
+x[3] = -391/701
+x[4] = -2689/701
+
+Solution for Matrix System # 276
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 277
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 278
+x[1] = 5/2
+
+Solution for Matrix System # 279
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 280
+No Solution.
+
+Solution for Matrix System # 281
+No Solution.
+
+Solution for Matrix System # 282
+No Solution.
+
+Solution for Matrix System # 283
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 284
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 285
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 286
+No Solution.
+
+Solution for Matrix System # 287
+No Solution.
+
+Solution for Matrix System # 288
+x[1] = 141/257
+x[2] = -328/771
+x[3] = 4175/1028
+x[4] = -40/257
+
+Solution for Matrix System # 289
+x[1] = -12075/32428
+x[2] = 59129/48642
+x[3] = -5684/8107
+x[4] = 10281/32428
+x[5] = -3700/8107
+
+Solution for Matrix System # 290
+No Solution.
+
+Solution for Matrix System # 291
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 292
+x[1] = 0
+
+Solution for Matrix System # 293
+No Solution.
+
+Solution for Matrix System # 294
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 295
+x[1] = 1/5
+x[2] = 18/5
+x[3] = -17/5
+x[4] = 6
+
+Solution for Matrix System # 296
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 297
+No Solution.
+
+Solution for Matrix System # 298
+No Solution.
+
+Solution for Matrix System # 299
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 300
+No Solution.
+
+Solution for Matrix System # 301
+No Solution.
+
+Solution for Matrix System # 302
+No Solution.
+
+Solution for Matrix System # 303
+No Solution.
+
+Solution for Matrix System # 304
+No Solution.
+
+Solution for Matrix System # 305
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 306
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 307
+No Solution.
+
+Solution for Matrix System # 308
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 309
+No Solution.
+
+Solution for Matrix System # 310
+No Solution.
+
+Solution for Matrix System # 311
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 312
+No Solution.
+
+Solution for Matrix System # 313
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 314
+Infinitely many solutions containing 4 arbitrary constants.
+
+Solution for Matrix System # 315
+No Solution.
+
+Solution for Matrix System # 316
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 317
+No Solution.
+
+Solution for Matrix System # 318
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 319
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 320
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 321
+No Solution.
+
+Solution for Matrix System # 322
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 323
+No Solution.
+
+Solution for Matrix System # 324
+No Solution.
+
+Solution for Matrix System # 325
+No Solution.
+
+Solution for Matrix System # 326
+No Solution.
+
+Solution for Matrix System # 327
+No Solution.
+
+Solution for Matrix System # 328
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 329
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 330
+x[1] = 1
+x[2] = 5/3
+
+Solution for Matrix System # 331
+No Solution.
+
+Solution for Matrix System # 332
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 333
+No Solution.
+
+Solution for Matrix System # 334
+No Solution.
+
+Solution for Matrix System # 335
+No Solution.
+
+Solution for Matrix System # 336
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 337
+x[1] = 2/5
+x[2] = 0
+
+Solution for Matrix System # 338
+No Solution.
+
+Solution for Matrix System # 339
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 340
+No Solution.
+
+Solution for Matrix System # 341
+No Solution.
+
+Solution for Matrix System # 342
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 343
+No Solution.
+
+Solution for Matrix System # 344
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 345
+x[1] = 242463/452150
+x[2] = 18621/226075
+x[3] = 141711/180860
+x[4] = 12762/226075
+x[5] = -537579/904300
+
+Solution for Matrix System # 346
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 347
+x[1] = 1
+
+Solution for Matrix System # 348
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 349
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 350
+No Solution.
+
+Solution for Matrix System # 351
+No Solution.
+
+Solution for Matrix System # 352
+No Solution.
+
+Solution for Matrix System # 353
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 354
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 355
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 356
+x[1] = -2109/8035
+x[2] = 1453/16070
+x[3] = 3839/3214
+x[4] = -4197/8035
+x[5] = 924/8035
+
+Solution for Matrix System # 357
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 358
+No Solution.
+
+Solution for Matrix System # 359
+No Solution.
+
+Solution for Matrix System # 360
+Infinitely many solutions containing 4 arbitrary constants.
+
+Solution for Matrix System # 361
+No Solution.
+
+Solution for Matrix System # 362
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 363
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 364
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 365
+No Solution.
+
+Solution for Matrix System # 366
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 367
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 368
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 369
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 370
+No Solution.
+
+Solution for Matrix System # 371
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 372
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 373
+No Solution.
+
+Solution for Matrix System # 374
+x[1] = 13/8
+x[2] = 3/2
+x[3] = -1/4
+
+Solution for Matrix System # 375
+No Solution.
+
+Solution for Matrix System # 376
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 377
+No Solution.
+
+Solution for Matrix System # 378
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 379
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 380
+x[1] = -8005/9866
+x[2] = 16844/24665
+x[3] = 26994/24665
+x[4] = -6207/24665
+
+Solution for Matrix System # 381
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 382
+x[1] = -1/5
+x[2] = 1/3
+x[3] = 74/15
+
+Solution for Matrix System # 383
+No Solution.
+
+Solution for Matrix System # 384
+No Solution.
+
+Solution for Matrix System # 385
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 386
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 387
+No Solution.
+
+Solution for Matrix System # 388
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 389
+x[1] = 7/261
+x[2] = 5/87
+
+Solution for Matrix System # 390
+x[1] = -1/2
+x[2] = -17/48
+x[3] = 1/6
+x[4] = 1/2
+
+Solution for Matrix System # 391
+No Solution.
+
+Solution for Matrix System # 392
+x[1] = -72375/113837
+x[2] = 47920/113837
+x[3] = 128312/113837
+x[4] = 141855/113837
+
+Solution for Matrix System # 393
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 394
+No Solution.
+
+Solution for Matrix System # 395
+No Solution.
+
+Solution for Matrix System # 396
+No Solution.
+
+Solution for Matrix System # 397
+No Solution.
+
+Solution for Matrix System # 398
+No Solution.
+
+Solution for Matrix System # 399
+x[1] = 7/10
+x[2] = 8/5
+x[3] = -4/5
+
+Solution for Matrix System # 400
+No Solution.
+
+Solution for Matrix System # 401
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 402
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 403
+Infinitely many solutions containing 4 arbitrary constants.
+
+Solution for Matrix System # 404
+x[1] = 0
+
+Solution for Matrix System # 405
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 406
+No Solution.
+
+Solution for Matrix System # 407
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 408
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 409
+No Solution.
+
+Solution for Matrix System # 410
+Infinitely many solutions containing 4 arbitrary constants.
+
+Solution for Matrix System # 411
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 412
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 413
+x[1] = 593/1708
+x[2] = 1/8
+x[3] = 190/427
+x[4] = 185/427
+
+Solution for Matrix System # 414
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 415
+No Solution.
+
+Solution for Matrix System # 416
+No Solution.
+
+Solution for Matrix System # 417
+x[1] = -8/15
+x[2] = 2/5
+x[3] = 4/15
+
+Solution for Matrix System # 418
+No Solution.
+
+Solution for Matrix System # 419
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 420
+No Solution.
+
+Solution for Matrix System # 421
+No Solution.
+
+Solution for Matrix System # 422
+x[1] = -112/55
+x[2] = 633/55
+x[3] = 246/55
+x[4] = -604/55
+
+Solution for Matrix System # 423
+No Solution.
+
+Solution for Matrix System # 424
+No Solution.
+
+Solution for Matrix System # 425
+No Solution.
+
+Solution for Matrix System # 426
+x[1] = -3/65
+x[2] = 9/26
+
+Solution for Matrix System # 427
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 428
+x[1] = 1/4
+x[2] = -152/35
+x[3] = 181/70
+
+Solution for Matrix System # 429
+No Solution.
+
+Solution for Matrix System # 430
+No Solution.
+
+Solution for Matrix System # 431
+No Solution.
+
+Solution for Matrix System # 432
+No Solution.
+
+Solution for Matrix System # 433
+No Solution.
+
+Solution for Matrix System # 434
+Infinitely many solutions containing 4 arbitrary constants.
+
+Solution for Matrix System # 435
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 436
+No Solution.
+
+Solution for Matrix System # 437
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 438
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 439
+No Solution.
+
+Solution for Matrix System # 440
+x[1] = 1840/827
+x[2] = -1593/827
+x[3] = 9005/827
+
+Solution for Matrix System # 441
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 442
+No Solution.
+
+Solution for Matrix System # 443
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 444
+No Solution.
+
+Solution for Matrix System # 445
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 446
+No Solution.
+
+Solution for Matrix System # 447
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 448
+No Solution.
+
+Solution for Matrix System # 449
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 450
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 451
+No Solution.
+
+Solution for Matrix System # 452
+No Solution.
+
+Solution for Matrix System # 453
+No Solution.
+
+Solution for Matrix System # 454
+x[1] = 1/16
+x[2] = 183/64
+
+Solution for Matrix System # 455
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 456
+No Solution.
+
+Solution for Matrix System # 457
+No Solution.
+
+Solution for Matrix System # 458
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 459
+No Solution.
+
+Solution for Matrix System # 460
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 461
+No Solution.
+
+Solution for Matrix System # 462
+x[1] = 9
+x[2] = -69/4
+
+Solution for Matrix System # 463
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 464
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 465
+No Solution.
+
+Solution for Matrix System # 466
+No Solution.
+
+Solution for Matrix System # 467
+x[1] = -151538/138225
+x[2] = -65519/55290
+x[3] = 13286/9215
+x[4] = 128621/92150
+x[5] = -25741/55290
+
+Solution for Matrix System # 468
+No Solution.
+
+Solution for Matrix System # 469
+No Solution.
+
+Solution for Matrix System # 470
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 471
+No Solution.
+
+Solution for Matrix System # 472
+No Solution.
+
+Solution for Matrix System # 473
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 474
+No Solution.
+
+Solution for Matrix System # 475
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 476
+No Solution.
+
+Solution for Matrix System # 477
+x[1] = 0
+x[2] = 0
+
+Solution for Matrix System # 478
+No Solution.
+
+Solution for Matrix System # 479
+No Solution.
+
+Solution for Matrix System # 480
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 481
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 482
+No Solution.
+
+Solution for Matrix System # 483
+x[1] = 5/3
+
+Solution for Matrix System # 484
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 485
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 486
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 487
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 488
+No Solution.
+
+Solution for Matrix System # 489
+No Solution.
+
+Solution for Matrix System # 490
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 491
+No Solution.
+
+Solution for Matrix System # 492
+No Solution.
+
+Solution for Matrix System # 493
+No Solution.
+
+Solution for Matrix System # 494
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 495
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 496
+No Solution.
+
+Solution for Matrix System # 497
+No Solution.
+
+Solution for Matrix System # 498
+No Solution.
+
+Solution for Matrix System # 499
+No Solution.
+
+Solution for Matrix System # 500
+No Solution.
+
+Solution for Matrix System # 501
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 502
+No Solution.
+
+Solution for Matrix System # 503
+No Solution.
+
+Solution for Matrix System # 504
+No Solution.
+
+Solution for Matrix System # 505
+No Solution.
+
+Solution for Matrix System # 506
+No Solution.
+
+Solution for Matrix System # 507
+x[1] = 10/3
+
+Solution for Matrix System # 508
+No Solution.
+
+Solution for Matrix System # 509
+No Solution.
+
+Solution for Matrix System # 510
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 511
+No Solution.
+
+Solution for Matrix System # 512
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 513
+x[1] = 50/67
+x[2] = 64/67
+x[3] = -100/67
+
+Solution for Matrix System # 514
+No Solution.
+
+Solution for Matrix System # 515
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 516
+No Solution.
+
+Solution for Matrix System # 517
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 518
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 519
+No Solution.
+
+Solution for Matrix System # 520
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 521
+No Solution.
+
+Solution for Matrix System # 522
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 523
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 524
+No Solution.
+
+Solution for Matrix System # 525
+No Solution.
+
+Solution for Matrix System # 526
+No Solution.
+
+Solution for Matrix System # 527
+No Solution.
+
+Solution for Matrix System # 528
+x[1] = 494/745
+x[2] = -295/298
+x[3] = 901/745
+x[4] = -927/1490
+
+Solution for Matrix System # 529
+No Solution.
+
+Solution for Matrix System # 530
+x[1] = -818824/32495
+x[2] = 188062/6499
+x[3] = 3863342/32495
+x[4] = -792576/32495
+x[5] = -2734027/64990
+
+Solution for Matrix System # 531
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 532
+x[1] = -2020/39
+x[2] = 3980/39
+x[3] = -1931/39
+x[4] = -105/13
+
+Solution for Matrix System # 533
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 534
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 535
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 536
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 537
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 538
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 539
+No Solution.
+
+Solution for Matrix System # 540
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 541
+No Solution.
+
+Solution for Matrix System # 542
+No Solution.
+
+Solution for Matrix System # 543
+No Solution.
+
+Solution for Matrix System # 544
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 545
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 546
+No Solution.
+
+Solution for Matrix System # 547
+No Solution.
+
+Solution for Matrix System # 548
+x[1] = 0
+
+Solution for Matrix System # 549
+x[1] = -17/4
+x[2] = 9/2
+x[3] = -13/4
+x[4] = 9
+
+Solution for Matrix System # 550
+No Solution.
+
+Solution for Matrix System # 551
+x[1] = 3/4
+
+Solution for Matrix System # 552
+No Solution.
+
+Solution for Matrix System # 553
+x[1] = 4/9
+
+Solution for Matrix System # 554
+Infinitely many solutions containing 4 arbitrary constants.
+
+Solution for Matrix System # 555
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 556
+No Solution.
+
+Solution for Matrix System # 557
+x[1] = 115/1929
+x[2] = 770/1929
+x[3] = 172/643
+x[4] = -32/643
+x[5] = -685/2572
+
+Solution for Matrix System # 558
+No Solution.
+
+Solution for Matrix System # 559
+x[1] = 168/85
+x[2] = 49/170
+x[3] = -33/85
+
+Solution for Matrix System # 560
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 561
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 562
+No Solution.
+
+Solution for Matrix System # 563
+x[1] = -33/50
+x[2] = -191/100
+x[3] = 28/25
+x[4] = 1
+
+Solution for Matrix System # 564
+No Solution.
+
+Solution for Matrix System # 565
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 566
+No Solution.
+
+Solution for Matrix System # 567
+No Solution.
+
+Solution for Matrix System # 568
+No Solution.
+
+Solution for Matrix System # 569
+No Solution.
+
+Solution for Matrix System # 570
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 571
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 572
+No Solution.
+
+Solution for Matrix System # 573
+No Solution.
+
+Solution for Matrix System # 574
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 575
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 576
+No Solution.
+
+Solution for Matrix System # 577
+x[1] = -15055/78048
+x[2] = 17/9756
+x[3] = 5897/19512
+x[4] = 153949/78048
+
+Solution for Matrix System # 578
+No Solution.
+
+Solution for Matrix System # 579
+Infinitely many solutions containing 4 arbitrary constants.
+
+Solution for Matrix System # 580
+No Solution.
+
+Solution for Matrix System # 581
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 582
+No Solution.
+
+Solution for Matrix System # 583
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 584
+No Solution.
+
+Solution for Matrix System # 585
+x[1] = 901/105
+x[2] = -292/105
+x[3] = 288/35
+
+Solution for Matrix System # 586
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 587
+No Solution.
+
+Solution for Matrix System # 588
+No Solution.
+
+Solution for Matrix System # 589
+No Solution.
+
+Solution for Matrix System # 590
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 591
+x[1] = 3/2
+x[2] = 1/20
+
+Solution for Matrix System # 592
+x[1] = -524/6255
+x[2] = -1202/6255
+x[3] = 878/2085
+x[4] = -118/695
+x[5] = 742/6255
+
+Solution for Matrix System # 593
+No Solution.
+
+Solution for Matrix System # 594
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 595
+No Solution.
+
+Solution for Matrix System # 596
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 597
+No Solution.
+
+Solution for Matrix System # 598
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 599
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 600
+No Solution.
+
+Solution for Matrix System # 601
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 602
+x[1] = 69395/16587
+x[2] = 1445/1843
+x[3] = -114965/16587
+x[4] = -97475/33174
+x[5] = 29000/16587
+
+Solution for Matrix System # 603
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 604
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 605
+No Solution.
+
+Solution for Matrix System # 606
+No Solution.
+
+Solution for Matrix System # 607
+Infinitely many solutions containing 4 arbitrary constants.
+
+Solution for Matrix System # 608
+No Solution.
+
+Solution for Matrix System # 609
+No Solution.
+
+Solution for Matrix System # 610
+x[1] = 6/25
+x[2] = 1/5
+
+Solution for Matrix System # 611
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 612
+x[1] = 4/5
+
+Solution for Matrix System # 613
+x[1] = -7/74
+x[2] = 63/148
+x[3] = 15/37
+
+Solution for Matrix System # 614
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 615
+No Solution.
+
+Solution for Matrix System # 616
+No Solution.
+
+Solution for Matrix System # 617
+No Solution.
+
+Solution for Matrix System # 618
+No Solution.
+
+Solution for Matrix System # 619
+No Solution.
+
+Solution for Matrix System # 620
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 621
+x[1] = -1895/326
+x[2] = -905/326
+x[3] = 215/326
+x[4] = 1107/163
+
+Solution for Matrix System # 622
+No Solution.
+
+Solution for Matrix System # 623
+x[1] = 20/9
+x[2] = 215/96
+x[3] = -517/96
+
+Solution for Matrix System # 624
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 625
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 626
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 627
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 628
+x[1] = 0
+
+Solution for Matrix System # 629
+x[1] = 10/3
+
+Solution for Matrix System # 630
+No Solution.
+
+Solution for Matrix System # 631
+x[1] = 282627/19255
+x[2] = 77867/77020
+x[3] = -12609/7702
+x[4] = -461823/77020
+x[5] = 106478/19255
+
+Solution for Matrix System # 632
+x[1] = -203459/131150
+x[2] = -41749/65575
+x[3] = 102769/65575
+x[4] = 58477/65575
+x[5] = 250531/262300
+
+Solution for Matrix System # 633
+No Solution.
+
+Solution for Matrix System # 634
+No Solution.
+
+Solution for Matrix System # 635
+No Solution.
+
+Solution for Matrix System # 636
+No Solution.
+
+Solution for Matrix System # 637
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 638
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 639
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 640
+x[1] = -1/18
+x[2] = 1/3
+x[3] = 361/72
+
+Solution for Matrix System # 641
+No Solution.
+
+Solution for Matrix System # 642
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 643
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 644
+x[1] = 8
+x[2] = 10/3
+
+Solution for Matrix System # 645
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 646
+x[1] = 127283/332497
+x[2] = 684564/1662485
+x[3] = -86126/332497
+x[4] = 145676/332497
+x[5] = -44160/332497
+
+Solution for Matrix System # 647
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 648
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 649
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 650
+No Solution.
+
+Solution for Matrix System # 651
+Infinitely many solutions containing 4 arbitrary constants.
+
+Solution for Matrix System # 652
+Infinitely many solutions containing 4 arbitrary constants.
+
+Solution for Matrix System # 653
+No Solution.
+
+Solution for Matrix System # 654
+No Solution.
+
+Solution for Matrix System # 655
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 656
+No Solution.
+
+Solution for Matrix System # 657
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 658
+Infinitely many solutions containing 4 arbitrary constants.
+
+Solution for Matrix System # 659
+Infinitely many solutions containing 4 arbitrary constants.
+
+Solution for Matrix System # 660
+No Solution.
+
+Solution for Matrix System # 661
+Infinitely many solutions containing 4 arbitrary constants.
+
+Solution for Matrix System # 662
+No Solution.
+
+Solution for Matrix System # 663
+No Solution.
+
+Solution for Matrix System # 664
+No Solution.
+
+Solution for Matrix System # 665
+No Solution.
+
+Solution for Matrix System # 666
+x[1] = 0
+
+Solution for Matrix System # 667
+x[1] = 267/10
+x[2] = 6
+x[3] = -5/2
+
+Solution for Matrix System # 668
+No Solution.
+
+Solution for Matrix System # 669
+x[1] = -156/1753
+x[2] = -204/1753
+x[3] = 2740/1753
+
+Solution for Matrix System # 670
+x[1] = -160/249
+x[2] = 10/249
+x[3] = 241/249
+
+Solution for Matrix System # 671
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 672
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 673
+x[1] = 21/19
+x[2] = -735/551
+x[3] = 1025/1102
+x[4] = 147/551
+
+Solution for Matrix System # 674
+x[1] = 78
+x[2] = 372
+x[3] = 11475/4
+x[4] = -4937/2
+x[5] = 479/2
+
+Solution for Matrix System # 675
+No Solution.
+
+Solution for Matrix System # 676
+No Solution.
+
+Solution for Matrix System # 677
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 678
+No Solution.
+
+Solution for Matrix System # 679
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 680
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 681
+No Solution.
+
+Solution for Matrix System # 682
+Infinitely many solutions containing 4 arbitrary constants.
+
+Solution for Matrix System # 683
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 684
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 685
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 686
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 687
+x[1] = 3/10
+
+Solution for Matrix System # 688
+x[1] = 26/31
+x[2] = -204/155
+x[3] = 6/155
+
+Solution for Matrix System # 689
+No Solution.
+
+Solution for Matrix System # 690
+No Solution.
+
+Solution for Matrix System # 691
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 692
+x[1] = 2
+
+Solution for Matrix System # 693
+No Solution.
+
+Solution for Matrix System # 694
+x[1] = 5/4
+x[2] = -1
+
+Solution for Matrix System # 695
+No Solution.
+
+Solution for Matrix System # 696
+No Solution.
+
+Solution for Matrix System # 697
+No Solution.
+
+Solution for Matrix System # 698
+x[1] = -5/24
+x[2] = 25/6
+
+Solution for Matrix System # 699
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 700
+No Solution.
+
+Solution for Matrix System # 701
+No Solution.
+
+Solution for Matrix System # 702
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 703
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 704
+x[1] = 3/2
+
+Solution for Matrix System # 705
+No Solution.
+
+Solution for Matrix System # 706
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 707
+x[1] = 25/6
+x[2] = 3
+x[3] = -44/3
+
+Solution for Matrix System # 708
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 709
+No Solution.
+
+Solution for Matrix System # 710
+No Solution.
+
+Solution for Matrix System # 711
+No Solution.
+
+Solution for Matrix System # 712
+No Solution.
+
+Solution for Matrix System # 713
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 714
+No Solution.
+
+Solution for Matrix System # 715
+x[1] = 125/27
+x[2] = 1/3
+
+Solution for Matrix System # 716
+No Solution.
+
+Solution for Matrix System # 717
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 718
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 719
+No Solution.
+
+Solution for Matrix System # 720
+No Solution.
+
+Solution for Matrix System # 721
+No Solution.
+
+Solution for Matrix System # 722
+No Solution.
+
+Solution for Matrix System # 723
+No Solution.
+
+Solution for Matrix System # 724
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 725
+No Solution.
+
+Solution for Matrix System # 726
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 727
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 728
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 729
+No Solution.
+
+Solution for Matrix System # 730
+No Solution.
+
+Solution for Matrix System # 731
+No Solution.
+
+Solution for Matrix System # 732
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 733
+No Solution.
+
+Solution for Matrix System # 734
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 735
+No Solution.
+
+Solution for Matrix System # 736
+No Solution.
+
+Solution for Matrix System # 737
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 738
+x[1] = 5/3
+
+Solution for Matrix System # 739
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 740
+No Solution.
+
+Solution for Matrix System # 741
+x[1] = 48011/13850
+x[2] = 11979/2770
+x[3] = 65104/20775
+x[4] = -69134/20775
+x[5] = -15929/4155
+
+Solution for Matrix System # 742
+No Solution.
+
+Solution for Matrix System # 743
+No Solution.
+
+Solution for Matrix System # 744
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 745
+No Solution.
+
+Solution for Matrix System # 746
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 747
+x[1] = 83/34
+x[2] = -91/68
+x[3] = -229/204
+x[4] = 121/34
+
+Solution for Matrix System # 748
+x[1] = -87/8
+x[2] = 45/8
+
+Solution for Matrix System # 749
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 750
+No Solution.
+
+Solution for Matrix System # 751
+No Solution.
+
+Solution for Matrix System # 752
+x[1] = -914/2865
+x[2] = 168/955
+x[3] = 536/2865
+x[4] = 1478/573
+
+Solution for Matrix System # 753
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 754
+No Solution.
+
+Solution for Matrix System # 755
+x[1] = 4/25
+
+Solution for Matrix System # 756
+No Solution.
+
+Solution for Matrix System # 757
+No Solution.
+
+Solution for Matrix System # 758
+No Solution.
+
+Solution for Matrix System # 759
+No Solution.
+
+Solution for Matrix System # 760
+No Solution.
+
+Solution for Matrix System # 761
+No Solution.
+
+Solution for Matrix System # 762
+No Solution.
+
+Solution for Matrix System # 763
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 764
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 765
+No Solution.
+
+Solution for Matrix System # 766
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 767
+No Solution.
+
+Solution for Matrix System # 768
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 769
+x[1] = -3557/1986
+x[2] = 31715/5958
+x[3] = 39287/23832
+x[4] = -2495/5958
+
+Solution for Matrix System # 770
+No Solution.
+
+Solution for Matrix System # 771
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 772
+Infinitely many solutions containing 4 arbitrary constants.
+
+Solution for Matrix System # 773
+x[1] = 1/10
+x[2] = 0
+
+Solution for Matrix System # 774
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 775
+x[1] = 3880/5317
+x[2] = -11571/21268
+x[3] = -357/1636
+x[4] = -11805/10634
+x[5] = 17971/10634
+
+Solution for Matrix System # 776
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 777
+Infinitely many solutions containing 4 arbitrary constants.
+
+Solution for Matrix System # 778
+x[1] = -7
+x[2] = 2
+
+Solution for Matrix System # 779
+No Solution.
+
+Solution for Matrix System # 780
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 781
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 782
+No Solution.
+
+Solution for Matrix System # 783
+No Solution.
+
+Solution for Matrix System # 784
+x[1] = -2/9
+x[2] = 2/9
+
+Solution for Matrix System # 785
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 786
+No Solution.
+
+Solution for Matrix System # 787
+No Solution.
+
+Solution for Matrix System # 788
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 789
+No Solution.
+
+Solution for Matrix System # 790
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 791
+x[1] = 2
+
+Solution for Matrix System # 792
+No Solution.
+
+Solution for Matrix System # 793
+No Solution.
+
+Solution for Matrix System # 794
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 795
+No Solution.
+
+Solution for Matrix System # 796
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 797
+x[1] = 189/65
+x[2] = 1
+x[3] = 107/65
+x[4] = -141/65
+
+Solution for Matrix System # 798
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 799
+x[1] = 3/40
+x[2] = 9/8
+x[3] = -19/20
+
+Solution for Matrix System # 800
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 801
+x[1] = -6367/17883
+x[2] = 17959/35766
+x[3] = 6707/3974
+x[4] = -30293/17883
+x[5] = 22561/71532
+
+Solution for Matrix System # 802
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 803
+Infinitely many solutions containing 4 arbitrary constants.
+
+Solution for Matrix System # 804
+No Solution.
+
+Solution for Matrix System # 805
+No Solution.
+
+Solution for Matrix System # 806
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 807
+x[1] = 14/23
+x[2] = -5/23
+
+Solution for Matrix System # 808
+x[1] = 23/18
+x[2] = 19/15
+x[3] = -11/10
+
+Solution for Matrix System # 809
+No Solution.
+
+Solution for Matrix System # 810
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 811
+No Solution.
+
+Solution for Matrix System # 812
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 813
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 814
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 815
+No Solution.
+
+Solution for Matrix System # 816
+Infinitely many solutions containing 4 arbitrary constants.
+
+Solution for Matrix System # 817
+No Solution.
+
+Solution for Matrix System # 818
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 819
+x[1] = 1/2
+x[2] = 1/2
+x[3] = 3/2
+
+Solution for Matrix System # 820
+No Solution.
+
+Solution for Matrix System # 821
+Infinitely many solutions containing 4 arbitrary constants.
+
+Solution for Matrix System # 822
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 823
+No Solution.
+
+Solution for Matrix System # 824
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 825
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 826
+x[1] = -2/3
+x[2] = 4/3
+
+Solution for Matrix System # 827
+x[1] = 4
+
+Solution for Matrix System # 828
+x[1] = 1
+x[2] = 7/16
+x[3] = 9/80
+
+Solution for Matrix System # 829
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 830
+No Solution.
+
+Solution for Matrix System # 831
+No Solution.
+
+Solution for Matrix System # 832
+No Solution.
+
+Solution for Matrix System # 833
+No Solution.
+
+Solution for Matrix System # 834
+No Solution.
+
+Solution for Matrix System # 835
+x[1] = 453/626
+x[2] = 140/313
+x[3] = 1302/313
+
+Solution for Matrix System # 836
+No Solution.
+
+Solution for Matrix System # 837
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 838
+No Solution.
+
+Solution for Matrix System # 839
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 840
+No Solution.
+
+Solution for Matrix System # 841
+No Solution.
+
+Solution for Matrix System # 842
+No Solution.
+
+Solution for Matrix System # 843
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 844
+x[1] = 0
+x[2] = 0
+x[3] = 1/2
+x[4] = -1/4
+
+Solution for Matrix System # 845
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 846
+No Solution.
+
+Solution for Matrix System # 847
+No Solution.
+
+Solution for Matrix System # 848
+x[1] = -801/1580
+x[2] = 3171/3160
+x[3] = -1789/3160
+x[4] = 2593/1580
+x[5] = -179/1580
+
+Solution for Matrix System # 849
+x[1] = 26285/17202
+x[2] = -3535/5734
+x[3] = -11273/5734
+x[4] = 16655/5734
+
+Solution for Matrix System # 850
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 851
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 852
+No Solution.
+
+Solution for Matrix System # 853
+x[1] = 9/2
+x[2] = -21
+
+Solution for Matrix System # 854
+No Solution.
+
+Solution for Matrix System # 855
+No Solution.
+
+Solution for Matrix System # 856
+No Solution.
+
+Solution for Matrix System # 857
+x[1] = 8
+
+Solution for Matrix System # 858
+No Solution.
+
+Solution for Matrix System # 859
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 860
+No Solution.
+
+Solution for Matrix System # 861
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 862
+No Solution.
+
+Solution for Matrix System # 863
+No Solution.
+
+Solution for Matrix System # 864
+x[1] = 1/2
+
+Solution for Matrix System # 865
+No Solution.
+
+Solution for Matrix System # 866
+No Solution.
+
+Solution for Matrix System # 867
+No Solution.
+
+Solution for Matrix System # 868
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 869
+No Solution.
+
+Solution for Matrix System # 870
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 871
+x[1] = -32/17
+x[2] = 200/17
+
+Solution for Matrix System # 872
+No Solution.
+
+Solution for Matrix System # 873
+x[1] = 175/31
+x[2] = 2245/31
+x[3] = -360/31
+x[4] = -95/3
+
+Solution for Matrix System # 874
+x[1] = -96405/25963
+x[2] = -31194/129815
+x[3] = 133089/259630
+x[4] = -2183/129815
+x[5] = 2741/3709
+
+Solution for Matrix System # 875
+No Solution.
+
+Solution for Matrix System # 876
+x[1] = -99/470
+x[2] = 16/141
+x[3] = 184/47
+
+Solution for Matrix System # 877
+x[1] = 6/5
+x[2] = 14/5
+
+Solution for Matrix System # 878
+No Solution.
+
+Solution for Matrix System # 879
+x[1] = 133490/80411
+x[2] = 609890/80411
+x[3] = -166111/80411
+x[4] = -4008/80411
+x[5] = -614928/80411
+
+Solution for Matrix System # 880
+x[1] = -1/36
+x[2] = 625/72
+x[3] = -149/18
+x[4] = 29/18
+
+Solution for Matrix System # 881
+No Solution.
+
+Solution for Matrix System # 882
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 883
+No Solution.
+
+Solution for Matrix System # 884
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 885
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 886
+No Solution.
+
+Solution for Matrix System # 887
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 888
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 889
+No Solution.
+
+Solution for Matrix System # 890
+No Solution.
+
+Solution for Matrix System # 891
+x[1] = 61/18
+x[2] = 13/27
+x[3] = -52/27
+
+Solution for Matrix System # 892
+x[1] = 24
+
+Solution for Matrix System # 893
+x[1] = -27/64
+x[2] = 2149/2944
+x[3] = 177/2944
+
+Solution for Matrix System # 894
+No Solution.
+
+Solution for Matrix System # 895
+x[1] = 175/19
+x[2] = -489/76
+x[3] = 43/19
+
+Solution for Matrix System # 896
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 897
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 898
+x[1] = 16/9
+x[2] = -4/9
+
+Solution for Matrix System # 899
+No Solution.
+
+Solution for Matrix System # 900
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 901
+No Solution.
+
+Solution for Matrix System # 902
+x[1] = 2
+
+Solution for Matrix System # 903
+x[1] = 119516/38981
+x[2] = 75290/38981
+x[3] = -352882/116943
+x[4] = 145097/77962
+x[5] = -21736/116943
+
+Solution for Matrix System # 904
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 905
+No Solution.
+
+Solution for Matrix System # 906
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 907
+Infinitely many solutions containing 4 arbitrary constants.
+
+Solution for Matrix System # 908
+x[1] = 2
+x[2] = 1/20
+
+Solution for Matrix System # 909
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 910
+x[1] = 1054/75
+x[2] = -214/25
+x[3] = -82/5
+x[4] = 508/75
+
+Solution for Matrix System # 911
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 912
+No Solution.
+
+Solution for Matrix System # 913
+No Solution.
+
+Solution for Matrix System # 914
+No Solution.
+
+Solution for Matrix System # 915
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 916
+No Solution.
+
+Solution for Matrix System # 917
+No Solution.
+
+Solution for Matrix System # 918
+No Solution.
+
+Solution for Matrix System # 919
+No Solution.
+
+Solution for Matrix System # 920
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 921
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 922
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 923
+No Solution.
+
+Solution for Matrix System # 924
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 925
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 926
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 927
+x[1] = 2
+
+Solution for Matrix System # 928
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 929
+x[1] = 39/47
+x[2] = 44/47
+x[3] = -565/47
+x[4] = 243/47
+
+Solution for Matrix System # 930
+x[1] = 1
+
+Solution for Matrix System # 931
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 932
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 933
+No Solution.
+
+Solution for Matrix System # 934
+Infinitely many solutions containing 4 arbitrary constants.
+
+Solution for Matrix System # 935
+x[1] = 834056/235425
+x[2] = 376747/235425
+x[3] = -112233/78475
+x[4] = -61701/78475
+x[5] = -44564/78475
+
+Solution for Matrix System # 936
+No Solution.
+
+Solution for Matrix System # 937
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 938
+No Solution.
+
+Solution for Matrix System # 939
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 940
+Infinitely many solutions containing 4 arbitrary constants.
+
+Solution for Matrix System # 941
+x[1] = 1/2
+
+Solution for Matrix System # 942
+x[1] = 1/40
+x[2] = 7/240
+x[3] = -1/80
+
+Solution for Matrix System # 943
+No Solution.
+
+Solution for Matrix System # 944
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 945
+No Solution.
+
+Solution for Matrix System # 946
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 947
+x[1] = -32039/138952
+x[2] = -21650/52107
+x[3] = -24427/208428
+x[4] = 479909/555808
+x[5] = 32039/416856
+
+Solution for Matrix System # 948
+No Solution.
+
+Solution for Matrix System # 949
+x[1] = 15/2
+
+Solution for Matrix System # 950
+No Solution.
+
+Solution for Matrix System # 951
+No Solution.
+
+Solution for Matrix System # 952
+No Solution.
+
+Solution for Matrix System # 953
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 954
+x[1] = 65865/30842
+x[2] = 48075/61684
+x[3] = -23554/15421
+x[4] = 9880/15421
+
+Solution for Matrix System # 955
+x[1] = 2/15
+x[2] = 7/30
+
+Solution for Matrix System # 956
+x[1] = -59/454
+x[2] = -87/227
+x[3] = 12417/2270
+x[4] = 172/227
+x[5] = -171/454
+
+Solution for Matrix System # 957
+x[1] = 65/133
+x[2] = 5195/1064
+x[3] = 653/1064
+x[4] = -4157/1064
+
+Solution for Matrix System # 958
+No Solution.
+
+Solution for Matrix System # 959
+x[1] = 11/24
+x[2] = 5/12
+
+Solution for Matrix System # 960
+No Solution.
+
+Solution for Matrix System # 961
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 962
+No Solution.
+
+Solution for Matrix System # 963
+Infinitely many solutions containing 4 arbitrary constants.
+
+Solution for Matrix System # 964
+No Solution.
+
+Solution for Matrix System # 965
+No Solution.
+
+Solution for Matrix System # 966
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 967
+No Solution.
+
+Solution for Matrix System # 968
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 969
+x[1] = -5/6
+x[2] = 3/4
+
+Solution for Matrix System # 970
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 971
+No Solution.
+
+Solution for Matrix System # 972
+No Solution.
+
+Solution for Matrix System # 973
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 974
+No Solution.
+
+Solution for Matrix System # 975
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 976
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 977
+No Solution.
+
+Solution for Matrix System # 978
+No Solution.
+
+Solution for Matrix System # 979
+No Solution.
+
+Solution for Matrix System # 980
+x[1] = 9/4
+
+Solution for Matrix System # 981
+x[1] = 174/13
+x[2] = 976/195
+x[3] = -524/195
+x[4] = -62/195
+
+Solution for Matrix System # 982
+x[1] = 9/10
+x[2] = -7/12
+
+Solution for Matrix System # 983
+x[1] = -1382/3275
+x[2] = -12653/9825
+x[3] = 1069/3275
+x[4] = 20962/9825
+x[5] = -3586/9825
+
+Solution for Matrix System # 984
+No Solution.
+
+Solution for Matrix System # 985
+x[1] = -415/284
+x[2] = -165/142
+x[3] = 849/284
+
+Solution for Matrix System # 986
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 987
+No Solution.
+
+Solution for Matrix System # 988
+Infinitely many solutions containing 4 arbitrary constants.
+
+Solution for Matrix System # 989
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 990
+x[1] = 1551/157
+x[2] = 2289/1256
+x[3] = 111/628
+x[4] = -4245/628
+
+Solution for Matrix System # 991
+No Solution.
+
+Solution for Matrix System # 992
+No Solution.
+
+Solution for Matrix System # 993
+No Solution.
+
+Solution for Matrix System # 994
+Infinitely many solutions containing 4 arbitrary constants.
+
+Solution for Matrix System # 995
+x[1] = -561/334
+x[2] = 258/167
+x[3] = 2565/334
+
+Solution for Matrix System # 996
+No Solution.
+
+Solution for Matrix System # 997
+No Solution.
+
+Solution for Matrix System # 998
+No Solution.
+
+Solution for Matrix System # 999
+x[1] = 0
+
+Solution for Matrix System # 1000
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 1001
+No Solution.
+
+Solution for Matrix System # 1002
+x[1] = 0
+
+Solution for Matrix System # 1003
+No Solution.
+
+Solution for Matrix System # 1004
+x[1] = 1/8
+
+Solution for Matrix System # 1005
+No Solution.
+
+Solution for Matrix System # 1006
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 1007
+x[1] = 25/12
+x[2] = -97/18
+x[3] = -1/3
+x[4] = 16/9
+x[5] = 40/3
+
+Solution for Matrix System # 1008
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 1009
+No Solution.
+
+Solution for Matrix System # 1010
+Infinitely many solutions containing 2 arbitrary constants.
+
+Solution for Matrix System # 1011
+No Solution.
+
+Solution for Matrix System # 1012
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 1013
+x[1] = 3/2
+x[2] = 31/40
+x[3] = 0
+
+Solution for Matrix System # 1014
+No Solution.
+
+Solution for Matrix System # 1015
+x[1] = -5/8
+x[2] = -3/8
+x[3] = 25/8
+
+Solution for Matrix System # 1016
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 1017
+No Solution.
+
+Solution for Matrix System # 1018
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 1019
+No Solution.
+
+Solution for Matrix System # 1020
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 1021
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 1022
+Infinitely many solutions containing 3 arbitrary constants.
+
+Solution for Matrix System # 1023
+x[1] = 5/2
+
+Solution for Matrix System # 1024
+x[1] = 36/25
+x[2] = -24/25

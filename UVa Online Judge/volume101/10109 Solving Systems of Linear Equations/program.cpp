@@ -1,8 +1,8 @@
 // Solving Systems of Linear Equations
 // UVa ID: 10109
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2018-12-17
+// UVa Run Time: 0.310s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
@@ -10,28 +10,43 @@
 
 using namespace std;
 
-typedef long long ll;
+typedef long long int lli;
 
 struct fraction
 {
-    ll numerator, denominator;
+    lli numerator, denominator;
 
     void normalize()
     {
-	    if (numerator != 0 && denominator != 0)
+        if (denominator < 0LL) denominator *= -1LL, numerator *= -1LL;
+        if (numerator == 0LL && denominator != 0LL) denominator = 1LL;
+	    if (numerator != 0LL && denominator != 0LL)
         {
-	        ll g = __gcd(abs(numerator), abs(denominator));
+	        lli g = __gcd(abs(numerator), denominator);
             numerator /= g, denominator /= g;
         }
-        if (numerator == 0 && denominator != 0) denominator = 1LL;
-        if (denominator < 0) denominator *= -1LL, numerator *= -1LL;
     }
     
+    bool isZero()
+    {
+        return numerator == 0LL;
+    }
+    
+    void setZero()
+    {
+        numerator = 0LL, denominator = 1LL;
+    }
+    
+    void setOne()
+    {
+        numerator = 1LL, denominator = 1LL;
+    }
+
     fraction operator+(const fraction &f)
     {
 	    fraction r;
-        ll g = __gcd(denominator, f.denominator);
-        r.numerator = f.denominator / g * numerator + denominator / g * f.numerator;
+        lli g = __gcd(denominator, f.denominator);
+        r.numerator = (f.denominator / g * numerator) + (denominator / g * f.numerator);
         r.denominator = denominator / g * f.denominator;
         r.normalize();
         return r;
@@ -40,8 +55,8 @@ struct fraction
     fraction operator-(const fraction &f)
     {
         fraction r;
-        ll g = __gcd(denominator, f.denominator);
-        r.numerator = f.denominator / g * numerator - denominator / g * f.numerator;
+        lli g = __gcd(denominator, f.denominator);
+        r.numerator = (f.denominator / g * numerator) - (denominator / g * f.numerator);
         r.denominator = denominator / g * f.denominator;
         r.normalize();
         return r;
@@ -50,7 +65,7 @@ struct fraction
     fraction operator*(const fraction &f)
     {
         fraction r;
-        ll g1 = __gcd(abs(numerator), f.denominator), g2 = __gcd(abs(f.numerator), denominator);
+        lli g1 = __gcd(abs(numerator), f.denominator), g2 = __gcd(abs(f.numerator), denominator);
         r.numerator = (numerator / g1) * (f.numerator / g2);
         r.denominator = (denominator / g2) * (f.denominator / g1);
         r.normalize();
@@ -60,54 +75,73 @@ struct fraction
     fraction operator/(const fraction &f)
     {
         fraction r;
-        ll g1 = __gcd(abs(numerator), abs(f.numerator)), g2 = __gcd(f.denominator, denominator);
+        lli g1 = __gcd(abs(numerator), abs(f.numerator)), g2 = __gcd(f.denominator, denominator);
         r.numerator = (numerator / g1) * (f.denominator / g2);
         r.denominator = (denominator / g2) * (f.numerator / g1);
         r.normalize();
         return r;
     }
-    
-    friend ostream& operator<<(ostream& os, const fraction &f)
-    {
-        if (f.denominator == 1) os << f.numerator;
-        else os << f.numerator << '/' << f.denominator;
-        return os;
-    }
 };
 
+ostream& operator<<(ostream &os, const fraction &f)
+{
+    if (f.denominator == 1) os << f.numerator;
+    else os << f.numerator << '/' << f.denominator;
+    return os;
+}
+    
 fraction getFraction(string s)
 {
-    long long sign = 1;
+    long long sign1 = 1LL, sign2 = 1LL;
     if (s.front() == '-')
     {
-        sign = -1;
+        sign1 = -1LL;
         s.erase(s.begin());
     }
     
     fraction f;
     if (s.find('/') != s.npos)
     {
-        f.numerator = 0;
+        f.numerator = 0LL;
         for (int i = 0; i < s.length(); i++)
             if (s[i] != '/')
-                f.numerator = f.numerator * 10 + s[i] - '0';
+                f.numerator = f.numerator * 10LL + (long long)(s[i] - '0');
             else
             {
-                f.denominator = 0;
-                for (int j = i + 1; j < s.length(); j++)
-                    f.denominator = f.denominator * 10 + s[j] - '0';
+                int j = i + 1;
+                if (s[j] == '-')
+                {
+                    sign2 = -1LL;
+                    j++;
+                }
+                f.denominator = 0LL;
+                for (; j < s.length(); j++)
+                    f.denominator = f.denominator * 10LL + (long long)(s[j] - '0');
                 break;
             }
     }
     else
     {
-        f.numerator = 0;
+        f.numerator = 0LL;
         for (int i = 0; i < s.length(); i++)
-            f.numerator = f.numerator * 10 + s[i] - '0';
-        f.denominator = 1;
+            f.numerator = f.numerator * 10LL + (long long)(s[i] - '0');
+        f.denominator = 1LL;
     }
-    f.numerator *= sign;
+    f.numerator *= sign1;
+    f.denominator *= sign2;
+    f.normalize();
     return f;
+}
+
+void show(vector<vector<fraction>> A)
+{
+    for (auto a : A)
+    {
+        for (auto f : a)
+            cout << f << ' ';
+        cout << '\n';
+    }
+    cout << '\n';
 }
 
 int main(int argc, char *argv[])
@@ -135,63 +169,70 @@ int main(int argc, char *argv[])
             }
             A.push_back(a);
         }
+        // If the number of equations less than number of unknowns, add last equation untill
+        // number of equations equal number of unknowns.
+        //for (int i = E; i < U; i++) A.push_back(A.back());
+        // Reset the number of equations.
+        //E = max(E, U);
 
-        int Z = 0, impossible = 0;
-        for (int i = 0; i < E; i++)
+        for (int i = 0; i < min(U, E); i++)
+        //for (int i = 0; i < E; i++)
         {
-            if (A[i][i].numerator == 0)
+            if (A[i][i].isZero())
             {
-                bool allZero = true;
-                for (int j = 0; j < U; j++)
-                    if (A[i][j].numerator != 0)
+                for (int j = i + 1; j < E; j++)
+                    if (!A[j][i].isZero())
                     {
-                        allZero = false;
+                        swap(A[i], A[j]);
                         break;
                     }
-                if (allZero)
-                {
-                    if (A[i][U].numerator != 0)
-                    {
-                        impossible = 1;
-                        break;
-                    }
-                    else Z++;
-                }
-                continue;
             }
+            if (A[i][i].isZero()) continue;
             for (int j = i + 1; j <= U; j++)
                 A[i][j] = A[i][j] / A[i][i];
-            A[i][i].numerator = A[i][i].denominator = 1;
+            A[i][i].setOne();
             for (int j = 0; j < E; j++)
             {
                 if (i != j)
                 {
                     for (int k = i + 1; k <= U; k++)
                         A[j][k] = A[j][k] - (A[j][i] * A[i][k]);
-                    A[j][i].numerator = 0, A[j][i].denominator = 1;
+                    A[j][i].setZero();
                 }
             }
         }
+
+        int Z = 0, impossible = 0;
+        for (int i = 0; i < E; i++)
+        {
+            bool allZero = true;
+            for (int j = 0; j < U; j++)
+                if (!A[i][j].isZero())
+                {
+                    allZero = false;
+                    break;
+                }
+            if (allZero)
+            {
+                if (!A[i][U].isZero())
+                {
+                    impossible = 1;
+                    break;
+                }
+                else Z++;
+            }
+        }
+
         if (impossible) cout << "No Solution.\n";
         else
         {
             if (U <= E - Z)
             {
                 for (int i = 0; i < U; i++)
-                {
-                    cout << "X[" << i + 1 << "] = ";
-                    for (int j = 0; j < E; j++)
-                        if (A[j][i].numerator != 0)
-                        {
-                            cout << A[j][U] << '\n';
-                            break;
-                        }
-                }
+                    cout << "x[" << i + 1 << "] = " << A[i][U] << '\n';
             }
             else
-            {
                 cout << "Infinitely many solutions containing " << U + Z - E << " arbitrary constants.\n";
-            }
         }
     }
 
