@@ -2,7 +2,7 @@
 // UVa ID: 10109
 // Verdict: Accepted
 // Submission Date: 2018-12-17
-// UVa Run Time: 0.310s
+// UVa Run Time: 0.300s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
@@ -18,9 +18,9 @@ struct fraction
 
     void normalize()
     {
-        if (denominator < 0LL) denominator *= -1LL, numerator *= -1LL;
-        if (numerator == 0LL && denominator != 0LL) denominator = 1LL;
-	    if (numerator != 0LL && denominator != 0LL)
+        if (denominator < 0) denominator *= -1, numerator *= -1;
+        if (numerator == 0 && denominator != 0) denominator = 1;
+	    if (numerator != 0 && denominator != 0)
         {
 	        lli g = __gcd(abs(numerator), denominator);
             numerator /= g, denominator /= g;
@@ -29,17 +29,17 @@ struct fraction
     
     bool isZero()
     {
-        return numerator == 0LL;
+        return numerator == 0;
     }
     
     void setZero()
     {
-        numerator = 0LL, denominator = 1LL;
+        numerator = 0, denominator = 1;
     }
     
     void setOne()
     {
-        numerator = 1LL, denominator = 1LL;
+        numerator = 1, denominator = 1;
     }
 
     fraction operator+(const fraction &f)
@@ -92,40 +92,40 @@ ostream& operator<<(ostream &os, const fraction &f)
     
 fraction getFraction(string s)
 {
-    long long sign1 = 1LL, sign2 = 1LL;
+    long long sign1 = 1, sign2 = 1;
     if (s.front() == '-')
     {
-        sign1 = -1LL;
+        sign1 = -1;
         s.erase(s.begin());
     }
     
     fraction f;
     if (s.find('/') != s.npos)
     {
-        f.numerator = 0LL;
+        f.numerator = 0;
         for (int i = 0; i < s.length(); i++)
             if (s[i] != '/')
-                f.numerator = f.numerator * 10LL + (long long)(s[i] - '0');
+                f.numerator = f.numerator * 10 + (s[i] - '0');
             else
             {
                 int j = i + 1;
                 if (s[j] == '-')
                 {
-                    sign2 = -1LL;
+                    sign2 = -1;
                     j++;
                 }
-                f.denominator = 0LL;
+                f.denominator = 0;
                 for (; j < s.length(); j++)
-                    f.denominator = f.denominator * 10LL + (long long)(s[j] - '0');
+                    f.denominator = f.denominator * 10 + (s[j] - '0');
                 break;
             }
     }
     else
     {
-        f.numerator = 0LL;
+        f.numerator = 0;
         for (int i = 0; i < s.length(); i++)
-            f.numerator = f.numerator * 10LL + (long long)(s[i] - '0');
-        f.denominator = 1LL;
+            f.numerator = f.numerator * 10 + (s[i] - '0');
+        f.denominator = 1;
     }
     f.numerator *= sign1;
     f.denominator *= sign2;
@@ -159,30 +159,35 @@ int main(int argc, char *argv[])
             A.push_back(a);
         }
 
-        for (int i = 0; i < min(U, E); i++)
+        for (int i = 0, j = 0; i < E && j < U; )
         {
-            if (A[i][i].isZero())
+            // Pick pivot, make sure pivot not zero.
+            if (A[i][j].isZero())
             {
-                for (int j = i + 1; j < E; j++)
-                    if (!A[j][i].isZero())
+                for (int m = i + 1; m < E; m++)
+                    if (!A[m][j].isZero())
                     {
-                        swap(A[i], A[j]);
+                        swap(A[i], A[m]);
                         break;
                     }
             }
-            if (A[i][i].isZero()) continue;
-            for (int j = i + 1; j <= U; j++)
-                A[i][j] = A[i][j] / A[i][i];
-            A[i][i].setOne();
-            for (int j = 0; j < E; j++)
+            // If pivot is zero, find next pivot at the same row.
+            if (A[i][j].isZero())
             {
-                if (i != j)
+                j++;
+                continue;
+            }
+            for (int n = j + 1; n <= U; n++) A[i][n] = A[i][n] / A[i][j];
+            A[i][j].setOne();
+            for (int m = 0; m < E; m++)
+            {
+                if (i != m)
                 {
-                    for (int k = i + 1; k <= U; k++)
-                        A[j][k] = A[j][k] - (A[j][i] * A[i][k]);
-                    A[j][i].setZero();
+                    for (int n = j + 1; n <= U; n++) A[m][n] = A[m][n] - (A[m][j] * A[i][n]);
+                    A[m][j].setZero();
                 }
             }
+            i++, j++;
         }
 
         int Z = 0, impossible = 0;

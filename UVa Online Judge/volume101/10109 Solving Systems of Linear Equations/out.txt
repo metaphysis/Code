@@ -1,4 +1,37 @@
 Solution for Matrix System # 1
+No Solution.
+
+Solution for Matrix System # 5
+Infinitely many solutions containing 1 arbitrary constants.
+
+Solution for Matrix System # 2
+No Solution.
+
+Solution for Matrix System # 3
+No Solution.
+
+Solution for Matrix System # 4
+x[1] = -35/134
+x[2] = 9/2
+x[3] = 839/134
+x[4] = 1
+
+Solution for Matrix System # 5
+x[1] = -35/134
+x[2] = 9/2
+x[3] = 839/134
+x[4] = 1
+
+Solution for Matrix System # 6
+No Solution.
+
+Solution for Matrix System # 7
+x[1] = 1
+
+Solution for Matrix System # 8
+No Solution.
+
+Solution for Matrix System # 1
 Infinitely many solutions containing 2 arbitrary constants.
 
 Solution for Matrix System # 2
@@ -704,7 +737,7 @@ x[4] = -381/24140
 x[5] = 12451/24140
 
 Solution for Matrix System # 204
-Infinitely many solutions containing 1 arbitrary constants.
+No Solution.
 
 Solution for Matrix System # 205
 Infinitely many solutions containing 2 arbitrary constants.
