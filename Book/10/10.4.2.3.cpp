@@ -1,4 +1,4 @@
-const int MAXV = 110, INF = 0x3fffffff;
+const int MAXV = 110, INF = 0x3f3f3f3f;
 
 struct edge
 {
