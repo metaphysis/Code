@@ -2,7 +2,7 @@
 // UVa ID: 10269
 // Verdict: Accepted
 // Submission Date: 2018-12-19
-// UVa Run Time: 0.020s
+// UVa Run Time: 0.010s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
@@ -51,20 +51,17 @@ int main(int argc, char *argv[])
             walk w = q.front(); q.pop();
             for (auto e : edges[w.u])
             {
-                if (!w.covered)
+                if (D[e.v][w.k][0] > D[w.u][w.k][w.covered] + e.length)
                 {
-                    if (D[e.v][w.k][0] > D[w.u][w.k][0] + e.length)
-                    {
-                        D[e.v][w.k][0] = D[w.u][w.k][0] + e.length;
-                        q.push(walk(e.v, w.k, 0));
-                    }
+                    D[e.v][w.k][0] = D[w.u][w.k][w.covered] + e.length;
+                    q.push(walk(e.v, w.k, 0));
                 }
-                else
+                if (w.covered && w.covered + e.length <= L)
                 {
-                    int next_covered = (e.v > A || w.covered + e.length > L) ? 0 : w.covered + e.length;
-                    if (D[e.v][w.k][next_covered] > D[w.u][w.k][w.covered] + (next_covered ? 0 : e.length))
+                    int next_covered = e.v > A ? 0 : w.covered + e.length;
+                    if (D[e.v][w.k][next_covered] > D[w.u][w.k][w.covered])
                     {
-                        D[e.v][w.k][next_covered] = D[w.u][w.k][w.covered] + (next_covered ? 0 : e.length);
+                        D[e.v][w.k][next_covered] = D[w.u][w.k][w.covered];
                         q.push(walk(e.v, w.k, next_covered));
                     }
                 }
