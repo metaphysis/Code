@@ -10,7 +10,7 @@
 
 using namespace std;
 
-const int MAXV = 1010, MAXE = 1000010, INF = 0x3fffffff;
+const int MAXV = 1010, MAXE = 1000010, INF = 0x3f3f3f3f;
 
 struct edge
 {
