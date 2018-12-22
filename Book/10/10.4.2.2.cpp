@@ -1,100 +1,39 @@
-// Wormholes
-// UVa ID: 558
-// Verdict: Accepted
-// Submission Date: 2017-05-10
-// UVa Run Time: 0.020s
-//
-// 版权所有（C）2017，邱秋。metaphysis # yeah dot net
+const int MAXV = 1024, MAXE = 102400, INF = 0x3f3f3f3f;
 
-#include <bits/stdc++.h>
+struct edge { int from, to, weight, next; } edges[MAXE];
 
-using namespace std;
+int n, m, head[MAXV];
+int dist[MAXV], parent[MAXV];
+int visited[MAXV], cnt[MAXV];
 
-const int MAXV = 1100, INF = 0x3fffffff;
-
-struct edge
+bool spfa(int s)
 {
-    int from, to, weight;
-    edge *next;
-};
-
-edge *edges[MAXV];
-int dist[MAXV], parent[MAXV], visited[MAXV], counter[MAXV];
-
-bool spfa(int u)
-{
-    for (int i = 0; i < MAXV; i++)
-    {
-        dist[i] = INF, parent[i] = -1;
-        visited[i] = 0, counter[i] = 0;
-    }
-
-    dist[u] = 0, visited[u]++;
+    for (int i = 0; i < n; i++)
+        dist[i] = INF, parent[i] = -1, visited[i] = 0, cnt[i] = 0;
+    dist[s] = 0, visited[s] = 1;
     
-    queue<int> q; q.push(u);
-    
+    queue<int> q; q.push(s);
     while (!q.empty())
     {
         int u = q.front(); q.pop();
- 
-        if (counter[u] > n) return true;
-        
-        edge *e = edges[u];
-        while (e != NULL)
+        if (cnt[u] > n) return true;
+        visited[u] = 0;
+        for (int i = head[u]; ~i; i = edges[i].next)
         {
-            int v = e->to;
-            if (dist[v] > dist[u] + e->weight)
+            int v = edges[i].to, w = edges[i].weight;
+            if (dist[v] > dist[u] + w)
             {
-                dist[v] = dist[u] + e->weight; parent[v] = u;
+                dist[v] = dist[u] + w;
+                parent[v] = u;
                 if (!visited[v])
                 {
                     q.push(v);
-                    visited[v]++, counter[v]++;
+                    visited[v] = 1;
+                    cnt[v]++;
                 }
             }
-            e = e->next;
         }
-        
-        visited[u]--;
     }
 
     return false;
-}
-
-int main(int argc, char *argv[])
-{
-    cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
-
-    int cases, m, x, y, t;
-
-    cin >> cases;
-    for (int c = 1; c <= cases; c++)
-    {
-        cin >> n >> m;
-        for (int i = 1; i <= m; i++)
-        {
-            cin >> x >> y >> t;
-            
-            edge *e = new edge;
-            e->to = y, e->weight = t, e->next = NULL;
-
-            if (edges[x] == NULL)
-                edges[x] = e;
-            else
-                e->next = edges[x], edges[x] = e;
-        }
-
-        cout << (spfa(0) ? "possible\n" : "not possible\n");
-        
-        for (int i = 0; i < n; i++)
-        {
-            edge *e = edges[i];
-            while (e != NULL)
-            {
-                edges[i] = e->next; delete e; e = edges[i];
-            }
-        }
-    }
-    
-	return 0;
 }

@@ -151,6 +151,7 @@ int main(int argc, char *argv[])
                 }
             }
         }
+
         sort(infringes.begin(), infringes.end(), cmp1);
         infringes.erase(unique(infringes.begin(), infringes.end()), infringes.end());
         sort(infringes.begin(), infringes.end(), cmp2);

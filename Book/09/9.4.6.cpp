@@ -1,93 +1,22 @@
-// Critical Links
-// UVa ID: 796
-// Verdict: Accepted
-// Submission Date: 2016-11-30
-// UVa Run Time: 0.000s
-//
-// 版权所有（C）2016，邱秋。metaphysis # yeah dot net
+const int MAXV = 10010;
 
-#include <bits/stdc++.h>
+vector<list<int>> edges;
 
-using namespace std;
+int dfn[MAXV], ic[MAXV], dfstime = 0;
 
-const int MAXV = 2010;
-
-struct edge
+int dfs(int u, int parent)
 {
-    int start, end;
-
-    bool operator<(const edge &x) const
-    {
-        if (start != x.start)
-            return start < x.start;
-        else
-            return end < x.end;
-    }
-};
-
-vector<int> edges[MAXV];
-vector<edge> bridge;
-int dfn[MAXV], low[MAXV], visited[MAXV];
-
-void dfs(int u, int parent, int depth)
-{
-    visited[u] = 1; dfn[u] = low[u] = depth;
+    int lowu = dfn[u] = ++dfstime, lowv, children = 0;
     for (auto v : edges[u])
     {
-        if (v != parent && visited[v] == 1) low[u] = min(low[u], dfn[v]);
-        if (!visited[v])
+        if (!dfn[v])
         {
-            dfs(v, u, depth + 1);
-            low[u] = min(low[u], low[v]);
-            if (dfn[u] < low[v]) bridge.push_back((edge){u, v});
+            ++children, lowu = min(lowu, lowv = dfs(v, u));
+            if (lowv >= dfn[u]) ic[u] = 1;
         }
-    }
-    visited[u] = 2;
-}
-
-int main(int argc, char *argv[])
-{
-    int servers;
-    while (cin >> servers)
-    {
-        for (int i = 0; i < servers; i++)
-            edges[i].clear();
-
-        string text;
-        int from, to, connections;
-        for (int i = 1; i <= servers; i++)
-        {
-            cin >> from >> text;
-            
-            connections = stoi(text.substr(1, text.length() - 2));
-            for (int j = 1; j <= connections; j++)
-            {
-                cin >> to;
-                edges[from].push_back(to);
-                edges[to].push_back(from);
-            }
-        }
-
-        bridge.clear();
-        memset(dfn, 0, sizeof(dfn));
-        memset(low, 0, sizeof(low));
-        memset(visited, 0, sizeof(visited));
-
-        for (int u = 0; u < servers; u++)
-            if (!visited[u])
-                dfs(u, -1, 1);
-
-        for (int i = 0; i < bridge.size(); i++)
-            if (bridge[i].start > bridge[i].end)
-                swap(bridge[i].start, bridge[i].end);
-
-        cout << bridge.size() << " critical links\n";
-        sort(bridge.begin(), bridge.end());
-        for (int i = 0; i < bridge.size(); i++)
-            cout << bridge[i].start << " - " << bridge[i].end << '\n';
-
-        cout << '\n';
+        else if (dfn[v] < dfn[u] && v != parent) lowu = min(lowu, dfn[v]);
     }
 
-	return 0;
+    if (parent < 0 && children == 1) ic[u] = 0;
+    return dfn[u] = lowu;
 }

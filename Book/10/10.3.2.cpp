@@ -2,23 +2,19 @@
 
 using namespace std;
 
-const int MAXV = 1010;
+const int MAXV = 110, MAXE = 10010, INF = 0x7f7f7f7f;
 
-struct edge
-{
-    int from, to, weight;
-    edge (int from = 0, int to = 0, int weight = 0): from(from), to(to), weight(weight) {}
-    bool operator<(const edge &e) const { return weight < e.weight; }
+struct edge {
+    int from, to, cost, disabled;
+    bool operator<(const edge& x) const { return cost < x.cost; }
 };
 
-edge edges[MAXV * MAXV];
-int n, m, parent[MAXV], ranks[MAXV];
+edge edges[MAXE];
+int parent[MAXV], ranks[MAXV], n, m;
 
 void makeSet()
 {
-    for (int i = 0; i < n; i++) {
-        parent[i] = i; ranks[i] = 0;
-    }
+    for (int i = 0; i <= n; i++) parent[i] = i, ranks[i] = 0;
 }
 
 int findSet(int x)
@@ -40,23 +36,51 @@ bool unionSet(int x, int y)
     return false;
 }
 
-int kruskal()
+void kruskal()
 {
-    int minWeightSum = 0;
+    int minWeightSum = 0, intree[MAXV], idx = 0;
 
     makeSet();
     sort(edges, edges + m);
 
+    int merged = 0;
     for (int i = 0; i < m; i++)
-        if (unionSet(edges[i].from, edges[i].to))
-            minWeightSum += edges[i].weight;
+        if (unionSet(edges[i].from, edges[i].to)) {
+            minWeightSum += edges[i].cost;
+            intree[idx++] = i;
+            merged++;
+        }
 
-    return minWeightSum;
+    if (merged != (n - 1)) {
+        cout << "No MST exist!\n";
+        return;
+    }
+    else cout << minWeightSum;
+
+    int secondaryWeightSum = INF;
+    for (int i = 0; i < idx; i++) {
+        int currentWeightSum = 0;
+        edges[intree[i]].disabled = 1;
+
+        makeSet();
+
+        int addedVertices = 0;
+        for (int j = 0; j < m; j++)
+            if (!edges[j].disabled && unionSet(edges[j].from, edges[j].to)) {
+                currentWeightSum += edges[j].cost;
+                addedVertices++;
+            }
+
+        edges[intree[i]].disabled = 0;
+        if (addedVertices == (n - 1))
+            secondaryWeightSum = min(secondaryWeightSum, currentWeightSum);
+    }
+
+    if (secondaryWeightSum != INF) cout << ' ' << secondaryWeightSum;
+    cout << '\n';
 }
 
 int main(int argc, char *argv[])
 {
-    cout << kruskal() << endl;
- 
-    return 0;   
+    return 0;
 }
