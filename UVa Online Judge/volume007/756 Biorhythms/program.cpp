@@ -18,7 +18,6 @@ int main(int argc, char *argv[])
     while (cin >> p >> e >> i >> d)
     {
         if (p == -1) break;
-
         p %= 23, e %= 28, i %= 33;
         int s = max(max(p, e), max(i, d));
         if (d == s) s++;
@@ -28,7 +27,6 @@ int main(int argc, char *argv[])
                 break;
             s++;
         }
-        
         cout << "Case " << ++cases << ": the next triple peak occurs in ";
         cout << (s - d) << " days.\n";
     }

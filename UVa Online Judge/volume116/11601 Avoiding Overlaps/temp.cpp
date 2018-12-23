@@ -39,6 +39,5 @@ bool search(itNode *root, interval i)
     if (isOverlapped(root->i, i)) return true;
     if (root->left != NULL && root->left->max >= i.low)
         return search(root->left, i);
-    return search(root->right, i);
-        
+    return search(root->right, i);  
 }
