@@ -1,8 +1,8 @@
 // Bob Laptop Woolmer and Eddie Desktop Barlow
 // UVa ID: 10072
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2018-12-24
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
@@ -23,9 +23,15 @@ int main(int argc, char *argv[])
         for (int i = 0, a, b, c; i < n; i++)
         {
             cin >> a >> b >> c;
-            bt[i] = (8 * a + 2 * c + 5) / 10;
-            bl[i] = (a + 7 * b + 2 * c + 5) / 10;
-            fl[i] = (4 * a + 4 * b + 2 * c + 5) / 10;
+            // Wrong Answer, if you use the first method to get score.
+            //bt[i] = (8 * a + 2 * c + 5) / 10;
+            //bl[i] = (a + 7 * b + 2 * c + 5) / 10;
+            //fl[i] = (4 * a + 4 * b + 2 * c + 5) / 10;
+
+            // Accepted, if you use the second method.
+            bt[i] = round(0.8 * a + 0.2 * c);
+            bl[i] = round(0.1 * a + 0.7 * b + 0.2 * c);
+            fl[i] = round(0.4 * a + 0.4 * b + 0.2 * c);
         }
         cin >> BT >> BL >> AR;
         memset(dp, -1, sizeof(dp));
