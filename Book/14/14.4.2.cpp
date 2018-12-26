@@ -1,75 +1,48 @@
-const double EPSILON = 1e-7;
+const int MAXV = 210;
 
-struct point
+int main(int argc, char *argv[])
 {
-	double x, y;
-	
-	bool operator<(const point &p) const
-	{
-	    if (fabs(x - p.x) > EPSILON) return x < p.x;
-	    return y < p.y;
-	}
-	
-	bool operator==(const point &p) const
-	{
-	    return fabs(x - p.x) <= EPSILON && fabs(y - p.y) <= EPSILON;
-	}
-	
-	double distTo(const point &p)
-	{
-	    return pow(x - p.x, 2) + pow(y - p.y, 2);
-	}
-};
+    int n;
+    int x1[MAXV], y1[MAXV], x2[MAXV], y2[MAXV];
 
-typedef vector<point> polygon;
-
-double cp(point a, point b, point c)
-{
-	return (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x);
-}
-
-bool cw(point a, point b, point c)
-{
-	return cp(a, b, c) < -EPSILON;
-}
-
-bool ccw(point a, point b, point c)
-{
-	return cp(a, b, c) > EPSILON;
-}
-
-bool collinear(point a, point b, point c)
-{
-	return fabs(cp(a, b, c)) <= EPSILON;
-}
-
-bool ccwOrCollinear(point a, point b, point c)
-{
-	return ccw(a, b, c) || collinear(a, b, c);
-}
-
-polygon jarvisConvexHull(polygon &pg)
-{
-    polygon ch;
-
-    sort(pg.begin(), pg.end());
-    pg.erase(unique(pg.begin(), pg.end()), pg.end());
-
-    int current = 0;
-    do
+    while (cin >> n)
     {
-        int next = 0;
-        for (int i = 1; i < pg.size(); i++)
+        vector<int> xs, ys;
+        for (int i = 0; i < n; i++)
         {
-            if (cw(pg[current], pg[next], pg[i]) ||
-                (collinear(pg[current], pg[next], pg[i]) &&
-                pg[current].distTo(pg[i]) > pg[current].distTo(pg[next])))
-                next = i;
+            cin >> x1[i] >> y1[i];
+            cin >> x2[i] >> y2[i];
+            xs.push_back(x1[i]); xs.push_back(x2[i]);
+            ys.push_back(y1[i]); ys.push_back(y2[i]);
         }
-        
-        ch.push_back(pg[next]);
-        current = next;
-    } while (current != 0);
-    
-    return ch;
+
+        sort(xs.begin(), xs.end());
+        sort(ys.begin(), ys.end());
+
+        xs.erase(unique(xs.begin(), xs.end()), xs.end());
+        ys.erase(unique(ys.begin(), ys.end()), ys.end());
+
+        for (int i = 0; i < n; i++)
+        {
+            x1[i] = lower_bound(xs.begin(), xs.end(), x1[i]) - xs.begin();
+            x2[i] = lower_bound(xs.begin(), xs.end(), x2[i]) - xs.begin();
+            y1[i] = lower_bound(ys.begin(), ys.end(), y1[i]) - ys.begin();
+            y2[i] = lower_bound(ys.begin(), ys.end(), y2[i]) - ys.begin();
+        }
+
+        int g[2 * n][2 * n] = {};
+        for (int c = 0; c < n; c++)
+            for (int i = x1[c]; i < x2[c]; i++)
+                for (int j = y1[c]; j < y2[c]; j++)
+                        g[i][j]++;
+
+        int area = 0;
+        for (int i = 0; i < 2 * n - 1; i++)
+            for (int j = 0; j < 2 * n - 1; j++)
+                if (g[i][j] >= 2)
+                    area += (xs[i + 1] - xs[i]) * (ys[j + 1] - ys[j]);
+        cout << area << '\n';
+    }
+
+    return 0;
 }

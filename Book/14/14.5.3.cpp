@@ -1,47 +1,85 @@
-#include <bits/stdc++.h>
+const double EPSILON = 1e-7;
 
-using namespace std;
-
-struct point {
-    double x, y;
-    point (double x = 0, double y = 0): x(x), y(y) {}
-    point operator-(point &p) { return point(x - p.x, y - p.y); }
-};
-
-double cross(const point &a, const point &b)
+struct point
 {
-    return a.x * b.y - a.y * b.x;
-}
+	double x, y;
+	
+	bool operator<(const point &p) const
+	{
+	    if (fabs(y - p.y) > EPSILON) return y < p.y;
+	    return x < p.x;
+	}
+	
+	bool operator==(const point &p) const
+	{
+	    return fabs(x - p.x) <= EPSILON && fabs(y - p.y) <= EPSILON;
+	}
+};
 
 typedef vector<point> polygon;
 
-point getCentroid1(polygon &pg)
+double cp(point &a, point &b, point &c)
 {
-    double areaOfPolygon = 0, areaOfTriangle = 0, px = 0, py = 0;
-
-    for (int i = 2; i < pg.size(); i++)
-    {
-        areaOfTriangle = cross(pg[i - 1] - pg[0], pg[i] - pg[0]);
-        areaOfPolygon += areaOfTriangle;
-        px += areaOfTriangle * (pg[0].x + pg[i - 1].x + pg[i].x);
-        py += areaOfTriangle * (pg[0].y + pg[i - 1].y + pg[i].y);
-    }
-
-    return point(px / (3.0 * areaOfPolygon), py / (3.0 * areaOfPolygon));
+	return (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x);
 }
 
-point getCentroid2(polygon &pg)
+bool ccw(point &a, point &b, point &c)
 {
-    double areaOfPolygon = 0, areaOfTriangle = 0, px = 0, py = 0;
+    return cp(a, b, c) > EPSILON;
+}
 
-    int n = pg.size();
-    for (int i = 0; i < n; i++)
-    {
-        areaOfTriangle = cross(pg[i], pg[(i + 1) % n]);
-        areaOfPolygon += areaOfTriangle;
-        px += areaOfTriangle * (pg[i].x + pg[(i + 1) % n].x);
-        py += areaOfTriangle * (pg[i].y + pg[(i + 1) % n].y);
-    }
+bool ccwOrCollinear(point &a, point &b, point &c)
+{
+    double cp1 = cp(a, b, c);
+	return cp1 > EPSILON || fabs(cp1) <= EPSILON;
+}
 
-    return point(px / (3.0 * areaOfPolygon), py / (3.0 * areaOfPolygon));
+// 三个凸包顶点不共线。
+polygon andrewConvexHull(polygon &pg)
+{
+	polygon ch;
+
+    sort(pg.begin(), pg.end());
+	for (int i = 0; i < pg.size(); i++)
+	{
+		while (ch.size() >= 2 &&
+		    ccwOrCollinear(ch[ch.size() - 2], ch[ch.size() - 1], pg[i]))
+			ch.pop_back();
+		ch.push_back(pg[i]);
+	}
+	for (int i = pg.size() - 1, upper = ch.size() + 1; i >= 0; i--)
+	{
+		while (ch.size() >= upper &&
+		    ccwOrCollinear(ch[ch.size() - 2], ch[ch.size() - 1], pg[i]))
+			ch.pop_back();
+		ch.push_back(pg[i]);
+	}
+    ch.pop_back();
+    
+	return ch;
+}
+
+// 凸包顶点可共线。
+polygon andrewConvexHull(polygon &pg)
+{
+	polygon ch;
+
+    sort(pg.begin(), pg.end());
+	for (int i = 0; i < pg.size(); i++)
+	{
+		while (ch.size() >= 2 &&
+		    ccw(ch[ch.size() - 2], ch[ch.size() - 1], pg[i]))
+			ch.pop_back();
+		ch.push_back(pg[i]);
+	}
+	for (int i = pg.size() - 2, upper = ch.size() + 1; i >= 0; i--)
+	{
+		while (ch.size() >= upper &&
+		    ccw(ch[ch.size() - 2], ch[ch.size() - 1], pg[i]))
+			ch.pop_back();
+		ch.push_back(pg[i]);
+	}
+    ch.pop_back();
+    
+	return ch;
 }

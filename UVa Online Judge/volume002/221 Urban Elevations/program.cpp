@@ -24,7 +24,7 @@ struct building
     }
 };
 
-vector < building > buildings;
+vector<building> buildings;
 
 void findVisibleBuilding()
 {
@@ -34,7 +34,7 @@ void findVisibleBuilding()
 
     for (int i = 1; i < buildings.size(); i++)
     {
-        vector < pair < double, double >>interval;
+        vector<pair< double, double>> interval;
         interval.push_back(make_pair(buildings[i].left, buildings[i].right));
 
         for (int j = 0; j < buildings.size(); j++)
@@ -107,9 +107,7 @@ int main(int argc, char *argv[])
         for (int i = 1; i <= n; i++)
         {
             cin >> left >> bottom >> width >> depth >> height;
-            buildings.push_back((building)
-                {
-                i, left, bottom, width, left + width, depth, height});
+            buildings.push_back((building){i, left, bottom, width, left + width, depth, height});
         }
 
         if (first)
