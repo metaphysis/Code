@@ -45,7 +45,7 @@ void findVisibleBuilding()
             if (buildings[i].bottom + buildings[i].depth <= buildings[j].bottom)
                 continue;
 
-            vector < pair < double, double >>more;
+            vector<pair<double, double>> more;
             for (int k = interval.size() - 1; k >= 0; k--)
             {
                 if (buildings[i].height <= buildings[j].height)
@@ -80,17 +80,14 @@ void findVisibleBuilding()
                                 interval[k].second));
                     }
                 }
-
             }
 
             interval.insert(interval.begin(), more.begin(), more.end());
 
-            if (interval.size() == 0)
-                break;
+            if (interval.size() == 0) break;
         }
 
-        if (interval.size())
-            cout << " " << buildings[i].index;
+        if (interval.size()) cout << " " << buildings[i].index;
     }
 
     cout << endl;
