@@ -1,8 +1,8 @@
 // Avoiding Overlaps
 // UVa ID: 11601
 // Verdict: Accepted
-// Submission Date: 2018-12-21
-// UVa Run Time: 0.260s
+// Submission Date: 2018-12-27
+// UVa Run Time: 0.1.090s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
@@ -28,6 +28,7 @@ itNode *setNode(interval i)
     node->i = i;
     node->min = i.low, node->max = i.high;
     node->left = node->right = NULL;
+    return node;
 }
 
 itNode *insert(itNode *root, interval i)

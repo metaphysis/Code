@@ -1,54 +1,111 @@
-// Sparse Table
 #include <bits/stdc++.h>
 
 using namespace std;
 
-const int MAXN = (1 << 20), K = 24;
+const int MAXN = (1 << 10);
 
-int N, A[MAXN], log2t[MAXN + 1] = {}, st[MAXN][K] = {};
+inline int lowbit(int x) { return x & (-x); }
 
-void prepare()
+int T[MAXN + 16] = {};
+
+void add(int x, int delta)
 {
-    log2t[1] = 0;
-    for (int i = 2; i <= N; i++) log2t[i] = log2t[i / 2] + 1;
-    for (int i = 0; i < N; i++) st[i][0] = A[i];
-    for (int j = 1; j < K; j++)
-	    for (int i = 0; i + (1 << j) <= N; i++)
-		    st[i][j] = min(st[i][j - 1], st[i + (1 << (j - 1))][j - 1]);
+    for (int i = x; i <= MAXN; i += lowbit(i))
+        T[i] += delta;
 }
 
-// min
-int query1(int L, int R)
-{
-    int j = log2t[R - L + 1];
-    return min(st[L][j], st[R - (1 << j) + 1][j]);
-}
-
-// sum
-int query2(int L, int R)
+int get(int x)
 {
     int sum = 0;
-    for (int j = K; j >= 0; j--)
-	    if ((1 << j) <= R - L + 1) {
-		    sum += st[L][j];
-		    L += 1 << j;
-	    }
+    for (int i = x; i; i -= lowbit(i))
+        sum += T[i];
+    return sum;
 }
+
+struct FenwickTree
+{
+    int MAXN;
+    vector<int> T;
+
+    void initialize(int n) {
+        this->MAXN = n;
+        T.assign(n, 0);
+    }
+
+    int get(int x)
+    {
+        int sum = 0;
+        for (; x >= 0; x = (x & (x + 1)) - 1)
+            sum += T[x];
+        return sum;
+    }
+
+    void add(int x, int delta)
+    {
+        for (; x < MAXN; x = x | (x + 1))
+            T[x] += delta;
+    }
+
+    int sum(int L, int R)
+    {
+        return get(R) - get(L - 1);
+    }
+
+    void prepare(vector<int> A)
+    {
+        initialize(A.size());
+        for (size_t i = 0; i < A.size(); i++)
+            add(i, A[i]);
+    }
+};
+
+struct FenwickTree2D {
+    int MAXN, MAXM;
+    vector<vector<int>> T;
+
+    // initialize(...) { ... }
+
+    int get(int x, int y)
+    {
+        int sum = 0;
+        for (int i = x; i >= 0; i = (i & (i + 1)) - 1)
+            for (int j = y; j >= 0; j = (j & (j + 1)) - 1)
+                sum += T[i][j];
+        return sum;
+    }
+
+    void add(int x, int y, int delta) {
+        for (int i = x; i < MAXN; i = i | (i + 1))
+            for (int j = y; j < MAXM; j = j | (j + 1))
+                T[i][j] += delta;
+    }
+};
 
 int main(int argc, char *argv[])
 {
-    //srand(time(NULL));
-    
-    N = 128;
-    for (int i = 0; i < N; i++) A[i] = rand() % MAXN;
-
-    prepare();
-
-    for (int i = 0; i < 10; i++)
+    int A[MAXN + 16];
+    vector<int> AA;
+    for (int i = 1; i <= MAXN; i++)
     {
-        int L = rand() % N, R = rand() % N;
-        if (L > R) swap(L, R);
-        cout << "[" << L << ", " << R << "] = " << query(L, R) << '\n';
+        A[i] = i;
+        AA.push_back(i);
     }
+
+    FenwickTree ft;
+    ft.prepare(AA);
+
+    for (int i = 1; i <= MAXN; i++)
+        add(i, A[i]);
+
+    for (int cases = 1; cases <= 100; cases++) {
+        int L = rand() % MAXN + 1, R = rand() % MAXN + 1;
+        if (L > R) swap(L, R);
+        cout << "S[" << setw(4) << right << L << ", ";
+        cout << setw(4) << right << R << "] => ";
+        cout << get(R) - get(L - 1) << " = ";
+        cout << ft.sum(L - 1, R - 1);
+        cout << " = " << (R + L) * (R - L + 1) / 2 << '\n';
+    }
+
     return 0;
 }
