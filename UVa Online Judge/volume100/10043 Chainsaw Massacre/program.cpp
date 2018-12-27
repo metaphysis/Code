@@ -26,11 +26,6 @@ struct tree
 tree trees[MAXTREES];
 int l, w;
 
-bool cmpXY(tree a, tree b)
-{
-	return (a.x == b.x) ? (a.y < b.y) : (a.x < b.x);
-}
-
 bool cmpX(tree a, tree b)
 {
 	return a.x < b.x;
@@ -73,8 +68,8 @@ int main(int ac, char *av[])
 			}
 		}
 
-		// 对于每一棵树，以其作为矩形的左边界，往右扫描，直到发现某一列有树，或者达到右
-		// 侧边界，则该列为此矩形的右边界。先按横坐标进行排序。
+		// 按横坐标进行排序。
+		// 逐一枚举每一棵树作为矩形的左边界，以位于该棵树之后的每棵树作为矩形的右边界。
 		int maxArea = 0, lowY, topY, leftX, rightX;
 		sort(trees, trees + total, cmpX);
 		for (int i = 0; i < total; i++)
@@ -96,7 +91,8 @@ int main(int ac, char *av[])
 			}
 		}
 
-		// 先确定上界，再确定下界，再确定矩形，先按纵坐标排序。
+		// 按纵坐标排序。
+		// 逐一枚举每一棵树作为矩形的下边界，以位于该棵树之后的每棵树作为矩形的上边界。
 		sort(trees, trees + total, cmpY);
 		for (int i = 0; i < total; i++)
 		{
