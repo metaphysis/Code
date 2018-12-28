@@ -1,7 +1,3 @@
-#include <bits/stdc++.h>
-
-using namespace std;
-
 int compress(int *x1, int *x2, int w, int n)
 {
     vector<int> xs;
@@ -23,9 +19,4 @@ int compress(int *x1, int *x2, int w, int n)
     }
 
     return xs.size();
-}
-
-int main(int argc, char *argv[])
-{
-    return 0;
 }
