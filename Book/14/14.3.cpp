@@ -18,8 +18,10 @@ struct segment {
 struct EndPoint {
     point p;
     int epIdx, epCode;
-    EndPoint() {}
-    EndPoint(point p, int epIdx, int epCode): p(p), epIdx(epIdx), epCode(epCode) {}
+
+    EndPoint(point p = point(0, 0), int epIdx = 0, int epCode = 0):
+    p(p), epIdx(epIdx), epCode(epCode) {}
+
     bool operator<(const EndPoint &ep) const
     {
         if (p.y == ep.p.y) return epCode < ep.epCode;
