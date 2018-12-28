@@ -1,0 +1,8 @@
+Shape 1
+Insulating area = 73239.164 cm^2
+Shape 2
+Insulating area = 196349.541 cm^2
+Shape 3
+Insulating area = 0.393 cm^2
+Shape 4
+Insulating area = 98.175 cm^2

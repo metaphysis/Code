@@ -1,0 +1,1 @@
+The minimal interconnect consists of 2 bridges with a total length of 2.000

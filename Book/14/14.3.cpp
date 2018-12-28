@@ -2,7 +2,7 @@
 
 using namespace std;
 
-const int MAXV = 100000, INF = 0x3fffffff;
+const int MAXV = 100000, INF = 0x3f3f3f3f;
 const int BOTTOM = 0, LEFT = 1, RIGHT = 2, TOP = 3;
 
 struct point {
