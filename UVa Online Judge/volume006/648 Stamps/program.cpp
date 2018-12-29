@@ -1,8 +1,8 @@
 // Stamps
 // UVa ID: 648
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2018-12-28
+// UVa Run Time: 0.020s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 

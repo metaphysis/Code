@@ -1,11 +1,3 @@
-// 
-// UVa ID: 
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
-//
-// 版权所有（C）2018，邱秋。metaphysis # yeah dot net
-
 #include <bits/stdc++.h>
 
 using namespace std;
