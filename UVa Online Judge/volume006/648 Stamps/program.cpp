@@ -11,13 +11,13 @@
 using namespace std;
 
 vector<vector<int>> best;
-int types, total, highest;
-int stamps[32], n, request, used[4];
+int types, total, highest, n, request;
+int stamps[32], used[4];
 
-void dfs(int depth, int idx, int value)
+void dfs(int depth, int idx, int sum)
 {
-    if (depth > 4 || value > request) return;
-    if (d == request)
+    if (depth > 4 || sum > request) return;
+    if (sum == request)
     {
         bool better = false;
         set<int> diff;
@@ -57,11 +57,12 @@ void dfs(int depth, int idx, int value)
             types = diff.size();
             total = depth + 1;
             highest = 0;
-            for (int i = 0; i < depth; i++)
-                highest = max(highest, stamps[used[i]]);
             vector<int> vs;
-            for (int s = 0; s < depth; s++)
-                vs.push_back(stamps[used[s]]);
+            for (int i = 0; i < depth; i++)
+            {
+                highest = max(highest, stamps[used[i]]);
+                vs.push_back(stamps[used[i]]);
+            }
             sort(vs.begin(), vs.end());
             best.push_back(vs);
         }
@@ -70,7 +71,7 @@ void dfs(int depth, int idx, int value)
     for (int i = idx; i < n; i++)
     {
         used[depth] = i;
-        dfs(depth + 1, i, value + stamps[i]);
+        dfs(depth + 1, i, sum + stamps[i]);
     }
 }
 
