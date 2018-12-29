@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
     int n;
-    int x1[32], y1[64], z1[64], x2[64], y2[64], z2[64];
+    int x1[32], y1[32], z1[32], x2[32], y2[32], z2[32];
 
     while (cin >> n)
     {

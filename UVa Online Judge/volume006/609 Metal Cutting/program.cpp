@@ -1,3 +1,15 @@
+// Metal Cutting
+// UVa ID: 609
+// Verdict: 
+// Submission Date: 
+// UVa Run Time: s
+//
+// 版权所有（C）2018，邱秋。metaphysis # yeah dot net
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
 const double EPSILON = 1e-7;
 
 struct point
@@ -61,4 +73,17 @@ bool isIntersected(segment s1, segment s2)
 
 	point pi = getIntersection(p, q);
 	return s1.contains(pi) && s2.contains(pi);
+}
+
+int main(int argc, char *argv[])
+{
+    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
+
+    int cases;
+    cin >> cases;
+    for (int cs = 1; cs <= cases; cs++)
+    {
+    }
+
+    return 0;
 }

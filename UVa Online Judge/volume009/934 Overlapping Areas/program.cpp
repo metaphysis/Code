@@ -1,7 +1,7 @@
-// Intersecting Rectangles
-// UVa ID: 870
+// Overlapping Areas
+// UVa ID: 934
 // Verdict: Accepted
-// Submission Date: 2018-12-28
+// Submission Date: 2018-12-29
 // UVa Run Time: 0.000s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
@@ -12,37 +12,20 @@ using namespace std;
 
 const int MAXV = 110;
 
-int n, g[210][210] = {}, area;
-int xx1[MAXV], yy1[MAXV], xx2[MAXV], yy2[MAXV], visited[210][210];
-int offset[4][2] = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
-vector<int> xs, ys;
-
-void dfs(int i, int j)
-{
-    visited[i][j] = 1;
-    if (g[i][j]) area += (xs[i + 1] - xs[i]) * (ys[j + 1] - ys[j]);
-    for (int k = 0; k < 4; k++)
-    {
-        int nexti = i + offset[k][0], nextj = j + offset[k][1];
-        if (nexti < 0 || nexti > 209 || nextj < 0 || nextj > 209) continue;
-        if (visited[nexti][nextj]) continue;
-        if (!g[nexti][nextj]) continue;
-        dfs(nexti, nextj);
-    }
-}
-
 int main(int argc, char *argv[])
 {
-    int cases;
-    cin >> cases;
-    for (int cs = 1; cs <= cases; cs++)
+    int n;
+    double xx1[MAXV], yy1[MAXV], xx2[MAXV], yy2[MAXV];
+
+    while (cin >> n)
     {
-        cin >> n;
-        xs.clear(), ys.clear();
+        vector<double> xs, ys;
         for (int i = 0; i < n; i++)
         {
             cin >> xx1[i] >> yy1[i];
             cin >> xx2[i] >> yy2[i];
+            if (xx1[i] > xx2[i]) swap(xx1[i], xx2[i]), swap(yy1[i], yy2[i]);
+            if (yy1[i] > yy2[i]) swap(yy1[i], yy2[i]);
             xs.push_back(xx1[i]); xs.push_back(xx2[i]);
             ys.push_back(yy1[i]); ys.push_back(yy2[i]);
         }
@@ -61,18 +44,23 @@ int main(int argc, char *argv[])
             yy2[i] = lower_bound(ys.begin(), ys.end(), yy2[i]) - ys.begin();
         }
 
-        memset(g, 0, sizeof(g));
+        int od = 0;
+        int g[2 * n][2 * n] = {}; 
         for (int c = 0; c < n; c++)
             for (int i = xx1[c]; i < xx2[c]; i++)
                 for (int j = yy1[c]; j < yy2[c]; j++)
-                    g[i][j] = 1;
+                {
+                    g[i][j]++;
+                    od = max(od, g[i][j]);
+                }
 
-        area = 0;
-        memset(visited, 0, sizeof(visited));
-        dfs(xx1[0], yy1[0]);
+        double area = 0;
+        for (int i = 0; i < 2 * n - 1; i++)
+            for (int j = 0; j < 2 * n - 1; j++)
+                if (g[i][j] == od)
+                    area += (xs[i + 1] - xs[i]) * (ys[j + 1] - ys[j]);
 
-        if (cs > 1) cout << '\n';
-        cout << area << '\n';
+        cout << fixed << setprecision(2) << area << '\n';
     }
 
     return 0;
