@@ -1,6 +1,6 @@
-const int MAXV = 1024, MAXE = 102400, INF = 0x3f3f3f3f;
+const int MAXV = 100, MAXE = 10000, INF = 0x3f3f3f3f;
 
-struct edge { int from, to, weight, next; } edges[MAXE];
+struct edge { int u, v, weight, next; } edges[MAXE];
 
 int n, m, head[MAXV];
 int dist[MAXV], parent[MAXV];
@@ -20,7 +20,7 @@ bool spfa(int s)
         visited[u] = 0;
         for (int i = head[u]; ~i; i = edges[i].next)
         {
-            int v = edges[i].to, w = edges[i].weight;
+            int v = edges[i].v, w = edges[i].weight;
             if (dist[v] > dist[u] + w)
             {
                 dist[v] = dist[u] + w;

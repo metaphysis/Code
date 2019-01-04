@@ -3,13 +3,14 @@
 using namespace std;
 
 const int MAXV = 1010;
+
 int stk[MAXV], top, connected[MAXV][MAXV];
-int numberOfVertices, numberOfEdges;
+int cntOfVertices, cntOfEdges;
 
 void dfs(int x)
 {
     stk[top++] = x;
-    for (int i = 1; i <= numberOfVertices; i++) {
+    for (int i = 0; i < cntOfVertices; i++) {
         if (connected[x][i]) {
             connected[x][i] = connected[i][x] = 0;
             dfs(i);
@@ -18,19 +19,19 @@ void dfs(int x)
     }
 }
 
-void fleury(int start)
+void hierholzer(int u)
 {
-    top = 0, stk[top++] = start;
+    top = 0, stk[top++] = u;
 
     while (top > 0) {
-        int brige = 1;
-        for (int i = 1; i <= numberOfVertices; ++i)
+        int going = 1;
+        for (int i = 0; i < cntOfVertices; ++i)
             if (connected[stk[top - 1]][i]) {
-                brige = 0;
+                going = 0;
                 break;
             }
 
-        if (brige) cout << stk[--top] << ' ';
+        if (going) cout << stk[--top] << ' ';
         else dfs(stk[--top]);
     }
     cout << '\n';
@@ -38,24 +39,24 @@ void fleury(int start)
 
 int main(int argc, char *argv[])
 {
-    while (cin >> numberOfVertices >> numberOfEdges) {
+    while (cin >> cntOfVertices >> cntOfEdges) {
         memset(connected, 0, sizeof (connected));
 
         int x, y;
-        for (int i = 0; i < numberOfEdges; i++) {
+        for (int i = 0; i < cntOfEdges; i++) {
             cin >> x >> y;
+            x--, y--;
             connected[x][y] = connected[y][x] = 1;
         }
 
-        int start = 1, numberOfOddDegree = 0;
-        for (int i = 1; i <= numberOfVertices; i++) {
+        int u = 0, cntOfOddDegree = 0;
+        for (int i = 0; i < cntOfVertices; i++) {
             int degree = 0;
-            for (int j = 1; j <= numberOfVertices; j++)
-                degree += connected[i][j];
-            if (degree % 2 == 1) start = i, numberOfOddDegree++;
+            for (int j = 0; j < cntOfVertices; j++) degree += connected[i][j];
+            if (degree % 2 == 1) u = i, cntOfOddDegree++;
         }
 
-        if (numberOfOddDegree == 0 || numberOfOddDegree == 2) fleury(start);
+        if (cntOfOddDegree == 0 || cntOfOddDegree == 2) hierholzer(u);
         else cout << "No Euler path.\n";
     }
 

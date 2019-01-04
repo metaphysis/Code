@@ -4,19 +4,19 @@
 
 using namespace std;
 
-class disjointSet
+class DisjointSet
 {
 private:
     int vertices, *parent, *rank;
 
 public:
-    disjointSet(int v)
+    DisjointSet(int v)
     {
         vertices = v;
         parent = new int[v], rank = new int[v];
     }
 
-    ~disjointSet()
+    ~DisjointSet()
     {
         delete [] parent, rank;
     }
@@ -46,7 +46,7 @@ public:
     }
 };
 
-class graph
+class Graph
 {
 private:
     bool isUndirectedGraph;
@@ -54,7 +54,7 @@ private:
     list<int> *edges;
 
 public:
-    graph(int v, bool ug)
+    Graph(int v, bool ug)
     {
         vertices = v;
         edges = new list<int>[v];
@@ -63,7 +63,7 @@ public:
         isUndirectedGraph = ug;
     }
 
-    ~graph()
+    ~Graph()
     {
         delete [] edges, appeared;
     }
@@ -84,7 +84,7 @@ private:
     void restoreEdge(int u, int v);
 };
 
-bool graph::isEulerian()
+bool Graph::isEulerian()
 {
     bool eulerian = true;
 
@@ -143,7 +143,7 @@ bool graph::isEulerian()
     return eulerian;
 }
 
-bool graph::findEulerianTrail()
+bool Graph::findEulerianTrail()
 {
     bool eulerian = isEulerian();
     //if (eulerian) fleury(startOfEulerianTrail);
@@ -151,7 +151,7 @@ bool graph::findEulerianTrail()
     return eulerian;
 }
 
-void graph::fleury(int u)
+void Graph::fleury(int u)
 {
     for (auto v : edges[u])
         if (v >= 0 && isValidNextEdge(u, v))
@@ -163,12 +163,13 @@ void graph::fleury(int u)
         }
 }
 
-void graph::hierholzer(int u)
+void Graph::hierholzer(int u)
 {
-    stack<int> path; path.push(u);
+    stack<int> path;
     vector<int> circuit;
 
     int current = u;
+    path.push(u);
     while (!path.empty())
     {
         if (edges[current].size())
@@ -190,12 +191,12 @@ void graph::hierholzer(int u)
         printTrail(circuit[i], circuit[i - 1]);
 }
 
-void graph::printTrail(int u, int v)
+void Graph::printTrail(int u, int v)
 {
     cout << u << "->" << v << ' ';
 }
 
-bool graph::isValidNextEdge(int u, int v)
+bool Graph::isValidNextEdge(int u, int v)
 {
     int connected = 0;
     for (auto v : edges[u])
@@ -211,9 +212,9 @@ bool graph::isValidNextEdge(int u, int v)
     return connected1 == connected2;
 }
 
-int graph::getConnectedVertices(int source)
+int Graph::getConnectedVertices(int source)
 {
-    disjointSet ds(vertices);
+    DisjointSet ds(vertices);
     ds.makeSet();
 
     for (int u = 0; u < vertices; u++)
@@ -229,26 +230,26 @@ int graph::getConnectedVertices(int source)
     return connected;
 }
 
-void graph::addEdge(int u, int v)
+void Graph::addEdge(int u, int v)
 {
     appeared[u] = appeared[v] = 1;
     edges[u].push_back(v);
     if (isUndirectedGraph) edges[v].push_back(u);
 }
 
-void graph::removeEdge(int u, int v)
+void Graph::removeEdge(int u, int v)
 {
     *find(edges[u].begin(), edges[u].end(), v) = -1;
     if (isUndirectedGraph) *find(edges[v].begin(), edges[v].end(), u) = -1;
 }
 
-void graph::restoreEdge(int u, int v)
+void Graph::restoreEdge(int u, int v)
 {
     *find(edges[u].begin(), edges[u].end(), -2) = v;
     if (isUndirectedGraph) *find(edges[v].begin(), edges[v].end(), -2) = u;  
 }
 
-void graph::deleteEdge(int u, int v)
+void Graph::deleteEdge(int u, int v)
 {
     *find(edges[u].begin(), edges[u].end(), v) = -2;
     if (isUndirectedGraph) *find(edges[v].begin(), edges[v].end(), u) = -2;    
@@ -256,20 +257,20 @@ void graph::deleteEdge(int u, int v)
 
 int main(int argc, char * argv[])
 {
-    graph g1(4, true);
+    Graph g1(4, true);
     g1.addEdge(0, 1);
     g1.addEdge(0, 2);
     g1.addEdge(1, 2);
     g1.addEdge(2, 3);
     g1.findEulerianTrail();
 
-    graph g2(3, true);
+    Graph g2(3, true);
     g2.addEdge(0, 1);
     g2.addEdge(1, 2);
     g2.addEdge(2, 0);
     g2.findEulerianTrail();
 
-    graph g3(5, true);
+    Graph g3(5, true);
     g3.addEdge(1, 0);
     g3.addEdge(0, 2);
     g3.addEdge(2, 1);

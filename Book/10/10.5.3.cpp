@@ -1,4 +1,4 @@
-const int INF = 0x7fffffff;
+const int INF = 0x7f7f7f7f;
 
 struct arc
 {
