@@ -14,8 +14,9 @@ const int MAXV = 1010, MAXE = 1000010, INF = 0x3f3f3f3f;
 
 struct edge
 {
-    int to;
+    int v;
     long long weight;
+    edge (int v = 0, long long weight = 0): v(v), weight(weight) {}
     bool operator<(const edge &e) const { return weight > e.weight; }
 } edges[MAXE][4];
 
@@ -27,21 +28,21 @@ void mooreDijkstra(int u)
 {
     fill(dist, dist + N * M, INF);
     dist[u] = maze[0][0];
-    
+
     priority_queue<edge> q;
-    q.push((edge){0, dist[u]});
-    
+    q.push(edge(0, dist[u]));
+
     while (!q.empty())
     {
-        edge v = q.top(); q.pop();
+        edge e1 = q.top(); q.pop();
         for (int i = 0; i < 4; i++)
         {
-            edge e = edges[v.to][i];
-            if (e.to == 0) continue;
-            if (dist[v.to] + e.weight < dist[e.to])
+            edge e2 = edges[e1.v][i];
+            if (e2.v == 0) continue;
+            if (dist[e2.v] > dist[e1.v] + e2.weight)
             {
-                dist[e.to] = dist[v.to] + e.weight;
-                q.push((edge){e.to, dist[e.to]});
+                dist[e2.v] = dist[e1.v] + e2.weight;
+                q.push(edge(e2.v, dist[e2.v]));
             }
         }
     }
@@ -65,10 +66,10 @@ int main(int argc, char *argv[])
                 int c = i * M + j;
                 for (int k = 0; k < 4; k++)
                 {
-                    edges[c][k].to = 0;
+                    edges[c][k].v = 0;
                     int ii = i + offset[k][0], jj = j + offset[k][1];
                     if (ii >= 0 && ii < N && jj >= 0 && jj < M)
-                        edges[c][k] = (edge){ii * M + jj, maze[ii][jj]};
+                        edges[c][k] = edge(ii * M + jj, maze[ii][jj]);
                 }
             }
 
