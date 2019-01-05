@@ -1,4 +1,4 @@
-const int MAXV = 60;
+const int MAXV = 110;
 
 int g[MAXV][MAXV], visited[MAXV], cx[MAXV], cy[MAXV], tx, ty;
 

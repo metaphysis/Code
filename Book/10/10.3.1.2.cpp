@@ -8,13 +8,13 @@ struct edge
 };
 
 vector<edge> edges[MAXV];
-int cntOfVertices, parent[MAXV], distToTree[MAXV], intree[MAXV];
+int n, parent[MAXV], distToTree[MAXV], intree[MAXV];
 
 int prim(int u)
 {
     int minSumOfWeight = 0;
 
-    for (int i = 0; i < cntOfVertices; i++)
+    for (int i = 0; i < n; i++)
         parent[i] = -1, intree[i] = 0, distToTree[i] = INF;
 
     priority_queue<edge> q;

@@ -1,4 +1,4 @@
-const int MAXV = 110, INF = 0x3fffffff;
+const int MAXV = 110, INF = 0x3f3f3f3f;
 const int UNLABELED = -1, UNCHECKED = 0, CHECKED = 1;
 
 struct arc { int capacity, flow; } arcs[MAXV][MAXV];

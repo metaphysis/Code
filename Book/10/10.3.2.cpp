@@ -10,13 +10,13 @@ struct edge {
     bool operator<(const edge &e) const { return weight < e.weight; }
 } edges[MAXE];
 
-int cntOfVertices, cntOfEdges;
+int n, m;
 
 int parent[MAXV], ranks[MAXV];
 
 void makeSet()
 {
-    for (int i = 0; i < cntOfVertices; i++) parent[i] = i, ranks[i] = 0;
+    for (int i = 0; i < n; i++) parent[i] = i, ranks[i] = 0;
 }
 
 int findSet(int x)
@@ -43,9 +43,9 @@ int kruskal()
     int sumOfWeight = 0, cntOfMerged = 0;
 
     makeSet();
-    sort(edges, edges + cntOfEdges);
+    sort(edges, edges + m);
 
-    for (int i = 0; i < cntOfEdges; i++)
+    for (int i = 0; i < m; i++)
         if (unionSet(edges[i].u, edges[i].v)) {
             cntOfMerged++;
             sumOfWeight += edges[i].weight;

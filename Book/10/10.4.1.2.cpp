@@ -13,12 +13,12 @@ struct edge
 
 list<edge> edges[MAXV];
 
-int cntOfVertices;
+int n;
 int dist[MAXV], parent[MAXV];
 
 void mooreDijkstra(int u)
 {
-    for (int i = 0; i < cntOfVertices; i++) dist[i] = INF, parent[i] = -1;
+    for (int i = 0; i < n; i++) dist[i] = INF, parent[i] = -1;
     dist[u] = 0;
     
     priority_queue<edge> q;

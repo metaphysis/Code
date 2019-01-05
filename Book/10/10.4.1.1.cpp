@@ -11,12 +11,12 @@ struct edge
 };
 
 list<edge> edges[MAXV];
-int cntOfVertices;
+int n;
 int dist[MAXV], parent[MAXV], visited[MAXV];
 
 void mooreDijkstra(int u)
 {
-    for (int i = 0; i < cntOfVertices; i++)
+    for (int i = 0; i < n; i++)
         dist[i] = INF, parent[i] = -1, visited[i] = 0;
     dist[u] = 0;
 
@@ -28,7 +28,7 @@ void mooreDijkstra(int u)
                 dist[e.v] = dist[u] + e.weight, parent[e.v] = u;
 
         int least = INF;
-        for (int i = 0; i < cntOfVertices; i++)
+        for (int i = 0; i < n; i++)
             if (!visited[i] && least > dist[i])
                 least = dist[i], u = i;
     }

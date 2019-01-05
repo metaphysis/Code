@@ -1,4 +1,4 @@
-const int MAXV = 100, MAXE = 10000, INF = 0x3f3f3f3f;
+const int MAXV = 110, MAXE = 12100, INF = 0x3f3f3f3f;
 
 struct edge { int u, v, weight, next; } edges[MAXE];
 
