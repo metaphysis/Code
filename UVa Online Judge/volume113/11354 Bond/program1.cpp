@@ -36,13 +36,11 @@ void make_set()
     for (int i = 0; i < number_of_vertices; i++) parent[i] = i, ranks[i] = 0;
 }
 
-// 带路径压缩的查找，使用递归实现。
 int find_set(int x)
 {
     return (x == parent[x] ? x : parent[x] = find_set(parent[x]));
 }
 
-//  集合的按秩合并。
 bool union_set(int x, int y)
 {
     x = find_set(x), y = find_set(y);

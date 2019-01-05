@@ -2,7 +2,7 @@
 
 using namespace std;
 
-const int MAXV = 100, MAXE = 10010;
+const int MAXV = 110, MAXE = 12100;
 
 struct edge {
     int u, v, weight;

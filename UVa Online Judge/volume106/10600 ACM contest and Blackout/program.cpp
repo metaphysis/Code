@@ -79,8 +79,7 @@ void kruskal()
             secondary_weight_sum = min(secondary_weight_sum, current_weight_sum);
     }
 
-    cout << min_weight_sum << ' ';
-    cout << secondary_weight_sum << '\n';
+    cout << min_weight_sum << ' ' << secondary_weight_sum << '\n';
 }
 
 int main(int argc, char *argv[])

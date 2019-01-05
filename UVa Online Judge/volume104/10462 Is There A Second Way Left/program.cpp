@@ -1,3 +1,11 @@
+// Is There A Second Way Left
+// UVa ID: 10462
+// Verdict: Accepted
+// Submission Date: 2018-02-05
+// UVa Run Time: 0.010s
+//
+// 版权所有（C）2018，邱秋。metaphysis # yeah dot net
+
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -49,12 +57,12 @@ void kruskal()
             intree[cntOfIntree++] = i;
             fbSumOfWeight += edges[i].weight;
         }
-
-    if (cntOfMerged != (n - 1)) {
-        cout << "No MST exist!\n";
+    
+    if (cntOfMerged != (n - 1))
+    {
+        cout << "No way\n";
         return;
     }
-    else cout << "MST = " << bSumOfWeight << '\n';
 
     int sbSumOfWeight = INF, sum;
     for (int i = 0; i < cntOfIntree; i++) {
@@ -63,21 +71,37 @@ void kruskal()
         sum = 0, cntOfMerged = 0;
         for (int j = 0; j < m; j++)
             if (edges[j].enabled && unionSet(edges[j].u, edges[j].v)) {
-                sum += edges[j].weight;
                 cntOfMerged++;
+                sum += edges[j].weight;
             }
-        edges[intree[i]].enabled = 0;
+
+        edges[intree[i]].enabled = 1;
         if (cntOfMerged == (n - 1)) sbSumOfWeight = min(sbSumOfWeight, sum);
     }
 
-    if (sbSumOfWeight == INF) cout << "No second best MST exists!\n";
-    else cout << "Second best MST = " << sbSumOfWeight << '\n';
+    if (sbSumOfWeight == INF) cout << "No second way\n";
+    else cout << sbSumOfWeight << '\n';
 }
 
 int main(int argc, char *argv[])
 {
+    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    kruskal();
+    int cases;
+    cin >> cases;
+
+    for (int cs = 1; cs <= cases; cs++)
+    {
+        cout << "Case #" << cs << " : ";
+        cin >> n >> m;
+        for (int i = 0, u, v, w; i < m; i++)
+        {
+            cin >> u >> v >> w;
+            u--, v--;
+            edges[i] = edge{u, v, w, 1};
+        }
+        kruskal();
+    }
 
     return 0;
 }
