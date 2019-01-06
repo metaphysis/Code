@@ -18,7 +18,7 @@ int cases, n, m, from, to;
 stack<int> s; vector<list<int>> edges(MAXV);
 
 // 初始化。
-void initialize()
+void reset()
 {
     dfstime = 0, cscc = 0;
     while (!s.empty()) s.pop();
@@ -78,7 +78,7 @@ int main(int argc, char *argv[])
     for (int c = 1; c <= cases; c++)
     {
         // 初始化。
-        initialize();
+        reset();
 
         // 以邻接表方式读入图数据。
         //cin >> n >> m;

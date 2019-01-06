@@ -4,12 +4,13 @@ int dfn[MAXV], low[MAXV], scc[MAXV], dfstime, cscc;
 vector<list<int>> edges(MAXV);
 stack<int> s;
 
-void initialize()
+void reset()
 {
     dfstime = 0, cscc = 0;
     while (!s.empty()) s.pop();
     for (int u = 0; u < MAXV; u++) edges[u].clear();
-    memset(dfn, 0, sizeof(dfn)); memset(scc, 0, sizeof(scc));
+    memset(dfn, 0, sizeof(dfn));
+    memset(scc, 0, sizeof(scc));
 }
 
 void tarjan(int u)
