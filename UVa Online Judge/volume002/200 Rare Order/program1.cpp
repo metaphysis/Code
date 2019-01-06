@@ -11,7 +11,8 @@
 using namespace std;
 
 const int MAXV = 26;
-vector<int> edges[MAXV];
+
+vector<int> g[MAXV];
 int degreeOfIn[MAXV], visited[MAXV];
 
 int main(int argc, char *argv[])
@@ -25,7 +26,7 @@ int main(int argc, char *argv[])
             continue;
         }
 
-        for (int u = 0; u < MAXV; u++) edges[u].clear();
+        for (int u = 0; u < MAXV; u++) g[u].clear();
         memset(degreeOfIn, 0, sizeof(degreeOfIn));
         memset(visited, 0, sizeof(visited));
         for (int i = 0; i < words.size() - 1; i++)
@@ -35,7 +36,7 @@ int main(int argc, char *argv[])
                 visited[u] = visited[v] = 1;
                 if (u != v)
                 {
-                    edges[u].push_back(v);
+                    g[u].push_back(v);
                     degreeOfIn[v]++;
                     break;
                 }
@@ -48,7 +49,7 @@ int main(int argc, char *argv[])
         while (!q.empty())
         {
             int u = q.front(); q.pop();
-            for (auto v : edges[u])
+            for (auto v : g[u])
                 if (--degreeOfIn[v] == 0)
                     q.push(v);
             cout << (char)('A' + u);

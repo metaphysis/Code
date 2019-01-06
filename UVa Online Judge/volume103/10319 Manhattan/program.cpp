@@ -13,23 +13,15 @@ using namespace std;
 const int MAXV = 256;
 
 int dfn[MAXV], low[MAXV], scc[MAXV], dfstime, cscc;
-vector<list<int>> edges(MAXV);
+vector<list<int>> g(MAXV);
 stack<int> s;
 
-void initialize()
-{
-    dfstime = 0, cscc = 0;
-    while (!s.empty()) s.pop();
-    for (int u = 0; u < MAXV; u++) edges[u].clear();
-    memset(dfn, 0, sizeof(dfn)); memset(scc, 0, sizeof(scc));
-}
-
-void tarjan(int u)
+void dfs(int u)
 {
     dfn[u] = low[u] = ++dfstime; s.push(u);
-    for (auto v : edges[u])
+    for (auto v : g[u])
     {
-        if (!dfn[v]) tarjan(v), low[u] = min(low[u], low[v]);
+        if (!dfn[v]) dfs(v), low[u] = min(low[u], low[v]);
         else if (!scc[v]) low[u] = min(low[u], dfn[v]);
     }
     if (dfn[u] == low[u])
@@ -44,10 +36,21 @@ void tarjan(int u)
     }
 }
 
+void tarjan(int T)
+{
+    dfstime = 0, cscc = 0;
+    while (!s.empty()) s.pop();
+    memset(dfn, 0, sizeof(dfn));
+    memset(scc, 0, sizeof(scc));
+    for (int i = 0; i < T; i++)
+        if (!dfn[i])
+            dfs(i);
+}
+
 void addEdge(int u, int v)
 {
-    edges[u ^ 1].push_back(v);
-    edges[v ^ 1].push_back(u);
+    g[u ^ 1].push_back(v);
+    g[v ^ 1].push_back(u);
 }
 
 int main(int argc, char *argv[])
@@ -59,8 +62,7 @@ int main(int argc, char *argv[])
     for (int cs = 1; cs <= cases; cs++)
     {
         cin >> S >> A >> m;
-        
-        initialize();
+        for (int u = 0; u < MAXV; u++) g[u].clear();
         for (int i = 1; i <= m; i++)
         {
             cin >> s1 >> a1 >> s2 >> a2;
@@ -74,12 +76,12 @@ int main(int argc, char *argv[])
             if(s1 > s2) a1 ^= 1, a2 ^= 1;
             if(s1 == s2)
             {
-                edges[s1 ^ 1].push_back(s2);
+                g[s1 ^ 1].push_back(s2);
                 continue;
             }
             if(a1 == a2)
             {
-                edges[a1 ^ 1].push_back(a2);
+                g[a1 ^ 1].push_back(a2);
                 continue;
             }
             
@@ -88,9 +90,7 @@ int main(int argc, char *argv[])
         }
 
         T = 2 * (S + A);
-        for (int j = 0; j < T; j++)
-                if (!dfn[j])
-                    tarjan(j);
+        tarjan(T);
 
         bool flag = true;
         for (int j = 0; j < T && flag; j += 2)

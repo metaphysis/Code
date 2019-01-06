@@ -2,16 +2,16 @@
 
 using namespace std;
 
-const int MAXV = 10000;
+const int MAXV = 10010;
 
-vector<int> edges[MAXV];
+vector<int> g[MAXV];
 int parent[MAXV], depth[MAXV], visited[MAXV];
 
 void dfs(int u)
 {
     visited[u] = 1;
 
-    for (auto v : edges[u])
+    for (auto v : g[u])
         if (!visited[v])
         {
             parent[v] = u;
@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
     while (cin >> n)
     {
         for (int u = 0; u < n; u++)
-            edges[u].clear();
+            g[u].clear();
             
         for (int u = 0, m; u < n; u++)
         {
@@ -49,8 +49,8 @@ int main(int argc, char *argv[])
             {
                 cin >> v;
                 v--;
-                edges[u].push_back(v);
-                edges[v].push_back(u);
+                g[u].push_back(v);
+                g[v].push_back(u);
             }
         }
 

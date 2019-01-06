@@ -1,13 +1,13 @@
 const int MAXV = 10010;
 
-vector<list<int>> edges;
+vector<list<int>> g;
 
 int dfn[MAXV], ic[MAXV], dfstime = 0;
 
 int dfs(int u, int parent)
 {
     int lowu = dfn[u] = ++dfstime, lowv, children = 0;
-    for (auto v : edges[u])
+    for (auto v : g[u])
     {
         if (!dfn[v])
         {

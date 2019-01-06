@@ -1,12 +1,12 @@
 const int MAXV = 110;
 int visited[MAXV], n, cscc;
-vector<list<int>> edges1(MAXV), edges2(MAXV);
+vector<list<int>> g1(MAXV), g2(MAXV);
 vector<int> fn, scc;
 
 void dfs(int u)
 {
     visited[u] = 1;
-    for (auto v : edges1[u])
+    for (auto v : g1[u])
         if (!visited[v])
             dfs(v);
     fn.push_back(u);
@@ -15,14 +15,14 @@ void dfs(int u)
 void reverseEdge()
 {
     for (int u = 1; u <= n; u++)
-        for (auto v : edges1[u])
-            edges2[v].push_back(u);
+        for (auto v : g1[u])
+            g2[v].push_back(u);
 }
 
 void rdfs(int u)
 {
     visited[u] = 1;
-    for (auto v : edges2[u])
+    for (auto v : g2[u])
         if (!visited[v])
             rdfs(v);
     scc.push_back(u);

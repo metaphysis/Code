@@ -10,28 +10,25 @@
 
 using namespace std;
 
-// 最大顶点数目。
-const int MAX_V = 100010;
+const int MAXV = 100010;
 
-int visited[MAX_V], cases, n, m, from, to;
+int visited[MAXV], cases, n, m;
 stack<int> s;
-vector<int> edges[MAX_V];
+vector<int> g[MAXV];
 
-// 第一次深度优先遍历，推倒的骨牌总是排在此骨牌能够导致倒下的其他骨牌之后。
 void dfs(int u)
 {
     visited[u] = 1;
-    for (auto v : edges[u])
+    for (auto v : g[u])
         if (!visited[v])
             dfs(v);
     s.push(u);
 }
 
-// 第二次深度优先遍历，从最后一次推倒的骨牌开始。
 void rdfs(int u)
 {
     visited[u] = 1;
-    for (auto v : edges[u])
+    for (auto v : g[u])
         if (!visited[v])
             rdfs(v);
 }
@@ -43,16 +40,14 @@ int main(int argc, char *argv[])
     cin >> cases;
     for (int c = 1; c <= cases; c++)
     {
-        // 初始化。
         while (!s.empty()) s.pop();
-        for (int u = 1; u <= n; u++) edges[u].clear(), visited[u] = 0;
+        for (int u = 1; u <= n; u++) g[u].clear(), visited[u] = 0;
 
-        // 以邻接表方式读入图数据。
         cin >> n >> m;
-        for (int e = 1; e <= m; e++)
+        for (int e = 1, u, v; e <= m; e++)
         {
-            cin >> from >> to;
-            edges[from].push_back(to);
+            cin >> u >> v;
+            g[u].push_back(v);
         }
 
         for (int u = 1; u <= n; u++)

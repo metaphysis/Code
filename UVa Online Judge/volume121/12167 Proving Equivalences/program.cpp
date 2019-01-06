@@ -10,29 +10,19 @@
 
 using namespace std;
 
-// 最大顶点数目。
 const int MAXV = 20010;
 
 int dfn[MAXV], low[MAXV], scc[MAXV], dfstime, cscc;
-int cases, n, m, from, to;
-stack<int> s; vector<list<int>> edges(MAXV);
+int cases, n, m;
+stack<int> s;
+vector<list<int>> g(MAXV);
 
-// 初始化。
-void reset()
-{
-    dfstime = 0, cscc = 0;
-    while (!s.empty()) s.pop();
-    for (int u = 0; u <= n; u++) edges[u].clear();
-    memset(dfn, 0, sizeof(dfn)); memset(scc, 0, sizeof(scc));
-}
-
-// Tarjan算法求强联通分量。
-void tarjan(int u)
+void dfs(int u)
 {
     dfn[u] = low[u] = ++dfstime; s.push(u);
-    for (auto v : edges[u])
+    for (auto v : g[u])
     {
-        if (!dfn[v]) tarjan(v), low[u] = min(low[u], low[v]);
+        if (!dfn[v]) dfs(v), low[u] = min(low[u], low[v]);
         else if (!scc[v]) low[u] = min(low[u], dfn[v]);
     }
     if (dfn[u] == low[u])
@@ -46,6 +36,19 @@ void tarjan(int u)
         }
     }
 }
+
+void tarjan()
+{
+    dfstime = 0, cscc = 0;
+    while (!s.empty()) s.pop();
+    memset(dfn, 0, sizeof(dfn));
+    memset(scc, 0, sizeof(scc));
+    for (int u = 1; u <= n; u++)
+        if (!dfn[u])
+            dfs(u);
+}
+
+
 
 inline int nextChar()
 {
@@ -73,40 +76,31 @@ int main(int argc, char *argv[])
 {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
 
-    //cin >> cases;
     nextInt(cases);
     for (int c = 1; c <= cases; c++)
     {
-        // 初始化。
-        reset();
+        for (int u = 1; u <= n; u++) g[u].clear();
 
-        // 以邻接表方式读入图数据。
-        //cin >> n >> m;
         nextInt(n), nextInt(m);
-        for (int e = 1; e <= m; e++)
+        for (int e = 1, u, v; e <= m; e++)
         {
-            //cin >> from >> to;
-            nextInt(from), nextInt(to);
-            edges[from].push_back(to);
+            nextInt(u), nextInt(v);
+            g[u].push_back(v);
         }
 
-        // Tarjan算法求强连通分量。
-        for (int u = 1; u <= n; u++) if (!dfn[u]) tarjan(u);
+        tarjan();
 
-        // 如果已经是强连通的则不需继续计算。
         if (cscc == 1) cout << "0\n";
         else
         {
-            // 将同一强连通分量中的顶点视为一个顶点，计数其出度及入度。
             int id[MAXV] = {0}, od[MAXV] = {0};
             for (int u = 1; u <= n; u++)
-                for (auto v : edges[u])
+                for (auto v : g[u])
                 {
                     if (scc[u] == scc[v]) continue;
                     od[scc[u]] = id[scc[v]] = 1;
                 }
 
-            // 计数缩点操作后新图中出度或入度为0的顶点数的较大值即为所求。
             int tid = 0, tod = 0;
             for (int u = 1; u <= cscc; u++)
             {

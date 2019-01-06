@@ -25,14 +25,14 @@ struct edge
     }
 };
 
-vector<int> edges[MAXV];
+vector<int> g[MAXV];
 vector<edge> bridge;
 int dfn[MAXV], low[MAXV], visited[MAXV];
 
 void dfs(int u, int parent, int depth)
 {
     visited[u] = 1; dfn[u] = low[u] = depth;
-    for (auto v : edges[u])
+    for (auto v : g[u])
     {
         if (v != parent && visited[v] == 1) low[u] = min(low[u], dfn[v]);
         if (!visited[v])
@@ -51,20 +51,18 @@ int main(int argc, char *argv[])
     while (cin >> servers)
     {
         for (int i = 0; i < servers; i++)
-            edges[i].clear();
+            g[i].clear();
 
-        string text;
-        int from, to, connections;
-        for (int i = 1; i <= servers; i++)
+        string s;
+        for (int i = 1, u, v, c; i <= servers; i++)
         {
-            cin >> from >> text;
-            
-            connections = stoi(text.substr(1, text.length() - 2));
-            for (int j = 1; j <= connections; j++)
+            cin >> u >> s;
+            c = stoi(s.substr(1, s.length() - 2));
+            for (int j = 1; j <= c; j++)
             {
-                cin >> to;
-                edges[from].push_back(to);
-                edges[to].push_back(from);
+                cin >> v;
+                g[u].push_back(v);
+                g[v].push_back(u);
             }
         }
 

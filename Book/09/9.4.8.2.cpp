@@ -1,24 +1,16 @@
 const int MAXV = 10010;
 
+int n;
 int dfn[MAXV], low[MAXV], scc[MAXV], dfstime, cscc;
 vector<list<int>> edges(MAXV);
 stack<int> s;
 
-void reset()
-{
-    dfstime = 0, cscc = 0;
-    while (!s.empty()) s.pop();
-    for (int u = 0; u < MAXV; u++) edges[u].clear();
-    memset(dfn, 0, sizeof(dfn));
-    memset(scc, 0, sizeof(scc));
-}
-
-void tarjan(int u)
+void dfs(int u)
 {
     dfn[u] = low[u] = ++dfstime; s.push(u);
     for (auto v : edges[u])
     {
-        if (!dfn[v]) tarjan(v), low[u] = min(low[u], low[v]);
+        if (!dfn[v]) dfs(v), low[u] = min(low[u], low[v]);
         else if (!scc[v]) low[u] = min(low[u], dfn[v]);
     }
     if (dfn[u] == low[u])
@@ -31,4 +23,16 @@ void tarjan(int u)
             if (u == v) break;
         }
     }
+}
+
+void tarjan()
+{
+    dfstime = 0, cscc = 0;
+    while (!s.empty()) s.pop();
+    for (int u = 0; u < n; u++) edges[u].clear();
+    memset(dfn, 0, sizeof(dfn));
+    memset(scc, 0, sizeof(scc));
+    for (int u = 0; u < n; u++)
+        if (!dfn[u])
+            dfs(u);
 }

@@ -4,35 +4,32 @@ using namespace std;
 
 const int MAXV = 1010, MAXE = 1000010;
 
-struct edge {
-    int from, to, weight, next;
-};
+struct edge { int u, v, weight, next; } g[MAXE];
 
-edge edges[MAXE];
-int first[MAXV];
+int n, m;
+int head[MAXV], idx;
 
 int main(int argc, char *argv[])
 {
-    int numberOfVertices, numberOfEdges;
-    int u, v, w, idx = 0;
+    idx = 0;
+    memset(head, -1, sizeof(head));
     
-    memset(first, -1, sizeof(first));
-    
-    cin >> numberOfVertices >> numberOfEdges;
-    for (int i = 0; i < numberOfEdges; i++)
+    cin >> n >> m;
+
+    for (int i = 0, u, v, weight; i < m; i++)
     {
-        cin >> u >> v >> w;
+        cin >> u >> v >> weight;
         
-        edges[idx] = (edge){u, v, w, first[u]};
-        first[u] = idx++;
+        g[idx] = edge{u, v, weight, head[u]};
+        head[u] = idx++;
         
-        edges[idx] = (edge){v, u, w, first[v]};
-        first[v] = idx++;
+        g[idx] = edge{v, u, weight, head[v]};
+        head[v] = idx++;
     }
 
-    for (int i = 1; i <= numberOfVertices; i++)
-        for (int j = first[i]; j != -1; j = edges[j].next)
-            cout << edges[j].from << ' ' << edges[j].to << ' ' << edges[j].weight << '\n';
+    for (int i = 0; i < n; i++)
+        for (int j = head[i]; ~j; j = g[j].next)
+            cout << g[j].u << ' ' << g[j].v << ' ' << g[j].weight << '\n';
 
     return 0;
 }

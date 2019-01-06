@@ -5,42 +5,39 @@ using namespace std;
 const int MAXV = 1010, MAXE = 1000010;
 
 struct edge {
-    int from, to, weight;
+    int u, v, weight;
     
-    bool operator<(const edge& x) const
+    bool operator<(const edge &e) const
     {
-        if (from == x.from) {
-            if (to == x.to) return weight < x.weight;
-            else return to < x.to;
+        if (u == e.u) {
+            if (v == e.v) return weight < e.weight;
+            else return v < e.v;
         }
         else
-            return from < x.from;
+            return u < e.u;
     }
-};
+} g[MAXE];
 
-edge edges[MAXE];
-int first[MAXV];
+int n, m, head[MAXV];
 
 int main(int argc, char *argv[])
 {
-    int numberOfVertices, numberOfEdges;
+    cin >> n >> m;
+    for (int i = 0; i < m; i++)
+        cin >> g[i].u >> g[i].v >> g[i].weight;
 
-    cin >> numberOfVertices >> numberOfEdges;
-    for (int i = 0; i < numberOfEdges; i++)
-        cin >> edges[i].from >> edges[i].to >> edges[i].weight;
+    sort(g, g + m);
 
-    sort(edges, edges + numberOfEdges);
+    memset(head, -1, sizeof(head));
 
-    memset(first, -1, sizeof(first));
+    head[g[0].u] = 0;
+    for (int i = 0; i < m; i++)
+        if (g[i - 1].u != g[i].u)
+            head[g[i].u] = i;
 
-    first[edges[0].from] = 0;
-    for (int i = 1; i < numberOfEdges; i++)
-        if (edges[i - 1].from != edges[i].from)
-            first[edges[i].from] = i;
-
-    for (int i = 1; i <= numberOfVertices; i++)
-        for (int j = first[i]; edges[j].from == i; j++)
-            cout << edges[j].from << ' ' << edges[j].to << ' ' << edges[j].weight << '\n';
+    for (int i = 0; i < n; i++)
+        for (int j = head[i]; g[j].u == i; j++)
+            cout << g[j].u << ' ' << g[j].v << ' ' << g[j].weight << '\n';
 
     return 0;
 }
