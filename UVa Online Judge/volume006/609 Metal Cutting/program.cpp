@@ -4,7 +4,7 @@
 // Submission Date: 
 // UVa Run Time: s
 //
-// 版权所有（C）2018，邱秋。metaphysis # yeah dot net
+// 版权所有（C）2019，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
 
@@ -12,24 +12,36 @@ using namespace std;
 
 const double EPSILON = 1e-7;
 
-struct point
-{
+struct point {
     double x, y;
     point (double x = 0, double y = 0): x(x), y(y) {}
+    point operator + (point p) { return point(x + p.x, y + p.y); };
+    point operator - (point p) { return point(x - p.x, y - p.y); };
+    point operator * (double k) { return point(x * k, y * k); };
+    point operator / (double k) { return point(x / k, y / k); };
 };
 
-bool pointInBox(point a, point b, point p)
+double norm(point a)
 {
-    double minx = min(a.x, b.x), maxx = max(a.x, b.x);
-    double miny = min(a.y, b.y), maxy = max(a.y, b.y);
-    return p.x >= minx && p.x <= maxx && p.y >= miny && p.y <= maxy;
+	return a.x * a.x + a.y * a.y;
 }
 
-struct segment
+double abs(point a)
 {
-    point p1, p2;
-    bool contains(const point &p) { return pointInBox(p1, p2, p); }
-};
+    return sqrt(norm(a));
+}
+
+double dot(point a, point b)
+{
+    return a.x * b.x + a.y * b.y;
+}
+
+double cross(point a, point b)
+{
+    return a.x * b.y - a.y * b.x;
+}
+
+typedef vector<point> polygon;
 
 struct line
 {
@@ -47,32 +59,50 @@ line getLine(point p, point q)
     return getLine(p.x, p.y, q.x, q.y);
 }
 
-point getIntersection(line p, line q)
+bool getIntersection(line p, line q, point &pi)
 {
-    point pi;
-    pi.x = (p.b * q.c - p.c * q.b) / (p.a * q.b - p.b * q.a);
-    pi.y = (p.a * q.c - p.c * q.a) / (p.b * q.a - p.a * q.b);
-    return pi; 
+    if (fabs(p.a * q.b - q.a * p.b) < EPSILON) return false;  
+    pi.x = (q.c * p.b - p.c * q.b) / (p.a * q.b - q.a * p.b);  
+    pi.y = (q.c * p.a - p.c * q.a) / (p.b * q.a - q.b * p.a);  
+    return true;
 }
 
-double cp(point a, point b, point c)
+bool pointInBox(point a, point b, point p)
 {
-    return (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x);
+    double minx = min(a.x, b.x), maxx = max(a.x, b.x);
+    double miny = min(a.y, b.y), maxy = max(a.y, b.y);
+    return p.x >= minx && p.x <= maxx && p.y >= miny && p.y <= maxy;
 }
 
-bool isIntersected(segment s1, segment s2)
+double getDist(point p1, point p2)
 {
-    line p = getLine(s1.p1, s1.p2), q = getLine(s2.p1, s2.p2);
+    return sqrt(pow(p1.x - p2.x, 2) + pow(p1.y - p2.y, 2));
+}
 
-    if (fabs(p.a * q.b - q.a * p.b) < EPSILON)
+bool isFront(point p1, point p2, point p3)
+{
+    return dot(p2 - p1, p3 - p1) > 0;
+}
+
+double front[12], rear[12], middle[12];
+void prepare(int idx, point p1, point p2, double n, double m)
+{
+    point ps[4] = {point(0, 0), point(0, n), point(n, m), point(n, 0)};
+    line u = getLine(p1, p2);
+    for (int i = 0; i < 4; i++)
     {
-        if (fabs(cp(s1.p1, s1.p2, s2.p1)) < EPSILON)
-            return s1.contains(s2.p1) || s1.contains(s2.p2);
-        return false;
+        line v = getLine(ps[i], ps[(i + 1) % 4]);
+        point pi;
+        if (getIntersection(u, v, pi))
+            if (pointInBox(ps[i], ps[(i + 1) % 4], pi))
+            {
+                if (isFront(p1, p2, pi))
+                    front[idx] = getDist(p2, pi);
+                else
+                    rear[idx] = getDist(pi, p1);
+            } 
     }
-
-	point pi = getIntersection(p, q);
-	return s1.contains(pi) && s2.contains(pi);
+    middle[idx] = getDist(p1, p2);
 }
 
 int main(int argc, char *argv[])
@@ -83,6 +113,50 @@ int main(int argc, char *argv[])
     cin >> cases;
     for (int cs = 1; cs <= cases; cs++)
     {
+        int p;
+        double n, m, x, y;
+        polygon pg;
+        
+        cin >> n >> m >> p;
+        for (int i = 0; i < p; i++)
+        {
+            cin >> x >> y;
+            pg.push_back(point(x, y));
+        }
+        
+        for (int i = 0; i < p; i++)
+        {
+            prepare(i, pg[i], pg[(i + 1) % p], n, m);
+        }
+
+        int bit[p] = {}, vertexCutted[p] = {};
+        for (int i = 0; i < p; i++) bit[i] = i;
+        
+        double minL = 1e20;
+        do
+        {
+            memset(vertexCutted, 0, sizeof(vertexCutted));
+            double L = 0;
+            for (int i = 0; i < p; i++)
+            {
+                int side = bit[i];
+                L += middle[side];
+                if (!vertexCutted[(side + 1) % p])
+                {
+                    L += front[side];
+                    vertexCutted[(side + 1) % p] = 1;
+                }
+                if (!vertexCutted[side])
+                {
+                    L += rear[side];
+                    vertexCutted[side] = 1;
+                }
+            }
+            minL = min(minL, L);
+        } while (next_permutation(bit, bit + p));
+
+        if (cs > 1) cout << '\n';
+        cout << "Minimum total length = " << fixed << setprecision(3) << minL << '\n';
     }
 
     return 0;

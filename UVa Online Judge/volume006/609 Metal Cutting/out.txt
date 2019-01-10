@@ -1,0 +1,199 @@
+Minimum total length = 22.514
+
+Minimum total length = 631.021
+
+Minimum total length = 867.542
+
+Minimum total length = 368.118
+
+Minimum total length = 746.332
+
+Minimum total length = 642.360
+
+Minimum total length = 477.353
+
+Minimum total length = 636.196
+
+Minimum total length = 318.309
+
+Minimum total length = 51.859
+
+Minimum total length = 828.783
+
+Minimum total length = 1396.522
+
+Minimum total length = 158.791
+
+Minimum total length = 1297.595
+
+Minimum total length = 342.090
+
+Minimum total length = 236.163
+
+Minimum total length = 1110.695
+
+Minimum total length = 501.629
+
+Minimum total length = 504.258
+
+Minimum total length = 1254.781
+
+Minimum total length = 246.157
+
+Minimum total length = 750.847
+
+Minimum total length = 302.570
+
+Minimum total length = 1045.421
+
+Minimum total length = 1136.456
+
+Minimum total length = 158.526
+
+Minimum total length = 424.708
+
+Minimum total length = 316.690
+
+Minimum total length = 776.118
+
+Minimum total length = 78.011
+
+Minimum total length = 924.687
+
+Minimum total length = 243.381
+
+Minimum total length = 694.851
+
+Minimum total length = 1286.012
+
+Minimum total length = 110.136
+
+Minimum total length = 383.689
+
+Minimum total length = 625.418
+
+Minimum total length = 1529.702
+
+Minimum total length = 1250.970
+
+Minimum total length = 626.829
+
+Minimum total length = 43.553
+
+Minimum total length = 437.662
+
+Minimum total length = 643.629
+
+Minimum total length = 365.837
+
+Minimum total length = 736.327
+
+Minimum total length = 892.966
+
+Minimum total length = 534.625
+
+Minimum total length = 330.208
+
+Minimum total length = 513.177
+
+Minimum total length = 347.959
+
+Minimum total length = 707.723
+
+Minimum total length = 753.101
+
+Minimum total length = 646.550
+
+Minimum total length = 273.389
+
+Minimum total length = 734.005
+
+Minimum total length = 344.788
+
+Minimum total length = 631.838
+
+Minimum total length = 1035.851
+
+Minimum total length = 326.245
+
+Minimum total length = 631.073
+
+Minimum total length = 486.192
+
+Minimum total length = 498.293
+
+Minimum total length = 248.172
+
+Minimum total length = 147.707
+
+Minimum total length = 865.850
+
+Minimum total length = 696.994
+
+Minimum total length = 685.488
+
+Minimum total length = 215.713
+
+Minimum total length = 1273.577
+
+Minimum total length = 527.954
+
+Minimum total length = 199.859
+
+Minimum total length = 740.554
+
+Minimum total length = 462.991
+
+Minimum total length = 1214.389
+
+Minimum total length = 785.353
+
+Minimum total length = 484.368
+
+Minimum total length = 920.712
+
+Minimum total length = 879.183
+
+Minimum total length = 1302.086
+
+Minimum total length = 519.868
+
+Minimum total length = 506.575
+
+Minimum total length = 1083.695
+
+Minimum total length = 745.616
+
+Minimum total length = 184.031
+
+Minimum total length = 587.624
+
+Minimum total length = 422.359
+
+Minimum total length = 1495.454
+
+Minimum total length = 761.510
+
+Minimum total length = 770.552
+
+Minimum total length = 117.919
+
+Minimum total length = 275.330
+
+Minimum total length = 535.817
+
+Minimum total length = 623.489
+
+Minimum total length = 622.172
+
+Minimum total length = 774.518
+
+Minimum total length = 232.201
+
+Minimum total length = 117.731
+
+Minimum total length = 226.830
+
+Minimum total length = 668.875
+
+Minimum total length = 450.094
