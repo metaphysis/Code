@@ -10,14 +10,15 @@
 
 using namespace std;
 
-const int MAXV = 250000, INF = 0x3fffffff;
+const int MAXV = 250000, INF = 0x3f3f3f3f;
 
-struct node { int high, low; } qt[4 * MAXV], city[512][512];
+struct node { int high, low; } qt[4 * MAXV];
+int city[512][512];
 
 void build(int p, int r1, int c1, int r2, int c2)
 {
     if (r2 < r1 || c2 < c1) return;
-    if (r1 == r2 && c1 == c2) qt[p].high = city[r1][c1].high, qt[p].low = city[r1][c1].low;
+    if (r1 == r2 && c1 == c2) qt[p].high = qt[p].low = city[r1][c1];
     else {
         int mr = (r1 + r2) >> 1, mc = (c1 + c2) >> 1;
 
@@ -37,7 +38,6 @@ void build(int p, int r1, int c1, int r2, int c2)
 
 pair<int, int> query(int p, int r1, int c1, int r2, int c2, int qr1, int qc1, int qr2, int qc2)
 {
-    if (r2 < r1 || c2 < c1) return make_pair(-INF, INF);
     if (r2 < qr1 || c2 < qc1 || r1 > qr2 || c1 > qc2) return make_pair(-INF, INF);
     if (qr1 <= r1 && r2 <= qr2 && qc1 <= c1 && c2 <= qc2) return make_pair(qt[p].high, qt[p].low);
 
@@ -81,43 +81,33 @@ int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    int n, nn;
-    while (cin >> n) {
-        for (int i = 0; i < 512; i++)
-            for (int j = 0; j < 512; j++)
-                city[i][j].high = -INF, city[i][j].low = INF;
-
-        int k;
-        for (int i = 0; i < n; i++)
-            for (int j = 0; j < n; j++)
-            {
-                cin >> k;
-                city[i][j].high = city[i][j].low = k;
-            }
-
-        n = 512;
+    int n;
+    cin >> n;
         
-        build(0, 0, 0, n - 1, n - 1);
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            cin >> city[i][j];
 
-        int q, x1, y1, x2, y2, v;
-        char action;
+    build(0, 0, 0, n - 1, n - 1);
 
-        cin >> q;
-        for (int i = 1; i <= q; i++)
+    int q, x1, y1, x2, y2, v;
+    char action;
+
+    cin >> q;
+    for (int i = 1; i <= q; i++)
+    {
+        cin >> action;
+        if (action == 'c')
         {
-            cin >> action;
-            if (action == 'c') {
-                cin >> x1 >> y1 >> v;
-                update(0, 0, 0, n - 1, n - 1, x1 - 1, y1 - 1, v);
-            }
-            else {
-                //assert(x1 <= nn && y1 <= nn && x2 <= nn && y2 <= nn);
-                //assert(x1 <= nn && y1 <= nn);
-                cin >> x1 >> y1 >> x2 >> y2;
-                x2 = min(x2, nn), y2 = min(y2, nn);
-                pair<int, int> r = query(0, 0, 0, n - 1, n - 1, x1 - 1, y1 - 1, x2 - 1, y2 - 1);
-                cout << r.first << ' ' << r.second << '\n';
-            }
+            cin >> x1 >> y1 >> v;
+            update(0, 0, 0, n - 1, n - 1, x1 - 1, y1 - 1, v);
+        }
+        else
+        {
+            cin >> x1 >> y1 >> x2 >> y2;
+            //x2 = min(x2, n), y2 = min(y2, n);
+            pair<int, int> r = query(0, 0, 0, n - 1, n - 1, x1 - 1, y1 - 1, x2 - 1, y2 - 1);
+            cout << r.first << ' ' << r.second << '\n';
         }
     }
 

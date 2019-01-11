@@ -1,4 +1,4 @@
-// Frequent values  
+// Frequent Values  
 // UVa ID: 11235
 // Verdict: Accepted
 // Submission Date: 2017-10-31
