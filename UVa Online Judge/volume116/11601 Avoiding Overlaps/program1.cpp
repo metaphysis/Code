@@ -2,7 +2,7 @@
 // UVa ID: 11601
 // Verdict: Accepted
 // Submission Date: 2018-12-27
-// UVa Run Time: 0.1.090s
+// UVa Run Time: 1.080s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
@@ -15,25 +15,25 @@ struct interval
     int low, high, lowy, highy;
 };
 
-struct itNode
+struct node
 {
     interval i;
     int min, max;
-    itNode *left, *right;
+    node *left, *right;
 };
 
-itNode *setNode(interval i)
+node* getNode(interval i)
 {
-    itNode *node = new itNode;
-    node->i = i;
-    node->min = i.low, node->max = i.high;
-    node->left = node->right = NULL;
-    return node;
+    node *nd = new node;
+    nd->i = i;
+    nd->min = i.low, nd->max = i.high;
+    nd->left = nd->right = NULL;
+    return nd;
 }
 
-itNode *insert(itNode *root, interval i)
+node* insert(node *root, interval i)
 {
-    if (root == NULL) return setNode(i);
+    if (root == NULL) return getNode(i);
     if (i.low < root->i.low) root->left = insert(root->left, i);
     else root->right = insert(root->right, i);
     if (root->max < i.high) root->max = i.high;
@@ -49,15 +49,15 @@ bool isOverlapped(interval i1, interval i2)
     return false;
 }
 
-bool search(itNode *root, interval i)
+bool query(node *root, interval i)
 {
     bool overlapped = false;
     if (root == NULL) return overlapped;
     overlapped |= isOverlapped(root->i, i);
     if (!overlapped && root->left != NULL && root->left->max > i.low)
-        overlapped |= search(root->left, i);
+        overlapped |= query(root->left, i);
     if (!overlapped && root->right != NULL && root->right->min < i.high)
-        overlapped |= search(root->right, i);
+        overlapped |= query(root->right, i);
     return overlapped;
 }
 
@@ -70,13 +70,13 @@ int main(int argc, char *argv[])
     for (int cs = 1; cs <= T; cs++)
     {
         cin >> N;
-        itNode *root = NULL;
+        node *root = NULL;
         int area = 0;
         interval r;
         for (int i = 0; i < N; i++)
         {
             cin >> r.low >> r.lowy >> r.high >> r.highy;
-            if (search(root, r)) continue;
+            if (query(root, r)) continue;
             if (root == NULL) root = insert(root, r);
             else insert(root, r);
             area += abs(r.low - r.high) * abs(r.lowy - r.highy);

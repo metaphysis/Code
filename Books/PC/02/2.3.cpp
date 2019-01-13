@@ -2,7 +2,7 @@
 
 using namespace std;
 
-const int ERROR = -0x3fffffff, CAPACITY = 1010;
+const int ERROR = -0x3f3f3f3f, CAPACITY = 1010;
 int memory[CAPACITY], rear = 0;
 
 bool empty() { return rear == 0; }
