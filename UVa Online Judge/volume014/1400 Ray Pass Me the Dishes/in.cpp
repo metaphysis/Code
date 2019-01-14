@@ -21,7 +21,6 @@ int main(int argc, char *argv[])
         if (s == n) e = s;
         else e = s + rand() % (n - s);
         cout << s << ' ' << e << '\n';
-        
     }
     return 0;
 }

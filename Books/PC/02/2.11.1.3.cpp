@@ -17,8 +17,7 @@ node combine(node a, node b)
 node getData(int value)
 {
     node nd;
-    nd.sum = value;
-    nd.prefix = nd.suffix = nd.sub = value;
+    nd.sum = nd.prefix = nd.suffix = nd.sub = value;
     return nd;
 }
 

@@ -13,11 +13,11 @@ struct rectangle
     bool isCell() { return r1 == r2 && c1 == c2; }
     bool contains(int r, int c) { return r1 <= r && r <= r2 && c1 <= c && c <= c2; }
     bool contains(rectangle q) { return r1 <= q.r1 && q.r2 <= r2 && c1 <= q.c1 && q.c2 <= c2; }
-    bool awayFrom(rectangle q) { return r1 > q.r2 || c1 > q.c2 || r2 < q.r1 || c2 < q.c1; }
-    rectangle LU() { return rectangle(r1, c1, (r1 + r2) >> 1, (c1 + c2) >> 1); }
-    rectangle RU() { return rectangle(r1, ((c1 + c2) >> 1) + 1, (r1 + r2) >> 1, c2); }
-    rectangle LB() { return rectangle(((r1 + r2) >> 1) + 1, c1, r2, (c1 + c2) >> 1); }
-    rectangle RB() { return rectangle(((r1 + r2) >> 1) + 1, ((c1 + c2) >> 1) + 1, r2, c2); }
+    bool intersects(rectangle q) { return !(r1 > q.r2 || c1 > q.c2 || r2 < q.r1 || c2 < q.c1); }
+    rectangle getLU() { return rectangle(r1, c1, (r1 + r2) >> 1, (c1 + c2) >> 1); }
+    rectangle getRU() { return rectangle(r1, ((c1 + c2) >> 1) + 1, (r1 + r2) >> 1, c2); }
+    rectangle getLB() { return rectangle(((r1 + r2) >> 1) + 1, c1, r2, (c1 + c2) >> 1); }
+    rectangle getRB() { return rectangle(((r1 + r2) >> 1) + 1, ((c1 + c2) >> 1) + 1, r2, c2); }
 };
 
 struct node
@@ -59,10 +59,10 @@ node* build(rectangle r)
     }
 
     node *nd = getNode();
-    nd->children[0] = build(r.LU());
-    nd->children[1] = build(r.RU());
-    nd->children[2] = build(r.LB());
-    nd->children[3] = build(r.RB());
+    nd->children[0] = build(r.getLU());
+    nd->children[1] = build(r.getRU());
+    nd->children[2] = build(r.getLB());
+    nd->children[3] = build(r.getRB());
     pushUp(nd);
 
     return nd;
@@ -73,14 +73,14 @@ void update(node *nd, rectangle r, int ur1, int uc1, int v)
     if (r.isBad()) return;
     if (r.isCell() && r.contains(ur1, uc1)) nd->high = v, nd->low = v;
     else {
-        if (r.LU().contains(ur1, uc1))
-            update(nd->children[0], r.LU(), ur1, uc1, v);
-        else if (r.RU().contains(ur1, uc1))
-            update(nd->children[1], r.RU(), ur1, uc1, v);
-        else if (r.LB().contains(ur1, uc1))
-            update(nd->children[2], r.LB(), ur1, uc1, v);
-        else if (r.RB().contains(ur1, uc1))
-            update(nd->children[3], r.RB(), ur1, uc1, v);
+        if (r.getLU().contains(ur1, uc1))
+            update(nd->children[0], r.getLU(), ur1, uc1, v);
+        else if (r.getRU().contains(ur1, uc1))
+            update(nd->children[1], r.getRU(), ur1, uc1, v);
+        else if (r.getLB().contains(ur1, uc1))
+            update(nd->children[2], r.getLB(), ur1, uc1, v);
+        else if (r.getRB().contains(ur1, uc1))
+            update(nd->children[3], r.getRB(), ur1, uc1, v);
 
         pushUp(nd);
     }
@@ -89,13 +89,13 @@ void update(node *nd, rectangle r, int ur1, int uc1, int v)
 data query(node *nd, rectangle r, rectangle qr)
 {
     if (r.isBad()) return data{-INF, INF};
-    if (r.awayFrom(qr)) return data{-INF, INF};
+    if (r.intersects(qr)) return data{-INF, INF};
     if (qr.contains(r)) return data{nd->high, nd->low};
 
-    data q1 = query(nd->children[0], r.LU(), qr);
-    data q2 = query(nd->children[1], r.RU(), qr);
-    data q3 = query(nd->children[2], r.LB(), qr);
-    data q4 = query(nd->children[3], r.RB(), qr);
+    data q1 = query(nd->children[0], r.getLU(), qr);
+    data q2 = query(nd->children[1], r.getRU(), qr);
+    data q3 = query(nd->children[2], r.getLB(), qr);
+    data q4 = query(nd->children[3], r.getRB(), qr);
     int high = max(max(q1.high, q2.high), max(q3.high, q4.high));
     int low = min(min(q1.low, q2.low), min(q3.low, q4.low));
 
