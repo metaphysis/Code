@@ -68,19 +68,19 @@ node* build(rectangle r)
     return nd;
 }
 
-void update(node *nd, rectangle r, int ur1, int uc1, int v)
+void update(node *nd, rectangle r, int ur, int uc, int v)
 {
     if (r.isBad()) return;
-    if (r.isCell() && r.contains(ur1, uc1)) nd->high = v, nd->low = v;
+    if (r.isCell() && r.contains(ur, uc)) nd->high = v, nd->low = v;
     else {
-        if (r.getLU().contains(ur1, uc1))
-            update(nd->children[0], r.getLU(), ur1, uc1, v);
+        if (r.getLU().contains(ur, uc))
+            update(nd->children[0], r.getLU(), ur, uc, v);
         else if (r.getRU().contains(ur1, uc1))
-            update(nd->children[1], r.getRU(), ur1, uc1, v);
+            update(nd->children[1], r.getRU(), ur, uc, v);
         else if (r.getLB().contains(ur1, uc1))
-            update(nd->children[2], r.getLB(), ur1, uc1, v);
+            update(nd->children[2], r.getLB(), ur, uc, v);
         else if (r.getRB().contains(ur1, uc1))
-            update(nd->children[3], r.getRB(), ur1, uc1, v);
+            update(nd->children[3], r.getRB(), ur, uc, v);
 
         pushUp(nd);
     }
