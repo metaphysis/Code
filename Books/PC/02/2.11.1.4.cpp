@@ -4,102 +4,66 @@ using namespace std;
 
 const int MAXN = 512, INF = 0x7f7f7f7f;
 
-struct rectangle
+int data[MAXN][MAXN];
+int st[4 * MAXN * MAXN];
+
+void pushUp(int p)
 {
-    int r1, c1, r2, c2;
-    rectangle(int r1 = 0, int c1 = 0, int r2 = 0, int c2 = 0):
-    r1(r1), c1(c1), r2(r2), c2(c2) {}
-    bool isBad() { return r1 > r2 || c1 > c2; }
-    bool isCell() { return r1 == r2 && c1 == c2; }
-    bool contains(int r, int c) { return r1 <= r && r <= r2 && c1 <= c && c <= c2; }
-    bool contains(rectangle q) { return r1 <= q.r1 && q.r2 <= r2 && c1 <= q.c1 && q.c2 <= c2; }
-    bool intersects(rectangle q) { return !(r1 > q.r2 || c1 > q.c2 || r2 < q.r1 || c2 < q.c1); }
-    rectangle getLU() { return rectangle(r1, c1, (r1 + r2) >> 1, (c1 + c2) >> 1); }
-    rectangle getRU() { return rectangle(r1, ((c1 + c2) >> 1) + 1, (r1 + r2) >> 1, c2); }
-    rectangle getLB() { return rectangle(((r1 + r2) >> 1) + 1, c1, r2, (c1 + c2) >> 1); }
-    rectangle getRB() { return rectangle(((r1 + r2) >> 1) + 1, ((c1 + c2) >> 1) + 1, r2, c2); }
-};
-
-struct node
-{
-    int high, low;
-    node* children[4];
-};
-
-struct data { int high, low; };
-
-int grid[MAXN][MAXN];
-
-node* getNode()
-{
-    node *nd = new node;
-    nd->high = -INF, nd->low = INF;
-    for (int i = 0; i < 4; i++) nd->children[i] = NULL;
-    return nd;
+    int high = -INF;
+    for (int i = 1; i <= 4; i++) high = max(high, st[4 * p + i]);
+    st[p] = high;
 }
 
-void pushUp(node *nd)
+void build(int p, int r1, int c1, int r2, int c2)
 {
-    int high = -INF, low = INF;
-    for (int i = 0; i < 4; i++) {
-        if (nd->children[i] == NULL) continue;
-        high = max(high, nd->children[i]->high);
-        low = min(low, nd->children[i]->low);
+    if (r1 > r2 || c1 > c2) {
+        st[p] = -INF;
+        return;
     }
-    nd->high = high, nd->low = low;
-}
-
-node* build(rectangle r)
-{
-    if (r.isBad()) return NULL;
-    if (r.isCell()) {
-        node *nd = getNode();
-        nd->high = nd->low = grid[r.r1][r.c1];
-        return nd;
+    if (r1 == r2 && c1 == c2) {
+        st[p] = data[r1][c1];
+        return;
     }
 
-    node *nd = getNode();
-    nd->children[0] = build(r.getLU());
-    nd->children[1] = build(r.getRU());
-    nd->children[2] = build(r.getLB());
-    nd->children[3] = build(r.getRB());
-    pushUp(nd);
-
-    return nd;
+    int mr = (r1 + r2) >> 1, mc = (c1 + c2) >> 1;
+    build(4 * p + 1, r1, c1, mr, mc);
+    build(4 * p + 2, r1, mc + 1, mr, c2);
+    build(4 * p + 3, mr + 1, c1, r2, mc);
+    build(4 * p + 4, mr + 1, mc + 1, r2, c2);
+    pushUp(p);
 }
 
-void update(node *nd, rectangle r, int ur, int uc, int v)
+void update(int p, int r1, int c1, int r2, int c2, int ur, int uc, int v)
 {
-    if (r.isBad()) return;
-    if (r.isCell() && r.contains(ur, uc)) nd->high = v, nd->low = v;
-    else {
-        if (r.getLU().contains(ur, uc))
-            update(nd->children[0], r.getLU(), ur, uc, v);
-        else if (r.getRU().contains(ur1, uc1))
-            update(nd->children[1], r.getRU(), ur, uc, v);
-        else if (r.getLB().contains(ur1, uc1))
-            update(nd->children[2], r.getLB(), ur, uc, v);
-        else if (r.getRB().contains(ur1, uc1))
-            update(nd->children[3], r.getRB(), ur, uc, v);
-
-        pushUp(nd);
+    if (r1 > r2 || c1 > c2) return;
+    if (r1 == r2 && c1 == c2 && r1 == ur && c1 == uc) st[p] = v;
+    else
+    {
+        int mr = (r1 + r2) >> 1, mc = (c1 + c2) >> 1;
+        if (ur >= r1 && ur <= mr && uc >= c1 && uc <= mc)
+            update(4 * p + 1, r1, c1, mr, mc, ur, uc, v);
+        else if (ur >= r1 && ur <= mr && uc >= mc + 1 && uc <= c2)
+            update(4 * p + 2, r1, mc + 1, mr, c2, ur, uc, v);
+        else if (ur >= mr + 1 && ur <= r2 && uc >= c1 && uc <= mc)
+            update(4 * p + 3, mr + 1, c1, r2, mc, ur, uc, v);
+        else if (ur >= mr + 1 && ur <= r2 && uc >= mc + 1 && uc <= c2)
+            update(4 * p + 4, mr + 1, mc + 1, r2, c2, ur, uc, v);
+        pushUp(p);
     }
 }
 
-data query(node *nd, rectangle r, rectangle qr)
+int query(int p, int r1, int c1, int r2, int c2, int qr1, int qc1, int qr2, int qc2)
 {
-    if (r.isBad()) return data{-INF, INF};
-    if (r.intersects(qr)) return data{-INF, INF};
-    if (qr.contains(r)) return data{nd->high, nd->low};
+    if (r1 > r2 || c1 > c2) return -INF;
+    if (r2 < qr1 || c2 < qc1 || r1 > qr2 || c1 > qc2) return -INF;
+    if (qr1 <= r1 && r2 <= qr2 && qc1 <= c1 && c2 <= qc2) return st[p];
 
-    data q1 = query(nd->children[0], r.getLU(), qr);
-    data q2 = query(nd->children[1], r.getRU(), qr);
-    data q3 = query(nd->children[2], r.getLB(), qr);
-    data q4 = query(nd->children[3], r.getRB(), qr);
-    int high = max(max(q1.high, q2.high), max(q3.high, q4.high));
-    int low = min(min(q1.low, q2.low), min(q3.low, q4.low));
-
-    return data{high, low};
+    int mr = (r1 + r2) >> 1, mc = (c1 + c2) >> 1;
+    int q1 = query(4 * p + 1, r1, c1, mr, mc, qr1, qc1, qr2, qc2);
+    int q2 = query(4 * p + 2, r1, mc + 1, mr, c2, qr1, qc1, qr2, qc2);
+    int q3 = query(4 * p + 3, mr + 1, c1, r2, mc, qr1, qc1, qr2, qc2);
+    int q4 = query(4 * p + 4, mr + 1, mc + 1, r2, c2, qr1, qc1, qr2, qc2);
+    return max(max(q1, q2), max(q3, q4));
 }
 
 int main(int argc, char *argv[])
