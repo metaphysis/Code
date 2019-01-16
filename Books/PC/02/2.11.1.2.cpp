@@ -47,7 +47,6 @@ void update(int p, int left, int right, int index, int value)
 
 pair<int, int> query(int p, int left, int right, int qleft, int qright)
 {
-    if (left > right) return make_pair(-INF, 0);
     if (left > qright || right < qleft) return make_pair(-INF, 0);
     if (left >= qleft && right <= qright) return st[p];
     int middle = (left + right) >> 1;

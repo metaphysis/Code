@@ -46,7 +46,7 @@ void build(int data[], int p, int left, int right)
 
 void update(int p, int left, int right, int index, int value)
 {
-    if (index == left && index == right) st[p] = getData(value);
+    if (left == right) st[p] = getData(value);
     else {
         int middle = (left + right) >> 1;
         if (index <= middle)

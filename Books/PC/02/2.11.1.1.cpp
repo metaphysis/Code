@@ -42,7 +42,7 @@ void update(int p, int left, int right, int index, int value)
 int query(int p, int left, int right, int qleft, int qright)
 {
     if (left > qright || right < qleft) return -INF;
-    if (left >= qleft || right <= qright) return st[p].field;
+    if (left >= qleft && right <= qright) return st[p].field;
     int middle = (left + right) >> 1;
     int q1 = query(LCHILD(p), left, middle, qleft, qright);
     int q2 = query(RCHILD(p), middle + 1, right, qleft, qright);
