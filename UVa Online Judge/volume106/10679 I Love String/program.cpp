@@ -23,8 +23,7 @@ int main(int argc, char *argv[])
         for (int i = 0; i < q; i++)
         {
             cin >> T;
-            if (S.length() < T.length()) cout << 'n';
-            else
+            if (S.length() >= T.length());
             {
                 if (S.length() <= 128)
                 {
