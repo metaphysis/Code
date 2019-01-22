@@ -10,28 +10,28 @@
 
 using namespace std;
 
-const int MAXN = 1024;
+const int MAXN = 1010;
 
 bool kmp1(string &s, string &p)
 {
     static int fail[MAXN] = {};
 
-    fail[0] = fail[1] = 0;
-    int i = 1, j = 0;
-    while (i < p.length()) {
-        if (j == 0 || p[i] == p[j]) {
+    fail[0] = -1;
+    int i = 0, j = -1;
+    while (i < p.length() - 1) {
+        if (j == -1 || p[i] == p[j]) {
             i++, j++;
             if (p[i] != p[j]) fail[i] = j;
             else fail[i] = fail[j];
         } else j = fail[j];
     }
 
-    i = 0, j = 1;
-    while (i < s.length() && j < p.length()) {
-        if (j == 0 || s[i] == p[j - 1]) i++, j++;
+    i = 0, j = 0;
+    while (i < s.length() && j < (int)p.length()) {
+        if (j == -1 || s[i] == p[j]) i++, j++;
         else j = fail[j];
     }
-    return j >= p.length();
+    return j == p.length();
 }
 
 bool kmp2(string &s, string &p)

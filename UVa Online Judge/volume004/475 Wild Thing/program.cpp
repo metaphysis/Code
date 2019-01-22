@@ -2,7 +2,7 @@
 // UVa ID: 475
 // Verdict: Accepted
 // Submission Date: 2019-01-21
-// UVa Run Time: 0.010s
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2019，邱秋。metaphysis # yeah dot net
 
@@ -27,6 +27,7 @@ void dfs(int pl, int pr, int fl, int fr)
         int L = x - pl - 1;
         for (int i = fl; i + L <= fr; i++)
         {
+            if (pattern[pl + 1] != filename[i]) continue;
             if (pattern.substr(pl + 1, L) == filename.substr(i, L))
                 dfs(pl + L + 1, pr, i + L, fr);
             if (done) return;

@@ -15,7 +15,7 @@ int directions[8][2] = {
     {1, 0}, {1, 1}, {0, 1}, {-1, 1}
 };
 
-vector < string > matrix;
+vector<string> matrix;
 int cases, nlines, nrows, nwords;
 string line, word;
 
