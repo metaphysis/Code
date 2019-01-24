@@ -1,10 +1,10 @@
 // I Love String
 // UVa ID: 10679
 // Verdict: Accepted
-// Submission Date: 2018-03-27
-// UVa Run Time: 1.410s
+// Submission Date: 2019-01-22
+// UVa Run Time: 1.160s
 //
-// 版权所有（C）2018，邱秋。metaphysis # yeah dot net
+// 版权所有（C）2019，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
 

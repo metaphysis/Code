@@ -1,8 +1,8 @@
 // Metal Cutting
 // UVa ID: 609
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2019-01-24
+// UVa Run Time: 0.800s
 //
 // 版权所有（C）2019，邱秋。metaphysis # yeah dot net
 
@@ -12,51 +12,32 @@ using namespace std;
 
 const double EPSILON = 1e-7;
 
-struct point {
+struct point
+{
     double x, y;
     point (double x = 0, double y = 0): x(x), y(y) {}
-    point operator + (point p) { return point(x + p.x, y + p.y); };
-    point operator - (point p) { return point(x - p.x, y - p.y); };
-    point operator * (double k) { return point(x * k, y * k); };
-    point operator / (double k) { return point(x / k, y / k); };
 };
-
-double norm(point a)
-{
-	return a.x * a.x + a.y * a.y;
-}
-
-double abs(point a)
-{
-    return sqrt(norm(a));
-}
-
-double dot(point a, point b)
-{
-    return a.x * b.x + a.y * b.y;
-}
-
-double cross(point a, point b)
-{
-    return a.x * b.y - a.y * b.x;
-}
 
 typedef vector<point> polygon;
 
 struct line
 {
+    int index;
+    point p1, p2;
     double a, b, c;
-    line (double a = 0, double b = 0, double c = 0): a(a), b(b), c(c) {}
+    bool operator<(const line &u) const
+    {
+        return index < u.index;
+    }
 };
 
-line getLine(double x1, double y1, double x2, double y2)
+line getLine(int index, point p, point q)
 {
-    return line(y2 - y1, x1 - x2, y1 * (x2 - x1) - x1 * (y2 - y1));
-}
-
-line getLine(point p, point q)
-{
-    return getLine(p.x, p.y, q.x, q.y);
+    line u;
+    u.index = index;
+    u.a = q.y - p.y, u.b = p.x - q.x, u.c = p.y * (q.x - p.x) - p.x * (q.y - p.y);
+    u.p1 = p, u.p2 = q;
+    return u;
 }
 
 bool getIntersection(line p, line q, point &pi)
@@ -67,42 +48,44 @@ bool getIntersection(line p, line q, point &pi)
     return true;
 }
 
-bool pointInBox(point a, point b, point p)
-{
-    double minx = min(a.x, b.x), maxx = max(a.x, b.x);
-    double miny = min(a.y, b.y), maxy = max(a.y, b.y);
-    return p.x >= minx && p.x <= maxx && p.y >= miny && p.y <= maxy;
-}
-
 double getDist(point p1, point p2)
 {
     return sqrt(pow(p1.x - p2.x, 2) + pow(p1.y - p2.y, 2));
 }
 
-bool isFront(point p1, point p2, point p3)
+inline bool contains(point a, point b, point c, point d)
 {
-    return dot(p2 - p1, p3 - p1) > 0;
+    int xup, xdown, yup, ydown;
+    xup = xdown = yup = ydown = 0;
+     
+    double maxx = max(c.x, d.x), minx = min(c.x, d.x);
+    if (a.x - maxx > -EPSILON || b.x - maxx > -EPSILON) xup = 1;
+    if (a.x - minx < EPSILON || b.x - minx < EPSILON) xdown = 1;
+ 
+    double maxy = max(c.y, d.y), miny = min(c.y, d.y);
+    if (a.y - maxy > -EPSILON || b.y - maxy > -EPSILON) yup = 1;
+    if (a.y - miny < EPSILON || b.y - miny < EPSILON) ydown = 1;
+ 
+    return xup + xdown + yup + ydown == 4;
 }
 
-double front[12], rear[12], middle[12];
-void prepare(int idx, point p1, point p2, double n, double m)
+vector<line> sides, metal;
+double cut(line u)
 {
-    point ps[4] = {point(0, 0), point(0, n), point(n, m), point(n, 0)};
-    line u = getLine(p1, p2);
-    for (int i = 0; i < 4; i++)
-    {
-        line v = getLine(ps[i], ps[(i + 1) % 4]);
-        point pi;
-        if (getIntersection(u, v, pi))
-            if (pointInBox(ps[i], ps[(i + 1) % 4], pi))
-            {
-                if (isFront(p1, p2, pi))
-                    front[idx] = getDist(p2, pi);
-                else
-                    rear[idx] = getDist(pi, p1);
-            } 
-    }
-    middle[idx] = getDist(p1, p2);
+    point p;
+    vector<point> ps;
+
+    for (auto v : metal)
+        if (getIntersection(u, v, p))
+            ps.push_back(p);
+            
+    double cutted = 1e20;
+    for (int i = 0; i < ps.size(); i++)
+        for (int j = i + 1; j < ps.size(); j++)
+            if (contains(ps[i], ps[j], u.p1, u.p2))
+                cutted = min(cutted, getDist(ps[i], ps[j]));
+            
+    return cutted;
 }
 
 int main(int argc, char *argv[])
@@ -123,37 +106,30 @@ int main(int argc, char *argv[])
             cin >> x >> y;
             pg.push_back(point(x, y));
         }
-        
-        for (int i = 0; i < p; i++)
-        {
-            prepare(i, pg[i], pg[(i + 1) % p], n, m);
-        }
 
-        int bit[p] = {}, vertexCutted[p] = {};
-        for (int i = 0; i < p; i++) bit[i] = i;
-        
+        sides.clear();
+        for (int i = 0; i < p; i++)
+            sides.push_back(getLine(i, pg[i], pg[(i + 1) % p]));
+        sort(sides.begin(), sides.end());
+
         double minL = 1e20;
         do
         {
-            memset(vertexCutted, 0, sizeof(vertexCutted));
+            metal.clear();
+            metal.push_back(getLine(0, point(0, 0), point(0, m)));
+            metal.push_back(getLine(1, point(0, m), point(n, m)));
+            metal.push_back(getLine(2, point(n, m), point(n, 0)));
+            metal.push_back(getLine(3, point(n, 0), point(0, 0)));
+
             double L = 0;
             for (int i = 0; i < p; i++)
             {
-                int side = bit[i];
-                L += middle[side];
-                if (!vertexCutted[(side + 1) % p])
-                {
-                    L += front[side];
-                    vertexCutted[(side + 1) % p] = 1;
-                }
-                if (!vertexCutted[side])
-                {
-                    L += rear[side];
-                    vertexCutted[side] = 1;
-                }
+                L += cut(sides[i]);
+                metal.push_back(sides[i]);
+                if (L > minL) break;
             }
             minL = min(minL, L);
-        } while (next_permutation(bit, bit + p));
+        } while (next_permutation(sides.begin(), sides.end()));
 
         if (cs > 1) cout << '\n';
         cout << "Minimum total length = " << fixed << setprecision(3) << minL << '\n';
