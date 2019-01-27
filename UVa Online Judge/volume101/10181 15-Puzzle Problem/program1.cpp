@@ -235,7 +235,7 @@ void solvePuzzle(unsigned long long board, int blanki, int blankj)
     // 深度优先搜索。
     //dfs(board, blanki, blankj);
 
-    // 宽度优先搜索。
+    // 广度优先搜索。
     //bfs(board, blanki, blankj);
 
     // A*搜索。解长度在30-50步之间的局面平均需要7s。UVa RT 1.004s。

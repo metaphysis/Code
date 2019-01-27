@@ -12,19 +12,12 @@
 
 using namespace std;
 
-//int offset[4][4] = {
-//    {-4, -3, -1, 4},
-//    {-4, 1, 3, 4},
-//    {-4, -1, 1, 4},
-//    {-4, -1, 1, 4}
-//};
-
 struct nextPos
 {
     int hn, dir, r, c;
-    bool operator<(const nextPos &x) const
+    bool operator<(const nextPos &p) const
     {
-        return hn < x.hn;
+        return hn < p.hn;
     }
 };
 
@@ -72,6 +65,7 @@ void idaStar(int kingR, int kingC)
     int hn = 0;
     for (int r = 1; r <= n; r++)
         for (int c = 1; c <= 4; c++)
+            // Don't count king self.
             if (tiger[r][c] > 1)
                 hn += jumps[tiger[r][c]][r][c];
 
@@ -109,6 +103,7 @@ int main(int argc, char *argv[])
             for (int k = 1; k <= 4; k++)
                 for (int l = 1; l <= 10; l++)
                     for (int m = 1; m <= 4; m++)
+                        // A tiger at [l][m] jumps to [j][k], the difference of Manhattan distance.
                         distDiff[i][j][k][l][m] = jumps[i][j][k] - jumps[i][l][m];
 
     int cases = 0, kingR, kingC;
