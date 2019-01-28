@@ -41,7 +41,7 @@ void sieve2(int *primes, int n, int &cnt)
         for (int j = 0; j < cnt && i * primes[j] < n; j++)
         {
             primes[i * primes[j]] = 0;
-            if (!(i % primes[j])) break;
+            if (i % primes[j] == 0) break;
         }
     }
 }
@@ -61,7 +61,7 @@ void sieve3(int *primes, int n, int &cnt)
         for (int j = 0; j < cnt && i * primes[j] < MAXB; j++)
         {
             SET(i * primes[j]);
-            if (!(i % primes[j])) break;
+            if (i % primes[j] == 0) break;
         }
     }
 }
@@ -107,6 +107,7 @@ vector<int> findDivisor(int n)
     }
 
     sort(divisors.begin(), divisors.end());
+    divisors.erase(unique(divisors.begin(), divisors.end()), divisors.end());
     
     return divisors;
 }

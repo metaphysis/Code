@@ -1,8 +1,8 @@
 // Counting Zeroes
 // UVa ID: 12090
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2019-01-28
+// UVa Run Time: 0.470s
 //
 // 版权所有（C）2019，邱秋。metaphysis # yeah dot net
 
@@ -32,33 +32,44 @@ int main(int argc, char *argv[])
     while (cin >> n, n > 0)
     {
         nn = n;
-        int factors[32], counter[32] = {}, idx = 0;
-        for (int i = 0; i < cnt; i++)
+        map<long long, int> factors;
+        for (int i = 0; i < cnt && n > 1; i++)
             if (n % primes[i] == 0)
             {
-                factors[idx] = primes[i];
                 while (n % primes[i] == 0)
                 {
-                    counter[idx]++;
+                    factors[primes[i]]++;
                     n /= primes[i];
                 }
-                idx++;
             }
-        if (n > 0)
-        {
-            factors[idx] = n;
-            counter[idx]++;
-            idx++;
-        }
+        if (n > 1) factors[n]++;
         
-        int zeros = 0;
-        for (int i = 0; i < (1 << idx); i++)
+        vector<long long> divisors;
+        divisors.push_back(1);
+        for (auto f : factors)
         {
-            int exponent = 100;
-            for (int k = 0; k < idx; k++)
-                if (i & (1 << k))
-                    exponent = min(exponent, counter[k]);
-            zeros += exponent;
+            int cntOfDivisors = divisors.size();
+            long long base = 1;
+            for (int i = 1; i <= f.second; i++)
+            {
+                base *= f.first;
+                for (int j = 0; j < cntOfDivisors; j++)
+                    divisors.push_back(divisors[j] * base);
+            }
+        }
+        sort(divisors.begin(), divisors.end());
+        divisors.erase(unique(divisors.begin(), divisors.end()), divisors.end());
+
+        int zeros = 0;
+        for (int i = 0; i < divisors.size(); i++)
+        {
+            if (divisors[i] == 1) continue;
+            n = nn;
+            while (n % divisors[i] == 0)
+            {
+                zeros++;
+                n /= divisors[i];
+            }
         }
         cout << nn << ' ' << zeros << '\n';
     }
