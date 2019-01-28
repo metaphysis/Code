@@ -10,20 +10,21 @@
 
 using namespace std;
 
-struct nextPos
+struct config
 {
     int hn, dir, r, c;
-    bool operator<(const nextPos &p) const { return hn < p.hn; }
+    bool operator<(const config &cfg) const { return hn < cfg.hn; }
 };
 
 string directions = "URLD";
 int offset[4][2] = {{-1, 0}, {0, 1}, {0, -1}, {1, 0}};
 int puzzle[5][5], Hn[16][5][5] = {}, dHn[16][5][5][5][5] = {};
-int done, maxDepth, path[64];
+int done, depthLimit, path[64];
 
-void dfs(int hn, int gn, int dir, int emptyr, int emptyc)
+void dfs(int hn, int gn, int dir, int missingr, int missingc)
 {
-    if (hn + gn > maxDepth) return;
+    if (hn + gn > depthLimit) return;
+    // 当布局的熵降低为零时，表明布局已经为目标状态。
     if (hn == 0) {
         done = 1;
         for (int i = 0; i < gn; i++) cout << directions[path[i]];
@@ -31,90 +32,99 @@ void dfs(int hn, int gn, int dir, int emptyr, int emptyc)
         return;
     }
 
+    // 确定从当前布局能够得到的后续布局。
     int cnt = 0;
-    nextPos saved[4];
+    config next[4];
     for (int k = 0; k < 4; k++) {
         if (k == dir) continue;
-        int nextr = emptyr + offset[k][0], nextc = emptyc + offset[k][1];
-        if (nextr < 1 || nextr > 4 || nextc < 1 || nextc > 4) continue;
-        saved[cnt].hn = hn + dHn[puzzle[nextr][nextc]][emptyr][emptyc][nextr][nextc];
-        saved[cnt].dir = k, saved[cnt].r = nextr, saved[cnt].c = nextc;
+        int rr = missingr + offset[k][0], cc = missingc + offset[k][1];
+        if (rr < 1 || rr > 4 || cc < 1 || cc > 4) continue;
+        // 更新布局的熵。
+        next[cnt].hn = hn +
+            dHn[puzzle[rr][cc]][rr][cc][missingr][missingc];
+        next[cnt].dir = k, next[cnt].r = rr, next[cnt].c = cc;
         cnt++;
     }
 
-    sort(saved, saved + cnt);
+    // 对具有较低熵的布局优先搜索。
+    sort(next, next + cnt);
     for (int k = 0; k < cnt; k++) {
-        swap(puzzle[emptyr][emptyc], puzzle[saved[k].r][saved[k].c]);
-        path[gn] = saved[k].dir;
-        dfs(saved[k].hn, gn + 1, 3 - saved[k].dir, saved[k].r, saved[k].c);
+        swap(puzzle[missingr][missingc], puzzle[next[k].r][next[k].c]);
+        // 记录移动。
+        path[gn] = next[k].dir;
+        dfs(next[k].hn, gn + 1, 3 - next[k].dir, next[k].r, next[k].c);
         if (done) return;
-        swap(puzzle[emptyr][emptyc], puzzle[saved[k].r][saved[k].c]);
+        swap(puzzle[missingr][missingc], puzzle[next[k].r][next[k].c]);
     }
 }
 
-void idaStar(int emptyr, int emptyc)
+void IDAStar(int missingr, int missingc)
 {
+    // 通过累加每个非空滑块的熵来确定给定布局的熵。
     int hn = 0;
     for (int r = 1; r <= 4; r++)
         for (int c = 1; c <= 4; c++)
             if (puzzle[r][c])
                 hn += Hn[puzzle[r][c]][r][c];
 
-    maxDepth = 0;
+    // 每当搜索不成功时，搜索的限制深度递增1。
+    depthLimit = 0;
     while (true) {
         done = 0;
-        dfs(hn, 0, -1, emptyr, emptyc);
+        dfs(hn, 0, -1, missingr, missingc);
         if (done) break;
-        maxDepth++;
+        depthLimit++;
     }
 }
 
+// 判断给定的布局是否可解。
 bool solvable(vector<int> tiles)
 {
-    int sum = 0, row;
+    int sum = 0;
     for (int i = 0; i < tiles.size(); i++) {
-        int tile = tiles[i];
-        if (tile == 0) {
-            row = (i / 4 + 1);
-            continue;
+        if (tiles[i] == 0) sum += (i / 4 + 1);
+        else {
+            for (int j = i + 1; j < tiles.size(); j++)
+                if (tiles[j] && tiles[j] < tiles[i])
+                    sum++;
         }
-        for (int j = i; j < tiles.size(); j++)
-            if (tiles[j] < tile && tiles[j] != 0)
-                sum++;
     }
-    return ((sum + row) % 2 == 0);
+    return (sum % 2 == 0);
 }
 
 int main(int argc, char *argv[])
 {
-    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
-
+    // 预先计算正确位置为[r1, c1]的滑块移动到位置[r2, c2]时熵的改变。
     for (int r1 = 1; r1 <= 4; r1++)
         for (int c1 = 1; c1 <= 4; c1++)
             for (int r2 = 1; r2 <= 4; r2++)
                 for (int c2 = 1; c2 <= 4; c2++)
                     Hn[(r1 - 1) * 4 + c1][r2][c2] = abs(r1 - r2) + abs(c1 - c2);
 
-    for (int t = 1; t <= 15; t++)
+    // 预先计算编号为i的滑块从位置[r1, c1]移动到位置[r2, c2]时熵的变化。
+    for (int i = 1; i <= 15; i++)
         for (int r1 = 1; r1 <= 4; r1++)
             for (int c1 = 1; c1 <= 4; c1++)
                 for (int r2 = 1; r2 <= 4; r2++)
                     for (int c2 = 1; c2 <= 4; c2++)
-                        dHn[t][r1][c1][r2][c2] = Hn[t][r1][c1] - Hn[t][r2][c2];
+                        dHn[i][r1][c1][r2][c2] = Hn[i][r2][c2] - Hn[i][r1][c1];
 
-    int cases = 0, emptyr, emptyc;
+    int cases = 0;
     cin >> cases;
     for (int cs = 1; cs <= cases; cs++)
     {
         vector<int> tiles;
+        // missingr和missingc表示空滑块所在的行和列。
+        int missingr, missingc;
         for (int r = 1; r <= 4; r++)
             for (int c = 1; c <= 4; c++)
             {
                 cin >> puzzle[r][c];
                 tiles.push_back(puzzle[r][c]);
-                if (puzzle[r][c] == 0) emptyr = r, emptyc = c;
+                if (puzzle[r][c] == 0) missingr = r, missingc = c;
             }
-        if (solvable(tiles)) idaStar(emptyr, emptyc);
+        // 若布局可解，则进行IDA*搜索。
+        if (solvable(tiles)) IDAStar(missingr, missingc);
         else cout << "This puzzle is not solvable.\n";
     }
 
