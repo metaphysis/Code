@@ -34,6 +34,7 @@ int main(int argc, char *argv[])
                 int t2 = (circles[i].r + circles[j].r) * (circles[i].r + circles[j].r);
                 if (t1 <= t2) bad[cnt++] = (1 << i) | (1 << j);
             }
+
         int most = 0;
         for (int i = 1; i < (1 << C); i++)
         {
@@ -51,6 +52,7 @@ int main(int argc, char *argv[])
                     area += circles[j].r * circles[j].r;
             most = max(most, area);
         }
+
         cout << most << '\n';
     }
 

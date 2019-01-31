@@ -1,0 +1,33 @@
+<HTML>
+<HEAD>
+<TITLE>Indexing Web Pages</TITLE>
+</HEAD>
+<BODY>
+<P>Write a program to create an index of a small collection
+of World Wide Web pages. Each "page" is a text file in a
+special format called HTML (HyperText Markup Language). The
+HTML format includes regular text and special HTML commands,
+which are always enclosed in angle braces. For example, the
+string <A HREF="layout.htm"> is an HTML command meaning that
+the following text should be highlighted; a user click on
+the highlighted text would cause a web browser to fetch and
+display the file layout.htm.</P>
+<H1>Following Links</H1>
+<P>Don't forget that links can be <A HREF="index.htm">
+self-referential</A>!</P>
+</BODY>
+</HTML>
+
+<A bunch of gibberish and a word>
+Note that there is no rule that the file needs to be legal HTML
+(if you know the rules), or that words really be wordseiwlaoieu;a.
+<A HREF="index.htm">Watch out for mutual references!
+</HTML>
+
+file
+index
+html
+HTML
+recursion
+word
+is
