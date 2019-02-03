@@ -1,8 +1,8 @@
 // Where Can You Hide?
 // UVa ID: 10011
-// Verdict: Wrong Answer
-// Submission Date: 2019-02-02
-// UVa Run Time: 0.060s
+// Verdict: Accepted
+// Submission Date: 2019-02-03
+// UVa Run Time: 0.050s
 //
 // 版权所有（C）2019，邱秋。metaphysis # yeah dot net
 
@@ -23,9 +23,11 @@ struct point {
 
 struct line
 {
-    point p1, p2;
-    line (point p1 = point(0, 0), point p2 = point(0, 0)): p1(p1), p2(p2) {}
+    double a, b, c;
+    line (double a = 0, double b = 0, double c = 0): a(a), b(b), c(c) {}
 };
+
+struct circle { point c; double r; };
 
 double norm(point a)
 {
@@ -67,32 +69,40 @@ bool collinear(point a, point b, point c)
     return fabs(cp(a, b, c)) <= EPSILON;
 }
 
-struct circle { point c; double r; };
-double atan2(point p) { return atan2(p.y, p.x); }
-point polar(double d, double t) { return point(d * cos(t), d * sin(t)); }
-
-pair<point, point> getIntersection(point p, circle c1)
+line getLine(double x1, double y1, double x2, double y2)
 {
-    double d = abs(c1.c - p);
-    double a = asin(c1.r / d);
-    double t = atan2(c1.c - p);
-    double b = sqrt(d * d - c1.r * c1.r);
-    return make_pair(p + polar(b, t + a), p + polar(b, t - a));
+    return line(y2 - y1, x1 - x2, y1 * (x2 - x1) - x1 * (y2 - y1));
+}
+
+line getLine(point p, point q)
+{
+    return getLine(p.x, p.y, q.x, q.y);
 }
 
 double getDistPL(point p, line l)
 {
-	return fabs(cross(l.p2 - l.p1, p - l.p1) / abs(l.p2 - l.p1));
+	return fabs(l.a * p.x + l.b * p.y + l.c) / sqrt(l.a * l.a + l.b * l.b);
 }
 
-bool unsafe(point home, point p1, point p2)
+pair<point, point> getIntersection(point p, double r)
 {
-    point source = point(0, 0);
-    if (cw(source, p2, home)) return true;
-    if (collinear(source, p2, home)) return true;
-    if (ccw(source, p1, home)) return true;
-    if (collinear(source, p1, home)) return true;
-    if (ccw(p2, p1, home)) return true;
+    double D = abs(p);
+    double b = sqrt(norm(p) - r * r);
+    double sinA = r / D, cosA = b / D;
+    double k = b / D;
+    point p1 = point(p.x * cosA + p.y * sinA, -p.x * sinA + p.y * cosA);
+    point p2 = point(p.x * cosA - p.y * sinA, p.x * sinA + p.y * cosA);
+    return make_pair(p1 * k, p2 * k);
+}
+
+bool unsafe(point H, point p1, point p2)
+{
+    point O = point(0, 0);
+    if (cw(O, p1, H)) return true;
+    if (collinear(O, p1, H)) return true;
+    if (ccw(O, p2, H)) return true;
+    if (collinear(O, p2, H)) return true;
+    if (ccw(p1, p2, H)) return true;
     return false;
 }
 
@@ -102,38 +112,36 @@ int main(int argc, char *argv[])
 
     int cases;
     cin >> cases;
-    circle tree;
-    point home;
+    circle T;
+    point H;
     for (int cs = 1; cs <= cases; cs++)
     {
-        cin >> tree.c.x >> tree.c.y >> tree.r >> home.x >> home.y;
-        point source = point(0, 0);
-        if (fabs(abs(source - tree.c) - tree.r) <= EPSILON)
+        cin >> T.c.x >> T.c.y >> T.r >> H.x >> H.y;
+        point O = point(0, 0);
+        if (fabs(abs(T.c) - T.r) <= EPSILON)
         {
-            double a = atan2(tree.c.y, tree.c.x);
-            a -= acos(0);
-            double d = abs(tree.c - source);
-            point p = point(d * cos(a), d * sin(a));
-            if (cw(source, p, home) || collinear(source, p, home))
+            point NP = point(-T.c.y, T.c.x);
+            line L = getLine(O, NP);
+            if (ccw(O, NP, H) || collinear(O, NP, H))
                 cout << "0.000\n";
             else
             {
-                double d1 = abs(home - tree.c) - tree.r;
-                double d2 = getDistPL(home, line(source, p));
+                double d1 = getDistPL(H, L);
+                double d2 = abs(H - T.c) - T.r;
                 cout << fixed << setprecision(3) << min(d1, d2) << '\n';
             }
         }
         else
         {
-            pair<point, point> intersections = getIntersection(point(0, 0), tree);
+            pair<point, point> intersections = getIntersection(T.c, T.r);
             point p1 = intersections.first, p2 = intersections.second;
-            if (unsafe(home, p1, p2))
+            if (unsafe(H, p1, p2))
                 cout << "0.000\n";
             else
             {
-                double d1 = getDistPL(home, line(source, p1));
-                double d2 = getDistPL(home, line(source, p2));
-                double d3 = abs(home - tree.c) - tree.r;
+                double d1 = getDistPL(H, getLine(O, p1));
+                double d2 = getDistPL(H, getLine(O, p2));
+                double d3 = abs(H - T.c) - T.r;
                 cout << fixed << setprecision(3) << min(d3, min(d1, d2)) << '\n';
             }
         }
