@@ -2,7 +2,7 @@
 // UVa ID: 569
 // Verdict: Wrong Answer
 // Submission Date: 2018-05-10
-// UVa Run Time: s
+// UVa Run Time: 0.050s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
