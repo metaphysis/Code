@@ -37,20 +37,20 @@ point polar(double d, double t) { return point(d * cos(t), d * sin(t)); }
 
 pair<point, point> getIntersection1(point p, circle cc)
 {
-    double D = abs(cc.c - p);
-    double a = asin(cc.r / D);
+    double d = abs(cc.c - p);
+    double a = asin(cc.r / d);
     double t = atan2(cc.c - p);
-    double b = sqrt(D * D - cc.r * cc.r);
+    double b = sqrt(d * d - cc.r * cc.r);
     return make_pair(p + polar(b, t + a), p + polar(b, t - a));
 }
 
 pair<point, point> getIntersection2(point p, circle cc)
 {
     point pv = cc.c - p;
-    double D = abs(pv);
+    double d = abs(pv);
     double b = sqrt(norm(pv) - cc.r * cc.r);
-    double sina = cc.r / D, cosa = b / D;
-    double k = b / D;
+    double sina = cc.r / d, cosa = b / d;
+    double k = b / d;
     point p1 = point(pv.x * cosa - pv.y * sina, pv.x * sina + pv.y * cosa);
     point p2 = point(pv.x * cosa + pv.y * sina, -pv.x * sina + pv.y * cosa);
     return make_pair(p + p1 * k, p + p2 * k);
