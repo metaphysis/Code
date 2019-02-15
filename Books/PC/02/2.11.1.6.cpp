@@ -4,8 +4,8 @@ using namespace std;
 
 const int MAXN = 512, INF = 0x7f7f7f7f;
 
-#define LCHILD(x) ((x << 1) | 1)
-#define RCHILD(x) ((x + 1) << 1)
+#define LCHILD(x) (((x) << 1) | 1)
+#define RCHILD(x) (((x) + 1) << 1)
 
 int n, m, data[MAXN][MAXN];
 

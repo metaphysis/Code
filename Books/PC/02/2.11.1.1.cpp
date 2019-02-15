@@ -4,8 +4,8 @@ using namespace std;
 
 const int MAXN = 1000010, INF = 0x7f7f7f7f;
 
-#define LCHILD(x) ((x << 1) | 1)
-#define RCHILD(x) ((x + 1) << 1)
+#define LCHILD(x) (((x) << 1) | 1)
+#define RCHILD(x) (((x) + 1) << 1)
 
 int data[MAXN];
 struct node { int field; } st[4 * MAXN];
