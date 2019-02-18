@@ -2,7 +2,7 @@
 // UVa ID: 11605
 // Verdict: Accepted
 // Submission Date: 2019-02-18
-// UVa Run Time: 0.660s
+// UVa Run Time: 0.470s
 //
 // 版权所有（C）2019，邱秋。metaphysis # yeah dot net
 
@@ -10,9 +10,18 @@
 
 using namespace std;
 
+double fastPow(double x, int n)
+{
+    if (n == 0) return 1;
+    double r = fastPow(x, n / 2);
+    r = r * r;
+    if (n & 1) r *= x;
+    return r;
+}
+
 double getProbability(int a, int L)
 {
-    return (2.0 * a * (L - a + 1) - 1) / (L * L);
+    return 1.0 * (L * L - (a - 1) * (a - 1) - (L - a) * (L - a)) / (L * L);
 }
 
 int main(int argc, char *argv[])
@@ -35,7 +44,7 @@ int main(int argc, char *argv[])
                 for (int k = 1; k <= P; k++)
                 {
                     double z = getProbability(k, P);
-                    E += 0.5 * (1 - pow(1 - 2 * x * y * z, K));
+                    E += 0.5 * (1 - fastPow(1 - 2 * x * y * z, K));
                 }
             }
         }
