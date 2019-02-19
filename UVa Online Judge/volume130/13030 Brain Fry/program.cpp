@@ -1,8 +1,8 @@
 // Brain Fry
 // UVa ID: 13030
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2019-02-19
+// UVa Run Time: 0.620s
 //
 // 版权所有（C）2019，邱秋。metaphysis # yeah dot net
 
@@ -19,46 +19,42 @@ struct edge
     bool operator<(const edge &e) const { return w > e.w; }
 };
 
-double p[260], dp[260][150][2], visited[260][150];
+double p[260], probability[260][150], elapsed[260][150], visited[260][150];
 vector<edge> edges[260];
-int N, M, T, dist[260];
+int N, M, T, dist[260], neighbours[260];
 
 void dfs(int u, int t)
 {
     if (visited[u][t]) return;
     visited[u][t] = 1;
-    dp[u][t][0] = dp[u][t][1] = 0;
+    probability[u][t] = elapsed[u][t] = 0;
     if (u)
     {
-        dp[u][t][0] += p[u];
-        dp[u][t][1] += p[u] * (t + dist[u]);
+        probability[u][t] += p[u];
+        elapsed[u][t] += p[u] * (t + dist[u]);
 
         if (t >= T)
         {
-            dp[u][t][1] += (1 - p[u]) * (t + dist[u]);
+            elapsed[u][t] += (1 - p[u]) * (t + dist[u]);
             return;
         }
 
-        int neighbour = 0;
-        for (auto e : edges[u])
-            if (e.v)
-                neighbour++;
-        if (neighbour == 0)
+        if (neighbours[u] == 0)
         {
             dfs(0, t + dist[u]);
-            dp[u][t][0] += (1 - p[u]) * dp[0][t + dist[u]][0];
-            dp[u][t][1] += (1 - p[u]) * dp[0][t + dist[u]][1];
+            probability[u][t] += (1 - p[u]) * probability[0][t + dist[u]];
+            elapsed[u][t] += (1 - p[u]) * elapsed[0][t + dist[u]];
         }
         else
         {
-            double s = 1.0 / neighbour;
+            double s = 1.0 / neighbours[u];
             for (auto e : edges[u])
             {
                 if (e.v)
                 {
                     dfs(e.v, t + e.w);
-                    dp[u][t][0] += s * (1 - p[u]) * dp[e.v][t + e.w][0];
-                    dp[u][t][1] += s * (1 - p[u]) * dp[e.v][t + e.w][1];
+                    probability[u][t] += s * (1 - p[u]) * probability[e.v][t + e.w];
+                    elapsed[u][t] += s * (1 - p[u]) * elapsed[e.v][t + e.w];
                 }
             }
         }
@@ -67,18 +63,17 @@ void dfs(int u, int t)
     {
         if (t >= T)
         {
-            dp[u][t][1] = t + dist[u];
+            elapsed[u][t] = t + dist[u];
             return;
         }
-        int neighbour = edges[u].size();
-        if (neighbour)
+        if (neighbours[u] > 0)
         {
-            double s = 1.0 / neighbour;
+            double s = 1.0 / neighbours[u];
             for (auto e : edges[u])
             {
                 dfs(e.v, t + e.w);
-                dp[u][t][0] += s * dp[e.v][t + e.w][0];
-                dp[u][t][1] += s * dp[e.v][t + e.w][1];
+                probability[u][t] += s * probability[e.v][t + e.w];
+                elapsed[u][t] += s * elapsed[e.v][t + e.w];
             }
         }
     }
@@ -94,12 +89,18 @@ int main(int argc, char *argv[])
     {
         cin >> N >> M >> T;
         for (int i = 1; i <= N; i++) cin >> p[i];
-        for (int i = 0; i <= N; i++) edges[i].clear();
+        for (int i = 0; i <= N; i++)
+        {
+            edges[i].clear();
+            neighbours[i] = 0;
+        }
         for (int i = 0, u, v, w; i < M; i++)
         {
             cin >> u >> v >> w;
             edges[u].push_back(edge(v, w));
             edges[v].push_back(edge(u, w));
+            neighbours[u] += (v > 0);
+            neighbours[v] += (u > 0);
         }
 
         memset(dist, INF, sizeof(dist));
@@ -124,7 +125,7 @@ int main(int argc, char *argv[])
         memset(visited, 0, sizeof(visited));               
         dfs(0, 0);
         cout << "Case " << cs << ": ";
-        cout << fixed << setprecision(6) << dp[0][0][0] << ' ' << dp[0][0][1] << '\n';
+        cout << fixed << setprecision(6) << probability[0][0] << ' ' << elapsed[0][0] << '\n';
     }
 
     return 0;

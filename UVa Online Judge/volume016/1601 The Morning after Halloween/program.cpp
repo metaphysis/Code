@@ -60,50 +60,6 @@ int main(int argc, char *argv[])
                 }
             }
         }
-
-        unordered_set<int> visited;
-        queue<int> q, moves;
-        q.push(S);
-        visited.insert(S);
-        moves.push(0);
-        
-        while (!q.empty())
-        {
-            int s = q.front(); q.pop();
-            int m = moves.front(); moves.pop();
-            if (s == T)
-            {
-                cout << m << '\n';
-                break;
-            }
-            unpack(s, n);
-            for (int i = 0; i < n; i++)
-            {
-                int x = xy[i][0], y = xy[i][1];
-                for (int j = 0; j < 4; j++)
-                {
-                    int xx = x + offset[j][0], yy = y + offset[j][1];
-                    if (grid[xx][yy] == '#') continue;
-                    bool good = true;
-                    for (int k = 0; k < n; k++)
-                    {
-                        if (k == i) continue;
-                        if (xx == xy[k][0] && yy == xy[k][1])
-                        {
-                            good = false;
-                            break;
-                        }
-                    }
-                    if (!good) continue;
-                    int key = pack(s, i, xx, yy);
-                    if (visited.find(key) != visited.end()) continue;
-                    visited.insert(key);
-                    q.push(key);
-                    moves.push(m + 1);
-                }
-            }
-        }
-        
     }
 
     return 0;
