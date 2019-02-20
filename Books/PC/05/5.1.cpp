@@ -27,8 +27,7 @@ string add(string number1, string number2)
     // 将结果保存在字符串number1中，为了相加方便，调整加数，使得第一个加数的数位
     // 总是大于第二个加数的数位。由于两个正数相加，和的数位最多为两个加数数位较大值
     // 加一，可以预先分配存储空间以方便计算。
-    if (number1.length() < number2.length())
-        number1.swap(number2);
+    if (number1.length() < number2.length()) number1.swap(number2);
     number1.insert(number1.begin(), '0');
 
     // 相加时从低位开始加。初始时进位为0。由于字符串中保存的是数位的ASCII码字符，

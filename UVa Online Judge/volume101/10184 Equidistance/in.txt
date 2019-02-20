@@ -1,0 +1,20 @@
+Ulm 48.700 10.500
+Freiburg 47.700 9.500
+Philadelphia 39.883 -75.250
+SanJose 37.366 -121.933
+Atlanta 33 -84
+Eindhoven 52 6
+Orlando 28 -82
+Vancouver 49 -123
+Honolulu 22 -157
+NorthPole 90 0
+SouthPole -90 0
+#
+Ulm Freiburg Philadelphia
+SanJose Atlanta Eindhoven
+Orlando Vancouver Honolulu
+NorthPole SouthPole NorthPole
+Ulm SanDiego Orlando
+NorthPole SouthPole SouthPole
+Ulm Honolulu SouthPole
+#

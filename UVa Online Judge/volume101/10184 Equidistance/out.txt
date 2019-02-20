@@ -1,0 +1,7 @@
+Philadelphia is 690 km off Ulm/Freiburg equidistance.
+Eindhoven is 3117 km off SanJose/Atlanta equidistance.
+Honolulu is 4251 km off Orlando/Vancouver equidistance.
+NorthPole is 0 km off NorthPole/SouthPole equidistance.
+Orlando is ? km off Ulm/SanDiego equidistance.
+SouthPole is 0 km off NorthPole/SouthPole equidistance.
+SouthPole is 1494 km off Ulm/Honolulu equidistance.
