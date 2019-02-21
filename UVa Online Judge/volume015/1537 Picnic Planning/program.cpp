@@ -1,137 +1,107 @@
 // Picnic Planning
 // UVa ID: 1537
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2019-02-21
+// UVa Run Time: 0.800s
 //
-// 版权所有（C）2018，邱秋。metaphysis # yeah dot net
+// 版权所有（C）2019，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
 
 using namespace std;
 
-#define x first
-#define y second
-#define mp make_pair
-#define pb push_back
-#define sz(a) (int)(a.size())
-#define all(a) a.begin(), a.end()
-#define R(a) ((a)%mod)
+const int MAXV = 30, MAXE = 1010, INF = 0x7f7f7f7f;
 
-typedef vector<int> VI;
-typedef vector<VI> VVI;
-typedef long long ll;
-typedef vector<ll> VL;
-typedef vector<VL> VVL;
-typedef vector<VVL> VVVL;
-typedef vector<bool> VB;
-typedef vector<string> VS;
-typedef pair<int, ll> PI;
-typedef vector<PI> VPI;
-typedef vector<PI> VPI;
-typedef vector<VPI> VVPI;
-typedef vector<double> VD;
-typedef vector<VD> VVD;
+struct edge {
+    int u, v, weight;
+    edge (int u = 0, int v = 0, int weight = 0): u(u), v(v), weight(weight) {}
+    bool operator<(const edge &e) const { return weight < e.weight; }
+} edges[MAXE];
 
-struct DisjointSet {
-    int n;
-    VI rank, parent;
+int n, m;
+int parent[MAXV], ranks[MAXV];
 
-    DisjointSet (int n): n(n), rank(n, 0) {
-        for (int i = 0; i < n; i++) {
-            parent.push_back(i);
-        }
-    }
+void makeSet()
+{
+    for (int i = 0; i < n; i++) parent[i] = i, ranks[i] = 0;
+}
 
-    int Find (int x) {
-        return parent[x] == x ? x : (parent[x] = Find(parent[x]));
-    }
+int findSet(int x)
+{
+    return (parent[x] == x ? x : parent[x] = findSet(parent[x]));
+}
 
-    bool Union (int x, int y) { // returns false if already connected
-        x = Find(x), y = Find(y);
-        if (x == y) {
-            return false;
-        } else if (rank[x] < rank[y]) {
+bool unionSet(int x, int y)
+{
+    x = findSet(x), y = findSet(y);
+    if (x != y) {
+        if (ranks[x] > ranks[y]) parent[y] = x;
+        else {
             parent[x] = y;
-        } else {
-            parent[y] = x;
-            rank[x] = max(rank[x], rank[y] + 1);
+            if (ranks[x] == ranks[y]) ranks[y]++;
         }
         return true;
     }
-};
+    return false;
+}
 
-template <class T> struct Kruskal {
-    int n;
-    vector <pair <T, PI>> edges;
-    DisjointSet *D;
+int kruskal(int mask)
+{
+    int sumOfWeight = 0, cntOfMerged = 0;
 
-    Kruskal (int n): n(n) {}
+    makeSet();
 
-    void addEdge (int s, int t, T d) {
-        edges.push_back(make_pair(d, make_pair(s, t)));
+    for (int i = 0; i < m; i++)
+    {
+        if (edges[i].u == 0 && (mask & (1 << edges[i].v)) == 0) continue;
+        if (unionSet(edges[i].u, edges[i].v)) {
+            cntOfMerged++;
+            sumOfWeight += edges[i].weight;
+        }
     }
+    if (cntOfMerged != n - 1) sumOfWeight = INF;
+    return sumOfWeight;
+}
 
-    T MST (int park, ll mask) {
-        T ret = 0;
-        D = new DisjointSet(n);
-        for (auto e : edges) if (e.y.x != park || (mask & (1LL << e.y.y))) {
-                if (D->Union(e.y.x, e.y.y)) {
-                    ret += e.x;
-                }
-            }
-        return ret;
-    }
-};
 
-int main(int argc, char const *argv[]) {
-    ios::sync_with_stdio(false);
+int main(int argc, char *argv[])
+{
+    int cases, mask;
+    map<string, int> names;
+    string name1, name2;
 
-    Kruskal<ll> *K;
-    int t;
-    cin >> t;
-    for (int cs = 0; cs < t; ++cs) {
-        int m, n = 0;
+    cin >> cases;
+    for (int cs = 1; cs <= cases; cs++)
+    {
         cin >> m;
-        map<string, int> f;
-        vector<pair<ll, pair<int, int>>> edges;
-        ll mask = 0;
-        for (int i = 0; i < m; ++i) {
-            string s, t;
-            ll d;
-            cin >> s >> t >> d;
-            if (t == "Park") {
-                swap(s, t);
-            }
-            if (f.find(s) == f.end()) {
-                f[s] = n++;
-            }
-            if (f.find(t) == f.end()) {
-                f[t] = n++;
-            }
-            edges.push_back(make_pair(d, make_pair(f[s], f[t])));
-            if (s == "Park") {
-                mask |= 1LL << f[t];
-            }
+        names.clear();
+        mask = 0, n = 0;
+        names["Park"] = n++;
+        for (int i = 0, dist; i < m; i++)
+        {
+            cin >> name1 >> name2 >> dist;
+            if (name2 == "Park") swap(name1, name2);
+            if (names.find(name1) == names.end()) names[name1] = n++;
+            if (names.find(name2) == names.end()) names[name2] = n++;
+            edges[i] = edge(names[name1], names[name2], dist);
+            if (name1 == "Park") mask |= (1 << (names[name2]));
         }
-        K = new Kruskal<ll> (n);
-        for (auto e : edges) {
-            K->addEdge(e.y.x, e.y.y, e.x);
-        }
-        sort(all(K->edges));
-        int maxToPark;
-        cin >> maxToPark;
-        int direct = __builtin_popcount(mask), park = f["Park"];
-        ll ans = numeric_limits<ll>::max();
-        for (ll i = mask; i != 0; i = (i - 1LL) & mask) if (__builtin_popcount(i) == min(maxToPark, direct)) {
-                ans = min(ans, K->MST(park, i));
-            }
-        if (cs != 0) {
-            cout << endl;
-        }
-        cout << "Total miles driven: " << ans << endl;
-    }
+        sort(edges, edges + m);
 
+        int s;
+        cin >> s;
+
+        int r = INF;
+        for (int i = 0; i <= mask; i++)
+        {
+            if ((i & mask) != i) continue;
+            if (__builtin_popcount(i) > s) continue;
+            r = min(r, kruskal(i));
+        }
+
+        if (cs > 1) cout << '\n';
+        cout << "Total miles driven: " << r << '\n';
+    }
 
     return 0;
 }
