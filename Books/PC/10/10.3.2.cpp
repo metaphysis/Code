@@ -47,9 +47,10 @@ int kruskal()
 
     for (int i = 0; i < m; i++)
         if (unionSet(edges[i].u, edges[i].v)) {
-            cntOfMerged++;
             sumOfWeight += edges[i].weight;
+            if (++cntOfMerged == n - 1) break;
         }
+    if (cntOfMerged != n - 1) sumOfWeight = -1;
     return sumOfWeight;
 }
 

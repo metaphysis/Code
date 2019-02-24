@@ -55,14 +55,13 @@ int kruskal(int mask)
     {
         if (edges[i].u == 0 && (mask & (1 << edges[i].v)) == 0) continue;
         if (unionSet(edges[i].u, edges[i].v)) {
-            cntOfMerged++;
             sumOfWeight += edges[i].weight;
+            if (++cntOfMerged == n - 1) break;
         }
     }
     if (cntOfMerged != n - 1) sumOfWeight = INF;
     return sumOfWeight;
 }
-
 
 int main(int argc, char *argv[])
 {
