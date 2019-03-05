@@ -1,8 +1,8 @@
 // Donkey
 // UVa ID: 888
-// Verdict: Wrong Answer
+// Verdict: Accepted
 // Submission Date: 2019-03-05
-// UVa Run Time: 0.180s
+// UVa Run Time: 0.150s
 //
 // 版权所有（C）2019，邱秋。metaphysis # yeah dot net
 
@@ -141,7 +141,7 @@ int main(int argc, char *argv[])
             if (N == 2) r = dfs2(who - 1, river[0], river[1]);
             else if (N == 3) r = dfs3(who - 1, river[0], river[1], river[2]);
             else r = dfs4(who - 1, river[0], river[1], river[2], river[3]);
-            cout << fixed << setprecision(3) << r << '\n';
+            cout << fixed << setprecision(3) << r + 1e-8 << '\n';
         }
     }
 

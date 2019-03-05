@@ -13,7 +13,7 @@ using namespace std;
 #define GET(X, Y) ((X & (0x1F << (5 * Y))) >> (5 * Y))
 
 int M, N;
-double dp[4][1 << 20];
+double dp[4][4][26][1 << 20];
 
 int getMask(int who, int die, int mask)
 {
@@ -48,6 +48,12 @@ int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
+    for (int i = 0; i < 4; i++)
+        for (int j = 0; j < 4; j++)
+            for (int k = 0; k < 26; k++)
+                for (int l = 0; l < (1 << (5 * N)); l++)
+                    dp[i][j] = -1;
+
     int cases;
     cin >> cases;
     for (int cs = 1; cs <= cases; cs++)
@@ -64,9 +70,6 @@ int main(int argc, char *argv[])
         if (N == 1) cout << "1.000\n";
         else
         {
-            for (int i = 0; i < N; i++)
-                for (int j = 0; j < (1 << (5 * N)); j++)
-                    dp[i][j] = -1;
             cout << fixed << setprecision(3) << dfs(who - 1, mask) << '\n';
         }
     }
