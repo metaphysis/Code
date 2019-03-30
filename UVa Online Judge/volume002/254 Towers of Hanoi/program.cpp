@@ -10,13 +10,13 @@
 
 using namespace std;
 
-vector < int > moves;
+vector<int> moves;
 
 void parseMovesToBinary(string m)
 {
     moves.clear();
     
-    vector < int > digits;
+    vector<int> digits;
     for (int i = 0; i < m.length(); i++)
         digits.push_back(m[i] - '0');
         
@@ -39,10 +39,10 @@ void parseMovesToBinary(string m)
 int findMaxK()
 {
     int k = moves.size();
-    
+
     if (moves.size() == 0)
         return k;
-    
+
     bool allOne = true;
     for (int i = 0; i < moves.size(); i++)
         if (moves[i] == 0)
@@ -50,13 +50,13 @@ int findMaxK()
             allOne = false;
             break;
         }
-            
+
     if (allOne)
     {
         moves.erase(moves.begin(), moves.end());
         return k;
     }
-    
+
     int borrow = 0; 
     for (int i = moves.size() - 1; i >= 1; i--)
     {
@@ -70,21 +70,21 @@ int findMaxK()
             borrow = 0;
     }
     moves[0] -= borrow;
-    
+
     while (moves.size() && moves.front() == 0)
         moves.erase(moves.begin());
-        
+
     return (k - 1);
 }
 
 void subtract()
 {
-    vector < int > one(moves.size());
-    
+    vector<int> one(moves.size());
+
     for (int i = 0; i < one.size(); i++)
         one[i] = 0; 
     one.back() = 1;
-        
+
     int borrow = 0; 
     for (int i = moves.size() - 1; i >= 0; i--)
     {
@@ -97,49 +97,48 @@ void subtract()
         else
             borrow = 0;
     }
-    
+
     while (moves.size() && moves.front() == 0)
         moves.erase(moves.begin());
 }
 
-vector < vector < int > > disks(3);
+vector<vector<int>> disks(3);
 
 int main(int argc, char *argv[])
 {
     int n;
     string m;
-    
+
     while (cin >> n >> m, n > 0)
     {
         parseMovesToBinary(m);
-        
+
         disks.clear();
         disks.resize(3);
-        
+
         for (int i = 1; i <= n; i++)
             disks[0].push_back(i);
-        
+
         int i = 0, A, B, C;
         while (true)
         {
             int k = findMaxK();
-            
+
             if (k == 0)
                 break;
-            
+
             if (k % 2 == 1)
             {
                 A = i, B = (i + 1) % 3, C = (i + 2) % 3;
 
                 disks[B].insert(disks[B].begin(), disks[A].begin(), disks[A].begin() + k);
                 disks[A].erase(disks[A].begin(), disks[A].begin() + k);
-                
+
                 if (moves.size())
                 {
                     subtract();
-                    
-                    if (disks[C].size() == 0 ||
-                    disks[C].front() > disks[A].front())
+
+                    if (disks[C].size() == 0 || disks[C].front() > disks[A].front())
                     {
                         disks[C].insert(disks[C].begin(), disks[A].front());
                         disks[A].erase(disks[A].begin());
@@ -150,7 +149,7 @@ int main(int argc, char *argv[])
                         disks[C].erase(disks[C].begin());
                     }
                 }
-                
+
                 i = B;
             }
             else
@@ -164,8 +163,7 @@ int main(int argc, char *argv[])
                 {
                     subtract();
                     
-                    if (disks[B].size() == 0 ||
-                    disks[B].front() > disks[A].front())
+                    if (disks[B].size() == 0 || disks[B].front() > disks[A].front())
                     {
                         disks[B].insert(disks[B].begin(), disks[A].front());
                         disks[A].erase(disks[A].begin());

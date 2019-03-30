@@ -24,10 +24,10 @@ struct choice
 };
 
 int n;
-vector < package > packages;
+vector<package> packages;
 int base[4];
 double minPrice;
-map < int, int > counter;
+map<int, int> counter;
 choice memo[1048576];
 
 int getIndex(int count[])

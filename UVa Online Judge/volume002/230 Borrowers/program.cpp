@@ -25,7 +25,7 @@ struct book
     }
 };
 
-vector < book > books, returned;
+vector<book> books, returned;
 
 int main(int argc, char *argv[])
 {
@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
     
     sort(books.begin(), books.end());
     
-    map < string, int > indexer;
+    map<string, int> indexer;
     for (int i = 0; i < books.size(); i++)
     {
         books[i].index = i;
@@ -91,6 +91,6 @@ int main(int argc, char *argv[])
             returned.clear();
         }
     }
-    
+ 
 	return 0;
 }

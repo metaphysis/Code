@@ -11,7 +11,7 @@
 using namespace std;
 
 int cases = 0;
-vector < double >distances_from_start;
+vector<double> distances_from_start;
 double v, s, m;
 
 struct station
@@ -36,7 +36,7 @@ void process()
         return;
     }
 
-    vector < double >distances(distances_from_start);
+    vector<double> distances(distances_from_start);
     distances.insert(distances.begin(), 0.0);
     for (int i = 0; i < distances.size() - 1; i++)
         distances[i] = (distances[i + 1] - distances[i]) * 5280.0;
@@ -44,15 +44,13 @@ void process()
 
     distances_from_start.insert(distances_from_start.begin(), 0.0);
 
-    vector < double >schedule;
+    vector<double> schedule;
     for (int i = 0; i < distances.size(); i++)
         schedule.push_back(distances[i] / v + v / s);
 
-    vector < station > left_train, right_train;
+    vector<station> left_train, right_train;
 
-    left_train.push_back((station)
-        {
-        0.0, 0.0});
+    left_train.push_back((station){0.0, 0.0});
     double time_elapsed = 0.0;
     for (int i = 0; i < schedule.size(); i++)
     {
@@ -63,9 +61,7 @@ void process()
         time_elapsed = aStation.departure_time;
     }
 
-    right_train.push_back((station)
-        {
-        0.0, 0.0});
+    right_train.push_back((station){0.0, 0.0});
     time_elapsed = 0.0;
     for (int i = schedule.size() - 1; i >= 0; i--)
     {

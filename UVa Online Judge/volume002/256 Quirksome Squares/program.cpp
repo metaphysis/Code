@@ -10,7 +10,7 @@
 
 using namespace std;
 
-vector < vector < string > > numbers(4);
+vector<vector<string>> numbers(4);
 
 void add(int n, int base)
 {

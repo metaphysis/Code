@@ -24,7 +24,7 @@ int offset[16][2] = {
 
 bool check(int blackKingX, int blackKingY)
 {
-    // horizontal or vertical, rook or queen or pawn or king
+    // horizontal or vertical, rook or queen or king
     for (int i = 0; i < 4; i++)
     {
         int x = blackKingX + offset[i][0], y = blackKingY + offset[i][1];

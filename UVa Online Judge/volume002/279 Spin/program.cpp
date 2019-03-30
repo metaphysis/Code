@@ -12,7 +12,7 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-    vector <int> steps;
+    vector<int> steps;
     steps.push_back(0);
     
     for (int i = 1; i <= 29; i++)

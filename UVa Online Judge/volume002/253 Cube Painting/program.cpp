@@ -1,4 +1,4 @@
-// Cube painting
+// Cube Painting
 // UVa ID: 253
 // Verdict: Accepted
 // Submission Date: 2016-05-10

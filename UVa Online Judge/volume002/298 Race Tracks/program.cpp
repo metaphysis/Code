@@ -16,7 +16,7 @@ struct hop
 };
 
 int grid[31][31], X, Y, startx, starty, endx, endy;
-set < string > visited;
+set<string> visited;
 
 string getKey(int x, int y, int vx, int vy)
 {
@@ -27,7 +27,7 @@ void bfs()
 {
     visited.clear();
     
-    queue < hop > unvisited;
+    queue<hop> unvisited;
     unvisited.push((hop){startx, starty, 0, 0, 0});
     
     while (unvisited.size())

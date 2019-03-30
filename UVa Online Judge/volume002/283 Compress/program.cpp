@@ -10,7 +10,7 @@
 
 using namespace std;
 
-vector < int >counter, codes(10);
+vector<int> counter, codes(10);
 int minimalBits;
 
 void backtrack(int prefix, int index, int bits)
@@ -67,7 +67,7 @@ int main(int argc, char *argv[])
         for (auto it = frequency.begin(); it != frequency.end(); it++)
             counter.push_back((*it).second);
 
-        sort(counter.begin(), counter.end(), greater < int >());
+        sort(counter.begin(), counter.end(), greater<int>());
 
         minimalBits = numeric_limits < int >::max();
         backtrack(0, 0, 0);

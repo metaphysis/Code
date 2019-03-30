@@ -10,7 +10,7 @@
 
 using namespace std;
 
-map <char, char> mapped;
+map<char, char> mapped;
 char matrix[1024][1024];
 
 string unfolding(int n)
