@@ -15,8 +15,8 @@ struct point
     int x, y;
 };
 
-vector < point > blocks;
-vector < int > golygons(30);
+vector<point> blocks;
+vector<int> golygons(30);
 
 string headingText = "ensw";
 int turn[4][2] = { {1, 2}, {0, 3}, {0, 3}, {1, 2} };
