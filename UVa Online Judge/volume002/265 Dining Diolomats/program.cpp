@@ -16,12 +16,12 @@ struct diplomat
     int language;
 };
 
-vector < diplomat > diplomats;
-vector < vector < int > > edges;
+vector<diplomat> diplomats;
+vector<vector<int>> edges;
 bool flag;
-vector < bool > seated(10);
-vector < int > table(10);
-map < string, set < string > >relations;
+vector<bool> seated(10);
+vector<int> table(10);
+map<string, set<string>> relations;
 
 bool isNext(int i, int j)
 {

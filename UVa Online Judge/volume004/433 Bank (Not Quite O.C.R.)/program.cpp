@@ -10,7 +10,7 @@
 
 using namespace std;
 
-vector < string > digits = {
+vector<string> digits = {
     "010101111", "000001001", "010011110", "010011011", "000111001",
     "010110011", "010110111", "010001001", "010111111", "010111011"
 };
@@ -27,7 +27,7 @@ void backtrack(int indexer, int number)
         }
 }
 
-bool checksum(vector < int >&accountDigits)
+bool checksum(vector<int> &accountDigits)
 {
     int sum = 0;
     for (int i = 9; i >= 1; i--)

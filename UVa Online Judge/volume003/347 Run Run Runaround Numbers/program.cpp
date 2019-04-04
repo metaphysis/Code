@@ -1,4 +1,4 @@
-// Run, Run, Runaround Numbers
+// Run Run Runaround Numbers
 // UVa ID: 347
 // Verdict: Accepted
 // Submission Date: 2016-07-02
@@ -11,8 +11,8 @@
 using namespace std;
 
 string digits;
-set < int >candidates;
-vector < bool > used(10), visited(10);
+set<int> candidates;
+vector<bool> used(10), visited(10);
 
 void dfs(int depth, int position, int length)
 {

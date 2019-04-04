@@ -10,8 +10,8 @@
 
 using namespace std;
 
-vector < pair < pair < int, int >, vector < int >>> pieces;
-vector < bool > visited;
+vector<pair<pair<int, int>, vector<int>>> pieces;
+vector<bool> visited;
 int grid[4][4];
 
 void display()

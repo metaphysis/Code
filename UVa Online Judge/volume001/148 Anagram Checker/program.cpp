@@ -1,4 +1,4 @@
-// Anagram checker
+// Anagram Checker
 // UVa ID: 148
 // Verdict: Accepted
 // Submission Date: 2016-01-22

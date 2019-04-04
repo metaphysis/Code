@@ -18,7 +18,7 @@ struct guess
 
 int main(int argc, char *argv[])
 {
-    vector < string > candidates;
+    vector<string> candidates;
     for (int i = 0; i <= 9999; i++)
     {
         candidates.push_back(to_string(i));
@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
                 (guess){line.substr(0, 4), line[5] - '0', line[7] - '0'});
         }
         
-        set < string > good;
+        set<string> good;
         for (int i = 0; i < candidates.size(); i++)
         {
             bool isGood = true;

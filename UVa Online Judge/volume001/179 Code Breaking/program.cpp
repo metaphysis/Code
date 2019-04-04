@@ -88,7 +88,7 @@ int maxTimesTry = 10000;
 int timesTried = 0;
 bool keyFound = false, finish = false;
 string source, target;
-vector < bool > matched;
+vector<bool> matched;
 
 void backtrack(int index, int keyLength)
 {

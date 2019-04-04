@@ -1,4 +1,4 @@
-// John's trip
+// John's Trip
 // UVa ID: 302
 // Verdict: Accepted
 // Submission Date: 2016-07-02

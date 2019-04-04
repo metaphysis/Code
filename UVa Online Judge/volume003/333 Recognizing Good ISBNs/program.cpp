@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
         for (auto c : line)
         {
             indexer++;
-            
+        
             if (isdigit(c))
             {
                 counter++;

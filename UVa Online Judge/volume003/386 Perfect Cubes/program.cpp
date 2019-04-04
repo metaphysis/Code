@@ -25,7 +25,7 @@ struct cube
 int main(int argc, char *argv[])
 {
     vector<cube> cubes;
-    
+
     for (int i = 2; i <= 200; i++)
         for (int j = i; j <= 200; j++)
             for (int k = j; k <= 200; k++)

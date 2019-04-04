@@ -23,12 +23,12 @@ int main(int argc, char *argv[])
         cin >> row;
 
         vector<int> front_view(row), right_view(row);
-        
+
         for (int j = 0; j < row; j++)
             cin >> front_view[j];
         for (int j = 0; j < row; j++)
             cin >> right_view[j];
-  
+
         int max_blocks = 0;
         for (int j = 0; j < row; j++)
             for (int k = 0; k < row; k++)
@@ -52,6 +52,6 @@ int main(int argc, char *argv[])
         cout << " blocks, and can add at most ";
         cout << (max_blocks - min_blocks) << " extra blocks.\n";
     }
-    
+
 	return 0;
 }

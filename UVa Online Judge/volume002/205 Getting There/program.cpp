@@ -16,13 +16,13 @@ struct edge
     int start, end, leave, arrive, time, cost;
 };
 
-vector < vector < edge > > edges;
-map < string, int > cityIndexs;
-vector < string > cityNames;
-set < string > startCities, endCities;
+vector<vector<edge>> edges;
+map<string, int> cityIndexs;
+vector<string> cityNames;
+set<string> startCities, endCities;
 bool found;
-vector < edge > path, best;
-vector < bool > visited;
+vector<edge> path, best;
+vector<bool> visited;
 int bestTime = 14400, bestCost = 100000;
 bool costFirst;
 

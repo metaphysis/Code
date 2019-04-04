@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
 
         // a bit strict on float point number epsilon
         // avoid using triangle function
-        vector < pair < double, double >>intervals;
+        vector<pair<double, double>> intervals;
         double a, b, c, left, right;
 
         for (int i = 0; i < pipes.size(); i++)

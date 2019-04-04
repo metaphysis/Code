@@ -1,12 +1,14 @@
 // Enigmatic Encryption
 // UVa ID: 425
 // Verdict: Accepted
-// Submission Date: 
+// Submission Date: 2016-07-20
 // UVa Run Time: 0.010s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
+#include <crypt.h>
+//#include <unistd.h>
 
 using namespace std;
 

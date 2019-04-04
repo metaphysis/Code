@@ -18,8 +18,7 @@ int main(int argc, char *argv[])
     
     getline(cin, line);
     int cases = stoi(line);
-    
-    
+
     for (int i = 1; i <= cases; i++)
     {
         if (i > 1) cout << endl;
