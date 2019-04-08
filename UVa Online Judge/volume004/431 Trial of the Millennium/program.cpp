@@ -54,6 +54,7 @@ int main(int argc, char *argv[])
         if (cs > 1) cout << '\n';
 
         sort(evidences.begin(), evidences.end());
+        // Add a DUMB element to adjust index.
         evidence empty;
         evidences.insert(evidences.begin(), empty);
 

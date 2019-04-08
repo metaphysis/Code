@@ -13,9 +13,10 @@ using namespace std;
 const int X = 0, O = 1, X_WIN = 0, X_LOSE = 1, O_WIN = 2, O_LOSE = 3;
 
 string bits[] = {
-    "1111000000000000", "0000111100000000", "0000000011110000", "0000000000001111",
-    "1000100010001000", "0100010001000100", "0010001000100010", "0001000100010001",
-    "1000010000100001", "0001001001001000"
+    "1111000000000000", "0000111100000000", "0000000011110000",
+    "0000000000001111", "1000100010001000", "0100010001000100",
+    "0010001000100010", "0001000100010001", "1000010000100001",
+    "0001001001001000"
 };
 
 int wins[10], mask = 0xffff;
@@ -23,10 +24,10 @@ int board, empty[16], used[16] = {}, total = 0, cnt = 0;
 
 set<int> Ps, Ns;
 
-inline bool isWin(int tag)
+inline bool isWin(int key)
 {
     for (int i = 0; i < 10; i++)
-        if ((tag & wins[i]) == wins[i])
+        if ((key & wins[i]) == wins[i])
             return true;
     return false;
 }
@@ -71,8 +72,7 @@ int dfs(int player)
         Ns.insert(board);
         return X_LOSE;
     }
-
-    return O_LOSE;
+    else return O_LOSE;
 }
 
 int main(int argc, char *argv[])
