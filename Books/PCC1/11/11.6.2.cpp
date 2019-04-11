@@ -2,76 +2,61 @@
 
 using namespace std;
 
-const int INF = 0x3f3f3f3f;
+const int IMINUS_JMINUS = 1, IMINUS = 2, JMINUS = 3;
 
-int n;
-int denom[110];
-int coins[10010], parent[10010], idx[10010], cnt[110];
-
-void findPath(int money)
+struct state
 {
-    if (money > 0)
-    {
-        cnt[idx[money]]++;
-        findPath(parent[money]);
-    }
-}
+    int length, from;
+};
 
-void findMiniumCoins(int money)
+void lcs(string &s, string &t)
 {
-    fill(coins, coins + 10010, INF);
-    fill(cnt, cnt + 110, 0);
+    state dp[s.length() + 1][t.length() + 1] = {};
 
-    coins[0] = 0;
-    for (int m = 1; m <= money; m++)
+    for (int i = 1; i <= s.length(); i++)
+        for (int j = 1; j <= t.length(); j++)
+            if (s[i - 1] == t[j - 1])
+            {
+                if (dp[i][j].length < dp[i - 1][j - 1].length + 1)
+                {
+                    dp[i][j].length = dp[i - 1][j - 1].length + 1;
+                    dp[i][j].from = IMINUS_JMINUS;
+                }
+            }
+            else
+            {
+                if (dp[i][j].length < dp[i - 1][j].length)
+                    dp[i][j].length = dp[i - 1][j].length, dp[i][j].from = IMINUS;
+                if (dp[i][j].length < dp[i][j - 1].length)
+                    dp[i][j].length = dp[i][j - 1].length, dp[i][j].from = JMINUS;
+            }
+
+    cout << "LCS: length = " << dp[s.length()][t.length()].length;
+
+    string subsequence;
+    int endi = s.length(), endj = t.length();
+    while (dp[endi][endj].from)
     {
-        int minCoins = INF, minIdx = INF;
-        for (int d = 0; d < n; d++)
-            if (m >= denom[d] && coins[m - denom[d]] != INF &&
-                minCoins > (coins[m - denom[d]] + 1))
-                minCoins = coins[m - denom[d]] + 1, minIdx = d;
-
-        if (minIdx != INF)
+        if (dp[endi][endj].from == IMINUS_JMINUS)
         {
-            coins[m] = minCoins;
-            parent[m] = m - denom[minIdx];
-            idx[m] = minIdx;
+            subsequence.push_back(s[endi - 1]);
+            endi -= 1, endj -= 1;
+        }
+        else 
+        {
+            if (dp[endi][endj].from == IMINUS) endi -= 1;
+            else endj -= 1;
         }
     }
+    reverse(subsequence.begin(), subsequence.end());
 
-    if (coins[money] == INF)
-        cout << "No solution." << endl;
-    else
-    {
-        cout << coins[money];
-
-        findPath(money);
-
-        int plusPrinted = 0;
-        for (int i = 0; i < n; i++)
-            if (cnt[i] > 0)
-            {
-                cout << (plusPrinted++ ? "+" : " ");
-                cout << denom[i] << "*" << cnt[i];
-            }
-        cout << endl;
-    }
+    cout << " subsequence = " << subsequence << '\n';
 }
 
 int main(int argc, char *argv[])
 {
-    double money;
-    while (cin >> n, n)
-    {
-        for (int i = 0; i < n; i++)
-            cin >> denom[i];
-
-        sort(denom, denom + n);
-        n = unique(denom, denom + n) - denom;
-
-        cin >> money;
-        findMiniumCoins((int)(money * 100.0 + 0.5));
-    }
+    string s, t;
+    while (cin >> s >> t) lcs(s, t);
 
     return 0;
 }

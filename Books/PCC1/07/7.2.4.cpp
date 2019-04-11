@@ -74,7 +74,7 @@ void sieve3(int *primes, int n, int &cnt)
 
 int main(int argc, char *argv[])
 {
-    sieve1(primes, MAXN, cnt);
+    sieve3(primes, MAXN, cnt);
     
     int n;
     while (cin >> n, n > 0)
