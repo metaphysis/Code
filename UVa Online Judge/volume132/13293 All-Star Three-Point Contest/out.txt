@@ -1,0 +1,4 @@
+Case 1:
+a B 20
+ab 20
+aBc 20
