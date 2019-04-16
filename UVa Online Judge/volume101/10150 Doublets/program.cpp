@@ -37,11 +37,11 @@ void no_solution()
 	cout << "No solution." << endl;
 }
 	
-void find_path(vector < string > &points, int parent[MAXSIZE], int x, int y)
+void find_path(vector<string> &points, int parent[MAXSIZE], int x, int y)
 {
 	// 根据 parent 数组回溯得到最短路。从终点 y 往回找，如果父节点为 -1 则表示未找到，如
 	// 果为起点x则输出此条路径。
-	vector < int > path;
+	vector<int> path;
 	while (parent[y] != x && parent[y] != -1)
 	{
 		path.push_back(y);
@@ -60,11 +60,11 @@ void find_path(vector < string > &points, int parent[MAXSIZE], int x, int y)
 }
 	
 // 使用 BFS（宽度优先搜索）查找最短路并输出。
-void bfs(vector < vector < int > > &edges, int parent[MAXSIZE], int x, int y)
+void bfs(vector<vector<int>> &edges, int parent[MAXSIZE], int x, int y)
 {
 	// 查找序号为 x 到序号为 y 的单词间的最短路径。
 	bool discovered[MAXSIZE];
-	queue < int > q;
+	queue<int> q;
 	int v;
 	
 	memset(discovered, 0, sizeof(discovered));
@@ -101,8 +101,8 @@ void bfs(vector < vector < int > > &edges, int parent[MAXSIZE], int x, int y)
 	
 int main(int ac, char *av[])
 {
-	vector < vector < int > > edges[16];
-	vector < string > points[16];
+	vector<vector<int>> edges[16];
+	vector<string> points[16];
 	bool inited[16];
 	string line;
 	int m, n;
