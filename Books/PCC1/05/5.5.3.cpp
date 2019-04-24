@@ -1,54 +1,58 @@
+// Cyclic Numbers
+// UVa ID: 942
+// Verdict: Accepted
+// Submission Date: 2017-03-16
+// UVa Run Time: 0.000s
+//
+// 版权所有（C）2017，邱秋。metaphysis # yeah dot net
+
 #include <bits/stdc++.h>
 
 using namespace std;
 
-long long gcd(long long a, long long b)
+void printCycle(int numerator, int denominator)
 {
-    return b ? gcd(b, a % b) : a;
-}
+    cout << (numerator / denominator) << '.';
+    numerator %= denominator;
 
-pair<long long, long long> getFraction(string fraction, int j)
-{
-    long long numerator, denominator;
+    if (numerator == 0) { cout << "0\n"; return; }
 
-    size_t dot = fraction.find('.');
-    if (dot != fraction.npos) fraction = fraction.substr(dot + 1);
-    
-    if (j == 0)
+    vector<int> digits(denominator + 1), position(denominator + 1);
+    vector<bool> appeared(denominator + 1);
+
+    fill(appeared.begin(), appeared.end(), false);
+
+    int index = 0;
+    while (!appeared[numerator] && numerator > 0)
     {
-        numerator = stoll(fraction);
-        denominator = pow(10, fraction.length());
+        appeared[numerator] = true;
+        digits[index] = 10 * numerator / denominator;
+        position[numerator] = index++;
+        numerator = 10 * numerator % denominator;
     }
-    else
-    {
-        int k = fraction.length() - j;
-        string preRepeated = fraction.substr(0, k);
-        if (preRepeated.length() == 0) preRepeated = "0";
-        
-        numerator = stoll(fraction) - stoll(preRepeated);
-        denominator = pow(10, k + j) - pow(10, k);
-    }
-    
-    long long g = gcd(numerator, denominator);
 
-    return make_pair(numerator / g, denominator / g);
+    int loopStart = 0;
+    if (numerator > 0)
+    {
+        loopStart = position[numerator];
+        for (int i = 0; i < position[numerator]; i++) cout << digits[i];
+        cout << '(';
+    }
+    for (int i = loopStart; i < index; i++) cout << digits[i];
+    if (numerator > 0) cout << ')';
+    cout << '\n';
 }
 
 int main(int argc, char *argv[])
 {
-    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
+    int cases, numerator, denominator;
 
-    int j, cases = 0;
-    string fraction;
-    
-    while (cin >> j, j >= 0)
+    cin >> cases;
+    for (int c = 1; c <= cases; c++)
     {
-        cin >> fraction;
-
-        pair<long long, long long> r = getFraction(fraction, j);
-
-        cout << "Case " << ++cases << ": " << r.first << "/" << r.second << '\n';
+        cin >> numerator >> denominator;
+        printCycle(numerator, denominator);
     }
-    
-	return 0;
+
+    return 0;
 }
