@@ -44,6 +44,16 @@ void build(int data[], int p, int left, int right)
     }
 }
 
+node query(int p, int left, int right, int qleft, int qright)
+{
+    if (left > qright || right < qleft) return getData(-INF);
+    if (left >= qleft && right <= qright) return st[p];
+    int middle = (left + right) >> 1;
+    node q1 = query(LCHILD(p), left, middle, qleft, qright);
+    node q2 = query(RCHILD(p), middle + 1, right, qleft, qright);
+    return combine(q1, q2);
+}
+
 void update(int p, int left, int right, int index, int value)
 {
     if (left == right) st[p] = getData(value);
@@ -55,16 +65,6 @@ void update(int p, int left, int right, int index, int value)
             update(RCHILD(p), middle + 1, right, index, value);
         pushUp(p);
     }
-}
-
-node query(int p, int left, int right, int qleft, int qright)
-{
-    if (left > qright || right < qleft) return getData(-INF);
-    if (left >= qleft && right <= qright) return st[p];
-    int middle = (left + right) >> 1;
-    node q1 = query(LCHILD(p), left, middle, qleft, qright);
-    node q2 = query(RCHILD(p), middle + 1, right, qleft, qright);
-    return combine(q1, q2);
 }
 
 int main(int argc, char *argv[])

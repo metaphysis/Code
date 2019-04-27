@@ -26,6 +26,16 @@ void build(int p, int left, int right)
     }
 }
 
+int query(int p, int left, int right, int qleft, int qright)
+{
+    if (left > qright || right < qleft) return -INF;
+    if (left >= qleft && right <= qright) return st[p].field;
+    int middle = (left + right) >> 1;
+    int q1 = query(LCHILD(p), left, middle, qleft, qright);
+    int q2 = query(RCHILD(p), middle + 1, right, qleft, qright);
+    return max(q1, q2);
+}
+
 void update(int p, int left, int right, int index, int value)
 {
     if (left == right) st[p].field = value;
@@ -37,16 +47,6 @@ void update(int p, int left, int right, int index, int value)
             update(RCHILD(p), middle + 1, right, index, value);
         pushUp(p);
     } 
-}
-
-int query(int p, int left, int right, int qleft, int qright)
-{
-    if (left > qright || right < qleft) return -INF;
-    if (left >= qleft && right <= qright) return st[p].field;
-    int middle = (left + right) >> 1;
-    int q1 = query(LCHILD(p), left, middle, qleft, qright);
-    int q2 = query(RCHILD(p), middle + 1, right, qleft, qright);
-    return max(q1, q2);
 }
 
 int main(int argc, char *argv[])

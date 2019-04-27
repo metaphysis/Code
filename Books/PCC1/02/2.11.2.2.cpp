@@ -65,6 +65,19 @@ node* build(rectangle r)
     return nd;
 }
 
+int query(node *nd, rectangle r, rectangle qr)
+{
+    if (r.isBad()) return -INF;
+    if (r.intersects(qr)) return -INF;
+    if (qr.contains(r)) return nd->high;
+
+    int q1 = query(nd->children[0], r.getLU(), qr);
+    int q2 = query(nd->children[1], r.getRU(), qr);
+    int q3 = query(nd->children[2], r.getLB(), qr);
+    int q4 = query(nd->children[3], r.getRB(), qr);
+    return max(max(q1, q2), max(q3, q4));
+}
+
 void update(node *nd, rectangle r, int ur, int uc, int v)
 {
     if (r.isBad()) return;
@@ -80,19 +93,6 @@ void update(node *nd, rectangle r, int ur, int uc, int v)
             update(nd->children[3], r.getRB(), ur, uc, v);
         pushUp(nd);
     }
-}
-
-int query(node *nd, rectangle r, rectangle qr)
-{
-    if (r.isBad()) return -INF;
-    if (r.intersects(qr)) return -INF;
-    if (qr.contains(r)) return nd->high;
-
-    int q1 = query(nd->children[0], r.getLU(), qr);
-    int q2 = query(nd->children[1], r.getRU(), qr);
-    int q3 = query(nd->children[2], r.getLB(), qr);
-    int q4 = query(nd->children[3], r.getRB(), qr);
-    return max(max(q1, q2), max(q3, q4));
 }
 
 int main(int argc, char *argv[])

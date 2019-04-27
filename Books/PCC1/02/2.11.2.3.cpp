@@ -34,6 +34,26 @@ void buildX(int px, int lx, int rx)
     buildY(px, lx, rx, 0, 0, m - 1);
 }
 
+int queryY(int px, int py, int ly, int ry, int qly, int qry)
+{
+    if (ly > qry || ry < qly) return -INF;
+    if (qly <= ly && ry <= qry) return st[px][py];
+    int my = (ly + ry) >> 1;
+    int q1 = queryY(px, LCHILD(py), ly, my, qly, qry);
+    int q2 = queryY(px, RCHILD(py), my + 1, ry, qly, qry);
+    return max(q1, q2);
+}
+
+int queryX(int px, int lx, int rx, int qlx, int qly, int qrx, int qry)
+{
+    if (lx > qrx || rx < qlx) return -INF;
+    if (qlx <= lx && rx <= qrx) return queryY(px, 0, 0, m - 1, qly, qry);
+    int mx = (lx + rx) >> 1;
+    int q1 = queryX(LCHILD(px), lx, mx, qlx, qly, qrx, qry);
+    int q2 = queryX(RCHILD(px), mx + 1, rx, qlx, qly, qrx, qry);
+    return max(q1, q2);
+}
+
 void updateY(int px, int lx, int rx, int py, int ly, int ry, int x, int y, int value)
 {
     if (ly == ry) {
@@ -59,26 +79,6 @@ void updateX(int px, int lx, int rx, int x, int y, int value)
             updateX(RCHILD(px), mx + 1, rx, x, y, value);
     }
     updateY(px, lx, rx, 0, 0, m - 1, x, y, value);
-}
-
-int queryY(int px, int py, int ly, int ry, int qly, int qry)
-{
-    if (ly > qry || ry < qly) return -INF;
-    if (qly <= ly && ry <= qry) return st[px][py];
-    int my = (ly + ry) >> 1;
-    int q1 = queryY(px, LCHILD(py), ly, my, qly, qry);
-    int q2 = queryY(px, RCHILD(py), my + 1, ry, qly, qry);
-    return max(q1, q2);
-}
-
-int queryX(int px, int lx, int rx, int qlx, int qly, int qrx, int qry)
-{
-    if (lx > qrx || rx < qlx) return -INF;
-    if (qlx <= lx && rx <= qrx) return queryY(px, 0, 0, m - 1, qly, qry);
-    int mx = (lx + rx) >> 1;
-    int q1 = queryX(LCHILD(px), lx, mx, qlx, qly, qrx, qry);
-    int q2 = queryX(RCHILD(px), mx + 1, rx, qlx, qly, qrx, qry);
-    return max(q1, q2);
 }
 
 int main(int argc, char *argv[])
