@@ -75,6 +75,7 @@ int main(int argc, char *argv[])
     for (int i = 1; i <= MAXN; i++)
         add(i, A[i]);
 
+    srand(time(NULL));
     for (int cases = 1; cases <= 100; cases++) {
         int L = rand() % MAXN + 1, R = rand() % MAXN + 1;
         if (L > R) swap(L, R);

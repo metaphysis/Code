@@ -1,7 +1,6 @@
 *.out
 *.cpp~
 *.txt~
-*.pdf
 *.cpp~
 *.orig
 *.java~

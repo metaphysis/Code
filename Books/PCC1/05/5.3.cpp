@@ -111,7 +111,7 @@ ostream& operator<<(ostream& os, const BigInteger& number)
 {
     os << (number.sign > 0 ? "" : "-");
     os << number.digits[number.digits.size() - 1];
-    for (int i = number.digits.size() - 2; i >= 0; i--)
+    for (int i = (int)number.digits.size() - 2; i >= 0; i--)
         os << setw(number.width) << setfill('0') << number.digits[i];
     return os;
 }

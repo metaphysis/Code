@@ -30,8 +30,8 @@ int main(int argc, char *argv[])
     // string(const char* s, size_t n)
     // 从字符串常量或者字符数组的指定位置开始取字符进行初始化。
     string s5("the quick brown dog jumps over the lazy fox.", 9);
-    char sample[64] = "the quick brown dog jumps over the lazy fox.";
-    string s6(sample, 9);
+    char data[64] = "the quick brown dog jumps over the lazy fox.";
+    string s6(data, 9);
     // s5 = "the quick"
     // s6 = "the quick"
 

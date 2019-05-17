@@ -14,6 +14,7 @@ bool bf(string &s, string &p)
 
 int main(int argc, char *argv[])
 {
-    string s = "abcdeabcdeabcdef", p = "cdef";
-    cout << (bf(s, p) ? 'y' : 'n') << '\n';
+    string s, p;
+    while (cin >> s >> p) cout << (bf(s, p) ? 'y' : 'n') << '\n';
+    return 0;
 }

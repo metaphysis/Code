@@ -18,7 +18,6 @@ struct TreeNode
 
 bool exist, empty;
 
-// 前序遍历，将路径和保存在叶结点上。
 void summing(TreeNode *node)
 {
     if (node->leftChild != NULL)
@@ -34,7 +33,6 @@ void summing(TreeNode *node)
     }
 }
 
-// 利用递归和cin.putback()，将输入解析为链表表示的树。
 void parse(TreeNode *node)
 {
     bool isLeaf = false;
@@ -42,7 +40,6 @@ void parse(TreeNode *node)
     char c;
     while (cin >> c, c != '(') { }
 
-    // 需要考虑负数的情况。
     cin >> c;
     if (isdigit(c) || c == '-')
     {
@@ -56,7 +53,6 @@ void parse(TreeNode *node)
     {
         cin.putback(c);
 
-        // 若当前结点为空，则将父结点的相应子结点设为空。
         if (node->parent != NULL)
         {
             if (node == node->parent->leftChild)
@@ -70,7 +66,6 @@ void parse(TreeNode *node)
         isLeaf = true;
     }
 
-    // 若不是叶结点，则继续解析子树。
     if (!isLeaf)
     {
         TreeNode *left = new TreeNode;
@@ -87,7 +82,6 @@ void parse(TreeNode *node)
     while (cin >> c, c != ')') { }
 }
 
-// 遍历树，检查叶结点保存的路径和是否为目标值。
 void traversal(TreeNode *node, int sum)
 {
     if (exist) return;
