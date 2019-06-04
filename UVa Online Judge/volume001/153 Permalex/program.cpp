@@ -21,76 +21,75 @@ int prime[31][5] = {
 
 long long fullPermutation(string line)
 {
-	vector<int> dividend, divisor;
+    vector<int> dividend, divisor;
 
-	for (int i = 2; i <= line.length(); i++)
-		for (int j = 1; j <= prime[i][0]; j++)
-			dividend.push_back(prime[i][j]);
+    for (int i = 2; i <= line.length(); i++)
+        for (int j = 1; j <= prime[i][0]; j++)
+            dividend.push_back(prime[i][j]);
 
-	int alpha[26] = {0};
-	for (int i = 0; i < line.length(); i++)
-		alpha[line[i] - 'a']++;
+    int alpha[26] = {0};
+    for (int i = 0; i < line.length(); i++)
+    alpha[line[i] - 'a']++;
 
-	for (int i = 0; i < 26; i++)
-		for (int j = 2; j <= alpha[i]; j++)
-			for (int k = 1; k <= prime[j][0]; k++)
-			    divisor.push_back(prime[j][k]);
+    for (int i = 0; i < 26; i++)
+        for (int j = 2; j <= alpha[i]; j++)
+            for (int k = 1; k <= prime[j][0]; k++)
+                divisor.push_back(prime[j][k]);
 
-	for (int i = 0; i < divisor.size(); i++)
-		for (int j = 0; j < dividend.size(); j++)
-			if (divisor[i] == dividend[j])
-			{
-				dividend.erase(dividend.begin() + j);
-				break;
-			}
+    for (int i = 0; i < divisor.size(); i++)
+        for (int j = 0; j < dividend.size(); j++)
+            if (divisor[i] == dividend[j])
+            {
+                dividend.erase(dividend.begin() + j);
+                break;
+            }
 
-	long long product = 1;
-	for (int i = 0; i < dividend.size(); i++)
-		product *= dividend[i];
+    long long product = 1;
+    for (int i = 0; i < dividend.size(); i++)
+        product *= dividend[i];
 
-	return product;
+    return product;
 }
 
 long long int permutation(string current, string original)
 {
-	int counter = current.length();
-	long long index = 0;
+    int counter = current.length();
+    long long index = 0;
     set<string> cache;
 
     sort(current.begin(), current.end());
 
-	while (counter--)
-	{
-		string next(current);
-		sort(next.begin() + 1, next.end());
-
-		if (cache.find(next) == cache.end())
-		{
-			cache.insert(next);
-			if (next < original)
-			{
-			    if (next.front() < original.front())
-			        index += fullPermutation(current.substr(1));
-			    else if (current.length() > 1)
-				    index += permutation(next.substr(1), original.substr(1));
-			}
-		}
-
-		current += current.front(); current.erase(0, 1);
-	}
-	
-	return index;
+    while (counter--)
+    {
+        string next(current);
+        sort(next.begin() + 1, next.end());
+        if (cache.find(next) == cache.end())
+        {
+            cache.insert(next);
+            if (next < original)
+            {
+                if (next.front() < original.front())
+                    index += fullPermutation(current.substr(1));
+                else if (current.length() > 1)
+                    index += permutation(next.substr(1), original.substr(1));
+            }
+        }
+        current += current.front();
+        current.erase(0, 1);
+    }
+    
+    return index;
 }
 
 int main(int argc, char* argv[])
 {
-	string line, original;
-	while (getline(cin, line), line != "#")
-	{
-	    if (line.length() == 0) continue;
-	    long long index = permutation(line, line) + 1;
-		cout << setw(10) << right << index << '\n';
+    string line, original;
+    while (getline(cin, line), line != "#")
+    {
+        if (line.length() == 0) continue;
+        long long index = permutation(line, line) + 1;
+        cout << setw(10) << right << index << '\n';
     }
 
-	return 0;
+    return 0;
 }

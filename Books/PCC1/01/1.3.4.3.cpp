@@ -9,8 +9,7 @@ int main(int argc, char *argv[])
     cout.setf(ios::fixed);
     cout.precision(2);
 
-    for (int i = 0; i < datas.size(); i++)
-    {
+    for (int i = 0; i < datas.size(); i++) {
         if (i > 1) cout << ' ';
         cout << datas[i];
     }
