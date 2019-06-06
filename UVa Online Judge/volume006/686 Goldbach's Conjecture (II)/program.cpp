@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
 
     int primes[5000] = { 0 }, number[33000] = { 0 }, prime_count = 0;
-    
+
     for (int i = 2; i < 33000; i++)
         if (number[i] == 0)
         {
@@ -34,6 +34,6 @@ int main(int argc, char *argv[])
             
         cout << count << '\n';
     }
-        
+
 	return 0;
 }

@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
     for (int i = 2; i < (1 << 16); i++)
         if (!primes[i])
             primes[cnt++] = i;
-            
+
     int N, D;
     while (cin >> N >> D)
     {
