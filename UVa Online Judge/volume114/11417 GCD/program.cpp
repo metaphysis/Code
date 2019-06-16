@@ -10,12 +10,6 @@
 
 using namespace std;
 
-int gcd(int a, int b)
-{
-    if (b == 0) return a;
-    else return gcd(b, a % b);
-}
-
 int main(int argc, char *argv[])
 {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
@@ -26,7 +20,7 @@ int main(int argc, char *argv[])
     {
         sum[i] += sum[i - 1];
         for (int j = 1; j < i; j++)
-            sum[i] += gcd(j, i);
+            sum[i] += __gcd(j, i);
     }
 
     while (cin >> n, n > 0)  cout << sum[n] << '\n';

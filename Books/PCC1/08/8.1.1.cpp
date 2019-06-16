@@ -4,7 +4,7 @@ using namespace std;
 
 const int MAXN = 8;
 
-int board[MAXN] = {0}, columnUsed[MAXN] = {0}, cntOfSolutions = 0;
+int board[MAXN] = {0}, clnUsed[MAXN] = {0}, cnt = 0;
 
 bool checkBoard(int row, int selected)
 {
@@ -30,16 +30,16 @@ void dfs(int row)
     if (row == MAXN)
     {
         printBoard();
-        cntOfSolutions++;
+        cnt++;
         return;
     }
 
     for (int cln = 0; cln < MAXN; cln++)
     {
-        if (columnUsed[cln] || !checkBoard(row, cln)) continue;
-        columnUsed[cln] = 1, board[row] = cln;
+        if (clnUsed[cln] || !checkBoard(row, cln)) continue;
+        clnUsed[cln] = 1, board[row] = cln;
         dfs(row + 1);
-        columnUsed[cln] = 0;
+        clnUsed[cln] = 0;
     }
 }
 
@@ -47,6 +47,6 @@ void dfs(int row)
 int main(int argc, char *argv[])
 {
     dfs(0);
-    cout << cntOfSolutions << '\n';
+    cout << cnt << '\n';
     return 0;
 }
