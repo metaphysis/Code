@@ -17,9 +17,10 @@ private:
 
     bool bfs()
     {
-        memset(dist, 0xff, vertices * sizeof(int));
+        memset(dist, -1, sizeof(int) * vertices);
 
-        queue<int> q; q.push(source);
+        queue<int> q;
+        q.push(source);
         dist[source] = 1;
 
         while (!q.empty())
@@ -54,7 +55,6 @@ private:
                 }
             }
         }
-
         return 0;
     }
 
@@ -65,12 +65,20 @@ public:
         vertices = v;
         source = s, sink = t;
         idx = 0, head = new int[v], dist = new int[v], current = new int[v];
-        memset(head, -1, vertices * sizeof(int));
+        memset(head, -1, sizeof(int) * v);
     }
 
     ~Dinic()
     {
         delete [] arcs, head, dist, current;
+    }
+
+    void addArc(int u, int v, int capacity)
+    {
+        arcs[idx] = (arc){u, v, capacity, capacity, head[u]};
+        head[u] = idx++;
+        arcs[idx] = (arc){v, u, capacity, 0, head[v]};
+        head[v] = idx++;
     }
 
     int maxFlow()
@@ -86,19 +94,11 @@ public:
 
         return flow;
     }
-
-    void addArc(int u, int v, int capacity)
-    {
-        arcs[idx] = (arc){u, v, capacity, capacity, head[u]};
-        head[u] = idx++;
-        arcs[idx] = (arc){v, u, capacity, 0, head[v]};
-        head[v] = idx++;
-    }
 };
 
-int main(int argc, char const* argv[])
+int main(int argc, char *argv[])
 {
-    Dinic dinic(100, 10000, 0, 101);
+    Dinic dinic(100, 11000, 0, 101);
     
     return 0;
 }
