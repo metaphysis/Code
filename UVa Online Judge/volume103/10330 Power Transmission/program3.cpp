@@ -1,3 +1,11 @@
+// Power Transmission
+// UVa ID: 10330
+// Verdict: Accepted
+// Submission Date: 2019-06-19
+// UVa Run Time: 0.000s
+//
+// 版权所有（C）2019，邱秋。metaphysis # yeah dot net
+
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -83,9 +91,42 @@ struct ISAP
 
 int main(int argc, char *argv[])
 {
-    ISAP isap;
+    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    isap.initialize(101, 0, 100);
+    ISAP isap;
+    int n, m, u, v, w, B, D, capacity[110];
+
+    while (cin >> n)
+    {
+        isap.initialize(2 * n + 2, 0, 2 * n + 1);
+
+        for (int i = 1; i <= n; i++)
+        {
+            cin >> capacity[i];
+            isap.addArc(i, n + i, capacity[i]);
+        }
+        
+        cin >> m;
+        for (int i = 1; i <= m; i++)
+        {
+            cin >> u >> v >> w;
+            isap.addArc(n + u, v, w);
+        }
+
+        cin >> B >> D;
+        for (int i = 1; i <= B; i++)
+        {
+            cin >> u;
+            isap.addArc(0, u, capacity[u]);
+            
+        }
+        for (int i = 1; i <= D; i++)
+        {
+            cin >> u;
+            isap.addArc(n + u, 2 * n + 1, capacity[u]);
+        }
+        cout << isap.maxFlow() << '\n';
+    }
 
     return 0;
 }

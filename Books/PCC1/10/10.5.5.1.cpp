@@ -11,8 +11,8 @@ struct arc
 
 struct ISAP
 {
-    int vertices, source, sink;
-    int idx, head[MAXV], d[MAXV], father[MAXV], current[MAXV], gap[MAXV];
+    int idx, vertices, source, sink;
+    int head[MAXV], d[MAXV], father[MAXV], current[MAXV], gap[MAXV];
 
     void initialize(int V, int S, int T)
     {
