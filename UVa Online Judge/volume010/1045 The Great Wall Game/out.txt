@@ -1,0 +1,2000 @@
+Board 1: 10 moves required.
+
+Board 2: 0 moves required.
+
+Board 3: 17 moves required.
+
+Board 4: 48 moves required.
+
+Board 5: 0 moves required.
+
+Board 6: 2 moves required.
+
+Board 7: 37 moves required.
+
+Board 8: 0 moves required.
+
+Board 9: 36 moves required.
+
+Board 10: 2 moves required.
+
+Board 11: 15 moves required.
+
+Board 12: 0 moves required.
+
+Board 13: 13 moves required.
+
+Board 14: 3 moves required.
+
+Board 15: 16 moves required.
+
+Board 16: 54 moves required.
+
+Board 17: 34 moves required.
+
+Board 18: 0 moves required.
+
+Board 19: 24 moves required.
+
+Board 20: 56 moves required.
+
+Board 21: 0 moves required.
+
+Board 22: 0 moves required.
+
+Board 23: 0 moves required.
+
+Board 24: 47 moves required.
+
+Board 25: 27 moves required.
+
+Board 26: 7 moves required.
+
+Board 27: 1 moves required.
+
+Board 28: 21 moves required.
+
+Board 29: 4 moves required.
+
+Board 30: 17 moves required.
+
+Board 31: 8 moves required.
+
+Board 32: 23 moves required.
+
+Board 33: 28 moves required.
+
+Board 34: 28 moves required.
+
+Board 35: 5 moves required.
+
+Board 36: 14 moves required.
+
+Board 37: 41 moves required.
+
+Board 38: 33 moves required.
+
+Board 39: 10 moves required.
+
+Board 40: 48 moves required.
+
+Board 41: 33 moves required.
+
+Board 42: 2 moves required.
+
+Board 43: 9 moves required.
+
+Board 44: 30 moves required.
+
+Board 45: 4 moves required.
+
+Board 46: 27 moves required.
+
+Board 47: 71 moves required.
+
+Board 48: 17 moves required.
+
+Board 49: 33 moves required.
+
+Board 50: 10 moves required.
+
+Board 51: 0 moves required.
+
+Board 52: 3 moves required.
+
+Board 53: 2 moves required.
+
+Board 54: 29 moves required.
+
+Board 55: 41 moves required.
+
+Board 56: 7 moves required.
+
+Board 57: 9 moves required.
+
+Board 58: 26 moves required.
+
+Board 59: 10 moves required.
+
+Board 60: 60 moves required.
+
+Board 61: 13 moves required.
+
+Board 62: 1 moves required.
+
+Board 63: 52 moves required.
+
+Board 64: 31 moves required.
+
+Board 65: 2 moves required.
+
+Board 66: 45 moves required.
+
+Board 67: 15 moves required.
+
+Board 68: 34 moves required.
+
+Board 69: 66 moves required.
+
+Board 70: 17 moves required.
+
+Board 71: 0 moves required.
+
+Board 72: 50 moves required.
+
+Board 73: 30 moves required.
+
+Board 74: 9 moves required.
+
+Board 75: 22 moves required.
+
+Board 76: 44 moves required.
+
+Board 77: 14 moves required.
+
+Board 78: 51 moves required.
+
+Board 79: 9 moves required.
+
+Board 80: 69 moves required.
+
+Board 81: 27 moves required.
+
+Board 82: 9 moves required.
+
+Board 83: 3 moves required.
+
+Board 84: 0 moves required.
+
+Board 85: 33 moves required.
+
+Board 86: 3 moves required.
+
+Board 87: 0 moves required.
+
+Board 88: 1 moves required.
+
+Board 89: 4 moves required.
+
+Board 90: 53 moves required.
+
+Board 91: 35 moves required.
+
+Board 92: 0 moves required.
+
+Board 93: 12 moves required.
+
+Board 94: 12 moves required.
+
+Board 95: 0 moves required.
+
+Board 96: 51 moves required.
+
+Board 97: 56 moves required.
+
+Board 98: 5 moves required.
+
+Board 99: 11 moves required.
+
+Board 100: 46 moves required.
+
+Board 101: 63 moves required.
+
+Board 102: 36 moves required.
+
+Board 103: 41 moves required.
+
+Board 104: 56 moves required.
+
+Board 105: 0 moves required.
+
+Board 106: 50 moves required.
+
+Board 107: 27 moves required.
+
+Board 108: 3 moves required.
+
+Board 109: 7 moves required.
+
+Board 110: 5 moves required.
+
+Board 111: 0 moves required.
+
+Board 112: 1 moves required.
+
+Board 113: 38 moves required.
+
+Board 114: 25 moves required.
+
+Board 115: 1 moves required.
+
+Board 116: 0 moves required.
+
+Board 117: 63 moves required.
+
+Board 118: 41 moves required.
+
+Board 119: 7 moves required.
+
+Board 120: 28 moves required.
+
+Board 121: 40 moves required.
+
+Board 122: 57 moves required.
+
+Board 123: 7 moves required.
+
+Board 124: 23 moves required.
+
+Board 125: 14 moves required.
+
+Board 126: 23 moves required.
+
+Board 127: 17 moves required.
+
+Board 128: 0 moves required.
+
+Board 129: 17 moves required.
+
+Board 130: 44 moves required.
+
+Board 131: 35 moves required.
+
+Board 132: 44 moves required.
+
+Board 133: 5 moves required.
+
+Board 134: 39 moves required.
+
+Board 135: 21 moves required.
+
+Board 136: 3 moves required.
+
+Board 137: 63 moves required.
+
+Board 138: 17 moves required.
+
+Board 139: 2 moves required.
+
+Board 140: 19 moves required.
+
+Board 141: 39 moves required.
+
+Board 142: 24 moves required.
+
+Board 143: 55 moves required.
+
+Board 144: 4 moves required.
+
+Board 145: 44 moves required.
+
+Board 146: 46 moves required.
+
+Board 147: 27 moves required.
+
+Board 148: 31 moves required.
+
+Board 149: 3 moves required.
+
+Board 150: 5 moves required.
+
+Board 151: 24 moves required.
+
+Board 152: 19 moves required.
+
+Board 153: 0 moves required.
+
+Board 154: 0 moves required.
+
+Board 155: 6 moves required.
+
+Board 156: 18 moves required.
+
+Board 157: 37 moves required.
+
+Board 158: 21 moves required.
+
+Board 159: 41 moves required.
+
+Board 160: 43 moves required.
+
+Board 161: 29 moves required.
+
+Board 162: 33 moves required.
+
+Board 163: 3 moves required.
+
+Board 164: 0 moves required.
+
+Board 165: 58 moves required.
+
+Board 166: 32 moves required.
+
+Board 167: 4 moves required.
+
+Board 168: 25 moves required.
+
+Board 169: 45 moves required.
+
+Board 170: 17 moves required.
+
+Board 171: 51 moves required.
+
+Board 172: 13 moves required.
+
+Board 173: 50 moves required.
+
+Board 174: 17 moves required.
+
+Board 175: 24 moves required.
+
+Board 176: 18 moves required.
+
+Board 177: 5 moves required.
+
+Board 178: 52 moves required.
+
+Board 179: 6 moves required.
+
+Board 180: 9 moves required.
+
+Board 181: 47 moves required.
+
+Board 182: 22 moves required.
+
+Board 183: 14 moves required.
+
+Board 184: 3 moves required.
+
+Board 185: 44 moves required.
+
+Board 186: 0 moves required.
+
+Board 187: 24 moves required.
+
+Board 188: 32 moves required.
+
+Board 189: 13 moves required.
+
+Board 190: 0 moves required.
+
+Board 191: 5 moves required.
+
+Board 192: 36 moves required.
+
+Board 193: 34 moves required.
+
+Board 194: 9 moves required.
+
+Board 195: 1 moves required.
+
+Board 196: 40 moves required.
+
+Board 197: 57 moves required.
+
+Board 198: 2 moves required.
+
+Board 199: 60 moves required.
+
+Board 200: 13 moves required.
+
+Board 201: 29 moves required.
+
+Board 202: 16 moves required.
+
+Board 203: 42 moves required.
+
+Board 204: 66 moves required.
+
+Board 205: 0 moves required.
+
+Board 206: 1 moves required.
+
+Board 207: 3 moves required.
+
+Board 208: 3 moves required.
+
+Board 209: 18 moves required.
+
+Board 210: 42 moves required.
+
+Board 211: 18 moves required.
+
+Board 212: 11 moves required.
+
+Board 213: 5 moves required.
+
+Board 214: 21 moves required.
+
+Board 215: 7 moves required.
+
+Board 216: 11 moves required.
+
+Board 217: 2 moves required.
+
+Board 218: 29 moves required.
+
+Board 219: 4 moves required.
+
+Board 220: 4 moves required.
+
+Board 221: 0 moves required.
+
+Board 222: 6 moves required.
+
+Board 223: 62 moves required.
+
+Board 224: 1 moves required.
+
+Board 225: 23 moves required.
+
+Board 226: 2 moves required.
+
+Board 227: 49 moves required.
+
+Board 228: 39 moves required.
+
+Board 229: 0 moves required.
+
+Board 230: 20 moves required.
+
+Board 231: 35 moves required.
+
+Board 232: 0 moves required.
+
+Board 233: 60 moves required.
+
+Board 234: 4 moves required.
+
+Board 235: 37 moves required.
+
+Board 236: 62 moves required.
+
+Board 237: 0 moves required.
+
+Board 238: 64 moves required.
+
+Board 239: 11 moves required.
+
+Board 240: 41 moves required.
+
+Board 241: 40 moves required.
+
+Board 242: 19 moves required.
+
+Board 243: 7 moves required.
+
+Board 244: 29 moves required.
+
+Board 245: 41 moves required.
+
+Board 246: 0 moves required.
+
+Board 247: 42 moves required.
+
+Board 248: 42 moves required.
+
+Board 249: 16 moves required.
+
+Board 250: 17 moves required.
+
+Board 251: 42 moves required.
+
+Board 252: 64 moves required.
+
+Board 253: 46 moves required.
+
+Board 254: 25 moves required.
+
+Board 255: 18 moves required.
+
+Board 256: 2 moves required.
+
+Board 257: 21 moves required.
+
+Board 258: 60 moves required.
+
+Board 259: 39 moves required.
+
+Board 260: 8 moves required.
+
+Board 261: 0 moves required.
+
+Board 262: 8 moves required.
+
+Board 263: 20 moves required.
+
+Board 264: 4 moves required.
+
+Board 265: 13 moves required.
+
+Board 266: 21 moves required.
+
+Board 267: 12 moves required.
+
+Board 268: 3 moves required.
+
+Board 269: 13 moves required.
+
+Board 270: 4 moves required.
+
+Board 271: 5 moves required.
+
+Board 272: 19 moves required.
+
+Board 273: 59 moves required.
+
+Board 274: 16 moves required.
+
+Board 275: 2 moves required.
+
+Board 276: 15 moves required.
+
+Board 277: 14 moves required.
+
+Board 278: 18 moves required.
+
+Board 279: 50 moves required.
+
+Board 280: 15 moves required.
+
+Board 281: 0 moves required.
+
+Board 282: 29 moves required.
+
+Board 283: 26 moves required.
+
+Board 284: 6 moves required.
+
+Board 285: 65 moves required.
+
+Board 286: 44 moves required.
+
+Board 287: 4 moves required.
+
+Board 288: 44 moves required.
+
+Board 289: 12 moves required.
+
+Board 290: 31 moves required.
+
+Board 291: 2 moves required.
+
+Board 292: 3 moves required.
+
+Board 293: 8 moves required.
+
+Board 294: 28 moves required.
+
+Board 295: 46 moves required.
+
+Board 296: 23 moves required.
+
+Board 297: 5 moves required.
+
+Board 298: 63 moves required.
+
+Board 299: 3 moves required.
+
+Board 300: 6 moves required.
+
+Board 301: 25 moves required.
+
+Board 302: 8 moves required.
+
+Board 303: 2 moves required.
+
+Board 304: 34 moves required.
+
+Board 305: 30 moves required.
+
+Board 306: 19 moves required.
+
+Board 307: 2 moves required.
+
+Board 308: 9 moves required.
+
+Board 309: 3 moves required.
+
+Board 310: 1 moves required.
+
+Board 311: 24 moves required.
+
+Board 312: 69 moves required.
+
+Board 313: 0 moves required.
+
+Board 314: 14 moves required.
+
+Board 315: 5 moves required.
+
+Board 316: 31 moves required.
+
+Board 317: 1 moves required.
+
+Board 318: 6 moves required.
+
+Board 319: 23 moves required.
+
+Board 320: 32 moves required.
+
+Board 321: 1 moves required.
+
+Board 322: 0 moves required.
+
+Board 323: 0 moves required.
+
+Board 324: 29 moves required.
+
+Board 325: 11 moves required.
+
+Board 326: 17 moves required.
+
+Board 327: 2 moves required.
+
+Board 328: 19 moves required.
+
+Board 329: 3 moves required.
+
+Board 330: 59 moves required.
+
+Board 331: 40 moves required.
+
+Board 332: 5 moves required.
+
+Board 333: 10 moves required.
+
+Board 334: 40 moves required.
+
+Board 335: 67 moves required.
+
+Board 336: 26 moves required.
+
+Board 337: 35 moves required.
+
+Board 338: 30 moves required.
+
+Board 339: 12 moves required.
+
+Board 340: 32 moves required.
+
+Board 341: 0 moves required.
+
+Board 342: 10 moves required.
+
+Board 343: 28 moves required.
+
+Board 344: 20 moves required.
+
+Board 345: 8 moves required.
+
+Board 346: 12 moves required.
+
+Board 347: 22 moves required.
+
+Board 348: 1 moves required.
+
+Board 349: 2 moves required.
+
+Board 350: 8 moves required.
+
+Board 351: 13 moves required.
+
+Board 352: 24 moves required.
+
+Board 353: 11 moves required.
+
+Board 354: 12 moves required.
+
+Board 355: 63 moves required.
+
+Board 356: 17 moves required.
+
+Board 357: 21 moves required.
+
+Board 358: 20 moves required.
+
+Board 359: 34 moves required.
+
+Board 360: 5 moves required.
+
+Board 361: 45 moves required.
+
+Board 362: 21 moves required.
+
+Board 363: 3 moves required.
+
+Board 364: 32 moves required.
+
+Board 365: 38 moves required.
+
+Board 366: 2 moves required.
+
+Board 367: 76 moves required.
+
+Board 368: 21 moves required.
+
+Board 369: 32 moves required.
+
+Board 370: 41 moves required.
+
+Board 371: 24 moves required.
+
+Board 372: 0 moves required.
+
+Board 373: 37 moves required.
+
+Board 374: 19 moves required.
+
+Board 375: 15 moves required.
+
+Board 376: 15 moves required.
+
+Board 377: 9 moves required.
+
+Board 378: 37 moves required.
+
+Board 379: 37 moves required.
+
+Board 380: 48 moves required.
+
+Board 381: 13 moves required.
+
+Board 382: 24 moves required.
+
+Board 383: 53 moves required.
+
+Board 384: 46 moves required.
+
+Board 385: 29 moves required.
+
+Board 386: 0 moves required.
+
+Board 387: 37 moves required.
+
+Board 388: 1 moves required.
+
+Board 389: 0 moves required.
+
+Board 390: 1 moves required.
+
+Board 391: 53 moves required.
+
+Board 392: 0 moves required.
+
+Board 393: 9 moves required.
+
+Board 394: 30 moves required.
+
+Board 395: 35 moves required.
+
+Board 396: 11 moves required.
+
+Board 397: 2 moves required.
+
+Board 398: 33 moves required.
+
+Board 399: 40 moves required.
+
+Board 400: 1 moves required.
+
+Board 401: 54 moves required.
+
+Board 402: 7 moves required.
+
+Board 403: 54 moves required.
+
+Board 404: 12 moves required.
+
+Board 405: 13 moves required.
+
+Board 406: 0 moves required.
+
+Board 407: 56 moves required.
+
+Board 408: 3 moves required.
+
+Board 409: 23 moves required.
+
+Board 410: 12 moves required.
+
+Board 411: 50 moves required.
+
+Board 412: 1 moves required.
+
+Board 413: 19 moves required.
+
+Board 414: 57 moves required.
+
+Board 415: 26 moves required.
+
+Board 416: 18 moves required.
+
+Board 417: 20 moves required.
+
+Board 418: 40 moves required.
+
+Board 419: 1 moves required.
+
+Board 420: 40 moves required.
+
+Board 421: 3 moves required.
+
+Board 422: 27 moves required.
+
+Board 423: 4 moves required.
+
+Board 424: 42 moves required.
+
+Board 425: 61 moves required.
+
+Board 426: 31 moves required.
+
+Board 427: 61 moves required.
+
+Board 428: 0 moves required.
+
+Board 429: 0 moves required.
+
+Board 430: 45 moves required.
+
+Board 431: 44 moves required.
+
+Board 432: 26 moves required.
+
+Board 433: 6 moves required.
+
+Board 434: 41 moves required.
+
+Board 435: 4 moves required.
+
+Board 436: 46 moves required.
+
+Board 437: 5 moves required.
+
+Board 438: 9 moves required.
+
+Board 439: 18 moves required.
+
+Board 440: 9 moves required.
+
+Board 441: 25 moves required.
+
+Board 442: 47 moves required.
+
+Board 443: 0 moves required.
+
+Board 444: 20 moves required.
+
+Board 445: 46 moves required.
+
+Board 446: 71 moves required.
+
+Board 447: 1 moves required.
+
+Board 448: 0 moves required.
+
+Board 449: 25 moves required.
+
+Board 450: 48 moves required.
+
+Board 451: 38 moves required.
+
+Board 452: 50 moves required.
+
+Board 453: 17 moves required.
+
+Board 454: 0 moves required.
+
+Board 455: 20 moves required.
+
+Board 456: 0 moves required.
+
+Board 457: 30 moves required.
+
+Board 458: 27 moves required.
+
+Board 459: 1 moves required.
+
+Board 460: 68 moves required.
+
+Board 461: 9 moves required.
+
+Board 462: 45 moves required.
+
+Board 463: 6 moves required.
+
+Board 464: 27 moves required.
+
+Board 465: 1 moves required.
+
+Board 466: 46 moves required.
+
+Board 467: 4 moves required.
+
+Board 468: 55 moves required.
+
+Board 469: 23 moves required.
+
+Board 470: 55 moves required.
+
+Board 471: 17 moves required.
+
+Board 472: 2 moves required.
+
+Board 473: 2 moves required.
+
+Board 474: 54 moves required.
+
+Board 475: 34 moves required.
+
+Board 476: 36 moves required.
+
+Board 477: 3 moves required.
+
+Board 478: 26 moves required.
+
+Board 479: 0 moves required.
+
+Board 480: 1 moves required.
+
+Board 481: 5 moves required.
+
+Board 482: 33 moves required.
+
+Board 483: 26 moves required.
+
+Board 484: 57 moves required.
+
+Board 485: 10 moves required.
+
+Board 486: 2 moves required.
+
+Board 487: 41 moves required.
+
+Board 488: 2 moves required.
+
+Board 489: 12 moves required.
+
+Board 490: 8 moves required.
+
+Board 491: 12 moves required.
+
+Board 492: 57 moves required.
+
+Board 493: 18 moves required.
+
+Board 494: 23 moves required.
+
+Board 495: 14 moves required.
+
+Board 496: 0 moves required.
+
+Board 497: 12 moves required.
+
+Board 498: 2 moves required.
+
+Board 499: 13 moves required.
+
+Board 500: 5 moves required.
+
+Board 501: 20 moves required.
+
+Board 502: 38 moves required.
+
+Board 503: 30 moves required.
+
+Board 504: 34 moves required.
+
+Board 505: 4 moves required.
+
+Board 506: 45 moves required.
+
+Board 507: 37 moves required.
+
+Board 508: 17 moves required.
+
+Board 509: 22 moves required.
+
+Board 510: 50 moves required.
+
+Board 511: 19 moves required.
+
+Board 512: 7 moves required.
+
+Board 513: 45 moves required.
+
+Board 514: 33 moves required.
+
+Board 515: 5 moves required.
+
+Board 516: 3 moves required.
+
+Board 517: 0 moves required.
+
+Board 518: 0 moves required.
+
+Board 519: 4 moves required.
+
+Board 520: 2 moves required.
+
+Board 521: 28 moves required.
+
+Board 522: 0 moves required.
+
+Board 523: 2 moves required.
+
+Board 524: 11 moves required.
+
+Board 525: 13 moves required.
+
+Board 526: 0 moves required.
+
+Board 527: 42 moves required.
+
+Board 528: 48 moves required.
+
+Board 529: 4 moves required.
+
+Board 530: 24 moves required.
+
+Board 531: 66 moves required.
+
+Board 532: 0 moves required.
+
+Board 533: 9 moves required.
+
+Board 534: 51 moves required.
+
+Board 535: 23 moves required.
+
+Board 536: 3 moves required.
+
+Board 537: 20 moves required.
+
+Board 538: 2 moves required.
+
+Board 539: 47 moves required.
+
+Board 540: 19 moves required.
+
+Board 541: 1 moves required.
+
+Board 542: 2 moves required.
+
+Board 543: 39 moves required.
+
+Board 544: 1 moves required.
+
+Board 545: 11 moves required.
+
+Board 546: 23 moves required.
+
+Board 547: 44 moves required.
+
+Board 548: 30 moves required.
+
+Board 549: 0 moves required.
+
+Board 550: 0 moves required.
+
+Board 551: 73 moves required.
+
+Board 552: 32 moves required.
+
+Board 553: 1 moves required.
+
+Board 554: 0 moves required.
+
+Board 555: 3 moves required.
+
+Board 556: 7 moves required.
+
+Board 557: 2 moves required.
+
+Board 558: 60 moves required.
+
+Board 559: 23 moves required.
+
+Board 560: 64 moves required.
+
+Board 561: 14 moves required.
+
+Board 562: 6 moves required.
+
+Board 563: 32 moves required.
+
+Board 564: 18 moves required.
+
+Board 565: 1 moves required.
+
+Board 566: 48 moves required.
+
+Board 567: 31 moves required.
+
+Board 568: 35 moves required.
+
+Board 569: 24 moves required.
+
+Board 570: 9 moves required.
+
+Board 571: 41 moves required.
+
+Board 572: 3 moves required.
+
+Board 573: 1 moves required.
+
+Board 574: 32 moves required.
+
+Board 575: 0 moves required.
+
+Board 576: 11 moves required.
+
+Board 577: 22 moves required.
+
+Board 578: 11 moves required.
+
+Board 579: 37 moves required.
+
+Board 580: 16 moves required.
+
+Board 581: 4 moves required.
+
+Board 582: 0 moves required.
+
+Board 583: 21 moves required.
+
+Board 584: 0 moves required.
+
+Board 585: 26 moves required.
+
+Board 586: 8 moves required.
+
+Board 587: 8 moves required.
+
+Board 588: 22 moves required.
+
+Board 589: 27 moves required.
+
+Board 590: 4 moves required.
+
+Board 591: 12 moves required.
+
+Board 592: 4 moves required.
+
+Board 593: 16 moves required.
+
+Board 594: 44 moves required.
+
+Board 595: 56 moves required.
+
+Board 596: 11 moves required.
+
+Board 597: 42 moves required.
+
+Board 598: 35 moves required.
+
+Board 599: 0 moves required.
+
+Board 600: 20 moves required.
+
+Board 601: 20 moves required.
+
+Board 602: 32 moves required.
+
+Board 603: 3 moves required.
+
+Board 604: 15 moves required.
+
+Board 605: 0 moves required.
+
+Board 606: 35 moves required.
+
+Board 607: 46 moves required.
+
+Board 608: 12 moves required.
+
+Board 609: 22 moves required.
+
+Board 610: 55 moves required.
+
+Board 611: 2 moves required.
+
+Board 612: 62 moves required.
+
+Board 613: 56 moves required.
+
+Board 614: 14 moves required.
+
+Board 615: 26 moves required.
+
+Board 616: 58 moves required.
+
+Board 617: 1 moves required.
+
+Board 618: 0 moves required.
+
+Board 619: 6 moves required.
+
+Board 620: 66 moves required.
+
+Board 621: 40 moves required.
+
+Board 622: 47 moves required.
+
+Board 623: 31 moves required.
+
+Board 624: 46 moves required.
+
+Board 625: 39 moves required.
+
+Board 626: 23 moves required.
+
+Board 627: 1 moves required.
+
+Board 628: 0 moves required.
+
+Board 629: 31 moves required.
+
+Board 630: 19 moves required.
+
+Board 631: 0 moves required.
+
+Board 632: 43 moves required.
+
+Board 633: 25 moves required.
+
+Board 634: 43 moves required.
+
+Board 635: 46 moves required.
+
+Board 636: 22 moves required.
+
+Board 637: 29 moves required.
+
+Board 638: 10 moves required.
+
+Board 639: 22 moves required.
+
+Board 640: 2 moves required.
+
+Board 641: 0 moves required.
+
+Board 642: 40 moves required.
+
+Board 643: 1 moves required.
+
+Board 644: 3 moves required.
+
+Board 645: 2 moves required.
+
+Board 646: 32 moves required.
+
+Board 647: 18 moves required.
+
+Board 648: 18 moves required.
+
+Board 649: 0 moves required.
+
+Board 650: 5 moves required.
+
+Board 651: 6 moves required.
+
+Board 652: 0 moves required.
+
+Board 653: 68 moves required.
+
+Board 654: 44 moves required.
+
+Board 655: 54 moves required.
+
+Board 656: 0 moves required.
+
+Board 657: 27 moves required.
+
+Board 658: 20 moves required.
+
+Board 659: 24 moves required.
+
+Board 660: 34 moves required.
+
+Board 661: 38 moves required.
+
+Board 662: 0 moves required.
+
+Board 663: 20 moves required.
+
+Board 664: 42 moves required.
+
+Board 665: 15 moves required.
+
+Board 666: 11 moves required.
+
+Board 667: 17 moves required.
+
+Board 668: 18 moves required.
+
+Board 669: 16 moves required.
+
+Board 670: 16 moves required.
+
+Board 671: 0 moves required.
+
+Board 672: 9 moves required.
+
+Board 673: 48 moves required.
+
+Board 674: 27 moves required.
+
+Board 675: 0 moves required.
+
+Board 676: 47 moves required.
+
+Board 677: 1 moves required.
+
+Board 678: 0 moves required.
+
+Board 679: 10 moves required.
+
+Board 680: 7 moves required.
+
+Board 681: 0 moves required.
+
+Board 682: 0 moves required.
+
+Board 683: 23 moves required.
+
+Board 684: 1 moves required.
+
+Board 685: 31 moves required.
+
+Board 686: 2 moves required.
+
+Board 687: 46 moves required.
+
+Board 688: 5 moves required.
+
+Board 689: 31 moves required.
+
+Board 690: 44 moves required.
+
+Board 691: 64 moves required.
+
+Board 692: 38 moves required.
+
+Board 693: 21 moves required.
+
+Board 694: 20 moves required.
+
+Board 695: 7 moves required.
+
+Board 696: 26 moves required.
+
+Board 697: 38 moves required.
+
+Board 698: 3 moves required.
+
+Board 699: 13 moves required.
+
+Board 700: 65 moves required.
+
+Board 701: 21 moves required.
+
+Board 702: 4 moves required.
+
+Board 703: 39 moves required.
+
+Board 704: 0 moves required.
+
+Board 705: 30 moves required.
+
+Board 706: 25 moves required.
+
+Board 707: 49 moves required.
+
+Board 708: 4 moves required.
+
+Board 709: 16 moves required.
+
+Board 710: 52 moves required.
+
+Board 711: 0 moves required.
+
+Board 712: 69 moves required.
+
+Board 713: 28 moves required.
+
+Board 714: 34 moves required.
+
+Board 715: 33 moves required.
+
+Board 716: 2 moves required.
+
+Board 717: 15 moves required.
+
+Board 718: 50 moves required.
+
+Board 719: 3 moves required.
+
+Board 720: 3 moves required.
+
+Board 721: 37 moves required.
+
+Board 722: 40 moves required.
+
+Board 723: 33 moves required.
+
+Board 724: 0 moves required.
+
+Board 725: 14 moves required.
+
+Board 726: 29 moves required.
+
+Board 727: 7 moves required.
+
+Board 728: 40 moves required.
+
+Board 729: 24 moves required.
+
+Board 730: 31 moves required.
+
+Board 731: 59 moves required.
+
+Board 732: 52 moves required.
+
+Board 733: 0 moves required.
+
+Board 734: 3 moves required.
+
+Board 735: 5 moves required.
+
+Board 736: 7 moves required.
+
+Board 737: 0 moves required.
+
+Board 738: 14 moves required.
+
+Board 739: 51 moves required.
+
+Board 740: 47 moves required.
+
+Board 741: 18 moves required.
+
+Board 742: 0 moves required.
+
+Board 743: 40 moves required.
+
+Board 744: 39 moves required.
+
+Board 745: 44 moves required.
+
+Board 746: 7 moves required.
+
+Board 747: 3 moves required.
+
+Board 748: 54 moves required.
+
+Board 749: 6 moves required.
+
+Board 750: 10 moves required.
+
+Board 751: 5 moves required.
+
+Board 752: 17 moves required.
+
+Board 753: 14 moves required.
+
+Board 754: 2 moves required.
+
+Board 755: 34 moves required.
+
+Board 756: 5 moves required.
+
+Board 757: 10 moves required.
+
+Board 758: 22 moves required.
+
+Board 759: 25 moves required.
+
+Board 760: 10 moves required.
+
+Board 761: 51 moves required.
+
+Board 762: 6 moves required.
+
+Board 763: 1 moves required.
+
+Board 764: 33 moves required.
+
+Board 765: 15 moves required.
+
+Board 766: 33 moves required.
+
+Board 767: 0 moves required.
+
+Board 768: 36 moves required.
+
+Board 769: 12 moves required.
+
+Board 770: 2 moves required.
+
+Board 771: 13 moves required.
+
+Board 772: 0 moves required.
+
+Board 773: 0 moves required.
+
+Board 774: 6 moves required.
+
+Board 775: 7 moves required.
+
+Board 776: 3 moves required.
+
+Board 777: 1 moves required.
+
+Board 778: 40 moves required.
+
+Board 779: 50 moves required.
+
+Board 780: 25 moves required.
+
+Board 781: 58 moves required.
+
+Board 782: 20 moves required.
+
+Board 783: 52 moves required.
+
+Board 784: 31 moves required.
+
+Board 785: 1 moves required.
+
+Board 786: 7 moves required.
+
+Board 787: 12 moves required.
+
+Board 788: 1 moves required.
+
+Board 789: 28 moves required.
+
+Board 790: 6 moves required.
+
+Board 791: 24 moves required.
+
+Board 792: 0 moves required.
+
+Board 793: 8 moves required.
+
+Board 794: 17 moves required.
+
+Board 795: 2 moves required.
+
+Board 796: 47 moves required.
+
+Board 797: 57 moves required.
+
+Board 798: 4 moves required.
+
+Board 799: 55 moves required.
+
+Board 800: 0 moves required.
+
+Board 801: 27 moves required.
+
+Board 802: 44 moves required.
+
+Board 803: 7 moves required.
+
+Board 804: 0 moves required.
+
+Board 805: 27 moves required.
+
+Board 806: 46 moves required.
+
+Board 807: 5 moves required.
+
+Board 808: 16 moves required.
+
+Board 809: 0 moves required.
+
+Board 810: 25 moves required.
+
+Board 811: 33 moves required.
+
+Board 812: 8 moves required.
+
+Board 813: 0 moves required.
+
+Board 814: 0 moves required.
+
+Board 815: 0 moves required.
+
+Board 816: 19 moves required.
+
+Board 817: 5 moves required.
+
+Board 818: 0 moves required.
+
+Board 819: 14 moves required.
+
+Board 820: 30 moves required.
+
+Board 821: 0 moves required.
+
+Board 822: 40 moves required.
+
+Board 823: 7 moves required.
+
+Board 824: 60 moves required.
+
+Board 825: 11 moves required.
+
+Board 826: 9 moves required.
+
+Board 827: 10 moves required.
+
+Board 828: 4 moves required.
+
+Board 829: 7 moves required.
+
+Board 830: 7 moves required.
+
+Board 831: 2 moves required.
+
+Board 832: 4 moves required.
+
+Board 833: 61 moves required.
+
+Board 834: 30 moves required.
+
+Board 835: 1 moves required.
+
+Board 836: 28 moves required.
+
+Board 837: 1 moves required.
+
+Board 838: 2 moves required.
+
+Board 839: 13 moves required.
+
+Board 840: 35 moves required.
+
+Board 841: 2 moves required.
+
+Board 842: 2 moves required.
+
+Board 843: 0 moves required.
+
+Board 844: 21 moves required.
+
+Board 845: 23 moves required.
+
+Board 846: 5 moves required.
+
+Board 847: 60 moves required.
+
+Board 848: 2 moves required.
+
+Board 849: 0 moves required.
+
+Board 850: 16 moves required.
+
+Board 851: 68 moves required.
+
+Board 852: 31 moves required.
+
+Board 853: 4 moves required.
+
+Board 854: 22 moves required.
+
+Board 855: 47 moves required.
+
+Board 856: 17 moves required.
+
+Board 857: 15 moves required.
+
+Board 858: 58 moves required.
+
+Board 859: 14 moves required.
+
+Board 860: 30 moves required.
+
+Board 861: 8 moves required.
+
+Board 862: 64 moves required.
+
+Board 863: 0 moves required.
+
+Board 864: 15 moves required.
+
+Board 865: 11 moves required.
+
+Board 866: 14 moves required.
+
+Board 867: 2 moves required.
+
+Board 868: 29 moves required.
+
+Board 869: 2 moves required.
+
+Board 870: 0 moves required.
+
+Board 871: 2 moves required.
+
+Board 872: 54 moves required.
+
+Board 873: 0 moves required.
+
+Board 874: 6 moves required.
+
+Board 875: 0 moves required.
+
+Board 876: 42 moves required.
+
+Board 877: 61 moves required.
+
+Board 878: 15 moves required.
+
+Board 879: 14 moves required.
+
+Board 880: 63 moves required.
+
+Board 881: 15 moves required.
+
+Board 882: 51 moves required.
+
+Board 883: 0 moves required.
+
+Board 884: 0 moves required.
+
+Board 885: 10 moves required.
+
+Board 886: 0 moves required.
+
+Board 887: 0 moves required.
+
+Board 888: 56 moves required.
+
+Board 889: 11 moves required.
+
+Board 890: 21 moves required.
+
+Board 891: 19 moves required.
+
+Board 892: 44 moves required.
+
+Board 893: 6 moves required.
+
+Board 894: 6 moves required.
+
+Board 895: 3 moves required.
+
+Board 896: 36 moves required.
+
+Board 897: 27 moves required.
+
+Board 898: 24 moves required.
+
+Board 899: 0 moves required.
+
+Board 900: 37 moves required.
+
+Board 901: 36 moves required.
+
+Board 902: 6 moves required.
+
+Board 903: 17 moves required.
+
+Board 904: 13 moves required.
+
+Board 905: 35 moves required.
+
+Board 906: 31 moves required.
+
+Board 907: 41 moves required.
+
+Board 908: 47 moves required.
+
+Board 909: 12 moves required.
+
+Board 910: 1 moves required.
+
+Board 911: 37 moves required.
+
+Board 912: 33 moves required.
+
+Board 913: 57 moves required.
+
+Board 914: 46 moves required.
+
+Board 915: 29 moves required.
+
+Board 916: 32 moves required.
+
+Board 917: 4 moves required.
+
+Board 918: 5 moves required.
+
+Board 919: 3 moves required.
+
+Board 920: 7 moves required.
+
+Board 921: 31 moves required.
+
+Board 922: 53 moves required.
+
+Board 923: 42 moves required.
+
+Board 924: 4 moves required.
+
+Board 925: 13 moves required.
+
+Board 926: 15 moves required.
+
+Board 927: 16 moves required.
+
+Board 928: 0 moves required.
+
+Board 929: 9 moves required.
+
+Board 930: 53 moves required.
+
+Board 931: 16 moves required.
+
+Board 932: 8 moves required.
+
+Board 933: 0 moves required.
+
+Board 934: 19 moves required.
+
+Board 935: 40 moves required.
+
+Board 936: 6 moves required.
+
+Board 937: 10 moves required.
+
+Board 938: 21 moves required.
+
+Board 939: 39 moves required.
+
+Board 940: 26 moves required.
+
+Board 941: 14 moves required.
+
+Board 942: 1 moves required.
+
+Board 943: 18 moves required.
+
+Board 944: 31 moves required.
+
+Board 945: 16 moves required.
+
+Board 946: 2 moves required.
+
+Board 947: 7 moves required.
+
+Board 948: 6 moves required.
+
+Board 949: 22 moves required.
+
+Board 950: 31 moves required.
+
+Board 951: 4 moves required.
+
+Board 952: 36 moves required.
+
+Board 953: 43 moves required.
+
+Board 954: 42 moves required.
+
+Board 955: 0 moves required.
+
+Board 956: 0 moves required.
+
+Board 957: 53 moves required.
+
+Board 958: 2 moves required.
+
+Board 959: 51 moves required.
+
+Board 960: 18 moves required.
+
+Board 961: 2 moves required.
+
+Board 962: 0 moves required.
+
+Board 963: 2 moves required.
+
+Board 964: 55 moves required.
+
+Board 965: 5 moves required.
+
+Board 966: 29 moves required.
+
+Board 967: 0 moves required.
+
+Board 968: 2 moves required.
+
+Board 969: 0 moves required.
+
+Board 970: 0 moves required.
+
+Board 971: 30 moves required.
+
+Board 972: 48 moves required.
+
+Board 973: 5 moves required.
+
+Board 974: 0 moves required.
+
+Board 975: 5 moves required.
+
+Board 976: 2 moves required.
+
+Board 977: 8 moves required.
+
+Board 978: 15 moves required.
+
+Board 979: 0 moves required.
+
+Board 980: 15 moves required.
+
+Board 981: 44 moves required.
+
+Board 982: 33 moves required.
+
+Board 983: 47 moves required.
+
+Board 984: 35 moves required.
+
+Board 985: 21 moves required.
+
+Board 986: 9 moves required.
+
+Board 987: 8 moves required.
+
+Board 988: 53 moves required.
+
+Board 989: 0 moves required.
+
+Board 990: 48 moves required.
+
+Board 991: 7 moves required.
+
+Board 992: 11 moves required.
+
+Board 993: 53 moves required.
+
+Board 994: 58 moves required.
+
+Board 995: 1 moves required.
+
+Board 996: 65 moves required.
+
+Board 997: 50 moves required.
+
+Board 998: 30 moves required.
+
+Board 999: 17 moves required.
+
+Board 1000: 66 moves required.
+
