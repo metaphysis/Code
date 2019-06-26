@@ -1,0 +1,15 @@
+Case 1
+Average turnaround time = 7.75
+Program 1 runs in region 1 from 0 to 4
+Program 2 runs in region 2 from 0 to 3
+Program 3 runs in region 1 from 4 to 14
+Program 4 runs in region 2 from 3 to 10
+
+Case 2
+Average turnaround time = 35.40
+Program 1 runs in region 3 from 19 to 49
+Program 2 runs in region 2 from 0 to 25
+Program 3 runs in region 3 from 0 to 19
+Program 4 runs in region 2 from 25 to 66
+Program 5 runs in region 1 from 0 to 18
+
