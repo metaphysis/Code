@@ -12,23 +12,24 @@ using namespace std;
 
 const int MAXN = 110, INF = 0x7f7f7f7f;
 
-int w[MAXN][MAXN], linky[MAXN], cx[MAXN], cy[MAXN], slack;
-int lx[MAXN] = {0}, ly[MAXN] = {0}, n;
+int linky[MAXN], cx[MAXN], cy[MAXN];
+int weight[MAXN][MAXN], lx[MAXN] = {0}, ly[MAXN] = {0}, slack;
+int n;
 
 bool dfs(int x)
 {
     cx[x] = true;
     for (int y = 0; y < n; y++) {
         if (cy[y]) continue;
-        int d = w[x][y] - (lx[x] + ly[y]);
-        if (!d) {
+        int delta = weight[x][y] - (lx[x] + ly[y]);
+        if (!delta) {
             cy[y] = true;
-            if (!(~linky[y]) || dfs(linky[y])) {
+            if (linky[y] == -1 || dfs(linky[y])) {
                 linky[y] = x;
                 return true;
             }
         }
-        else slack = min(slack, d);
+        else slack = min(slack, delta);
     }
     return false;
 }
@@ -37,9 +38,9 @@ int kuhnMunkres()
 {
     memset(linky, -1, sizeof(linky));
     for (int i = 0; i < n; i++) {
-        lx[i] = INF;
+        lx[i] = INF, ly[i] = 0;
         for (int j = 0; j < n; j++)
-            lx[i] = min(lx[i], w[i][j]);
+            lx[i] = min(lx[i], weight[i][j]);
     }
     for (int x = 0; x < n; x++)
         while (true) {
@@ -55,7 +56,7 @@ int kuhnMunkres()
     int r = 0;
     for (int y = 0; y < n; y++)
         if (~linky[y])
-            r += w[linky[y]][y];
+            r += weight[linky[y]][y];
     return r;
 }
 
@@ -63,38 +64,38 @@ int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    int stonex[16], stoney[16], cases = 0;
+    int sx[16], sy[16], cases = 0;
 
     while (cin >> n, n > 0) {
-        for (int i = 0; i < n; i++) cin >> stonex[i] >> stoney[i];
+        for (int i = 0; i < n; i++) cin >> sx[i] >> sy[i];
 
         int r = INF;
         for (int row = 1; row <= n; row++) {
-            memset(w, 0, sizeof(w));
+            memset(weight, 0, sizeof(weight));
             for (int cln = 1; cln <= n; cln++)
                 for (int si = 0; si < n; si++)
-                    w[si][cln - 1] = abs(stonex[si] - row) + abs(stoney[si] - cln);
+                    weight[si][cln - 1] = abs(sx[si] - row) + abs(sy[si] - cln);
             r = min(r, kuhnMunkres());
         }
 
         for (int cln = 1; cln <= n; cln++) {
-            memset(w, 0, sizeof(w));
+            memset(weight, 0, sizeof(weight));
             for (int row = 1; row <= n; row++)
                 for (int si = 0; si < n; si++)
-                    w[si][row - 1] = abs(stonex[si] - row) + abs(stoney[si] - cln);
+                    weight[si][row - 1] = abs(sx[si] - row) + abs(sy[si] - cln);
             r = min(r, kuhnMunkres());
         }
 
-        memset(w, 0, sizeof(w));
+        memset(weight, 0, sizeof(weight));
         for (int row = 1, cln = 1; row <= n; row++, cln++)
             for (int si = 0; si < n; si++)
-                w[si][row - 1] = abs(stonex[si] - row) + abs(stoney[si] - cln);
+                weight[si][row - 1] = abs(sx[si] - row) + abs(sy[si] - cln);
         r = min(r, kuhnMunkres());
 
-        memset(w, 0, sizeof(w));
+        memset(weight, 0, sizeof(weight));
         for (int row = n, cln = 1; cln <= n; row--, cln++)
             for (int si = 0; si < n; si++)
-                w[si][cln - 1] = abs(stonex[si] - row) + abs(stoney[si] - cln);
+                weight[si][cln - 1] = abs(sx[si] - row) + abs(sy[si] - cln);
         r = min(r, kuhnMunkres());
 
         cout << "Board " << ++cases << ": " << r << " moves required.\n";

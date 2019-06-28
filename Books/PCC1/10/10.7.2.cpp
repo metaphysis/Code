@@ -4,48 +4,55 @@ using namespace std;
 
 const int MAXN = 110, INF = 0x7f7f7f7f;
 
-int w[MAXN][MAXN], linky[MAXN], cx[MAXN], cy[MAXN], slack;
-int lx[MAXN] = {0}, ly[MAXN] = {0};
+int linky[MAXN], cx[MAXN], cy[MAXN];
+int weight[MAXN][MAXN], lx[MAXN], ly[MAXN], slack[MAXN];
+int n;
 
 bool dfs(int x)
 {
     cx[x] = true;
-    for (int y = 0; y < MAXN; y++) {
+    for (int y = 0; y < n; y++) {
         if (cy[y]) continue;
-        int d = lx[x] + ly[y] - w[x][y];
-        if (!d) {
+        int delta = lx[x] + ly[y] - weight[x][y];
+        if (delta == 0) {
             cy[y] = true;
-            if (!(~linky[y]) || dfs(linky[y])) {
+            if (linky[y] == -1 || dfs(linky[y])) {
                 linky[y] = x;
                 return true;
             }
         }
-        else slack = min(slack, d);
+        else slack[y] = min(slack[y], delta);
     }
     return false;
 }
 
 int kuhnMunkres()
 {
-    memset(linky, -1, sizeof(linky));
-    for (int i = 0; i < MAXN; i++)
-        for (int j = 0; j < MAXN; j++)
-            lx[i] = max(lx[i], w[i][j]);
-    for (int x = 0; x < MAXN; x++)
+    for (int i = 0; i < n; i++)
+    {
+        linky[i] = -1, lx[i] = 0, ly[i] = 0;
+        for (int j = 0; j < n; j++)
+            lx[i] = max(lx[i], weight[i][j]);
+    }
+    for (int x = 0; x < n; x++)
         while (true) {
             memset(cx, 0, sizeof(cx));
             memset(cy, 0, sizeof(cy));
-            slack = INF;
+            for (int i = 0; i < n; i++) slack[i] = INF;
             if (dfs(x)) break;
-            for (int i = 0; i < MAXN; i++) {
-                if (cx[i]) lx[i] -= slack;
-                if (cy[i]) ly[i] += slack;
+            int delta = INF;
+            for (int i = 0; i < n; i++)
+                if (!cy[i])
+                    delta = min(delta, slack[i]);
+            for (int i = 0; i < n; i++) {
+                if (cx[i]) lx[i] -= delta;
+                if (cy[i]) ly[i] += delta;
             }
         }
     int r = 0;
     for (int y = 0; y < n; y++)
         if (~linky[y])
-            r += w[linky[y]][y];
+            r += weight[linky[y]][y];
     return r;
 }
 
