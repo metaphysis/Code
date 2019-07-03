@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
     cout << cases << '\n';
     for (int cs = 1; cs <= cases; cs++)
     {
-        int n = rand() % 20;
+        int n = rand() % 101;
         cout << n << '\n';
         for (int i = 0; i < n; i++)
         {
