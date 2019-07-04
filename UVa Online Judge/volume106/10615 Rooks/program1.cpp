@@ -69,30 +69,9 @@ int main(int argc, char *argv[])
             }
 
         for (int i = 0; i < n; i++)
-        {
-            for (int j = 0; j < n; j++)
-            {
-                if (j) cout << ' ';
-                cout << g[i][j];
-            }
-            cout << '\n';
-        }
-        cout << '\n';
-
-        for (int i = 0; i < n; i++)
             for (int j = 0; j < n && dx[i] < D; j++)
                 while (dx[i] < D && dy[j] < D)
                     g[i][j]++, dx[i]++, dy[j]++;
-
-        for (int i = 0; i < n; i++)
-        {
-            for (int j = 0; j < n; j++)
-            {
-                if (j) cout << ' ';
-                cout << g[i][j];
-            }
-            cout << '\n';
-        }
 
         int colors = 0;
         while (hungarian()) {
