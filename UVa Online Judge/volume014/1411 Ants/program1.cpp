@@ -1,8 +1,8 @@
 // Ants
 // UVa ID: 1411
 // Verdict: Accepted
-// Submission Date: 2019-06-27
-// UVa Run Time: 0.030s
+// Submission Date: 2019-07-04
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2019，邱秋。metaphysis # yeah dot net
 
@@ -10,71 +10,71 @@
 
 using namespace std;
 
-const double EPSILON = 1e-9;
-const int MAXN = 110, INF = 0x7f7f7f7f;
+const int MAXN = 210;
 
-int n;
-int linky[MAXN], cx[MAXN], cy[MAXN];
-double weight[MAXN][MAXN], lx[MAXN], ly[MAXN], slack;
+struct point { int x, y, idx, type; } ps[MAXN];
 
-bool dfs(int x)
+point pr;
+int link[MAXN];
+
+bool cmp1(point &a, point &b)
 {
-    cx[x] = true;
-    for (int y = 0; y < n; y++) {
-        if (cy[y]) continue;
-        double delta = lx[x] + ly[y] - weight[x][y];
-        if (fabs(delta) < EPSILON) {
-            cy[y] = true;
-            if (linky[y] == -1 || dfs(linky[y])) {
-                linky[y] = x;
-                return true;
-            }
-        }
-        else slack = min(slack, delta);
-    }
-    return false;
+    if (a.y != b.y) return a.y < b.y;
+    return a.x < b.x;
 }
 
-void kuhnMunkres()
+bool cmp2(point &a, point &b)
 {
-    for (int i = 0; i < n; i++)
+    return (a.x - pr.x) * (b.y - pr.y) - (b.x - pr.x) * (a.y - pr.y) > 0;
+}
+
+void match(int l, int r)
+{
+    if (l >= r) return;
+    sort(ps + l, ps + r + 1, cmp1);
+    pr = ps[l];
+    sort(ps + l + 1, ps + r + 1, cmp2);
+    int s1 = 0, s2 = 0;
+    if (pr.type == 0) s1 = 1;
+    else s2 = 1;
+    for (int i = l + 1; i <= r; i++)
     {
-        linky[i] = -1, lx[i] = -INF, ly[i] = 0;
-        for (int j = 0; j < n; j++)
-            lx[i] = max(lx[i], weight[i][j]);
-    }
-    for (int x = 0; x < n; x++)
-        while (true) {
-            memset(cx, 0, sizeof(cx));
-            memset(cy, 0, sizeof(cy));
-            slack = INF;
-            if (dfs(x)) break;
-            for (int i = 0; i < n; i++) {
-                if (cx[i]) lx[i] -= slack;
-                if (cy[i]) ly[i] += slack;
-            }
+        if (ps[i].type == 0) s1++;
+        else s2++;
+        if (s1 == s2)
+        {
+            if (pr.type == 0) link[pr.idx] = ps[i].idx;
+            else link[ps[i].idx] = pr.idx;
+            match(l + 1, i - 1);
+            match(i + 1, r);
+            break;
         }
+    }
 }
 
 int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    int cases = 0;
-    int antx[MAXN], anty[MAXN], applex[MAXN], appley[MAXN];
+    int n, cases = 0;
 
     while (cin >> n)
     {
-        for (int i = 0; i < n; i++) cin >> antx[i] >> anty[i];
-        for (int i = 0; i < n; i++) cin >> applex[i] >> appley[i];
-        for (int i = 0; i < n; i++)
-            for (int j = 0; j < n; j++)
-                weight[i][j] = -sqrt(pow(applex[i] - antx[j], 2) + pow(appley[i] - anty[j], 2));
-
-        kuhnMunkres();
-
         if (cases++) cout << '\n';
-        for (int i = 0; i < n; i++) cout << (linky[i] + 1) << '\n';
+        for (int i = 0; i < n; i++)
+        {
+            cin >> ps[i].x >> ps[i].y;
+            ps[i].idx = i + 1;
+            ps[i].type = 0;
+        }
+        for (int i = 0; i < n; i++)
+        {
+            cin >> ps[i + n].x >> ps[i + n].y;
+            ps[i + n].idx = i + 1;
+            ps[i + n].type = 1;
+        }
+        match(0, 2 * n - 1);
+        for (int i = 1; i <= n; i++) cout << link[i] << '\n';
     }
 
     return 0;
