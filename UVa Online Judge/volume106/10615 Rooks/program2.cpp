@@ -1,8 +1,8 @@
 // Rooks
 // UVa ID: 10615
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2019-07-04
+// UVa Run Time: 0.010s
 //
 // 版权所有（C）2019，邱秋。metaphysis # yeah dot net
 
@@ -22,10 +22,10 @@ struct color
 
 color getAvailableColor(int r, int c)
 {
-    memset(RC, 0, sizeof RC);
-    memset(CC, 0, sizeof CC);
+    memset(RC, 0, sizeof(RC));
+    memset(CC, 0, sizeof(CC));
 
-    color clr = { 0, 0, 0 };
+    color clr = (color){ 0, 0, 0 };
 
     for (int i = 0; i < n; i++)
     {
@@ -121,16 +121,17 @@ int main(int argc, char *argv[])
         }
 
         for (int i = 0; i < n; i++)
+        {
             for (int j = 0; j < n; j++)
-                if (board[i][j] = -1)
+                if (board[i][j] == -1)
                 {
                     color clr = getAvailableColor(i, j);
                     if (clr.clrBothInRowAndCln)
                         board[i][j] = clr.clrBothInRowAndCln;
                     else
                         render(i, j, clr.clrOnlyInRow, clr.clrOnlyInCln);
-
                 }
+        }
 
         cout << M << '\n';
         for (int i = 0; i < n; i++)
