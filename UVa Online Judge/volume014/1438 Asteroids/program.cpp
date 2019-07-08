@@ -1,7 +1,7 @@
-// All Souls Night
-// UVa ID: 11769
+// Asteroids
+// UVa ID: 1438
 // Verdict: Accepted
-// Submission Date: 2019-07-08
+// Submission Date: 2019-07-09
 // UVa Run Time: 0.000s
 //
 // 版权所有（C）2019，邱秋。metaphysis # yeah dot net
@@ -10,13 +10,11 @@
 
 using namespace std;
 
-const int MAXN = 1100;
+const int MAXN = 110;
 const double EPSILON = 1e-7;
 
-// 判断给定的值是否为零值。
 inline bool zero(double x) { return fabs(x) < EPSILON; }
 
-// 三维空间点。
 struct point3
 {
     double x, y, z;
@@ -25,32 +23,27 @@ struct point3
     point3 operator-(const point3 p) { return point3(x - p.x, y - p.y, z - p.z); }
     point3 operator*(double k) { return point3(x * k, y * k, z * k); }
     point3 operator/(double k) { return point3(x / k, y / k, z / k); }
-    bool operator<(const point3 &p) const
-    {
+        bool operator<(const point3 &p) const {
         if (!zero(x - p.x)) return x < p.x;
         if (!zero(y - p.y)) return y < p.y;
         return z < p.z;
     }
-    bool operator==(const point3 &p) const
-    {
+    bool operator==(const point3 &p) const {
         return zero(x - p.x) && zero(y - p.y) && zero(z - p.z);
     }
-};
+} ps[MAXN];
 
-// 三维空间平面。平面的三个点使用点的序号予以表示。
 struct plane3
 {
     int a, b, c;
     plane3 (int a = 0, int b = 0, int c = 0): a(a), b(b), c(c) {}
 };
 
-// 向量的模。
 double norm(point3 p)
 {
     return sqrt(pow(p.x, 2) + pow(p.y, 2) + pow(p.z, 2));
 }
 
-// 三维向量的叉积。
 point3 cross(point3 a, point3 b)
 {
     point3 r;
@@ -60,35 +53,41 @@ point3 cross(point3 a, point3 b)
     return r;
 }
 
-// 三维向量的点积。
 double dot(point3 a, point3 b)
 {
     return a.x * b.x + a.y * b.y + a.z * b.z;
 }
 
-double signedVolume(point3 p, point3 a, point3 b, point3 c)
+point3 normalV(plane3 s)
 {
-    return dot(a - p, cross(b - p, c - p));
+    return cross(ps[s.a] - ps[s.b], ps[s.b] - ps[s.c]);
 }
 
-double signedArea(point3 a, point3 b, point3 c)
+double signedVolume(int p, int a, int b, int c)
 {
-    return norm(cross(b - a, c - a));
+    return dot(ps[a] - ps[p], cross(ps[b] - ps[p], ps[c] - ps[p]));
 }
 
-point3 ps[MAXN];
+double signedArea(int a, int b, int c)
+{
+    return norm(cross(ps[b] - ps[a], ps[c] - ps[a]));
+}
+
+double pointToPlane(point3 p, plane3 s)
+{
+    return fabs(dot(normalV(s), p - ps[s.a])) / norm(normalV(s));
+}
+
 vector<plane3> faces;
 int n, cnt, visited[MAXN][MAXN];
 
 bool initializeConvexHull()
 {
-    for (int i = 2; i < n; i++)
-    {
-        if (zero(signedArea(ps[0], ps[1], ps[i]))) continue;
+    for (int i = 2; i < n; i++) {
+        if (zero(signedArea(0, 1, i))) continue;
         swap(ps[i], ps[2]);
-        for (int j = i + 1; j < n; j++)
-        {
-            if (zero(signedVolume(ps[0], ps[1], ps[2], ps[j]))) continue;
+        for (int j = i + 1; j < n; j++) {
+            if (zero(signedVolume(0, 1, 2, j))) continue;
             swap(ps[j], ps[3]);
             faces.push_back(plane3(0, 1, 2));
             faces.push_back(plane3(0, 2, 1));
@@ -102,19 +101,16 @@ void addPoint(int p)
 {
     cnt++;
     vector<plane3> unlighted;
-    for (int i = 0, a, b, c; i < faces.size(); i++)
-    {
+    for (int i = 0, a, b, c; i < faces.size(); i++) {
         a = faces[i].a, b = faces[i].b, c = faces[i].c;
-        if (signedVolume(ps[p], ps[a], ps[b], ps[c]) < 0)
-        {
+        if (signedVolume(p, a, b, c) < 0) {
             visited[a][b] = visited[b][a] = visited[a][c] = cnt;
             visited[c][a] = visited[b][c] = visited[c][b] = cnt;
         }
         else unlighted.push_back(faces[i]);
     }
     faces = unlighted;
-    for (int i = 0, a, b, c; i < unlighted.size(); i++)
-    {
+    for (int i = 0, a, b, c; i < unlighted.size(); i++) {
         a = unlighted[i].a, b = unlighted[i].b, c = unlighted[i].c;
         if (visited[a][b] == cnt) faces.push_back(plane3(b, a, p));
         if (visited[b][c] == cnt) faces.push_back(plane3(c, b, p));
@@ -122,38 +118,62 @@ void addPoint(int p)
     }
 }
 
-double getAreaOf3DConvexHull()
+bool get3DConvexHull()
 {
     sort(ps, ps + n);
     n = unique(ps, ps + n) - ps;
     random_shuffle(ps, ps + n);
     faces.clear();
-    if (initializeConvexHull())
-    {
+    if (initializeConvexHull()) {
         cnt = 0;
         for (int i = 0; i < n; i++)
             for (int j = 0; j < n; j++)
                 visited[i][j] = 0;
         for (int i = 3; i < n; i++) addPoint(i);
-        double area = 0;
-        for (int i = 0; i < faces.size(); i++)
-            area += signedArea(ps[faces[i].a], ps[faces[i].b], ps[faces[i].c]);
-        return area / 2;
+        return true;
     }
-    return -1.0;
+    return false;
+}
+
+point3 getCentroid()
+{
+    get3DConvexHull();
+    double volume = 0;
+    point3 centroid(0, 0, 0);
+    for (int i = 0, a, b, c; i < faces.size(); i++)
+    {
+        a = faces[i].a, b = faces[i].b, c = faces[i].c;
+        double v = dot(ps[a], cross(ps[b] - ps[a], ps[c] - ps[a])) / 6.0;
+        volume += v;
+        centroid = centroid + (ps[a] + ps[b] + ps[c]) * v / 4.0;
+    }
+    centroid = centroid / volume;
+    return centroid;
+}
+
+double getMinimumDist()
+{
+    point3 centroid = getCentroid();
+    double dist = 1e20;
+    for (int i = 0; i < faces.size(); i++)
+        dist = min(dist, pointToPlane(centroid, faces[i]));
+    return dist;
 }
 
 int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    int cases = 0;
-    while (cin >> n, n > 0)
+    while (cin >> n)
     {
         for (int i = 0; i < n; i++)
             cin >> ps[i].x >> ps[i].y >> ps[i].z;
-        cout << "Case " << ++cases << ": ";
-        cout << fixed << setprecision(2) << getAreaOf3DConvexHull() << '\n';
+        double dist = getMinimumDist();
+        cin >> n;
+        for (int i = 0; i < n; i++)
+            cin >> ps[i].x >> ps[i].y >> ps[i].z;
+        dist += getMinimumDist();
+        cout << fixed << setprecision(8) << dist << '\n';
     }
 
     return 0;

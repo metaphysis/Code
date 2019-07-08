@@ -21,7 +21,7 @@ struct point3
     bool operator==(const point3 &p) const {
         return zero(x - p.x) && zero(y - p.y) && zero(z - p.z);
     }
-} vts[MAXN];
+} ps[MAXN];
 
 // 三维空间平面。平面的三个点使用点的序号予以表示。
 struct plane3
@@ -54,12 +54,12 @@ double dot(point3 a, point3 b)
 
 double signedVolume(int p, int a, int b, int c)
 {
-    return dot(vts[a] - vts[p], cross(vts[b] - vts[p], vts[c] - vts[p]));
+    return dot(ps[a] - ps[p], cross(ps[b] - ps[p], ps[c] - ps[p]));
 }
 
 double signedArea(int a, int b, int c)
 {
-    return norm(cross(vts[b] - vts[a], vts[c] - vts[a]));
+    return norm(cross(ps[b] - ps[a], ps[c] - ps[a]));
 }
 
 vector<plane3> faces;
@@ -69,10 +69,10 @@ bool initializeConvexHull()
 {
     for (int i = 2; i < n; i++) {
         if (zero(signedArea(0, 1, i))) continue;
-        swap(vts[i], vts[2]);
+        swap(ps[i], ps[2]);
         for (int j = i + 1; j < n; j++) {
             if (zero(signedVolume(0, 1, 2, j))) continue;
-            swap(vts[j], vts[3]);
+            swap(ps[j], ps[3]);
             faces.push_back(plane3(0, 1, 2));
             faces.push_back(plane3(0, 2, 1));
             return true;
@@ -104,9 +104,9 @@ void addPoint(int p)
 
 double getAreaOf3DConvexHull()
 {
-    sort(vts, vts + n);
-    n = unique(vts, vts + n) - vts;
-    random_shuffle(vts, vts + n);
+    sort(ps, ps + n);
+    n = unique(ps, ps + n) - ps;
+    random_shuffle(ps, ps + n);
     faces.clear();
     if (initializeConvexHull()) {
         cnt = 0;
