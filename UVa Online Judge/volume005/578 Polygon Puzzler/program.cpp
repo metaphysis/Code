@@ -64,7 +64,7 @@ double dot(point3 a, point3 b)
 }
 
 // 向量a，b，c的混合积。其绝对值除以6就是a，b，c三个向量所构成的四面体的体积。
-double mix(point3 a, point3 b, point3 c)
+double signedVolume(point3 a, point3 b, point3 c)
 {
     return dot(a, cross(b, c));
 }
