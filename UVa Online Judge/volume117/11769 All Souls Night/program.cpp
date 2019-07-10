@@ -10,6 +10,8 @@
 
 using namespace std;
 
+const double EPSILON = 1e-7;
+
 struct point3
 {
     int x, y, z;
@@ -63,6 +65,7 @@ int main(int argc, char *argv[])
             for (int j = i + 1; j < n; j++)
                 for (int k = j + 1; k < n; k++)
                 {
+                    if (fabs(signedArea(souls[i], souls[j], souls[k])) < EPSILON) continue;
                     int left = 0, right = 0;
                     for (int l = 0; l < n; l++)
                     {

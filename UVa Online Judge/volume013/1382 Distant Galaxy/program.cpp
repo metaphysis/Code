@@ -1,14 +1,16 @@
 // Distant Galaxy
-// UVa ID: 
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// UVa ID: 1382
+// Verdict: Accepted
+// Submission Date: 2019-07-10
+// UVa Run Time: 0.010s
 //
 // 版权所有（C）2019，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
 
 using namespace std;
+
+const int MAXN = 110, INF = 0x3f3f3f3f;
 
 struct point
 {
@@ -18,71 +20,41 @@ struct point
         if (x != p.x) return x < p.x;
         return y < p.y;
     }
-} ps[110];
+} ps[MAXN];
 
 int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
     int n, cases = 0;
-    int grid[110][110], planetLeft[110][110], planetBelow[110][110];
-
     while (cin >> n, n > 0)
     {
-        vector<int> xs, ys;
-        for (int i = 0; i < n; i++)
-        {
-            cin >> ps[i].x >> ps[i].y;
-            xs.push_back(ps[i].x);
-            ys.push_back(ps[i].y);
-        }
-        sort(xs.begin(), xs.end());
-        sort(ys.begin(), ys.end());
-        
-        xs.erase(unique(xs.begin(), xs.end()), xs.end());
-        ys.erase(unique(ys.begin(), ys.end()), ys.end());
-        
-        memset(grid, 0, sizeof(grid));
-        for (int i = 0; i < n; i++)
-        {
-            int ux = lower_bound(xs.begin(), xs.end(), ps[i].x) - xs.begin();
-            int uy = lower_bound(ys.begin(), ys.end(), ps[i].y) - ys.begin();
-            grid[ux][uy]++;
-        }
-        
-        memset(planetLeft, 0, sizeof(planetLeft));
-        memset(planetBelow, 0, sizeof(planetBelow));
-        
-        for (int i = 0; i < xs.size(); i++)
-        {
-            planetBelow[i][0] = grid[i][0];
-            for (int j = 1; j < ys.size(); j++)
-                planetBelow[i][j] = planetBelow[i][j - 1] + grid[i][j];
-        }
-        
-        for (int j = 0; j < ys.size(); j++)
-        {
-            planetLeft[0][j] = grid[0][j];
-            for (int i = 1; i < xs.size(); i++)
-                planetLeft[i][j] = planetLeft[i - 1][j] + grid[i][j];
-        }
-
+        for (int i = 0; i < n; i++) cin >> ps[i].x >> ps[i].y;
         sort(ps, ps + n);
-
-        int stars = 0;
+        int stars = 1;
         for (int i = 0; i < n; i++)
             for (int j = i + 1; j < n; j++)
             {
-                int ux = lower_bound(xs.begin(), xs.end(), ps[i].x) - xs.begin();
-                int uy = lower_bound(ys.begin(), ys.end(), ps[i].y) - ys.begin();
-                int vx = lower_bound(xs.begin(), xs.end(), ps[j].x) - xs.begin();
-                int vy = lower_bound(ys.begin(), ys.end(), ps[j].y) - ys.begin();
-                int edge = 0;
-                edge += planetLeft[vx][uy] - planetLeft[ux][uy] + grid[ux][uy];
-                edge += planetLeft[vx][vy] - planetLeft[ux][vy] + grid[ux][vy];
-                edge += planetBelow[vx][vy] - planetBelow[vx][uy];
-                edge += planetBelow[ux][vy] - planetBelow[ux][uy];
-                stars = max(stars, edge);
+                int min_y = min(ps[i].y, ps[j].y), max_y = max(ps[i].y, ps[j].y);
+                int left_i = 0, on_i = 0, in_i = 0, pre_x = -INF, max_diff = 0;
+                for (int k = 0; k < n; k++)
+                {
+                    if (ps[k].y < min_y || ps[k].y > max_y) continue;
+                    if (ps[k].x != pre_x)
+                    {
+                        stars = max(stars, left_i + on_i + max_diff);
+                        pre_x = ps[k].x;
+                        max_diff = max(max_diff, -left_i + in_i);
+                        left_i += on_i - in_i;
+                        on_i = in_i = 0;
+                    }
+                    if (ps[k].x == pre_x)
+                    {
+                        on_i++;
+                        if (ps[k].y > min_y && ps[k].y < max_y) in_i++;
+                    }
+                }
+                stars = max(stars, left_i + on_i + max_diff);
             }
         cout << "Case " << ++cases << ": " << stars << '\n';
     }

@@ -271,13 +271,13 @@ double cos(line3 u, line3 v)
     return dot(u.a - u.b, v.a - v.b) / norm(u.a - u.b) / norm(v.a - v.b);
 }
 
-// 计算两平面夹角余弦值。
+// 计算两平面夹角的余弦值。
 double cos(plane3 u, plane3 v)
 {
     return dot(normalV(u), normalV(v)) / norm(normalV(u)) / norm(normalV(v));
 }
 
-// 计算直线平面夹角正弦值。
+// 计算直线与平面夹角的正弦值。
 double sin(line3 l, plane3 s)
 {
     return dot(l.a - l.b, normalV(s)) / norm(l.a - l.b) / norm(normalV(s));
