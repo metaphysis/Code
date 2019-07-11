@@ -25,10 +25,10 @@ void dfs(int depth, int volume, int surface, int r, int h)
     }
     int maxr = sqrt(1.0 * (n - volume) / (m - depth));
     for (int ri = min(maxr, r); ri >= (m - depth); ri--) {
-        if (volume + ri * ri * (m - depth) > n) break;
+        if (volume + ri * ri * (m - depth) > n) continue;
         int maxh = (n - volume) / (ri * ri);
         for (int hi = min(maxh, h); hi >= (m - depth); hi--) {
-            if (volume + (m - depth) * (m - depth) * hi > n) break;
+            if (volume + (m - depth) * (m - depth) * hi > n) continue;
             int volumeDiff = ri * ri * hi, areaDiff = 2 * ri * hi;
             if (!depth) areaDiff += ri * ri;
             int least = (n - volume - volumeDiff) * 2 / ri;
