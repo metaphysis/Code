@@ -1,0 +1,15 @@
+Case #1:
+2 Turning
+6 R
+2 Turning
+Fell off
+
+Case #2:
+3 L
+6 R
+10 R
+
+Case #3:
+0 L
+2 R
+
