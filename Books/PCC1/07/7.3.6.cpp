@@ -71,6 +71,7 @@ bool isPrime(long long p)
 
 long long pollardRho(long long n, long long c)
 {
+    srand(time(NULL));
     long long i = 1, k = 2;
     long long x = rand() % n, y = x;
     while (true) {
