@@ -12,34 +12,33 @@ using namespace std;
 
 const int MAXN = 100010;
 
-int dp[MAXN], W[MAXN], D1[MAXN], D2[MAXN];
+int dp[MAXN], sw[MAXN], sd1[MAXN], d2[MAXN];
 
-int F(int i)
-{
-    return dp[i] + D1[i + 1] - D2[i + 1];
-}
+int G(int j) { return dp[j] + d2[j + 1] - sd1[j + 1]; }
 
 int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
     int cases, C, N;
-    dp[0] = 0, W[0] = 0, D1[0] = 0, D2[0] = 0;
+    dp[0] = 0, sw[0] = 0, sd1[0] = 0, d2[0] = 0;
     cin >> cases;
     for (int cs = 1; cs <= cases; cs++) {
         cin >> C >> N;
-        int rr = 0, cc  = 0, r, c, w;
+        int xx = 0, yy  = 0, x, y, w;
         for (int i = 1; i <= N; i++) {
-            cin >> r >> c >> w;
-            W[i] = W[i - 1] + w, D1[i] = r + c, D2[i] = D2[i - 1] + abs(r - rr) + abs(c - cc);
-            rr = r, cc = c;
+            cin >> x >> y >> w;
+            sw[i] = sw[i - 1] + w;
+            sd1[i] = sd1[i - 1] + abs(x - xx) + abs(y - yy);
+            d2[i] = x + y;
+            xx = x, yy = y;
         }
         deque<int> dq;
         dq.push_front(0);
         for (int i = 1; i <= N; i++) {
-            while (!dq.empty() && W[i] - W[dq.front()] > C) dq.pop_front();
-            dp[i] = F(dq.front()) + D1[i] + D2[i];
-            if (i < N) while (!dq.empty() && F(dq.back()) >= F(i)) dq.pop_back();
+            while (!dq.empty() && sw[i] - sw[dq.front()] > C) dq.pop_front();
+            dp[i] = G(dq.front()) + sd1[i] + d2[i];
+            if (i < N) while (!dq.empty() && G(dq.back()) >= G(i)) dq.pop_back();
             dq.push_back(i);
         }
         if (cs > 1) cout << '\n';
