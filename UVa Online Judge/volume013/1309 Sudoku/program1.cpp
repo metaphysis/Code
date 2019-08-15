@@ -2,51 +2,54 @@
 // UVa ID: 1309
 // Verdict: Accepted
 // Submission Date: 2019-08-14
-// UVa Run Time: 0.240S
+// UVa Run Time: 0.190S
 //
 // 版权所有（C）2019，邱秋。metaphysis # yeah dot net
 //
-// 参考: https://github.com/morris821028/UVa/blob/master/volume013/1309%20-%20Sudoku.cpp
+// 使用舞蹈链（dancing links）X算法求解数独问题。
+// 代码实现参考: 
+// https://github.com/morris821028/UVa/blob/master/volume013/1309%20-%20Sudoku.cpp
 
 #include <bits/stdc++.h>
 
 using namespace std;
 
-const int MAXV = 100000;
+const int MAXV = 17000, INF = 0x3f3f3f3f;
 
-struct node { int L, R, U, D, tag, ch, rh; } DL[1000001];
-int S[2001], O[2001], head, idx, n;
+int n, idx, root;
+int L[MAXV], R[MAXV], U[MAXV], D[MAXV], T[MAXV], CH[MAXV], RH[MAXV];
+int S[MAXV], O[MAXV];
 
 void cover(int c)
 {
-	DL[DL[c].R].L = DL[c].L;
-    DL[DL[c].L].R = DL[c].R;
-	for (int i = DL[c].D; i != c; i = DL[i].D)
-		for (int j = DL[i].R; j != i; j = DL[j].R)
+	L[R[c]] = L[c];
+    R[L[c]] = R[c];
+	for (int i = D[c]; i != c; i = D[i])
+		for (int j = R[i]; j != i; j = R[j])
 		{
-			DL[DL[j].D].U = DL[j].U;
-			DL[DL[j].U].D = DL[j].D;
-			S[DL[j].ch]--;
+			U[D[j]] = U[j];
+			D[U[j]] = D[j];
+			S[CH[j]]--;
 		}
 }
 
 void uncover(int c)
 {
-	for (int i = DL[c].D; i != c; i = DL[i].D)
-		for (int j = DL[i].L; j != i; j = DL[j].L)
+	for (int i = D[c]; i != c; i = D[i])
+		for (int j = L[i]; j != i; j = L[j])
 		{
-			DL[DL[j].D].U = j;
-			DL[DL[j].U].D = j;
-			S[DL[j].ch]++;
+			U[D[j]] = j;
+			D[U[j]] = j;
+			S[CH[j]]++;
 		}
-	DL[DL[c].R].L = DL[DL[c].L].R = c;
+	L[R[c]] = R[L[c]] = c;
 }
 
 void render(int k)
 {
-	int cache[512];
+	static int cache[MAXV];
 	for (int i = 0; i < k; i++)
-		cache[DL[O[i]].tag] = DL[O[i]].rh;
+		cache[T[O[i]]] = RH[O[i]];
 	for (int i = 0; i < n; i++)
 	{
 		for (int j = 0; j < n; j++)
@@ -57,57 +60,58 @@ void render(int k)
 
 bool dfs(int k)
 {
-	if (DL[head].R == head)	{ render(k); return true; }
+	if (R[root] == root) { render(k); return true; }
 	int c;
-	for (int i = DL[head].R, tmp = MAXV; i != head; i = DL[i].R)
+	for (int i = R[root], tmp = INF; i != root; i = R[i])
 		if (S[i] < tmp)
 			tmp = S[i], c = i;
 	cover(c);
-	for (int i = DL[c].D; i != c; i = DL[i].D)
+	for (int i = D[c]; i != c; i = D[i])
 	{
 		O[k] = i;
-		for (int j = DL[i].R; j != i; j = DL[j].R) cover(DL[j].ch);
+		for (int j = R[i]; j != i; j = R[j]) cover(CH[j]);
 		if (dfs(k + 1)) return true;
-		for (int j = DL[i].L; j != i; j = DL[j].L) uncover(DL[j].ch);
+		for (int j = L[i]; j != i; j = L[j]) uncover(CH[j]);
 	}
 	uncover(c);
 	return false;
 }
 
-int addNode(int U, int D, int L, int R)
+int addNode(int up, int down, int left, int right)
 {
-	DL[idx].U = U, DL[idx].D = D, DL[idx].L = L, DL[idx].R = R;
-	DL[U].D = DL[D].U = DL[L].R = DL[R].L = idx;
+	U[idx] = up, D[idx] = down, L[idx] = left, R[idx] = right;
+	D[up] = U[down] = R[left] = L[right] = idx;
 	return idx++;
 }
 
-void addRow(int tot, int cln[], int rh, int tag)
+void addRow(int tot, int cln[], int rh, int data)
 {
-	for (int i = 0, c, row = 0, next; i < tot; i++)
+	for (int i = 0, c, row = -1, next; i < tot; i++)
 	{
 		c = cln[i];
-		DL[idx].ch = c, DL[idx].tag = tag, S[c]++;
-		if (!row)
+		CH[idx] = c, T[idx] = data, S[c]++;
+		if (row == -1)
 		{
-			row = addNode(DL[DL[c].ch].U, DL[c].ch, idx, idx);
-			DL[row].rh = rh;
+			row = addNode(U[CH[c]], CH[c], idx, idx);
+			RH[row] = rh;
 		}
 		else
 		{
-			next = addNode(DL[DL[c].ch].U, DL[c].ch, DL[row].L, row);
-			DL[next].rh = rh;
+			next = addNode(U[CH[c]], CH[c], L[row], row);
+			RH[next] = rh;
 		}
 	}
 }
 
-void initialize(int m)
+void initialize()
 {
+	n = 16;
 	idx = 0;
-	head = addNode(0, 0, 0, 0);
-	for (int i = 1; i <= m; i++)
+	root = addNode(0, 0, 0, 0);
+	for (int i = 1; i <= 4 * n * n; i++)
 	{
-		addNode(i, i, DL[head].L, head);
-		DL[i].ch = i, S[i] = 0;
+		addNode(i, i, L[root], root);
+		CH[i] = i, S[i] = 0;
 	}
 }
 
@@ -121,8 +125,7 @@ int main(int argc, char *argv[])
 	while (cin >> letter)
 	{
 	    cin.putback(letter);
-		n = 16;
-		initialize(4 * n * n);
+		initialize();
 		for (int i = 0; i < n; i++)
 			for (int j = 0; j < n; j++)
 			{
