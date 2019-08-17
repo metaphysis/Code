@@ -93,9 +93,26 @@ bool findOpenKnightTour()
     return true;
 }
 
+void driveCode()
+{
+    for (int n = 1; n <= 50; n++)
+    {
+        N = n;
+        for (int i = 1; i <= n; i++)
+            for (int j = 1; j <= n; j++)
+            {
+                SR = i, SC = j;
+                cout << N << ' ' << SR << ' ' << SC << endl;
+                if (N < 5) continue;
+                while (!findOpenKnightTour()) {}
+            }
+    }
+}
+
 int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
+
     int cases = 0;
     while (cin >> N >> SR >> SC)
     {

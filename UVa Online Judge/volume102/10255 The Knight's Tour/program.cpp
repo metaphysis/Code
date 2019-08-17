@@ -56,7 +56,7 @@ bool dfs(int r, int c, int depth)
     return false;
 }
 
-void knightTour(int W, int H, int SR, int SC)
+bool knightTour(int W, int H, int SR, int SC)
 {
     NC = W, NR = H, NT = W * H;
 
@@ -73,8 +73,9 @@ void knightTour(int W, int H, int SR, int SC)
     path.clear();
     memset(visited, 0, sizeof(visited));
     visited[SR - 1][SC - 1] = 1;
-    dfs(SR - 1, SC - 1, 1);
+    bool r = dfs(SR - 1, SC - 1, 1);
     if (path.size()) reverse(path.begin(), path.end());
+    return r;
 }
 
 int main(int argc, char *argv[])
@@ -93,19 +94,17 @@ int main(int argc, char *argv[])
             continue;
         }
         W = H = N;
-        knightTour(W, H, 1, 1);
-        if (path.size()) {
-            int board[H][W] = {0};
-            for (int i = 0; i < H; i++)
-                for (int j = 0; j < W; j++)
-                    board[path[i * W + j].x][path[i * W + j].y] = i * W + j + 1;
-            for (int i = 0; i < H; i++) {
-                for (int j = 0; j < W; j++) {
-                    if (j) cout << ' ';
-                    cout << setw(5) << right << board[i][j];
-                }
-                cout << '\n';
+        while (!knightTour(W, H, SR, SC)) {}
+        int board[H][W] = {0};
+        for (int i = 0; i < H; i++)
+            for (int j = 0; j < W; j++)
+                board[path[i * W + j].x][path[i * W + j].y] = i * W + j + 1;
+        for (int i = 0; i < H; i++) {
+            for (int j = 0; j < W; j++) {
+                if (j) cout << ' ';
+                cout << setw(5) << right << board[i][j];
             }
+            cout << '\n';
         }
     }
     return 0;
