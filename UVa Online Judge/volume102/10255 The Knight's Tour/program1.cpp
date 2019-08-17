@@ -1,8 +1,8 @@
 // The Knight's Tour
 // UVa ID: 10255
-// Verdict: Wrong Answer
-// Submission Date: 2019-08-16
-// UVa Run Time: 2.560s
+// Verdict: Accepted
+// Submission Date: 2019-08-17
+// UVa Run Time: 0.100s
 //
 // 参考：
 // https://www.geeksforgeeks.org/warnsdorffs-algorithm-knights-tour-problem/
@@ -91,22 +91,6 @@ bool findOpenKnightTour()
             return false;
     //if (!neighbour(r, c, sr, sc)) return false;
     return true;
-}
-
-void driveCode()
-{
-    for (int n = 1; n <= 50; n++)
-    {
-        N = n;
-        for (int i = 1; i <= n; i++)
-            for (int j = 1; j <= n; j++)
-            {
-                SR = i, SC = j;
-                cout << N << ' ' << SR << ' ' << SC << endl;
-                if (N < 5) continue;
-                while (!findOpenKnightTour()) {}
-            }
-    }
 }
 
 int main(int argc, char *argv[])

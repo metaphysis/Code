@@ -89,7 +89,6 @@ bool findOpenKnightTour()
 
 int main(int argc, char *argv[])
 {
-    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
     int cases = 0;
     while (cin >> N >> SR >> SC)
     {
