@@ -18,7 +18,7 @@ struct NODE
 } nuts[10];
 
 int dp[10][1 << 10];
-int X, Y, M, dist[10][10], visited[10][10], N, indexer[128];
+int X, Y, M, g[10][10], visited[10][10], N, indexer[128];
 int offset[8][2] = {{-1, -2}, {-2, -1}, {-2, 1}, {-1, 2}, {1, 2}, {2, 1}, {2, -1}, {1, -2}};
 char grid[10][10];
 
@@ -29,7 +29,7 @@ int dfs(int u, int mask)
     int r = INF;
     for (int v = 0; v < N; v++)
         if (v != u && !(mask & (1 << v)))
-            r = min(r, dist[u][v] + dfs(v, mask | (1 << v)));
+            r = min(r, g[u][v] + dfs(v, mask | (1 << v)));
     return dp[u][mask] = r;
 }
 
@@ -43,7 +43,7 @@ void bfs(NODE u, int id)
     {
         u = q.front(); q.pop();
         if (grid[u.x][u.y] == 'k' || grid[u.x][u.y] == 'P')
-            dist[id][indexer[u.x * Y + u.y]] = u.w;
+            g[id][indexer[u.x * Y + u.y]] = u.w;
         for (int k = 0; k < 8; k++)
         {
             int nextx = u.x + offset[k][0], nexty = u.y + offset[k][1];
@@ -86,13 +86,13 @@ int main(int argc, char *argv[])
                     nuts[N++] = NODE{i, j, 0};
                 }
 
-        memset(dist, INF, sizeof(dist));
+        memset(g, INF, sizeof(g));
         for (int i = 0; i < N; i++)
             bfs(nuts[i], i);
 
         int flag = 1;
         for (int i = 0; i < N; i++)
-            if (dist[0][i] == INF)
+            if (g[0][i] == INF)
             {
                 flag = 0;
                 break;

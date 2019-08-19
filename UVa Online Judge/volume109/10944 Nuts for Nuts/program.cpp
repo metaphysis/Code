@@ -12,23 +12,20 @@ using namespace std;
 
 const int INF = 0x3f3f3f3f;
 
-struct NODE
-{
-    int x, y, w;
-} nuts[24];
+struct NODE { int x, y, w; } nuts[24];
 
 int dp[16][1 << 16];
-int X, Y, dist[24][24], visited[24][24], N, indexer[512];
+int X, Y, g[24][24], visited[24][24], N, indexer[512];
 char grid[24][24];
 
 int dfs(int u, int mask)
 {
-    if (mask == (1 << N) - 1) return dist[u][0];
+    if (mask == (1 << N) - 1) return g[u][0];
     if (~dp[u][mask]) return dp[u][mask];
     int r = INF;
     for (int v = 0; v < N; v++)
         if (v != u && !(mask & (1 << v)))
-            r = min(r, dist[u][v] + dfs(v, mask | (1 << v)));
+            r = min(r, g[u][v] + dfs(v, mask | (1 << v)));
     return dp[u][mask] = r;
 }
 
@@ -42,7 +39,7 @@ void bfs(NODE u, int id)
     {
         u = q.front(); q.pop();
         if (grid[u.x][u.y] == '#' || grid[u.x][u.y] == 'L')
-            dist[id][indexer[u.x * Y + u.y]] = u.w;
+            g[id][indexer[u.x * Y + u.y]] = u.w;
         for (int i = -1; i <= 1; i++)
             for (int j = -1; j <= 1; j++)
             {
@@ -86,7 +83,7 @@ int main(int argc, char *argv[])
 
         //for (int i = 0; i < N; i++)
         //    for (int j = 0; j < N; j++)
-        //        dist[i][j] = max(abs(nuts[i].x - nuts[j].x), abs(nuts[i].y - nuts[j].y));
+        //        g[i][j] = max(abs(nuts[i].x - nuts[j].x), abs(nuts[i].y - nuts[j].y));
 
         memset(dp, -1, sizeof(dp));
         cout << dfs(0, 1) << '\n';

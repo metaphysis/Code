@@ -12,24 +12,21 @@ using namespace std;
 
 const int INF = 0x3f3f3f3f;
 
-struct NODE
-{
-    int x, y, w;
-} nuts[24];
+struct NODE { int x, y, w; } nuts[24];
 
 int dp[11][1 << 11];
-int X, Y, dist[16][16], visited[64][64], N, indexer[10240];
+int X, Y, g[16][16], visited[64][64], N, indexer[10240];
 int offset[4][2] = {{-1, 0}, {0, 1}, {1, 0}, {0, -1}};
 char grid[64][64];
 
 int dfs(int u, int mask)
 {
-    if (mask == (1 << N) - 1) return dist[u][0];
+    if (mask == (1 << N) - 1) return g[u][0];
     if (~dp[u][mask]) return dp[u][mask];
     int r = INF;
     for (int v = 0; v < N; v++)
         if (v != u && !(mask & (1 << v)))
-            r = min(r, dist[u][v] + dfs(v, mask | (1 << v)));
+            r = min(r, g[u][v] + dfs(v, mask | (1 << v)));
     return dp[u][mask] = r;
 }
 
@@ -43,7 +40,7 @@ void bfs(NODE u, int id)
     {
         u = q.front(); q.pop();
         if (grid[u.x][u.y] == '!' || grid[u.x][u.y] == '@')
-            dist[id][indexer[u.x * Y + u.y]] = u.w;
+            g[id][indexer[u.x * Y + u.y]] = u.w;
         for (int k = 0; k < 4; k++)
         {
             int nextx = u.x + offset[k][0], nexty = u.y + offset[k][1];
@@ -108,13 +105,13 @@ int main(int argc, char *argv[])
             continue;
         }
 
-        memset(dist, INF, sizeof(dist));
+        memset(g, INF, sizeof(g));
         for (int i = 0; i < N; i++)
             bfs(nuts[i], i);
 
         int flag = 1;
         for (int i = 0; i < N; i++)
-            if (dist[0][i] == INF)
+            if (g[0][i] == INF)
             {
                 flag = 0;
                 break;
