@@ -16,25 +16,32 @@ struct node { int cnt, height; } st[4 * MAXN] = {};
 
 int n, id[MAXN *2];
 
-void pushUp(int p, int height)
+void build(int p, int left, int right)
+{
+    if (left != right) {
+        int middle = (left + right) >> 1;
+        build(LCHILD(p), left, middle);
+        build(RCHILD(p), middle + 1, right);
+    }
+    st[p].cnt = st[p].height = 0;
+}
+
+void pushUp(int p, int left, int right)
 {
     st[p].height = st[LCHILD(p)].height + st[RCHILD(p)].height;
-    if (st[p].cnt) st[p].height = height;
+    if (st[p].cnt) st[p].height = id[right + 1] - id[left];
 }
 
 void update(int p, int left, int right, int ul, int ur, int value)
-{
-    if (ul == left && ur == right) st[p].cnt += value;
+{    
+    if (right < ul || left > ur) return;
+    if (ul <= left && right <= ur) st[p].cnt += value;
     else {
         int middle = (left + right) >> 1;
-        if (ur <= middle) update(LCHILD(p), left, middle, ul, ur, value);
-        else if (ul >= middle) update(RCHILD(p), middle, right, ul, ur, value);
-        else {
-            update(LCHILD(p), left, middle, ul, middle, value);
-            update(RCHILD(p), middle, right, middle, ur, value);
-        }
+        if (middle >= ul) update(LCHILD(p), left, middle, ul, ur, value);
+        if (middle + 1 <= ur) update(RCHILD(p), middle + 1, right, ul, ur, value);
     }
-    pushUp(p, id[right] - id[left]);
+    pushUp(p, left, right);
 }
 
 long long getArea()
@@ -56,7 +63,7 @@ long long getArea()
     for (int i = 0; i < 2 * n; i++) {
         if (i && evts[i].x > evts[i - 1].x)
             area += (long long)(evts[i].x - evts[i - 1].x) * st[0].height;
-        update(0, 0, 2 * n - 1, evts[i].y1, evts[i].y2, evts[i].evtCode);
+        update(0, 0, 2 * n - 1, evts[i].y1, evts[i].y2 - 1, evts[i].evtCode);
     }
     return area;
 }
