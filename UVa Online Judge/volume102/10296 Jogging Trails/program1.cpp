@@ -15,28 +15,20 @@ const int MAXN = 24, INF = 0x3f3f3f3f;
 int dist[MAXN][MAXN], deg[MAXN], dp[1 << 16], n, m;
 vector<int> odd;
 
-// DP + Memo.
+// DP + Memoization.
 int dfs(int state)
 {
     if (!state) return 0;
     if (dp[state]) return dp[state];
     int cost = INF;
     for (int i = 0; i < odd.size(); i++)
-    {
         if ((state >> i) & 1)
         {
             for (int j = i + 1; j < odd.size(); j++)
-            {
                 if ((state >> j) & 1)
-                {
                     cost = min(cost, dfs(state - (1 << i) - (1 << j)) + dist[odd[i]][odd[j]]);
-                }
-            }
             break;
         }
-        
-    }
-    
     return dp[state] = cost;
 }
 
