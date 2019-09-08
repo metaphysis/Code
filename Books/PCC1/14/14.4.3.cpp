@@ -12,7 +12,7 @@ struct event {
     int x, y1, y2, evtCode;
     bool operator<(const event &e) const { return x < e.x; }
 } evts[MAXN * 2];
-struct node { int cnt, height; } st[4 * MAXN] = {};
+struct node { int cnt, leftCovered, rightCovered, part; } st[4 * MAXN] = {};
 
 int n, id[MAXN *2];
 
@@ -23,13 +23,22 @@ void build(int p, int left, int right)
         build(LCHILD(p), left, middle);
         build(RCHILD(p), middle + 1, right);
     }
-    st[p].cnt = st[p].height = 0;
+    st[p].cnt = st[p].leftCovered = st[p].rightCovered = st[p].part = 0;
 }
 
 void pushUp(int p, int left, int right)
 {
-    st[p].height = st[LCHILD(p)].height + st[RCHILD(p)].height;
-    if (st[p].cnt) st[p].height = id[right + 1] - id[left];
+    if (st[p].cnt) st[p].part = st[p].leftCovered = st[p].rightCovered = 1;
+    else {
+        if (left == right)
+            st[p].part = st[p].leftCovered = st[p].rightCovered = 0;
+        else {
+            st[p].part = st[LCHILD(p)].part + st[RCHILD(p)].part;
+            st[p].part -= (st[LCHILD(p)].rightCovered & st[RCHILD(p)].leftCovered);
+            st[p].leftCovered = st[LCHILD(p)].leftCovered;
+            st[p].rightCovered = st[RCHILD(p)].rightCovered;
+        }
+    }
 }
 
 void update(int p, int left, int right, int ul, int ur, int value)
@@ -44,39 +53,42 @@ void update(int p, int left, int right, int ul, int ur, int value)
     pushUp(p, left, right);
 }
 
-long long getArea()
+int getLength()
 {
     for (int i = 0; i < n; i++) id[i] = rects[i].y1, id[i + n] = rects[i].y2;
     sort(id, id + 2 * n);
-    for (int i = 0; i < 2 * n; i++) {
-        rects[i].y1 = lower_bound(id, id + 2 * n, rects[i].y1) - id;
-        rects[i].y2 = lower_bound(id, id + 2 * n, rects[i].y2) - id;
-    }
     for (int i = 0; i < n; i++) {
         evts[i].evtCode = ADD, evts[i].x = rects[i].x1;
         evts[i + n].evtCode = DELETE, evts[i + n].x = rects[i].x2;
-        evts[i].y1 = evts[i + n].y1 = rects[i].y1;
-        evts[i].y2 = evts[i + n].y2 = rects[i].y2;
+        int ty1 = lower_bound(id, id + 2 * n, rects[i].y1) - id;
+        int ty2 = lower_bound(id, id + 2 * n, rects[i].y2) - id;
+        evts[i].y1 = evts[i + n].y1 = ty1;
+        evts[i].y2 = evts[i + n].y2 = ty2;
     }
     sort(evts, evts + 2 * n);
-    long long area = 0;
+    int length = 0;
     for (int i = 0; i < 2 * n; i++) {
         if (i && evts[i].x > evts[i - 1].x)
-            area += (long long)(evts[i].x - evts[i - 1].x) * st[0].height;
+            length += 2 * st[0].part * (evts[i].x - evts[i - 1].x);
         update(0, 0, 2 * n - 1, evts[i].y1, evts[i].y2 - 1, evts[i].evtCode);
     }
-    return area;
+    return length;
 }
 
 int main(int argc, char *argv[])
 {
     int cases = 0;
-    while (cin >> n, n > 0)
-    {
+    while (cin >> n, n > 0) {
         cout << "Case " << ++cases << ": ";
         for (int i = 0; i < n; i++)
             cin >> rects[i].x1 >> rects[i].y1 >> rects[i].x2 >> rects[i].y2;
-        cout << getArea() << '\n';
+        int length = getLength();
+        for (int i = 0; i < n; i++) {
+            swap(rects[i].x1, rects[i].y1);
+            swap(rects[i].x2, rects[i].y2);
+        }
+        length += getLength();
+        cout << length << '\n';
     }
     return 0;
 }

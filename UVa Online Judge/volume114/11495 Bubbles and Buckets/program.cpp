@@ -14,7 +14,7 @@ const int MAXN = 100010;
 
 int temp[MAXN];
 
-long long merge(int data[], int left, int middle, int right)
+long long mergeAndCount(int data[], int left, int middle, int right)
 {
     long long count = 0;
     int i = left, j = middle + 1, k = 0;
@@ -34,7 +34,7 @@ long long mergeSort(int data[], int left, int right)
         int middle = (left + right) >> 1;
         count += mergeSort(data, left, middle);
         count += mergeSort(data, middle + 1, right);
-        count += merge(data, left, middle, right);
+        count += mergeAndCount(data, left, middle, right);
     }
     return count;
 }
