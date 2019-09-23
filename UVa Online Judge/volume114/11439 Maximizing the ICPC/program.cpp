@@ -10,57 +10,55 @@
 
 using namespace std;
 
-const int MAXN = 210;
+const int MAXN = 210, UNVISITED = -1, WHITE = 0, BLACK = 1;
 
 int n, m;
 vector<int> g[MAXN];
-int father[MAXN], linked[MAXN], belong[MAXN], state[MAXN];
+int parent[MAXN], linked[MAXN], base[MAXN], color[MAXN];
 
 void initialize() { for (int i = 0; i <= n; i++) g[i].clear(); }
 void addEdge(int u, int v) { g[u].push_back(v), g[v].push_back(u); }
 
 int lca(int u, int v)
 {
-    static int token = 0, tag[MAXN] = {};
+    static int token = 0, key[MAXN] = {};
     for (++token; ; swap(u, v)) {
         if (u == 0) continue;
-        if (tag[u] == token) return u;
-        tag[u] = token;
-        u = belong[father[linked[u]]];
+        if (key[u] == token) return u;
+        key[u] = token;
+        u = base[parent[linked[u]]];
     }
 }
 
 void shrink(int u, int v, int p, queue<int> &q)
 {
-    while (belong[u] != p) {
-        father[u] = v, v = linked[u];
-        if (state[v] == 1) q.push(v), state[v] = 0;
-        belong[u] = belong[v] = p, u = father[v];
+    while (base[u] != p) {
+        parent[u] = v, v = linked[u];
+        if (color[v] == BLACK) q.push(v), color[v] = WHITE;
+        base[u] = base[v] = p, u = parent[v];
     }
 }
 
 int bfs(int u)
 {
-    for (int i = 0; i <= n; i++) belong[i] = i;
-    memset(state, -1, sizeof(state));
+    for (int i = 0; i <= n; i++) base[i] = i;
+    memset(color, UNVISITED, sizeof(color));
     queue<int> q;
-    q.push(u);
-    state[u] = 0;
+    q.push(u); color[u] = WHITE;
     while (!q.empty()) {
-        u = q.front(), q.pop();
-        for (int i = 0; i < g[u].size(); i++) {
-            int v = g[u][i];
-            if (state[v] == -1) {
-                father[v] = u, state[v] = 1;
+        u = q.front(); q.pop();
+        for (auto v : g[u]) {
+            if (color[v] == UNVISITED) {
+                parent[v] = u, color[v] = BLACK;
                 if (!linked[v]) {
-                    for (int prev; u; v = prev, u = father[v]) {
+                    for (int prev; u; v = prev, u = parent[v]) {
                         prev = linked[u];
                         linked[u] = v, linked[v] = u;
                     }
                     return 1;
                 }
-                q.push(linked[v]), state[linked[v]] = 0;
-            } else if (state[v] == 0 && belong[v] != belong[u]) {
+                q.push(linked[v]); color[linked[v]] = WHITE;
+            } else if (color[v] == WHITE && base[v] != base[u]) {
                 int p = lca(u, v);
                 shrink(v, u, p, q);
                 shrink(u, v, p, q);
@@ -72,7 +70,7 @@ int bfs(int u)
 
 int edmonds()
 {
-    memset(father, 0, sizeof(father));
+    memset(parent, 0, sizeof(parent));
     memset(linked, 0, sizeof(linked));
     int matches = 0;
     for (int i = 1; i <= n; i++) {
