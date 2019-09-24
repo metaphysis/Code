@@ -7,7 +7,8 @@ const int MAXN = 10240, CHARSET = 128, FAIL = -1;
 class AhoCorasick
 {
 private:
-    int cnt, root, go[MAXN][CHARSET], fail[MAXN];
+    int cnt, root;
+    int go[MAXN][CHARSET], fail[MAXN];
     vector<string> keywords;
     vector<int> output[MAXN];
 
@@ -55,9 +56,10 @@ private:
 public:
     void initialize()
     {
-        memset(go[0], FAIL, sizeof(go[0]));
-        keywords.clear();
         root = cnt = 0;
+        keywords.clear();
+        memset(go[0], FAIL, sizeof(go[0]));
+        for (int i = 0; i < MAXN; i++) output[i].clear();
     }
 
     void add(string s) { keywords.push_back(s); }

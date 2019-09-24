@@ -47,7 +47,7 @@ void sieve2(int *primes, int n, int &cnt)
 }
 
 #define GET(x) (B[x >> 5] & (1 << (x & 0x1F)))
-#define SET(x) (B[x >> 5] ^= (1 << (x & 0x1F)))
+#define SET(x) (B[x >> 5] |= (1 << (x & 0x1F)))
 
 const int MAXB = 100000001;
 int B[MAXB >> 5] = {};

@@ -1,0 +1,16306 @@
+1000
+7
+abaabaa
+baabbb
+aaa
+a
+babababbab
+bbaabbbaa
+baaaaaaaab
+2
+a 0.8
+b 0.2
+11
+
+13
+bbbabb
+ababb
+abbb
+bbaaa
+baa
+bbbb
+baabbaaa
+babbba
+bab
+baba
+abbaaaabaa
+a
+babaab
+2
+a 0.5
+b 0.5
+16
+
+11
+ab
+aba
+aababab
+aba
+aba
+bbb
+b
+aaaba
+abababa
+bab
+baabaababb
+2
+a 0.8
+b 0.2
+12
+
+2
+aaaaaab
+baaaabbabb
+2
+a 0.7
+b 0.3
+20
+
+9
+abaabba
+babbabab
+bbabbaaba
+bbabb
+baabb
+abaa
+aabababba
+aaaaa
+ba
+2
+a 0.3
+b 0.7
+12
+
+2
+aaabbbabb
+baaaabbbbb
+2
+a 0.5
+b 0.5
+18
+
+19
+abbabbaaab
+bbba
+aa
+abbaaaab
+baaba
+bba
+aaaaabaaaa
+aa
+bbb
+ab
+baa
+aabbbb
+aabbbbabbb
+aaaab
+a
+baababbbab
+b
+bbbbab
+bbaabbbbab
+2
+a 0.4
+b 0.6
+15
+
+1
+bbaabaabb
+2
+a 0.8
+b 0.2
+18
+
+15
+bb
+aa
+aab
+bbaabbbaa
+aabaaaaaba
+aabb
+bbbbabbaaa
+bbbbbabba
+abbabab
+babbbbba
+bba
+abaabbaaaa
+aabbaaa
+ababaabaaa
+abbbbbbbb
+2
+a 0.8
+b 0.2
+10
+
+16
+b
+bbabbaaaa
+bbb
+abbbbbaa
+babba
+aabba
+ab
+baabaa
+aaab
+abababab
+bababba
+aaab
+aaabaabb
+baabaabbb
+ab
+aabbbb
+2
+a 0.3
+b 0.7
+10
+
+17
+aaaaab
+abbaa
+b
+bbbbb
+a
+abbba
+bbbbbab
+abbaab
+bbaabbb
+baaaa
+bbba
+baabaabbb
+bbaabbba
+bbaa
+ab
+ba
+ababbbaaba
+2
+a 0.7
+b 0.3
+15
+
+4
+aabbaaa
+bba
+baaab
+abbbbbbba
+2
+a 0.1
+b 0.9
+15
+
+19
+ba
+a
+aba
+aab
+ababab
+aabbaa
+abbabbabaa
+baabab
+bbbababa
+aabaa
+abaaba
+b
+bbb
+babbaaab
+bb
+aa
+ab
+abababb
+bbaabba
+2
+a 0.1
+b 0.9
+20
+
+7
+aaaaabbbaa
+bb
+baaaabaaba
+abaab
+aabababaa
+aba
+aabaab
+2
+a 0.6
+b 0.4
+13
+
+4
+abaa
+bbbabbbbb
+bba
+babba
+2
+a 0.1
+b 0.9
+11
+
+3
+aaaaabbab
+b
+aab
+2
+a 0.5
+b 0.5
+14
+
+5
+bbbbaaabbb
+aaabaabaaa
+aaaabb
+abababaaab
+ababbbaa
+2
+a 0.1
+b 0.9
+13
+
+17
+bbbaabaa
+bab
+aaaa
+aabaa
+aaba
+b
+bbbbaabbba
+ababba
+bbbabb
+bab
+baaaabaaa
+a
+bbbaababbb
+aaabbbbbaa
+aabbaa
+ab
+aaabaabaaa
+2
+a 0.5
+b 0.5
+15
+
+18
+aababa
+aaab
+bbab
+ababa
+abbbaa
+abbabbbb
+babbbb
+aab
+aaabbbab
+abaabbaa
+baaaabbbb
+bbaaba
+bbbbb
+abbbba
+bbab
+abaaba
+b
+aababb
+2
+a 0.3
+b 0.7
+14
+
+14
+bab
+aa
+ababbbb
+bbaa
+abaab
+bbabbbbba
+aabaab
+aa
+baaabb
+bbbbabbbb
+bb
+baabaaaaba
+ab
+abaabbb
+2
+a 0.1
+b 0.9
+17
+
+2
+aababbaa
+abbaa
+2
+a 0.5
+b 0.5
+14
+
+11
+ababbbab
+ba
+baaa
+bb
+abaaaabb
+bbbb
+baaaa
+b
+abba
+aaaab
+aabaaaba
+2
+a 0.3
+b 0.7
+17
+
+12
+aaaaabaaba
+abbabba
+aabaababbb
+bbbabb
+aa
+abbaaab
+b
+b
+bbaaa
+a
+baab
+abababaab
+2
+a 0.6
+b 0.4
+17
+
+16
+baa
+abbbbbaba
+bbbaaabbbb
+abbbb
+abbabba
+abaaaaabaa
+ab
+ababbb
+baababaabb
+a
+bab
+aabaaa
+bb
+aab
+ab
+bbaa
+2
+a 0.8
+b 0.2
+11
+
+10
+abaaa
+babaabaa
+aa
+aaabb
+bba
+ababbabaa
+bbababab
+b
+baba
+aababbbaa
+2
+a 0.8
+b 0.2
+20
+
+15
+abaa
+bbbbabaa
+a
+abab
+abbb
+ab
+bbaaabab
+bab
+aabbaaab
+baabab
+aaba
+ab
+bbbabba
+ab
+a
+2
+a 0.7
+b 0.3
+13
+
+18
+aabbbabbaa
+baa
+bbabaaaa
+aaaaa
+abbaaaa
+bb
+bbbbbaaaa
+baabaab
+abab
+ba
+babbaab
+bbaabb
+aabababab
+baaabbb
+aabab
+ab
+bbaaaaabba
+aba
+2
+a 0.3
+b 0.7
+11
+
+7
+bbaaba
+bbbaa
+aabaaa
+aaa
+aaaaa
+baabbbba
+bababbaa
+2
+a 0.6
+b 0.4
+10
+
+6
+bbb
+bbabbabbab
+ababb
+abbbaaa
+bba
+aa
+2
+a 0.5
+b 0.5
+12
+
+6
+abba
+bb
+baaaa
+baab
+baaaaaabaa
+babbab
+2
+a 0.7
+b 0.3
+14
+
+19
+aaabaab
+bb
+aba
+aaaaaababa
+ba
+babbaba
+aab
+abaabbaab
+aabababa
+abb
+abbab
+abba
+aaaaa
+a
+abbbaabbbb
+aab
+ab
+baababb
+babaab
+2
+a 0.4
+b 0.6
+19
+
+19
+abbbaaaaaa
+baba
+bbabbbaaba
+babbab
+bbab
+bbaba
+abba
+abbbaaaaab
+bbbbab
+aaabaaabaa
+a
+abbbababb
+bababbbb
+baba
+babaaababb
+bbabbaaabb
+aabbbba
+bbbbaaabab
+baaab
+2
+a 0.1
+b 0.9
+20
+
+7
+bb
+babaaaba
+aa
+baa
+abaa
+ababa
+babaaabab
+2
+a 0.2
+b 0.8
+10
+
+3
+bbabbaaa
+baba
+abababbbab
+2
+a 0.7
+b 0.3
+19
+
+3
+bbbabb
+bbabba
+aababaaaa
+2
+a 0.9
+b 0.1
+14
+
+6
+baaa
+baabbbbbb
+bbbaaabbba
+bbaabbbbbb
+aabbbbbb
+bbb
+2
+a 0.5
+b 0.5
+11
+
+19
+ababab
+abbbbbbab
+bbbababaa
+babbaaa
+abbaabbbba
+aabbbba
+b
+bbbabaaaba
+bbb
+b
+baabbabab
+aa
+a
+ba
+bbabba
+bbbbbba
+bb
+aabbb
+aabababbab
+2
+a 0.9
+b 0.1
+18
+
+6
+aabb
+aba
+aaabba
+baabbabab
+bbb
+baa
+2
+a 0.7
+b 0.3
+11
+
+2
+bab
+baa
+2
+a 0.2
+b 0.8
+18
+
+11
+babbbbbba
+bbaaabb
+abbbab
+baaaaabaab
+aabaaab
+aababbbbba
+b
+baaba
+bbbb
+aaababaaba
+baba
+2
+a 0.9
+b 0.1
+15
+
+20
+b
+bbba
+aabbbababa
+aaabbaabaa
+ba
+bababb
+abb
+aababbb
+abababbaa
+b
+ab
+a
+bbabaabb
+bbaaaaba
+aababaabbb
+aaabaa
+ab
+baa
+ababb
+bb
+2
+a 0.7
+b 0.3
+14
+
+3
+abb
+bbbaaab
+bbbaabb
+2
+a 0.9
+b 0.1
+20
+
+17
+bbaabbbb
+bbabb
+abaaab
+aba
+a
+abbbbb
+aa
+bbbaab
+bbaabbb
+aabab
+bbaa
+baa
+aa
+baa
+b
+baaaa
+baaaba
+2
+a 0.2
+b 0.8
+14
+
+1
+baa
+2
+a 0.4
+b 0.6
+15
+
+19
+aaaabab
+bbabbbb
+a
+baaaabbabb
+aabaa
+aaababb
+aaababbba
+b
+bbbb
+bbaa
+babaabaabb
+baaaab
+bbbaaaaabb
+baab
+abbbaa
+aa
+abb
+bbabbbaa
+aa
+2
+a 0.7
+b 0.3
+18
+
+18
+abbbbaaaa
+abaaabba
+abb
+aaaaabaaaa
+baab
+bbbbbabb
+bbabb
+aabbbbbbaa
+a
+abbbbbaabb
+a
+aaaabaaaa
+b
+b
+bbb
+baab
+bbbababbbb
+aaaba
+2
+a 0.4
+b 0.6
+13
+
+5
+babbbbab
+abbbbbbb
+bbabab
+bba
+ba
+2
+a 0.4
+b 0.6
+13
+
+9
+aabababa
+b
+aababbab
+baabbab
+babbba
+baaabbaabb
+abb
+aa
+bbbbbabb
+2
+a 0.7
+b 0.3
+15
+
+16
+a
+a
+a
+aaabaabba
+bba
+bbbbbbab
+baabbaab
+babaa
+b
+aaaaa
+aaabaabbb
+babbababbb
+aabba
+bbaaa
+bbbabbbb
+a
+2
+a 0.7
+b 0.3
+15
+
+7
+bbb
+baba
+aabba
+ababa
+babaaaaaa
+aaabaabb
+bbbbab
+2
+a 0.4
+b 0.6
+10
+
+13
+babbabaaaa
+aabb
+babbbb
+bb
+aaaaab
+bab
+babbaaab
+bbaaaaa
+abbb
+bbababaaa
+bbaab
+abaaaabaab
+abbaabbaa
+2
+a 0.8
+b 0.2
+17
+
+8
+abbbba
+bbbbb
+aba
+babbb
+bbaaaaabab
+baaabaaaaa
+bba
+aabbaaaabb
+2
+a 0.9
+b 0.1
+15
+
+1
+b
+2
+a 0.9
+b 0.1
+13
+
+4
+ab
+abbabba
+ababbababa
+aabbabb
+2
+a 0.4
+b 0.6
+18
+
+10
+ba
+abba
+aaaaabab
+aabaab
+baba
+babbabbb
+ba
+baaaaaab
+a
+aba
+2
+a 0.2
+b 0.8
+19
+
+3
+ab
+b
+ababbbab
+2
+a 0.2
+b 0.8
+17
+
+5
+bbabbbabb
+abbaabbbaa
+abbaabaaba
+aa
+abaaa
+2
+a 0.5
+b 0.5
+20
+
+6
+bbaab
+babbaa
+bababb
+abaaab
+abaabbaaba
+abbaabbab
+2
+a 0.6
+b 0.4
+12
+
+18
+aaaa
+abbbbabba
+aaba
+baaaabbb
+aaaaa
+a
+aaaa
+a
+ba
+babaaa
+aabaaaaab
+abbaabb
+bbb
+bababbb
+aaaaabb
+a
+aba
+abaabbaaba
+2
+a 0.8
+b 0.2
+14
+
+12
+baa
+bababaab
+bababab
+aabaabb
+aaabbbabaa
+babbabbab
+ab
+bb
+baabbab
+bbaaabb
+bbabbb
+aaaaaa
+2
+a 0.6
+b 0.4
+19
+
+9
+aabaaa
+bbbb
+aabaaba
+aaabbaa
+baabbabbba
+ababaaab
+bba
+baaa
+a
+2
+a 0.4
+b 0.6
+16
+
+13
+abbba
+b
+baab
+bab
+bb
+aabb
+baa
+baa
+b
+babbababba
+ab
+abaabbbaa
+aaba
+2
+a 0.2
+b 0.8
+12
+
+13
+aa
+aaaab
+aa
+aaabaaaaa
+babbb
+aa
+ab
+abbbababb
+baaabaaaa
+abaabab
+abbaaba
+bbababaaa
+aaaab
+2
+a 0.1
+b 0.9
+12
+
+4
+bbbbabbba
+bbabaabbb
+babaa
+abbabba
+2
+a 0.8
+b 0.2
+10
+
+19
+ababaabb
+abbb
+abaaabaaa
+ba
+ba
+bbbba
+aaba
+ab
+aabbab
+bb
+bbbbba
+baaaabbb
+abbaa
+aabbaa
+bbab
+baabba
+abaa
+baaba
+bbaa
+2
+a 0.8
+b 0.2
+13
+
+9
+aaabba
+ababaabbaa
+abbbaab
+aba
+bbbababa
+bbba
+bbbabbb
+babaaa
+bbbaab
+2
+a 0.7
+b 0.3
+15
+
+3
+aa
+abbbbaa
+abbbabaaba
+2
+a 0.3
+b 0.7
+11
+
+4
+bbab
+baaab
+abb
+aaaaaaaaab
+2
+a 0.8
+b 0.2
+16
+
+6
+abb
+aaa
+abbbba
+bbbbabbbaa
+aabbb
+baaa
+2
+a 0.3
+b 0.7
+18
+
+17
+bbbabbbbba
+aba
+aabb
+bba
+bbabaaa
+aa
+bb
+bbbbbaabaa
+abbababba
+bb
+abaabab
+abababbb
+abbbababba
+bbaabbabb
+a
+aab
+bbaba
+2
+a 0.3
+b 0.7
+18
+
+6
+b
+baaabababa
+a
+bbaa
+bbaaa
+bbb
+2
+a 0.2
+b 0.8
+18
+
+3
+bbbaa
+abaabaa
+baabb
+2
+a 0.1
+b 0.9
+12
+
+12
+aaaabaabaa
+bababaa
+bbba
+bbabbbbaab
+babb
+b
+bababbabb
+abb
+aaababaaba
+babba
+bbbba
+b
+2
+a 0.5
+b 0.5
+16
+
+17
+bbbaaaab
+abbbbba
+ababba
+a
+bbaabab
+bababbaab
+a
+ab
+baa
+bab
+b
+aaaa
+bbabbbbab
+bbaaabaaa
+ababbbbb
+baba
+bb
+2
+a 0.2
+b 0.8
+14
+
+15
+abbbaab
+abaabbb
+bbbabaaba
+a
+abbaaab
+babaabaa
+bbba
+ab
+bbaabbabbb
+aaa
+bbabab
+ababaaabb
+bbababbaba
+bbbaaabbbb
+ab
+2
+a 0.8
+b 0.2
+13
+
+5
+aa
+ba
+bbabab
+bbaabaaaa
+bbbbbaabbb
+2
+a 0.9
+b 0.1
+20
+
+16
+a
+abbbab
+abba
+bbba
+aabaaabbb
+aaaabbaa
+bbaaaaaa
+baa
+baab
+bbabaabbbb
+abbbbbbba
+babaabaa
+aabaa
+abababbb
+babba
+ab
+2
+a 0.2
+b 0.8
+13
+
+8
+aaa
+bbababbbbb
+abb
+aba
+a
+bbabbabab
+ab
+aaaabaa
+2
+a 0.1
+b 0.9
+15
+
+8
+bbabbb
+bbaa
+bbbab
+babbaabaaa
+abbababab
+abbbabba
+baaaaaa
+aabb
+2
+a 0.6
+b 0.4
+12
+
+3
+aabaababba
+bbbb
+bbab
+2
+a 0.8
+b 0.2
+13
+
+4
+abbaababbb
+a
+aaaaab
+abb
+2
+a 0.5
+b 0.5
+19
+
+9
+abbbbbbab
+bb
+bbb
+bbabb
+ab
+abbaaabbb
+abb
+a
+b
+2
+a 0.3
+b 0.7
+13
+
+7
+baab
+ababba
+babbb
+aababbbba
+abbaa
+abab
+aaaabb
+2
+a 0.8
+b 0.2
+12
+
+5
+babbaba
+abab
+abbbab
+ba
+baaabbbab
+2
+a 0.8
+b 0.2
+12
+
+2
+aaaababba
+bbbbab
+2
+a 0.2
+b 0.8
+17
+
+18
+bbabbaab
+abbbaaaa
+aaaa
+a
+bbbbbbbabb
+aa
+baaa
+bbbbaa
+bbabbaab
+bbbaba
+aaba
+aabaaa
+baabbab
+aabbaabb
+bbbbb
+aaba
+babaa
+bbaab
+2
+a 0.4
+b 0.6
+10
+
+17
+aaa
+bbbaabab
+abaabb
+abbbabbba
+abbaababb
+aa
+baaa
+aabab
+babaaabaab
+abababbab
+abbaa
+ba
+bbabaababb
+aabbbba
+baabaa
+bbabbbbbab
+a
+2
+a 0.4
+b 0.6
+16
+
+18
+abbabab
+bb
+aabbbba
+aababa
+babab
+babbbbbb
+baabaab
+abbbaba
+aab
+bbba
+bbbaba
+baaabaaa
+a
+aabbbabba
+bbbbabb
+aba
+bbaaabaaba
+bbabab
+2
+a 0.5
+b 0.5
+14
+
+20
+bbaaabaaba
+bb
+abbaaaaa
+aa
+ab
+abbbabbab
+abbb
+baab
+aaaabaaab
+ababbaaa
+bbabbbb
+aaaba
+bab
+aaabb
+abbbbbbbab
+aba
+aabaabaabb
+ba
+aaabbbab
+bbaaaaaabb
+2
+a 0.8
+b 0.2
+14
+
+14
+bababb
+babb
+bbb
+baa
+ba
+bbbabb
+abaaabaaab
+abab
+aabbaaaaa
+bab
+b
+b
+bb
+baa
+2
+a 0.7
+b 0.3
+14
+
+6
+abaabbbab
+abbbab
+bbaaabbba
+baabbaa
+aaaaaabba
+babba
+2
+a 0.2
+b 0.8
+15
+
+5
+babab
+babbba
+a
+abaabaab
+b
+2
+a 0.4
+b 0.6
+18
+
+2
+aaabaaabb
+ababab
+2
+a 0.7
+b 0.3
+17
+
+19
+abbabbb
+ba
+babb
+bbbb
+aaaabbbab
+aa
+ababba
+abaa
+aabb
+aabbbbaa
+abb
+aaa
+abaaabbaa
+abaaaaaa
+bbabbabb
+abb
+bbbbb
+aaababa
+baabbaabb
+2
+a 0.4
+b 0.6
+17
+
+15
+bbbabababa
+aaabbab
+baaaaa
+bbbabab
+aabbaa
+abbbbbbbaa
+aaa
+b
+babbaab
+abbabba
+ba
+babbb
+baaaaa
+abbbaba
+bb
+2
+a 0.3
+b 0.7
+15
+
+5
+bba
+bbab
+aab
+aaabaabbbb
+aaabbbba
+2
+a 0.7
+b 0.3
+19
+
+3
+bababbab
+aabaabbbaa
+abbbaaaa
+2
+a 0.4
+b 0.6
+17
+
+9
+aaaaaa
+aab
+baa
+bbabbbaaab
+bbbbaabbaa
+ba
+bbb
+bababbbb
+aaaabb
+2
+a 0.3
+b 0.7
+12
+
+16
+bbabb
+aabbba
+aabab
+aba
+abbabb
+abb
+abbaaba
+abbabbaba
+aab
+baabb
+babab
+babb
+baabbbaaab
+b
+b
+abbba
+2
+a 0.2
+b 0.8
+12
+
+15
+aabb
+babbbb
+aababaab
+bab
+bba
+ba
+b
+baaaab
+a
+aaaaabbaba
+bbbb
+aaaaaaa
+aaaa
+baaaa
+bbaabbbb
+2
+a 0.5
+b 0.5
+16
+
+8
+bbabbbaba
+bbbbb
+aaabbbab
+ba
+abbaabba
+abaababbb
+aab
+a
+2
+a 0.1
+b 0.9
+10
+
+19
+aabaaaa
+bbb
+babbbaaaab
+b
+ab
+a
+bbbaa
+abaaabab
+bba
+abaa
+aabaaaba
+b
+aaaabaaaa
+aabaaa
+aaaa
+baabaaabaa
+aabbbababa
+bbbbab
+aba
+2
+a 0.2
+b 0.8
+13
+
+5
+baabbbabba
+bababbabaa
+bb
+ababb
+bababbb
+2
+a 0.6
+b 0.4
+18
+
+19
+aaabbb
+babababaab
+ab
+bbbb
+abbbaaab
+aabaab
+bba
+aaabaabaaa
+aa
+aaaabb
+aaaaabbbba
+abb
+baababbaba
+ab
+aabb
+bbbbababba
+babbaab
+bbb
+baababa
+2
+a 0.2
+b 0.8
+11
+
+9
+baaaaaab
+aaaba
+aba
+bbabb
+ababbbbbba
+bbbbb
+aa
+babbbbba
+bb
+2
+a 0.2
+b 0.8
+20
+
+12
+abbb
+aba
+aba
+ab
+ababbb
+bbbabbb
+abab
+bababaa
+abbba
+aabbbaaa
+baaba
+babaababba
+2
+a 0.2
+b 0.8
+18
+
+20
+bbbbabab
+aabbaba
+bbbbbbba
+abbbb
+aaa
+babbb
+abbaa
+abaaba
+aaaaaaa
+aa
+aa
+aa
+bbaa
+aaabbbbbba
+aabbaaabaa
+abbaa
+bbaaaaaa
+abab
+aaabbbb
+aabbabb
+2
+a 0.1
+b 0.9
+20
+
+2
+ababb
+baaababaa
+2
+a 0.2
+b 0.8
+20
+
+6
+a
+aabbaab
+ab
+aabbaaaab
+a
+abbbb
+2
+a 0.3
+b 0.7
+19
+
+20
+aababbaaa
+baaba
+bbba
+abbabaaa
+bbb
+bbaaa
+b
+aba
+b
+aaaaabab
+abbbb
+abbbab
+ba
+b
+a
+aba
+baaabbbbaa
+aaaaabbaba
+aa
+aaabababbb
+2
+a 0.8
+b 0.2
+13
+
+10
+a
+bbabaabb
+a
+bb
+babbbbaa
+ab
+bb
+b
+bbaaaaaba
+bbbbba
+2
+a 0.1
+b 0.9
+18
+
+20
+a
+aabbbaaa
+baabaa
+baaaababaa
+aabbba
+bb
+baabababbb
+bb
+baabab
+aaab
+b
+a
+baaaab
+a
+aab
+abbaabaab
+babb
+abbababab
+bbabb
+bbaaabbaa
+2
+a 0.1
+b 0.9
+12
+
+4
+aaaabaaaab
+bbbab
+aaabbbb
+bbbaabbaaa
+2
+a 0.1
+b 0.9
+13
+
+16
+bbbaabbbb
+ab
+ababbbaaab
+a
+babbababba
+baaaba
+baaaba
+bbabbbaa
+babbbbbbaa
+bb
+baaaababab
+b
+aabaaab
+babaab
+ba
+bbbaa
+2
+a 0.1
+b 0.9
+17
+
+9
+babb
+bba
+bab
+baaabb
+abbbaaabbb
+bbbaaabaaa
+bbbbba
+bababbaa
+b
+2
+a 0.2
+b 0.8
+16
+
+13
+aa
+babaaab
+b
+abba
+aabaabaaab
+aaa
+abab
+aa
+bababab
+ba
+abaaabaab
+baab
+babbaabbb
+2
+a 0.2
+b 0.8
+13
+
+19
+aabbb
+bbba
+a
+ba
+abbaaababa
+baaaaa
+bbbbb
+aaba
+bbb
+aaaaaaab
+aaabbbb
+bab
+ababa
+aababbbaa
+abbab
+bab
+abbaaaaaa
+baaaaabb
+bbbaab
+2
+a 0.7
+b 0.3
+16
+
+13
+aabbbaa
+ba
+babb
+aaaababab
+abbaba
+aabbbaaaaa
+aabbbaba
+aaabbabaaa
+abbab
+aabab
+aababb
+aa
+ba
+2
+a 0.5
+b 0.5
+13
+
+4
+ba
+aaab
+abba
+aaabbba
+2
+a 0.5
+b 0.5
+16
+
+18
+abaaaba
+baa
+babbbabb
+aa
+bbba
+b
+ba
+bbb
+abbbbabb
+aa
+babaab
+aa
+ab
+bba
+ba
+aabaaa
+abbaaa
+aaabaaa
+2
+a 0.3
+b 0.7
+18
+
+14
+bb
+bbaaaa
+bbabb
+ab
+baba
+aaaabaa
+ababbba
+bbbab
+aa
+ababbaa
+aaabaa
+bbbba
+abbaaaa
+babaaa
+2
+a 0.7
+b 0.3
+17
+
+18
+ba
+abab
+babbb
+b
+bbaaaaabab
+abbbbab
+bab
+aabbbbbbaa
+baaabaaa
+abbbabab
+bbba
+abababbabb
+aabaa
+babbabbba
+babab
+b
+baaa
+aabbbab
+2
+a 0.3
+b 0.7
+10
+
+20
+abbbbbab
+babbaa
+abbaaba
+aabbba
+b
+bbaaba
+bbaaaabbb
+b
+aabaab
+bbaa
+abaaabab
+abbbb
+bba
+b
+babaaabbba
+ab
+babbba
+babbaabbbb
+bbabbaba
+bbbbabaab
+2
+a 0.5
+b 0.5
+14
+
+1
+bbbba
+2
+a 0.6
+b 0.4
+12
+
+13
+ab
+ba
+bba
+aaaaaabb
+baa
+baaba
+abbabbbb
+baabba
+bbabba
+bbbaaaaab
+aaaa
+abbbbb
+abbbab
+2
+a 0.9
+b 0.1
+17
+
+10
+aaaaaaaabb
+aa
+bbbbbabb
+bbaabab
+bbababbb
+bb
+bbaaaaa
+bbaabaab
+bbaabaa
+ab
+2
+a 0.1
+b 0.9
+16
+
+20
+babaabbab
+b
+aabaaababb
+abbaabb
+babbaa
+bbbaaabaab
+babaabbaaa
+bbbaaba
+aab
+bba
+bbab
+abaabaab
+b
+bb
+bbababaa
+bbababbba
+aaababa
+abbaaaaabb
+ababbbba
+aaba
+2
+a 0.8
+b 0.2
+12
+
+19
+abbba
+babba
+aaa
+abbaaab
+bababaaab
+aababaaaba
+aaaabaaa
+bbbabaab
+aabaaabbaa
+bbabab
+aabbaabbb
+baa
+ababb
+baa
+abba
+aabba
+a
+abbbabbb
+ababbaabba
+2
+a 0.2
+b 0.8
+19
+
+4
+abba
+bbbbaaabaa
+bbbba
+bbaabbb
+2
+a 0.2
+b 0.8
+17
+
+6
+aa
+aaabbabaa
+bbbaaaba
+baa
+abaaaabaa
+abababaaba
+2
+a 0.7
+b 0.3
+15
+
+4
+abba
+bbbbaababb
+abbbbaaaab
+aabb
+2
+a 0.6
+b 0.4
+14
+
+6
+bbababaa
+bbbbbaabbb
+a
+abbbab
+bbba
+bab
+2
+a 0.6
+b 0.4
+14
+
+4
+bbaa
+aaba
+a
+aabbbbaaa
+2
+a 0.6
+b 0.4
+13
+
+10
+abbaaaa
+bbba
+b
+baaa
+aabbb
+abbbaaaaa
+aaaabaabba
+aa
+aaba
+aaaa
+2
+a 0.9
+b 0.1
+13
+
+13
+ba
+b
+abb
+aabbabaa
+bbabaaa
+aaa
+bbaababab
+ba
+aa
+aabaabb
+aaabbab
+bbababa
+babbbbab
+2
+a 0.5
+b 0.5
+15
+
+14
+abbbbbbbab
+ab
+babbbaaaab
+babbaaa
+bbbb
+a
+bbb
+bbaba
+bbabbbaba
+aa
+a
+bb
+abb
+aaaaaba
+2
+a 0.3
+b 0.7
+19
+
+3
+bbb
+ab
+bab
+2
+a 0.4
+b 0.6
+17
+
+18
+a
+baaababab
+aab
+a
+abaa
+baa
+bbbaaabbb
+bbabbbab
+babaaaabb
+baa
+bba
+baaa
+aaab
+abaaabbaa
+bbbb
+ababbba
+abbbaabbb
+bbab
+2
+a 0.9
+b 0.1
+17
+
+11
+abbaa
+bbbbaabbba
+bbbbbbbaaa
+a
+babbaaa
+abbba
+baaaabaa
+b
+ababba
+aa
+abbaababa
+2
+a 0.5
+b 0.5
+17
+
+18
+b
+babaaba
+b
+bbbaabbabb
+bbaabb
+babaaaab
+bb
+a
+bbba
+aabaa
+aaaaa
+bbabbbbaab
+babbbaab
+bbababbbb
+bbaaaaaba
+aabbaaaba
+bbbab
+bbaabaabb
+2
+a 0.4
+b 0.6
+15
+
+19
+ababbb
+ababbbba
+babbbabaaa
+aaaaaba
+aaaabab
+bababa
+bb
+ba
+ab
+baaabaa
+babbab
+abbb
+aabbaaa
+b
+bab
+abaa
+bbabb
+aabbaa
+abbb
+2
+a 0.1
+b 0.9
+18
+
+9
+babbbb
+bbbbbbaab
+b
+bbbaaab
+babaabbaaa
+ababaab
+bab
+baaabbba
+abbaaaba
+2
+a 0.8
+b 0.2
+11
+
+2
+abaabab
+b
+2
+a 0.8
+b 0.2
+11
+
+1
+aaabbababb
+2
+a 0.5
+b 0.5
+15
+
+4
+bbaa
+baaabb
+baaaa
+aaaaba
+2
+a 0.3
+b 0.7
+20
+
+9
+bb
+aaa
+aabb
+bbabaaa
+ab
+aa
+abb
+aaa
+aabbbb
+2
+a 0.9
+b 0.1
+14
+
+1
+aa
+2
+a 0.4
+b 0.6
+14
+
+12
+abaa
+bbaabbaabb
+b
+abbaaa
+bbab
+a
+bababba
+bbbbbaba
+bbabbaabb
+ababbba
+aaaababaab
+abbabbaa
+2
+a 0.4
+b 0.6
+17
+
+5
+bbabab
+aaabaaaab
+baaaabbbbb
+bbab
+abbabbbbba
+2
+a 0.7
+b 0.3
+10
+
+20
+b
+aabb
+babaaa
+aabba
+abb
+b
+b
+bb
+bbbab
+a
+bbbbaababb
+abababbb
+baaa
+bbbbbabaab
+aabaaabbb
+a
+aba
+bba
+aabaabba
+ba
+2
+a 0.6
+b 0.4
+11
+
+15
+aaababa
+aaba
+baab
+aaabab
+baabab
+b
+aaabbaaa
+abaababaaa
+aaaabbab
+baabab
+abbabaaba
+aa
+bbbbba
+aaabaaaab
+ab
+2
+a 0.1
+b 0.9
+17
+
+2
+aabab
+abbabbb
+2
+a 0.3
+b 0.7
+19
+
+10
+aaaa
+baaaaaabb
+a
+b
+aabba
+bbabbb
+bbabbbaa
+aaa
+ab
+bbabaaaaa
+2
+a 0.2
+b 0.8
+10
+
+7
+bb
+bbaab
+abbbaabab
+abababbbaa
+bb
+bbbba
+aaba
+2
+a 0.7
+b 0.3
+14
+
+17
+a
+ab
+bbbabbaa
+aabbabb
+bbaaaaaa
+baab
+ababbba
+aaab
+babb
+abababa
+abbaaabbba
+abbabaa
+aaababbb
+baba
+abaabbaa
+bbaaababb
+b
+2
+a 0.2
+b 0.8
+18
+
+19
+abbabbaaab
+aaaaabaa
+bbb
+ab
+b
+b
+bbabbaaaab
+a
+baaabaaaa
+babbabba
+bbbbababab
+abb
+ababb
+aaababbab
+aa
+ab
+abab
+b
+aaaaabb
+2
+a 0.2
+b 0.8
+18
+
+10
+ababaababb
+bbba
+abbba
+bbabaabba
+abbbabb
+a
+abaabab
+abbbaaa
+abbbbab
+aaaabbaaaa
+2
+a 0.5
+b 0.5
+12
+
+5
+aaabbb
+ab
+abb
+bbaabbaab
+abbbaaab
+2
+a 0.2
+b 0.8
+13
+
+20
+abbbaaaa
+aabaaba
+aabb
+babbbbb
+aa
+aa
+aaaabaab
+a
+bbaaaaa
+bbb
+ba
+a
+bbbabbab
+bbbbb
+bb
+aaabababa
+baba
+a
+baaaaab
+abbaababba
+2
+a 0.3
+b 0.7
+16
+
+2
+a
+abbab
+2
+a 0.2
+b 0.8
+18
+
+12
+abbbabaa
+ba
+aabaa
+aabaaa
+abbaabbaa
+abaa
+abbabaabbb
+aaabbbab
+abbbb
+b
+aaaabaa
+aaa
+2
+a 0.6
+b 0.4
+11
+
+8
+bb
+baaaaaba
+ababaaa
+bbbba
+abbab
+abbbbaaa
+abaabbaa
+b
+2
+a 0.5
+b 0.5
+18
+
+13
+abb
+abb
+bbaabbbbb
+a
+abbaaabba
+a
+bbaaabb
+baabbaabba
+baa
+baaaa
+baaabbabb
+aababbaaa
+bbbabaaab
+2
+a 0.4
+b 0.6
+10
+
+20
+aa
+bbaabaab
+b
+baaaabab
+aaababbabb
+abbbbb
+aaabb
+abaaab
+bbbab
+b
+aa
+aaaaaaaaa
+babab
+aabb
+bbabbaa
+babbbaba
+abbbbbbabb
+abbbaba
+ba
+bbba
+2
+a 0.4
+b 0.6
+14
+
+20
+bababbaa
+babba
+aaabbaba
+bbbbaaaabb
+aba
+aabb
+aaabaa
+aababb
+aaaaabbba
+aaaabba
+bab
+aabbbbab
+baabbaaa
+bbabbbaab
+babb
+b
+a
+bbabbbbabb
+abbaab
+abba
+2
+a 0.2
+b 0.8
+18
+
+16
+babbabbaab
+bab
+ab
+bbaaababb
+b
+aaaaaaaaaa
+bbaaa
+abbabb
+bbabaabb
+aa
+aba
+abaabaaaaa
+babaa
+babbababb
+abaaa
+babaabab
+2
+a 0.1
+b 0.9
+14
+
+18
+baab
+baaabba
+aabab
+b
+abbbaa
+b
+a
+aabaabbb
+abab
+aab
+baab
+ababbaa
+bbbbb
+ababab
+aa
+bbbaabb
+bab
+a
+2
+a 0.9
+b 0.1
+20
+
+3
+aababbab
+bbbabba
+babaaa
+2
+a 0.8
+b 0.2
+10
+
+2
+baba
+baab
+2
+a 0.4
+b 0.6
+15
+
+10
+bbbbbbabb
+bbbabaab
+bbabba
+bbaaababab
+aaaaaa
+aaab
+baab
+abaaaaa
+bbbbbabbb
+bbbb
+2
+a 0.6
+b 0.4
+12
+
+8
+aabbaabbb
+abb
+aabaa
+aabababaaa
+baabaab
+bbaaabab
+baaa
+abbabbb
+2
+a 0.6
+b 0.4
+20
+
+9
+ab
+ababbbbaa
+babaaabbaa
+a
+babbbaaa
+ba
+bbaaaaaaba
+baababbba
+bbbba
+2
+a 0.6
+b 0.4
+18
+
+18
+abb
+aabaaaaab
+b
+aaab
+b
+bbba
+a
+a
+bbbabaab
+ab
+b
+abbbbaaba
+bb
+bbba
+babaabbb
+bbbaabbbba
+ababaaabb
+babbbbbb
+2
+a 0.6
+b 0.4
+18
+
+3
+b
+bbbbabbbaa
+aabbba
+2
+a 0.5
+b 0.5
+11
+
+5
+bbaabb
+bbabab
+aa
+abbaaab
+ab
+2
+a 0.4
+b 0.6
+13
+
+5
+bbbabaaab
+abbbbaab
+abaababbbb
+ababbbbb
+babababbb
+2
+a 0.2
+b 0.8
+14
+
+6
+a
+bbb
+bba
+aaa
+aabbbaa
+ababababb
+2
+a 0.5
+b 0.5
+19
+
+4
+aabbb
+babab
+abbbba
+bb
+2
+a 0.8
+b 0.2
+20
+
+3
+bab
+abaaa
+bba
+2
+a 0.9
+b 0.1
+12
+
+5
+b
+bbaabababa
+bb
+bb
+bbbababba
+2
+a 0.8
+b 0.2
+18
+
+15
+aaa
+aa
+a
+bbaa
+abaaa
+abaaabbab
+bbabba
+abbabaa
+aabaaa
+babbb
+abbaabbaa
+bbabbaabb
+ababaabaaa
+a
+b
+2
+a 0.5
+b 0.5
+16
+
+5
+ba
+baaababa
+abaabaaa
+bbaab
+aaa
+2
+a 0.9
+b 0.1
+16
+
+4
+baabbba
+babaaa
+a
+abbab
+2
+a 0.9
+b 0.1
+17
+
+17
+aabbbaaa
+abbaabbba
+baabaaa
+aa
+baaaa
+abb
+baaabbaa
+baaa
+bbb
+abbbaba
+aabbbb
+aba
+b
+aabb
+bababbaa
+abbbaa
+bb
+2
+a 0.9
+b 0.1
+19
+
+20
+abaababbaa
+a
+bbb
+aaabbba
+bbaab
+baaaba
+bababa
+a
+aabbba
+bbbbaa
+baaaaa
+bbabbbbabb
+bb
+bb
+ba
+aababb
+aaabaaaba
+aba
+b
+bbb
+2
+a 0.5
+b 0.5
+11
+
+18
+aabaabbaab
+baababa
+baaaaabab
+ababaab
+b
+bbbaaaa
+b
+bbababaa
+ababaa
+bbbbaaa
+a
+a
+bbbab
+aabaaa
+aaabbb
+ba
+bb
+baababa
+2
+a 0.8
+b 0.2
+11
+
+13
+bbaab
+aaaab
+aab
+aabaaab
+abab
+bbbbabaabb
+babaabba
+aabaaaabba
+bbba
+babba
+a
+aaabba
+bbaaaba
+2
+a 0.6
+b 0.4
+13
+
+6
+baa
+bbabbaaba
+aabaab
+abbaabaa
+aab
+aabaabbbba
+2
+a 0.8
+b 0.2
+15
+
+18
+baab
+abababb
+aabab
+abbbbaaba
+b
+abbabbbbba
+aaabaaaa
+bbaba
+aa
+babaabaaab
+baba
+bbaaaaa
+a
+bbab
+aabbaaab
+a
+aaa
+baaaaabb
+2
+a 0.2
+b 0.8
+16
+
+13
+babb
+abab
+aabaaab
+aaaba
+abbbbbab
+aaababaabb
+abbba
+aabbbaba
+baabbabba
+bbbaabab
+babba
+abbaab
+bb
+2
+a 0.1
+b 0.9
+14
+
+8
+b
+baa
+bbaa
+aaab
+babbaaaabb
+ab
+aaba
+aababa
+2
+a 0.4
+b 0.6
+11
+
+6
+aaaaaab
+aa
+bbba
+aba
+a
+bbaabaab
+2
+a 0.1
+b 0.9
+15
+
+20
+aabbbbbaba
+bbbbbabba
+abbabbb
+bbabaaa
+bbbbba
+bb
+abb
+ababbaba
+abbaa
+abbaa
+bbbbbbb
+baba
+a
+abbaaabaa
+ab
+baabb
+ab
+ab
+baa
+bbaaa
+2
+a 0.3
+b 0.7
+10
+
+12
+bb
+aabbaaa
+aaabaaba
+baababab
+aabaabb
+b
+abbaa
+aaaababab
+baaaababa
+abababba
+a
+aaabaaa
+2
+a 0.8
+b 0.2
+15
+
+20
+bbb
+aab
+aa
+aabbaaabba
+ababbaa
+abbaaab
+aabbaa
+abbaa
+b
+aab
+ba
+bbbbbba
+b
+aabbabbaab
+baab
+aaaaaaabab
+abb
+abbaab
+baaa
+aaab
+2
+a 0.8
+b 0.2
+19
+
+15
+aa
+baaabaaaab
+bbbababab
+abaababbaa
+abaaa
+aba
+aababbba
+bbbbabba
+babbaaa
+bbbbbbbb
+bbaaabab
+a
+aa
+bba
+baaabaaaa
+2
+a 0.3
+b 0.7
+18
+
+5
+babbbbb
+baaabbbab
+ba
+abaabaa
+bababbabb
+2
+a 0.3
+b 0.7
+10
+
+3
+b
+ba
+babaaab
+2
+a 0.9
+b 0.1
+16
+
+16
+a
+bbbaabab
+baa
+bbabaaaaba
+aaabbb
+bbbbb
+bbbbbbbaaa
+babbba
+baababbaa
+b
+aaaabaaabb
+aabbbaa
+bbaa
+bbbbaaa
+bbaabbbab
+bba
+2
+a 0.5
+b 0.5
+11
+
+9
+bb
+baaaaaaaab
+aaaaaabbab
+aabbb
+aaaaa
+bbbb
+baabaabbaa
+b
+bbaabbba
+2
+a 0.6
+b 0.4
+20
+
+3
+baababa
+ba
+bbbaabab
+2
+a 0.8
+b 0.2
+10
+
+12
+aabaa
+bbbaaabaab
+ab
+abbabba
+aabbaaa
+bbbbbbba
+b
+bbabb
+abbaababaa
+a
+ba
+ab
+2
+a 0.2
+b 0.8
+15
+
+1
+baab
+2
+a 0.2
+b 0.8
+17
+
+1
+aaaba
+2
+a 0.7
+b 0.3
+12
+
+19
+baa
+bbb
+baaba
+baabab
+ababbbbaba
+abbaaaa
+ababb
+aabbabab
+babaa
+bab
+babaabaa
+bbab
+abaabaab
+bbaaabb
+babbbaaba
+aaab
+a
+aaaabb
+babbbbabaa
+2
+a 0.8
+b 0.2
+18
+
+2
+bbbbbaa
+bba
+2
+a 0.9
+b 0.1
+15
+
+16
+bbaba
+baaabbbba
+bbb
+ba
+aaa
+a
+bbaabbaa
+abbba
+bbbb
+aba
+baabb
+abaab
+b
+aabb
+ab
+aabb
+2
+a 0.7
+b 0.3
+16
+
+3
+bbbab
+aabbbb
+b
+2
+a 0.1
+b 0.9
+16
+
+15
+babbaabbb
+babb
+bbbabb
+bba
+abaa
+ababbbaba
+aaaabbbbaa
+abba
+babb
+abbbab
+aabbaa
+ababbbaa
+bbaaaa
+baabbabbab
+aaabbbbab
+2
+a 0.7
+b 0.3
+20
+
+13
+abaaa
+aabaab
+aaaaaa
+abbb
+abaa
+aabbbba
+bbaa
+aaaba
+bbabaa
+aaaa
+bbaaaab
+aaaabaa
+bbbaba
+2
+a 0.9
+b 0.1
+13
+
+15
+abaa
+baaaa
+ababbbbbaa
+a
+bbabba
+bababbaab
+abbbaabab
+abb
+aaab
+abba
+bbaab
+baaba
+bbb
+bbaaababaa
+bbaaaaaaab
+2
+a 0.1
+b 0.9
+15
+
+15
+baaab
+bbaaaaaaab
+bbb
+bbbbb
+ba
+bbababbb
+baa
+aabaaa
+abb
+b
+bb
+aabbb
+abaaa
+aaaaa
+bba
+2
+a 0.7
+b 0.3
+19
+
+11
+abbb
+b
+abababaa
+bbab
+ababbaabab
+aababb
+babaaaba
+abaaaaaa
+bbaba
+aaabaababa
+aaaa
+2
+a 0.9
+b 0.1
+18
+
+15
+bbabbbaaaa
+bbbbab
+abbaabbbaa
+aab
+b
+aabbbaa
+abaaab
+aababba
+bbbaabba
+b
+aaaaaabb
+aaabbbabab
+ab
+aaaabab
+ababaabbb
+2
+a 0.9
+b 0.1
+10
+
+20
+a
+aba
+abaabbb
+baba
+ba
+bbabb
+aabaabba
+abaaa
+ababbaabba
+abbb
+bbaaabb
+bbbabaabb
+baa
+aaaba
+aaaabbaab
+a
+bbbaaabb
+baabbba
+baba
+bbbb
+2
+a 0.9
+b 0.1
+13
+
+5
+aaab
+abbaab
+ababaab
+aaba
+aba
+2
+a 0.2
+b 0.8
+12
+
+10
+ababaaa
+aaa
+bbb
+bbabbabaa
+aaa
+aababbbbbb
+aabaaa
+bbaabbab
+babaa
+babba
+2
+a 0.3
+b 0.7
+10
+
+5
+b
+bbabbaabaa
+babb
+aabaa
+aababbaabb
+2
+a 0.6
+b 0.4
+17
+
+4
+bb
+bbbaa
+baabbbabb
+bbbabb
+2
+a 0.1
+b 0.9
+10
+
+18
+bbbabaa
+abbababbab
+abbaa
+aaabaaa
+abaabbbbb
+b
+aaabaabb
+aaba
+aababa
+abbba
+ab
+aaaa
+bb
+aaba
+bbbbbba
+bbabbaabaa
+babbabba
+baba
+2
+a 0.8
+b 0.2
+17
+
+7
+bbbbaaaabb
+b
+aaaaaaabbb
+abbaaab
+aabbba
+ababbb
+baaaabbab
+2
+a 0.1
+b 0.9
+16
+
+18
+baaababbb
+a
+bbabbbabba
+babaaaa
+bbabaababb
+bbabbaaa
+a
+b
+bb
+ababb
+babaaaaabb
+bbb
+baabbbba
+aabb
+aa
+bbb
+ababbbaabb
+bababbaaa
+2
+a 0.6
+b 0.4
+17
+
+6
+b
+bb
+a
+ba
+babbb
+bbaa
+2
+a 0.9
+b 0.1
+19
+
+14
+ababba
+baabbabaa
+baabb
+abbab
+aaba
+aaa
+ababa
+baaaaaa
+abbabb
+baaabb
+bbbbbabaab
+ba
+aa
+aaaba
+2
+a 0.8
+b 0.2
+18
+
+3
+a
+ba
+baabb
+2
+a 0.7
+b 0.3
+20
+
+2
+bbaabbbab
+abaab
+2
+a 0.9
+b 0.1
+19
+
+20
+aabb
+abababba
+abab
+bbabbaab
+bbbaa
+bb
+aaabbaba
+baabab
+babbbbaa
+abaa
+bbb
+bbabaaab
+abbbabaaa
+bbaaaaaaa
+aaab
+aabbaabaaa
+a
+bbab
+bab
+a
+2
+a 0.6
+b 0.4
+12
+
+1
+abbaaaaab
+2
+a 0.1
+b 0.9
+20
+
+15
+aba
+aabba
+aaabb
+abbbba
+bbabaaabb
+b
+bbaabb
+aaaab
+aabba
+aa
+a
+aaba
+bbaba
+bbbb
+bbaa
+2
+a 0.9
+b 0.1
+18
+
+10
+baaa
+abbaaaab
+a
+aabababaaa
+babbbaaa
+ababb
+abaabb
+b
+ba
+abbbbabbb
+2
+a 0.4
+b 0.6
+13
+
+10
+aaaba
+bb
+b
+aaaa
+a
+bababbb
+a
+abbbabaa
+abbbbabbb
+bbbabbbbab
+2
+a 0.3
+b 0.7
+11
+
+12
+bababa
+babbbab
+abbbaa
+bbab
+aabbbabaa
+baba
+aaaabba
+ab
+bababaaa
+aababba
+b
+b
+2
+a 0.9
+b 0.1
+14
+
+1
+abaaaab
+2
+a 0.5
+b 0.5
+13
+
+17
+aa
+babbababba
+a
+bbabbaabb
+aaabbb
+abb
+abbaaabba
+babbbbaa
+aabaab
+aaab
+ba
+babbaa
+abaabbaaaa
+abbab
+abbaabb
+baababbaba
+babbbbbbbb
+2
+a 0.4
+b 0.6
+12
+
+13
+baaaaaaba
+a
+ababaaba
+ababbaabb
+aaaaaba
+baab
+baab
+a
+a
+bbabba
+bbbbbabab
+ab
+ababbbbb
+2
+a 0.2
+b 0.8
+14
+
+6
+b
+bbaaa
+aabab
+aaaabbba
+bb
+bbbaa
+2
+a 0.9
+b 0.1
+15
+
+15
+babbbbb
+b
+aaa
+abbbbabb
+bbbaaaaa
+abbbab
+b
+bbaababbaa
+babbbaaaab
+baaabb
+aaabba
+ababb
+aba
+ab
+a
+2
+a 0.3
+b 0.7
+11
+
+1
+abbb
+2
+a 0.8
+b 0.2
+16
+
+1
+abbab
+2
+a 0.3
+b 0.7
+14
+
+8
+ab
+baabaab
+babbbabbb
+baa
+abbabbaaa
+aabbb
+aababba
+a
+2
+a 0.7
+b 0.3
+10
+
+20
+ba
+bbbbbbaaab
+ba
+b
+bbaba
+abaab
+aabbbbaaa
+baa
+a
+abaab
+aabb
+b
+aaa
+ba
+bbabb
+baabba
+baababb
+abab
+aa
+babbbbabb
+2
+a 0.1
+b 0.9
+18
+
+2
+bbbbb
+aababa
+2
+a 0.9
+b 0.1
+14
+
+8
+aba
+aaab
+baabbbba
+abbbbaaa
+abaaaba
+babababb
+aaaabbabaa
+ababab
+2
+a 0.8
+b 0.2
+17
+
+10
+baab
+abbbbaaa
+bbbba
+bbabbbba
+aaaaabba
+aabbaaaba
+bababba
+babbaaa
+bbaaa
+babaaabab
+2
+a 0.4
+b 0.6
+12
+
+4
+aba
+babb
+bab
+babaaabb
+2
+a 0.9
+b 0.1
+10
+
+10
+baa
+a
+a
+baa
+aaaaabaaa
+bbabaabbba
+b
+a
+babbba
+bbaa
+2
+a 0.6
+b 0.4
+10
+
+11
+abbba
+abaaaa
+a
+baaaababa
+baababba
+aabaa
+b
+ba
+bbbbabbba
+bababaabaa
+aababaaa
+2
+a 0.4
+b 0.6
+10
+
+7
+bbababa
+bbbbbb
+abbbbbbbaa
+bb
+bb
+bbaabbaba
+bbababa
+2
+a 0.4
+b 0.6
+12
+
+8
+abbbab
+bbaabb
+babbbbba
+abbabba
+bbbaaa
+bbaaa
+bbaaabbab
+aba
+2
+a 0.7
+b 0.3
+17
+
+19
+babaaabbab
+aabbabaaa
+abaa
+bba
+aaaabba
+ababbbabaa
+a
+bb
+aa
+b
+bababab
+abbb
+aabba
+aaaaa
+bbbba
+abaaaab
+aaabaab
+bab
+bb
+2
+a 0.8
+b 0.2
+19
+
+3
+abab
+ab
+aababaaaab
+2
+a 0.7
+b 0.3
+19
+
+2
+baaba
+abab
+2
+a 0.5
+b 0.5
+14
+
+19
+b
+aaabbbbab
+baababb
+bbaabba
+a
+aaabaa
+abbb
+bbbb
+bbaaaaaba
+babbababb
+abb
+aaabbab
+baababa
+bba
+aba
+aabaab
+aaaaa
+abbbb
+aaababb
+2
+a 0.3
+b 0.7
+13
+
+14
+a
+aaaabbaaab
+baaa
+bbbaab
+bab
+aaabba
+bbababaa
+a
+bbbb
+baaabbb
+bbbaaa
+bbabaabbb
+bbbabba
+aabbba
+2
+a 0.9
+b 0.1
+17
+
+11
+aababb
+bababaaba
+abbabbb
+bbb
+abbaaa
+b
+aaabb
+bbbbbabb
+abbbabaaab
+bbabbbab
+bbb
+2
+a 0.3
+b 0.7
+14
+
+13
+abaabab
+bb
+baabababba
+aaa
+babaabbaaa
+babbaaa
+aaaababb
+babaaab
+ba
+ab
+abaabaaba
+bbbbaaab
+a
+2
+a 0.9
+b 0.1
+19
+
+2
+baaba
+abbbaab
+2
+a 0.6
+b 0.4
+17
+
+17
+abbbbbabb
+babbab
+aaaaab
+bb
+aababbbaa
+aba
+aabbababab
+bbaabba
+b
+bbabbab
+a
+aa
+ababbaab
+babb
+bbbbbbba
+ab
+bababb
+2
+a 0.5
+b 0.5
+15
+
+1
+ab
+2
+a 0.7
+b 0.3
+17
+
+4
+babaaba
+aabb
+aabab
+ab
+2
+a 0.1
+b 0.9
+13
+
+6
+abb
+bab
+ab
+abbbbababa
+baabaa
+bbaba
+2
+a 0.3
+b 0.7
+14
+
+12
+b
+bbbaba
+a
+ba
+aaabbbb
+ababba
+aabababbab
+abb
+a
+a
+bbabb
+bbaa
+2
+a 0.4
+b 0.6
+11
+
+8
+b
+aab
+b
+bbabbbbaab
+bb
+bbabbbb
+aa
+aaba
+2
+a 0.7
+b 0.3
+20
+
+2
+aabbaaaa
+baaba
+2
+a 0.8
+b 0.2
+13
+
+9
+ba
+bbababbbab
+bbabbab
+babba
+bbabbbba
+bbb
+b
+aaba
+ababa
+2
+a 0.7
+b 0.3
+12
+
+9
+abb
+b
+bb
+aab
+aba
+aaa
+aabbaab
+abaaaabb
+a
+2
+a 0.4
+b 0.6
+11
+
+8
+aa
+aabbbbab
+a
+bbbb
+ba
+ababba
+abbaababab
+b
+2
+a 0.9
+b 0.1
+19
+
+16
+b
+aa
+abaabaa
+bbab
+baaabba
+aa
+bb
+b
+ababababba
+aaaabb
+aaabbbbba
+bbbaabb
+bbbbb
+baaabba
+ab
+abb
+2
+a 0.3
+b 0.7
+11
+
+9
+bbaaaa
+abbbabbb
+bababaaaa
+b
+babbbaab
+babba
+aaab
+bbaabbbbaa
+abaabab
+2
+a 0.2
+b 0.8
+17
+
+19
+bbaaabb
+aa
+baabab
+bbaaabb
+bbb
+baabbbaa
+babbbba
+aaaab
+bbbbb
+aba
+aaaaaabbab
+aabbbab
+aaaab
+bbb
+abaa
+aaaaa
+bbbbaabbba
+abaabab
+bbb
+2
+a 0.1
+b 0.9
+11
+
+8
+baaababaa
+aaaa
+a
+aba
+abbaaaab
+aabbbabb
+abbaabbba
+bbababbbba
+2
+a 0.6
+b 0.4
+19
+
+18
+baab
+bbb
+aa
+aa
+aabbaa
+aabababb
+babaa
+aaabbba
+bbababaab
+aaabbababb
+abab
+aaaabaa
+ababbabab
+baaba
+bba
+bbbaab
+aba
+bbb
+2
+a 0.7
+b 0.3
+15
+
+3
+baa
+b
+aaaa
+2
+a 0.1
+b 0.9
+18
+
+1
+bb
+2
+a 0.1
+b 0.9
+19
+
+7
+aabaabb
+bbabaaaaab
+bb
+aabbbbabb
+bbbaababba
+bb
+abbbbbabab
+2
+a 0.4
+b 0.6
+20
+
+12
+baaabaa
+abababa
+aaababb
+aabbbbbaa
+abaabbaa
+babaab
+abbaabbbb
+aabbb
+bab
+abbabbaab
+abbb
+babbab
+2
+a 0.7
+b 0.3
+12
+
+2
+abbb
+ba
+2
+a 0.2
+b 0.8
+20
+
+10
+bbabaaaa
+aabaababb
+aaaaabbbb
+ab
+aaa
+aaaaaabbba
+ba
+aabbaaaaa
+aaaababb
+baabaaab
+2
+a 0.3
+b 0.7
+12
+
+16
+babbaa
+babbab
+ba
+aaaaabbabb
+bb
+babaabb
+abbbb
+aaabbbb
+aa
+a
+aaaaaabbbb
+bbbbb
+baabbaabb
+a
+aab
+a
+2
+a 0.3
+b 0.7
+19
+
+14
+aabab
+aba
+b
+babb
+bbb
+bb
+abaaaaaa
+bbaaaabaaa
+aaaabb
+baaaababba
+abaa
+abbaabb
+bbabbbb
+abbba
+2
+a 0.2
+b 0.8
+10
+
+18
+aabaab
+aaaaabbb
+abbababa
+aaab
+aaaaabbbab
+aa
+b
+aabb
+bb
+baaaaa
+aaba
+bbbaab
+bb
+bbbbaaab
+abbbbab
+bbbababbb
+babb
+bbbabbab
+2
+a 0.1
+b 0.9
+19
+
+6
+bbaaaaaba
+abaa
+aab
+bbabbaaaba
+bba
+abbb
+2
+a 0.7
+b 0.3
+13
+
+16
+abbbbab
+abbb
+aaaba
+ba
+abbabbbab
+aab
+babbbbba
+ab
+abbbabbaba
+a
+bbbabaab
+aababbabab
+abbba
+ab
+baaaaabaa
+b
+2
+a 0.7
+b 0.3
+18
+
+5
+aa
+abab
+abaabbb
+aabb
+abbaaaa
+2
+a 0.6
+b 0.4
+17
+
+9
+baaab
+bbbaabbba
+baabbbab
+aaaaa
+abbabab
+aaab
+b
+bbaaababb
+bbaaa
+2
+a 0.1
+b 0.9
+11
+
+14
+bbbaba
+ababaaabb
+bbbabbb
+bab
+bbaaa
+b
+bbbbabaa
+abababbbb
+b
+baaaaba
+aaaaaaa
+ababbbaba
+abbbab
+aaa
+2
+a 0.8
+b 0.2
+13
+
+3
+bbabaaaa
+abbbbabbb
+babaaaaa
+2
+a 0.1
+b 0.9
+15
+
+15
+baaaaabaab
+bbaabbaaa
+abbbabaa
+baabba
+bbaa
+abb
+bbaabbaaba
+abaaabb
+bbabaaba
+ababa
+abbaa
+abb
+abbabaaa
+abaaaaaa
+b
+2
+a 0.5
+b 0.5
+17
+
+8
+babbab
+abbb
+babba
+ababbabaab
+bbaba
+abaaaabab
+bababbbbb
+bbaba
+2
+a 0.9
+b 0.1
+10
+
+20
+ba
+aaba
+b
+aaaab
+bbbbba
+aaabbaaa
+a
+bbbbabbb
+baaabbabab
+abbaababa
+bbabababb
+ba
+abbaaa
+abaaaaaaba
+abbbba
+bbaaaab
+babba
+b
+baaababbba
+abbb
+2
+a 0.7
+b 0.3
+18
+
+2
+ababaaa
+abbba
+2
+a 0.4
+b 0.6
+12
+
+2
+aabbbaaaab
+bbbba
+2
+a 0.3
+b 0.7
+10
+
+17
+abaabaabbb
+abaabb
+ba
+b
+bba
+a
+aabb
+ababbb
+baaaaabb
+ab
+aaa
+ab
+aaaabbb
+bbababab
+baabaa
+abbabbba
+baaaaabbba
+2
+a 0.5
+b 0.5
+13
+
+7
+a
+aabbabb
+aabb
+bb
+aba
+aaaabbbaa
+bbabaaaaa
+2
+a 0.6
+b 0.4
+17
+
+20
+ababbbaabb
+bbbaaaa
+aa
+b
+bababab
+b
+bba
+abbba
+aaabba
+bbbbaaaab
+aabaaaab
+babbba
+aaaaaabbaa
+aabab
+bbababbbaa
+aaaabb
+baaaa
+bab
+babba
+bbbaaabbbb
+2
+a 0.6
+b 0.4
+15
+
+9
+babbbaa
+bbbbaaaba
+bb
+ba
+bbb
+abbbbabbaa
+abaaabaaaa
+aa
+ab
+2
+a 0.9
+b 0.1
+13
+
+15
+bbaabababb
+ba
+aa
+b
+aaaaaaa
+bb
+abaabb
+babbbba
+aabbaabba
+abbaabbbbb
+ababbaba
+abaaababba
+babb
+aaaaabbbaa
+baaa
+2
+a 0.6
+b 0.4
+13
+
+5
+abbbaabb
+baaaabb
+aaaaaaabb
+aabaabbbb
+a
+2
+a 0.6
+b 0.4
+12
+
+6
+babaaaa
+abbbabbb
+bb
+baabbbabba
+bbab
+baabaa
+2
+a 0.6
+b 0.4
+20
+
+18
+baabab
+abbaaabbbb
+aabbabaaaa
+baaa
+baababbba
+aabbababab
+abaaa
+bbbbbab
+babbaaaab
+baaaaaab
+a
+baaaaa
+ba
+bbabb
+aa
+a
+abbabbabaa
+bbaabb
+2
+a 0.6
+b 0.4
+14
+
+11
+baaaaaa
+bbbabaaaa
+a
+baabbaaaaa
+baaabaa
+baaa
+bab
+aaa
+bbbbba
+bbabbba
+bab
+2
+a 0.4
+b 0.6
+14
+
+9
+aaab
+bbbabaabba
+abaa
+ababbbb
+b
+ab
+bbbaabb
+bbaa
+babbaaaa
+2
+a 0.3
+b 0.7
+13
+
+19
+abbbbabaab
+ababaaabb
+aa
+ababbbbba
+abbaab
+bbb
+babbbabba
+baabbaa
+ab
+aaabb
+ba
+abab
+abbbaba
+bbaabbaaba
+abbab
+aaabaaab
+bb
+abaaabb
+bbbabb
+2
+a 0.4
+b 0.6
+15
+
+20
+abbabab
+bbaababa
+babbabb
+bbabab
+abaaab
+bbaabbba
+bbbbabbbb
+bab
+bab
+bbaab
+aabbbabba
+baaababaa
+bbbabbab
+aabbba
+baaa
+aababbb
+aa
+ab
+a
+aabbbaabb
+2
+a 0.1
+b 0.9
+20
+
+17
+ababbaba
+baab
+ab
+bababbaaba
+a
+baab
+bbaabaa
+abbab
+abaabab
+bb
+aba
+aaaaabaa
+babbaabb
+bbabbba
+bbbbbaabba
+abbaaba
+b
+2
+a 0.8
+b 0.2
+14
+
+10
+abbababbaa
+bbb
+baaabb
+b
+bbababaa
+aaaabbbb
+baaabbbaab
+abbb
+bb
+bbbbaaaaaa
+2
+a 0.6
+b 0.4
+12
+
+3
+aabaaba
+bababaabb
+bbabba
+2
+a 0.5
+b 0.5
+11
+
+5
+aab
+b
+abababbaa
+ababa
+bb
+2
+a 0.7
+b 0.3
+14
+
+14
+bbb
+aabbbbbaa
+abbaaa
+abbabbaa
+aaab
+ababbaaaab
+a
+a
+baabbbab
+aaaaaab
+aababbbab
+bab
+bbbab
+aababa
+2
+a 0.5
+b 0.5
+14
+
+10
+a
+baabbbabb
+ab
+abbbabba
+baab
+babaab
+babbbbb
+aaaba
+aaaaaabbb
+abba
+2
+a 0.1
+b 0.9
+14
+
+5
+aaab
+abb
+baaaa
+aa
+bbbbabbba
+2
+a 0.2
+b 0.8
+12
+
+17
+babaababaa
+baaa
+b
+aabbababba
+bbab
+bab
+baaaa
+aa
+bab
+bab
+bbabba
+baaba
+bbbbbba
+bbabbaaabb
+bbabb
+bbbba
+ababa
+2
+a 0.5
+b 0.5
+10
+
+13
+a
+aaaabbaba
+ba
+aabbbb
+bbaabb
+aa
+bbaaa
+aaabbb
+bbbbbabba
+bbabaaab
+bbaa
+bbba
+ababa
+2
+a 0.9
+b 0.1
+13
+
+20
+b
+abbabbbba
+bbab
+aabab
+baaaaa
+babba
+babbbaaa
+ab
+baba
+aaaaaaaab
+aabaabaa
+babb
+bbb
+abaa
+ab
+bb
+babbbab
+abbbba
+aabbaabbb
+bababab
+2
+a 0.4
+b 0.6
+16
+
+7
+abaaaa
+bbbbbbbbab
+bbaaaa
+aaaaa
+ab
+bbba
+abbb
+2
+a 0.3
+b 0.7
+19
+
+16
+babb
+bbbbbbb
+bbba
+bbbaaba
+bbbba
+ba
+aababbbabb
+abbbabbbab
+bab
+aa
+ababba
+babaaaa
+babbb
+abbbab
+ababbb
+a
+2
+a 0.4
+b 0.6
+20
+
+12
+abbbababb
+baaabbbb
+aaaa
+aba
+bababbaaa
+abbbababa
+aaab
+b
+bbbba
+baab
+bbabbaab
+ababbb
+2
+a 0.7
+b 0.3
+18
+
+10
+aabbbbb
+bb
+aaababbb
+bbbb
+bbbbababba
+a
+baabbabbba
+abaabba
+bbaba
+abbaabbabb
+2
+a 0.5
+b 0.5
+16
+
+14
+ababbabba
+aaaabb
+bbaaabba
+aaabab
+bba
+aaababbaba
+aabaab
+aab
+b
+aaabab
+aaabbaaabb
+aababaab
+ababbba
+aabbabb
+2
+a 0.8
+b 0.2
+12
+
+17
+bb
+a
+abbabba
+bbaabaabbb
+aa
+aabbbababb
+aaaaaabaab
+aaabbba
+ab
+baaba
+aa
+babbabbba
+babba
+abaababbaa
+bb
+bbbbabba
+ba
+2
+a 0.9
+b 0.1
+13
+
+17
+aba
+abbaabb
+bbbb
+bbbbbab
+ab
+baaaabaaab
+aaaaababab
+a
+aabbaa
+bbabaa
+ba
+baab
+aaa
+baabaabbab
+aabbaabaaa
+bbabba
+baababbabb
+2
+a 0.4
+b 0.6
+10
+
+4
+baabb
+aaabbbaaab
+aabaaaaa
+ababbabbb
+2
+a 0.2
+b 0.8
+10
+
+11
+a
+abbbbbab
+bb
+bbbaab
+abba
+abbbaa
+bbb
+aababa
+bbaaaa
+babbbbba
+abbaaabbab
+2
+a 0.3
+b 0.7
+19
+
+12
+baaaba
+ba
+abbabbb
+a
+bbbbbbbaaa
+b
+baaaaabbbb
+a
+bbbaaaaaaa
+ba
+bb
+babab
+2
+a 0.9
+b 0.1
+13
+
+8
+aabaaa
+bb
+abbaabb
+a
+abababbbaa
+bbb
+bbabbb
+b
+2
+a 0.9
+b 0.1
+10
+
+2
+abbbba
+bababb
+2
+a 0.7
+b 0.3
+12
+
+2
+abbaba
+bbaaab
+2
+a 0.9
+b 0.1
+14
+
+11
+aabba
+ababbbbb
+ab
+bb
+aabb
+baabaaaaab
+aabababbab
+babaa
+a
+aab
+aabbbbaa
+2
+a 0.6
+b 0.4
+12
+
+6
+aabaabb
+bbbaa
+bbbaabab
+ababbab
+ba
+aabbaa
+2
+a 0.3
+b 0.7
+19
+
+7
+aabaaa
+b
+b
+aaabaaaa
+babbbaaaa
+bbaaaba
+bababbabab
+2
+a 0.9
+b 0.1
+17
+
+12
+aababb
+baa
+bbbaaba
+aaaa
+aaababbb
+abaabbaba
+bbbbaababa
+b
+aaabaaaa
+ababbbaab
+babaaaaba
+b
+2
+a 0.2
+b 0.8
+12
+
+20
+ababaa
+aaaabaa
+baabbab
+aabbb
+b
+abb
+bbaab
+a
+babbbbabb
+ab
+b
+ababbbaab
+aaaab
+aabaaabaa
+aaaaaaba
+aabbaaabb
+ababba
+b
+a
+aaba
+2
+a 0.7
+b 0.3
+15
+
+10
+ba
+b
+babaaa
+baaaabaa
+aaaa
+abaaaaabba
+baa
+bba
+aaababaaa
+baab
+2
+a 0.3
+b 0.7
+14
+
+3
+ba
+bba
+abb
+2
+a 0.8
+b 0.2
+19
+
+15
+ababbaa
+baababbb
+baaabaaa
+a
+baa
+ba
+abbbb
+bbbaaab
+ba
+abaaabaaab
+a
+bab
+abbabaaab
+abb
+bbbb
+2
+a 0.1
+b 0.9
+18
+
+8
+ababbb
+aaab
+abb
+abbbab
+aabbb
+baaa
+ab
+bbaaabbabb
+2
+a 0.8
+b 0.2
+11
+
+6
+b
+aabbaa
+ab
+bba
+bbbbba
+aaaabbab
+2
+a 0.4
+b 0.6
+13
+
+4
+baabaaaaba
+abbab
+abbbaaabaa
+b
+2
+a 0.5
+b 0.5
+11
+
+14
+aa
+aabb
+aaaa
+baabab
+babba
+abaaa
+ba
+bba
+abaaaab
+babaabbb
+aaaaabbbb
+bbbbbbbb
+ba
+aaab
+2
+a 0.9
+b 0.1
+20
+
+8
+aabbbabbb
+aababbb
+baabbaa
+baabbbaab
+baa
+abbaaaab
+abbbbaaa
+baba
+2
+a 0.9
+b 0.1
+13
+
+19
+aaaababab
+bbb
+babbbb
+aaba
+b
+aab
+baba
+babaa
+bbba
+abbbbaaab
+babb
+baabaa
+aaaba
+b
+ba
+aab
+ababaaaba
+abbbabbabb
+bbabaa
+2
+a 0.1
+b 0.9
+10
+
+14
+ababaaab
+babbbaab
+aaabbabaaa
+bb
+aaababab
+aaa
+baabaababa
+bbab
+bababbb
+babbaaab
+babbbb
+baaaaa
+bb
+aaabb
+2
+a 0.7
+b 0.3
+11
+
+9
+baaabaab
+bbabb
+baa
+a
+a
+abaaabb
+a
+abab
+ab
+2
+a 0.9
+b 0.1
+10
+
+6
+aababbb
+baa
+ababaab
+baabb
+bbbaa
+baabab
+2
+a 0.3
+b 0.7
+13
+
+10
+abaabaa
+babb
+aabaaaaaba
+abaaabbaa
+aabbaaaabb
+abba
+baa
+bbbabaaaa
+aabaabaa
+babb
+2
+a 0.3
+b 0.7
+18
+
+9
+bbababbb
+baaaaaabab
+babbbbaba
+baaaba
+ba
+baaa
+abbbaabbba
+bbbabbbab
+baa
+2
+a 0.8
+b 0.2
+12
+
+8
+b
+baabaaaa
+abbb
+bbb
+abbb
+bbb
+baabaa
+aaabab
+2
+a 0.5
+b 0.5
+13
+
+7
+bbab
+aaaaaaaba
+aabbbbbbbb
+aabbababb
+baabb
+ab
+bba
+2
+a 0.4
+b 0.6
+14
+
+20
+bbbaaba
+bbaababab
+abba
+baab
+bbbbbaa
+bab
+aabbbbbab
+abbbaa
+bbaabbab
+aabb
+baabb
+abbaabbba
+bba
+bbbb
+aaa
+bababb
+bbbbaaaba
+b
+baabab
+aababa
+2
+a 0.2
+b 0.8
+16
+
+16
+aaaba
+aabbb
+abbbabba
+baaa
+bbabbabb
+aabaa
+abbaaa
+aaaaabb
+baabaa
+baaa
+aabb
+bbbbbabb
+baabbb
+baaa
+ababab
+babba
+2
+a 0.9
+b 0.1
+14
+
+11
+ab
+babbbba
+babb
+abaabb
+abbb
+ab
+abbb
+bbaba
+aabab
+aaabaab
+bbbaaaaa
+2
+a 0.4
+b 0.6
+17
+
+7
+ba
+aabbbaa
+abbbab
+bbabaaaa
+baaaaab
+abaaaa
+aabbaba
+2
+a 0.5
+b 0.5
+12
+
+9
+aaaabab
+aa
+aba
+bbb
+a
+aba
+b
+abaaabbab
+bbbbbbaba
+2
+a 0.5
+b 0.5
+17
+
+18
+bbbababaab
+abaabbbbbb
+a
+aaabbabbaa
+bbaa
+bbabbabbb
+abbbaabaa
+abbbbabbb
+aababbabba
+b
+ab
+aaabba
+bbaabb
+babba
+bbaabbaaba
+abbbbababa
+bb
+b
+2
+a 0.8
+b 0.2
+18
+
+5
+a
+baaababbab
+abbabbaa
+baabb
+bb
+2
+a 0.2
+b 0.8
+20
+
+18
+baa
+abbba
+bab
+abbabbaa
+bbbbbaaaa
+aab
+baababab
+abbbabbaa
+bbbaba
+baaa
+bbbba
+bab
+aaabbaba
+a
+aaabab
+abaab
+aaaabaaaba
+baaaab
+2
+a 0.9
+b 0.1
+11
+
+7
+aba
+aaaaab
+bbaaa
+babbaabb
+bbaaaabb
+bbbbaabb
+b
+2
+a 0.3
+b 0.7
+10
+
+13
+aaa
+abb
+b
+aababaa
+b
+abaaaababa
+bb
+aabaa
+baaaabb
+ab
+aaabaaaaaa
+b
+babaabbba
+2
+a 0.8
+b 0.2
+17
+
+16
+aaabbbaab
+baababaa
+abbbba
+baaaba
+a
+b
+aaabba
+abbaab
+ba
+abaaaaab
+bbbbbbb
+baaaab
+baabbabb
+bba
+abbbbb
+bba
+2
+a 0.3
+b 0.7
+14
+
+16
+aaaaba
+baabb
+abbbbaaba
+bbbbbaa
+bbbabaaba
+babbbaabbb
+bbbaabaabb
+aa
+baa
+aaabbbabab
+aabbb
+bbaab
+abbaab
+baa
+bb
+abaa
+2
+a 0.8
+b 0.2
+10
+
+3
+bbbabaa
+bababbaba
+aaba
+2
+a 0.3
+b 0.7
+13
+
+8
+aab
+babbbaabb
+baba
+a
+a
+bbabbbaa
+abaa
+aa
+2
+a 0.5
+b 0.5
+19
+
+6
+aaaaaaaab
+babbb
+aaaabbaaa
+abbba
+b
+aaaaaaabbb
+2
+a 0.2
+b 0.8
+11
+
+2
+abaa
+baaab
+2
+a 0.5
+b 0.5
+12
+
+3
+bb
+b
+bbabbb
+2
+a 0.5
+b 0.5
+19
+
+2
+babbbba
+aababbaabb
+2
+a 0.3
+b 0.7
+12
+
+5
+babba
+aaaab
+a
+aabaa
+babb
+2
+a 0.6
+b 0.4
+20
+
+14
+bbaaa
+baabbaaaab
+a
+abaaaaa
+aabbaabaaa
+abb
+aaaaaaa
+abaaab
+bbba
+babaa
+bbabbaa
+bbbbb
+aaaaab
+babb
+2
+a 0.2
+b 0.8
+16
+
+4
+aaabababb
+aaaabbab
+abbbab
+aabaab
+2
+a 0.7
+b 0.3
+11
+
+8
+a
+aaa
+bbbaaaab
+abba
+abbbabaabb
+b
+aaa
+baabaabaa
+2
+a 0.8
+b 0.2
+13
+
+13
+bb
+aabbabb
+abba
+aabbaaab
+aab
+bbababab
+bbba
+bbbbbbbbba
+bab
+babaabbb
+bbbbbaabab
+bbab
+aabaababba
+2
+a 0.1
+b 0.9
+19
+
+4
+babbababab
+baabababa
+b
+aabbb
+2
+a 0.8
+b 0.2
+15
+
+1
+abaabba
+2
+a 0.5
+b 0.5
+17
+
+14
+baabaaab
+babba
+aa
+babbaa
+aabbbb
+abba
+aabbaaba
+a
+abbabab
+aaba
+abb
+ba
+abaaaab
+aba
+2
+a 0.5
+b 0.5
+12
+
+8
+abaa
+baaabbbbab
+abaabaab
+baaaa
+bbaa
+bbaabbbbbb
+babaababba
+babaaabb
+2
+a 0.3
+b 0.7
+14
+
+9
+bbbaa
+a
+bbabaababb
+abbbababbb
+bbbbabbaba
+bbababa
+bbaabab
+bbba
+abbabbbbb
+2
+a 0.5
+b 0.5
+18
+
+8
+bbbbba
+aabababbbb
+bb
+aabaab
+babababb
+bbabbaaa
+a
+aabbaab
+2
+a 0.9
+b 0.1
+10
+
+1
+aba
+2
+a 0.7
+b 0.3
+16
+
+12
+babbba
+ababb
+abbabaa
+ab
+abaaaa
+babab
+abbbbaaa
+baba
+aabbabbba
+baaabb
+a
+bbababa
+2
+a 0.4
+b 0.6
+13
+
+12
+aabb
+bbab
+aababbbbba
+babbabbbaa
+baaabbbbb
+baa
+bbababaaa
+b
+baab
+abbbba
+a
+bbabbaa
+2
+a 0.9
+b 0.1
+17
+
+6
+bbbab
+abbaaaaaab
+aaabbbaba
+bbbabaaa
+aaaa
+babaaabbb
+2
+a 0.4
+b 0.6
+19
+
+1
+baababb
+2
+a 0.6
+b 0.4
+12
+
+13
+a
+abbbbba
+abbab
+aab
+baaabbaabb
+bbbaabaaa
+bbbbaabb
+aaaba
+aba
+babbba
+baaaaabbba
+bbababb
+babaaa
+2
+a 0.2
+b 0.8
+19
+
+7
+ab
+aaabbaab
+bbaa
+bbaabab
+bbb
+abb
+bbabba
+2
+a 0.8
+b 0.2
+20
+
+18
+bbbaabbbaa
+babaaab
+ba
+ba
+baaabbab
+baba
+bb
+abbbaababb
+abaaaa
+abababaabb
+aababaa
+bbbbb
+abaaa
+abbba
+bbaaaba
+bbbbabb
+bba
+ba
+2
+a 0.5
+b 0.5
+11
+
+11
+abbbaaabba
+baaaa
+aaabbaabb
+abbbbba
+b
+bb
+abbbbbaab
+ababaaabb
+bbabb
+baabbbbbb
+bbbaa
+2
+a 0.6
+b 0.4
+12
+
+9
+aab
+bababaa
+bab
+aaa
+bbbabbba
+baa
+abbaaaaab
+babbbaab
+ba
+2
+a 0.9
+b 0.1
+18
+
+8
+babaabbab
+aaaaaabab
+babbbaabaa
+ababbab
+bb
+baaaaab
+aababb
+ababbabaaa
+2
+a 0.6
+b 0.4
+13
+
+8
+abbbabbaba
+baabaaabbb
+aabbbabbab
+baaba
+ababa
+aa
+ababab
+bababaaaa
+2
+a 0.4
+b 0.6
+17
+
+11
+bbbab
+b
+abbab
+abbab
+ab
+a
+bbaba
+aabbbbabab
+bbbbaab
+abaabba
+a
+2
+a 0.6
+b 0.4
+12
+
+11
+aababbaaaa
+babba
+ababbabb
+a
+aababaabb
+bbbbbbbaab
+aaaab
+ababaaaba
+abbbaabba
+aa
+baabba
+2
+a 0.5
+b 0.5
+11
+
+19
+bbbbb
+bbbab
+ababaababa
+bbab
+a
+bbbbbbbaab
+a
+baaaba
+b
+bbb
+bbbababbb
+a
+b
+aabab
+bbabbb
+babaabaaa
+bbabbabab
+aabaa
+ababbaabb
+2
+a 0.3
+b 0.7
+19
+
+15
+b
+abaaabb
+abbbaa
+b
+aab
+abbbaabaab
+baaab
+aaaaab
+aabbab
+bb
+aaaabaab
+aaaba
+bbbaaaabaa
+baaaa
+babaaaaba
+2
+a 0.7
+b 0.3
+20
+
+13
+a
+bbababbbab
+aaabbbab
+baabab
+abbb
+ba
+abbbbabaa
+babbbbaab
+baaabbb
+babbabaaab
+b
+abbaabb
+abaabab
+2
+a 0.7
+b 0.3
+17
+
+4
+bbbaa
+bbbbaa
+aabbbbbbaa
+aab
+2
+a 0.9
+b 0.1
+17
+
+7
+abbab
+abaaaabab
+baaab
+aabaab
+bbbabba
+abaabab
+bbbbbbaba
+2
+a 0.5
+b 0.5
+19
+
+4
+bbba
+aabb
+bbbbbaa
+babbaba
+2
+a 0.8
+b 0.2
+17
+
+6
+abbbaa
+a
+baabab
+aabb
+baabaaba
+bbababab
+2
+a 0.3
+b 0.7
+20
+
+12
+bbaba
+aba
+aabba
+ababbbaaab
+b
+aabbbbabaa
+babbbbbbaa
+bbaaa
+aba
+baaa
+bb
+aab
+2
+a 0.7
+b 0.3
+20
+
+14
+baaa
+abbb
+abbbbabbab
+abaaaba
+bbabbbab
+baabbbbbbb
+bbaabbab
+abbbaaba
+baaaabaaba
+abbbaabaab
+bbabbbaa
+bbaabab
+abaaabab
+baaabb
+2
+a 0.2
+b 0.8
+10
+
+12
+aabbbbbba
+baabaaba
+baaaabaaba
+bababaaa
+ababab
+baabaababa
+bababbb
+abbabaab
+abbaaaabab
+abbbbba
+baabbba
+bbbabbbb
+2
+a 0.6
+b 0.4
+10
+
+6
+a
+b
+b
+abbbbaaab
+bbaaaabba
+a
+2
+a 0.6
+b 0.4
+18
+
+14
+bbaabaaa
+bbbbbbabab
+babaaaaabb
+babaabba
+bababb
+aa
+bb
+abbaabbaaa
+abbaaaab
+b
+abaa
+abbbab
+bababbabb
+a
+2
+a 0.3
+b 0.7
+13
+
+19
+baaabba
+baaba
+bababa
+bb
+bababaaab
+aabbab
+bbaaa
+baaaaa
+abaaa
+bb
+abaaabbaa
+aaaaabbab
+bb
+baaabaaabb
+bb
+bbaba
+a
+bbaaba
+bbab
+2
+a 0.5
+b 0.5
+14
+
+20
+aa
+aab
+abbbba
+baaba
+bbbaba
+bababbbb
+bbbaaab
+baaa
+abb
+aababb
+a
+b
+abb
+bbbabaa
+bbbbbabaab
+aabbaaa
+ba
+abb
+babaa
+aaa
+2
+a 0.4
+b 0.6
+17
+
+8
+bbaaa
+a
+aba
+bbbaaba
+b
+bbbabaaba
+baaaa
+aaababba
+2
+a 0.2
+b 0.8
+19
+
+11
+aaabb
+bbbbbbbaba
+aabbbb
+bbbbaab
+aba
+aaba
+bbbaaaa
+abbbb
+aa
+abba
+abbbabbaa
+2
+a 0.7
+b 0.3
+11
+
+12
+aaba
+abaaabbbab
+aabbbbbbbb
+abbaa
+bbba
+baaaaba
+bb
+babaaaaa
+aabbabab
+a
+a
+aabaaa
+2
+a 0.9
+b 0.1
+19
+
+4
+aabbaaa
+bbaaaaaa
+bba
+a
+2
+a 0.4
+b 0.6
+17
+
+3
+aababbbab
+baa
+babbababb
+2
+a 0.4
+b 0.6
+15
+
+10
+bbaaabaab
+baa
+abaabaaaa
+baabb
+babaab
+ababba
+abbbbb
+aab
+aaa
+ab
+2
+a 0.8
+b 0.2
+18
+
+12
+ba
+babbba
+bbbabb
+b
+bbaaab
+abbaab
+ab
+aabbab
+bab
+abaa
+babbbabb
+a
+2
+a 0.8
+b 0.2
+13
+
+19
+baaababaa
+aaabab
+bbababab
+bbaaabbb
+bbb
+aaabbbbb
+bbaa
+aabaab
+aa
+bab
+bbbabbbb
+aabaaabab
+abaabab
+bbbaa
+bbb
+bbaabaabaa
+b
+aaabab
+bba
+2
+a 0.3
+b 0.7
+16
+
+4
+abbab
+bbb
+aabaaaaabb
+bbbabaa
+2
+a 0.1
+b 0.9
+20
+
+11
+aabbaaabaa
+a
+aba
+aabaaaaa
+bbba
+bab
+aab
+bbabb
+ababbaa
+b
+bbbbabbba
+2
+a 0.7
+b 0.3
+16
+
+14
+a
+abbbababba
+bababaa
+aabababaa
+aaabb
+aaababb
+babaa
+aa
+bbbaabaab
+aaaa
+aab
+aaababbaaa
+aaa
+aabbaaabab
+2
+a 0.6
+b 0.4
+13
+
+4
+babbaaaa
+aaab
+aaabb
+aa
+2
+a 0.1
+b 0.9
+10
+
+3
+ababababb
+aabb
+aaab
+2
+a 0.1
+b 0.9
+20
+
+12
+aabba
+aabbbbbb
+bab
+bababbaaa
+abbbb
+babb
+b
+aabbbbabab
+aba
+baabb
+abaaab
+bbbbabb
+2
+a 0.3
+b 0.7
+17
+
+12
+baabb
+babbaab
+a
+bbbabbb
+abba
+baabab
+a
+abaabaaba
+aabbb
+bbaa
+bba
+aaaabbbb
+2
+a 0.6
+b 0.4
+17
+
+17
+aaba
+bbbbb
+bbbbaabb
+aaaa
+bb
+ababbbbb
+bbaaaaab
+aaabbbbaba
+bbabbbbb
+bab
+baa
+abbaa
+babbbbbb
+babaab
+bbbabbaa
+bbaabb
+aaaa
+2
+a 0.5
+b 0.5
+16
+
+14
+baaba
+aaabbaabaa
+aaabbbbaa
+abaaaaabb
+bababbbaab
+bbbb
+ab
+bababa
+abbbaa
+b
+ab
+aaabb
+baa
+bbaab
+2
+a 0.8
+b 0.2
+18
+
+1
+abbbab
+2
+a 0.1
+b 0.9
+18
+
+20
+aaab
+aabababbaa
+a
+bbaaab
+abbbabbbbb
+baaaababab
+aaa
+aaaabba
+bbbaba
+bb
+bbaaba
+aabbababab
+abbabba
+abbbaa
+baaaaaabaa
+abbaaabab
+a
+aaa
+bab
+baabaab
+2
+a 0.2
+b 0.8
+17
+
+3
+babaabbbb
+bbabbaa
+abbbbbb
+2
+a 0.2
+b 0.8
+20
+
+3
+abbabbbb
+bbbbaba
+bbbabba
+2
+a 0.9
+b 0.1
+20
+
+12
+aaabb
+a
+aaabba
+aaabbaa
+bbb
+a
+bbab
+bbaabbb
+ababbab
+ab
+aaab
+baa
+2
+a 0.1
+b 0.9
+16
+
+3
+baaaaa
+abaa
+a
+2
+a 0.4
+b 0.6
+19
+
+2
+bb
+a
+2
+a 0.9
+b 0.1
+12
+
+20
+aaabbbaa
+abaabbbabb
+abbaaaaaa
+abaaaa
+bbab
+baaaaaa
+abb
+abaaaabab
+a
+bbaaabbbb
+bbabbaabb
+bbbabbbaba
+bb
+baaabbabaa
+bbab
+bbbbabba
+bbaabaaaa
+ba
+aa
+abababba
+2
+a 0.8
+b 0.2
+15
+
+13
+bb
+bb
+aaaaaaaaaa
+aba
+baaaab
+bababba
+abaa
+bbbabaaaa
+aababba
+aabbbabbb
+bbaab
+abababaaba
+abaab
+2
+a 0.6
+b 0.4
+12
+
+19
+babbab
+bbaaaaab
+baabab
+abba
+bb
+a
+bba
+b
+bbababba
+a
+aba
+a
+abbabbaaaa
+aaabbaaaba
+ab
+aabbbab
+bbabbb
+bababa
+bbb
+2
+a 0.4
+b 0.6
+14
+
+20
+abaaabb
+bb
+abbabab
+abaabbaba
+bbbaa
+bbbbb
+baa
+babbbaaaba
+aaaabaabb
+babababbb
+bb
+ab
+a
+aba
+aaababb
+b
+bbbaaa
+abaaba
+babaaa
+abaabbabba
+2
+a 0.4
+b 0.6
+13
+
+5
+bbb
+aaaabbabbb
+bba
+baabbbbba
+b
+2
+a 0.7
+b 0.3
+13
+
+17
+babaa
+bbabbaa
+aaaa
+baabaa
+bbbbab
+b
+aab
+baabbaaab
+bbaa
+bababbbaba
+a
+babaaaabaa
+baaaaaab
+abbaaaa
+baaaaa
+bbbabaab
+aaaaabaa
+2
+a 0.3
+b 0.7
+11
+
+7
+aabbb
+baba
+bbbaaabab
+baabbabbb
+abaaba
+abbababbb
+babbbbabab
+2
+a 0.2
+b 0.8
+10
+
+8
+bbabb
+bbbaba
+baabaaaa
+aaabba
+abaabb
+abaabbaaa
+aaabab
+aaaaab
+2
+a 0.9
+b 0.1
+18
+
+10
+abababa
+abababbaaa
+bbaa
+baaa
+bbaab
+bbabba
+abba
+ba
+aa
+bbabaaabbb
+2
+a 0.7
+b 0.3
+10
+
+8
+abbabbabb
+bbaba
+baaab
+ababa
+abbbbba
+baaababa
+a
+babaaa
+2
+a 0.6
+b 0.4
+16
+
+8
+abbbbaba
+aab
+abab
+aaabaaab
+aa
+abbbbb
+aaabb
+a
+2
+a 0.6
+b 0.4
+19
+
+13
+babbbbaaaa
+abaaabbbba
+bb
+abaabab
+baab
+bbaaaa
+aab
+bbaababbab
+aab
+aa
+aabb
+a
+aabb
+2
+a 0.2
+b 0.8
+15
+
+15
+bbba
+babbba
+babbb
+ababbbbb
+baabbab
+a
+abbb
+b
+bbabaab
+bbba
+baabbb
+babba
+abaababa
+aaabaaba
+bba
+2
+a 0.5
+b 0.5
+11
+
+9
+ab
+aa
+baababb
+aaaaaaab
+baa
+aababbaaab
+a
+abbab
+b
+2
+a 0.9
+b 0.1
+14
+
+14
+aa
+aaab
+baaabb
+aabaa
+aababaaa
+ab
+aab
+aabaaaabab
+ababba
+bababba
+bbbbba
+a
+babbbb
+abbbababab
+2
+a 0.1
+b 0.9
+14
+
+5
+a
+b
+bb
+abbabab
+baaaababba
+2
+a 0.5
+b 0.5
+17
+
+10
+abbaaabb
+baab
+baabba
+bbb
+aa
+abbabbbab
+abb
+aabbbabbb
+babbabbaab
+abababaaa
+2
+a 0.5
+b 0.5
+17
+
+17
+baa
+abaabbbaba
+aaa
+bbaaa
+baabaaabb
+bbabbbbb
+aaaabbaab
+aaaaaabbb
+bbabbba
+aabbbbbbb
+abbabaaa
+ab
+b
+ab
+bba
+bbbabaaab
+a
+2
+a 0.4
+b 0.6
+13
+
+4
+aaabaa
+aabbabab
+a
+abbabaaa
+2
+a 0.7
+b 0.3
+17
+
+16
+aaaaaaba
+ab
+aaa
+b
+aabbbaabba
+bbabbaaaa
+abbbabaaaa
+bbbabb
+babb
+bbababba
+aa
+a
+aabaabbbba
+bbaabbabab
+abb
+ba
+2
+a 0.9
+b 0.1
+14
+
+18
+aba
+baba
+abababa
+a
+aabaaaaabb
+ba
+bb
+abaaaaabba
+bababaa
+ababb
+babbb
+bbba
+bbbabaaa
+aabaa
+bba
+aaaaa
+ab
+aaabbb
+2
+a 0.7
+b 0.3
+13
+
+2
+bbab
+aaaaaab
+2
+a 0.5
+b 0.5
+15
+
+7
+abaabbaaba
+baaab
+abbb
+abaaabbba
+b
+aaabbab
+aaabbabbb
+2
+a 0.1
+b 0.9
+19
+
+20
+aabab
+baaabbabba
+bab
+aab
+aaaabbaaba
+aaabbaaab
+a
+bbab
+bbb
+bb
+bbaaaaba
+aaaa
+bb
+abaa
+a
+aabaa
+aabaaaaaab
+babbbb
+baaaa
+abbbaa
+2
+a 0.8
+b 0.2
+16
+
+7
+ababbbb
+bbaa
+babaaaba
+abb
+bba
+b
+bb
+2
+a 0.6
+b 0.4
+12
+
+7
+aaabbbbabb
+abba
+abbaa
+aaabaaaaab
+bbbaabab
+bb
+bbbabaaabb
+2
+a 0.3
+b 0.7
+16
+
+13
+aab
+a
+abbbaaaab
+aaababbb
+aa
+b
+bbbabb
+aaabaaab
+baaaaba
+abaa
+abbbaba
+aabbba
+aabbb
+2
+a 0.2
+b 0.8
+12
+
+11
+babbabbb
+aab
+aaaab
+bbaaaab
+aaaa
+aa
+bbabbba
+abbbb
+aabbb
+bbabbbaba
+aa
+2
+a 0.6
+b 0.4
+18
+
+17
+b
+bababbaab
+babb
+aabaabbbaa
+aaabbbaa
+b
+abbabbab
+aaaa
+aabb
+abbbaab
+babbbaaabb
+aaabaaa
+a
+babaab
+bbaaaaa
+b
+baaaaaba
+2
+a 0.1
+b 0.9
+16
+
+6
+bbbba
+bbaaaaaab
+a
+abaaba
+ba
+ba
+2
+a 0.7
+b 0.3
+14
+
+11
+bbbbaaabbb
+a
+aa
+bababaab
+bbbbbbbbba
+abbabbab
+aab
+aabbaabbba
+bbba
+aabbb
+bbaa
+2
+a 0.1
+b 0.9
+10
+
+2
+aabbbaa
+ab
+2
+a 0.3
+b 0.7
+13
+
+16
+bbbaabaab
+bbbb
+baa
+baa
+aabbbaaabb
+b
+b
+bbaaababbb
+babbbb
+abbabbbbaa
+baaaabbbaa
+abbbaa
+aaaabab
+bbaababbb
+b
+abbbbab
+2
+a 0.9
+b 0.1
+18
+
+7
+bababb
+ababbbab
+aabbbbbbbb
+b
+bbaaa
+bb
+ba
+2
+a 0.4
+b 0.6
+15
+
+10
+bbbabb
+aabab
+a
+bb
+abbaba
+abab
+aaabaab
+baababbaab
+abbaab
+aab
+2
+a 0.6
+b 0.4
+19
+
+2
+baabbaaba
+aabababaaa
+2
+a 0.8
+b 0.2
+13
+
+15
+aabbbbb
+bb
+bbabbbb
+aaaaa
+baaabbaa
+ababaaaaab
+ab
+babbbaaaba
+a
+babababb
+aabbaab
+bbb
+b
+aaababaaaa
+ababaaaaa
+2
+a 0.9
+b 0.1
+20
+
+17
+babaaa
+baa
+bbbab
+a
+aabbaab
+bab
+baab
+aba
+aaa
+bbbaabbaa
+baab
+baababa
+ab
+baaa
+aaa
+aabbbba
+abbbaaba
+2
+a 0.1
+b 0.9
+11
+
+11
+babbabba
+abbaaaab
+bbaabbaba
+ab
+baabaaa
+b
+aaa
+b
+aaaaaabab
+abb
+bbb
+2
+a 0.1
+b 0.9
+11
+
+17
+bbbbabbb
+a
+aabbaaa
+bbbbabbba
+bbbbbba
+bbb
+baaababbaa
+aa
+abaabbb
+bbaaaaba
+bbaaabb
+aaaaabb
+abaa
+a
+babaababa
+ba
+aabbaaaaba
+2
+a 0.4
+b 0.6
+12
+
+10
+b
+bbab
+bbaa
+baabaaaaa
+bbbbbb
+aabb
+bbaaba
+aaababaa
+baba
+aaabaaaab
+2
+a 0.3
+b 0.7
+16
+
+9
+bbbbab
+b
+bbb
+abb
+aabbabbaaa
+ba
+bbbbaba
+baab
+b
+2
+a 0.9
+b 0.1
+11
+
+20
+aaabbaa
+b
+aaa
+bbaa
+aba
+aaaabbbbaa
+aabb
+b
+aaaabaa
+aaaabaa
+ab
+baaba
+aaab
+bbbbaab
+bbbaaababb
+a
+ababb
+bb
+bbbaababb
+bb
+2
+a 0.2
+b 0.8
+15
+
+10
+bbbaaa
+bbabbbabab
+babaabaa
+a
+a
+baa
+aabbbb
+ba
+babaaba
+aab
+2
+a 0.6
+b 0.4
+12
+
+14
+bbb
+baab
+aaa
+babaa
+bab
+aababbba
+bbab
+aababa
+bbabaabaa
+aa
+bbbbabbbbb
+bbabbbbbab
+ababbabaa
+abaaaab
+2
+a 0.7
+b 0.3
+19
+
+6
+a
+aaabaa
+aaa
+bba
+baaabaab
+baaaaabaa
+2
+a 0.1
+b 0.9
+17
+
+1
+babaaabbba
+2
+a 0.5
+b 0.5
+15
+
+1
+babbbabba
+2
+a 0.4
+b 0.6
+17
+
+14
+bbbaaa
+ababab
+abbabb
+ababababaa
+baab
+aaabaaabaa
+bbbbbbb
+a
+bbbaaa
+b
+a
+a
+b
+abbb
+2
+a 0.7
+b 0.3
+13
+
+17
+abb
+aababab
+b
+ba
+aab
+aaaba
+aabbbb
+aaab
+bb
+bababbab
+aabaaba
+bbab
+babbab
+baabaaaa
+b
+aababaaaa
+a
+2
+a 0.2
+b 0.8
+19
+
+12
+abb
+baa
+aaa
+ab
+ba
+bbbabbab
+abbba
+abaaaabbb
+aaab
+bababa
+baababbaa
+abbbabbbaa
+2
+a 0.4
+b 0.6
+15
+
+6
+bab
+abb
+a
+ab
+ab
+bbbb
+2
+a 0.3
+b 0.7
+19
+
+7
+ababba
+baaaaaaab
+bbaaaaabb
+baabbaaaaa
+aaaaa
+bb
+aab
+2
+a 0.9
+b 0.1
+15
+
+3
+bbabababa
+bbab
+abbb
+2
+a 0.2
+b 0.8
+12
+
+15
+abbababbaa
+babaabb
+bb
+abbaba
+b
+aaaaabb
+bbabaa
+bb
+ba
+aaaba
+abab
+abbabaa
+aaaa
+abaa
+babbb
+2
+a 0.7
+b 0.3
+19
+
+16
+babaa
+ababbbb
+aaba
+baaa
+bbbbb
+a
+aa
+aabbbba
+bababbaaa
+ababbbba
+aa
+aba
+bbbab
+bbabbaaa
+b
+abbbab
+2
+a 0.3
+b 0.7
+17
+
+11
+babaaa
+abab
+baabaaaaaa
+ab
+bb
+baabaaaaaa
+a
+aab
+aababbaaba
+ab
+bbaba
+2
+a 0.1
+b 0.9
+11
+
+16
+bbaab
+bbaa
+bab
+bbbbaa
+baaaaaabba
+a
+bbbaab
+a
+bbba
+aaabaaaaab
+babba
+bbb
+ab
+b
+aaabbb
+abaaaaaa
+2
+a 0.8
+b 0.2
+20
+
+7
+abbb
+ababaa
+b
+bba
+bbbbaaaa
+bbbbaaab
+aaba
+2
+a 0.5
+b 0.5
+10
+
+15
+a
+abbbbba
+bbb
+bbbbaaaabb
+b
+aabaababb
+bababba
+aabbbbbb
+ba
+b
+abbaabaaa
+baabb
+a
+aaaabba
+bbabbbba
+2
+a 0.7
+b 0.3
+11
+
+16
+aa
+aaaaa
+aab
+bbabbabaa
+bbabbabb
+aaaabaaab
+bbaabbb
+aaaaabbabb
+abaaa
+b
+aababbbba
+aabbabba
+bbabaabb
+aa
+ababbbbbb
+baabba
+2
+a 0.4
+b 0.6
+18
+
+17
+bbbabaa
+bbbbbba
+aaaabbab
+aba
+aabbbbaa
+babb
+abbbabbbb
+aaab
+b
+abaabbabbb
+baa
+aabbbbabaa
+aabbbabb
+abbbb
+aaaabaa
+bbaabbbab
+b
+2
+a 0.1
+b 0.9
+11
+
+17
+aabbbbaa
+ababaabbaa
+bbababba
+abb
+a
+aaabaaaabb
+babaa
+bab
+aaaabb
+baaaaa
+bba
+baabababb
+aab
+b
+bbabbbab
+bb
+bbbababbaa
+2
+a 0.7
+b 0.3
+11
+
+14
+ba
+abb
+aabb
+bbaa
+abaabbba
+aaababbbbb
+baabbb
+b
+aaa
+bbbaa
+abbaaaba
+bbbbab
+abbaab
+bbb
+2
+a 0.9
+b 0.1
+15
+
+2
+bbbbaaaabb
+aba
+2
+a 0.9
+b 0.1
+15
+
+1
+bbabaab
+2
+a 0.6
+b 0.4
+17
+
+6
+a
+a
+ba
+ababb
+a
+aab
+2
+a 0.4
+b 0.6
+19
+
+9
+aabbbaa
+babbabbba
+aabbbab
+bbaaabbbbb
+ab
+bababb
+bbabbbaa
+a
+babbbabb
+2
+a 0.1
+b 0.9
+19
+
+17
+babaaab
+a
+abbbabaaa
+abaabab
+abbabba
+bbabababbb
+baa
+bb
+ababa
+baabaaaa
+abbaaba
+bbbbabbbab
+aabaaaba
+bb
+abbbba
+bbabbbabbb
+aaaa
+2
+a 0.6
+b 0.4
+10
+
+19
+babaaaaab
+bbabaabaa
+babbbbbbb
+aaa
+abbaababb
+aa
+bbababbbaa
+bbbba
+ababbbb
+baaabbbbb
+bbab
+aaa
+ab
+bbaaa
+aaabbaa
+baa
+aa
+babbaba
+a
+2
+a 0.6
+b 0.4
+19
+
+3
+aabba
+babbabbbb
+bababa
+2
+a 0.5
+b 0.5
+10
+
+17
+aababbabb
+aabaabbbab
+aaabaaaabb
+abbbbbbaba
+bbb
+bbbbb
+abbab
+aaabb
+b
+bba
+baaaab
+babbaa
+aabbbb
+bbbbbbab
+ab
+aababaaba
+bbaaba
+2
+a 0.4
+b 0.6
+14
+
+1
+baababbbb
+2
+a 0.9
+b 0.1
+10
+
+16
+bbb
+a
+babbaaa
+b
+b
+aabbabb
+babbabbaab
+aabbbbab
+abaaaaaa
+bb
+abaaa
+bbabba
+ababa
+aabbabbab
+bbabbaabab
+aaaa
+2
+a 0.9
+b 0.1
+16
+
+7
+aabbaa
+bbbaab
+aaaa
+abbbaba
+aaab
+bbba
+aabb
+2
+a 0.7
+b 0.3
+14
+
+7
+babbaa
+bbbaabaaa
+abbbaaa
+aaa
+b
+ababbbb
+bbbbaaaaa
+2
+a 0.1
+b 0.9
+16
+
+11
+aa
+bbbbbbbba
+b
+ababaabbb
+aababbaa
+abaaabaa
+babbbab
+ba
+aaa
+bba
+aaabaabbbb
+2
+a 0.6
+b 0.4
+17
+
+5
+b
+abaaabb
+abbaaaaab
+bab
+aaba
+2
+a 0.8
+b 0.2
+20
+
+16
+aab
+ba
+baababbb
+aa
+abababaab
+baab
+baba
+babbaaa
+aabab
+baaabab
+babbbabaa
+ab
+aaabaaaa
+baabab
+aa
+babba
+2
+a 0.5
+b 0.5
+15
+
+18
+baaaba
+bb
+babbb
+aaaabbba
+a
+ba
+bbaba
+baaab
+abbaabbb
+abbbbb
+aaabaa
+ab
+abaabaaa
+b
+bbb
+aabaa
+abbbbaabaa
+aba
+2
+a 0.8
+b 0.2
+14
+
+20
+babaaa
+bbaaabaaba
+bb
+bbaaab
+bbbbaba
+bbbabbbbba
+a
+aaabbbbbab
+aaabbab
+aaabbabb
+abaabbaaab
+aa
+bb
+babbbaabb
+baaabbaaba
+bbbbbbbaaa
+abaabaabb
+bbbb
+bbbbbbaaa
+aabbb
+2
+a 0.9
+b 0.1
+13
+
+9
+bbaaa
+bbbbbbaab
+aba
+abab
+aaba
+abb
+bb
+abab
+bbba
+2
+a 0.3
+b 0.7
+19
+
+4
+ababbbab
+babbaabb
+baabababb
+aabbabaaa
+2
+a 0.5
+b 0.5
+11
+
+19
+babaabbbba
+aaabbbabab
+bbb
+aaa
+aaaa
+babbaaaaaa
+aba
+bbaab
+ababa
+bbbabbbbb
+aaaabba
+bb
+bbaba
+abbbabba
+bbaaaa
+aababba
+baabbaba
+abbbbb
+aaaba
+2
+a 0.2
+b 0.8
+14
+
+16
+baabaa
+bbbbb
+ab
+bb
+bbaaba
+aaaabaaab
+aaa
+ab
+babbaaaaa
+babbbbab
+a
+aaabbb
+baaabb
+babb
+aab
+aabaaaaab
+2
+a 0.2
+b 0.8
+18
+
+3
+babb
+babaaababa
+a
+2
+a 0.2
+b 0.8
+18
+
+2
+aaabbb
+bbbaaaabba
+2
+a 0.2
+b 0.8
+18
+
+18
+bb
+bbabba
+abaa
+bb
+aaa
+aa
+bbb
+baba
+aabba
+aaaaaabbab
+abaabb
+baabab
+abba
+abab
+aaabbaab
+bbb
+babbbbaa
+aaabbbaa
+2
+a 0.8
+b 0.2
+15
+
+17
+a
+bb
+abbabbbaa
+baaabaaabb
+baabbbba
+abaabbaaa
+aaaababb
+abbabbbaa
+baba
+baaabbbb
+bba
+aaabbaaa
+aaaaabbaa
+baababaaa
+bbab
+bbaa
+bbb
+2
+a 0.4
+b 0.6
+18
+
+4
+aabaabaaab
+baaaabbb
+aaa
+ababbabb
+2
+a 0.6
+b 0.4
+11
+
+16
+babbaba
+bb
+b
+b
+aa
+aaaabb
+baabbabb
+aabab
+bbbbba
+a
+baaba
+bb
+bbaabaa
+abbabaaa
+ab
+aaabbbbbb
+2
+a 0.9
+b 0.1
+14
+
+7
+aaaabbaa
+aaabbbb
+aaab
+abaaaaaa
+bababbab
+babb
+abbbbaa
+2
+a 0.6
+b 0.4
+10
+
+20
+abab
+bbaaaaabba
+abb
+babaaa
+b
+abbb
+babbabab
+b
+aabbbabbab
+ababa
+baaabbb
+bababbabb
+bb
+abbbb
+abbab
+b
+bbaba
+aabbbbaa
+bb
+bbab
+2
+a 0.2
+b 0.8
+10
+
+10
+aabaa
+ababbabaaa
+abbaaba
+bb
+aaaabb
+babab
+a
+aa
+bbaaba
+aa
+2
+a 0.7
+b 0.3
+10
+
+9
+abbbabbb
+bbbabbaabb
+aaababaa
+ba
+abbbbaaa
+aaba
+bbabbaa
+abbb
+bbbbbbb
+2
+a 0.8
+b 0.2
+10
+
+15
+aabbbabbaa
+babaa
+aa
+abbbbabbb
+abba
+bbbaaabbba
+bababbab
+abab
+ababbaaba
+babab
+aabbbbaab
+bbabbbaaab
+a
+aabbbbba
+bab
+2
+a 0.4
+b 0.6
+16
+
+11
+abb
+baabbaa
+bab
+babaaab
+abbaba
+baaaab
+ba
+babb
+ab
+baaabbbab
+ababbb
+2
+a 0.8
+b 0.2
+16
+
+1
+bbbabbbbb
+2
+a 0.2
+b 0.8
+17
+
+14
+aa
+bba
+abba
+aaabbaa
+aababa
+abaabba
+baaaabab
+bbaabaabbb
+bbbaaaa
+abaa
+ababbbba
+babab
+baba
+bb
+2
+a 0.6
+b 0.4
+15
+
+7
+baabaabbaa
+a
+bbaab
+baababbbaa
+baaaabba
+bbaaabbaab
+baabaabab
+2
+a 0.3
+b 0.7
+20
+
+9
+aaaaaaba
+aabaabb
+baaa
+abb
+abbbbabbba
+ab
+abbbbab
+aaaba
+bbaabb
+2
+a 0.1
+b 0.9
+16
+
+19
+baaab
+bbbbb
+bb
+babbabb
+baaabbbaaa
+baabba
+ba
+aabbbbab
+babbbaba
+a
+bbbaaabbb
+bbaaa
+baaaaaa
+baaaaaa
+aababaaaab
+ababaaabbb
+baabaabb
+abababbbba
+aaabbbba
+2
+a 0.1
+b 0.9
+20
+
+8
+abbb
+baaabbaaa
+aaabb
+bbabba
+babbabb
+ab
+ababbbaaba
+bb
+2
+a 0.8
+b 0.2
+14
+
+8
+aabbabbab
+aaa
+a
+bab
+abbbaabaaa
+bb
+babbaba
+abaaabba
+2
+a 0.5
+b 0.5
+12
+
+17
+baaa
+a
+bbaabbaaaa
+aabbabbaba
+b
+aaabab
+bb
+ababa
+baabaa
+aababb
+aaabb
+abaa
+aabbbba
+bbaa
+ba
+bbabbaabba
+bb
+2
+a 0.9
+b 0.1
+15
+
+12
+bbaaabbbb
+aa
+babababab
+ababaabab
+bbaba
+abbaaba
+aaba
+baaa
+aabbabbaa
+bba
+aabab
+aaaa
+2
+a 0.7
+b 0.3
+19
+
+6
+b
+abaabb
+a
+bbbba
+abbba
+b
+2
+a 0.1
+b 0.9
+14
+
+18
+bbaabaabab
+a
+bba
+a
+bbaabaabab
+aababab
+aaba
+abaaaaa
+abaa
+aaa
+bbba
+bba
+abaabbabbb
+bbbbaab
+ababaaaaba
+ba
+bbababbb
+baabababb
+2
+a 0.4
+b 0.6
+13
+
+4
+aaab
+baabaaabb
+aaaaaabba
+abbbaaba
+2
+a 0.6
+b 0.4
+19
+
+3
+abaabbbbb
+abaaabba
+ba
+2
+a 0.6
+b 0.4
+13
+
+19
+babbababb
+b
+ababbba
+aaaa
+aaabba
+abba
+aaabbaaaa
+b
+bbbababba
+babab
+bbaabbbaa
+bbb
+bb
+aaab
+aabbbaba
+bbaba
+abbb
+abbb
+abbab
+2
+a 0.9
+b 0.1
+19
+
+14
+baababb
+aabbbbbbbb
+bbaabaa
+aaababa
+a
+bab
+ab
+abb
+abbba
+bbbab
+bbaa
+bbaabaa
+bbb
+b
+2
+a 0.8
+b 0.2
+10
+
+13
+bbbaa
+bababa
+aaabbbbaba
+baab
+b
+ababbbb
+bbbbba
+baabaaab
+abb
+bb
+aba
+a
+bbbbbaabbb
+2
+a 0.7
+b 0.3
+15
+
+6
+aba
+bb
+baabaaaa
+bbbaaa
+aaba
+bbaaaabaab
+2
+a 0.1
+b 0.9
+20
+
+2
+ababaa
+abaabbaa
+2
+a 0.9
+b 0.1
+18
+
+3
+bbabaababb
+abbbbaaa
+aa
+2
+a 0.5
+b 0.5
+10
+
+13
+aababba
+bbabbaab
+baaabb
+baaabab
+abaaa
+bab
+abababbb
+abbba
+baabbbab
+ababbaaaaa
+aba
+bba
+bbaa
+2
+a 0.2
+b 0.8
+13
+
+14
+abbbabbba
+bbb
+abbaaabb
+aabaa
+aaaabba
+baaaa
+ababa
+aabaaa
+bbabb
+ababab
+b
+a
+abbbabbb
+baaa
+2
+a 0.3
+b 0.7
+18
+
+14
+bbab
+babaa
+b
+bbbabaaa
+aaaaa
+abba
+aaba
+bbbababbbb
+abaaaba
+bbbbbba
+abbab
+bbbabbabb
+ab
+bab
+2
+a 0.9
+b 0.1
+10
+
+14
+baaa
+abaabbab
+b
+bbababaa
+aabbabbaba
+abaa
+babb
+baaaabaa
+bababbbbbb
+bb
+babaabb
+abaabb
+aabbb
+babbb
+2
+a 0.2
+b 0.8
+13
+
+3
+b
+ababaa
+bbb
+2
+a 0.8
+b 0.2
+20
+
+10
+abaabbbbbb
+baaab
+bbbbbbb
+aaaabbaab
+aa
+aabbbaab
+abbbbbbb
+abbaaaa
+a
+bbbbbbba
+2
+a 0.6
+b 0.4
+10
+
+5
+babbab
+a
+baaab
+ab
+bababaa
+2
+a 0.7
+b 0.3
+15
+
+7
+baa
+bbbbbbaa
+bbbabbb
+aabaababba
+ba
+bbbb
+a
+2
+a 0.8
+b 0.2
+17
+
+14
+aaabbb
+bab
+bbab
+bbaaba
+baabaab
+aaaab
+baa
+a
+bbbb
+b
+ababbaaba
+bbbbab
+ab
+aaaab
+2
+a 0.3
+b 0.7
+19
+
+16
+bbbb
+bbaababaab
+abb
+abbaaba
+babba
+aababbbab
+ba
+bbabaaaa
+abaabba
+bbbabababa
+abbbaaaab
+bba
+baaab
+bbbaab
+abbba
+aaaaabab
+2
+a 0.7
+b 0.3
+18
+
+3
+bbababaa
+bbbab
+bbbbbaaaaa
+2
+a 0.2
+b 0.8
+20
+
+13
+ab
+babb
+abaababaaa
+bbbaaababb
+b
+baabb
+ba
+b
+aabbb
+bbab
+aabbbbab
+b
+a
+2
+a 0.8
+b 0.2
+20
+
+15
+aaa
+aaaa
+aabaaabb
+abbaa
+a
+aba
+aabbbb
+aaaa
+bbaababb
+aab
+babbbbaba
+baaabaaabb
+babbb
+bbaaabab
+aabaaaa
+2
+a 0.8
+b 0.2
+19
+
+8
+bbaaabb
+bab
+aabbbbabb
+babab
+aaa
+abaaaaabaa
+babbbbaaa
+abbbaaabaa
+2
+a 0.5
+b 0.5
+13
+
+9
+abbbbb
+ababb
+baaaabba
+bbbbabbabb
+ababa
+aa
+bbbbbbbb
+bbaaa
+baaaabbbbb
+2
+a 0.9
+b 0.1
+13
+
+12
+aaabab
+abbbbab
+abab
+b
+babbbbab
+aabaabbba
+ab
+abbbab
+bbabbaaa
+aabbbbb
+ababab
+a
+2
+a 0.3
+b 0.7
+14
+
+12
+ba
+aaabb
+bbbaa
+b
+aaabaaaa
+bbbbb
+abbaaa
+ab
+baababbab
+abbab
+bbaaaaabaa
+bab
+2
+a 0.7
+b 0.3
+16
+
+14
+aaabbbb
+baabaaaaa
+bababaabb
+abaa
+bababa
+bbbaaabba
+baba
+abbaababaa
+bbaab
+abbabbbaaa
+baaabb
+abaabb
+ab
+bb
+2
+a 0.4
+b 0.6
+11
+
+15
+bbabbab
+abab
+abbbba
+aabbb
+ab
+b
+aabbb
+aaa
+bb
+bbba
+a
+abbaab
+aabaaabb
+aba
+aaababbbab
+2
+a 0.4
+b 0.6
+17
+
+5
+aab
+bb
+aababab
+b
+abaabaabbb
+2
+a 0.3
+b 0.7
+16
+
+1
+bababbaaaa
+2
+a 0.3
+b 0.7
+17
+
+9
+abaaba
+abbbbbb
+baab
+baaababbb
+bbbabbab
+bbab
+abaaa
+bbbb
+bbaaabb
+2
+a 0.2
+b 0.8
+15
+
+9
+ab
+aab
+aabba
+ababbbabba
+ababbabab
+baaa
+bbaaaabab
+aabaab
+babbbaabbb
+2
+a 0.8
+b 0.2
+14
+
+20
+bbaaabab
+baababab
+baabb
+abbbabbbbb
+bbbbbbba
+aabaab
+aa
+abbbb
+aba
+bbba
+baaaaabbbb
+babaaabbbb
+bbabbbbb
+aabaabbaa
+baabab
+aa
+a
+ab
+bb
+babbabbabb
+2
+a 0.5
+b 0.5
+16
+
+7
+bbab
+aaaaaa
+abaabbaa
+aabbbbbabb
+aabbbb
+abaaaababa
+ababab
+2
+a 0.2
+b 0.8
+20
+
+4
+aabbabb
+babb
+bbbbbbabbb
+abbaaba
+2
+a 0.5
+b 0.5
+11
+
+20
+aaaabaaabb
+bbaaabbbbb
+bbbabaa
+aabbbabbaa
+a
+bbabbbbb
+bbbbb
+aabbaaa
+ababbbbbb
+aaaa
+bbbaa
+baabaaabb
+abbaaababa
+bb
+baabbaa
+baba
+abbbaaabb
+bababbba
+a
+ab
+2
+a 0.6
+b 0.4
+16
+
+9
+aaaaaab
+abb
+bab
+abbabbb
+aabbbab
+baaaaabab
+aababababa
+bb
+aaaaabbaaa
+2
+a 0.6
+b 0.4
+20
+
+9
+aaabbbb
+aabbab
+b
+aaaabbbba
+baababaab
+bbbbbbaa
+aaabbbbaa
+bbbbbab
+aa
+2
+a 0.4
+b 0.6
+12
+
+16
+b
+b
+bbaaaaaa
+ababbbbb
+baab
+baa
+b
+ababbbabbb
+aabab
+aba
+abaaba
+abbbb
+abababab
+a
+baabbaabb
+b
+2
+a 0.3
+b 0.7
+19
+
+8
+bbb
+babb
+aaabb
+bbabbbaaba
+ab
+bbaabbaaab
+abaab
+abbbbaab
+2
+a 0.1
+b 0.9
+11
+
+10
+aaaabb
+abaabbbba
+babbb
+b
+aababbaaba
+baabbbbaa
+baaaaaabb
+abaabb
+a
+bbabb
+2
+a 0.1
+b 0.9
+14
+
+13
+aaba
+abbabaaaa
+b
+baabb
+aaaabaa
+aabababa
+ababbbab
+bbbaabbabb
+a
+bbbaa
+baaa
+b
+abababb
+2
+a 0.1
+b 0.9
+20
+
+9
+aa
+bbaabbb
+bb
+abbbb
+bbaabaaabb
+babbbbbaa
+abbb
+abbabbabb
+ba
+2
+a 0.6
+b 0.4
+16
+
+12
+abb
+babbababb
+abbab
+aabbabbaa
+abaabbab
+baababbb
+bb
+b
+abbbba
+aab
+abbbababaa
+bbbabbabaa
+2
+a 0.5
+b 0.5
+13
+
+19
+ab
+bbaaaaaab
+baaba
+aab
+ba
+babbaaa
+abaaaaaab
+b
+baaab
+abbbabbb
+bbbba
+bbbbaaa
+aa
+aaa
+aaa
+babaab
+abaababba
+abbaababba
+bb
+2
+a 0.8
+b 0.2
+11
+
+12
+ababbbabb
+abbaaabaa
+b
+aabababab
+babbabab
+ababbaaabb
+bbbbabaaa
+ba
+bbababaaab
+babba
+bbaabab
+b
+2
+a 0.6
+b 0.4
+20
+
+15
+a
+aaababaaaa
+ab
+abab
+bbaabb
+aabbaaba
+ab
+bbaa
+abb
+aaaa
+bbbaa
+abb
+babaaba
+ababba
+baababba
+2
+a 0.5
+b 0.5
+13
+
+2
+aaaaaabb
+bbbaababb
+2
+a 0.2
+b 0.8
+11
+
+1
+b
+2
+a 0.9
+b 0.1
+17
+
+13
+baaa
+abaababaa
+babbaaa
+a
+bbabaaa
+bbbbbbbb
+aaaa
+aaa
+ab
+aabbbbbabb
+b
+aa
+aaaabb
+2
+a 0.2
+b 0.8
+10
+
+1
+bbaaaaaaa
+2
+a 0.7
+b 0.3
+18
+
+7
+abbbb
+aabba
+abaaabaa
+baaaabab
+bbabaa
+ababbaba
+aaabbaaba
+2
+a 0.2
+b 0.8
+19
+
+4
+aabaab
+aaabbb
+abbaaaaa
+a
+2
+a 0.8
+b 0.2
+20
+
+20
+aabbaaaaa
+aaaaaabb
+a
+b
+bbbaa
+aaaba
+bbaabbbaa
+ab
+abbaaa
+abbbaaabba
+bbaabaaa
+bbaaab
+ba
+bbaa
+bbababba
+a
+baaaaa
+aaabb
+ab
+aaab
+2
+a 0.4
+b 0.6
+12
+
+17
+bbabbbb
+aab
+bbbaaaab
+abababbba
+aaaaaabaa
+bbab
+abaaaba
+baaababbbb
+aaaa
+babbaaaab
+babbbbaaaa
+babaaaab
+babaaaaba
+abbbabbabb
+ababaaaaaa
+baabaaaabb
+abbbbab
+2
+a 0.7
+b 0.3
+17
+
+13
+ba
+aabbaabaab
+aaaaabbbb
+bba
+abbaaa
+abbaabbab
+aabb
+bbaa
+a
+ababbbbb
+b
+aaba
+aabbba
+2
+a 0.9
+b 0.1
+11
+
+10
+a
+baaabaaa
+aaababaaa
+bab
+abaaabb
+abbbbba
+abb
+aab
+bbaab
+bbbaabba
+2
+a 0.8
+b 0.2
+18
+
+10
+abba
+abba
+ba
+babaaaa
+ababab
+baaababbaa
+aab
+baaba
+ababaab
+ba
+2
+a 0.6
+b 0.4
+12
+
+13
+bbabbba
+bbabbbb
+abababb
+abbabaaaaa
+a
+abaaabbba
+aabbbbb
+aabaaa
+abbbab
+bab
+bbbabaa
+aabbbb
+aabaaaabba
+2
+a 0.7
+b 0.3
+11
+
+12
+bba
+ababaaaab
+aabba
+abb
+b
+bbbbbaab
+baaaaaa
+ba
+babbabb
+bba
+b
+aab
+2
+a 0.7
+b 0.3
+17
+
+12
+ababaaba
+aabaabbbba
+bababbbb
+bbabaab
+aba
+babaa
+abaaababab
+baabbbaba
+bbbaabbb
+baab
+b
+abb
+2
+a 0.8
+b 0.2
+17
+
+3
+bbbbbaabab
+b
+ababb
+2
+a 0.5
+b 0.5
+19
+
+9
+aab
+aab
+bbabba
+ba
+ababbab
+bababb
+baabab
+bab
+bbb
+2
+a 0.8
+b 0.2
+20
+
+13
+bababbbb
+bbaa
+baa
+abaabbaab
+aaaa
+bb
+a
+abb
+aabbaaabb
+bbbbaaa
+aab
+baabaab
+aaaba
+2
+a 0.3
+b 0.7
+15
+
+11
+babbbba
+bbbbb
+ababbaa
+bbaabbbab
+baabababa
+bbbbbb
+bbaaaba
+b
+b
+baababb
+aababaaab
+2
+a 0.7
+b 0.3
+18
+
+14
+aba
+a
+bbab
+b
+abbbab
+bbbaababa
+abba
+baab
+ab
+abbbab
+aab
+bbbaaaba
+ba
+ba
+2
+a 0.8
+b 0.2
+18
+
+10
+babbbbaa
+aaaababb
+bbbabbaba
+ba
+baaaab
+ab
+aabbaab
+aab
+aaababbab
+abbbababa
+2
+a 0.3
+b 0.7
+16
+
+3
+bab
+aaabb
+baaabaaa
+2
+a 0.6
+b 0.4
+14
+
+16
+aa
+aaaaaa
+aab
+baabbbaaa
+bbbabaaabb
+baaaaa
+baa
+bbbaaabab
+aabba
+aabababbab
+abb
+baaaa
+bbba
+ba
+babbab
+aab
+2
+a 0.7
+b 0.3
+20
+
+13
+babbaa
+abbbbb
+bbaa
+aab
+babbaab
+bbbaaa
+bbaaabbb
+baaaababba
+aabbbaab
+abaababbb
+bbaaabb
+aaababbaba
+babbaaab
+2
+a 0.5
+b 0.5
+16
+
+17
+abaabbbb
+bbaaba
+aaaabbab
+abababaaab
+bbbaab
+baabaaa
+bbbbbb
+bbbaa
+abb
+babbbaaaaa
+abaabaaab
+a
+ababb
+abbabaab
+abbab
+aaba
+babbbbbab
+2
+a 0.5
+b 0.5
+10
+
+1
+babbaaa
+2
+a 0.9
+b 0.1
+16
+
+5
+aabab
+abab
+baaa
+babba
+a
+2
+a 0.5
+b 0.5
+17
+
+18
+ba
+aabaabab
+b
+aabba
+bbbbaaab
+abbaab
+ab
+baabbbaaba
+aaaaaababb
+abbbaab
+babbb
+bbabaabab
+baabb
+bbbbbbaa
+baab
+bbabbababa
+ba
+abaabaab
+2
+a 0.3
+b 0.7
+18
+
+18
+aaabba
+babbbab
+a
+bbbaaaabaa
+abbb
+aabbbabba
+baababba
+b
+a
+aaba
+baaba
+aabbbaaaaa
+ab
+bbabaababa
+baabbbbaa
+a
+aaa
+aaabaaa
+2
+a 0.9
+b 0.1
+15
+
+3
+baaab
+ababa
+abba
+2
+a 0.9
+b 0.1
+18
+
+14
+b
+b
+babaababb
+a
+bb
+bab
+aaaaaa
+bb
+aaabbbaa
+aabaaaa
+baabbaabaa
+bab
+baa
+abbbbab
+2
+a 0.9
+b 0.1
+16
+
+14
+baaaaabba
+babbababbb
+bbbbbbb
+ab
+baabaaaa
+a
+b
+baa
+a
+abaaababb
+ba
+aaaba
+baaaa
+babaabbaa
+2
+a 0.3
+b 0.7
+19
+
+5
+abb
+ba
+babaaab
+aaaabaaaa
+a
+2
+a 0.8
+b 0.2
+18
+
+8
+baaaaab
+babba
+abbaabaa
+baaababaa
+abbb
+abbbbbab
+ababbababb
+aaabbbbab
+2
+a 0.1
+b 0.9
+17
+
+11
+aba
+bbabb
+bbbaaabaa
+abbaab
+abbaaaab
+baababba
+babababaaa
+abbaabb
+abbaabb
+ab
+bba
+2
+a 0.1
+b 0.9
+14
+
+2
+aabbbbabab
+bb
+2
+a 0.6
+b 0.4
+10
+
+13
+bba
+ba
+aaa
+babaaa
+bbaababb
+bbbbbba
+aabbb
+bbabbbba
+bbbbbbaa
+b
+aaaabaaaab
+aaab
+abb
+2
+a 0.6
+b 0.4
+11
+
+13
+aabaabaa
+aaaabbbba
+aab
+bbba
+a
+ba
+ababbbaaa
+baabaa
+ababbabab
+b
+aa
+babb
+baabbbabbb
+2
+a 0.7
+b 0.3
+10
+
+3
+ababaab
+babbbbbaba
+abaabbba
+2
+a 0.7
+b 0.3
+19
+
+8
+b
+b
+abaa
+ab
+bbabbabb
+bbb
+bbabb
+aababaabb
+2
+a 0.3
+b 0.7
+12
+
+15
+abaaaabaaa
+aaaaaaaaab
+abab
+b
+aaba
+abbbab
+bababbaba
+baabbabba
+abbbaaaaa
+aaaa
+aabaaabbb
+bbba
+bb
+aab
+bbb
+2
+a 0.1
+b 0.9
+17
+
+3
+baa
+aababab
+ababb
+2
+a 0.2
+b 0.8
+10
+
+9
+abaaaaa
+abb
+baab
+bbbaabbb
+bababbab
+aa
+abbabab
+abaaaabb
+baabbaaaab
+2
+a 0.5
+b 0.5
+18
+
+19
+bbbbaaa
+babaa
+aaaabaaaba
+b
+babb
+bb
+abaa
+aabbabab
+aa
+abaabaa
+babababbab
+ababbbaaa
+bbbababba
+bbbb
+aabab
+aabbabbb
+a
+bb
+bbaab
+2
+a 0.6
+b 0.4
+16
+
+12
+bbb
+bba
+abaaba
+aaaaaaba
+babaa
+ab
+ba
+baabaabba
+aaaaabaaab
+aba
+bbbbaba
+baaababa
+2
+a 0.2
+b 0.8
+20
+
+1
+bbaabb
+2
+a 0.3
+b 0.7
+18
+
+7
+a
+babaaaba
+aaaaaabbaa
+abbaaba
+babbbbba
+aaab
+baaabbbaab
+2
+a 0.5
+b 0.5
+20
+
+14
+bbbababba
+bb
+abaaa
+ababaaabab
+baabbaabba
+aabba
+ab
+aabb
+baaab
+aaaa
+aabb
+abb
+aabbab
+aaabb
+2
+a 0.1
+b 0.9
+18
+
+9
+abba
+a
+bbaaaa
+abaabbaba
+abab
+abaab
+baabababba
+bb
+bb
+2
+a 0.4
+b 0.6
+12
+
+16
+bbabab
+baabbaaaaa
+a
+aabbb
+abbbbaabb
+aabbbaabaa
+bab
+aaabbbbba
+baabbaaaa
+bbbaabb
+bbaabaaa
+aaab
+a
+abbbabbba
+baaabbabb
+bbaabb
+2
+a 0.8
+b 0.2
+12
+
+3
+abbbabaaaa
+baaaababa
+bbbabaa
+2
+a 0.8
+b 0.2
+18
+
+14
+aabbababb
+bbaaababba
+aa
+bbaab
+ba
+bbbaab
+abbabbb
+bbb
+ababbbaaab
+baabaaabb
+abbabaaba
+bbabbaaba
+abaaa
+bbbaaba
+2
+a 0.7
+b 0.3
+19
+
+10
+bbaabbbba
+aba
+aab
+baa
+baab
+aaabbb
+b
+baabbbba
+babbb
+aaa
+2
+a 0.7
+b 0.3
+10
+
+16
+aabbb
+aaababa
+bbbabbbb
+bbababaab
+baabbbb
+ababb
+aabaabab
+aabb
+aaaabb
+bbabbab
+bb
+bbbba
+bbabbbbbb
+bbaaabba
+abbbabbb
+bbaa
+2
+a 0.8
+b 0.2
+19
+
+6
+bbabaaa
+bbabbaaaba
+abba
+baa
+abbbaab
+bbbbabb
+2
+a 0.1
+b 0.9
+17
+
+10
+bababb
+abbbbaaaaa
+abbaabbabb
+ba
+abba
+bbaa
+babbbabaab
+a
+bbbbb
+bbabbbaba
+2
+a 0.2
+b 0.8
+14
+
+20
+bab
+bab
+bba
+abbbaa
+bbababbbb
+aa
+abbabbab
+abbaabb
+abb
+aaaab
+bbab
+abbbabb
+abbbbbabba
+ab
+baabbabbbb
+abb
+bbbaaa
+baa
+bbababba
+bbaa
+2
+a 0.1
+b 0.9
+12
+
+1
+aba
+2
+a 0.7
+b 0.3
+18
+
+15
+bb
+aaaaaab
+b
+baaabba
+bbaabbba
+aabbbbbba
+bbb
+aaabaabbb
+babaabbaa
+bbabbabba
+abaaabbaa
+aaaaaaabb
+bbabba
+abaaababaa
+a
+2
+a 0.1
+b 0.9
+14
+
+15
+aaab
+babbbab
+b
+abab
+abbbabbbb
+aabb
+a
+a
+abbbbbbb
+abb
+abbbb
+abbbbbbbba
+bb
+bbababa
+abaabbab
+2
+a 0.7
+b 0.3
+19
+
+16
+aaabbbb
+babbab
+aabaaba
+a
+baabbbbba
+babaabbaa
+bbaabb
+abaababbbb
+ba
+bbaabbab
+babbaabab
+aa
+bbab
+ab
+bbba
+aaaaabba
+2
+a 0.5
+b 0.5
+12
+
+2
+aa
+bb
+2
+a 0.6
+b 0.4
+14
+
+5
+abbababaa
+aaaaa
+babaaaaab
+babbbab
+baaabb
+2
+a 0.5
+b 0.5
+16
+
+3
+a
+aab
+aaabb
+2
+a 0.2
+b 0.8
+11
+
+8
+babbbbab
+aabaaaaab
+baa
+aab
+baaaaabaa
+aabbbaab
+bbbbaa
+ababbba
+2
+a 0.4
+b 0.6
+15
+
+4
+baababbbb
+abababbab
+abbabaaa
+abaabbbab
+2
+a 0.1
+b 0.9
+12
+
+8
+babb
+a
+ab
+abaaaaabbb
+babbb
+aa
+aaaaababba
+ba
+2
+a 0.3
+b 0.7
+20
+
+4
+b
+abbbababbb
+abbbaab
+ababab
+2
+a 0.9
+b 0.1
+15
+
+10
+baa
+abbbbabbab
+babaabab
+aab
+bbaaaaa
+abb
+aaaabbbbb
+abaaab
+bb
+baabbaaaab
+2
+a 0.5
+b 0.5
+18
+
+10
+bbababbba
+ababbbbaab
+aaabaaba
+bbaab
+baabbbb
+baaaab
+a
+abbaa
+babbbbaaa
+bbababb
+2
+a 0.8
+b 0.2
+17
+
+10
+abbbb
+ababab
+bba
+a
+babaabaa
+abaaabbbb
+baaaab
+bbbbaaaaa
+ba
+a
+2
+a 0.6
+b 0.4
+12
+
+3
+abaaaaba
+abbbbaaabb
+bb
+2
+a 0.4
+b 0.6
+14
+
+12
+abb
+aba
+aaa
+abab
+abaaaa
+ab
+aaabbbbba
+aaababa
+abbbbb
+aabbb
+abbbaaabb
+bbba
+2
+a 0.2
+b 0.8
+18
+
+17
+a
+aabbaaabba
+abbbaab
+bbbab
+babaa
+ba
+ba
+aabbaa
+abbaabbbba
+abb
+a
+baaa
+aaababbbab
+aa
+bbbbabbbab
+bbabaaab
+bbbbbbba
+2
+a 0.7
+b 0.3
+14
+
+5
+babb
+bb
+bbbaababa
+bb
+bbbaaaaa
+2
+a 0.8
+b 0.2
+17
+
+7
+babaaba
+baab
+bbaabaabaa
+b
+bbbb
+a
+bbbaab
+2
+a 0.4
+b 0.6
+10
+
+19
+ababbbbba
+bab
+a
+bababbaa
+aaabbbab
+babbbaabb
+aaabbbbbaa
+aaaaaba
+bbbbaaba
+ababbaabb
+abba
+b
+bba
+bbbbbb
+aab
+a
+babaaaba
+baa
+b
+2
+a 0.9
+b 0.1
+16
+
+9
+abaabb
+abb
+a
+bb
+aabb
+bab
+aaaaab
+aa
+abaa
+2
+a 0.4
+b 0.6
+19
+
+7
+abaabaaab
+aabbabaa
+bbbba
+bbbaab
+a
+baaaabbaba
+bbab
+2
+a 0.7
+b 0.3
+15
+
+18
+aabbbaaa
+baa
+bababbbbaa
+baabbabb
+bb
+baaaaa
+bbbbababaa
+b
+bbbaababb
+bbbaababbb
+aabbbbbbb
+ababbbba
+bb
+ab
+bb
+bbaaba
+abb
+aaaaa
+2
+a 0.4
+b 0.6
+12
+
+15
+ba
+abab
+abbbbaabbb
+baaabb
+ba
+bbbaab
+bbabaaa
+aababbbaa
+ba
+bbbaaa
+bbbbaab
+ababaaba
+baba
+bbbaaaab
+bbabba
+2
+a 0.3
+b 0.7
+11
+
+7
+bbaabaaa
+bbbbb
+ababaaabb
+abaababa
+baba
+bba
+bbbabbb
+2
+a 0.8
+b 0.2
+11
+
+14
+bbbaab
+b
+baabba
+abaa
+bbaabaaba
+ba
+abbab
+b
+abbbababbb
+baaabba
+aba
+abbaaab
+baa
+babaaaba
+2
+a 0.6
+b 0.4
+20
+
+18
+bab
+baa
+ab
+aab
+aaaabaa
+bbbbbaaa
+aaababbbaa
+bba
+ababbbabb
+a
+bba
+baabb
+b
+bbbbbb
+baabaabbb
+aaa
+baa
+b
+2
+a 0.9
+b 0.1
+17
+
+9
+aaa
+aabba
+aaabaabbaa
+a
+ba
+aabbabbaa
+ab
+abbb
+bb
+2
+a 0.1
+b 0.9
+14
+
+2
+abbaa
+bb
+2
+a 0.6
+b 0.4
+14
+
+9
+babbb
+aabb
+baabaababb
+b
+aba
+bbb
+a
+a
+baabbbba
+2
+a 0.5
+b 0.5
+16
+
+4
+bbaa
+aaababbbb
+baabb
+bbaababa
+2
+a 0.1
+b 0.9
+10
+
+20
+aaaaababaa
+abba
+ba
+aa
+bba
+a
+baaa
+bbabbabaaa
+bbabbabaa
+aa
+aaa
+abababbaba
+baaaaa
+bbab
+abbbaaaaaa
+abbaabaaba
+bbba
+baabbb
+ba
+bba
+2
+a 0.1
+b 0.9
+10
+
+12
+aaaabab
+aab
+baabbbbaab
+a
+aaa
+babaa
+bbbbabbb
+baaababbb
+bab
+baabbbaaab
+aabaa
+aa
+2
+a 0.8
+b 0.2
+10
+
+9
+babbabaaa
+bbababbbbb
+aab
+aababbbaa
+baaaaaa
+aabbab
+bbbbbaab
+abbaaab
+abaaaaaaa
+2
+a 0.5
+b 0.5
+13
+
+4
+abb
+abbaaaaa
+bbabba
+bab
+2
+a 0.2
+b 0.8
+18
+
+6
+aabbaababa
+aabbbbb
+bbba
+babbaab
+babbbbb
+abbabaa
+2
+a 0.4
+b 0.6
+12
+
+16
+aaaaabbb
+ababaabab
+aaab
+aab
+bbabaabbba
+bbbaabbbb
+babab
+aabb
+bab
+aaabbbbbaa
+bab
+ba
+aaaa
+bbabbba
+bab
+baaabaaab
+2
+a 0.3
+b 0.7
+18
+
+8
+bb
+ab
+babab
+abaabbabba
+bbabbaa
+abaabb
+bb
+baaaa
+2
+a 0.1
+b 0.9
+19
+
+15
+aabbab
+abbbbb
+ababbba
+baaa
+baa
+bbbababba
+bbbaaaaaa
+baaa
+aba
+abba
+aabab
+ba
+abbb
+baabbabb
+bbababa
+2
+a 0.2
+b 0.8
+16
+
+16
+aaaabbbb
+babb
+baababbba
+aaabab
+aabaab
+aaaaaaab
+abbaab
+ab
+ababbbbbbb
+abbb
+bbbbaabbb
+abba
+bbbab
+baaababa
+bbbababbb
+abab
+2
+a 0.5
+b 0.5
+12
+
+11
+aa
+baaabba
+bbaaaaab
+ba
+aaaabbbb
+abab
+abbb
+bbabaab
+babaabaa
+aaababaaaa
+abab
+2
+a 0.1
+b 0.9
+13
+
+5
+abaaabaaaa
+abbabababa
+bbbaaaaab
+a
+ababaababb
+2
+a 0.3
+b 0.7
+10
+
+2
+bbbab
+baabaaa
+2
+a 0.1
+b 0.9
+18
+
+18
+baabbba
+bbbb
+aabbbbab
+aa
+ab
+babbbabaa
+bbaabab
+ab
+bab
+abbbaaa
+bbb
+bbbaaba
+ab
+b
+aabbbaaaa
+babaa
+bbabaaaab
+a
+2
+a 0.6
+b 0.4
+18
+
+12
+b
+abab
+bbbbab
+b
+bbb
+bbbbab
+babbabbbba
+babba
+ababbbbaaa
+ababba
+baaabbabaa
+babbabbbb
+2
+a 0.5
+b 0.5
+16
+
+11
+bababaabb
+ba
+abbaaabb
+aa
+bbbab
+bbbbbbb
+a
+abbbbb
+aabbbabbb
+ab
+bbbb
+2
+a 0.3
+b 0.7
+11
+
+15
+baaaaa
+bbbababa
+bb
+b
+b
+abbb
+babaaaaabb
+abaabaabb
+aabaaaa
+baabab
+ab
+baaaba
+baaaaba
+bbbbbba
+aaaaaabbb
+2
+a 0.5
+b 0.5
+11
+
+12
+ababbbbaa
+abbbbabb
+abb
+abbaabaa
+bab
+abbb
+aba
+baaabaaaba
+aba
+babababb
+bbbabbaa
+ab
+2
+a 0.5
+b 0.5
+17
+
+2
+aabab
+abaabaaaa
+2
+a 0.7
+b 0.3
+16
+
+1
+aabaaabbb
+2
+a 0.6
+b 0.4
+16
+
+6
+bbb
+abaaaba
+abbbaba
+abbbbba
+baa
+bab
+2
+a 0.4
+b 0.6
+16
+
+16
+baabaaabb
+aab
+bb
+aa
+bbababab
+aaaaabb
+aabba
+bbbabbba
+aaab
+bba
+ba
+bbab
+aabbaabb
+aabbbb
+babab
+b
+2
+a 0.1
+b 0.9
+17
+
+3
+ababbbb
+aabbbbaab
+bababbaba
+2
+a 0.6
+b 0.4
+10
+
+19
+ababaabab
+bbbababba
+aababb
+abaabbaba
+babaabaa
+abaaabbb
+abbb
+bbabbbaaaa
+ba
+abbaaaaa
+abaaaba
+abbaa
+ababbbbbbb
+abbbaabaaa
+a
+abaaab
+aab
+ba
+aaaabab
+2
+a 0.1
+b 0.9
+14
+
+15
+baaaabbba
+ba
+aababbaaba
+aaabbaab
+baa
+ab
+a
+ababababb
+bbbbab
+bababbabb
+abaaababa
+aabaaa
+babbaaaaaa
+aabaaab
+abb
+2
+a 0.5
+b 0.5
+17
+
+11
+abbbbbb
+babaaaaaaa
+aa
+baabbbbbbb
+abbaaaaaba
+aaabbbbb
+abbaabbb
+abbbab
+bbbababab
+abbabaa
+aaa
+2
+a 0.2
+b 0.8
+11
+
+3
+ab
+babbbba
+baaaaa
+2
+a 0.7
+b 0.3
+19
+
+8
+baaabb
+bbbbabbb
+bababb
+a
+a
+bababab
+aaa
+aaaabaa
+2
+a 0.7
+b 0.3
+19
+
+14
+aaaabab
+aaab
+aabb
+bbaaabbb
+a
+aaabab
+bbaaaa
+bbbb
+aabaaaabb
+aba
+aabbab
+abbb
+aabaab
+aaaba
+2
+a 0.9
+b 0.1
+11
+
+15
+ababaaaa
+aabbabbab
+abb
+b
+ba
+b
+bbbba
+babb
+aabbaabbaa
+aabbb
+abba
+bbbbb
+ba
+baabb
+aa
+2
+a 0.6
+b 0.4
+14
+
+10
+baababa
+ababb
+abaa
+baab
+bbbbbaab
+baaab
+aa
+abbaa
+babaaaaaa
+aaba
+2
+a 0.3
+b 0.7
+13
+
+13
+bababbaaa
+aabbabbbbb
+bba
+baabbabab
+ab
+aabba
+ab
+ababb
+aabaa
+aabaab
+bba
+bbabb
+babba
+2
+a 0.2
+b 0.8
+19
+
+10
+aaaabbaa
+baabb
+bbaab
+bb
+aaaaabbba
+bbabaabb
+a
+abb
+bab
+ababbaaa
+2
+a 0.3
+b 0.7
+11
+
+11
+baabababa
+abaabba
+abbaababaa
+aaaaba
+abaaaaa
+aaabbb
+bb
+b
+bbbbbbbba
+a
+aabbbbbb
+2
+a 0.1
+b 0.9
+15
+
+6
+aaabaaaaaa
+bbbbabbbb
+bbb
+bbbbbabb
+abbabbabaa
+bb
+2
+a 0.2
+b 0.8
+12
+
+10
+baa
+aaababbaba
+aaab
+b
+babbb
+bbbbaaa
+a
+ab
+babaaabbbb
+baaabbbab
+2
+a 0.5
+b 0.5
+14
+
+18
+aba
+aaaababa
+aa
+aababab
+a
+aaabb
+abababba
+babbb
+a
+ba
+bbbbabaa
+aaaaba
+ababababa
+baa
+a
+aabbbab
+aabaabbaaa
+abaab
+2
+a 0.7
+b 0.3
+11
+
+14
+aba
+aababbbb
+abaaabba
+babaa
+b
+bbbbbbb
+abaabab
+babab
+baababaaba
+b
+abbbb
+babaabab
+bbaaaab
+a
+2
+a 0.3
+b 0.7
+10
+
+19
+b
+baaba
+aa
+bba
+bbaa
+aba
+ababab
+ba
+aba
+ab
+a
+abababaaab
+bbbbbaaa
+aab
+bab
+aabb
+baaa
+a
+b
+2
+a 0.4
+b 0.6
+10
+
+20
+aabba
+a
+aaabbabb
+aaabbb
+aaabaaaa
+bbaaab
+abbabbaab
+abbbbb
+aaa
+aab
+babbabbab
+aababa
+aaabaa
+aa
+aaabab
+aa
+aaabbab
+bbbb
+bbabab
+baab
+2
+a 0.9
+b 0.1
+19
+
+11
+bbbb
+b
+abaa
+bbaaaaab
+ba
+abaabb
+aa
+abbba
+aaab
+bbb
+b
+2
+a 0.9
+b 0.1
+14
+
+6
+aaaaa
+aaababb
+bbabbaba
+ababaaab
+abbbba
+abba
+2
+a 0.6
+b 0.4
+17
+
+9
+bbba
+babaaabaa
+abaabaabba
+bbaabaaaaa
+babbbbbbb
+abaab
+bbba
+ab
+abbabbb
+2
+a 0.9
+b 0.1
+20
+
+12
+baaabb
+abbaaaabba
+bbbaaab
+aaababa
+ba
+bbabaabab
+aabaab
+b
+aaaabaaaab
+aaabb
+b
+abbababa
+2
+a 0.1
+b 0.9
+17
+
+11
+bbbaaba
+bbab
+ba
+a
+abbabaab
+baabab
+bbaababaab
+bb
+baabaaba
+babbabbaa
+aaaa
+2
+a 0.3
+b 0.7
+13
+
+3
+aab
+aaabb
+bb
+2
+a 0.8
+b 0.2
+16
+
+15
+b
+baaa
+baab
+ba
+aabbbbabba
+bbbabba
+bbab
+baabb
+bbaaaba
+ababbba
+aaaabbbb
+baaa
+abb
+ba
+ababab
+2
+a 0.9
+b 0.1
+14
+
+17
+bbaababab
+aabbbabab
+babbb
+a
+bbabaa
+aabbababa
+aaaaabb
+abb
+bbaaba
+aaaababab
+aaaaaabbba
+bbaaababb
+b
+b
+abaa
+abb
+abbbababa
+2
+a 0.1
+b 0.9
+11
+
+8
+abbaaabb
+baa
+aababbba
+bab
+a
+abb
+aba
+aaababaaa
+2
+a 0.4
+b 0.6
+10
+
+9
+abab
+ababbbaa
+aaababaa
+bb
+aabbb
+aaaabbabba
+aaabbbabaa
+bab
+bbbaabb
+2
+a 0.1
+b 0.9
+17
+
+3
+aaaabaaab
+a
+aaaaaabb
+2
+a 0.1
+b 0.9
+17
+
+8
+bb
+baab
+baba
+babaabb
+aab
+abbaaaaa
+ba
+baabbbbbba
+2
+a 0.9
+b 0.1
+18
+
+16
+baaabbabbb
+bbba
+aba
+aabbb
+baab
+bbabab
+bbbaaabbb
+bb
+ababa
+baabbabbb
+aababaa
+aab
+aa
+abbababb
+aaaaaab
+ab
+2
+a 0.9
+b 0.1
+16
+
+3
+bab
+bbab
+bbaa
+2
+a 0.9
+b 0.1
+10
+
+19
+baba
+baabab
+a
+bbbaab
+aaa
+bababba
+bbbaababa
+b
+bbbaabbbab
+baa
+abaabaabbb
+aaabbb
+abbbab
+babbababab
+baba
+babbabbbb
+bbbbaaabb
+bbbbbab
+bbaababa
+2
+a 0.6
+b 0.4
+16
+
+5
+b
+aa
+abbb
+baaba
+bbbbbabaaa
+2
+a 0.5
+b 0.5
+11
+
+19
+bbab
+babaababa
+b
+bababbb
+a
+aabaa
+bbbaabab
+bbbbabbaaa
+a
+aaabb
+abbabab
+a
+abbba
+bbbbabbb
+a
+bbbabbba
+aaaaabba
+ab
+abbbab
+2
+a 0.2
+b 0.8
+18
+
+8
+bbbab
+bbbab
+bbb
+aababab
+bbb
+ab
+babbaa
+babbababa
+2
+a 0.6
+b 0.4
+17
+
+3
+aababa
+aa
+abbabab
+2
+a 0.9
+b 0.1
+13
+
+17
+a
+abbbbab
+abbbabaaa
+aaabbbb
+abba
+abab
+bbbbab
+aab
+abbbb
+ababaaaab
+abbbbbab
+abaabbbb
+bbb
+ab
+bbaaaaa
+bbbaaba
+b
+2
+a 0.1
+b 0.9
+19
+
+6
+bbabbaaaa
+bababb
+aaabaabb
+b
+aaaab
+bbb
+2
+a 0.7
+b 0.3
+12
+
+2
+aaab
+bb
+2
+a 0.4
+b 0.6
+16
+
+4
+bab
+baaabbaabb
+abab
+baba
+2
+a 0.7
+b 0.3
+13
+
+12
+abba
+baba
+b
+aabbb
+ababaaaa
+baabaabb
+abbaaabba
+bbaa
+bbaabba
+aaabb
+aabbaabb
+aaa
+2
+a 0.6
+b 0.4
+18
+
+2
+baaaba
+b
+2
+a 0.5
+b 0.5
+19
+
+17
+babbab
+baaa
+aabaa
+bbaabb
+abbbaa
+aaabaabb
+b
+aaa
+ba
+ba
+babaabab
+bbbba
+aaabaaa
+bbaaaab
+abaabba
+baabbab
+a
+2
+a 0.2
+b 0.8
+14
+
+17
+bbabbabb
+bababaa
+bbbbabbaab
+bba
+aabbaaabb
+b
+b
+b
+baaaababb
+abba
+baaaaaba
+aaabaaa
+baaababbba
+bbb
+abababbaa
+aaaba
+bbabbaa
+2
+a 0.4
+b 0.6
+14
+
+16
+bbabab
+b
+babbbbbb
+bbbaaba
+baababab
+b
+abb
+bab
+bbbbb
+bbbaa
+aabaaaa
+abaaaab
+abbbbaa
+babaababba
+abbbaaab
+a
+2
+a 0.8
+b 0.2
+16
+
+10
+baababaa
+bbaaaaa
+baaba
+b
+bbab
+aa
+baaabaaaaa
+a
+baabbaaaa
+abbbbaabbb
+2
+a 0.5
+b 0.5
+13
+
+14
+abbabaa
+bbaa
+bba
+aaaabbba
+bbaababbba
+aa
+baaaab
+b
+baa
+ababa
+bbbaabb
+bbaaa
+bbaaab
+aaaaaabaa
+2
+a 0.4
+b 0.6
+19
+
+16
+aaaabbbba
+baa
+baababa
+baaabbb
+abbabb
+a
+ab
+bbbbaaa
+a
+baa
+aaabab
+b
+babaabaa
+aabaabab
+baaaababb
+aaaababa
+2
+a 0.8
+b 0.2
+19
+
+11
+bababbabab
+bb
+a
+abba
+bb
+aaaab
+bbaaabb
+bababbabb
+abaaba
+aaaa
+babaaabb
+2
+a 0.9
+b 0.1
+17
+
+6
+bababa
+bbbabbaaaa
+bb
+bb
+abbaa
+baaa
+2
+a 0.4
+b 0.6
+18
+
+12
+abbaa
+bbbaabab
+aa
+aaba
+abbabaa
+ba
+aabababaa
+aba
+a
+aaabba
+a
+a
+2
+a 0.9
+b 0.1
+10
+
+19
+b
+bababbab
+bbaa
+aababbbb
+aa
+b
+baaababa
+bab
+aaababbab
+baa
+aaababaaa
+babaababb
+babbababa
+baabababba
+aaabbb
+baabbbbba
+baaaa
+bbbaabbab
+abbabbabaa
+2
+a 0.1
+b 0.9
+12
+
+12
+aabaabaabb
+abbbbab
+ababababa
+abaa
+aaaabaab
+ababb
+bbabbaa
+babbabb
+babaaabab
+bbb
+b
+aa
+2
+a 0.8
+b 0.2
+14
+
+4
+ababaaa
+aba
+baaaabaab
+aaababbbba
+2
+a 0.8
+b 0.2
+20
+
+6
+abab
+abbaaba
+aabbb
+aa
+bbbbbbaba
+ba
+2
+a 0.1
+b 0.9
+17
+
+11
+bb
+babbbabbbb
+aabbabba
+bbabbbaa
+aabbab
+baba
+aaaa
+ababaaab
+baabaaabab
+bab
+b
+2
+a 0.4
+b 0.6
+13
+
+4
+b
+a
+baaaaaba
+bbababa
+2
+a 0.8
+b 0.2
+17
+
+7
+abb
+ababaaa
+abbbabbaba
+aabaa
+aa
+bbbbabaaba
+bbbaaa
+2
+a 0.7
+b 0.3
+11
+
+6
+aba
+baa
+bbab
+ab
+bb
+babbb
+2
+a 0.6
+b 0.4
+12
+
+8
+aaaab
+baabbbbaba
+bb
+a
+abab
+aaabb
+a
+aaab
+2
+a 0.8
+b 0.2
+12
+
+17
+b
+a
+aaa
+aaabba
+a
+ba
+aabbaaaba
+aaabb
+abba
+bbaabbbb
+aaaaabb
+abbababb
+bbabaa
+aa
+b
+aabaabbbbb
+aaab
+2
+a 0.2
+b 0.8
+18
+
+11
+baaaabaab
+aababba
+baaa
+bbababbab
+bbbbaba
+bbaaba
+aaa
+aabababb
+abaaab
+aaab
+bbbbbabaaa
+2
+a 0.1
+b 0.9
+11
+
+6
+aab
+aaaa
+ab
+abbaa
+bbbbba
+bbb
+2
+a 0.7
+b 0.3
+13
+
+15
+abbbbb
+aabbaab
+bbbaaa
+bab
+a
+abba
+abaaa
+ababba
+baabbaa
+abb
+baaa
+aaabbab
+abbbaabab
+bb
+ababaaaaba
+2
+a 0.1
+b 0.9
+12
+
+19
+aabbababbb
+aa
+aabbaa
+bbaaab
+abab
+bbaab
+aa
+aba
+bbaabaaabb
+babbb
+bababab
+aaabbbbaab
+abaaaba
+abaaabb
+aabaaaaaaa
+a
+bb
+bbbaababba
+babaab
+2
+a 0.8
+b 0.2
+18
+
+11
+a
+abaaabaaba
+bbb
+babbbbba
+bbbaabaab
+abaaaba
+bbbba
+aabb
+babaaaabb
+aaaa
+bbabab
+2
+a 0.5
+b 0.5
+10
+
+2
+abaab
+b
+2
+a 0.3
+b 0.7
+15
+
+20
+aabbabab
+abb
+abbaba
+abbabab
+aabb
+a
+b
+abaab
+baaa
+bbbaaa
+ba
+babbbbab
+aabbab
+aaaaabb
+baabbabb
+bbbabb
+baaabab
+baaaaaabbb
+abaaa
+baabaaabba
+2
+a 0.4
+b 0.6
+15
+
+9
+ababbab
+bbb
+aabbaaa
+abbaaaaabb
+abbbbab
+b
+aaa
+bb
+bbb
+2
+a 0.8
+b 0.2
+16
+
+3
+abbaa
+bbbaabbbbb
+aababbba
+2
+a 0.4
+b 0.6
+13
+
+18
+abaaabaab
+aabbab
+bbb
+ababaa
+ababb
+aba
+aa
+aa
+aabbaabb
+ab
+bbb
+baaab
+abb
+a
+bbab
+a
+bbbbabbbba
+abbb
+2
+a 0.4
+b 0.6
+18
+
+18
+abbbabab
+baa
+bbbabaab
+bbabab
+bbabba
+bbbabbbba
+babaaabbba
+aa
+aaaaaababa
+babba
+bbb
+b
+abaaaaaabb
+ba
+aaaaabb
+baabaaba
+bababaa
+baaabb
+2
+a 0.9
+b 0.1
+10
+
+9
+bbab
+bbaaaababb
+bbbabbbbba
+baaaaaaba
+abba
+bbabb
+baabababa
+ababba
+a
+2
+a 0.1
+b 0.9
+11
+
+4
+bbbb
+bbababbab
+bbbbbabbbb
+abb
+2
+a 0.6
+b 0.4
+10
+
+5
+baabbaba
+ababbaa
+aaaaabb
+aabaa
+b
+2
+a 0.3
+b 0.7
+12
+
+13
+bbabb
+aaabbb
+ba
+abbabbbb
+ab
+bb
+aaaa
+a
+ba
+babaaabab
+aaaabbbb
+aaaa
+abbaa
+2
+a 0.2
+b 0.8
+11
+
+12
+baabb
+bbb
+aaba
+baabaaaaaa
+aabaabb
+ba
+bbbbaa
+ab
+bbbabbaab
+ba
+aabab
+bbbabaa
+2
+a 0.1
+b 0.9
+12
+
+10
+abaa
+ab
+a
+b
+abbbbb
+bbb
+babbba
+bab
+aa
+bbbaab
+2
+a 0.3
+b 0.7
+18
+
+6
+bbbaaba
+bb
+aaaba
+aabbbaa
+baabaabaa
+aaaabbb
+2
+a 0.8
+b 0.2
+18
+
+4
+bbbabbabbb
+abaaba
+ba
+ab
+2
+a 0.5
+b 0.5
+15
+
+18
+babbaaaa
+aabbbbab
+ababbbabb
+aabbbb
+bb
+babaaaab
+aaaaababa
+baabbaaba
+aaaabbb
+bbaabbbbba
+aaaaaabba
+aabaa
+bbaab
+aba
+baaaaba
+a
+ababbaaba
+baaba
+2
+a 0.1
+b 0.9
+16
+
+17
+abababba
+bbbaa
+aaab
+ababaaab
+bbbabbbaab
+babb
+abbb
+babbbbbaa
+abaabbb
+baababbaab
+abbabbba
+bbabbbba
+aabbaaaa
+bbaaa
+babbabbbb
+aabb
+bb
+2
+a 0.3
+b 0.7
+11
+
+19
+bbba
+bbabbb
+ababaaabba
+abaaaaaaba
+aabbab
+ab
+baabbbb
+babbaaa
+bbbababbb
+ab
+baaabaaaaa
+aaabbabb
+ba
+aabbbbabb
+bbbaababbb
+aa
+baba
+bbaabbb
+baaaaba
+2
+a 0.2
+b 0.8
+15
+
+12
+a
+abaabab
+abbbbb
+abbbbab
+baab
+baaab
+abbabbbb
+baaabbaaba
+aaabbbabbb
+a
+bbab
+aabbaa
+2
+a 0.6
+b 0.4
+17
+
+4
+aabbba
+ba
+b
+b
+2
+a 0.9
+b 0.1
+14
+
+8
+baa
+bbaaaab
+bbaba
+abbababaa
+abaaababbb
+aaaaa
+aaabbb
+bbbaab
+2
+a 0.3
+b 0.7
+19
+
+9
+abaababbbb
+b
+bbbba
+ab
+aaa
+ab
+ababab
+aabb
+aa
+2
+a 0.1
+b 0.9
+12
+
+5
+a
+babaabaaa
+aaabaaaabb
+abaabaab
+bb
+2
+a 0.1
+b 0.9
+20
+
+4
+aaab
+babababbaa
+a
+abbbb
+2
+a 0.9
+b 0.1
+16
+
+5
+babbbbaa
+aaabbbab
+baa
+aaaaaaa
+aabb
+2
+a 0.4
+b 0.6
+19
+
+16
+baab
+aaa
+aaaaaab
+baaabaaba
+bbbabab
+abbabb
+bbba
+abb
+bbbbb
+abbabb
+bbbbbbab
+bababbabb
+aabbba
+babbb
+aaabbab
+baab
+2
+a 0.4
+b 0.6
+17
+
+4
+aaaab
+bbaabbaa
+baa
+bbbbbbaa
+2
+a 0.6
+b 0.4
+13
+
+19
+aba
+bbbbabbbb
+bb
+aaaaaaa
+babbbba
+abababbba
+aaaaabaa
+aaabbbba
+aaababab
+baabbbaa
+abbaaa
+b
+aab
+ab
+aab
+baaabbbbba
+bbababaaba
+aababbbba
+aba
+2
+a 0.4
+b 0.6
+17
+
+19
+bbbaabaa
+babbabbaa
+abb
+bbabba
+bbaabaaa
+abaabbbaba
+babbb
+baaab
+bbab
+bababaab
+baaaba
+bbabbbbaba
+a
+aaab
+a
+babbbaaba
+b
+bbbaaa
+ababbba
+2
+a 0.8
+b 0.2
+16
+
+17
+bbabaa
+aaabaaaaa
+babbbaab
+aab
+a
+abab
+babbb
+aaaaabab
+bb
+abbbbbbaaa
+aba
+babbbb
+babaaaaa
+baababbbab
+aab
+abbbbbabaa
+abbab
+2
+a 0.9
+b 0.1
+14
+
+2
+a
+aaabababb
+2
+a 0.2
+b 0.8
+11
+
+8
+abbabbab
+abbaaaaaa
+babbbabaaa
+bababbbaab
+aaaaaabab
+ababbbaaab
+b
+bbbbabaaa
+2
+a 0.4
+b 0.6
+15
+
+1
+b
+2
+a 0.6
+b 0.4
+20
+
+19
+a
+abbaaa
+aaaaaba
+bbbaabaa
+ababbb
+bbaaaa
+aaaa
+aaabbb
+aaa
+abbaaabbaa
+aa
+bbbaaaaba
+abbbaab
+ba
+baaabababa
+aaabb
+bbaaaabba
+abb
+bbabba
+2
+a 0.9
+b 0.1
+17
+
+9
+aba
+bb
+aaabbba
+bbbaabb
+babbaabaab
+abbabb
+baabaabbab
+b
+abababb
+2
+a 0.5
+b 0.5
+15
+
+10
+abbabbbaaa
+aabbaaabba
+aabbbaab
+abbbababa
+aaaa
+baa
+bbbbbaa
+aabaa
+abbbaba
+bbabbabbba
+2
+a 0.3
+b 0.7
+15
+
+18
+abab
+aabbbab
+aaabaaa
+bbabb
+baabbab
+baabaa
+babbbaaaaa
+aabbaaaaa
+abaab
+bbaaab
+bbbabba
+bbbb
+baabbaba
+bba
+aa
+bbaabb
+abaaa
+aabaabaab
+2
+a 0.7
+b 0.3
+14
+
+5
+bbaab
+abbab
+bbbbaaa
+ba
+aabbaabbaa
+2
+a 0.2
+b 0.8
+14
+
+1
+abbbbba
+2
+a 0.9
+b 0.1
+14
+
+11
+abababaa
+abbaaaaaa
+abba
+abbbbaaab
+bb
+bbbaaba
+bbbabbabbb
+babbbaab
+babaa
+a
+ababbaaa
+2
+a 0.1
+b 0.9
+11
+
+7
+b
+baabbab
+aaabb
+abb
+babbbba
+aabbabaab
+abba
+2
+a 0.1
+b 0.9
+19
+
+14
+baaaaaaa
+bbaabbbbab
+aabaaba
+b
+abbbbbbab
+baabbaaab
+aabbbab
+babaabbbbb
+aa
+aab
+a
+abbabbba
+bbb
+abaaabbbaa
+2
+a 0.7
+b 0.3
+13
+
+1
+b
+2
+a 0.2
+b 0.8
+12
+
+16
+a
+aba
+b
+bbbab
+bbaabaaba
+aabaaaaa
+baababaaa
+aaab
+abbaabaaa
+b
+aabbbab
+aa
+bbabaa
+bababb
+bbbbabb
+bbaaaabbb
+2
+a 0.1
+b 0.9
+17
+
+14
+aabbaaab
+bba
+bbabbbab
+baa
+ab
+bbbab
+abbab
+abaaab
+bb
+aaabababba
+bba
+aaabbaabb
+b
+ababbbbbab
+2
+a 0.4
+b 0.6
+18
+
+6
+b
+abbbbbbb
+bbbaaaaa
+aa
+bba
+babbaa
+2
+a 0.7
+b 0.3
+15
+
+4
+aabbaaaba
+bbaababab
+abaabaaaba
+ba
+2
+a 0.3
+b 0.7
+20
+
+19
+ababbb
+bba
+bbaabaaaa
+aba
+bab
+babbaa
+a
+aaababaa
+ab
+bbbabaab
+abaabbbbba
+b
+b
+babaaabbb
+aabaabaab
+aaaba
+aab
+aabbaabaa
+a
+2
+a 0.9
+b 0.1
+11
+
+11
+ab
+baaba
+abaabaaba
+baba
+babaaa
+baaaabbaba
+bbb
+aabaabab
+aabaaba
+bbba
+abb
+2
+a 0.1
+b 0.9
+19
+
+12
+b
+abababb
+baaab
+baaba
+baaaabbaa
+abbbbbbba
+baabaaba
+abb
+baaaa
+abbbbbbab
+baabaaaab
+abaaa
+2
+a 0.8
+b 0.2
+12
+
+12
+a
+baabbb
+ababababb
+bbaa
+abba
+bbbbaaba
+a
+bbabbbaaa
+babbabaa
+babbaba
+aabab
+babbab
+2
+a 0.8
+b 0.2
+18
+
+15
+aababaaaa
+aaabbaabab
+aabbbaabba
+aababa
+aaaa
+aababbaabb
+bbababaaaa
+bb
+aaba
+aabaaaa
+abb
+bbb
+a
+babbaaaaaa
+abaabaaa
+2
+a 0.2
+b 0.8
+16
+
+5
+aaaabaa
+abbabbaabb
+aaaaabbba
+abaaaa
+aabbbababb
+2
+a 0.1
+b 0.9
+19
+
+20
+bbaab
+a
+bbabba
+baaa
+bba
+bbababaaaa
+aaabbbbb
+aaaab
+bbbb
+ababb
+a
+bbbaabaa
+a
+aaaabaab
+b
+ababbbbbbb
+aabbb
+bbabb
+baabbaba
+aab
+2
+a 0.9
+b 0.1
+15
+
+1
+aaabbba
+2
+a 0.6
+b 0.4
+20
+
+18
+bbbb
+a
+ababbb
+ab
+aba
+babb
+baabba
+abbaab
+bbaaab
+abbababab
+aabb
+aaaabb
+aaabaaa
+ababababb
+a
+abbb
+a
+babbbaa
+2
+a 0.7
+b 0.3
+16
+
+1
+aaaabbbb
+2
+a 0.2
+b 0.8
+14
+
+8
+aaabb
+bbaaa
+baa
+abab
+aba
+baaaaaab
+babbb
+aaba
+2
+a 0.4
+b 0.6
+15
+
+15
+abba
+ababbabab
+aaabaa
+bab
+aaaaaabba
+baaabab
+abab
+abaabb
+abbbb
+abba
+ababbbab
+bbabababb
+bababbab
+abba
+abbba
+2
+a 0.3
+b 0.7
+18
+
+8
+aabaa
+baa
+aaaaa
+bb
+a
+bbbbbab
+abab
+baabbba
+2
+a 0.9
+b 0.1
+18
+
+17
+a
+baaa
+abba
+bb
+aababaaaa
+bab
+abaab
+baaabbbab
+bbabbbab
+ababa
+aabbaaa
+babbabbbab
+aaaabaaba
+bbb
+aabababbb
+bab
+ababbbab
+2
+a 0.5
+b 0.5
+19
+
+1
+bbbbba
+2
+a 0.6
+b 0.4
+15
+
+8
+a
+aaababa
+bbab
+aaabbbabb
+ba
+bbbb
+aa
+bbaaaba
+2
+a 0.2
+b 0.8
+16
+
+6
+baaaababaa
+bbbbbaab
+aba
+aabbbabb
+ab
+abaabaabbb
+2
+a 0.2
+b 0.8
+13
+
+15
+ab
+aa
+baabbbbaa
+bbb
+bbbaab
+bba
+abaaabba
+baaaaabbba
+bababba
+aba
+baabba
+abbb
+baab
+bbbbabbbaa
+aba
+2
+a 0.8
+b 0.2
+19
+
+5
+abbbbabba
+bbbbaabba
+baba
+aabaaa
+aaaaaaabbb
+2
+a 0.2
+b 0.8
+20
+
+16
+ababbaaa
+abaa
+abaaaaa
+abbabaaaaa
+bbbaabbaba
+baabaabbab
+abba
+a
+baabbaabba
+babaa
+aabbaaba
+bba
+aa
+bb
+aabaababa
+bbbaaabbab
+2
+a 0.1
+b 0.9
+15
+
+14
+bba
+b
+abbbbaaaaa
+b
+abb
+aaab
+b
+b
+aaaabaaabb
+baaabababa
+baab
+bbbb
+aaabbb
+bba
+2
+a 0.5
+b 0.5
+16
+
+10
+bbbbbb
+babbaab
+aababaab
+babab
+ab
+a
+baa
+bbaab
+ba
+ba
+2
+a 0.6
+b 0.4
+12
+
+10
+aaaabbaba
+a
+bababaaaaa
+abaabaaaa
+baaabb
+bbbbabaab
+bbb
+bbbab
+baaa
+aabbbaab
+2
+a 0.1
+b 0.9
+15
+
+14
+aabaa
+abbb
+ababaabbab
+aabb
+bbaaaabbba
+aaba
+aa
+abaaaab
+baaaaab
+bbb
+abbba
+babaaba
+aaaaab
+abbaaab
+2
+a 0.8
+b 0.2
+19
+
+9
+bb
+bbabaabb
+ab
+babbaaaaa
+aabbba
+abbba
+bb
+bbbbba
+baabbbbbb
+2
+a 0.7
+b 0.3
+15
+
+10
+aaaabbb
+b
+bb
+aa
+aababab
+abb
+bbaaab
+bbaaaaaaba
+aabaaba
+ba
+2
+a 0.4
+b 0.6
+14
+
+8
+bbba
+abbba
+baaaaaabba
+abbaaa
+baaaab
+bbaabbab
+aababbb
+bbaaabbba
+2
+a 0.7
+b 0.3
+13
+
+4
+a
+bbbab
+bbaaaaabab
+ab
+2
+a 0.1
+b 0.9
+19
+
+6
+ababba
+baabbabab
+abaabba
+aaaaab
+abba
+babaababbb
+2
+a 0.9
+b 0.1
+15
+
+12
+baa
+baabbbbbab
+bbbbaabbb
+bbbabab
+bbbbbbbb
+abbabaa
+aaabbbb
+ba
+bbababbab
+aaa
+baaba
+aba
+2
+a 0.9
+b 0.1
+16
+
+14
+abbbaa
+aaa
+babbaa
+abbabaaaba
+baaab
+aaa
+bbabababb
+bbbbbb
+a
+aaabb
+b
+bbbabaa
+baba
+aabbbaab
+2
+a 0.8
+b 0.2
+14
+
+4
+baaabbba
+abbba
+babaa
+bbabaa
+2
+a 0.2
+b 0.8
+20
+
+15
+bbbbaaa
+abb
+ababa
+aaaaaa
+babbbaab
+aaabbaaaa
+b
+aba
+bbbbabbb
+a
+aba
+ab
+aaabaa
+abaabb
+abbaa
+2
+a 0.9
+b 0.1
+11
+
+12
+babaabbaba
+bb
+bababbaaab
+ababbaba
+abbbbbabb
+bbaaaaab
+bbba
+aabba
+aaa
+ababbaaba
+aaabba
+baaaaababb
+2
+a 0.8
+b 0.2
+20
+
+11
+aa
+bb
+aabbababa
+bbbaaabbbb
+ba
+ba
+aa
+abba
+baba
+b
+bb
+2
+a 0.1
+b 0.9
+15
+
+10
+ababbabab
+bbbababa
+aabbaaba
+a
+a
+ba
+bbabb
+bbabbbbaa
+ababaaba
+bbbbaa
+2
+a 0.6
+b 0.4
+15
+
+5
+baaabaaabb
+ababaabab
+bbabbabbbb
+abaabaa
+abbababa
+2
+a 0.3
+b 0.7
+16
+
+7
+bbab
+aabbb
+bbbaaaa
+abaabbbba
+ababaaabb
+aabbabab
+abbaaaaab
+2
+a 0.7
+b 0.3
+20
+
+17
+bbba
+ab
+b
+aabb
+baabaaabba
+b
+ab
+babaaab
+aa
+aaa
+aabaaaa
+abbabaaaab
+aabaa
+bba
+aaabbabba
+aaaabab
+aab
+2
+a 0.3
+b 0.7
+15
+
+13
+bbabaa
+a
+aa
+bbbbb
+baabaa
+babbabba
+bbb
+a
+bbbbba
+baaa
+b
+bbbaababaa
+babb
+2
+a 0.3
+b 0.7
+16
+
+7
+abaaaab
+baaaa
+bbabba
+abbaab
+aabbba
+bbb
+baaabaaaba
+2
+a 0.3
+b 0.7
+16
+
+17
+bbbbabbbaa
+ababaaba
+bbbaba
+aabbaabbb
+ab
+ba
+bb
+baaababaaa
+a
+aaababaa
+bbaabbbaaa
+aba
+bbbbb
+aaabbbabb
+a
+abaa
+abaababb
+2
+a 0.5
+b 0.5
+15
+
+9
+baaaaab
+aabbaabbaa
+abaaabbaa
+b
+bababbaa
+bbb
+aabba
+bbbbbb
+babab
+2
+a 0.6
+b 0.4
+10
+
+2
+ababbababa
+abaabbbb
+2
+a 0.5
+b 0.5
+18
+
+2
+bbabbb
+ababbaaab
+2
+a 0.3
+b 0.7
+13
+
+11
+bbabbaaba
+bbababbb
+ababbaa
+abb
+aab
+aaaaaab
+baabb
+baba
+bb
+baaaaaabba
+abbabb
+2
+a 0.1
+b 0.9
+17
+
+11
+a
+bbaabb
+aaa
+ab
+bab
+aaaaaabbb
+aabaaaba
+aabbbab
+bbba
+baaba
+abb
+2
+a 0.1
+b 0.9
+15
+
+16
+baaba
+ab
+a
+baabbb
+aabb
+a
+bbba
+aaaba
+b
+baab
+aababbbba
+abbab
+bbbabaab
+abbabb
+bababbab
+abaaa
+2
+a 0.3
+b 0.7
+11
+
+15
+b
+b
+abaaaa
+aaaabbbaa
+ababba
+baaabbbab
+abbabba
+a
+bba
+bb
+bbaaa
+abbb
+ababb
+a
+ababaabb
+2
+a 0.9
+b 0.1
+16
+
+13
+aababb
+babababb
+babaabbbab
+baabaaa
+bbbb
+baabbbbaba
+baabaa
+babbbba
+abaabaab
+ababbbb
+bbbbabaa
+aa
+aaaaabb
+2
+a 0.9
+b 0.1
+11
+
+10
+baa
+baba
+bbaaab
+aaababaab
+abb
+ab
+bb
+abaaabaaab
+bab
+baa
+2
+a 0.9
+b 0.1
+20
+
+7
+bbbababb
+bbaabbba
+bbb
+aaabbbabb
+baabba
+aabbb
+aa
+2
+a 0.9
+b 0.1
+20
+
+7
+baabb
+aaababa
+aba
+b
+aaaaa
+a
+b
+2
+a 0.4
+b 0.6
+17
+
+9
+bb
+babbb
+aaaabbb
+bbaab
+a
+aaa
+aabb
+baa
+bbbab
+2
+a 0.2
+b 0.8
+12
+
+5
+ababaab
+b
+aaaa
+bbbaaaaab
+bbbab
+2
+a 0.1
+b 0.9
+16
+
+3
+baa
+bbaba
+babbbbaab
+2
+a 0.8
+b 0.2
+20
+
+16
+abaabbaaba
+ababa
+a
+bbaabbba
+bbababaa
+b
+aaabab
+bbaa
+a
+bbababaab
+a
+aaaab
+bbbbaa
+abbba
+abbabaaaa
+aabbb
+2
+a 0.9
+b 0.1
+14
+
+18
+abaa
+baaab
+abbbba
+abb
+bbab
+aaaaaa
+aab
+baaabaabab
+bbab
+bbbabbb
+abbaa
+abbb
+aaabb
+bbabab
+aabaab
+baabbbbbab
+ab
+bbbbbabb
+2
+a 0.9
+b 0.1
+20
+
+8
+bbb
+bab
+bababb
+aaaa
+abbbbbbaab
+abbba
+abab
+b
+2
+a 0.4
+b 0.6
+15
+
+5
+abaabb
+abbbab
+bbabbabb
+ba
+aabbabbbab
+2
+a 0.4
+b 0.6
+15
+
+6
+aaaababbba
+aaabbaabba
+baa
+ababaabb
+abbb
+aabbaba
+2
+a 0.6
+b 0.4
+11
+
+12
+aabbabaa
+abbabbaa
+bbbabbbab
+aaa
+babbbb
+a
+abaababaab
+baabbbaaa
+bbbb
+bb
+babba
+baaababaa
+2
+a 0.4
+b 0.6
+17
+
+17
+baa
+bbbaaba
+aaabba
+bbabaa
+aa
+aa
+b
+ba
+abaaabaaab
+a
+bbbb
+baaabba
+bbbab
+b
+abbaab
+bbababbaba
+bb
+2
+a 0.2
+b 0.8
+11
+
+15
+aa
+bbbbaaaab
+baaaabab
+aa
+abaaba
+ba
+aabaabb
+abaaaba
+baa
+aa
+bb
+baaaababbb
+b
+abbb
+baaababbba
+2
+a 0.4
+b 0.6
+19
+
+8
+baaabb
+aab
+aaabba
+aaababb
+baabaaabbb
+aabbbbbbba
+aaabbbbbba
+abaaaaa
+2
+a 0.4
+b 0.6
+17
+
+16
+bbaba
+baaaabbba
+abaa
+aabaababb
+bbaa
+ababab
+aa
+abaabab
+aaabbbab
+aab
+abb
+aaaabbaaba
+abbbaaabb
+baaaaab
+abaabbbb
+aaaab
+2
+a 0.7
+b 0.3
+17
+
+12
+baaabbaaa
+bb
+bbaaa
+bbbbbaaaa
+abbaaabb
+bb
+abbbababbb
+abaab
+b
+bbaaab
+abbaaaaa
+bbababbab
+2
+a 0.7
+b 0.3
+18
+
+8
+bbabba
+babbbbbb
+bbbaabbab
+baa
+abbbaa
+abab
+baaa
+baaabaaaba
+2
+a 0.4
+b 0.6
+13
+
+17
+aaabbbaaa
+babaaa
+aababaabb
+aaa
+bbb
+aabbab
+aa
+baababb
+baaba
+abbbab
+bb
+babbbaa
+abbbaabaa
+babba
+b
+b
+baabb
+2
+a 0.6
+b 0.4
+20
+
+1
+abbbbbaa
+2
+a 0.2
+b 0.8
+14
+
+18
+b
+ba
+b
+abaabbbb
+babbaabbab
+aaabaab
+abbabb
+bb
+b
+abbaaabbaa
+babbaabaa
+bbbaba
+aabb
+aaabba
+abab
+aababa
+bbabbabb
+baaabababa
+2
+a 0.7
+b 0.3
+18
+
+3
+babbbba
+baaaa
+bbbaaabb
+2
+a 0.2
+b 0.8
+10
+
+20
+baba
+bbbababa
+babaabbbab
+babba
+baaaabbba
+bababaabbb
+baaabb
+aba
+abbbbaabab
+b
+bbabaabb
+aaabaaa
+bba
+aa
+a
+bbabbbaaaa
+babbba
+babbaaaa
+bbbabbba
+a
+2
+a 0.1
+b 0.9
+13
+
+3
+bbaabaa
+bb
+aaaabaabba
+2
+a 0.3
+b 0.7
+20
+
+20
+bbaabaaaba
+baabba
+bbabaaab
+abab
+bbaabaaaaa
+baabb
+ab
+a
+bb
+b
+baabbbba
+ababbab
+bababb
+babaaaaab
+baab
+babaab
+bb
+aaaabb
+aba
+baaaaaaa
+2
+a 0.2
+b 0.8
+11
+
+9
+bababbabb
+a
+b
+bbabb
+ababb
+abbbbbbbb
+bbbbb
+a
+abbbabaaba
+2
+a 0.9
+b 0.1
+18
+
+18
+bbabaaa
+aaa
+b
+baabbbbaba
+babba
+baaabaabab
+aabaabaa
+aaab
+aaa
+b
+baaab
+aaabb
+bbbbbbaaab
+babaaa
+bab
+bbbbaabaa
+aaaabbaba
+aa
+2
+a 0.9
+b 0.1
+16
+
+14
+abaa
+ab
+bbbbbbbab
+baabbaaba
+aabbaa
+bb
+bbbaabbbb
+ab
+baaab
+aabbb
+bbaaaabbab
+babb
+baabbabaa
+bbbbb
+2
+a 0.6
+b 0.4
+12
+
+19
+ababbbbaa
+babaabb
+b
+bbb
+baab
+a
+baababaab
+bbbbb
+bbaaaaabaa
+bbba
+aaab
+abbbab
+baabaabbbb
+abba
+a
+aaababbaa
+bbabb
+babb
+a
+2
+a 0.1
+b 0.9
+13
+
+1
+ab
+2
+a 0.6
+b 0.4
+11
+
+10
+abbaaaa
+bbb
+bbbaaa
+ab
+bbbbbbabba
+b
+bba
+baabaaaaa
+babbabbbab
+aa
+2
+a 0.3
+b 0.7
+20
+
+14
+bbbbaa
+aaaabbaaa
+bbbbaaa
+ababbaba
+ababbba
+abbabb
+b
+abab
+baba
+aab
+babbaab
+b
+a
+ba
+2
+a 0.1
+b 0.9
+20
+
+11
+aaabbb
+aba
+ababbaabab
+aaaabbbb
+baabb
+aba
+bb
+baabaaaaba
+bab
+bbabbaabaa
+b
+2
+a 0.7
+b 0.3
+12
+
+13
+b
+ababa
+baababba
+aaaaa
+baaabaa
+b
+bbaabba
+babbabaa
+ababbba
+abbb
+baa
+aababbbbab
+babb
+2
+a 0.8
+b 0.2
+13
+
+16
+aabaaaaaba
+bb
+abbab
+baa
+abbbaaa
+abbbabbab
+bbaaabba
+a
+aabbbb
+aabbaabb
+aababaa
+ba
+a
+ababbab
+aabbba
+ab
+2
+a 0.7
+b 0.3
+17
+
+2
+bbababaaaa
+abbbbaba
+2
+a 0.9
+b 0.1
+14
+
+6
+aba
+baa
+a
+abaabba
+abbab
+aabaaaab
+2
+a 0.7
+b 0.3
+16
+
+2
+bababb
+baa
+2
+a 0.4
+b 0.6
+17
+
+4
+bab
+baabababa
+aabbaabb
+baaba
+2
+a 0.4
+b 0.6
+13
+
+10
+bbbaa
+aaa
+abb
+abbaaaaaaa
+aababbbabb
+baabaaaaaa
+aabaaab
+aaab
+aaabbaa
+baba
+2
+a 0.9
+b 0.1
+10
+
+5
+aaabbbaba
+bbb
+bbab
+babaaabab
+baaabbbbab
+2
+a 0.4
+b 0.6
+12
+
+4
+a
+aa
+babbaba
+babbabaaab
+2
+a 0.3
+b 0.7
+12
+
+7
+bbbaab
+bbbabbbaa
+abba
+aabbba
+bbbaa
+bbab
+a
+2
+a 0.2
+b 0.8
+14
+
+12
+abbbb
+bababbbb
+aaaabbb
+b
+aba
+abaaa
+abababab
+aaaaba
+bbbb
+baabaab
+ba
+baabaab
+2
+a 0.2
+b 0.8
+17
+
+13
+bbbbbaaaab
+abbabaaaa
+aaabbabb
+ababaaa
+aaaaaa
+aaa
+ba
+baaaabb
+bbbabaa
+aaababa
+ba
+abbababa
+babbaa
+2
+a 0.5
+b 0.5
+11
+
+16
+ababbbaaa
+aabaabba
+abbbabbba
+aaba
+babb
+ba
+bb
+b
+aaa
+bbbbbaabb
+abbababab
+a
+babbaab
+abaaa
+baaa
+a
+2
+a 0.2
+b 0.8
+18
+
+2
+baabab
+aabbaa
+2
+a 0.9
+b 0.1
+20
+
+17
+aabb
+abaabb
+aabab
+aabb
+b
+bbbaab
+aba
+abbaaababb
+abab
+a
+abbbbabbb
+baaab
+bbbba
+aabbbbb
+bbbb
+bbbb
+aabbbbaab
+2
+a 0.8
+b 0.2
+20
+
+3
+babbaaba
+b
+a
+2
+a 0.6
+b 0.4
+16
+
+3
+abbaab
+baaabaabab
+a
+2
+a 0.8
+b 0.2
+12
+
+13
+a
+aababbbab
+ab
+abaaa
+bbb
+baba
+aa
+bbbaa
+ababaaaaa
+ba
+bbb
+aabaa
+bbaa
+2
+a 0.9
+b 0.1
+20
+
+19
+a
+baa
+aa
+bbbbbaa
+babaaabb
+abab
+abaaababab
+baaa
+aabb
+ba
+bbbbbbb
+babbbbaabb
+abbbbaaabb
+abaaaaabab
+abababbab
+babb
+aaaaaab
+ba
+bbabbab
+2
+a 0.3
+b 0.7
+18
+
+10
+aabba
+bbaabbbab
+babaaa
+babaabbabb
+baa
+bb
+babba
+baabaabb
+baaab
+bba
+2
+a 0.1
+b 0.9
+10
+
+4
+a
+bba
+bbb
+aaabbabaa
+2
+a 0.2
+b 0.8
+20
+
+17
+aa
+abbaaaabab
+aaaabbbba
+aaaabaa
+bab
+a
+baaa
+babbaabbbb
+abaaaaaaab
+aabab
+ababbaba
+aabaaa
+baaba
+aabbaababb
+baaaaab
+aaaabbaab
+abb
+2
+a 0.5
+b 0.5
+18
+
+10
+babaaaaba
+a
+b
+aabbbaabbb
+ababab
+aaabab
+bbababb
+abb
+bbabbbaaaa
+aababba
+2
+a 0.8
+b 0.2
+16
+
+1
+bbab
+2
+a 0.9
+b 0.1
+10
+
+16
+ba
+babaaba
+ba
+bab
+aaa
+aaaaa
+bbbbaabaa
+ab
+abbaa
+babaaaa
+bbaabb
+baabaaabb
+aaabbba
+bbbbbabba
+ab
+bbaabbab
+2
+a 0.3
+b 0.7
+19
+
+12
+baba
+baababaaa
+b
+abababba
+bababaaaba
+aaaaba
+abaaba
+a
+a
+a
+bbabbba
+a
+2
+a 0.9
+b 0.1
+19
+
+9
+ababbaa
+aaabaa
+bbabba
+aabab
+bbba
+abbaa
+aab
+bb
+bbaba
+2
+a 0.6
+b 0.4
+13
+
+17
+abbb
+aaabbabbb
+bb
+aaabaaaaa
+ababb
+aa
+abbbbaabba
+aabaa
+bbbbbabaaa
+a
+a
+b
+bbababaaab
+abba
+babbaba
+ababbbb
+bababb
+2
+a 0.1
+b 0.9
+20
+
+13
+a
+bba
+aabaab
+aabb
+babaaaaab
+bb
+bbaabbbaba
+bbbbbaab
+a
+aaabbabba
+baabbbaa
+abaaaaa
+aaabbbaa
+2
+a 0.5
+b 0.5
+11
+
+3
+bbaab
+aab
+bbbbbaba
+2
+a 0.3
+b 0.7
+11
+
+1
+aabbaab
+2
+a 0.8
+b 0.2
+17
+
+2
+babb
+bbaaaaaaba
+2
+a 0.6
+b 0.4
+15
+
+9
+babbb
+bbbabbbaa
+abbaaaaa
+abaa
+bbaaab
+babbabb
+bbaabbbba
+ba
+baaaabaab
+2
+a 0.6
+b 0.4
+16
+
+20
+bb
+babaa
+aababbb
+b
+aabbbabbab
+abbbaa
+babbaba
+aa
+ababaaba
+bbaaaaaaa
+bbaaa
+bbbbbbab
+babbabbbb
+a
+bbabbba
+aabababb
+aaaaab
+bababbbaa
+ba
+ab
+2
+a 0.5
+b 0.5
+10
+
+4
+aab
+ab
+aabaa
+aab
+2
+a 0.7
+b 0.3
+10
+
+6
+aaa
+bbabbbba
+abaaab
+baabaaa
+aaabaa
+ababbb
+2
+a 0.4
+b 0.6
+19
+
+8
+abaaabbbaa
+aabba
+aababbab
+babbaa
+ababbb
+bbb
+abbba
+bbbababa
+2
+a 0.5
+b 0.5
+19
+
+5
+aaabbaba
+baaabbbbbb
+ab
+aaab
+abb
+2
+a 0.6
+b 0.4
+11
+
+15
+aabaababa
+bbbbbbb
+baabaab
+abbababb
+bbbbab
+aa
+bbaaab
+aaaaba
+babbbba
+aaabb
+babbb
+bb
+ababb
+babba
+aababa
+2
+a 0.2
+b 0.8
+19
+
+18
+abaaa
+bba
+aaaaaaabba
+baabab
+abaa
+bbbaaa
+abaabbba
+baaaabba
+abbba
+abbabbbaa
+a
+b
+a
+aabaaa
+aba
+bbb
+bbbaaab
+aaaaababa
+2
+a 0.9
+b 0.1
+20
+
+13
+bbbaa
+b
+a
+bbbbabaaba
+bbbab
+bbb
+babaaaaa
+babbaba
+b
+a
+bbbabaa
+bbaaaaaba
+bb
+2
+a 0.2
+b 0.8
+10
+
+3
+bba
+ab
+babaaaa
+2
+a 0.3
+b 0.7
+17
+
+3
+b
+bbbaaa
+aabbbba
+2
+a 0.3
+b 0.7
+13
+
+12
+bbb
+aabbab
+bbbab
+abbabbba
+aabbba
+bbaababa
+babaaabba
+bb
+ab
+bba
+bbbabbbab
+babbab
+2
+a 0.5
+b 0.5
+14
+
+6
+baa
+aa
+bbbbbbaa
+babaaabaa
+aabaaaa
+babbaab
+2
+a 0.9
+b 0.1
+14
+
+3
+baaabab
+aabab
+abbaaaba
+2
+a 0.1
+b 0.9
+10
+
+5
+aba
+b
+ababaa
+aababaa
+aabbababa
+2
+a 0.3
+b 0.7
+12
+
+19
+bbbbbababa
+baaabb
+bb
+aa
+bbbaabaa
+baabbbab
+abab
+abaaaaba
+baba
+babb
+baaabaa
+baabab
+abbaabaab
+baa
+abbbabbaa
+aababbb
+bba
+aaab
+babbbaa
+2
+a 0.2
+b 0.8
+14
+
+4
+bbba
+a
+ababba
+aaabb
+2
+a 0.2
+b 0.8
+18
+
+9
+aababbab
+bbb
+a
+ba
+abbbabaa
+bbbbbb
+baaa
+bbbbaaab
+abaaa
+2
+a 0.4
+b 0.6
+19
+
+9
+aaaa
+abaa
+bbbaa
+baaa
+aabbaaa
+b
+bababb
+baabab
+aabbaabbb
+2
+a 0.7
+b 0.3
+12
+
+8
+bbb
+b
+abbbbaab
+abbbba
+a
+abababbbb
+baaa
+aa
+2
+a 0.4
+b 0.6
+16
+
+16
+bbbbbabba
+baabba
+abbbbbb
+aba
+abaa
+abaabbaaab
+aabbbbbb
+baabaaaaab
+abbabaaab
+aab
+abbbbab
+aa
+a
+a
+bbaabbb
+a
+2
+a 0.3
+b 0.7
+20
+
+19
+bbabaaaba
+ab
+a
+bbbabbbbaa
+abba
+bbababba
+bbbabababb
+bbbabbaaa
+abbbba
+bbab
+babbaba
+a
+babb
+baa
+aabbbbbbba
+a
+bbbaabaa
+babb
+bba
+2
+a 0.6
+b 0.4
+14
+
+10
+baaba
+abaa
+aabbabbaab
+ababb
+aabab
+bbbababaab
+bbbbbaabaa
+bb
+baaa
+aaaabbbbaa
+2
+a 0.1
+b 0.9
+17
+
+17
+b
+abaabaab
+ba
+aaababbab
+abb
+ba
+abbabbaaba
+bbbb
+bbbba
+bbaaaa
+ababbabb
+aaaabba
+a
+b
+aab
+bbbabbaa
+babaaa
+2
+a 0.1
+b 0.9
+16
+
+13
+a
+a
+a
+aaaabbaa
+a
+aabbba
+b
+abbaaaba
+aaabb
+bbabaabbaa
+bba
+babbbbba
+abbaaaaaaa
+2
+a 0.1
+b 0.9
+14
+
+17
+bbba
+aaabaabbb
+a
+abaa
+baaaa
+bba
+bababbaab
+bbbbba
+bbbab
+bab
+ab
+bb
+aaaaaa
+ababb
+baabaabbb
+baaaab
+aaaab
+2
+a 0.5
+b 0.5
+19
+
+20
+aabb
+baab
+baaabba
+babbbaabab
+bababab
+baababb
+aabb
+abbaab
+bba
+baaaab
+abbaa
+abbaabb
+bbabba
+bbb
+baaaaab
+bb
+aabbaaaaa
+aabaabbaba
+bbaaababb
+baaaabba
+2
+a 0.2
+b 0.8
+20
+
+20
+baaaaaab
+aaab
+aab
+abaaabab
+baaab
+abba
+bbbaabbbb
+abbab
+babbaaaa
+aab
+b
+aabbbbbabb
+baabab
+baabbaa
+ba
+aabaababba
+bbaba
+aaabababb
+babbababba
+babaaaaa
+2
+a 0.3
+b 0.7
+20
+
+11
+bb
+aaaab
+ab
+bbababaab
+abbaabbba
+bbb
+ba
+abb
+aaa
+bbb
+abbabb
+2
+a 0.7
+b 0.3
+12
+
+7
+abbbabab
+b
+bbab
+b
+abbaaa
+aba
+bbaaabaa
+2
+a 0.5
+b 0.5
+18
+
+1
+aabbabaaba
+2
+a 0.8
+b 0.2
+12
+
+9
+bb
+baababab
+baabaaaaaa
+bb
+aaabb
+abba
+bbab
+bbaaababab
+bbbaa
+2
+a 0.7
+b 0.3
+16
+
+13
+a
+bbbbaaa
+abbabbb
+b
+abbbbbbba
+babbabbaaa
+aabbaaa
+ababaabaaa
+baaba
+ababbbbabb
+bb
+aaabbabaa
+abbbaaaaa
+2
+a 0.5
+b 0.5
+17
+
+20
+ba
+bbaba
+bbbabba
+bbaaaa
+babababb
+aaaaba
+bababa
+aaabbaba
+b
+aaa
+abaaaab
+baabbbaaab
+aba
+ba
+b
+ba
+bbba
+aaaaabbab
+aaaa
+a
+2
+a 0.5
+b 0.5
+18
+
+13
+aba
+abaababba
+baab
+abaaaa
+ba
+aabbbbab
+aaaaaabbb
+abbaba
+baa
+aab
+bba
+ba
+bbaabbbaa
+2
+a 0.3
+b 0.7
+10
+
+15
+a
+aaaa
+a
+aabbabb
+ba
+ababba
+baaaba
+abbabaa
+bb
+aabb
+baababaaa
+aaabaa
+bbaaaa
+abbbba
+aaaaababb
+2
+a 0.6
+b 0.4
+20
+
+4
+aba
+bbbbb
+aabbabbbab
+aaabbbb
+2
+a 0.9
+b 0.1
+12
+
+19
+abbb
+abaababba
+babaaaaaaa
+aaabbbba
+bbbabab
+baabbbb
+aabbabbaba
+abbabaabab
+bbaaaaab
+baaaa
+bbaaaabbaa
+a
+baab
+ababa
+bbbbabbaba
+babaaaa
+bbababb
+a
+bbab
+2
+a 0.3
+b 0.7
+20
+
+3
+abbbaaabbb
+abaaaabbb
+bbb
+2
+a 0.8
+b 0.2
+12
+
+4
+aaba
+babb
+bbb
+bbaabaab
+2
+a 0.4
+b 0.6
+11
+
+14
+aa
+abbaaababa
+abaa
+b
+bbbbaba
+abbbb
+ababb
+a
+aabab
+bbababaa
+aaaaba
+aabbbabab
+baabbaa
+bbaaabba
+2
+a 0.1
+b 0.9
+16
+
+5
+babababaaa
+aaba
+abbb
+aabba
+abaab
+2
+a 0.4
+b 0.6
+17
+
+2
+ba
+aba
+2
+a 0.5
+b 0.5
+20
+
+18
+bbbbbbbbaa
+bbbaaabaaa
+a
+bbbbabba
+baab
+baaab
+abaabbaa
+abbaabb
+abababab
+bbb
+aabbb
+baaba
+aabbbbb
+abb
+abbbba
+abbab
+aaabbabbab
+bbbbbbbbbb
+2
+a 0.1
+b 0.9
+10
+
+1
+baaa
+2
+a 0.9
+b 0.1
+12
+
+20
+bab
+abb
+abbaaaaaab
+abaababba
+aa
+ba
+abb
+baabab
+baba
+aabaaababb
+baabbaaabb
+bbbabbaaba
+babbbbb
+ba
+baaaabba
+ab
+bb
+ba
+abaa
+babaababbb
+2
+a 0.2
+b 0.8
+12
+
+1
+abbaabbaab
+2
+a 0.8
+b 0.2
+11
+
+15
+babbb
+a
+baab
+a
+aabbbbbbbb
+abaaabba
+aabbbaaba
+abbaba
+aabab
+abba
+baaabbbbb
+aababaaaba
+abbabaa
+aaba
+aababaa
+2
+a 0.5
+b 0.5
+20
+
+9
+b
+ababaaabb
+bbaaaaaaba
+bbb
+bbbabbbbb
+aaab
+baaaababa
+aaaababaa
+ab
+2
+a 0.2
+b 0.8
+20
+
+10
+aaaa
+b
+abbbaabbb
+aaaba
+aaabbba
+ababbbaa
+aaaaaa
+abbbab
+bbbab
+ababbb
+2
+a 0.6
+b 0.4
+19
+
+19
+bbaba
+bbababbaaa
+baabb
+aa
+ababababaa
+b
+abbaa
+abaaaaaba
+bbbba
+abbbba
+b
+abbbbabba
+aaaaaaaab
+baaabaaabb
+aaaaa
+bbaaaaa
+b
+aabba
+babab
+2
+a 0.4
+b 0.6
+19
+
+12
+aaaaaba
+aaabababbb
+baabbba
+aabbaaaa
+bb
+aa
+a
+ba
+aaa
+abbb
+bbaaababa
+ba
+2
+a 0.5
+b 0.5
+20
+
+4
+aa
+bb
+aa
+aaabaabbaa
+2
+a 0.3
+b 0.7
+11
+
+1
+b
+2
+a 0.4
+b 0.6
+11
+
+19
+bbaaaabb
+bab
+ababaaa
+ba
+bbababbba
+bbabbaa
+ababaaab
+b
+aa
+babababb
+b
+ba
+aa
+a
+a
+baabbb
+a
+baaab
+a
+2
+a 0.8
+b 0.2
+18
+
+10
+bbabbabb
+ab
+baabbabaaa
+abbababba
+aaaaaa
+bb
+bab
+abaaba
+aabbaa
+aabab
+2
+a 0.9
+b 0.1
+13
+
+17
+babab
+bbb
+abb
+bbaabaa
+ab
+abbaabb
+abaa
+bbababa
+bbbaababb
+a
+bab
+aaaaab
+bbabab
+ababba
+aab
+babb
+bab
+2
+a 0.4
+b 0.6
+10
+
+10
+ba
+aaaaaa
+bbba
+baa
+bbbabaa
+b
+aabbbaaa
+baaa
+b
+abaaababb
+2
+a 0.7
+b 0.3
+14
+
+5
+abbbabaaaa
+abbaa
+abbabaa
+baaabbba
+aaaabb
+2
+a 0.8
+b 0.2
+17
+
+5
+abbbab
+bababb
+baabbbab
+bbbab
+ababbb
+2
+a 0.6
+b 0.4
+14
+
+16
+ab
+abaaaabba
+bbbba
+b
+abbbabbbb
+baba
+b
+bb
+baaab
+aa
+aaa
+aabbaab
+bbabbaaaa
+bbbaaaaa
+bbbb
+a
+2
+a 0.5
+b 0.5
+18
+
+15
+aabaaabbab
+bb
+a
+aab
+aabbabb
+aabbaaa
+bbbbaba
+bbaabbba
+a
+bbbbab
+bbaabb
+aaaaaabaa
+aa
+aa
+bbaaaaa
+2
+a 0.9
+b 0.1
+18
+
+6
+baba
+a
+abb
+abbbbbb
+abbbbbabab
+aaaab
+2
+a 0.4
+b 0.6
+13
+
+3
+aababaaaa
+bbbababbaa
+aaaabaabaa
+2
+a 0.9
+b 0.1
+13
+
+1
+a
+2
+a 0.6
+b 0.4
+16
+
+1
+ababaaba
+2
+a 0.4
+b 0.6
+17
+
+18
+aabbab
+bab
+aa
+ba
+aabababb
+aba
+abaaa
+aabbba
+bbaabbaaa
+baaaaa
+baa
+aabbbbb
+bbbbab
+aabbaaba
+aaaaabaaa
+baabbaba
+ab
+ba
+2
+a 0.1
+b 0.9
+14
+
+18
+bbbbbbab
+aaaaabaaba
+aa
+bbbaabbaa
+bbaaaabaaa
+bbbba
+aaaaabab
+bbaabbba
+ab
+abab
+bb
+babb
+abbaaa
+aaabaabaa
+baababbbb
+bba
+a
+baaaa
+2
+a 0.4
+b 0.6
+15
+
+9
+bbbbbab
+baa
+baabbba
+aabbbb
+abaaabaa
+ababbbbaab
+aababbbb
+b
+abba
+2
+a 0.8
+b 0.2
+20
+
+16
+abbbababa
+aabbaaa
+abbabbaba
+aaaab
+bbbabaaa
+bbabbb
+bbaababbaa
+bbbaaababa
+aaab
+bba
+baababa
+aaba
+abbb
+aaba
+baaaa
+abaa
+2
+a 0.1
+b 0.9
+11
+
+3
+bbbaba
+bba
+baaaba
+2
+a 0.4
+b 0.6
+19
+
+11
+aa
+aaaa
+baabb
+bbbabbbb
+bbb
+ababaa
+abaaababbb
+aabaaabaaa
+aabbaaab
+abaa
+babbabab
+2
+a 0.5
+b 0.5
+16
+
+14
+bbbba
+b
+abb
+aab
+a
+ba
+b
+b
+aababbb
+ababbaabb
+bbb
+abbaa
+abababbbbb
+aaaabaab
+2
+a 0.8
+b 0.2
+19
+
+20
+baabb
+baaa
+bbbb
+bbabbbbb
+aabaab
+bbbbbbabb
+bb
+b
+aa
+ba
+baa
+b
+babaa
+bbb
+bb
+abbbbab
+babba
+bbaba
+ababbaaba
+abbababa
+2
+a 0.7
+b 0.3
+13
+
+19
+bbbab
+aaab
+baaababbba
+aabaab
+abaaaab
+bbaababaa
+bbaaaaab
+a
+abb
+bbbbbaab
+abbbaa
+aabbb
+b
+abbbbbaa
+ba
+bba
+baa
+b
+b
+2
+a 0.2
+b 0.8
+16
+
+10
+bbabaabaab
+bbbabbbb
+aab
+aaab
+ababaaaaab
+aa
+abbbabbb
+a
+b
+ababaabab
+2
+a 0.1
+b 0.9
+15
+
+20
+bbaaabbab
+ab
+bba
+bb
+bb
+aabbbb
+ba
+bbbbba
+aaaa
+baba
+baaa
+ab
+ababbbabb
+bbbabb
+babbaab
+abba
+babab
+bbbbbb
+baabaaa
+baaabbaab
+2
+a 0.9
+b 0.1
+12
+
+20
+aabab
+bbbbaab
+aba
+aababa
+baaabaaa
+ba
+bbabbb
+abaabba
+a
+babba
+abaabbaaba
+a
+aaa
+aabaabb
+baaabbaabb
+bbaabba
+abaaabbaa
+ababbb
+bbabaaabb
+bbabbbaa
+2
+a 0.2
+b 0.8
+20
+
+11
+b
+b
+aabbbbaaab
+abbabaaaab
+babaaaabb
+aabaa
+aababbb
+aaabbaabb
+bbbbaaa
+bba
+aaab
+2
+a 0.7
+b 0.3
+20
+
+4
+baa
+aaa
+abab
+babbaaabbb
+2
+a 0.1
+b 0.9
+11
+
+8
+bbab
+abb
+abbbbab
+a
+abaaaaa
+aaabbbbb
+aaa
+b
+2
+a 0.4
+b 0.6
+19-------
