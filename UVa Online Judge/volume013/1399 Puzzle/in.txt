@@ -1,0 +1,28 @@
+5
+2 4
+AAA
+AB
+BA
+BB
+2 4
+AAA
+BBB
+ABAB
+BBAA
+3 7
+AA
+ABA
+BAC
+BB
+BC
+CA
+CC
+2 2
+A
+B
+2 4
+AB
+BA
+AA
+BB
+
