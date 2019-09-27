@@ -10,7 +10,7 @@
 
 using namespace std;
 
-const int MAXN = 510, CHARSET = 128, FAIL = -1;
+const int MAXN = 510, CHARSET = 128;
 
 int T, K, N, L;
 int cnt, root;
@@ -26,17 +26,14 @@ void buildGotoFunction()
         int *current = &root;
         for (auto c : keywords[i]) {
             current = &go[*current][c];
-            if (*current == FAIL) {
+            if (!*current) {
                 *current = ++cnt;
-                memset(go[cnt], FAIL, sizeof(go[cnt]));
+                memset(go[cnt], 0, sizeof(go[cnt]));
                 output[cnt] = 0;
             }
         }
         output[*current] = 1;
     }
-    for (int i = 0; i < CHARSET; i++)
-        if (go[0][i] == FAIL)
-            go[0][i] = 0;
 }
 
 void buildFailureFunction()
@@ -50,13 +47,14 @@ void buildFailureFunction()
     while (!q.empty()) {
         int r = q.front(); q.pop();
         for (int i = 0; i < CHARSET; i++)
-            if (go[r][i] != FAIL) {
+            if (go[r][i]) {
                 int s = go[r][i], f = fail[r];
                 q.push(s);
-                while (go[f][i] == FAIL) f = fail[f];
+                while (f && !go[f][i]) f = fail[f];
                 fail[s] = go[f][i];
                 output[s] |= output[fail[s]];
             }
+            else go[r][i] = go[fail[r]][i];
     }
 }
 
@@ -64,7 +62,7 @@ void initialize()
 {
     root = cnt = 0;
     keywords.clear();
-    memset(go[0], FAIL, sizeof(go[0]));
+    memset(go[0], 0, sizeof(go[0]));
     memset(output, 0, sizeof(output));
 }
 
@@ -80,9 +78,7 @@ double dfs(int current, int length)
     for (int i = 0; i < N; i++)
     {
         char c = alpha[i];
-        int next = current;
-        while (go[next][c] == FAIL) next = fail[next];
-        next = go[next][c];
+        int next = go[current][c];
         if (output[next]) r += ps[i];
         else r += ps[i] * dfs(next, length + 1);
     }

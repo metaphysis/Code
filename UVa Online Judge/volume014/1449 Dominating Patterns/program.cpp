@@ -10,7 +10,7 @@
 
 using namespace std;
 
-const int MAXN = 11000, CHARSET = 26, FAIL = -1, OFFSET = 'a';
+const int MAXN = 11000, CHARSET = 26, OFFSET = 'a';
 
 class AhoCorasick
 {
@@ -27,25 +27,22 @@ private:
             for (auto c : keywords[i])
             {
                 current = &go[*current][c - OFFSET];
-                if (*current == FAIL)
+                if (!*current)
                 {
                     *current = ++cnt;
-                    memset(go[cnt], FAIL, sizeof(go[cnt]));
+                    memset(go[cnt], 0, sizeof(go[cnt]));
                     output[cnt].clear();
                 }
             }
             output[*current].push_back(i);
         }
-        for (int i = 0; i < CHARSET; i++)
-            if (go[0][i] == FAIL)
-                go[0][i] = 0;
     }
 
     void buildFailureFunction()
     {
         queue<int> q;
         for (int i = 0; i < CHARSET; i++)
-            if (go[0][i] != 0)
+            if (go[0][i])
             {
                 q.push(go[0][i]);
                 fail[go[0][i]] = 0;
@@ -54,15 +51,16 @@ private:
         {
             int r = q.front(); q.pop();
             for (int i = 0; i < CHARSET; i++)
-                if (go[r][i] != FAIL)
+                if (go[r][i])
                 {
                     int s = go[r][i], f = fail[r];
                     q.push(s);
-                    while (go[f][i] == FAIL) f = fail[f];
+                    while (f && !go[f][i]) f = fail[f];
                     fail[s] = go[f][i];
                     output[s].insert(output[s].end(),
                         output[fail[s]].begin(), output[fail[s]].end());
                 }
+                else go[r][i] = go[fail[r]][i];
         }
     }
 
@@ -71,7 +69,7 @@ public:
     {
         root = cnt = 0;
         keywords.clear();
-        memset(go[0], FAIL, sizeof(go[0]));
+        memset(go[0], 0, sizeof(go[0]));
         for (int i = 0; i < MAXN; i++) output[i].clear();
     }
 
@@ -90,7 +88,6 @@ public:
         cin.unsetf(ios::skipws);
         while (cin >> c, c != '\n')
         {
-            while (go[current][c - OFFSET] == FAIL) current = fail[current];
             current = go[current][c - OFFSET];
             if (output[current].size() > 0)
                 for (auto i : output[current])

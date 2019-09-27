@@ -1,8 +1,8 @@
-// Puzzle
-// UVa ID: 1399
+// Password Suspects
+// UVa ID: 1076
 // Verdict: Accepted
-// Submission Date: 2019-09-25
-// UVa Run Time: 0.000s
+// Submission Date: 2019-09-27
+// UVa Run Time: 0.370s
 //
 // 版权所有（C）2019，邱秋。metaphysis # yeah dot net
 
@@ -10,9 +10,9 @@
 
 using namespace std;
 
-const int MAXN = 50010, CHARSET = 26;
+const int MAXN = 128, CHARSET = 26;
 
-int T, N, S;
+int N, M;
 int cnt, root;
 int go[MAXN][CHARSET], fail[MAXN];
 vector<string> keywords;
@@ -25,7 +25,7 @@ void buildGotoFunction()
         int *current = &root;
         for (int j = 0; j < keywords[i].length(); j++)
         {
-            int c = keywords[i][j] - 'A';
+            int c = keywords[i][j] - 'a';
             current = &go[*current][c];
             if (!*current)
             {
@@ -34,7 +34,7 @@ void buildGotoFunction()
                 output[cnt] = 0;
             }
         }
-        output[*current] = 1;
+        output[*current] |= (1 << i);
     }
 }
 
@@ -72,56 +72,70 @@ void initialize()
 
 void add(string s) { keywords.push_back(s); }
 
-int dp[MAXN], successor[MAXN], visited[MAXN];
+long long dp[32][128][(1 << 11)];
 
-int dfs(int u)
+long long dfs(int L, int u, int mask)
 {
-    if (visited[u]) return -1;
-    if (~dp[u]) return dp[u];
-    visited[u] = 1;
-    int r = 0;
-    for (int c = N - 1; c >= 0; c--)
+    if (L == N) return dp[L][u][mask] = (mask == ((1 << M) - 1));
+    if (~dp[L][u][mask]) return dp[L][u][mask];
+    long long r = 0;
+    for (int c = 0; c < CHARSET; c++)
     {
         int v = go[u][c];
-        if (output[v]) continue;
-        int tmp = dfs(v);
-        if (tmp == -1) return -1;
-        if (tmp + 1 > r) r = tmp + 1, successor[u] = c;
+        r += dfs(L + 1, v, mask | output[v]);
     }
-    visited[u] = 0;
-    return dp[u] = r;
+    return dp[L][u][mask] = r;
+}
+
+int password[32];
+
+void backtrack(int L, int u, int mask)
+{
+    if (L == N)
+    {
+        for (int i = 0; i < N; i++)
+            cout << (char)('a' + password[i]);
+        cout << '\n';
+        return;
+    }
+    for (int c = 0; c < CHARSET; c++)
+    {
+        int v = go[u][c];
+        if (dp[L + 1][v][mask | output[v]] > 0)
+        {
+            password[L] = c;
+            backtrack(L + 1, v, mask | output[v]);
+        }
+    }
 }
 
 int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
+    int cases = 0;
     string key;
-    cin >> T;
-    for (int cs = 1; cs <= T; cs++)
+    while (cin >> N >> M)
     {
+        if (N == 0) break;
+
         initialize();
-        cin >> N >> S;
-        for (int i = 0; i < S; i++) {
+        for (int i = 0; i < M; i++) {
             cin >> key;
             add(key);
         }
         buildGotoFunction();
         buildFailureFunction();
-        memset(visited, 0, sizeof(visited));
+
         memset(dp, -1, sizeof(dp));
-        int r = dfs(0);
-        if (r <= 0) cout << "No\n";
-        else
-        {
-            int u = 0;
-            for (int i = 0; i < r; i++)
-            {
-                cout << (char)(successor[u] + 'A');
-                u = go[u][successor[u]];
-            }
-            cout << '\n';
-        }
+        for (int i = 0; i <= N; i++)
+            for (int j = 0; j <= cnt; j++)
+                for (int k = 0; k < (1 << M); k++)
+                    dp[i][j][k] = -1LL;
+
+        long long r = dfs(0, 0, 0);
+        cout << "Case " << ++cases << ": " << r << " suspects\n";
+        if (r <= 42LL) backtrack(0, 0, 0);
     }
 
     return 0;

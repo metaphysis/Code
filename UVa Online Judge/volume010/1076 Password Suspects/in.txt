@@ -1,0 +1,1473 @@
+14 7
+fdf
+cj
+ch
+jdg
+g
+g
+i
+13 10
+acd
+f
+c
+i
+h
+g
+c
+d
+j
+h
+9 3
+adgbag
+c
+g
+2 2
+f
+e
+13 7
+gjdhef
+f
+h
+e
+a
+i
+i
+9 4
+bejc
+g
+j
+g
+7 5
+fa
+i
+b
+c
+c
+8 5
+ag
+fj
+j
+j
+h
+13 2
+fjhhgh
+gfgd
+15 5
+bcjdjaiif
+j
+d
+f
+b
+2 2
+j
+i
+15 9
+ad
+e
+eehgd
+h
+j
+c
+h
+f
+e
+2 1
+j
+8 4
+ii
+b
+j
+edd
+9 3
+aei
+i
+hh
+7 1
+adaj
+8 6
+a
+je
+j
+c
+h
+f
+5 4
+c
+j
+g
+a
+8 8
+a
+f
+b
+b
+a
+i
+f
+a
+12 5
+c
+igcie
+c
+agc
+j
+11 9
+db
+a
+e
+d
+b
+g
+d
+i
+f
+12 7
+aaegc
+h
+g
+i
+c
+c
+j
+12 1
+hgbdcbfjj
+7 3
+bahf
+h
+e
+14 1
+cjgbaec
+13 3
+f
+cjacid
+aeaj
+7 5
+c
+ee
+j
+g
+f
+11 3
+edfb
+edb
+gje
+8 3
+eb
+iij
+i
+4 3
+i
+i
+d
+14 9
+e
+gij
+gih
+a
+d
+h
+c
+f
+g
+11 9
+jg
+e
+a
+i
+a
+g
+e
+j
+j
+3 1
+ab
+3 1
+bf
+15 10
+fhe
+jef
+d
+h
+i
+j
+h
+c
+d
+j
+11 3
+bjgcb
+ahd
+bj
+1 1
+g
+13 8
+agehe
+f
+c
+a
+g
+g
+i
+g
+11 8
+ba
+dh
+c
+e
+c
+c
+a
+j
+15 6
+adh
+igaeg
+g
+jh
+jh
+f
+4 2
+d
+jd
+8 7
+e
+j
+j
+i
+i
+d
+b
+4 3
+j
+j
+d
+8 3
+hbcc
+c
+hf
+12 8
+bhb
+bh
+e
+i
+b
+g
+b
+g
+5 4
+i
+a
+c
+h
+11 7
+g
+hjhe
+b
+a
+a
+f
+j
+15 2
+ebff
+jidif
+8 7
+h
+d
+g
+g
+d
+e
+j
+3 1
+ij
+6 3
+h
+fhb
+d
+14 9
+b
+i
+gdf
+ia
+b
+df
+d
+b
+a
+4 4
+f
+g
+f
+j
+5 1
+gdhg
+7 6
+g
+a
+b
+c
+j
+a
+15 3
+eadciadhaade
+c
+e
+13 6
+eed
+gaij
+c
+bi
+e
+c
+10 6
+hf
+b
+jib
+d
+h
+i
+12 8
+e
+e
+bgi
+cb
+j
+a
+e
+j
+1 1
+j
+4 2
+i
+gh
+3 2
+b
+c
+2 2
+a
+j
+6 5
+b
+h
+b
+d
+d
+3 3
+h
+f
+g
+1 1
+c
+8 8
+h
+c
+e
+b
+g
+f
+h
+i
+1 1
+c
+8 4
+e
+jh
+c
+g
+14 1
+bfgfaadeggacf
+4 4
+f
+a
+g
+a
+9 3
+icbafi
+f
+h
+9 7
+d
+h
+hg
+b
+j
+i
+i
+4 3
+h
+g
+c
+2 2
+h
+j
+13 7
+hbfii
+f
+f
+i
+i
+d
+h
+11 3
+fafhdch
+b
+ej
+5 2
+fhe
+c
+8 6
+c
+c
+j
+ed
+g
+e
+6 2
+chhj
+b
+6 4
+a
+ac
+b
+h
+12 4
+cagihejc
+e
+j
+c
+9 6
+ag
+a
+ef
+g
+d
+j
+11 3
+dajjbd
+fif
+d
+9 3
+ffdi
+add
+b
+14 8
+fbbad
+a
+f
+c
+j
+je
+i
+g
+14 10
+de
+bf
+b
+cc
+c
+b
+e
+i
+d
+h
+8 6
+cf
+h
+i
+d
+e
+d
+11 9
+aj
+i
+c
+j
+b
+a
+g
+j
+i
+14 9
+dba
+fad
+i
+b
+j
+a
+f
+e
+e
+7 5
+j
+d
+d
+hj
+j
+15 2
+ecagfjfgbbed
+ch
+9 9
+j
+c
+e
+e
+e
+j
+j
+d
+i
+9 1
+fedjej
+6 6
+h
+d
+j
+a
+h
+c
+8 3
+afaeb
+j
+g
+13 2
+fdjbii
+afch
+10 2
+gdgieg
+h
+3 2
+b
+a
+7 4
+d
+deh
+b
+j
+6 3
+jff
+b
+j
+15 2
+cbafdcbjhgic
+g
+15 4
+gjaeifbcj
+dia
+c
+b
+4 2
+b
+d
+14 6
+abcgeifg
+f
+g
+b
+d
+f
+3 2
+e
+g
+1 1
+e
+9 7
+aa
+c
+j
+d
+f
+h
+h
+6 1
+e
+12 4
+c
+ga
+df
+dge
+4 4
+j
+b
+a
+j
+5 1
+cfj
+7 2
+ebb
+b
+14 9
+ejd
+di
+jd
+i
+a
+i
+i
+d
+f
+6 2
+cgif
+i
+14 7
+i
+cggcj
+adh
+d
+b
+i
+e
+12 7
+dfeih
+d
+a
+e
+h
+h
+j
+15 4
+e
+e
+ffg
+gcg
+5 5
+c
+j
+g
+f
+f
+4 1
+h
+4 3
+c
+j
+a
+14 8
+fce
+a
+ife
+eg
+d
+d
+c
+e
+8 3
+jgfeg
+c
+b
+7 7
+d
+h
+h
+b
+c
+b
+a
+14 10
+b
+ei
+ic
+a
+d
+b
+f
+ec
+a
+d
+5 1
+dde
+3 2
+d
+b
+12 4
+fibd
+jhfe
+j
+h
+13 2
+bdhhg
+jbaebb
+4 1
+deh
+13 1
+efdahcjj
+14 1
+hj
+15 6
+a
+dfjgfg
+ac
+heh
+a
+g
+3 2
+i
+j
+6 6
+i
+a
+d
+b
+a
+d
+12 8
+ccbf
+d
+c
+f
+a
+g
+d
+h
+5 4
+b
+j
+e
+a
+8 2
+he
+ej
+12 3
+bibdijcef
+a
+b
+9 6
+aac
+c
+h
+i
+e
+i
+2 1
+g
+10 4
+fi
+aj
+acge
+i
+7 7
+a
+i
+b
+j
+i
+b
+g
+5 4
+a
+f
+h
+g
+13 9
+fach
+i
+h
+j
+j
+i
+i
+f
+a
+13 5
+hdaabf
+aa
+e
+fd
+e
+8 7
+d
+a
+i
+c
+c
+f
+e
+6 1
+cfech
+1 1
+f
+13 3
+ggaajbcgj
+i
+i
+13 8
+ghha
+ef
+c
+d
+g
+h
+d
+e
+15 1
+acciedbbbja
+11 1
+fhg
+5 2
+ihg
+b
+12 5
+fhg
+jb
+dgh
+j
+ga
+15 1
+ggihhg
+7 7
+d
+h
+g
+j
+h
+c
+g
+15 1
+feabciab
+6 5
+h
+g
+j
+d
+b
+12 1
+ha
+14 2
+ebeji
+c
+8 2
+dch
+jabf
+11 7
+hjci
+j
+j
+g
+g
+e
+j
+12 7
+bjiae
+a
+f
+b
+a
+i
+e
+15 9
+eejb
+fh
+c
+c
+fa
+c
+h
+g
+b
+8 1
+cihe
+12 4
+aejhjhf
+dh
+a
+f
+3 1
+ch
+9 1
+digbgaj
+7 7
+b
+f
+a
+j
+e
+j
+g
+9 7
+g
+de
+e
+b
+a
+i
+d
+10 7
+ff
+g
+j
+h
+ge
+a
+c
+1 1
+i
+6 3
+g
+hde
+i
+6 3
+fdf
+b
+a
+12 2
+fhifbgajb
+e
+15 1
+eedcfbdcgagjgi
+11 9
+h
+ee
+a
+f
+j
+f
+e
+g
+e
+4 3
+g
+a
+f
+14 3
+gifdeabhhi
+i
+hi
+14 10
+cfac
+i
+g
+g
+g
+d
+b
+b
+a
+c
+5 1
+aibg
+3 1
+c
+2 2
+i
+j
+14 6
+bcc
+hjbeae
+i
+g
+a
+g
+7 3
+cf
+di
+e
+14 6
+fjdegcf
+ca
+a
+i
+j
+h
+13 2
+eieji
+ebj
+12 9
+jdg
+i
+f
+b
+b
+i
+g
+f
+d
+5 5
+h
+j
+h
+d
+f
+11 5
+jebedg
+c
+h
+b
+f
+2 2
+d
+a
+12 5
+hfdi
+hdf
+he
+a
+b
+7 4
+idb
+c
+f
+e
+2 2
+b
+c
+1 1
+f
+7 4
+eg
+b
+i
+cj
+9 1
+icaceji
+2 2
+g
+e
+12 9
+df
+ec
+a
+h
+a
+g
+j
+j
+g
+10 5
+acd
+i
+cig
+d
+d
+6 2
+jh
+j
+11 6
+bac
+gdg
+e
+e
+i
+e
+14 3
+chhjjdjie
+ia
+ja
+5 2
+ci
+gi
+10 9
+i
+h
+h
+j
+d
+b
+i
+g
+g
+2 2
+i
+c
+5 2
+j
+dhi
+8 1
+hgaejbc
+8 5
+g
+c
+jig
+g
+h
+13 7
+ijiib
+i
+e
+e
+c
+ge
+f
+15 8
+fhged
+dhd
+i
+a
+g
+j
+b
+d
+13 2
+dfhacga
+dhb
+9 7
+gi
+g
+j
+j
+f
+a
+c
+8 5
+d
+ed
+a
+d
+d
+8 3
+ecjdi
+e
+e
+9 1
+ehebgbg
+9 5
+ejg
+fb
+a
+c
+c
+3 3
+g
+b
+a
+11 8
+db
+h
+i
+b
+h
+eh
+d
+e
+8 3
+ej
+ecf
+ch
+5 5
+a
+f
+g
+a
+a
+10 1
+caigj
+10 3
+feibah
+e
+jc
+4 3
+h
+e
+j
+12 1
+j
+6 6
+h
+d
+a
+i
+f
+e
+14 10
+g
+d
+g
+h
+hgh
+d
+ce
+f
+i
+h
+3 1
+hj
+14 3
+hi
+ahb
+g
+2 2
+c
+i
+4 2
+ab
+h
+5 1
+gjdd
+2 1
+i
+10 7
+jhi
+b
+d
+j
+d
+f
+c
+4 4
+b
+i
+c
+h
+1 1
+c
+2 2
+b
+h
+9 5
+h
+ej
+ac
+bg
+a
+5 4
+c
+d
+h
+e
+1 1
+b
+7 6
+e
+i
+f
+e
+e
+f
+12 6
+gjhadc
+i
+f
+f
+f
+b
+6 3
+ddg
+i
+c
+11 2
+aaiciihab
+a
+9 4
+bfb
+d
+e
+cdg
+6 4
+h
+c
+a
+e
+1 1
+b
+12 10
+dj
+b
+g
+h
+d
+i
+f
+a
+g
+g
+9 4
+if
+ih
+h
+fih
+9 6
+cif
+c
+h
+b
+d
+g
+5 5
+i
+h
+h
+d
+g
+6 3
+e
+ge
+gg
+11 10
+c
+i
+f
+a
+c
+b
+i
+d
+g
+e
+15 3
+bigdecafjee
+bj
+d
+15 2
+fhcgabebfdfhh
+d
+3 1
+eh
+12 9
+i
+dhc
+a
+e
+a
+j
+g
+i
+i
+6 6
+c
+a
+d
+e
+h
+h
+12 7
+f
+gibaf
+i
+b
+b
+j
+d
+10 2
+g
+ggfaf
+5 4
+j
+h
+g
+h
+9 2
+e
+fh
+6 3
+j
+idd
+j
+5 2
+hb
+a
+3 3
+i
+a
+b
+2 2
+h
+a
+1 1
+d
+8 6
+jg
+g
+d
+f
+b
+f
+14 6
+jjghja
+j
+ggi
+i
+c
+f
+5 2
+hgh
+h
+12 9
+iah
+g
+j
+b
+f
+g
+b
+f
+g
+4 3
+f
+i
+d
+4 1
+ggb
+9 8
+j
+i
+g
+c
+a
+a
+c
+a
+8 8
+f
+e
+d
+a
+h
+b
+i
+i
+3 1
+c
+7 2
+hc
+dga
+4 3
+a
+j
+i
+15 3
+ihifjidge
+bf
+ee
+13 1
+aaibhbjjajd
+5 3
+bh
+c
+d
+7 6
+c
+c
+e
+j
+j
+e
+1 1
+f
+2 1
+c
+14 4
+ihb
+b
+bcbe
+ah
+9 9
+f
+c
+c
+e
+d
+j
+g
+e
+g
+3 1
+c
+15 10
+hi
+fcgh
+h
+b
+a
+g
+a
+a
+i
+a
+0 0
