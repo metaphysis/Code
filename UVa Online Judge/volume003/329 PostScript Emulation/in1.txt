@@ -1,0 +1,90 @@
+300 300 moveto
+0 72 rlineto
+0 0 rlineto
+0 0 rmoveto
+0 rotate
+2 1 scale
+36 0 rlineto
+1 -4 scale
+0 18 rlineto
+1 -0.25 scale
+0.5 1 scale
+300 300 translate
+90 rotate
+0 0 moveto
+0 72 rlineto
+2 1 scale
+36 0 rlineto
+1 -4 scale
+0 18 rlineto
+0.5 -0.25 scale
+10 10 moveto
+0 72 rlineto
+0 0 rlineto
+0 0 rmoveto
+0 rotate
+2 1 scale
+36 0 rlineto
+0.5 -1 scale
+0 18 rlineto
+1 -1 scale
+1 1 scale
+10 10 translate
+270 rotate
+0 0 moveto
+0 72 rlineto
+2 1 scale
+0 0 moveto
+72 0 lineto
+72 72 lineto
+0 72 lineto
+0 0 lineto
+10 rotate
+0 0 moveto
+72 0 lineto
+72 72 lineto
+0 72 lineto
+0 0 lineto
+10 rotate
+0 0 moveto
+72 0 lineto
+72 72 lineto
+0 72 lineto
+0 0 lineto
+10 rotate
+0 0 moveto
+72 0 lineto
+72 72 lineto
+0 72 lineto
+0 0 lineto
+10 rotate
+0 0 moveto
+72 0 lineto
+72 72 lineto
+0 72 lineto
+0 0 lineto
+10 rotate
+0 0 moveto
+72 0 lineto
+72 72 lineto
+0 72 lineto
+0 0 lineto
+10 rotate
+0 0 moveto
+72 0 lineto
+72 72 lineto
+0 72 lineto
+0 0 lineto
+10 rotate
+0 0 moveto
+72 0 lineto
+72 72 lineto
+0 72 lineto
+0 0 lineto
+10 rotate
+0 0 moveto
+72 0 lineto
+72 72 lineto
+0 72 lineto
+0 0 lineto
+*
