@@ -59,9 +59,9 @@ void multiply(double a[3][3], double b[3][3])
         {
             c[i][j] = 0;
             for (int k = 0; k < 3; k++)
-                c[i][j] += b[i][k] * a[k][j];
+                c[i][j] += a[i][k] * b[k][j];
         }
-    memcpy(a, c, sizeof(c));
+    memcpy(b, c, sizeof(c));
 }
 
 pair<double, double> restore(double x, double y)
@@ -91,7 +91,20 @@ int main(int argc, char *argv[])
         istringstream iss(line);
         while (iss >> parameter) parameters.push_back(parameter);
 
-        if (parameters.back() == "rotate")
+        if (parameters.back() == "translate")
+        {
+            double tx = stod(parameters[0]);
+            double ty = stod(parameters[1]);
+            double b[3][3] = {
+                {1, 0, tx},
+                {0, 1, ty},
+                {0, 0, 1}
+            };
+            multiply(b, im);
+            //updateInverseMatrix(a);
+            cx -= tx, cy -= ty;
+        }
+        else if (parameters.back() == "rotate")
         {
             double alpha = stod(parameters.front()) * PI / 180.0;
             double b[3][3] = {
@@ -104,19 +117,6 @@ int main(int argc, char *argv[])
             double nextx = cx * cos(alpha) + cy * sin(alpha);
             double nexty = -cx * sin(alpha) + cy * cos(alpha) ;
             cx = nextx, cy = nexty;
-        }
-        else if (parameters.back() == "translate")
-        {
-            double tx = stod(parameters[0]);
-            double ty = stod(parameters[1]);
-            double b[3][3] = {
-                {1, 0, tx},
-                {0, 1, ty},
-                {0, 0, 1}
-            };
-            multiply(b, im);
-            //updateInverseMatrix(a);
-            cx -= tx, cy -= ty;
         }
         else if (parameters.back() == "scale")
         {

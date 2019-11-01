@@ -91,7 +91,20 @@ int main(int argc, char *argv[])
         istringstream iss(line);
         while (iss >> parameter) parameters.push_back(parameter);
 
-        if (parameters.back() == "rotate")
+        if (parameters.back() == "translate")
+        {
+            double tx = stod(parameters[0]);
+            double ty = stod(parameters[1]);
+            double b[3][3] = {
+                {1, 0, -tx},
+                {0, 1, -ty},
+                {0, 0, 1}
+            };
+            multiply(b, a);
+            updateInverseMatrix(a);
+            cx -= tx, cy -= ty;
+        }
+        else if (parameters.back() == "rotate")
         {
             double alpha = stod(parameters.front()) * PI / 180.0;
             double b[3][3] = {
@@ -104,19 +117,6 @@ int main(int argc, char *argv[])
             double nextx = cx * cos(alpha) + cy * sin(alpha);
             double nexty = -cx * sin(alpha) + cy * cos(alpha) ;
             cx = nextx, cy = nexty;
-        }
-        else if (parameters.back() == "translate")
-        {
-            double tx = stod(parameters[0]);
-            double ty = stod(parameters[1]);
-            double b[3][3] = {
-                {1, 0, -tx},
-                {0, 1, -ty},
-                {0, 0, 1}
-            };
-            multiply(b, a);
-            updateInverseMatrix(a);
-            cx -= tx, cy -= ty;
         }
         else if (parameters.back() == "scale")
         {
