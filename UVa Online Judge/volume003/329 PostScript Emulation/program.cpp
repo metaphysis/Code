@@ -36,12 +36,14 @@ void updateInverseMatrix(double a[3][3])
         for (int j = 0; j < 3; j++)
         {
             double sign = 1;
-            if ((i + j) % 2) sign = -1;
+            if ((i + j) % 2)
+                sign = -1;
             int idx = 0;
             for (int ii = 0; ii < 3; ii++)
                 for (int jj = 0; jj < 3; jj++)
                 {
-                    if (ii == i || jj == j) continue;
+                    if (ii == i || jj == j)
+                        continue;
                     b[idx++] = a[ii][jj];
                 }
             im[i][j] = sign * (b[0] * b[3] - b[1] * b[2]) / A;
@@ -59,12 +61,12 @@ void multiply(double a[3][3], double b[3][3])
         {
             c[i][j] = 0;
             for (int k = 0; k < 3; k++)
-                c[i][j] += a[i][k] * b[k][j];
+                c[i][j] += b[i][k] * a[k][j];
         }
-    memcpy(b, c, sizeof(c));
+    memcpy(a, c, sizeof(c));
 }
 
-pair<double, double> restore(double x, double y)
+pair < double, double >restore(double x, double y)
 {
     double nx = im[0][0] * x + im[0][1] * y + im[0][2];
     double ny = im[1][0] * x + im[1][1] * y + im[1][2];
@@ -82,40 +84,41 @@ int main(int argc, char *argv[])
     double a[3][3] = {
         {1, 0, 0},
         {0, 1, 0},
-        {0, 0, 1}    
+        {0, 0, 1}
     };
 
     while (getline(cin, line), line != "*")
     {
-        vector<string> parameters;
+        vector < string > parameters;
         istringstream iss(line);
-        while (iss >> parameter) parameters.push_back(parameter);
+        while (iss >> parameter)
+            parameters.push_back(parameter);
 
         if (parameters.back() == "translate")
         {
             double tx = stod(parameters[0]);
             double ty = stod(parameters[1]);
             double b[3][3] = {
-                {1, 0, tx},
-                {0, 1, ty},
+                {1, 0, -tx},
+                {0, 1, -ty},
                 {0, 0, 1}
             };
-            multiply(b, im);
-            //updateInverseMatrix(a);
+            multiply(a, b);
+            updateInverseMatrix(a);
             cx -= tx, cy -= ty;
         }
         else if (parameters.back() == "rotate")
         {
             double alpha = stod(parameters.front()) * PI / 180.0;
             double b[3][3] = {
-                {cos(alpha), -sin(alpha), 0},
-                {sin(alpha), cos(alpha), 0},
+                {cos(alpha), sin(alpha), 0},
+                {-sin(alpha), cos(alpha), 0},
                 {0, 0, 1}
             };
-            multiply(b, im);
-            //updateInverseMatrix(a);
+            multiply(a, b);
+            updateInverseMatrix(a);
             double nextx = cx * cos(alpha) + cy * sin(alpha);
-            double nexty = -cx * sin(alpha) + cy * cos(alpha) ;
+            double nexty = -cx * sin(alpha) + cy * cos(alpha);
             cx = nextx, cy = nexty;
         }
         else if (parameters.back() == "scale")
@@ -123,12 +126,12 @@ int main(int argc, char *argv[])
             double sx = stod(parameters[0]);
             double sy = stod(parameters[1]);
             double b[3][3] = {
-                {sx, 0, 0},
-                {0, sy, 0},
+                {1.0 / sx, 0, 0},
+                {0, 1.0 / sy, 0},
                 {0, 0, 1}
             };
-            multiply(b, im);
-            //updateInverseMatrix(a);
+            multiply(a, b);
+            updateInverseMatrix(a);
             cx /= sx, cy /= sy;
         }
         else if (parameters.back() == "moveto" || parameters.back() == "lineto")
@@ -139,11 +142,11 @@ int main(int argc, char *argv[])
             cout << fixed << setprecision(6) << r.first << ' ';
             cout << fixed << setprecision(6) << r.second << ' ';
             cout << parameters.back() << '\n';
-            
+
         }
         else if (parameters.back() == "rmoveto" || parameters.back() == "rlineto")
         {
-            pair<double, double> r1 = restore(cx, cy);
+            pair < double, double >r1 = restore(cx, cy);
             cx += stod(parameters[0]);
             cy += stod(parameters[1]);
             pair<double, double> r2 = restore(cx, cy);

@@ -1,8 +1,8 @@
 // Fun Coloring
 // UVa ID: 12348
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Wrong Answer
+// Submission Date: 2019-11-03
+// UVa Run Time: 0.010s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
