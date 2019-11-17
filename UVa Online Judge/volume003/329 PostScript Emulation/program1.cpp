@@ -2,7 +2,7 @@
 // UVa ID: 329
 // Verdict: Accepted
 // Submission Date: 2019-11-03
-// UVa Run Time: 0.150s
+// UVa Run Time: 0.140s
 //
 // 版权所有（C）2019，邱秋。metaphysis # yeah dot net
 
@@ -20,8 +20,7 @@ void multiply(double rm[3][3])
 {
     double tmp[3][3];
     for (int i = 0; i < 3; i++)
-        for (int j = 0; j < 3; j++)
-        {
+        for (int j = 0; j < 3; j++) {
             tmp[i][j] = 0;
             for (int k = 0; k < 3; k++)
                 tmp[i][j] += im[i][k] * rm[k][j];
@@ -45,16 +44,14 @@ int main(int argc, char *argv[])
     string line, parameter;
     double cx = 0, cy = 0;
 
-    while (getline(cin, line), line != "*")
-    {
-        vector<string> parameters;
+    while (getline(cin, line), line != "*") {
+        vector<string> cmd;
         istringstream iss(line);
-        while (iss >> parameter) parameters.push_back(parameter);
+        while (iss >> parameter) cmd.push_back(parameter);
 
-        if (parameters.back() == "translate")
-        {
-            double tx = stod(parameters[0]);
-            double ty = stod(parameters[1]);
+        if (cmd.back() == "translate") {
+            double tx = stod(cmd[0]);
+            double ty = stod(cmd[1]);
             double rm[3][3] = {
                 {1, 0, tx},
                 {0, 1, ty},
@@ -62,10 +59,8 @@ int main(int argc, char *argv[])
             };
             multiply(rm);
             cx -= tx, cy -= ty;
-        }
-        else if (parameters.back() == "rotate")
-        {
-            double alpha = stod(parameters.front()) * PI / 180.0;
+        } else if (cmd.back() == "rotate") {
+            double alpha = stod(cmd.front()) * PI / 180.0;
             double rm[3][3] = {
                 {cos(alpha), -sin(alpha), 0},
                 {sin(alpha), cos(alpha), 0},
@@ -75,11 +70,9 @@ int main(int argc, char *argv[])
             double nextx = cx * cos(alpha) + cy * sin(alpha);
             double nexty = -cx * sin(alpha) + cy * cos(alpha) ;
             cx = nextx, cy = nexty;
-        }
-        else if (parameters.back() == "scale")
-        {
-            double sx = stod(parameters[0]);
-            double sy = stod(parameters[1]);
+        } else if (cmd.back() == "scale") {
+            double sx = stod(cmd[0]);
+            double sy = stod(cmd[1]);
             double rm[3][3] = {
                 {sx, 0, 0},
                 {0, sy, 0},
@@ -87,28 +80,22 @@ int main(int argc, char *argv[])
             };
             multiply(rm);
             cx /= sx, cy /= sy;
-        }
-        else if (parameters.back() == "moveto" || parameters.back() == "lineto")
-        {
-            cx = stod(parameters[0]);
-            cy = stod(parameters[1]);
+        } else if (cmd.back() == "moveto" || cmd.back() == "lineto") {
+            cx = stod(cmd[0]);
+            cy = stod(cmd[1]);
             pair<double, double> r = restore(cx, cy);
             cout << fixed << setprecision(6) << r.first << ' ';
             cout << fixed << setprecision(6) << r.second << ' ';
-            cout << parameters.back() << '\n';
-            
-        }
-        else if (parameters.back() == "rmoveto" || parameters.back() == "rlineto")
-        {
+            cout << cmd.back() << '\n';
+        } else if (cmd.back() == "rmoveto" || cmd.back() == "rlineto") {
             pair<double, double> r1 = restore(cx, cy);
-            cx += stod(parameters[0]);
-            cy += stod(parameters[1]);
+            cx += stod(cmd[0]);
+            cy += stod(cmd[1]);
             pair<double, double> r2 = restore(cx, cy);
             cout << fixed << setprecision(6) << (r2.first - r1.first) << ' ';
             cout << fixed << setprecision(6) << (r2.second - r1.second) << ' ';
-            cout << parameters.back() << '\n';
+            cout << cmd.back() << '\n';
         }
     }
-
     return 0;
 }

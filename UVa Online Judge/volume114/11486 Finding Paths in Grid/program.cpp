@@ -16,10 +16,7 @@ int n;
 map<int, set<int>> edges;
 long long mod = 1000000007;
 
-struct matrix
-{
-    long long cell[MAXN][MAXN];
-}one;
+struct matrix { long long cell[MAXN][MAXN]; }one;
 
 matrix multiply(const matrix &a, const matrix &b)
 {
