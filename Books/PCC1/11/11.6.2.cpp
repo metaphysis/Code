@@ -1,62 +1,46 @@
-#include <bits/stdc++.h>
+const int MAXV = 10010, INF = 0x3f3f3f3f;
 
-using namespace std;
-
-const int IMINUS_JMINUS = 1, IMINUS = 2, JMINUS = 3;
-
-struct state
+struct EDGE
 {
-    int length, from;
-};
+    int u, v, next;
+    EDGE (int u = 0, int v = 0, int next = 0): u(u), v(v), next(next) {}
+} edges[MAXV << 1];
 
-void lcs(string &s, string &t)
+struct NODE
 {
-    state dp[s.length() + 1][t.length() + 1] = {};
+    int in, selfOut, selfChildOut;
+} dp[MAXV];
 
-    for (int i = 1; i <= s.length(); i++)
-        for (int j = 1; j <= t.length(); j++)
-            if (s[i - 1] == t[j - 1])
-            {
-                if (dp[i][j].length < dp[i - 1][j - 1].length + 1)
-                {
-                    dp[i][j].length = dp[i - 1][j - 1].length + 1;
-                    dp[i][j].from = IMINUS_JMINUS;
-                }
-            }
-            else
-            {
-                if (dp[i][j].length < dp[i - 1][j].length)
-                    dp[i][j].length = dp[i - 1][j].length, dp[i][j].from = IMINUS;
-                if (dp[i][j].length < dp[i][j - 1].length)
-                    dp[i][j].length = dp[i][j - 1].length, dp[i][j].from = JMINUS;
-            }
+int idx, head[MAXV];
 
-    cout << "LCS: length = " << dp[s.length()][t.length()].length;
-
-    string subsequence;
-    int endi = s.length(), endj = t.length();
-    while (dp[endi][endj].from)
-    {
-        if (dp[endi][endj].from == IMINUS_JMINUS)
-        {
-            subsequence.push_back(s[endi - 1]);
-            endi -= 1, endj -= 1;
-        }
-        else 
-        {
-            if (dp[endi][endj].from == IMINUS) endi -= 1;
-            else endj -= 1;
-        }
-    }
-    reverse(subsequence.begin(), subsequence.end());
-
-    cout << " subsequence = " << subsequence << '\n';
+void addEdge(int u, int v)
+{
+    edges[idx] = EDGE(u, v, head[u]);
+    head[u] = idx++;
+    edges[idx] = EDGE(v, u, head[v]);
+    head[v] = idx++;
 }
 
-int main(int argc, char *argv[])
+void dfs(int u, int father)
 {
-    string s, t;
-    while (cin >> s >> t) lcs(s, t);
-
-    return 0;
+    dp[u].in = 1;
+    dp[u].selfOut = dp[u].selfChildOut = 0;
+    int x = INF, hasChild = 0, hasFirstStateIncluded = 0;
+    for (int i = head[u]; ~i; i = edges[i].next)
+    {
+        int v = edges[i].v;
+        if (v == father) continue;
+        dfs(v, u);
+        hasChild = 1;
+        dp[u].in += min(dp[v].in, min(dp[v].selfOut, dp[v].selfChildOut));
+        dp[u].selfOut += min(dp[v].in, dp[v].selfOut);
+        if (dp[v].in > dp[v].selfOut) x = min(x, dp[v].in - dp[v].selfOut);
+        else hasFirstStateIncluded = 1;
+        dp[u].selfChildOut = min(INF, dp[u].selfChildOut + dp[v].selfOut);
+    }
+    if (!hasChild) dp[u].selfOut = INF;
+    else 
+    {
+        if (!hasFirstStateIncluded) dp[u].selfOut += x;
+    }
 }
