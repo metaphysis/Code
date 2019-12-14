@@ -4,22 +4,22 @@ using namespace std;
 
 const int MAXN = 100010;
 
-void countSort(int *s, int *a, int *b, int n, int m)
+void countSort(int *s, int *ranks, int *sa, int n, int m)
 {
     static int cnt[MAXN];
     memset(cnt, 0, sizeof(cnt));
-    for (int i = 0; i < n; i++) cnt[s[a[i]]]++;
+    for (int i = 0; i < n; i++) cnt[s[ranks[i]]]++;
     for (int i = 1; i <= m; i++) cnt[i] += cnt[i - 1];
-    for (int i = n - 1; i >= 0; i--) b[--cnt[s[a[i]]]] = a[i];
+    for (int i = n - 1; i >= 0; i--) sa[--cnt[s[ranks[i]]]] = ranks[i];
 }
 
-void suffixArray(int *s, int *sa, int n, int m)
+void buildSA(int *s, int *sa, int n, int m)
 {
-    static int ranks[MAXN] = {}, a[MAXN] = {}, b[MAXN] = {};
+    static int ranks[MAXN] = {}, higher[MAXN] = {}, lower[MAXN] = {};
 
     iota(ranks, ranks + MAXN, 0);
     countSort(s, ranks, sa, n, m);
-
+    
     ranks[sa[0]] = 0;
     for (int i = 1; i < n; i++)
     {
@@ -31,19 +31,20 @@ void suffixArray(int *s, int *sa, int n, int m)
     {
         for (int j = 0; j < n; j++)
         {
-            a[j] = ranks[j] + 1;
-            b[j] = (j + (1 << i) >= n) ? 0 : (ranks[j + (1 << i)] + 1);
+            higher[j] = ranks[j] + 1;
+            lower[j] = (j + (1 << i) >= n) ? 0 : (ranks[j + (1 << i)] + 1);
             sa[j] = j;
         }
 
-        countSort(b, sa, ranks, n, n);
-        countSort(a, ranks, sa, n, n);
+        countSort(lower, sa, ranks, n, n);
+        countSort(higher, ranks, sa, n, n);
 
         ranks[sa[0]] = 0;
         for (int j = 1; j < n; j++)
         {
             ranks[sa[j]] = ranks[sa[j - 1]];
-            ranks[sa[j]] += (a[sa[j - 1]] != a[sa[j]] || b[sa[j - 1]] != b[sa[j]]);
+            ranks[sa[j]] += (higher[sa[j - 1]] != higher[sa[j]] ||
+                lower[sa[j - 1]] != lower[sa[j]]);
         }
     }
 }
@@ -63,5 +64,11 @@ void getHeight(int *s, int *sa, int *height, int n)
 
 int main(int argc, char *argv[])
 {
+    string line = "5432112345";
+    int s[64];
+    for (int i = 0; i < line.length(); i++) s[i] = line[i] - '0';
+    int sa[64];
+    buildSA(s, sa, 10, 10);
+
     return 0;
 }
