@@ -1,17 +1,10 @@
-// Cyclic Numbers
-// UVa ID: 942
-// Verdict: Accepted
-// Submission Date: 2017-03-16
-// UVa Run Time: 0.000s
-//
-// 版权所有（C）2017，邱秋。metaphysis # yeah dot net
-
 #include <bits/stdc++.h>
 
 using namespace std;
 
 void printCycle(int numerator, int denominator)
 {
+    cout << numerator << '/' << denominator << '=';
     cout << (numerator / denominator) << '.';
     numerator %= denominator;
 

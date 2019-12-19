@@ -28,12 +28,12 @@ void da(int *s, int *sa, int n, int m)
     for (int i = 0; i < n; i++) ts[x[i] = s[i]]++;
     for (int i = 1; i < m; i++) ts[i] += ts[i - 1];
     for (int i = n - 1; i >= 0; i--) sa[--ts[x[i]]] = i;
-    for (int i, j = 1, p = 1; p < n; j *= 2, m = p)
+    for (int i, k = 1, p = 1; p < n; k *= 2, m = p)
     {
-        for (p = 0, i = n - j; i < n; i++) y[p++] = i;
+        for (p = 0, i = n - k; i < n; i++) y[p++] = i;
         for (i = 0; i < n; i++)
-            if (sa[i] >= j)
-                y[p++] = sa[i] - j;
+            if (sa[i] >= k)
+                y[p++] = sa[i] - k;
 
         cout << "p = " << p << '\n';
         print(sa, 10, "sa");
@@ -50,7 +50,7 @@ void da(int *s, int *sa, int n, int m)
         print(sa, 10, "sa");
 
         for (t = x, x = y, y = t, p = 1, x[sa[0]] = 0, i = 1; i < n; i++)
-            x[sa[i]] = cmp(y, sa[i - 1], sa[i], j) ? p - 1 : p++;
+            x[sa[i]] = cmp(y, sa[i - 1], sa[i], k) ? p - 1 : p++;
 
         print(x, 10, "x");
         cout << "p = " << p << '\n';

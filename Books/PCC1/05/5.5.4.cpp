@@ -30,7 +30,7 @@ pair<long long, long long> getFraction(string fraction, int j)
     }
     
     long long g = gcd(numerator, denominator);
-
+    if (g > 1) numerator /= g, denominator /= g;
     return make_pair(numerator / g, denominator / g);
 }
 

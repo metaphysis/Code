@@ -2,7 +2,7 @@
 // UVa ID: 10419
 // Verdict: Accepted
 // Submission Date: 2018-07-26
-// UVa Run Time: 0.890s
+// UVa Run Time: 3.410s
 //
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
@@ -10,32 +10,23 @@
 
 using namespace std;
 
-int primes[301] = {}, cnt = 0;
 int n, t;
-int cache[16];
+int primes[301] = {}, cnt = 0;
+int marked[128][1001][15], cache[16];
 
-bool dfs(int depth, int sum, int idx)
+bool dfs(int idx, int sum, int used)
 {
-    if (sum > n) return false;
-    if (depth == t)
+    if (sum > n || idx == cnt) return false;
+    if (used == t)
     {
         if (sum == n) return true;
         return false;
     }
-    for (int i = idx; i < cnt; i++)
-    {
-        cache[depth] = primes[i];
-        if (primes[i] == 2)
-        {
-            if (dfs(depth + 1, sum + primes[i], i + 1))
-                return true;
-        }
-        else
-        {
-            if (dfs(depth + 1, sum + primes[i], i + (depth && cache[depth - 1] == cache[depth])))
-                return true;
-        }
-    }
+    if (marked[idx][sum][used]) return false;
+    marked[idx][sum][used] = 1;
+    cache[used] = primes[idx];
+    if (dfs(idx + 1, sum + primes[idx], used + 1)) return true;
+    if (dfs(idx + 1, sum, used)) return true;
     return false;
 }
 
@@ -51,9 +42,16 @@ int main(int argc, char *argv[])
     for (int i = 2; i <= 300; i++)
         if (!primes[i])
         {
-            primes[cnt++] = i;
             for (int j = i + i; j <= 300; j += i)
                 primes[j] = 1;
+        }
+
+    primes[cnt++] = 2;
+    for (int i = 3; i <= 300; i++)
+        if (!primes[i])
+        {
+            primes[cnt++] = i;
+            primes[cnt++] = i;
         }
 
     sort(primes, primes + cnt, cmp);
@@ -63,6 +61,11 @@ int main(int argc, char *argv[])
     {
         if (n == 0) break;
         cout << "CASE " << ++cases << ":\n";
+
+        for (int i = 0; i < cnt; i++)
+            for (int j = 0; j <= n; j++)
+                for (int k = 0; k <= t; k++)
+                    marked[i][j][k] = 0;
 
         if (dfs(0, 0, 0))
         {

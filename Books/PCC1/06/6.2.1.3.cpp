@@ -2,49 +2,18 @@
 
 using namespace std;
 
-string s;
-long long factorial[24] = {1}, n;
-
-void reverseCantorExpansion()
-{
-    n %= factorial[s.length()];
-    
-    for (int i = s.length() - 1; i >= 0; i--)
-    {
-        long long index = n / factorial[i], count = 0;
-        for (int j = 0; j < s.length(); j++)
-        {
-            if (s[j] > 0)
-            {
-                if (count == index)
-                {
-                    cout << s[j];
-                    s[j] = 0;
-                    break;
-                }
-
-                count++;
-            }
-        }
-        n %= factorial[i];
-    }
-    cout << '\n';
-}
-
 int main(int argc, char *argv[])
 {
-    for (int i = 1; i < 24; i++)
-        factorial[i] = factorial[i - 1] * i;
-
-    int cases;
-    cin >> cases;
+    string s = "ABCDE", t = "CEADB";
     
-    for (int c = 1; c <= cases; c++)
-    {
-        cin >> s >> n;
-        sort(s.begin(), s.end());
-        reverseCantorExpansion();
-    }
-
+    int indexer = 1;
+    do {
+        if (s == t) {
+            cout << indexer << '\n';
+            break;
+        }
+        indexer++;
+    } while (next_permutation(s.begin(), s.end()));
+    
     return 0;
 }

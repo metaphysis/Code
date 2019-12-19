@@ -4,12 +4,12 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-    string s = "ABCDE", t = "CEADB";
+    string s = "ABCDE";
     
     int indexer = 1;
     do {
-        if (s == t) {
-            cout << indexer << '\n';
+        if (indexer == 83) {
+            cout << s << '\n';
             break;
         }
         indexer++;
