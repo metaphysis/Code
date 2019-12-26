@@ -39,7 +39,7 @@ void dfs(int row)
         if (clnUsed[cln] || !checkBoard(row, cln)) continue;
         clnUsed[cln] = 1, board[row] = cln;
         dfs(row + 1);
-        clnUsed[cln] = 0;
+        clnUsed[cln] = 0, board[row] = -1;
     }
 }
 

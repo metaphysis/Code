@@ -13,11 +13,11 @@ using namespace std;
 const int HIGHER = 0, LOWER = 1;
 
 int N, m, ONES;
-long long cache[1 << 22][22][2];
+long long dp[1 << 22][22][2];
 
 long long dfs(int mask, int last, int mode)
 {
-    if (~cache[mask][last][mode]) return cache[mask][last][mode];
+    if (~dp[mask][last][mode]) return dp[mask][last][mode];
     if (mask == ONES) return 1LL;
     long long r = 0;
     if (mode == HIGHER)
@@ -36,7 +36,7 @@ long long dfs(int mask, int last, int mode)
             r += dfs(mask | (1 << bit), bit, HIGHER);
         }
     }
-    return cache[mask][last][mode] = r;
+    return dp[mask][last][mode] = r;
 }
 
 int main(int argc, char *argv[])
@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
         }
         for (int i = 0; i < (1 << N); i++)
             for (int j = 0; j < N; j++)
-                cache[i][j][0] = cache[i][j][1] = -1;
+                dp[i][j][0] = dp[i][j][1] = -1;
         ONES = (1 << N) - 1;
         if (m == 1)
             cout << dfs(5, 2, LOWER) << '\n';

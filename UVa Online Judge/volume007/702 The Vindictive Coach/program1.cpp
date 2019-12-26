@@ -13,13 +13,13 @@ using namespace std;
 const int HIGHER = 0, LOWER = 1;
 
 int N, m, ONES;
-long long cache[24][24][2];
+long long dp[24][24][2];
 
 long long dfs(int high, int low, int mode)
 {
     if (high == 0 && low == 0) return 1;
     if ((high <= 0 && mode == LOWER) || (low <= 0 && mode == HIGHER)) return 0;
-    if (~cache[high][low][mode]) return cache[high][low][mode];
+    if (~dp[high][low][mode]) return dp[high][low][mode];
     long long r = 0;
     if (mode == HIGHER)
     {
@@ -31,14 +31,14 @@ long long dfs(int high, int low, int mode)
         for (int i = 1; i <= high; i++)
             r += dfs(high - i, low + i - 1, HIGHER);
     }
-    return cache[high][low][mode] = r;
+    return dp[high][low][mode] = r;
 }
 
 int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    memset(cache, -1, sizeof(cache));
+    memset(dp, -1, sizeof(dp));
     while (cin >> N >> m)
     {
         if (N <= 2)
