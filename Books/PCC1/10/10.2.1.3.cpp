@@ -25,4 +25,7 @@ void hierholzer(int u)
             path.pop();
         }
     }
+    
+    for (int i = (int)circuit.size() - 1; i >= 0; i--) cout << ' ' << circuit[i];
+    cout << '\n';
 }
