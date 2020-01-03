@@ -1,7 +1,7 @@
 // The Great Wall Game
 // UVa ID: 1045
 // Verdict: Accepted
-// Submission Date: 2019-06-24
+// Submission Date: 2019-06-23
 // UVa Run Time: 0.000s
 //
 // 版权所有（C）2019，邱秋。metaphysis # yeah dot net
@@ -57,7 +57,20 @@ int kuhnMunkres()
     for (int y = 0; y < n; y++)
         if (~linky[y])
             r += weight[linky[y]][y];
-    return -r;
+    return r;
+}
+
+int modifiedKuhnMunkres()
+{
+    int a = 0;
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            a = max(a, weight[i][j]);
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            weight[i][j] = a - weight[i][j];
+    int r = kuhnMunkres();
+    return n * a - r;
 }
 
 int main(int argc, char *argv[])
@@ -74,29 +87,29 @@ int main(int argc, char *argv[])
             memset(weight, 0, sizeof(weight));
             for (int cln = 1; cln <= n; cln++)
                 for (int si = 0; si < n; si++)
-                    weight[si][cln - 1] -= abs(sx[si] - row) + abs(sy[si] - cln);
-            r = min(r, kuhnMunkres());
+                    weight[si][cln - 1] = abs(sx[si] - row) + abs(sy[si] - cln);
+            r = min(r, modifiedKuhnMunkres());
         }
 
         for (int cln = 1; cln <= n; cln++) {
             memset(weight, 0, sizeof(weight));
             for (int row = 1; row <= n; row++)
                 for (int si = 0; si < n; si++)
-                    weight[si][row - 1] -= abs(sx[si] - row) + abs(sy[si] - cln);
-            r = min(r, kuhnMunkres());
+                    weight[si][row - 1] = abs(sx[si] - row) + abs(sy[si] - cln);
+            r = min(r, modifiedKuhnMunkres());
         }
 
         memset(weight, 0, sizeof(weight));
         for (int row = 1, cln = 1; row <= n; row++, cln++)
             for (int si = 0; si < n; si++)
-                weight[si][row - 1] -= abs(sx[si] - row) + abs(sy[si] - cln);
-        r = min(r, kuhnMunkres());
+                weight[si][row - 1] = abs(sx[si] - row) + abs(sy[si] - cln);
+        r = min(r, modifiedKuhnMunkres());
 
         memset(weight, 0, sizeof(weight));
         for (int row = n, cln = 1; cln <= n; row--, cln++)
             for (int si = 0; si < n; si++)
-                weight[si][cln - 1] -= abs(sx[si] - row) + abs(sy[si] - cln);
-        r = min(r, kuhnMunkres());
+                weight[si][cln - 1] = abs(sx[si] - row) + abs(sy[si] - cln);
+        r = min(r, modifiedKuhnMunkres());
 
         cout << "Board " << ++cases << ": " << r << " moves required.\n";
         cout << '\n';

@@ -7,6 +7,13 @@ const int MAXV = 1010;
 int stk[MAXV], top, connected[MAXV][MAXV];
 int cntOfVertices, cntOfEdges;
 
+void printStack()
+{
+    cout << "STACK:";
+    for (int i = 0; i < top; i++) cout << ' ' << stk[i] + 1;
+    cout << '\n';
+}
+
 void dfs(int x)
 {
     stk[top++] = x;
@@ -24,13 +31,15 @@ void hierholzer(int u)
     top = 0, stk[top++] = u;
 
     while (top > 0) {
+
+        printStack();
+
         int going = 1;
         for (int i = 0; i < cntOfVertices; ++i)
             if (connected[stk[top - 1]][i]) {
                 going = 0;
                 break;
             }
-
         if (going) cout << stk[--top] << ' ';
         else dfs(stk[--top]);
     }
