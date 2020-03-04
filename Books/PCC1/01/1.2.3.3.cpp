@@ -4,7 +4,7 @@ using namespace std;
 
 void parse1(string line)
 {
-    int start = 0, next = line.find(',', start);
+    size_t start = 0, next = line.find(',', start);
     while (next != line.npos)
     {
         string block = line.substr(start, next - start);

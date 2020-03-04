@@ -10,9 +10,10 @@ int main(int argc, char* argv[])
     cout << setw(60) << right << line << endl;
     cout << setw(60) << internal << line << endl;
     
-    long number = -1234567890;
+    int number = -1234567890;
     cout << setw(20) << left << number << endl;
-    cout << setfill('*') << setw(30) << internal << number << endl;
+    cout << setw(30) << internal << number << endl;
+    cout << setw(30) << right << number << endl;
 
     return 0;
 }

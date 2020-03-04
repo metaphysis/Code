@@ -76,12 +76,9 @@ bool kmp3(string &s, string &p)
 
 void getFail4(string &p)
 {
-    fail[0] = fail[1] = 0;
-    for (int i = 1, j = 0; i < p.length(); i++) {
-        while (j && p[j] != p[i]) j = fail[j];
-        if (p[j] == p[i]) j++;
-        fail[i + 1] = j;
-    }
+    int i = 1, j = 0;
+    for (fail[i] = j; i < p.length(); i++, j++, fail[i] = j)
+        while (j && p[j] == p[i]) j = fail[j];
 }
 
 bool kmp4(string &s, string &p)
@@ -98,9 +95,8 @@ int main(int argc, char *argv[])
 {
     string p = " abcabcdabcde";
 
-    getFail2(p);
-    for (int i = 1; i < p.length(); i++)
-        cout << ' ' << fail[i];
+    getFail4(p);
+    for (int i = 1; i < p.length(); i++) cout << ' ' << fail[i];
     cout << '\n';
 
     return 0;

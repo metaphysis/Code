@@ -8,7 +8,7 @@ int linky[MAXN], cx[MAXN], cy[MAXN];
 int weight[MAXN][MAXN], lx[MAXN], ly[MAXN], slack[MAXN];
 int n;
 
-bool dfs(int x)
+bool dfs(int x, int flag)
 {
     cx[x] = true;
     for (int y = 0; y < n; y++) {
@@ -16,12 +16,16 @@ bool dfs(int x)
         int delta = lx[x] + ly[y] - weight[x][y];
         if (delta == 0) {
             cy[y] = true;
-            if (linky[y] == -1 || dfs(linky[y])) {
+            if (linky[y] == -1 || dfs(linky[y], !flag)) {
                 linky[y] = x;
                 return true;
             }
         }
-        else slack[y] = min(slack[y], delta);
+        else
+        {
+            slack[y] = min(slack[y], delta);
+            cout << "slack[" << (flag ? 'x' : 'y') << y << "] = " << slack[y] << '\n';
+        }
     }
     return false;
 }
@@ -39,7 +43,11 @@ int kuhnMunkres()
             memset(cx, 0, sizeof(cx));
             memset(cy, 0, sizeof(cy));
             for (int i = 0; i < n; i++) slack[i] = INF;
-            if (dfs(x)) break;
+            cout << "X = " << x << '\n';
+            if (dfs(x, 0)) break;
+            for (int i = 0; i < n; i++)
+                cout << ' ' << slack[i];
+            cout << '\n';
             int delta = INF;
             for (int i = 0; i < n; i++)
                 if (!cy[i])
