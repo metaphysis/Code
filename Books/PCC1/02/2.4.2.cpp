@@ -1,3 +1,7 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
 // 默认最大值优先。
 priority_queue<int> greaterDefault;
 
@@ -40,3 +44,14 @@ public:
 };
 // 通过重载小于运算符得到最小值优先队列。
 priority_queue<E> lessE;
+
+int main(int argc, char* argv[])
+{
+    for (int i = 0; i < 20; i++) greaterB.push(i);
+    while (greaterB.empty() == false)
+    {
+        cout << greaterB.top() << '\n';
+        greaterB.pop();
+    }
+    return 0;
+}

@@ -44,24 +44,24 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-	
+
 struct data
 {
 	int value;
 	int index;
 	int fn;
 };
-	
+
 // 递推方式解法。
 void self_describing_by_recurrence()
 {
 	int self[700000];
 	const int max = 2000000000;
-	
+
 	self[0] = 1;
 	self[1] = 2;
 	self[2] = 4;
-	
+
 	int index = 0;
 	while (self[self[index] - 1] < max)
 	{
@@ -69,44 +69,48 @@ void self_describing_by_recurrence()
 			self[j] = self[j - 1] + index + 1;
 		index++;
 	}
-	
+
 	int capacity = self[index] - 1;
 	int n;
 	while (cin >> n, n)
 		cout << upper_bound(self, self + capacity, n) - self << endl;
 }
 	
-bool cmp(data x, data y)
+bool cmp1(data x, data y)
 {
 	return x.value < y.value;
 }
-	
+
+bool cmp2(data x, data y)
+{
+    return x.index < y.index;
+}
+
 // 非递推方式解法。
 void self_describing_by_iterate()
 {
 	int counter = 0, tmp;
-	vector < data > input;
-	
+	vector<data> input;
+
 	while (cin >> tmp, tmp)
 	{
 		data t;
 		t.value = tmp;
 		t.index = counter++;
 		t.fn = 0;
-		
 		input.push_back(t);
 	}
-	
+
 	// 排序以便输出。
-	sort(input.begin(), input.end(), cmp);
-		
+	sort(input.begin(), input.end(), cmp1);
+
 	// 记录当前已添加的元素的队列。
 	queue<int> sequence;
 	// 初始时函数自变量 n 为 3，当前已有两个元素，即 total 所指定的值。
 	int n = 3, total = 2, index = 0, maxn = input[input.size() - 1].value;
 	// 输入中尚未设置 f（n） 值的元素个数。
 	int unsetted = input.size();
-	
+
 	// 处理 n == 1 和 n == 2 的情况。
 	while (input[index].value <= 2)
 	{
@@ -114,39 +118,30 @@ void self_describing_by_iterate()
 		index++;
 		unsetted--;
 	}
-	
-	if (!unsetted)
-		goto out;
-			
+	if (!unsetted) goto out;
+
 	// 压入初始元素。
 	sequence.push(2);
 	// 当将要添加的元素总数少于输入的最大给定值时，继续计算添加元素的数量。
 	while (total < maxn)
 	{
-		// 根据序列定义，将 fn 个 n 压入队列。
+		// 根据自描诉序列的定义，将 fn 个 n 压入队列。
 		int fn = sequence.front();
-		for (int c = 1; c <= fn; c++)
-			sequence.push(n);
-			
-		// 计算队列所能产生元素的总数。
+		for (int i = 1; i <= fn; i++) sequence.push(n);
+		// 计算队列总共能够产生的元素总数。
 		total += fn * n;
-		
-		// 比较当前 n 值是否和要求的数相等，若相等，则表明要求的数的函数值
-		// 就是队列首的元素 fn。
+		// 比较当前 n 值是否和要求的数相等，若相等，则表明要求的数的函数值就是队列首的元素 fn。
 		if (input[index].value == n)
 		{
 			input[index++].fn = fn;
-	
 			unsetted--;
-			if (!unsetted)
-				goto out;
+			if (!unsetted) goto out;
 		}
-		
 		// 弹出队列首元素。
 		sequence.pop();
 		n++;
 	}
-	
+
 	total = n + sequence.size();	
 	while (sequence.size())
 	{
@@ -157,7 +152,6 @@ void self_describing_by_iterate()
 			input[index++].fn = fn;
 			unsetted--;
 		}
-		
 		// 确定是否有元素在区间 [total, total + number)。
 		for (int i = index; i < input.size(); i++)
 			if (total <= input[i].value && input[i].value <= (total + fn - 1))
@@ -165,28 +159,24 @@ void self_describing_by_iterate()
 				input[i].fn = n;
 				unsetted--;
 			}
-		
 		// 所有数都已设置，打印退出。	
-		if (!unsetted)
-			goto out;
-		
+		if (!unsetted) goto out;
 		// 计数要添加的元素个数，并不需要实际添加。
 		total += fn;
 		sequence.pop();
 		n++;
 	}
-	
+
 out:
+    sort(input.begin(), input.end(), cmp2);
 	for (int i = 0; i < input.size(); i++)
-		for (int j = 0; j < input.size(); j++)
-			if (input[j].index == i)
-				cout << input[j].fn << endl;
+		cout << input[i].fn << endl;
 }
 
 int main(int ac, char *av[])
 {
 	//self_describing_by_recurrence();
 	self_describing_by_iterate();
-	
+
 	return 0;
 }
