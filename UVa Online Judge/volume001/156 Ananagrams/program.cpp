@@ -10,13 +10,6 @@
 
 using namespace std;
 
-string toLower(string line)
-{
-    for (int i = 0; i < line.length(); i++)
-        line[i] = tolower(line[i]);
-    return line;
-}
-
 int main(int argc, char *argv[])
 {
     vector<string> allWords;
@@ -26,7 +19,7 @@ int main(int argc, char *argv[])
     while (cin >> line, line != "#")
     {
         allWords.push_back(line);
-        line.assign(toLower(line));
+        transform(line.begin(), line.end(), line.begin(), ::tolower);
         sort(line.begin(), line.end());
         lowerCase.insert(line);
     }
@@ -34,7 +27,8 @@ int main(int argc, char *argv[])
     vector<string> ananagrams;
     for (int i = 0; i < allWords.size(); i++)
     {
-        string word = toLower(allWords[i]);
+        string word = allWords[i];
+        transform(word.begin(), word.end(), word.begin(), ::tolower);
         sort(word.begin(), word.end());
         if (lowerCase.count(word) == 1)
             ananagrams.push_back(allWords[i]);
