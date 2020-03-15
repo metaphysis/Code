@@ -17,5 +17,14 @@ int minimumIdx(string &s)
         }
         else j += k + 1;
     }
-    return i + 1;
+    return i;
+}
+
+int main(int argc, char *argv[])
+{
+    string s = "axyxdeeaabmnnaaatkaapsaaaraq";
+    int mi = minimumIdx(s);
+    cout << mi << '\n';
+    cout << s.substr(mi) << s.substr(0, mi) << endl;
+    return 0;
 }
