@@ -12,11 +12,11 @@ using namespace std;
 
 const int INF = 0x3f3f3f3f;
 
-int K, M, cache[128][128][16];
+int K, M, dp[128][128][16];
 
 int dfs(int left, int right, int mailbox)
 {
-    if (~cache[left][right][mailbox]) return cache[left][right][mailbox];
+    if (~dp[left][right][mailbox]) return dp[left][right][mailbox];
     int minimum = INF;
     if (mailbox == 1 || abs(right - left) <= 1)
         minimum = (right + left) * (right - left + 1) / 2;
@@ -32,7 +32,7 @@ int dfs(int left, int right, int mailbox)
             minimum = min(minimum, maximum);
         }
     }
-    return cache[left][right][mailbox] = minimum;
+    return dp[left][right][mailbox] = minimum;
 }
 
 int main(int argc, char *argv[])
@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
     for (int cs = 1; cs <= cases; cs++)
     {
         cin >> K >> M;
-        memset(cache, -1, sizeof(cache));
+        memset(dp, -1, sizeof(dp));
         cout << dfs(1, M, K) << '\n';
     }
 	return 0;
