@@ -18,7 +18,8 @@ inline bool nextInt(int &x)
 {
     static char negative = 0, c = nextChar();
     negative = 0, x = 0;
-    while ((c < '0' || c > '9') && c != '-') { if (c == EOF) return false; c = nextChar(); }
+    while ((c < '0' || c > '9') && c != '-')
+    { if (c == EOF) return false; c = nextChar(); }
     if (c == '-') { negative = 1; c = nextChar(); }
     do x = (x << 3) + (x << 1) + c - '0'; while ((c = nextChar()) >= '0');
     if (negative) x = -x;
