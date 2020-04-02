@@ -2,7 +2,7 @@
 
 using namespace std;
 
-const int MAXV = 60;
+const int MAXV = 310;
 
 int n, sum[MAXV] = {0}, possible[MAXV][MAXV];
 int stones[MAXV], dp[MAXV][MAXV];
@@ -12,16 +12,16 @@ int dfs(int i, int j)
     if (i >= j) return 0;
     if (~dp[i][j]) return dp[i][j];
     int r = 0;
-    for (int left = i; left < j; left++)
-        for (int right = left + 1; right <= j; right++)
-            if (possible[left][right])
+    for (int s = i; s < j; s++)
+        for (int t = s + 1; t <= j; t++)
+            if (possible[s][t])
             {
-                int erased = dfs(left + 1, right - 1);
-                if (erased == sum[right - 1] - sum[left])
+                int erased = dfs(s + 1, t - 1);
+                if (erased == sum[t - 1] - sum[s])
                 {
-                    erased += dfs(i, left - 1);
-                    erased += dfs(right + 1, j);
-                    erased += stones[left] + stones[right];
+                    erased += dfs(i, s - 1);
+                    erased += dfs(t + 1, j);
+                    erased += stones[s] + stones[t];
                     r = max(r, erased);
                 }
             }

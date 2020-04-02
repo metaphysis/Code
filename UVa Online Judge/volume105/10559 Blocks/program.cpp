@@ -1,8 +1,8 @@
 // Blocks
 // UVa ID: 10559
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2020-04-02
+// UVa Run Time: 0.570s
 //
 // 版权所有（C）2020，邱秋。metaphysis # yeah dot net
 
@@ -10,66 +10,49 @@
 
 using namespace std;
 
-const int DUMM = 300;
+const int MAXV = 210;
 
-map<string, int> dp;
+struct STONES { int c, n; } s[MAXV];
 
-string getHash(vector<int> blocks)
+int dp[MAXV][MAXV][MAXV];
+
+int dfs(int i, int j, int k)
 {
-    string hash;
-    for (int i = 0; i < blocks.size(); i++)
-    {
-        if (hash.size() > 0) hash += '.';
-        hash += to_string(blocks[i]);
-    }
-    return hash;
-}
-
-int cnt = 0;
-
-int dfs(vector<int> blocks)
-{
-    string hash = getHash(blocks);
-    if (dp.find(hash) != dp.end()) return dp[hash];
-    blocks.push_back(DUMM);
-    int r = 0, last = 0, current = 0;
-    while (current < blocks.size())
-    {
-        if (blocks[current] != blocks[last])
-        {
-            vector<int> next;
-            next.assign(blocks.begin(), blocks.end());
-            next.erase(next.begin() + last, next.begin() + current);
-            int k = current - last;
-            r = max(r, k * k + dfs(next));
-            last = current;
-        }
-        current++;
-    }
-    return dp[hash] = r;
+    if (i > j) return 0;
+    if (i == j) return (s[i].n + k) * (s[i].n + k);
+    if (~dp[i][j][k]) return dp[i][j][k];
+    int r = dfs(i, j - 1, 0) + (s[j].n + k) * (s[j].n + k);
+    for (int q = j - 1; q >= i; q--)
+        if (s[q].c == s[j].c && s[q + 1].c != s[j].c)
+            r = max(r, dfs(i, q, s[j].n + k) + dfs(q + 1, j - 1, 0));
+    return dp[i][j][k] = r;
 }
 
 int main(int argc, char *argv[])
 {
-    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
-
-    int cases;
+    int cases, n, cnt;
+    vector<int> segs;
     cin >> cases;
-    for (int cs = 1; cs <= cases; cs++)
-    {
-        int n, color;
+    for (int cs = 1; cs <= cases; cs++) {
         cin >> n;
-        vector<int> blocks;
-        for (int i = 0; i < n; i++)
-        {
-            cin >> color;
-            blocks.push_back(color);
-        }
-        dp.clear();
-        dp[to_string(DUMM)] = 0;
         cnt = 0;
-        cout << "Case " << cs << ": " << dfs(blocks) << '\n';
+        segs.clear();
+        for (int i = 0, c; i < n; i++) {
+            cin >> c;
+            if (segs.size() == 0 || segs.back() == c)
+                segs.push_back(c);
+            else {
+                s[cnt].c = segs.front();
+                s[cnt++].n = segs.size();
+                segs.clear();
+                segs.push_back(c);
+            }
+        }
+        s[cnt].c = segs.front();
+        s[cnt++].n = segs.size();
+        segs.clear();
+        memset(dp, -1, sizeof dp);
+        cout << "Case " << cs << ": " << dfs(0, cnt - 1, 0) << '\n';
     }
-
     return 0;
 }

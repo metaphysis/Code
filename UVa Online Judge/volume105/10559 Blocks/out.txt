@@ -1,0 +1,12 @@
+Case 1: 5021
+Case 2: 2
+Case 3: 5
+Case 4: 18
+Case 5: 48400
+Case 6: 10
+Case 7: 22
+Case 8: 29
+Case 9: 1
+Case 10: 258
+Case 11: 16
+Case 12: 18

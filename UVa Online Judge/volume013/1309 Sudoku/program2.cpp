@@ -38,7 +38,7 @@ void cover(int c)
 
 void uncover(int c)
 {
-	for (int i = D[c]; i != c; i = D[i])
+	for (int i = U[c]; i != c; i = U[i])
 		for (int j = L[i]; j != i; j = L[j])
 		{
 			U[D[j]] = j;
