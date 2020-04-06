@@ -1,4 +1,5 @@
 int rn = 0;
+
 while (n)
 {
     rn = rn * 10 + n % 10;
