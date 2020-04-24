@@ -17,7 +17,7 @@
 
 using namespace std;
 
-const int MAXV = 27, INT_MAX = 10240;
+const int MAXV = 27, MAXN = 10240;
 
 // 邻接矩阵表示图。
 struct graph
@@ -50,7 +50,7 @@ void initialize()
 	{
 		crossroad[i] = 0;
 		for (int j = 1; j < MAXV; j++)
-			g.weight[i][j] = INT_MAX;
+			g.weight[i][j] = MAXN;
 	}
 }
 

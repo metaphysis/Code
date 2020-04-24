@@ -17,7 +17,7 @@ struct NODE
 {
     long long sum, prefix, suffix, sub;
     int pend, sstart, astart, aend;
-} st[4 * MAXV];
+} st[4 * MAXN];
 
 NODE combine(NODE a, NODE b)
 {
