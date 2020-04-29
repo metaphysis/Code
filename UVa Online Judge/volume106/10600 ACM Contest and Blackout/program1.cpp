@@ -1,4 +1,4 @@
-// ACM contest and Blackout
+// ACM Contest and Blackout
 // UVa ID: 10600
 // Verdict: Accepted
 // Submission Date: 2017-01-15
