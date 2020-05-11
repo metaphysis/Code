@@ -16,7 +16,7 @@ map<string, string> graph;
 map<string, string> parent;
 map<string, bool> visited;
 map<string, int> times;
-string start, end, path;
+string start, to, path;
 
 void dijkstra(void)
 {
@@ -192,14 +192,14 @@ int main(int argc, char *argv[])
         line = trim(line);
         
         start = line.substr(0, 2);
-        end = line.substr(2, 2);
+        to = line.substr(2, 2);
         
         dijkstra();
         
-        cout << setw(3) << right << times[end] << ": ";
+        cout << setw(3) << right << times[to] << ": ";
         
         path.clear();
-        findPath(start, end);
+        findPath(start, to);
         cout << path << endl;
     }
     

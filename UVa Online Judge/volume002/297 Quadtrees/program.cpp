@@ -62,10 +62,10 @@ int main(int argc, char *argv[])
                 image[i][j] = '0';
                 
         cin >> first >> second;
-        
+
         int index = 0;
         parse(first, index, 0, 0, 32);
-                
+
         index = 0;
         parse(second, index, 0, 0, 32);
         

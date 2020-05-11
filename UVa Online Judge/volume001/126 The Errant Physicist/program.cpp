@@ -1,23 +1,23 @@
 // The Errant Physicist
 // UVa ID: 126
 // Verdict: Accepted
-// Submission Date: 2015-11-27
+// Submission Date: 2020-05-08
 // UVa Run Time: 0.000s
 //
-// 版权所有（C）2015，邱秋。metaphysis # yeah dot net
+// 版权所有（C）2020，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
 
 using namespace std;
 
-#define MAXN 201
+#define MAXN 210
 
 int coefficients[MAXN][MAXN];
 int part1[4], part2[4];
 
 void getItem(vector<string>& c, string line)
 {
-    if (line[0] != '-' || line[0] != '+')
+    if (line[0] != '-' && line[0] != '+')
         line = '+' + line;
     
     while (true)
@@ -37,47 +37,54 @@ void getItem(vector<string>& c, string line)
 
 int getExponent(string& item, char next)
 {
-    int exponent = 0;
+    int exponent = 0, haveExponent = 0;
     item = item.substr(1);
     while (item.length() && item[0] != next)
     {
+        haveExponent = 1;
         exponent = exponent * 10 + item[0] - '0';
         item = item.substr(1);
     }
-    return exponent == 0 ? 1 : exponent;
+    if (!haveExponent) exponent = 1;
+    return exponent;
 }
 
 void getPart(string item, int part[])
 {
+    //cout << "item = " << item << '\n';
     // 解析符号。
-    part[0] = item[0] == '-' ? -1 : 1;
+    part[0] = (item[0] == '-' ? -1 : 1);
     
     if (item[0] == '+' || item[0] == '-')
         item = item.substr(1);
 
     // 获取系数。
     int coefficient = 0;
+    int haveDigit = 0;
     while (item.length() && item[0] >= '0' && item[0] <= '9')
     {
+        haveDigit = 1;
         coefficient = coefficient * 10 + item[0] - '0';
         item = item.substr(1);
     }
-    part[1] = coefficient == 0 && item.length() ? 1 : coefficient;
+    part[1] = (haveDigit == 0 ? 1 : coefficient);
     
     // 获取指数。
     if (item.length())
     {
         char start = item[0];
-        int exponent1, exponent2;
+        int exponent1 = 0, exponent2 = 0;
         if (start == 'x' || start == 'y')
         {
             char next = (start == 'x' ? 'y' : 'x');
             exponent1 = getExponent(item, next);
                 
-            if (item.length())
+            if (item.length() > 0)
                 exponent2 = getExponent(item, next);
         }
-        
+
+        //cout << exponent1 << ' ' << exponent2 << '\n';
+
         part[2] = start == 'x' ? exponent1 : exponent2;
         part[3] = start == 'x' ? exponent2 : exponent1;
     }
@@ -91,7 +98,7 @@ void multiply(string term1, string term2)
     
     getPart(term1, part1);
     getPart(term2, part2);
-    
+        
     coefficients[part1[2] + part2[2]][part1[3] + part2[3]] +=
         part1[0] * part1[1] * part2[0] * part2[1];
 }
@@ -113,7 +120,7 @@ void output(bool printExponent, int n)
         cout << space(n); 
 }
 
-void print(bool printExponent)
+bool print(bool printExponent)
 {
     bool firstItemPrinted = false;
     for (int i = 200; i >= 0; i--)
@@ -143,7 +150,7 @@ void print(bool printExponent)
                 if (j > 0)  cout << (printExponent ? " " : "y");
                 if (j > 1)  output(printExponent, j);
             }
-    cout << endl;
+    return firstItemPrinted;
 }
 
 int main(int ac, char *av[])
@@ -159,7 +166,7 @@ int main(int ac, char *av[])
         getItem(polynomial1, line);
         getline(cin, line);
         getItem(polynomial2, line);
-        
+            
         memset(coefficients, 0, sizeof(coefficients));
         
         for (int i = 0; i < polynomial1.size(); i++)
@@ -167,7 +174,10 @@ int main(int ac, char *av[])
                 multiply(polynomial1[i], polynomial2[j]);
         
         print(true);
-        print(false);
+        cout << '\n';
+        bool flag = print(false);
+        if (!flag) cout << 0;
+        cout << '\n';
     }
     
 	return 0;

@@ -19,7 +19,7 @@ struct node
     node *leftChild, *rightChild;
 };
 
-vector < string > programs;
+vector<string> programs;
 
 string spaceOut(string line)
 {
@@ -32,43 +32,43 @@ string spaceOut(string line)
 
 // parse the strategy by recursion
 string strategy;
-int index = 0;
+int idx = 0;
 void parseStrategy(node *parent)
 {
-    if (index >= strategy.length())
+    if (idx >= strategy.length())
         return;
     
-    if (strategy[index] == 'T')
+    if (strategy[idx] == 'T')
     {
         parent->category = TRADE;
         parent->leftChild = NULL;
         parent->rightChild = NULL;
-        index += 5;
+        idx += 5;
         
         //cout << "TRADE";
     }
-    else if (strategy[index] == 'C')
+    else if (strategy[idx] == 'C')
     {
         parent->category = CHEAT;
         parent->leftChild = NULL;
         parent->rightChild = NULL;
-        index += 5;
+        idx += 5;
         
         //cout << "CHEAT";
     }
-    else if (strategy[index] == 'I')
+    else if (strategy[idx] == 'I')
     {
         parent->category = CONDITION;
-        index += 2;
+        idx += 2;
         
         //cout << "IF ";
         
-        int thenIndex = strategy.find("THEN", index);
-        parent->conditions = strategy.substr(index, thenIndex - index);
+        int thenIndex = strategy.find("THEN", idx);
+        parent->conditions = strategy.substr(idx, thenIndex - idx);
         
         //cout << parent->conditions;
         
-        index = thenIndex + 4;
+        idx = thenIndex + 4;
         
         //cout << " THEN ";
         
@@ -77,7 +77,7 @@ void parseStrategy(node *parent)
         parent->leftChild = leftNode;
         
         // ELSE
-        index += 4;
+        idx += 4;
         
         //cout << " ELSE ";
         
@@ -107,21 +107,21 @@ bool evaluatePart(string part, vector < int >& my, vector < int >& your)
     if (part[op + 1] == 'C')
         right = CHEAT;
         
-    int index = part[op - 1] - '0';
+    int idx = part[op - 1] - '0';
     
     if (part[0] == 'M')
     {
-        if (index > my.size())
+        if (idx > my.size())
             return isEqual ? NONE == right : NONE != right;
         else
-            return isEqual ? my[my.size() - index] == right : my[my.size() - index] != right;
+            return isEqual ? my[my.size() - idx] == right : my[my.size() - idx] != right;
     }
     else
     {
-        if (index > your.size())
+        if (idx > your.size())
             return isEqual ? NONE == right : NONE != right;
         else
-            return isEqual ? your[your.size() - index] == right : your[your.size() - index] != right;
+            return isEqual ? your[your.size() - idx] == right : your[your.size() - idx] != right;
     }
 }
 
@@ -196,7 +196,7 @@ void play()
 {
     for (int i = 0; i < programs.size(); i++)
     {
-        index = 0;
+        idx = 0;
         strategy = programs[i];
         
         //cout << strategy << endl;

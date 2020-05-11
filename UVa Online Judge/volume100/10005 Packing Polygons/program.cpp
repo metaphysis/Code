@@ -38,33 +38,22 @@ circle getCircleFromTriangle(point &a, point &b, point &c)
 
 double getMinCoverCircle(point v[110], int n)
 {
+    random_shuffle(v, v + n);
     circle c;
     c.x = v[0].x, c.y = v[0].y, c.r = 0;
 
     for (int i = 1; i < n; i++)
-    {
-        if (c.distTo(v[i]) >= c.r + EPSILON)
-        {
+        if (c.distTo(v[i]) >= c.r + EPSILON) {
             c.x = v[i].x, c.y = v[i].y, c.r = 0;
             for (int j = 0; j < i; j++)
-            {
-                if (c.distTo(v[j]) >= c.r + EPSILON)
-                {
+                if (c.distTo(v[j]) >= c.r + EPSILON) {
                     c.x = (v[i].x + v[j].x) / 2, c.y = (v[i].y + v[j].y) / 2;
                     c.r = c.distTo(v[i]);
-                    
                     for (int k = 0; k < j; k++)
-                    {
                         if (c.distTo(v[k]) >= c.r + EPSILON)
-                        {
                             c = getCircleFromTriangle(v[i], v[j], v[k]);
-                        }
-                    }
                 }
-            }
         }
-    }
-
     return c.r;
 }
 
