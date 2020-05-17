@@ -10,7 +10,7 @@
 
 using namespace std;
 
-vector <int> values;
+vector<int> values;
 int n;
 
 void convert(int amount)

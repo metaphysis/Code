@@ -2,7 +2,7 @@
 
 using namespace std;
 
-const int MAX_IT = 5;
+const int MAX_ITERATIONS = 5;
 
 long long multiplyMod(long long a, long long b, long long mod)
 {
@@ -37,7 +37,7 @@ bool isPrime(long long p)
     long long q = p - 1;
     while (!(q & 1)) q >>= 1;
     
-    for (int i = 0; i < MAX_IT; i++)
+    for (int i = 0; i < MAX_ITERATIONS; i++)
     {
         long long a = rand() % (p - 1) + 1;
         long long t = q;
@@ -54,7 +54,6 @@ bool isPrime(long long p)
 
 int main(int argc, char *argv[])
 {
-    int iteration = 5;
     long long n;
 
     cout << "Enter a integer to test primality: ";

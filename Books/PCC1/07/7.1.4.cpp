@@ -7,7 +7,8 @@ int primes[MAXN], cnt;
     
 void sieve(int *primes, int n, int &cnt)
 {
-    cnt = 0, memset(primes, 1, n * sizeof(int));
+    cnt = 0;
+    memset(primes, 1, n * sizeof(int));
 
     for (int i = 2; i < n; i++)
         if (primes[i])
@@ -20,7 +21,8 @@ void sieve(int *primes, int n, int &cnt)
 
 void sieve1(int *primes, int n, int &cnt)
 {
-    cnt = 0, memset(primes, 1, n * sizeof(int));
+    cnt = 0;
+    memset(primes, 1, n * sizeof(int));
 
     for (int i = 2; i * i < n; i++)
         if (primes[i])
@@ -33,7 +35,8 @@ void sieve1(int *primes, int n, int &cnt)
 
 void sieve2(int *primes, int n, int &cnt)
 {
-    cnt = 0, memset(primes, 1, n * sizeof(int));
+    cnt = 0;
+    memset(primes, 1, n * sizeof(int));
 
     for (int i = 2; i < n; i++)
     {
@@ -54,7 +57,8 @@ int B[MAXB >> 5] = {};
 
 void sieve3(int *primes, int n, int &cnt)
 {
-    cnt = 0, memset(primes, 1, n * sizeof(int));
+    cnt = 0;
+    memset(primes, 1, n * sizeof(int));
     for (int i = 2; i < MAXB; i++)
     {
         if (!GET(i)) primes[cnt++] = i;
@@ -68,7 +72,8 @@ void sieve3(int *primes, int n, int &cnt)
 
 void sieve4(int *primes, int n, int &cnt)
 {
-    cnt = 0, memset(primes, 1, n * sizeof(int));
+    cnt = 0;
+    memset(primes, 1, n * sizeof(int));
     
     for (int i = 2; i * i < n; i++)
         if (primes[i])
