@@ -126,7 +126,6 @@ int main(int argc, char *argv[])
         traveler.x = 0;
         traveler.y = 0;
 
-        visited.clear();
         numberOfGolygons = 0;
         dfs(traveler, -1, 0);
         cout << "Found " << numberOfGolygons << " golygon(s)." << endl;

@@ -10,7 +10,7 @@
 
 using namespace std;
 
-int grid[7][8], map[7][8], bone[28][2], solutions, cases = 0;
+int grid[7][8], board[7][8], bone[28][2], solutions, cases = 0;
 int location[2][2] = { {0, 1}, {1, 0} };
 
 void backtrack(int matched)
@@ -20,7 +20,7 @@ void backtrack(int matched)
         for (int i = 0; i < 7; i++)
         {
             for (int j = 0; j < 8; j++)
-                cout << setw(4) << map[i][j];
+                cout << setw(4) << board[i][j];
             cout << "\n";
         }
         cout << "\n";
@@ -32,7 +32,7 @@ void backtrack(int matched)
 
     for (int i = 0; i < 7; i++)
         for (int j = 0; j < 8; j++)
-            if (map[i][j] == 0 && (grid[i][j] == bone[matched][0]
+            if (board[i][j] == 0 && (grid[i][j] == bone[matched][0]
                     || grid[i][j] == bone[matched][1]))
             {
                 for (int m = 0; m < 2; m++)
@@ -43,17 +43,17 @@ void backtrack(int matched)
                     if (ii < 0 || jj < 0 || ii > 6 || jj > 7)
                         continue;
 
-                    if (map[ii][jj] == 0 &&
+                    if (board[ii][jj] == 0 &&
                         ((grid[i][j] == bone[matched][0]
                                 && grid[ii][jj] == bone[matched][1])
                             || (grid[i][j] == bone[matched][1]
                                 && grid[ii][jj] == bone[matched][0])))
                     {
-                        map[i][j] = matched + 1;
-                        map[ii][jj] = matched + 1;
+                        board[i][j] = matched + 1;
+                        board[ii][jj] = matched + 1;
                         backtrack(matched + 1);
-                        map[i][j] = 0;
-                        map[ii][jj] = 0;
+                        board[i][j] = 0;
+                        board[ii][jj] = 0;
                     }
                 }
             }
@@ -99,7 +99,7 @@ int main(int argc, char *argv[])
             cout << "\n";
 
             solutions = 0;
-            memset(map, 0, sizeof(map));
+            memset(board, 0, sizeof(board));
             backtrack(0);
 
             cout << "There are " << solutions << " solution(s) for layout #" <<

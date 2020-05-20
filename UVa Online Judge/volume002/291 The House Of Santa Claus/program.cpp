@@ -1,8 +1,8 @@
 // The House Of Santa Claus
 // UVa ID: 291
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2016-05-09
+// UVa Run Time: 0.000s
 //
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
@@ -10,7 +10,7 @@
 
 using namespace std;
 
-vector < vector < int > > edges(6);
+vector<vector<int>> edges(6);
 int drawed[6][6] = { 0 };
 vector < int > path;
 

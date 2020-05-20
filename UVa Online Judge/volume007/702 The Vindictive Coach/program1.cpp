@@ -12,45 +12,36 @@ using namespace std;
 
 const int HIGHER = 0, LOWER = 1;
 
-int N, m, ONES;
-long long dp[24][24][2];
+int N, m;
+long long dp[32][32][2];
 
-long long dfs(int high, int low, int mode)
+long long dfs(int i, int j, int mode)
 {
-    if (high == 0 && low == 0) return 1;
-    if ((high <= 0 && mode == LOWER) || (low <= 0 && mode == HIGHER)) return 0;
-    if (~dp[high][low][mode]) return dp[high][low][mode];
+    if (i == 1 && j == 1) return 1;
+    if (~dp[i][j][mode]) return dp[i][j][mode];
     long long r = 0;
-    if (mode == HIGHER)
-    {
-        for (int i = 1; i <= low; i++)
-            r += dfs(high + i - 1, low - i, LOWER);
+    if (mode == HIGHER) {
+        for (int k = j; k < i; k++)
+            r += dfs(i - 1, k, LOWER);
+    } else {
+        for (int k = 1; k < j; k++)
+            r += dfs(i - 1, k, HIGHER);
     }
-    else
-    {
-        for (int i = 1; i <= high; i++)
-            r += dfs(high - i, low + i - 1, HIGHER);
-    }
-    return dp[high][low][mode] = r;
+    return dp[i][j][mode] = r;
 }
 
 int main(int argc, char *argv[])
 {
-    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
-
     memset(dp, -1, sizeof(dp));
-    while (cin >> N >> m)
-    {
-        if (N <= 2)
-        {
-            cout << "1\n";
-            continue;
+    while (cin >> N >> m) {
+        if (N <= 2) { cout << "1\n"; continue; }
+        long long r = 0;
+        if (m == 1) r = dfs(N - 1, 2, LOWER);
+        else {
+            for (int i = 1; i < m; i++)
+                r += dfs(N - 1, i, HIGHER);
         }
-        if (m == 1)
-            cout << dfs(N - 3, 1, HIGHER) << '\n';
-        else
-            cout << dfs(N - m, m - 1, HIGHER) << '\n';
+        cout << r << '\n';
     }
-
     return 0;
 }

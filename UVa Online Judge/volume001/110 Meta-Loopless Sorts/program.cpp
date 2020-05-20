@@ -31,7 +31,7 @@ void writeln(string space, string sequences)
 	cout << ")\n";
 }
 
-void sort(string space, string sequences)
+void sortIt(string space, string sequences)
 {
 	char c = (char) ('a' + sequences.length());
 	for (int i = sequences.length(); i >= 0; i--)
@@ -48,7 +48,7 @@ void sort(string space, string sequences)
 		if (tmp.length() == n)
 			writeln(space + (i ? tab : ""), tmp);
 		else
-			sort(space + tab, tmp);
+			sortIt(space + tab, tmp);
 
 		if (i)
 		{
@@ -87,7 +87,7 @@ int main(int argc, char const *argv[])
 			cout << (i ? "," : "") << (char) ('a' + i);
 		cout << ");\n";
 
-		sort("", "");
+		sortIt("", "");
 
 		cout << "end.\n";
 	}

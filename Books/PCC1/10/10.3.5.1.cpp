@@ -53,8 +53,7 @@ void kruskal()
     if (cntOfMerged != (n - 1)) {
         cout << "No MST exist!\n";
         return;
-    }
-    else cout << "MST = " << bSumOfWeight << '\n';
+    } else cout << "MST = " << bSumOfWeight << '\n';
 
     int sbSumOfWeight = INF, sum;
     for (int i = 0; i < cntOfIntree; i++) {
@@ -64,10 +63,10 @@ void kruskal()
         for (int j = 0; j < m; j++)
             if (edges[j].enabled && unionSet(edges[j].u, edges[j].v)) {
                 sum += edges[j].weight;
-                cntOfMerged++;
+                if (++cntOfMerged == n - 1) break;
             }
         edges[intree[i]].enabled = 0;
-        if (cntOfMerged == (n - 1)) sbSumOfWeight = min(sbSumOfWeight, sum);
+        if (cntOfMerged == n - 1) sbSumOfWeight = min(sbSumOfWeight, sum);
     }
 
     if (sbSumOfWeight == INF) cout << "No second best MST exists!\n";

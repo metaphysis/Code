@@ -1,0 +1,5 @@
+Maximum size in test case 1 is 0.0000.
+Maximum size in test case 2 is 3.0000.
+Maximum size in test case 3 is 2.2361.
+Maximum size in test case 4 is 2.0000.
+Maximum size in test case 5 is 2.0000.

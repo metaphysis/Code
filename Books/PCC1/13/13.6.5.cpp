@@ -1,15 +1,3 @@
-// Packing Polygons
-// UVa ID: 10005
-// Verdict: Accepted
-// Submission Date: 2017-12-16
-// UVa Run Time: 0.000s
-//
-// 版权所有（C）2017，邱秋。metaphysis # yeah dot net
-
-#include <bits/stdc++.h>
-
-using namespace std;
-
 const double EPSILON = 1e-7;
 
 struct point {
@@ -55,24 +43,4 @@ double getMinCoverCircle(point v[], int n)
                 }
         }
     return c.r;
-}
-
-int main(int argc, char *argv[])
-{
-    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
-
-    int n;
-    point vertices[110];
-    double R;
-    
-    while (cin >> n, n > 0)
-    {
-        for (int i = 0; i < n; i++) cin >> vertices[i].x >> vertices[i].y;
-        cin >> R;
-        double r = getMinCoverCircle(vertices, n);
-        if (r > R) cout << "There is no way of packing that polygon.\n";
-        else cout << "The polygon can be packed in the circle.\n";
-    }
-
-    return 0;
 }

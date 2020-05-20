@@ -20,18 +20,13 @@ long long dfs(int mask, int last, int mode)
     if (~dp[mask][last][mode]) return dp[mask][last][mode];
     if (mask == ONES) return 1LL;
     long long r = 0;
-    if (mode == HIGHER)
-    {
-        for (int bit = last + 1; bit < N; bit++)
-        {
+    if (mode == HIGHER) {
+        for (int bit = last + 1; bit < N; bit++) {
             if (mask & (1 << bit)) continue;
             r += dfs(mask | (1 << bit), bit, LOWER);
         }
-    }
-    else
-    {
-        for (int bit = 0; bit < last; bit++)
-        {
+    } else {
+        for (int bit = 0; bit < last; bit++) {
             if (mask & (1 << bit)) continue;
             r += dfs(mask | (1 << bit), bit, HIGHER);
         }
@@ -43,10 +38,8 @@ int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    while (cin >> N >> m)
-    {
-        if (N <= 2)
-        {
+    while (cin >> N >> m) {
+        if (N <= 2) {
             cout << "1\n";
             continue;
         }
@@ -54,10 +47,8 @@ int main(int argc, char *argv[])
             for (int j = 0; j < N; j++)
                 dp[i][j][0] = dp[i][j][1] = -1;
         ONES = (1 << N) - 1;
-        if (m == 1)
-            cout << dfs(5, 2, LOWER) << '\n';
-        else
-            cout << dfs(1 << (m - 1), m - 1, LOWER) << '\n';
+        if (m == 1) cout << dfs(5, 2, LOWER) << '\n';
+        else cout << dfs(1 << (m - 1), m - 1, LOWER) << '\n';
     }
 
     return 0;

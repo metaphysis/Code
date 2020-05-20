@@ -10,17 +10,13 @@
 
 using namespace std;
 
-string colours = "roygb";
-string wastes = "PGASN";
+string colours = "roygb", wastes = "PGASN";
 
-int matrix[110][5] = { 0 };
-int counter[5][5] = { 0 };
-int cities = 0;
+int matrix[110][5] = {0}, counter[5][5] = {0}, cities = 0;
 
 int getIndex(void)
 {
-    int minChanges = 0;
-    int minIndex = 0;
+    int minChanges = -1, minIndex = 0;
     for (int i = 0; i < cities; i++)
     {
         int allChanges = 0;
@@ -32,15 +28,15 @@ int getIndex(void)
             minIndex = i;
         }
     }
-    
     cout << (minIndex + 1) << endl;
 }
 
 int main(int argc, char *argv[])
 {
     string line;
-    while (getline(cin, line), line != "#")
+    while (getline(cin, line))
     {
+        if (line[0] == '#') break;
         if (line[0] == 'e')
         {
             getIndex();
@@ -53,15 +49,13 @@ int main(int argc, char *argv[])
             for (int i = line.length() - 1; i >= 0; i--)
                 if (line[i] == ' ' || line[i] == '\t')
                     line.erase(line.begin() + i);
-            
             for (int i = 0; i < colours.length(); i++)
             {
-                size_t colourIndex = line.find(colours[i]);
-                size_t wasteIndex = wastes.find(line[colourIndex + 2]);
+                int colourIndex = line.find(colours[i]);
+                int wasteIndex = wastes.find(line[colourIndex + 2]);
                 counter[i][wasteIndex]++;
                 matrix[cities][i] = wasteIndex;
             }
-            
             cities++;
         }
     }

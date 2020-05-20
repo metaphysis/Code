@@ -25,7 +25,7 @@ struct node
 
 bool noComplete, printWhitespace;
 int cache[MAXN][MAXN];
-int count[MAXN];
+int cnt[MAXN];
 
 void checkComplete(node * current)
 {
@@ -40,7 +40,7 @@ void checkComplete(node * current)
 // 遍历树，检查叶子节点保存的路径和是否为目标值。
 void travelTree(node * current, int depth)
 {
-	cache[depth][count[depth]++] = current->value;
+	cache[depth][cnt[depth]++] = current->value;
 	if (current->childLeft != NULL)
 		travelTree(current->childLeft, depth + 1);
 	if (current->childRight != NULL)
@@ -126,12 +126,12 @@ int main(int argc, char const *argv[])
 					cout << "not complete\n";
 				else
 				{
-					memset(count, 0, sizeof(count));
+					memset(cnt, 0, sizeof(cnt));
 					travelTree(root, 0);
 
 					printWhitespace = false;
 					for (int i = 0; i < MAXN; i++)
-						for (int j = 0; j < count[i]; j++)
+						for (int j = 0; j < cnt[i]; j++)
 						{
 							if (printWhitespace)
 								cout << " ";

@@ -15,7 +15,7 @@ int fordFulkerson()
 
         // 首先标记源点为已标号未检查顶点。
 	    queue<int> unchecked; unchecked.push(source);
-	    flags[source].status = flag{UNCHECKED, -1, INF};
+	    flags[source] = flag{UNCHECKED, -1, INF};
 
         // 当汇点尚未被标记且队列非空时继续。
 	    while (flags[sink].status == UNLABELED && !unchecked.empty())
