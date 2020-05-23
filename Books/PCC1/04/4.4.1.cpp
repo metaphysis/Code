@@ -4,7 +4,7 @@ using namespace std;
 
 const int MAXN = 100010;
 
-int tmp[MAXN];
+int n, data[MAXN], tmp[MAXN];
 
 long long mergeAndCount(int data[], int left, int middle, int right)
 {
@@ -32,7 +32,6 @@ long long mergeSort(int data[], int left, int right)
 
 int main(int argc, char *argv[])
 {
-    int n, data[MAXN];
     while (cin >> n, n > 0)
     {
         for (int i = 0; i < n; i++) cin >> data[i];
