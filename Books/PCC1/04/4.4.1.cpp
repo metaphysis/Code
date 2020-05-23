@@ -1,3 +1,7 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
 const int MAXN = 100010;
 
 int tmp[MAXN];
@@ -24,4 +28,14 @@ long long mergeSort(int data[], int left, int right)
         count += mergeAndCount(data, left, middle, right);
     }
     return count;
+}
+
+int main(int argc, char *argv[])
+{
+    int n, data[MAXN];
+    while (cin >> n, n > 0)
+    {
+        for (int i = 0; i < n; i++) cin >> data[i];
+        cout << mergeSort(data, 0, n - 1) << '\n';
+    }
 }

@@ -1,8 +1,8 @@
 // How Many Inversions
 // UVa ID: 13212
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2020-05-23
+// UVa Run Time: 0.170s
 //
 // 版权所有（C）2020，邱秋。metaphysis # yeah dot net
 
@@ -19,7 +19,7 @@ long long mergeAndCount(int data[], int left, int middle, int right)
     long long count = 0;
     int i = left, j = middle + 1, k = 0;
     while (i <= middle && j <= right)
-        tmp[k++] = data[i] <= data[j] ? data[i++] : (count += middle + 1 - i, data[j++]);
+        tmp[k++] = data[i] <= data[j] ? data[i++] : (count += (middle - i + 1), data[j++]);
     while (i <= middle) tmp[k++] = data[i++];
     while (j <= right) tmp[k++] = data[j++];
     for (int i = 0; i < k; i++) data[left + i] = tmp[i];
