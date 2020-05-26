@@ -30,12 +30,10 @@ void build(int p, int left, int right)
 
 void pushUp(int p, int left, int right)
 {
-    if (st[p].cnt)
-    {
+    if (st[p].cnt) {
         st[p].part = st[p].leftCovered = st[p].rightCovered = 1;
         st[p].h = id[right + 1] - id[left];
-    }
-    else {
+    } else {
         if (left == right) {
             st[p].part = st[p].leftCovered = st[p].rightCovered = 0;
             st[p].h = 0;
