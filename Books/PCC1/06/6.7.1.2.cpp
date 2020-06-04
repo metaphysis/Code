@@ -14,7 +14,11 @@ matrix multiply(const matrix &a, const matrix &b)
     matrix r;
     for (int i = 0; i < 2; i++)
         for (int j = 0; j < 2; j++)
-            r.cell[i][j] = (a.cell[i][0] * b.cell[0][j] + a.cell[i][1] * b.cell[1][j]) % mod;
+            for (int k = 0; k < 2; k++)
+            {
+                r.cell[i][j] += a.cell[i][k] * b.cell[k][j] % mod;
+                r.cell[i][j] %= mod;
+            }
     return r;
 }
 

@@ -14,56 +14,51 @@ void pushUp(int p)
     st[p] = high;
 }
 
-void build(int p, int r1, int c1, int r2, int c2)
+void build(int p, int x1, int y1, int x2, int y2)
 {
-    if (r1 > r2 || c1 > c2) {
+    if (x1 > x2 || y1 > y2) {
         st[p] = -INF;
         return;
     }
-    if (r1 == r2 && c1 == c2) {
-        st[p] = data[r1][c1];
+    if (x1 == x2 && y1 == y2) {
+        st[p] = data[x1][y1];
         return;
     }
 
-    int mr = (r1 + r2) >> 1, mc = (c1 + c2) >> 1;
-    build(4 * p + 1, r1, c1, mr, mc);
-    build(4 * p + 2, r1, mc + 1, mr, c2);
-    build(4 * p + 3, mr + 1, c1, r2, mc);
-    build(4 * p + 4, mr + 1, mc + 1, r2, c2);
+    int mx = (x1 + x2) >> 1, my = (y1 + y2) >> 1;
+    build(4 * p + 1, x1, y1, mx, my);
+    build(4 * p + 2, x1, my + 1, mx, y2);
+    build(4 * p + 3, mx + 1, y1, x2, my);
+    build(4 * p + 4, mx + 1, my + 1, x2, y2);
     pushUp(p);
 }
 
-int query(int p, int r1, int c1, int r2, int c2, int qr1, int qc1, int qr2, int qc2)
+int query(int p, int x1, int y1, int x2, int y2, int qx1, int qy1, int qx2, int qy2)
 {
-    if (r1 > r2 || c1 > c2) return -INF;
-    if (r2 < qr1 || c2 < qc1 || r1 > qr2 || c1 > qc2) return -INF;
-    if (qr1 <= r1 && r2 <= qr2 && qc1 <= c1 && c2 <= qc2) return st[p];
+    if (x1 > x2 || y1 > y2) return -INF;
+    if (x2 < qx1 || y2 < qy1 || x1 > qx2 || y1 > qy2) return -INF;
+    if (qx1 <= x1 && x2 <= qx2 && qy1 <= y1 && y2 <= qy2) return st[p];
 
-    int mr = (r1 + r2) >> 1, mc = (c1 + c2) >> 1;
-    int q1 = query(4 * p + 1, r1, c1, mr, mc, qr1, qc1, qr2, qc2);
-    int q2 = query(4 * p + 2, r1, mc + 1, mr, c2, qr1, qc1, qr2, qc2);
-    int q3 = query(4 * p + 3, mr + 1, c1, r2, mc, qr1, qc1, qr2, qc2);
-    int q4 = query(4 * p + 4, mr + 1, mc + 1, r2, c2, qr1, qc1, qr2, qc2);
+    int mx = (x1 + x2) >> 1, my = (y1 + y2) >> 1;
+    int q1 = query(4 * p + 1, x1, y1, mx, my, qx1, qy1, qx2, qy2);
+    int q2 = query(4 * p + 2, x1, my + 1, mx, y2, qx1, qy1, qx2, qy2);
+    int q3 = query(4 * p + 3, mx + 1, y1, x2, my, qx1, qy1, qx2, qy2);
+    int q4 = query(4 * p + 4, mx + 1, my + 1, x2, y2, qx1, qy1, qx2, qy2);
     return max(max(q1, q2), max(q3, q4));
 }
 
-void update(int p, int r1, int c1, int r2, int c2, int ur, int uc, int v)
+void update(int p, int x1, int y1, int x2, int y2, int ux, int uy, int v)
 {
-    if (r1 > r2 || c1 > c2) return;
-    if (r1 == r2 && c1 == c2 && r1 == ur && c1 == uc) st[p] = v;
-    else
-    {
-        int mr = (r1 + r2) >> 1, mc = (c1 + c2) >> 1;
-        if (ur >= r1 && ur <= mr && uc >= c1 && uc <= mc)
-            update(4 * p + 1, r1, c1, mr, mc, ur, uc, v);
-        else if (ur >= r1 && ur <= mr && uc >= mc + 1 && uc <= c2)
-            update(4 * p + 2, r1, mc + 1, mr, c2, ur, uc, v);
-        else if (ur >= mr + 1 && ur <= r2 && uc >= c1 && uc <= mc)
-            update(4 * p + 3, mr + 1, c1, r2, mc, ur, uc, v);
-        else if (ur >= mr + 1 && ur <= r2 && uc >= mc + 1 && uc <= c2)
-            update(4 * p + 4, mr + 1, mc + 1, r2, c2, ur, uc, v);
-        pushUp(p);
-    }
+    if (x1 > x2 || y1 > y2) return;
+    if (x2 < ux || y2 < uy || x1 > ux || y1 > uy) return;
+    if (x1 == x2 && y1 == y2 && x1 == ux && y1 == uy) { st[p] = v; return; }
+
+    int mx = (x1 + x2) >> 1, my = (y1 + y2) >> 1;
+    update(4 * p + 1, x1, y1, mx, my, ux, uy, v);
+    update(4 * p + 2, x1, my + 1, mx, y2, ux, uy, v);
+    update(4 * p + 3, mx + 1, y1, x2, my, ux, uy, v);
+    update(4 * p + 4, mx + 1, my + 1, x2, y2, ux, uy, v);
+    pushUp(p);
 }
 
 int main(int argc, char *argv[])
