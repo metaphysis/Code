@@ -24,6 +24,19 @@ matrix multiply(const matrix &a, const matrix &b)
 
 matrix matrixPow(long long k)
 {
+    matrix r(1, 0, 1, 0);
+    matrix cm(1, 1, 1, 0);
+    while (k)
+    {
+        if (k & 1) r = multiply(r, cm);
+        cm = multiply(cm, cm);
+        k >>= 1;
+    }
+    return r;
+}
+
+matrix matrixPow(long long k)
+{
     if (k == 1) return one;
     matrix r = matrixPow(k >> 1);
     r = multiply(r, r);
