@@ -20,7 +20,7 @@ void dfs(int u)
         }
 }
 
-int lca(int u, int v)
+int getLCA(int u, int v)
 {
     if (depth[u] < depth[v]) swap(u, v);
 
