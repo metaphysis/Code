@@ -7,7 +7,7 @@ stack<int> s;
 
 void dfs(int u)
 {
-    dfn[u] = low[u] = ++dfstime;
+    low[u] = dfn[u] = ++dfstime;
     s.push(u);
     for (auto v : edges[u])
     {
