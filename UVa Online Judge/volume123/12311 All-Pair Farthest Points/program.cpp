@@ -10,12 +10,31 @@
 
 using namespace std;
 
-int n;
+int n, idx[30010];
 double px[100000], py[100000];
     
 double f(int i, int j)
 {
+    if (j >= i + n || j < i) return 0;
     return pow(px[i] - px[j], 2) + pow(py[i] - py[j], 2);
+}
+
+void dfs(int left, int right, int low, int high)
+{
+    int middle = (left + right) / 2;
+    idx[middle] = low;
+    double d1, d2;
+    for (int i = low + 1; i <= high; i++)
+    {
+        d1 = f(middle, i), d2 = f(middle, idx[middle]);
+        if (d1 > d2 || (d1 == d2 && (i % n) < (idx[middle] % n)))
+            idx[middle] = i;
+    }
+    if (left < right)
+    {
+        dfs(left, middle - 1, low, idx[middle]);
+        dfs(middle + 1, right, idx[middle], high);
+    }
 }
 
 int main(int argc, char *argv[])
@@ -29,21 +48,8 @@ int main(int argc, char *argv[])
             cin >> px[i] >> py[i];
             px[n + i] = px[i], py[n + i] = py[i];          
         }
-        for (int i = 0; i < n; i++)
-        {
-            // ternary search.
-            int left = i + 1, right = i + n - 1, r;
-            while (left <= right)
-            {
-                int leftThird = left + (right - left) / 3;
-                int rightThird = right - (right - left) / 3;
-                if (f(i, leftThird) >= f(i, rightThird)) r = leftThird, right = rightThird - 1;
-                else r = rightThird, left = leftThird + 1;
-            }
-            r %= n;
-            if (r && f(i, r - 1) >= f(i, r)) r -= 1;
-            cout << (r + 1) << '\n';
-        }
+        dfs(0, n - 1, 0, 2 * n - 1);
+        for (int i = 0; i < n; i++) cout << idx[i] % n + 1 << '\n';
     }
 
     return 0;
