@@ -19,54 +19,41 @@ void dfs(int u)
         }
 }
 
-int lca(int u, int v)
+int getLCA(int u, int v)
 {
-    unordered_set<int> ancestors;
+    unordered_set<int> Su;
 
     while (u != -1) {
-        ancestors.insert(u);
+        Su.insert(u);
         u = parent[u];
     }
 
     while (v != -1) {
-        if (ancestors.find(v) != ancestors.end())
-            return v;
+        if (Su.find(v) != Su.end()) return v;
         v = parent[v];
     }
 }
 
 int main(int argc, char *argv[])
 {
-    int n;
-
-    while (cin >> n)
-    {
-        for (int u = 0; u < n; u++)
-            g[u].clear();
-
-        for (int u = 0, m; u < n; u++)
-        {
-            cin >> m;
-            for (int j = 0, v; j < m; j++)
-            {
-                cin >> v;
-                v--;
-                g[u].push_back(v);
-                g[v].push_back(u);
-            }
+    int n, q;
+    while (cin >> n) {
+        for (int i = 0; i < n; i++) g[i].clear();
+        for (int i = 1, u, v; i < n; i++) {
+            cin >> u >> v;
+            g[u].push_back(v);
+            g[v].push_back(u);
         }
 
         memset(parent, -1, sizeof(parent));
         memset(visited, 0, sizeof(visited));
-
         dfs(0);
 
-        cin >> n;
-        for (int i = 0, u, v; i < n; i++)
-        {
+        cin >> q;
+        for (int i = 0, u, v; i < q; i++) {
             cin >> u >> v;
             cout << "LCA of " << u << " and " << v << " is ";
-            cout << (lca(--u, --v) + 1) << '\n';
+            cout << getLCA(u, v) << '\n';
         }
     }
 }

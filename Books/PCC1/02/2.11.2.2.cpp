@@ -6,18 +6,18 @@ const int MAXN = 512, INF = 0x7f7f7f7f;
 
 struct rectangle
 {
-    int r1, c1, r2, c2;
-    rectangle(int r1 = 0, int c1 = 0, int r2 = 0, int c2 = 0):
-    r1(r1), c1(c1), r2(r2), c2(c2) {}
-    bool isBad() { return r1 > r2 || c1 > c2; }
-    bool isCell() { return r1 == r2 && c1 == c2; }
-    bool contains(int r, int c) { return r1 <= r && r <= r2 && c1 <= c && c <= c2; }
-    bool contains(rectangle q) { return r1 <= q.r1 && q.r2 <= r2 && c1 <= q.c1 && q.c2 <= c2; }
-    bool intersects(rectangle q) { return !(r1 > q.r2 || c1 > q.c2 || r2 < q.r1 || c2 < q.c1); }
-    rectangle getLU() { return rectangle(r1, c1, (r1 + r2) >> 1, (c1 + c2) >> 1); }
-    rectangle getRU() { return rectangle(r1, ((c1 + c2) >> 1) + 1, (r1 + r2) >> 1, c2); }
-    rectangle getLB() { return rectangle(((r1 + r2) >> 1) + 1, c1, r2, (c1 + c2) >> 1); }
-    rectangle getRB() { return rectangle(((r1 + r2) >> 1) + 1, ((c1 + c2) >> 1) + 1, r2, c2); }
+    int x1, y1, x2, y2;
+    rectangle(int x1 = 0, int y1 = 0, int x2 = 0, int y2 = 0):
+    x1(x1), y1(y1), x2(x2), y2(y2) {}
+    bool isBad() { return x1 > x2 || y1 > y2; }
+    bool isCell() { return x1 == x2 && y1 == y2; }
+    bool contains(int r, int c) { return x1 <= r && r <= x2 && y1 <= c && c <= y2; }
+    bool contains(rectangle q) { return x1 <= q.x1 && q.x2 <= x2 && y1 <= q.y1 && q.y2 <= y2; }
+    bool intersects(rectangle q) { return !(x1 > q.x2 || y1 > q.y2 || x2 < q.x1 || y2 < q.y1); }
+    rectangle getLU() { return rectangle(x1, y1, (x1 + x2) >> 1, (y1 + y2) >> 1); }
+    rectangle getRU() { return rectangle(x1, ((y1 + y2) >> 1) + 1, (x1 + x2) >> 1, y2); }
+    rectangle getLB() { return rectangle(((x1 + x2) >> 1) + 1, y1, x2, (y1 + y2) >> 1); }
+    rectangle getRB() { return rectangle(((x1 + x2) >> 1) + 1, ((y1 + y2) >> 1) + 1, x2, y2); }
 };
 
 struct node
@@ -51,7 +51,7 @@ node* build(rectangle r)
     if (r.isBad()) return NULL;
     if (r.isCell()) {
         node *nd = getNode();
-        nd->high = data[r.r1][r.c1];
+        nd->high = data[r.x1][r.y1];
         return nd;
     }
 
@@ -78,21 +78,17 @@ int query(node *nd, rectangle r, rectangle qr)
     return max(max(q1, q2), max(q3, q4));
 }
 
-void update(node *nd, rectangle r, int ur, int uc, int v)
+void update(node *nd, rectangle r, int ux, int uy, int v)
 {
     if (r.isBad()) return;
-    if (r.isCell() && r.contains(ur, uc)) nd->high = v;
-    else {
-        if (r.getLU().contains(ur, uc))
-            update(nd->children[0], r.getLU(), ur, uc, v);
-        else if (r.getRU().contains(ur, uc))
-            update(nd->children[1], r.getRU(), ur, uc, v);
-        else if (r.getLB().contains(ur, uc))
-            update(nd->children[2], r.getLB(), ur, uc, v);
-        else if (r.getRB().contains(ur, uc))
-            update(nd->children[3], r.getRB(), ur, uc, v);
-        pushUp(nd);
-    }
+    if (!r.contains(ux, uy)) return;
+    if (r.isCell()) { nd->high = v; return; }
+
+    update(nd->children[0], r.getLU(), ux, uy, v);
+    update(nd->children[1], r.getRU(), ux, uy, v);
+    update(nd->children[2], r.getLB(), ux, uy, v);
+    update(nd->children[3], r.getRB(), ux, uy, v);
+    pushUp(nd);
 }
 
 int main(int argc, char *argv[])

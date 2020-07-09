@@ -14,15 +14,10 @@ const int MAXN = 1010;
 
 struct point {
     int x, y;
-    point (int x = 0, int y = 0): x(x), y(y) {}
     bool operator<(const point& p) const
     {
         if (x != p.x) return x < p.x;
         return y < p.y;
-    }
-    bool operator==(const point& p) const
-    {
-        return x == p.x && y == p.y;
     }
 } ps[1010];
 
@@ -37,13 +32,10 @@ int main(int argc, char *argv[])
         cin >> n;
         for (int i = 0; i < n; i++) cin >> ps[i].x >> ps[i].y;
         sort(ps, ps + n);
-        n = unique(ps, ps + n) - ps;
-        int axis;
-        if (n % 2 == 1) axis = 2 * ps[n / 2].x;
-        else axis = ps[n / 2 - 1].x + ps[n / 2].x;
+        int axis = ps[0].x + ps[n - 1].x;
         bool flag = true;
         for (int i = 0; i < n; i++)
-            if (binary_search(ps, ps + n, point(axis - ps[i].x, ps[i].y)) == false)
+            if (!binary_search(ps, ps + n, point{axis - ps[i].x, ps[i].y}))
             {
                 flag = false;
                 break;

@@ -9,8 +9,8 @@ struct edge
     int id, u, v, next;
 };
 
-edge input[MAXE], query[MAXE];
-int idx, headInput[MAXV], headQuery[MAXV];
+edge data[MAXE], query[MAXE];
+int idx, headD[MAXV], headQ[MAXV];
 int numberOfVertices, numberOfQueries;
 int parent[MAXV], ranks[MAXV], ancestor[MAXV], visited[MAXV];
 int father[MAXV], colored[MAXV], lca[MAXV];
@@ -49,19 +49,19 @@ void dfs(int u)
     ancestor[findSet(u)] = u;
     visited[u] = 1;
 
-    for (int i = headInput[u]; i != -1; i = input[i].next)
-        if (!visited[input[i].v])
+    for (int i = headD[u]; i != -1; i = data[i].next)
+        if (!visited[data[i].v])
         {
-            father[input[i].v] = u;
+            father[data[i].v] = u;
 
-            dfs(input[i].v);
-            unionSet(u, input[i].v);
+            dfs(data[i].v);
+            unionSet(u, data[i].v);
             ancestor[findSet(u)] = u;
         }
 
     colored[u] = 1;
 
-    for (int i = headQuery[u]; i != -1; i = query[i].next)
+    for (int i = headQ[u]; i != -1; i = query[i].next)
         if (colored[query[i].v])
             lca[query[i].id] = ancestor[findSet(query[i].v)];
 }
@@ -74,32 +74,32 @@ int main(int argc, char *argv[])
     while (cin >> numberOfVertices, numberOfVertices)
     {
         idx = 0;
-        memset(headInput, -1, sizeof(headInput));
+        memset(headD, -1, sizeof(headD));
 
         for (int i = 0; i < numberOfVertices - 1; i++)
         {
             cin >> u >> v;
 
-            input[idx] = (edge){idx, u, v, headInput[u]};
-            headInput[u] = idx++;
+            data[idx] = (edge){idx, u, v, headD[u]};
+            headD[u] = idx++;
 
-            input[idx] = (edge){idx, v, u, headInput[v]};
-            headInput[v] = idx++;
+            data[idx] = (edge){idx, v, u, headD[v]};
+            headD[v] = idx++;
         }
 
         idx = 0;
-        memset(headQuery, -1, sizeof(headQuery));
+        memset(headQ, -1, sizeof(headQ));
 
         cin >> numberOfQueries;
         for (int i = 0; i < numberOfQueries; i++)
         {
             cin >> u >> v;
 
-            query[idx] = (edge){i, u, v, headQuery[u]};
-            headQuery[u] = idx++;
+            query[idx] = (edge){i, u, v, headQ[u]};
+            headQ[u] = idx++;
             
-            query[idx] = (edge){i, v, u, headQuery[v]};
-            headQuery[v] = idx++;
+            query[idx] = (edge){i, v, u, headQ[v]};
+            headQ[v] = idx++;
         }
 
         memset(visited, 0, sizeof(visited));

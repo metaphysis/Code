@@ -9,8 +9,8 @@ struct edge
     int id, u, v, weight, next;
 };
 
-edge input[MAXE], query[MAXE];
-int idx, headInput[MAXV], headQuery[MAXV];
+edge data[MAXE];
+int idx, headD[MAXV];
 int numberOfVertices, numberOfQueries;
 int ancestor[MAXV][MAXD], depth[MAXV], visited[MAXV];
 
@@ -18,16 +18,16 @@ void dfs(int u)
 {
     visited[u] = 1;
 
-    for (int i = headInput[u]; i != -1; i = input[i].next)
-        if (!visited[input[i].v])
+    for (int i = headD[u]; i != -1; i = data[i].next)
+        if (!visited[data[i].v])
         {
-            ancestor[input[i].v][0] = u;
-            depth[input[i].v] = depth[u] + 1;
-            dfs(input[i].v);
+            ancestor[data[i].v][0] = u;
+            depth[data[i].v] = depth[u] + 1;
+            dfs(data[i].v);
         }
 }
 
-void initialize()
+void getReady()
 {
     for (int d = 0; (1 << d) <= numberOfVertices; d++)
         for (int u = 0; u < numberOfVertices; u++)
@@ -35,7 +35,7 @@ void initialize()
                 ancestor[u][d] = ancestor[ancestor[u][d - 1]][d - 1];
 }
 
-int lca(int u, int v)
+int getLCA(int u, int v)
 {
     if (depth[u] < depth[v]) swap(u, v);
 
@@ -65,17 +65,17 @@ int main(int argc, char *argv[])
     while (cin >> numberOfVertices, numberOfVertices)
     {
         idx = 0;
-        memset(headInput, -1, sizeof(headInput));
+        memset(headD, -1, sizeof(headD));
 
         for (int from = 1; from <= numberOfVertices - 1; from++)
         {
             cin >> v >> weight;
 
-            input[idx] = (edge){idx, from, v, weight, headInput[from]};
-            headInput[from] = idx++;
+            data[idx] = (edge){idx, from, v, weight, headD[from]};
+            headD[from] = idx++;
 
-            input[idx] = (edge){idx, v, from, weight, headInput[v]};
-            headInput[v] = idx++;
+            data[idx] = (edge){idx, v, from, weight, headD[v]};
+            headD[v] = idx++;
         }
 
         memset(ancestor, -1, sizeof(ancestor));
@@ -90,7 +90,7 @@ int main(int argc, char *argv[])
         for (int i = 0; i < numberOfQueries; i++)
         {
             cin >> u >> v;
-            cout << lca(u, v) << '\n';
+            cout << getLCA(u, v) << '\n';
             
         }
     }

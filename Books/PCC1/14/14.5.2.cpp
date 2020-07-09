@@ -55,21 +55,21 @@ polygon jarvisConvexHull(polygon &pg)
     sort(pg.begin(), pg.end());
     pg.erase(unique(pg.begin(), pg.end()), pg.end());
 
-    int current = 0;
+    int last = 0;
     do
     {
         int next = 0;
         for (int i = 1; i < pg.size(); i++)
         {
-            if (cw(pg[current], pg[next], pg[i]) ||
-                (collinear(pg[current], pg[next], pg[i]) &&
-                pg[current].distTo(pg[i]) > pg[current].distTo(pg[next])))
+            if (cw(pg[last], pg[next], pg[i]) ||
+                (collinear(pg[last], pg[next], pg[i]) &&
+                pg[last].distTo(pg[i]) > pg[last].distTo(pg[next])))
                 next = i;
         }
         
         ch.push_back(pg[next]);
-        current = next;
-    } while (current != 0);
+        last = next;
+    } while (last != 0);
     
     return ch;
 }

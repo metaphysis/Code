@@ -16,10 +16,10 @@ int main(int argc, char *argv[])
     
     while (getline(cin, line))
     {
-        string origin = line;
+        string backup = line;
         reverse(line.begin(), line.end());
 
-        vector < int > digits;
+        vector<int> digits;
         for (int i = 0; i < line.length(); i++)
         {
             if (isdigit(line[i]))
@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
         for (int i = 0; i < digits.size(); i++)
             maxDigit = max(maxDigit, digits[i]);
                         
-        if (origin == line)
+        if (backup == line)
         {
             cout << "0";
             
@@ -51,12 +51,12 @@ int main(int argc, char *argv[])
         
         for (int i = 15; i >= (maxDigit + 1); i--)
         {
-            vector < int > origin(digits);
+            vector<int> origin(digits);
             
             int step = 0;
             while (true)
             {
-                vector < int > reversed(origin);
+                vector<int> reversed(origin);
                 reverse(reversed.begin(), reversed.end());
                 
                 int carry = 0;
