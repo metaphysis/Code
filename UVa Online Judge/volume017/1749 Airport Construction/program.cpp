@@ -1,21 +1,26 @@
 // Airport Construction
 // UVa ID: 1749
-// Verdict: 
-// Submission Date: 
+// Verdict: Wrong Answer
+// Submission Date: 2020-07-01
 // UVa Run Time: s
 //
-// 版权所有（C）2017，邱秋。metaphysis # yeah dot net
+// 版权所有（C）2020，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
 
 using namespace std;
 
-const double EPSILON = 1e-7;
+const double EPSILON = 1e-6;
 
 struct point
 {
 	double x, y;
-	
+    point (double x = 0, double y = 0): x(x), y(y) {}
+    point operator + (point p) { return point(x + p.x, y + p.y); };
+    point operator - (point p) { return point(x - p.x, y - p.y); };
+    point operator * (double k) { return point(x * k, y * k); };
+    point operator / (double k) { return point(x / k, y / k); };
+
 	bool operator<(const point &p) const
 	{
 	    if (fabs(x - p.x) > EPSILON) return x < p.x;
@@ -33,178 +38,118 @@ struct point
 	}
 };
 
-struct line
-{
-    double a, b, c;
-};
-
 typedef vector<point> polygon;
 
 int n;
 polygon pg;
-        
-// 叉积，判断点a，b，c组成的两条线段的转折方向。当叉积小于0，则形成一个右拐，
-// 否则共线（cp = 0）或左拐（cp > 0）。
-int crossProduct(point &a, point &b, point &c)
+
+double cross(point a, point b) { return a.x * b.y - a.y * b.x; }
+
+double cp(point a, point b, point c)
 {
-    double cp = (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x);
-    return (fabs(cp) < EPSILON) ? 0 : (cp > EPSILON ? 1 : -1);
+	return cross(b - a, c - a);
 }
 
-// 从点a向点b望去，点c位于线段ab的右侧，返回true。
-bool cw(point &a, point &b, point &c)
+bool cw(point a, point b, point c)
 {
-	return crossProduct(a, b, c) < -EPSILON;
-}
-// 从点a向点b望去，点c位于线段ab的左侧时，返回true。
-bool ccw(point &a, point &b, point &c)
-{
-	return crossProduct(a, b, c) > EPSILON;
+	return cp(a, b, c) < -EPSILON;
 }
 
-// 当三点共线时，返回true。
-bool collinear(point &a, point &b, point &c)
+bool ccw(point a, point b, point c)
 {
-	return fabs(crossProduct(a, b, c)) <= EPSILON;
+	return cp(a, b, c) > EPSILON;
 }
 
-// 判断是否向左转或共线。
-bool ccwOrCollinear(point &a, point &b, point &c)
+bool collinear(point a, point b, point c)
 {
-	return ccw(a, b, c) || collinear(a, b, c);
+    return fabs(cp(a, b, c)) < EPSILON;
 }
 
-bool cwOrCollinear(point &a, point &b, point &c)
+bool cwOrCollinear(point a, point b, point c)
 {
-	return cw(a, b, c) || collinear(a, b, c);
+    return cw(a, b, c) || collinear(a, b, c);
 }
 
-bool inBound(point &p1, point &p2, point &p3)
+bool ccwOrCollinear(point a, point b, point c)
 {
-    return p3.x >= min(p1.x, p2.x) && p3.x <= max(p1.x, p2.x);
+    return ccw(a, b, c) || collinear(a, b, c);
 }
 
-bool inside(point &p1, point &p2)
+bool pointInBox(point a, point b, point p)
 {
-    
-    for (int k = 0; k < n; k++)
-    {
-        int previous = (k - 1 + n) % n;
-        int next = (k + 1) % n;
-
-        if (collinear(p1, p2, pg[k]) && inBound(p1, p2, pg[k]))
-        {
-            if (cw(pg[k], pg[next], p1)) return false;
-            if (ccw(pg[k], pg[previous], p1)) return false;
-            if (cw(pg[k], pg[next], p2)) return false;
-            if (ccw(pg[k], pg[previous], p2)) return false;
-        }
-        else
-        {
-            int cp1 = crossProduct(p1, p2, pg[k]);
-            int cp2 = crossProduct(p1, p2, pg[next]);
-            int cp3 = crossProduct(pg[k], pg[next], p1);
-            int cp4 = crossProduct(pg[k], pg[next], p2);
-            
-            if (cp1 * cp2 < 0 && cp3 * cp4 < 0) return false;
-        }
-    }
-    
-    return true;
+    double minx = min(a.x, b.x), maxx = max(a.x, b.x);
+    double miny = min(a.y, b.y), maxy = max(a.y, b.y);
+    return p.x >= minx && p.x <= maxx && p.y >= miny && p.y <= maxy;
 }
 
-line pointsToLine(point &p1, point &p2)
+struct segment
 {
-    line lr;
+    point p1, p2;
+    bool contains(const point &p) { return pointInBox(p1, p2, p); }
+};
 
-    if (fabs(p1.x - p2.x) <= EPSILON)
-    {
-        lr.a = 1.0;
-        lr.b = 0.0;
-        lr.c = -p1.x;
-    }
-    else
-    {
-        lr.a = -(p1.y - p2.y) / (p1.x - p2.x);
-        lr.b = 1.0;
-        lr.c = -lr.a * p1.x - p1.y;
-    }
+struct line
+{
+    double a, b, c;
+    line (double a = 0, double b = 0, double c = 0): a(a), b(b), c(c) {}
+};
 
-    return lr;
+line getLine(double x1, double y1, double x2, double y2)
+{
+    return line(y2 - y1, x1 - x2, y1 * (x2 - x1) - x1 * (y2 - y1));
 }
 
-point getIntersection(int i, int j, int k, int l)
+line getLine(point p, point q)
 {
-    line l1 = pointsToLine(pg[i], pg[j]);
-    line l2 = pointsToLine(pg[k], pg[l]);
-    
+    return getLine(p.x, p.y, q.x, q.y);
+}
+
+point getIntersection(line p, line q)
+{
     point pi;
-    pi.x = (l2.b * l1.c - l1.b * l2.c) / (l2.a * l1.b - l1.a * l2.b);
-    if (fabs(l1.b) > EPSILON)
-        pi.y = -(l1.a * pi.x + l1.c) / l1.b;
-    else
-        pi.y = -(l2.a * pi.x + l2.c) / l2.b;
-
-    return pi;
+    pi.x = (p.b * q.c - p.c * q.b) / (p.a * q.b - p.b * q.a);
+    pi.y = (p.a * q.c - p.c * q.a) / (p.b * q.a - p.a * q.b);
+    return pi; 
 }
 
+// 检测从点i到点j的连线是否被其他线段所阻挡。
+bool isBlocked(int i, int j)
+{
+    if (j == i + 1) return false;
+    for (int k1 = 0, k2 = 1; k1 < n; k1++, k2++)
+    {
+        if (k2 >= n) k2 %= n;
+        double cp1 = cp(pg[i], pg[j], pg[k1]);
+        double cp2 = cp(pg[i], pg[j], pg[k2]);
+        if (cp1 * cp2 < EPSILON)
+        {
+            point p1 = getIntersection(getLine(pg[i], pg[j]), getLine(pg[k1], pg[k2]));
+            if (pointInBox(pg[i], pg[j], p1))
+                return true;
+        }
+    }
+    return false;
+}
+
+// 检查与线段ij两端相交的线段，获得的端点即为跑道的最长的长度。
 double getDist(int i, int j)
 {
-    point leftEnd = pg[i], rightEnd = pg[j];
-    
-    if (leftEnd.x > rightEnd.x) swap(leftEnd, rightEnd);
-
-    vector<point> leftChain;
-    for (int k = 0; k < n; k++)
-    {
-        int next = (k + 1) % n;
-        int cp1 = crossProduct(pg[i], pg[j], pg[k]);
-        int cp2 = crossProduct(pg[i], pg[j], pg[next]);
-        
-        if (cp1 * cp2 < 0)
+    // 从i到j的方向与简单多边形的交点。
+    point p1 = pg[j], p2 = pg[i];
+    for (int k = j + 1; k < n; k++)
+        if (ccw(pg[i], pg[j], pg[k]))
         {
-            point pi = getIntersection(i, j, k, next);
-            if (pi.x < leftEnd.x) leftChain.push_back(pi);
+            p1 = getIntersection(getLine(pg[i], pg[j]), getLine(pg[k - 1], pg[k]));
+            break;
         }
-        
-        if (cp1 == 0 && pg[k].x < leftEnd.x) leftChain.push_back(pg[k]);
-        if (cp2 == 0 && pg[next].x < leftEnd.x) leftChain.push_back(pg[next]);
-    }
-    
-    sort(leftChain.begin(), leftChain.end());
-    
-    for (int k = leftChain.size() - 1; k >= 0; k--)
-    {
-        if (inside(leftChain[k], rightEnd)) break;
-        leftEnd = leftChain[k];
-    }
-    
-    vector<point> rightChain;
-    for (int k = 0; k < n; k++)
-    {
-        int next = (k + 1) % n;
-        int cp1 = crossProduct(pg[i], pg[j], pg[k]);
-        int cp2 = crossProduct(pg[i], pg[j], pg[next]);
-        
-        if (cp1 * cp2 < 0)
+    // 从j到i的方向与简单多边形的交点。
+    for (int k = i - 1; k >= 0; k--)
+        if (ccw(pg[i], pg[j], pg[k]))
         {
-            point pi = getIntersection(i, j, k, next);
-            if (pi.x > rightEnd.x) rightChain.push_back(pi);
+            p2 = getIntersection(getLine(pg[i], pg[j]), getLine(pg[k], pg[k + 1]));
+            break;
         }
-        
-        if (cp1 == 0 && pg[k].x > rightEnd.x) rightChain.push_back(pg[k]);
-        if (cp2 == 0 && pg[next].x > rightEnd.x) rightChain.push_back(pg[next]);
-    }
-    
-    sort(rightChain.begin(), rightChain.end());
-    
-    for (int k = 0; k < rightChain.size(); k++)
-    {
-        if (inside(leftEnd, rightChain[k])) break;
-        rightEnd = rightChain[k];
-    }
-    
-    return leftEnd.distTo(rightEnd);
+    return p1.distTo(p2);
 }
 
 int main(int argc, char *argv[])
@@ -217,7 +162,7 @@ int main(int argc, char *argv[])
     {
         pg.clear();
 
-        for (int i = 1; i <= n; i++)
+        for (int i = 0; i < n; i++)
         {
             cin >> x1 >> y1;
             pg.push_back(point{x1, y1});
@@ -228,13 +173,9 @@ int main(int argc, char *argv[])
             for (int j = i + 1; j < n; j++)
             {
                 if (fabs(pg[i].distTo(pg[j]) - longest) < EPSILON) continue;
-                if (inside(pg[i], pg[j]))
-                {
-                    double dist = getDist(i, j);
-                    if (dist > longest + EPSILON) longest = dist;
-                }
+                if (isBlocked(i, j)) continue;
+                longest = max(longest, getDist(i, j));
             }
-        
         cout << fixed << setprecision(9) << longest << '\n';
     }
     

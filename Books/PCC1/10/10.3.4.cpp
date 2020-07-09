@@ -19,42 +19,51 @@ void makeSet()
 
 int findSet(int x)
 {
-    return (parent[x] == x ? x : parent[x] = findSet(parent[x]));
+    return parent[x] == x ? x : parent[x] = findSet(parent[x]);
 }
 
-void addEdge(int i)
+bool unionSet(int x, int y)
 {
-    edge e = edges[i];
-    g[e.u].push_back(edge(i, e.v, e.w));
-    g[e.v].push_back(edge(i, e.u, e.w));
+    x = findSet(x), y = findSet(y);
+    if (x == y) return false;
+    parent[x] = y;
+    return true;
 }
 
-int choose[MAXE], best[MAXV], candidate[MAXV], linkTo[MAXV];
+void addEdge(int idx)
+{
+    edge e = edges[idx];
+    g[e.u].push_back(edge(idx, e.v, e.w));
+    g[e.v].push_back(edge(idx, e.u, e.w));
+}
+
+int chosen[MAXE], shortest[MAXV], longest[MAXV], link[MAXV], idx[MAXV];
+
 void dfs(int father, int u)
 {
     for (auto e : g[u])
     {
-        if (!choose[e.u]) continue;
+        if (!chosen[e.u]) continue;
         if (e.v == father) continue;
         if (u)
         {
-            best[e.v] = e.w;
-            candidate[e.v] = e.u;
-            if (best[u] > best[e.v])
+            longest[e.v] = e.w;
+            link[e.v] = e.u;
+            if (longest[u] > longest[e.v])
             {
-                best[e.v] = best[u];
-                candidate[e.v] = candidate[u];
+                longest[e.v] = longest[u];
+                link[e.v] = link[u];
             }
         }
-        else best[e.v] = -INF;
+        else longest[e.v] = -INF;
         dfs(u, e.v);
     }
 }
 
 int rmst(int k)
 {
-    memset(choose, 0, sizeof(choose));
-    memset(linkTo, -1, sizeof(linkTo));
+    memset(chosen, 0, sizeof(chosen));
+    memset(idx, -1, sizeof(idx));
 
     makeSet();
     sort(edges, edges + m);
@@ -62,71 +71,67 @@ int rmst(int k)
     for (int i = 0; i < m; i++)
     {
         if (!edges[i].u) continue;
-        int x = findSet(edges[i].u), y = findSet(edges[i].v);
-        if (x == y) continue;
-        parent[x] = y;
-        choose[i] = 1;
+        if (unionSet(edges[i].u, edges[i].v)) chosen[i] = 1;
     }
 
     int components = 0;
-    best[0] = INF;
+    shortest[0] = INF;
     for (int i = 1; i < n; i++)
         if (findSet(i) == i)
         {
             components++;
-            best[i] = INF;
+            shortest[i] = INF;
         }
     if (components > k) return INF;
 
     for (int i = 0; i < m; i++)
     {
         if (edges[i].u) continue;
-        linkTo[edges[i].v] = i;
-        int x = findSet(edges[i].v);
-        if (edges[i].w < best[x])
+        idx[edges[i].v] = i;
+        int scc = findSet(edges[i].v);
+        if (edges[i].w < shortest[scc])
         {
-            best[x] = edges[i].w;
-            candidate[x] = i;
+            shortest[scc] = edges[i].w;
+            link[scc] = i;
         }
     }
 
     for (int i = 1; i < n; i++)
         if (findSet(i) == i)
         {
-            if (best[i] == INF) return INF;
-            choose[candidate[i]] = 1;
+            if (shortest[i] == INF) return INF;
+            chosen[link[i]] = 1;
         }
     
     for (int i = 0; i < n; i++)
         g[i].clear();
     for (int i = 0; i < m; i++)
-        if (choose[i])
+        if (chosen[i])
             addEdge(i);
 
     while (components < k)
     {
         dfs(-1, 0);
-        int tmpBest = INF, tmpCandidate;
+        int delta = INF, selected = INF;
         for (int i = 1; i < n; i++)
         {
-            if (linkTo[i] == -1 || best[i] == -INF) continue;
-            int beta = edges[linkTo[i]].w - best[i];
-            if (beta < tmpBest)
+            if (idx[i] == -1 || longest[i] == -INF) continue;
+            if (edges[idx[i]].w - longest[i] < delta)
             {
-                tmpBest = beta;
-                tmpCandidate = i;
+                delta = edges[idx[i]].w - longest[i];
+                selected = i;
             }
         }
-        if (tmpBest == INF) return INF;
-        choose[candidate[tmpCandidate]] = 0;
-        choose[linkTo[tmpCandidate]] = 1;
-        addEdge(linkTo[tmpCandidate]);
+        if (delta == INF) return INF;
+        chosen[link[selected]] = 0;
+        chosen[idx[selected]] = 1;
+        addEdge(idx[selected]);
         components++;
     }
 
-    int sumOfWeight = 0;
+    int sum = 0;
     for (int i = 0; i < m; i++)
-        if (choose[i])
-            sumOfWeight += edges[i].w;
-    return sumOfWeight;
+        if (chosen[i])
+            sum += edges[i].w;
+    return sum;
 }

@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
 
-    int MAXN = 1000000, primes[MAXN], primeCounter = 0;
+    int MAXN = 1000010, primes[MAXN], primeCounter = 0;
 
     memset(primes, 0, sizeof(primes));
 
@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
         if (isCircular) circular[circularCounter++] = primes[k];
     }
     
-    int range[1000000];
+    int range[MAXN];
     for (int i = 0, j = 0; i < MAXN; i++)
     {
         range[i] = 0;
