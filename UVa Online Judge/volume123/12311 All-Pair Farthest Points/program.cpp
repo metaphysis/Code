@@ -1,10 +1,10 @@
 // All-Pair Farthest Points
 // UVa ID: 12311
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2020-06-29
+// UVa Run Time: 0.050s
 //
-// 版权所有（C）2018，邱秋。metaphysis # yeah dot net
+// 版权所有（C）2020，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
 

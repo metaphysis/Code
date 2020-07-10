@@ -19,7 +19,7 @@ struct edge
     bool operator<(const edge &e) const { return w < e.w; }
 } edges[MAXE];
 
-vector<edge> g[MAXV];
+vector<edge> g[MAXV], ue;
 
 int n, m;
 int parent[MAXV];
@@ -49,7 +49,7 @@ void addEdge(int idx)
     g[e.v].push_back(edge(idx, e.u, e.w));
 }
 
-int chosen[MAXE], shortest[MAXV], longest[MAXV], link[MAXV], idx[MAXV];
+int chosen[MAXE], connected[MAXV], longest[MAXV], link[MAXV], idx[MAXV];
 
 void dfs(int father, int u)
 {
@@ -57,7 +57,7 @@ void dfs(int father, int u)
     {
         if (!chosen[e.u]) continue;
         if (e.v == father) continue;
-        if (u)
+        if (~father)
         {
             longest[e.v] = e.w;
             link[e.v] = e.u;
@@ -66,13 +66,12 @@ void dfs(int father, int u)
                 longest[e.v] = longest[u];
                 link[e.v] = link[u];
             }
-        }
-        else longest[e.v] = -INF;
+        } else longest[e.v] = -INF;
         dfs(u, e.v);
     }
 }
 
-int rmst(int k)
+int kdbmst(int u, int k)
 {
     memset(chosen, 0, sizeof(chosen));
     memset(idx, -1, sizeof(idx));
@@ -80,43 +79,41 @@ int rmst(int k)
     makeSet();
     sort(edges, edges + m);
 
+    ue.clear();
     for (int i = 0; i < m; i++)
     {
-        if (!edges[i].u) continue;
+        if (edges[i].u == u) {
+            edge e = edges[i];
+            ue.push_back(edge(i, e.v, e.w));
+            continue;
+        }
         if (unionSet(edges[i].u, edges[i].v)) chosen[i] = 1;
     }
 
     int components = 0;
-    shortest[0] = INF;
-    for (int i = 1; i < n; i++)
-        if (findSet(i) == i)
+    connected[u] = 0;
+    for (int i = 0; i < n; i++)
+        if (i != u && findSet(i) == i)
         {
             components++;
-            shortest[i] = INF;
+            connected[i] = 0;
         }
     if (components > k) return INF;
 
-    for (int i = 0; i < m; i++)
+    sort(ue.begin(), ue.end());
+    for (auto e : ue)
     {
-        if (edges[i].u) continue;
-        idx[edges[i].v] = i;
-        int scc = findSet(edges[i].v);
-        if (edges[i].w < shortest[scc])
-        {
-            shortest[scc] = edges[i].w;
-            link[scc] = i;
-        }
+        int eid = e.u, scc = findSet(e.v);
+        idx[e.v] = eid;
+        if (!connected[scc]) connected[scc] = chosen[eid] = 1;
     }
 
-    for (int i = 1; i < n; i++)
-        if (findSet(i) == i)
-        {
-            if (shortest[i] == INF) return INF;
-            chosen[link[i]] = 1;
-        }
-    
     for (int i = 0; i < n; i++)
-        g[i].clear();
+        if (i != u && findSet(i) == i)
+            if (!connected[i])
+                return INF;
+    
+    for (int i = 0; i < n; i++) g[i].clear();
     for (int i = 0; i < m; i++)
         if (chosen[i])
             addEdge(i);
@@ -125,13 +122,13 @@ int rmst(int k)
     {
         dfs(-1, 0);
         int delta = INF, selected = INF;
-        for (int i = 1; i < n; i++)
+        for (auto e : ue)
         {
-            if (idx[i] == -1 || longest[i] == -INF) continue;
-            if (edges[idx[i]].w - longest[i] < delta)
+            if (chosen[e.u]) continue;
+            if (e.w - longest[e.v] < delta)
             {
-                delta = edges[idx[i]].w - longest[i];
-                selected = i;
+                delta = e.w - longest[e.v];
+                selected = e.v;
             }
         }
         if (delta >= 0) break;
@@ -173,7 +170,7 @@ int main(int argc, char *argv[])
         }
         cin >> s;
         if (cs > 1) cout << '\n';
-        cout << "Total miles driven: " << rmst(s) << '\n';
+        cout << "Total miles driven: " << kdbmst(0, s) << '\n';
     }
 
     return 0;
