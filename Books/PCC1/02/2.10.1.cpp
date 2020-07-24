@@ -4,7 +4,7 @@ using namespace std;
 
 struct TreeNode
 {
-    int weight;
+    int id, weight;
     TreeNode *parent, *leftChild, *rightChild;
 };
 
@@ -13,7 +13,7 @@ void preorderTraversal(TreeNode* root)
     if (root == NULL)
         return;
 
-    cout << root->weight;
+    cout << ' ' << root->id;
     preorderTraversal(root->leftChild);
     preorderTraversal(root->rightChild);
 }
@@ -24,7 +24,7 @@ void inorderTraversal(TreeNode* root)
         return;
 
     inorderTraversal(root->leftChild);
-    cout << root->weight;
+    cout << ' ' << root->id;
     inorderTraversal(root->rightChild);
 }
 
@@ -35,7 +35,7 @@ void postorderTraversal(TreeNode* root)
 
     postorderTraversal(root->leftChild);
     postorderTraversal(root->rightChild);
-    cout << root->weight;
+    cout << ' ' << root->id;
 }
 
 int main(int argc, char *argv[])

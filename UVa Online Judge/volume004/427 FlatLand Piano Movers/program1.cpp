@@ -12,12 +12,12 @@ using namespace std;
 
 const double EPSILON = 1e-6;
 
-double L, W, W1, W2;
+double L, W, w1, w2;
 char comma;
 
 double f(double x)
 {
-    return sqrt(L * L - x * x) * (W1 - x) + W2 * x - L * W;
+    return sqrt(L * L - x * x) * (w1 - x) + w2 * x - L * W;
 }
 
 int main(int argc, char *argv[])
@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
         if (L < W)
             swap(L, W);
 
-        while (iss >> W1 >> comma >> W2)
+        while (iss >> w1 >> comma >> w2)
         {
             double left = 0, right = L;
             do {

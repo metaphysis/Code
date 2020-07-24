@@ -12,6 +12,6 @@ int main(int argc, char *argv[])
     cout.setf(ios::hex, ios::basefield);
     cout.setf(ios::showbase);
     cout << number << endl;
-
+    
     return 0;
 }
