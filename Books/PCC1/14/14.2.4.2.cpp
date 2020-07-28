@@ -19,9 +19,9 @@ struct point {
 
 double cross(point a, point b) { return a.x * b.y - a.y * b.x; }
 
-struct line { point a, b; }
+struct line { point a, b; };
 
-point getInsection(line p, line q)
+point getIntersection(line p, line q)
 {
     if (p.a == q.a) return p.a;
     double k = fabs(cross(p.a - p.b, q.a - q.b)) / fabs(cross(p.a - q.a, q.a - q.b));
@@ -30,5 +30,5 @@ point getInsection(line p, line q)
 
 int main(int argc, char *argv[])
 {
-    
+    return 0;
 }
