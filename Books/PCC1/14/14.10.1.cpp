@@ -120,12 +120,8 @@ double pointToLine(point3 p, line3 l)
 // 利用三角形与平行四边形的面积比，计算两条直线的交点，注意要事先判断两条直线是否共面和平行。
 point3 intersection(line3 u, line3 v)
 {
-    point3 r = u.a;
-    double t = cross(u.a - v.a, v.a - v.b).z / cross(u.a - u.b, v.a - v.b).z;
-    r.x += (u.b.x - u.a.x) * t;
-    r.y += (u.b.y - u.a.y) * t;
-    r.z += (u.b.z - u.a.z) * t;
-    return r;
+    double k = cross(u.a - v.a, v.a - v.b).z / cross(u.a - u.b, v.a - v.b).z;
+    return u.a + (u.b - u.a) * k;
 }
 
 // 三维空间平面。

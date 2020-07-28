@@ -1,10 +1,37 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
 const double EPSILON = 1e-7;
 
-struct point
-{
+struct point {
     double x, y;
     point (double x = 0, double y = 0): x(x), y(y) {}
+    point operator + (point p) { return point(x + p.x, y + p.y); };
+    point operator - (point p) { return point(x - p.x, y - p.y); };
+    point operator * (double k) { return point(x * k, y * k); };
+    point operator / (double k) { return point(x / k, y / k); };
 };
+
+double norm(point a)
+{
+	return a.x * a.x + a.y * a.y;
+}
+
+double abs(point a)
+{
+    return sqrt(norm(a));
+}
+
+double dot(point a, point b)
+{
+    return a.x * b.x + a.y * b.y;
+}
+
+double cross(point a, point b)
+{
+    return a.x * b.y - a.y * b.x;
+}
 
 bool pointInBox(point a, point b, point p)
 {
@@ -25,6 +52,11 @@ struct line
     line (double a = 0, double b = 0, double c = 0): a(a), b(b), c(c) {}
 };
 
+struct line1
+{
+    point a, b;
+};
+
 line getLine(double x1, double y1, double x2, double y2)
 {
     return line(y2 - y1, x1 - x2, y1 * (x2 - x1) - x1 * (y2 - y1));
@@ -41,6 +73,12 @@ point getIntersection(line p, line q)
     pi.x = (p.b * q.c - p.c * q.b) / (p.a * q.b - p.b * q.a);
     pi.y = (p.a * q.c - p.c * q.a) / (p.b * q.a - p.a * q.b);
     return pi; 
+}
+
+point getIntersection1(line1 p, line1 q)
+{
+    double k = fabs(cross(p.a - p.b, q.a - q.b)) / fabs(cross(p.a - q.a, q.a - q.b));
+    return p.a + (p.b - p.a) * k; 
 }
 
 double cp(point a, point b, point c)
@@ -61,4 +99,16 @@ bool isIntersected(segment s1, segment s2)
 
 	point pi = getIntersection(p, q);
 	return s1.contains(pi) && s2.contains(pi);
+}
+
+int main(int argc, char *argv[])
+{
+    point p1(0, 1), p2(1, 0), p3(0, 0);
+    line1 l1, l2;
+    l1.a = p1, l1.b = p3;
+    l2.a = p2, l2.b = p3;
+    point pi = getIntersection1(l1, l2);
+    cout << pi.x << ' ' << pi.y << endl;
+    
+    return 0;
 }
