@@ -20,8 +20,8 @@ struct edge
 
 struct walk
 {
-    int u, k, covered;
-    walk (int u = 0, int k = 0, int covered = 0): u(u), k(k), covered(covered) {}
+    int u, k, walked;
+    walk (int u = 0, int k = 0, int walked = 0): u(u), k(k), walked(walked) {}
 };
 
 int T, A, B, M, L, K, D[128][16][512];
@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
             walk w = q.front(); q.pop();
             for (auto e : edges[w.u])
             {
-                if (!w.covered)
+                if (!w.walked)
                 {
                     if (D[e.v][w.k][0] > D[w.u][w.k][0] + e.length)
                     {
@@ -61,20 +61,20 @@ int main(int argc, char *argv[])
                 }
                 else
                 {
-                    int next_covered = (e.v > A || w.covered + e.length > L) ? 0 : w.covered + e.length;
-                    if (D[e.v][w.k][next_covered] > D[w.u][w.k][w.covered] + (next_covered ? 0 : e.length))
+                    int next_walked = (e.v > A || w.walked + e.length > L) ? 0 : w.walked + e.length;
+                    if (D[e.v][w.k][next_walked] > D[w.u][w.k][w.walked] + (next_walked ? 0 : e.length))
                     {
-                        D[e.v][w.k][next_covered] = D[w.u][w.k][w.covered] + (next_covered ? 0 : e.length);
-                        q.push(walk(e.v, w.k, next_covered));
+                        D[e.v][w.k][next_walked] = D[w.u][w.k][w.walked] + (next_walked ? 0 : e.length);
+                        q.push(walk(e.v, w.k, next_walked));
                     }
                 }
                 if (w.k < K && e.length <= L)
                 {
-                    int next_k = w.k + 1, next_covered = e.v > A ? 0 : e.length;
-                    if (D[e.v][next_k][next_covered] > D[w.u][w.k][w.covered])
+                    int next_k = w.k + 1, next_walked = e.v > A ? 0 : e.length;
+                    if (D[e.v][next_k][next_walked] > D[w.u][w.k][w.walked])
                     {
-                        D[e.v][next_k][next_covered] = D[w.u][w.k][w.covered];
-                        q.push(walk(e.v, next_k, next_covered));
+                        D[e.v][next_k][next_walked] = D[w.u][w.k][w.walked];
+                        q.push(walk(e.v, next_k, next_walked));
                     }
                 }
             }
