@@ -22,11 +22,7 @@ edge edges[1024];
 int nedges, dist[1024], n, m, si, ni, ki;
 string oi;
 
-void addEdge(int u, int v, int weight)
-{
-    edges[nedges].u = u, edges[nedges].v = v, edges[nedges].weight = weight;
-    nedges++;
-}
+void addEdge(int u, int v, int weight) { edges[nedges++] = edge{ u, v, weight }; }
 
 int main(int argc, char *argv[])
 {

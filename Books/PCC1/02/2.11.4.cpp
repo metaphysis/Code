@@ -59,6 +59,11 @@ int get(int x)
     return sum;
 }
 
+int sum(int L, int R)
+{
+    return get(R) - get(L - 1);
+}
+
 int main(int argc, char *argv[])
 {
     int A[MAXN + 16];
@@ -81,7 +86,7 @@ int main(int argc, char *argv[])
         if (L > R) swap(L, R);
         cout << "S[" << setw(4) << right << L << ", ";
         cout << setw(4) << right << R << "] => ";
-        cout << get(R) - get(L - 1) << " = ";
+        cout << sum(L, R) << " = ";
         cout << ft.sum(L - 1, R - 1);
         cout << " = " << (R + L) * (R - L + 1) / 2 << '\n';
     }
