@@ -2,7 +2,7 @@
 
 using namespace std;
 
-bool bf(string &s, string &p)
+bool match(const string &s, const string &p)
 {
     for (int start = 0; start < s.length(); start++) {
         int i = start, j = 0;
@@ -15,6 +15,6 @@ bool bf(string &s, string &p)
 int main(int argc, char *argv[])
 {
     string s, p;
-    while (cin >> s >> p) cout << (bf(s, p) ? 'y' : 'n') << '\n';
+    while (cin >> s >> p) cout << (match(s, p) ? 'y' : 'n') << '\n';
     return 0;
 }

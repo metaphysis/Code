@@ -38,19 +38,23 @@ bool kmp2(string &s, string &p)
 {
     static int fail[MAXN] = {};
 
-    fail[0] = fail[1] = 0;
-    for (int i = 1, j = 0; i < p.length(); i++) {
-        while (j && p[j] != p[i]) j = fail[j];
-        if (p[j] == p[i]) j++;
-        fail[i + 1] = j;
+    fail[0] = -1;
+    int i = 0, j = -1;
+    while (i < p.length() - 1) {
+        if (j == -1 || p[i] == p[j]) {
+            i++, j++;
+            int k = j;
+            while (k != -1 && p[i] == p[k]) k = fail[k];
+            fail[i] = k;
+        } else j = fail[j];
     }
 
-    for (int i = 0, j = 0; i < s.length(); i++) {
-        while (j && p[j] != s[i]) j = fail[j];
-        if (p[j] == s[i]) j++;
-        if (j == p.length()) return true;
+    i = 0, j = 0;
+    while (i < s.length() && j < (int)p.length()) {
+        if (j == -1 || s[i] == p[j]) i++, j++;
+        else j = fail[j];
     }
-    return false;
+    return j == p.length();
 }
 
 int main(int argc, char *argv[])
@@ -66,7 +70,7 @@ int main(int argc, char *argv[])
         for (int i = 0; i < q; i++)
         {
             cin >> T;
-            if (S.length() >= T.length()) cout << (kmp1(S, T) ? 'y' : 'n');
+            if (S.length() >= T.length()) cout << (kmp2(S, T) ? 'y' : 'n');
             cout << '\n';
         }
     }

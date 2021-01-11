@@ -2,48 +2,39 @@
 
 using namespace std;
     
-const int MAXN = 1000000;
+const int MAXN = 7000000;
 int primes[MAXN], cnt;
     
-void sieve(int *primes, int n, int &cnt)
+void sieve1()
 {
-    cnt = 0;
-    memset(primes, 1, n * sizeof(int));
-
-    for (int i = 2; i < n; i++)
-        if (primes[i])
+    for (int i = 2; i < MAXN; i++)
+        if (!primes[i])
         {
             primes[cnt++] = i;
-            for (int j = i + i; j < n; j += i)
-                primes[j] = 0;
+            for (int j = i + i; j < MAXN; j += i)
+                primes[j] = 1;
         }
 }
 
-void sieve1(int *primes, int n, int &cnt)
+void sieve2()
 {
-    cnt = 0;
-    memset(primes, 1, n * sizeof(int));
-
-    for (int i = 2; i * i < n; i++)
-        if (primes[i])
-            for (int j = i * i; j < n; j += i)
-                primes[j] = 0;
-    for (int i = 2; i < n; i++)
-        if (primes[i])
+    for (int i = 2; i * i < MAXN; i++)
+        if (!primes[i])
+            for (int j = i * i; j < MAXN; j += i)
+                primes[j] = 1;
+    for (int i = 2; i < MAXN; i++)
+        if (!primes[i])
             primes[cnt++] = i;
 }
 
-void sieve2(int *primes, int n, int &cnt)
+void sieve3()
 {
-    cnt = 0;
-    memset(primes, 1, n * sizeof(int));
-
-    for (int i = 2; i < n; i++)
+    for (int i = 2; i < MAXN; i++)
     {
-        if (primes[i]) primes[cnt++] = i;
-        for (int j = 0; j < cnt && i * primes[j] < n; j++)
+        if (!primes[i]) primes[cnt++] = i;
+        for (int j = 0; j < cnt && i * primes[j] < MAXN; j++)
         {
-            primes[i * primes[j]] = 0;
+            primes[i * primes[j]] = 1;
             if (i % primes[j] == 0) break;
         }
     }
@@ -55,10 +46,8 @@ void sieve2(int *primes, int n, int &cnt)
 const int MAXB = 100000001;
 int B[MAXB >> 5] = {};
 
-void sieve3(int *primes, int n, int &cnt)
+void sieve4()
 {
-    cnt = 0;
-    memset(primes, 1, n * sizeof(int));
     for (int i = 2; i < MAXB; i++)
     {
         if (!GET(i)) primes[cnt++] = i;
@@ -70,23 +59,9 @@ void sieve3(int *primes, int n, int &cnt)
     }
 }
 
-void sieve4(int *primes, int n, int &cnt)
-{
-    cnt = 0;
-    memset(primes, 1, n * sizeof(int));
-    
-    for (int i = 2; i * i < n; i++)
-        if (primes[i])
-            for (int j = i * i; j < n; j += i)
-                primes[j] = 0;
-    for (int i = 2; i < n; i++)
-        if (primes[i])
-            primes[cnt++] = i;
-}
-
 int main(int argc, char *argv[])
 {
-    sieve2(primes, MAXN, cnt);
+    sieve3();
     
     for (int i = 0; i < cnt; i++)
     {

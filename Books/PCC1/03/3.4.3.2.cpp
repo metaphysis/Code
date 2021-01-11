@@ -21,12 +21,27 @@ void getFail1(string &p)
 bool kmp1(string &s, string &p)
 {
     int i = 1, j = 1;
-    while (i < s.length() && j < p.length()) {
+    while (i < s.length()) {
         if (j == 0 || s[i] == p[j]) i++, j++;
         else j = fail[j];
+        if (j > p.length()) return true;
     }
-    return j >= p.length();
+    return false;
 }
+
+void kmpAllMatch(string &s, string &p)
+{
+    int i = 1, j = 1;
+    while (i < s.length()) {
+        if (j == 0 || s[i] == p[j]) i++, j++;
+        else j = fail[j];
+        if (j > p.length()) {
+            cout << i - j + 1 << '\n';
+            j = fail[j];
+        }
+    }
+}
+
 
 void getFail2(string &p)
 {
@@ -35,8 +50,9 @@ void getFail2(string &p)
     while (i < p.length()) {
         if (j == 0 || p[i] == p[j]) {
             i++, j++;
-            if (p[i] != p[j]) fail[i] = j;
-            else fail[i] = fail[j];
+            int k = j;
+            while (k && p[i] == p[k]) k = fail[k];
+            fail[i] = k;
         } else j = fail[j];
     }
 }
@@ -44,11 +60,12 @@ void getFail2(string &p)
 bool kmp2(string &s, string &p)
 {
     int i = 0, j = 1;
-    while (i < s.length() && j < p.length()) {
+    while (i < s.length()) {
         if (j == 0 || s[i] == p[j]) i++, j++;
         else j = fail[j];
+        if (j > p.length()) return true;
     }
-    return j >= p.length();
+    return false;
 }
 
 void getFail3(string &p)
@@ -58,8 +75,9 @@ void getFail3(string &p)
     while (i < p.length() - 1) {
         if (j == -1 || p[i] == p[j]) {
             i++, j++;
-            if (p[i] != p[j]) fail[i] = j;
-            else fail[i] = fail[j];
+            int k = j;
+            while (k != -1 && p[i] == p[k]) k = fail[k];
+            fail[i] = k;
         } else j = fail[j];
     }
 }
@@ -67,11 +85,12 @@ void getFail3(string &p)
 bool kmp3(string &s, string &p)
 {
     int i = 0, j = 0;
-    while (i < s.length() && j < (int)p.length()) {
+    while (i < s.length()) {
         if (j == -1 || s[i] == p[j]) i++, j++;
         else j = fail[j];
+        if (j == p.length()) return true;
     }
-    return j == p.length();
+    return false;
 }
 
 void getFail4(string &p)
@@ -93,11 +112,11 @@ bool kmp4(string &s, string &p)
 
 int main(int argc, char *argv[])
 {
-    string p = " abcabcdabcde";
-
-    getFail4(p);
+    string t = "abce", p = "abcd";
+    getFail1(p);
     for (int i = 1; i < p.length(); i++) cout << ' ' << fail[i];
     cout << '\n';
+    cout << (kmp1(t, p) ? "Find a match\n" : "None match found\n");
 
     return 0;
 }
