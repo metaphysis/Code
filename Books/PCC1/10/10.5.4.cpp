@@ -87,8 +87,8 @@ public:
 
         while (bfs())
         {
-            for (int i = 0; i <= sink; i++) current[i] = head[i];
-            while (int delta = dfs(0, INF))
+            for (int i = 0; i < vertices; i++) current[i] = head[i];
+            while (int delta = dfs(source, INF))
                 flow += delta;
         }
 

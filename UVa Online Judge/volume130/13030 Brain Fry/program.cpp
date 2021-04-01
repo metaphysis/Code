@@ -19,7 +19,8 @@ struct edge
     bool operator<(const edge &e) const { return w > e.w; }
 };
 
-double p[260], probability[260][150], elapsed[260][150], visited[260][150];
+double p[260], probability[260][150], elapsed[260][150];
+int visited[260][150];
 vector<edge> edges[260];
 int N, M, T, dist[260], neighbours[260];
 

@@ -61,7 +61,7 @@ void sieve4()
 
 int main(int argc, char *argv[])
 {
-    sieve3();
+    sieve4();
     
     for (int i = 0; i < cnt; i++)
     {
