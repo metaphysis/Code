@@ -14,12 +14,12 @@ list<edge> edges[MAXV];
 int n;
 int dist[MAXV], parent[MAXV], visited[MAXV];
 
-void mooreDijkstra(int u)
+void mooreDijkstra(int s)
 {
     for (int i = 0; i < n; i++)
         dist[i] = INF, parent[i] = -1, visited[i] = 0;
-    dist[u] = 0;
-
+    dist[s] = 0;
+    int u = s;
     while (!visited[u])
     {
         visited[u] = 1;
