@@ -43,6 +43,7 @@ typedef vector<point> polygon;
 int n;
 polygon pg;
 
+double dot(point a, point b) { return a.x * b.x + a.y * b.y; }
 double cross(point a, point b) { return a.x * b.y - a.y * b.x; }
 
 double cp(point a, point b, point c)
@@ -112,10 +113,28 @@ point getIntersection(line p, line q)
     return pi; 
 }
 
-// 检测从点i到点j的连线是否被其他线段所阻挡。
-bool isBlocked(int i, int j)
+const int OUT = 0, ON = 1, IN = 2;
+
+int isPointInPolygon(point p, polygon &pg)
 {
-    if (j == i + 1) return false;
+    bool in = false;
+    for (int i = 0; i < pg.size(); i++)
+    {
+        point a = pg[i] - p, b = pg[(i + 1) % pg.size()] - p;
+        if (fabs(cross(a, b)) < EPSILON && dot(a, b) < EPSILON) return ON;
+        if (a.y > b.y) swap(a, b);
+        if (a.y < EPSILON && EPSILON < b.y && cross(a, b) > EPSILON) in = !in;
+    }
+    return in ? IN : OUT;
+}
+
+// 检测以点i和点j为端点的线段是否在多边形内，如果线段与多边形的边界重合也认为是在多边形上
+bool isInPolygon(int i, int j)
+{
+    if (j == i + 1) return true;
+    // 该条线段与多边形的任意一条边不能发生内交，即交点在线段内部（不包括端点）的相交
+    // pg1 记录端点相交的交点
+    polygon pg1;
     for (int k1 = 0, k2 = 1; k1 < n; k1++, k2++)
     {
         if (k2 >= n) k2 %= n;
@@ -125,31 +144,68 @@ bool isBlocked(int i, int j)
         {
             point p1 = getIntersection(getLine(pg[i], pg[j]), getLine(pg[k1], pg[k2]));
             if (pointInBox(pg[i], pg[j], p1))
-                return true;
+                return false;
         }
+        if (fabs(cp1) < fabs(EPSILON)) pg1.push_back(pg[k1]);
+        if (fabs(cp2) < fabs(EPSILON)) pg1.push_back(pg[k2]);
     }
-    return false;
+    // 将端点相交的交点按 X-Y 轴排序，任意两个交点的中点必须在多边形内，否则整条线段不在多边形内
+    sort(pg1.begin(), pg1.end());
+    for (int i = 0; i < pg1.size() - 1; i++)
+        if (isPointInPolygon((pg1[i] + pg1[i + 1]) / 2.0, pg) == OUT)
+            return false;
+    return true;
 }
 
-// 检查与线段ij两端相交的线段，获得的端点即为跑道的最长的长度。
+// 检查与线段ij两端相交的线段，获得的端点即为跑道的长度。
 double getDist(int i, int j)
 {
     // 从i到j的方向与简单多边形的交点。
-    point p1 = pg[j], p2 = pg[i];
-    for (int k = j + 1; k < n; k++)
-        if (ccw(pg[i], pg[j], pg[k]))
+    point leftPoint = pg[i], rightPoint = pg[j];
+    bool lastPointSetted = false;
+    for (int c = 0, k = j; c < n; c++, k++)
+    {
+        if ((k + 1) % n == i)
         {
-            p1 = getIntersection(getLine(pg[i], pg[j]), getLine(pg[k - 1], pg[k]));
-            break;
+            rightPoint = pg[i];
+            continue;
         }
+        double cp1 = cp(pg[i], pg[j], pg[k]);
+        double cp2 = cp(pg[i], pg[j], pg[(k + 1) % n]);
+        if (cp1 * cp2 < EPSILON)
+        {
+            point p1 = getIntersection(getLine(pg[i], pg[j]), getLine(pg[k], pg[(k + 1) % n]));
+            if (pointInBox(pg[k], pg[(k + 1) % n], p1))
+            {
+                point middle = (p1 + rightPoint) / 2.0;
+                if (isPointInPolygon(middle, pg) != OUT) rightPoint = p1;
+                break;
+            }
+        }
+        if (fabs(cp1) < fabs(EPSILON))
+        {
+            point middle = (pg[k] + rightPoint) / 2.0;
+            if (isPointInPolygon(middle, pg) != OUT) rightPoint = p1;
+            else break;
+        }
+        if (fabs(cp2) < fabs(EPSILON))
+        {
+            point middle = (pg[(k + 1) % n] + rightPoint) / 2.0;
+            if (isPointInPolygon(middle, pg) != OUT) rightPoint = p1;
+            else break;
+        }
+    }
     // 从j到i的方向与简单多边形的交点。
-    for (int k = i - 1; k >= 0; k--)
+    for (int k = i - 1; ; k--)
+    {
+        k = (k + n) % n;
         if (ccw(pg[i], pg[j], pg[k]))
         {
-            p2 = getIntersection(getLine(pg[i], pg[j]), getLine(pg[k], pg[k + 1]));
+            p2 = getIntersection(getLine(pg[i], pg[j]), getLine(pg[k], pg[(k + 1) % n]));
             break;
         }
-    return p1.distTo(p2);
+    }
+    return leftPoint.distTo(rightPoint);
 }
 
 int main(int argc, char *argv[])
@@ -173,8 +229,7 @@ int main(int argc, char *argv[])
             for (int j = i + 1; j < n; j++)
             {
                 if (fabs(pg[i].distTo(pg[j]) - longest) < EPSILON) continue;
-                if (isBlocked(i, j)) continue;
-                longest = max(longest, getDist(i, j));
+                if (isInPolygon(i, j)) longest = max(longest, getDist(i, j));
             }
         cout << fixed << setprecision(9) << longest << '\n';
     }

@@ -34,18 +34,15 @@ int dfs(int u, int parent)
             ++children, lowu = min(lowu, lowv = dfs(v, u));
             if (lowv >= dfn[u]) ic[u] = 1;
         }
-        else 
-        {
-            if (dfn[v] < dfn[u] && v != parent)
-                lowu = min(lowu, dfn[v]);
-        }
+        else if (v != parent)
+            lowu = min(lowu, dfn[v]);
     }
 
     // 如果为树的根结点且子孙结点数目少于两个，不是割顶。
     if (parent < 0 && children == 1) ic[u] = 0;
 
     // 将顶点u的最小深度优先数保存在数组中以便后续使用。
-    return dfn[u] = lowu;
+    return lowu;
 }
 
 int main(int argc, char *argv[])
@@ -77,7 +74,7 @@ int main(int argc, char *argv[])
         
         dfs(1, -1);
         
-        int count  = 0;
+        int count = 0;
         for (int i = 1; i <= n; i++)
             if (ic[i])
                 count++;

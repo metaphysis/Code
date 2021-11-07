@@ -30,8 +30,9 @@ void tarjan()
 {
     dfstime = 0, cscc = 0;
     while (!s.empty()) s.pop();
-    memset(dfn, 0, sizeof(dfn)), memset(scc, 0, sizeof(scc));
-    for (int u = 0; u < n; u++)
-        if (!dfn[u])
-            dfs(u);
+    memset(dfn, 0, sizeof(dfn));
+    memset(scc, 0, sizeof(scc));
+    for (int i = 0; i < n; i++)
+        if (!dfn[i])
+            dfs(i);
 }

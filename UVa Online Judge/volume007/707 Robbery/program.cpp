@@ -117,7 +117,7 @@ int main(int ac, char *av[])
 
 		// 根据各个时间片可能位置的数量决定输出。
 		bool nothing = true;
-		pair < int, int > location;
+		pair< int, int> location;
 		for (int t = 1; t <= timeLocked; t++)
 		{
 			int exactLocation = 0;

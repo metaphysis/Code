@@ -18,5 +18,5 @@ int dfs(int u, int parent)
     }
 
     if (parent < 0 && children == 1) ic[u] = 0;
-    return dfn[u] = lowu;
+    return lowu;
 }

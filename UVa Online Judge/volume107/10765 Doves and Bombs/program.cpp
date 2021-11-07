@@ -29,14 +29,14 @@ int dfs(int u, int parent)
         }
         else 
         {
-            if (dfn[v] < dfn[u] && v != parent)
+            if (v != parent)
                 lowu = min(lowu, dfn[v]);
         }
     }
 
     if (parent < 0 && children == 1) ic[u] = 0;
 
-    return dfn[u] = lowu;
+    return lowu;
 }
 
 void dfs(int u)

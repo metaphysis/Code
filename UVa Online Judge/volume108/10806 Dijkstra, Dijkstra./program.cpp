@@ -76,8 +76,6 @@ int main(int argc, char *argv[])
 {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
-    int u, v, t, d, k;
-
     while (cin >> n, n > 0)
     {
         cin >> m;
@@ -85,7 +83,7 @@ int main(int argc, char *argv[])
         idx = 0, source = 0, sink = n;
         memset(head, -1, sizeof(head));
 
-        for (int i = 1; i <= m; i++)
+        for (int i = 1, u, v, t; i <= m; i++)
         {
             cin >> u >> v >> t;
             addArc(u, v, 1, t);

@@ -18,11 +18,11 @@ void dfs(int u, int v)
 int getCutVertices()
 {
     // 设置图的顶点数量。顶点序号从1开始。
-    int n = g.size() - 1;
-    // 当图的顶点数为1时，割顶数为0。
-    if (n == 1) return 0;
+    int n = g.size();
+    // 当图的顶点数不大于1时，割顶数为0。
+    if (n <= 1) return 0;
     // 设置访问标记向量的大小。
-    visited.resize(g.size());
+    visited.resize(g.size() + 1);
     // 逐个顶点判断是否为割顶。
     int count = 0;
     for (int v = 1; v <= n; v++) {
