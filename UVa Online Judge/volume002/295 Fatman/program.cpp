@@ -46,7 +46,7 @@ void build(double diameter)
     }
 }
 
-bool dfs(int vertex)
+void dfs(int vertex)
 {
     visited[vertex] = true;
     for (int i = 0; i < edges[vertex].size(); i++)
