@@ -94,7 +94,7 @@ bool equals(vector<piece> p1, vector<piece> p2)
     return true;
 }
 
-// 判断簇 p1 和簇 p2 是否同构。
+// 判断簇 p1 和簇 p2 是否等同。
 bool isomorphism(vector<piece> p1, vector<piece> p2)
 {
     // 检查簇 p1 通过平移是否能够成为簇 p2。
@@ -166,7 +166,7 @@ int main(int argc, char *argv[])
                     rightBoard.push_back(cluster);
                 }
         
-        // 如果左侧图和右侧图的簇数量不等，肯定不可能同构。
+        // 如果左侧图和右侧图的簇数量不等，肯定不可能等同。
         if (leftBoard.size() != rightBoard.size())
         {
             cout << "NO\n";
@@ -177,7 +177,7 @@ int main(int argc, char *argv[])
         sort(leftBoard.begin(), leftBoard.end(), cmp);
         sort(rightBoard.begin(), rightBoard.end(), cmp);
         
-        // 逐个簇进行比对（通过旋转，镜像，平移）以检查是否为同构。
+        // 逐个簇进行比对，通过旋转，镜像，平移以检查是否能够重合。
         bool flag = true;
         while (leftBoard.size())
         {

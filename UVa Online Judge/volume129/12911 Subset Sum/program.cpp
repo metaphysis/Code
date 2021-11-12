@@ -20,7 +20,6 @@ int main(int argc, char *argv[])
     while (cin >> N >> T)
     {
         for (int i = 0; i < N; i++) cin >> si[i];
-        sort(si, si + N);
         int Na = N / 2;
         if (Na == 0) Na++;
         int Nb = N - Na;
