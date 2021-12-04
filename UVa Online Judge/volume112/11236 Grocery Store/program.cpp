@@ -1,4 +1,4 @@
-// Grocery store
+// Grocery Store
 // UVa ID: 11236
 // Verdict: Accepted
 // Submission Date: 2017-11-09
