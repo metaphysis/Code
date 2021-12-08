@@ -1,0 +1,2260 @@
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter SID or name. Enter 0 to finish.
+2 student(s) removed.
+Please enter SID or name. Enter 0 to finish.
+1 student(s) removed.
+Please enter SID or name. Enter 0 to finish.
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter SID or name. Enter 0 to finish.
+Please enter SID or name. Enter 0 to finish.
+8 0011223344 1 John 79 98 91 100 368 92.00
+Please enter SID or name. Enter 0 to finish.
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter class ID, 0 for the whole statistics.
+Chinese
+Average Score: 47.33
+Number of passed students: 3
+Number of failed students: 3
+
+Mathematics
+Average Score: 51.33
+Number of passed students: 3
+Number of failed students: 3
+
+English
+Average Score: 51.00
+Number of passed students: 3
+Number of failed students: 3
+
+Programming
+Average Score: 53.33
+Number of passed students: 3
+Number of failed students: 3
+
+Overall:
+Number of students who passed all subjects: 3
+Number of students who passed 3 or more subjects: 3
+Number of students who passed 2 or more subjects: 3
+Number of students who passed 1 or more subjects: 3
+Number of students who failed all subjects: 3
+
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter SID or name. Enter 0 to finish.
+1 student(s) removed.
+Please enter SID or name. Enter 0 to finish.
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter class ID, 0 for the whole statistics.
+Chinese
+Average Score: 50.50
+Number of passed students: 41
+Number of failed students: 59
+
+Mathematics
+Average Score: 50.50
+Number of passed students: 41
+Number of failed students: 59
+
+English
+Average Score: 50.50
+Number of passed students: 41
+Number of failed students: 59
+
+Programming
+Average Score: 50.50
+Number of passed students: 41
+Number of failed students: 59
+
+Overall:
+Number of students who passed all subjects: 38
+Number of students who passed 3 or more subjects: 40
+Number of students who passed 2 or more subjects: 42
+Number of students who passed 1 or more subjects: 44
+Number of students who failed all subjects: 56
+
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Showing the ranklist hurts students' self-esteem. Don't do that.
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter class ID, 0 for the whole statistics.
+Chinese
+Average Score: 41.00
+Number of passed students: 2
+Number of failed students: 3
+
+Mathematics
+Average Score: 42.00
+Number of passed students: 2
+Number of failed students: 3
+
+English
+Average Score: 43.00
+Number of passed students: 2
+Number of failed students: 3
+
+Programming
+Average Score: 44.00
+Number of passed students: 2
+Number of failed students: 3
+
+Overall:
+Number of students who passed all subjects: 2
+Number of students who passed 3 or more subjects: 2
+Number of students who passed 2 or more subjects: 2
+Number of students who passed 1 or more subjects: 2
+Number of students who failed all subjects: 3
+
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter class ID, 0 for the whole statistics.
+Chinese
+Average Score: 42.00
+Number of passed students: 2
+Number of failed students: 3
+
+Mathematics
+Average Score: 43.00
+Number of passed students: 2
+Number of failed students: 3
+
+English
+Average Score: 44.00
+Number of passed students: 2
+Number of failed students: 3
+
+Programming
+Average Score: 45.00
+Number of passed students: 2
+Number of failed students: 3
+
+Overall:
+Number of students who passed all subjects: 2
+Number of students who passed 3 or more subjects: 2
+Number of students who passed 2 or more subjects: 2
+Number of students who passed 1 or more subjects: 2
+Number of students who failed all subjects: 3
+
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter class ID, 0 for the whole statistics.
+Chinese
+Average Score: 43.00
+Number of passed students: 2
+Number of failed students: 3
+
+Mathematics
+Average Score: 44.00
+Number of passed students: 2
+Number of failed students: 3
+
+English
+Average Score: 45.00
+Number of passed students: 2
+Number of failed students: 3
+
+Programming
+Average Score: 46.00
+Number of passed students: 2
+Number of failed students: 3
+
+Overall:
+Number of students who passed all subjects: 2
+Number of students who passed 3 or more subjects: 2
+Number of students who passed 2 or more subjects: 2
+Number of students who passed 1 or more subjects: 2
+Number of students who failed all subjects: 3
+
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter class ID, 0 for the whole statistics.
+Chinese
+Average Score: 44.00
+Number of passed students: 2
+Number of failed students: 3
+
+Mathematics
+Average Score: 45.00
+Number of passed students: 2
+Number of failed students: 3
+
+English
+Average Score: 46.00
+Number of passed students: 2
+Number of failed students: 3
+
+Programming
+Average Score: 47.00
+Number of passed students: 2
+Number of failed students: 3
+
+Overall:
+Number of students who passed all subjects: 2
+Number of students who passed 3 or more subjects: 2
+Number of students who passed 2 or more subjects: 2
+Number of students who passed 1 or more subjects: 2
+Number of students who failed all subjects: 3
+
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter class ID, 0 for the whole statistics.
+Chinese
+Average Score: 46.00
+Number of passed students: 2
+Number of failed students: 3
+
+Mathematics
+Average Score: 47.00
+Number of passed students: 2
+Number of failed students: 3
+
+English
+Average Score: 48.00
+Number of passed students: 2
+Number of failed students: 3
+
+Programming
+Average Score: 49.00
+Number of passed students: 2
+Number of failed students: 3
+
+Overall:
+Number of students who passed all subjects: 2
+Number of students who passed 3 or more subjects: 2
+Number of students who passed 2 or more subjects: 2
+Number of students who passed 1 or more subjects: 2
+Number of students who failed all subjects: 3
+
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter class ID, 0 for the whole statistics.
+Chinese
+Average Score: 60.00
+Number of passed students: 3
+Number of failed students: 2
+
+Mathematics
+Average Score: 41.00
+Number of passed students: 2
+Number of failed students: 3
+
+English
+Average Score: 42.00
+Number of passed students: 2
+Number of failed students: 3
+
+Programming
+Average Score: 43.00
+Number of passed students: 2
+Number of failed students: 3
+
+Overall:
+Number of students who passed all subjects: 2
+Number of students who passed 3 or more subjects: 2
+Number of students who passed 2 or more subjects: 2
+Number of students who passed 1 or more subjects: 3
+Number of students who failed all subjects: 2
+
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter SID or name. Enter 0 to finish.
+34 student(s) removed.
+Please enter SID or name. Enter 0 to finish.
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter SID or name. Enter 0 to finish.
+33 student(s) removed.
+Please enter SID or name. Enter 0 to finish.
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter class ID, 0 for the whole statistics.
+Chinese
+Average Score: 41.00
+Number of passed students: 2
+Number of failed students: 3
+
+Mathematics
+Average Score: 42.00
+Number of passed students: 2
+Number of failed students: 3
+
+English
+Average Score: 43.00
+Number of passed students: 2
+Number of failed students: 3
+
+Programming
+Average Score: 44.00
+Number of passed students: 2
+Number of failed students: 3
+
+Overall:
+Number of students who passed all subjects: 2
+Number of students who passed 3 or more subjects: 2
+Number of students who passed 2 or more subjects: 2
+Number of students who passed 1 or more subjects: 2
+Number of students who failed all subjects: 3
+
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter class ID, 0 for the whole statistics.
+Chinese
+Average Score: 42.00
+Number of passed students: 2
+Number of failed students: 3
+
+Mathematics
+Average Score: 43.00
+Number of passed students: 2
+Number of failed students: 3
+
+English
+Average Score: 44.00
+Number of passed students: 2
+Number of failed students: 3
+
+Programming
+Average Score: 45.00
+Number of passed students: 2
+Number of failed students: 3
+
+Overall:
+Number of students who passed all subjects: 2
+Number of students who passed 3 or more subjects: 2
+Number of students who passed 2 or more subjects: 2
+Number of students who passed 1 or more subjects: 2
+Number of students who failed all subjects: 3
+
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter class ID, 0 for the whole statistics.
+Chinese
+Average Score: 43.00
+Number of passed students: 2
+Number of failed students: 3
+
+Mathematics
+Average Score: 44.00
+Number of passed students: 2
+Number of failed students: 3
+
+English
+Average Score: 45.00
+Number of passed students: 2
+Number of failed students: 3
+
+Programming
+Average Score: 46.00
+Number of passed students: 2
+Number of failed students: 3
+
+Overall:
+Number of students who passed all subjects: 2
+Number of students who passed 3 or more subjects: 2
+Number of students who passed 2 or more subjects: 2
+Number of students who passed 1 or more subjects: 2
+Number of students who failed all subjects: 3
+
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter class ID, 0 for the whole statistics.
+Chinese
+Average Score: 44.00
+Number of passed students: 2
+Number of failed students: 3
+
+Mathematics
+Average Score: 45.00
+Number of passed students: 2
+Number of failed students: 3
+
+English
+Average Score: 46.00
+Number of passed students: 2
+Number of failed students: 3
+
+Programming
+Average Score: 47.00
+Number of passed students: 2
+Number of failed students: 3
+
+Overall:
+Number of students who passed all subjects: 2
+Number of students who passed 3 or more subjects: 2
+Number of students who passed 2 or more subjects: 2
+Number of students who passed 1 or more subjects: 2
+Number of students who failed all subjects: 3
+
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter class ID, 0 for the whole statistics.
+Chinese
+Average Score: 45.00
+Number of passed students: 2
+Number of failed students: 3
+
+Mathematics
+Average Score: 46.00
+Number of passed students: 2
+Number of failed students: 3
+
+English
+Average Score: 47.00
+Number of passed students: 2
+Number of failed students: 3
+
+Programming
+Average Score: 48.00
+Number of passed students: 2
+Number of failed students: 3
+
+Overall:
+Number of students who passed all subjects: 2
+Number of students who passed 3 or more subjects: 2
+Number of students who passed 2 or more subjects: 2
+Number of students who passed 1 or more subjects: 2
+Number of students who failed all subjects: 3
+
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter class ID, 0 for the whole statistics.
+Chinese
+Average Score: 46.00
+Number of passed students: 2
+Number of failed students: 3
+
+Mathematics
+Average Score: 47.00
+Number of passed students: 2
+Number of failed students: 3
+
+English
+Average Score: 48.00
+Number of passed students: 2
+Number of failed students: 3
+
+Programming
+Average Score: 49.00
+Number of passed students: 2
+Number of failed students: 3
+
+Overall:
+Number of students who passed all subjects: 2
+Number of students who passed 3 or more subjects: 2
+Number of students who passed 2 or more subjects: 2
+Number of students who passed 1 or more subjects: 2
+Number of students who failed all subjects: 3
+
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter class ID, 0 for the whole statistics.
+Chinese
+Average Score: 47.00
+Number of passed students: 2
+Number of failed students: 3
+
+Mathematics
+Average Score: 48.00
+Number of passed students: 2
+Number of failed students: 3
+
+English
+Average Score: 49.00
+Number of passed students: 2
+Number of failed students: 3
+
+Programming
+Average Score: 50.00
+Number of passed students: 2
+Number of failed students: 3
+
+Overall:
+Number of students who passed all subjects: 2
+Number of students who passed 3 or more subjects: 2
+Number of students who passed 2 or more subjects: 2
+Number of students who passed 1 or more subjects: 2
+Number of students who failed all subjects: 3
+
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter class ID, 0 for the whole statistics.
+Chinese
+Average Score: 48.00
+Number of passed students: 2
+Number of failed students: 3
+
+Mathematics
+Average Score: 49.00
+Number of passed students: 2
+Number of failed students: 3
+
+English
+Average Score: 50.00
+Number of passed students: 2
+Number of failed students: 3
+
+Programming
+Average Score: 51.00
+Number of passed students: 2
+Number of failed students: 3
+
+Overall:
+Number of students who passed all subjects: 2
+Number of students who passed 3 or more subjects: 2
+Number of students who passed 2 or more subjects: 2
+Number of students who passed 1 or more subjects: 2
+Number of students who failed all subjects: 3
+
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter class ID, 0 for the whole statistics.
+Chinese
+Average Score: 49.00
+Number of passed students: 2
+Number of failed students: 3
+
+Mathematics
+Average Score: 50.00
+Number of passed students: 2
+Number of failed students: 3
+
+English
+Average Score: 51.00
+Number of passed students: 2
+Number of failed students: 3
+
+Programming
+Average Score: 52.00
+Number of passed students: 2
+Number of failed students: 3
+
+Overall:
+Number of students who passed all subjects: 2
+Number of students who passed 3 or more subjects: 2
+Number of students who passed 2 or more subjects: 2
+Number of students who passed 1 or more subjects: 2
+Number of students who failed all subjects: 3
+
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter class ID, 0 for the whole statistics.
+Chinese
+Average Score: 50.00
+Number of passed students: 2
+Number of failed students: 3
+
+Mathematics
+Average Score: 51.00
+Number of passed students: 2
+Number of failed students: 3
+
+English
+Average Score: 52.00
+Number of passed students: 2
+Number of failed students: 3
+
+Programming
+Average Score: 53.00
+Number of passed students: 2
+Number of failed students: 3
+
+Overall:
+Number of students who passed all subjects: 2
+Number of students who passed 3 or more subjects: 2
+Number of students who passed 2 or more subjects: 2
+Number of students who passed 1 or more subjects: 2
+Number of students who failed all subjects: 3
+
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter class ID, 0 for the whole statistics.
+Chinese
+Average Score: 51.00
+Number of passed students: 2
+Number of failed students: 3
+
+Mathematics
+Average Score: 52.00
+Number of passed students: 2
+Number of failed students: 3
+
+English
+Average Score: 53.00
+Number of passed students: 2
+Number of failed students: 3
+
+Programming
+Average Score: 54.00
+Number of passed students: 2
+Number of failed students: 3
+
+Overall:
+Number of students who passed all subjects: 2
+Number of students who passed 3 or more subjects: 2
+Number of students who passed 2 or more subjects: 2
+Number of students who passed 1 or more subjects: 2
+Number of students who failed all subjects: 3
+
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter class ID, 0 for the whole statistics.
+Chinese
+Average Score: 52.00
+Number of passed students: 2
+Number of failed students: 3
+
+Mathematics
+Average Score: 53.00
+Number of passed students: 2
+Number of failed students: 3
+
+English
+Average Score: 54.00
+Number of passed students: 2
+Number of failed students: 3
+
+Programming
+Average Score: 55.00
+Number of passed students: 2
+Number of failed students: 3
+
+Overall:
+Number of students who passed all subjects: 2
+Number of students who passed 3 or more subjects: 2
+Number of students who passed 2 or more subjects: 2
+Number of students who passed 1 or more subjects: 2
+Number of students who failed all subjects: 3
+
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter class ID, 0 for the whole statistics.
+Chinese
+Average Score: 53.00
+Number of passed students: 2
+Number of failed students: 3
+
+Mathematics
+Average Score: 54.00
+Number of passed students: 2
+Number of failed students: 3
+
+English
+Average Score: 55.00
+Number of passed students: 2
+Number of failed students: 3
+
+Programming
+Average Score: 56.00
+Number of passed students: 2
+Number of failed students: 3
+
+Overall:
+Number of students who passed all subjects: 2
+Number of students who passed 3 or more subjects: 2
+Number of students who passed 2 or more subjects: 2
+Number of students who passed 1 or more subjects: 2
+Number of students who failed all subjects: 3
+
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter class ID, 0 for the whole statistics.
+Chinese
+Average Score: 54.00
+Number of passed students: 2
+Number of failed students: 3
+
+Mathematics
+Average Score: 55.00
+Number of passed students: 2
+Number of failed students: 3
+
+English
+Average Score: 56.00
+Number of passed students: 2
+Number of failed students: 3
+
+Programming
+Average Score: 57.00
+Number of passed students: 2
+Number of failed students: 3
+
+Overall:
+Number of students who passed all subjects: 2
+Number of students who passed 3 or more subjects: 2
+Number of students who passed 2 or more subjects: 2
+Number of students who passed 1 or more subjects: 2
+Number of students who failed all subjects: 3
+
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter class ID, 0 for the whole statistics.
+Chinese
+Average Score: 55.00
+Number of passed students: 2
+Number of failed students: 3
+
+Mathematics
+Average Score: 56.00
+Number of passed students: 2
+Number of failed students: 3
+
+English
+Average Score: 57.00
+Number of passed students: 2
+Number of failed students: 3
+
+Programming
+Average Score: 58.00
+Number of passed students: 2
+Number of failed students: 3
+
+Overall:
+Number of students who passed all subjects: 2
+Number of students who passed 3 or more subjects: 2
+Number of students who passed 2 or more subjects: 2
+Number of students who passed 1 or more subjects: 2
+Number of students who failed all subjects: 3
+
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter class ID, 0 for the whole statistics.
+Chinese
+Average Score: 56.00
+Number of passed students: 2
+Number of failed students: 3
+
+Mathematics
+Average Score: 57.00
+Number of passed students: 2
+Number of failed students: 3
+
+English
+Average Score: 58.00
+Number of passed students: 2
+Number of failed students: 3
+
+Programming
+Average Score: 59.00
+Number of passed students: 2
+Number of failed students: 3
+
+Overall:
+Number of students who passed all subjects: 2
+Number of students who passed 3 or more subjects: 2
+Number of students who passed 2 or more subjects: 2
+Number of students who passed 1 or more subjects: 2
+Number of students who failed all subjects: 3
+
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter class ID, 0 for the whole statistics.
+Chinese
+Average Score: 57.00
+Number of passed students: 2
+Number of failed students: 3
+
+Mathematics
+Average Score: 58.00
+Number of passed students: 2
+Number of failed students: 3
+
+English
+Average Score: 59.00
+Number of passed students: 2
+Number of failed students: 3
+
+Programming
+Average Score: 60.00
+Number of passed students: 3
+Number of failed students: 2
+
+Overall:
+Number of students who passed all subjects: 2
+Number of students who passed 3 or more subjects: 2
+Number of students who passed 2 or more subjects: 2
+Number of students who passed 1 or more subjects: 3
+Number of students who failed all subjects: 2
+
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter class ID, 0 for the whole statistics.
+Chinese
+Average Score: 58.00
+Number of passed students: 2
+Number of failed students: 3
+
+Mathematics
+Average Score: 59.00
+Number of passed students: 2
+Number of failed students: 3
+
+English
+Average Score: 60.00
+Number of passed students: 3
+Number of failed students: 2
+
+Programming
+Average Score: 41.00
+Number of passed students: 2
+Number of failed students: 3
+
+Overall:
+Number of students who passed all subjects: 1
+Number of students who passed 3 or more subjects: 2
+Number of students who passed 2 or more subjects: 3
+Number of students who passed 1 or more subjects: 3
+Number of students who failed all subjects: 2
+
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter class ID, 0 for the whole statistics.
+Chinese
+Average Score: 59.00
+Number of passed students: 2
+Number of failed students: 3
+
+Mathematics
+Average Score: 60.00
+Number of passed students: 3
+Number of failed students: 2
+
+English
+Average Score: 41.00
+Number of passed students: 2
+Number of failed students: 3
+
+Programming
+Average Score: 42.00
+Number of passed students: 2
+Number of failed students: 3
+
+Overall:
+Number of students who passed all subjects: 1
+Number of students who passed 3 or more subjects: 2
+Number of students who passed 2 or more subjects: 3
+Number of students who passed 1 or more subjects: 3
+Number of students who failed all subjects: 2
+
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter class ID, 0 for the whole statistics.
+Chinese
+Average Score: 60.00
+Number of passed students: 3
+Number of failed students: 2
+
+Mathematics
+Average Score: 41.00
+Number of passed students: 2
+Number of failed students: 3
+
+English
+Average Score: 42.00
+Number of passed students: 2
+Number of failed students: 3
+
+Programming
+Average Score: 43.00
+Number of passed students: 2
+Number of failed students: 3
+
+Overall:
+Number of students who passed all subjects: 2
+Number of students who passed 3 or more subjects: 2
+Number of students who passed 2 or more subjects: 2
+Number of students who passed 1 or more subjects: 3
+Number of students who failed all subjects: 2
+
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter class ID, 0 for the whole statistics.
+Chinese
+Average Score: 50.50
+Number of passed students: 41
+Number of failed students: 59
+
+Mathematics
+Average Score: 50.50
+Number of passed students: 41
+Number of failed students: 59
+
+English
+Average Score: 50.50
+Number of passed students: 41
+Number of failed students: 59
+
+Programming
+Average Score: 50.50
+Number of passed students: 41
+Number of failed students: 59
+
+Overall:
+Number of students who passed all subjects: 38
+Number of students who passed 3 or more subjects: 40
+Number of students who passed 2 or more subjects: 42
+Number of students who passed 1 or more subjects: 44
+Number of students who failed all subjects: 56
+
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Showing the ranklist hurts students' self-esteem. Don't do that.
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter SID or name. Enter 0 to finish.
+99 0000000002 2 AB 2 3 4 5 14 3.50
+96 0000000005 5 AB 5 6 7 8 26 6.50
+93 0000000008 8 AB 8 9 10 11 38 9.50
+90 0000000011 11 AB 11 12 13 14 50 12.50
+87 0000000014 14 AB 14 15 16 17 62 15.50
+84 0000000017 17 AB 17 18 19 20 74 18.50
+81 0000000020 20 AB 20 21 22 23 86 21.50
+78 0000000023 3 AB 23 24 25 26 98 24.50
+74 0000000026 6 AB 26 27 28 29 110 27.50
+71 0000000029 9 AB 29 30 31 32 122 30.50
+68 0000000032 12 AB 32 33 34 35 134 33.50
+65 0000000035 15 AB 35 36 37 38 146 36.50
+62 0000000038 18 AB 38 39 40 41 158 39.50
+59 0000000041 1 AB 41 42 43 44 170 42.50
+56 0000000044 4 AB 44 45 46 47 182 45.50
+53 0000000047 7 AB 47 48 49 50 194 48.50
+49 0000000050 10 AB 50 51 52 53 206 51.50
+46 0000000053 13 AB 53 54 55 56 218 54.50
+43 0000000056 16 AB 56 57 58 59 230 57.50
+40 0000000059 19 AB 59 60 61 62 242 60.50
+37 0000000062 2 AB 62 63 64 65 254 63.50
+34 0000000065 5 AB 65 66 67 68 266 66.50
+31 0000000068 8 AB 68 69 70 71 278 69.50
+28 0000000071 11 AB 71 72 73 74 290 72.50
+24 0000000074 14 AB 74 75 76 77 302 75.50
+21 0000000077 17 AB 77 78 79 80 314 78.50
+18 0000000080 20 AB 80 81 82 83 326 81.50
+15 0000000083 3 AB 83 84 85 86 338 84.50
+12 0000000086 6 AB 86 87 88 89 350 87.50
+9 0000000089 9 AB 89 90 91 92 362 90.50
+6 0000000092 12 AB 92 93 94 95 374 93.50
+3 0000000095 15 AB 95 96 97 98 386 96.50
+25 0000000098 18 AB 98 99 100 1 298 74.50
+Please enter SID or name. Enter 0 to finish.
+98 0000000003 3 AC 3 4 5 6 18 4.50
+95 0000000006 6 AC 6 7 8 9 30 7.50
+92 0000000009 9 AC 9 10 11 12 42 10.50
+89 0000000012 12 AC 12 13 14 15 54 13.50
+86 0000000015 15 AC 15 16 17 18 66 16.50
+83 0000000018 18 AC 18 19 20 21 78 19.50
+80 0000000021 1 AC 21 22 23 24 90 22.50
+77 0000000024 4 AC 24 25 26 27 102 25.50
+73 0000000027 7 AC 27 28 29 30 114 28.50
+70 0000000030 10 AC 30 31 32 33 126 31.50
+67 0000000033 13 AC 33 34 35 36 138 34.50
+64 0000000036 16 AC 36 37 38 39 150 37.50
+61 0000000039 19 AC 39 40 41 42 162 40.50
+58 0000000042 2 AC 42 43 44 45 174 43.50
+55 0000000045 5 AC 45 46 47 48 186 46.50
+52 0000000048 8 AC 48 49 50 51 198 49.50
+48 0000000051 11 AC 51 52 53 54 210 52.50
+45 0000000054 14 AC 54 55 56 57 222 55.50
+42 0000000057 17 AC 57 58 59 60 234 58.50
+39 0000000060 20 AC 60 61 62 63 246 61.50
+36 0000000063 3 AC 63 64 65 66 258 64.50
+33 0000000066 6 AC 66 67 68 69 270 67.50
+30 0000000069 9 AC 69 70 71 72 282 70.50
+27 0000000072 12 AC 72 73 74 75 294 73.50
+23 0000000075 15 AC 75 76 77 78 306 76.50
+20 0000000078 18 AC 78 79 80 81 318 79.50
+17 0000000081 1 AC 81 82 83 84 330 82.50
+14 0000000084 4 AC 84 85 86 87 342 85.50
+11 0000000087 7 AC 87 88 89 90 354 88.50
+8 0000000090 10 AC 90 91 92 93 366 91.50
+5 0000000093 13 AC 93 94 95 96 378 94.50
+2 0000000096 16 AC 96 97 98 99 390 97.50
+50 0000000099 19 AC 99 100 1 2 202 50.50
+Please enter SID or name. Enter 0 to finish.
+100 0000000001 1 AA 1 2 3 4 10 2.50
+97 0000000004 4 AA 4 5 6 7 22 5.50
+94 0000000007 7 AA 7 8 9 10 34 8.50
+91 0000000010 10 AA 10 11 12 13 46 11.50
+88 0000000013 13 AA 13 14 15 16 58 14.50
+85 0000000016 16 AA 16 17 18 19 70 17.50
+82 0000000019 19 AA 19 20 21 22 82 20.50
+79 0000000022 2 AA 22 23 24 25 94 23.50
+75 0000000025 5 AA 25 26 27 28 106 26.50
+72 0000000028 8 AA 28 29 30 31 118 29.50
+69 0000000031 11 AA 31 32 33 34 130 32.50
+66 0000000034 14 AA 34 35 36 37 142 35.50
+63 0000000037 17 AA 37 38 39 40 154 38.50
+60 0000000040 20 AA 40 41 42 43 166 41.50
+57 0000000043 3 AA 43 44 45 46 178 44.50
+54 0000000046 6 AA 46 47 48 49 190 47.50
+50 0000000049 9 AA 49 50 51 52 202 50.50
+47 0000000052 12 AA 52 53 54 55 214 53.50
+44 0000000055 15 AA 55 56 57 58 226 56.50
+41 0000000058 18 AA 58 59 60 61 238 59.50
+38 0000000061 1 AA 61 62 63 64 250 62.50
+35 0000000064 4 AA 64 65 66 67 262 65.50
+32 0000000067 7 AA 67 68 69 70 274 68.50
+29 0000000070 10 AA 70 71 72 73 286 71.50
+25 0000000073 13 AA 73 74 75 76 298 74.50
+22 0000000076 16 AA 76 77 78 79 310 77.50
+19 0000000079 19 AA 79 80 81 82 322 80.50
+16 0000000082 2 AA 82 83 84 85 334 83.50
+13 0000000085 5 AA 85 86 87 88 346 86.50
+10 0000000088 8 AA 88 89 90 91 358 89.50
+7 0000000091 11 AA 91 92 93 94 370 92.50
+4 0000000094 14 AA 94 95 96 97 382 95.50
+1 0000000097 17 AA 97 98 99 100 394 98.50
+75 0000000100 20 AA 100 1 2 3 106 26.50
+Please enter SID or name. Enter 0 to finish.
+Please enter SID or name. Enter 0 to finish.
+Please enter SID or name. Enter 0 to finish.
+Please enter SID or name. Enter 0 to finish.
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter class ID, 0 for the whole statistics.
+Chinese
+Average Score: 50.50
+Number of passed students: 41
+Number of failed students: 59
+
+Mathematics
+Average Score: 50.50
+Number of passed students: 41
+Number of failed students: 59
+
+English
+Average Score: 50.50
+Number of passed students: 41
+Number of failed students: 59
+
+Programming
+Average Score: 50.50
+Number of passed students: 41
+Number of failed students: 59
+
+Overall:
+Number of students who passed all subjects: 38
+Number of students who passed 3 or more subjects: 40
+Number of students who passed 2 or more subjects: 42
+Number of students who passed 1 or more subjects: 44
+Number of students who failed all subjects: 56
+
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter SID or name. Enter 0 to finish.
+33 student(s) removed.
+Please enter SID or name. Enter 0 to finish.
+33 student(s) removed.
+Please enter SID or name. Enter 0 to finish.
+34 student(s) removed.
+Please enter SID or name. Enter 0 to finish.
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter class ID, 0 for the whole statistics.
+Chinese
+Average Score: 0.00
+Number of passed students: 0
+Number of failed students: 0
+
+Mathematics
+Average Score: 0.00
+Number of passed students: 0
+Number of failed students: 0
+
+English
+Average Score: 0.00
+Number of passed students: 0
+Number of failed students: 0
+
+Programming
+Average Score: 0.00
+Number of passed students: 0
+Number of failed students: 0
+
+Overall:
+Number of students who passed all subjects: 0
+Number of students who passed 3 or more subjects: 0
+Number of students who passed 2 or more subjects: 0
+Number of students who passed 1 or more subjects: 0
+Number of students who failed all subjects: 0
+
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter SID or name. Enter 0 to finish.
+0 student(s) removed.
+Please enter SID or name. Enter 0 to finish.
+0 student(s) removed.
+Please enter SID or name. Enter 0 to finish.
+0 student(s) removed.
+Please enter SID or name. Enter 0 to finish.
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter class ID, 0 for the whole statistics.
+Chinese
+Average Score: 0.00
+Number of passed students: 0
+Number of failed students: 0
+
+Mathematics
+Average Score: 0.00
+Number of passed students: 0
+Number of failed students: 0
+
+English
+Average Score: 0.00
+Number of passed students: 0
+Number of failed students: 0
+
+Programming
+Average Score: 0.00
+Number of passed students: 0
+Number of failed students: 0
+
+Overall:
+Number of students who passed all subjects: 0
+Number of students who passed 3 or more subjects: 0
+Number of students who passed 2 or more subjects: 0
+Number of students who passed 1 or more subjects: 0
+Number of students who failed all subjects: 0
+
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Duplicated SID.
+Please enter the SID, CID, name and four scores. Enter 0 to finish.
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
+Please enter class ID, 0 for the whole statistics.
+Chinese
+Average Score: 50.50
+Number of passed students: 41
+Number of failed students: 59
+
+Mathematics
+Average Score: 50.50
+Number of passed students: 41
+Number of failed students: 59
+
+English
+Average Score: 50.50
+Number of passed students: 41
+Number of failed students: 59
+
+Programming
+Average Score: 50.50
+Number of passed students: 41
+Number of failed students: 59
+
+Overall:
+Number of students who passed all subjects: 38
+Number of students who passed 3 or more subjects: 40
+Number of students who passed 2 or more subjects: 42
+Number of students who passed 1 or more subjects: 44
+Number of students who failed all subjects: 56
+
+Welcome to Student Performance Management System (SPMS).
+
+1 - Add
+2 - Remove
+3 - Query
+4 - Show ranking
+5 - Show Statistics
+0 - Exit
+
