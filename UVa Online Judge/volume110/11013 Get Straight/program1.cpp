@@ -11,21 +11,20 @@
 using namespace std;
 
 int ns[5];
-
-bool good(int i) { return (ns[i] + 1) % 13 == ns[i + 1]; }
+bool adjacent(int i) { return (ns[i] + 1) % 13 == ns[i + 1]; }
 int getPayment()
 {
     sort(ns, ns + 5);
-    int r = 0;
+    int p = 0;
     do
     {
-        if (good(0) && good(1) && good(2) && good(3)) r = max(r, 100);
-        if (good(0) && good(1) && good(2)) r = max(r, 10);
-        if (good(0) && good(1) && good(3)) r = max(r, 5);
-        if (good(0) && good(1)) r = max(r, 3);
-        if (good(0) && good(2)) r = max(r, 1);   
+        if (adjacent(0) && adjacent(1) && adjacent(2) && adjacent(3)) p = max(p, 100);
+        if (adjacent(0) && adjacent(1) && adjacent(2)) p = max(p, 10);
+        if (adjacent(0) && adjacent(1) && adjacent(3)) p = max(p, 5);
+        if (adjacent(0) && adjacent(1)) p = max(p, 3);
+        if (adjacent(0) && adjacent(2)) p = max(p, 1);   
     } while (next_permutation(ns, ns + 5));
-    return r;
+    return p;
 }
 
 int main(int argc, char *argv[])
