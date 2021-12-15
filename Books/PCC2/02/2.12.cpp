@@ -2,66 +2,94 @@
 
 using namespace std;
 
-const int MAXV = 100000;
+const int MAXN = (1 << 10);
 
-int parent[MAXV], ranks[MAXV];
-
-void makeSet1()
+struct FenwickTree
 {
-    for (int i = 0; i < MAXV; i++) parent[i] = i, ranks[i] = 0;
-}
+    int MAXN;
+    vector<int> T;
 
-void makeSet2()
-{
-    for (int i = 0; i < MAXV; i++) parent[i] = i, ranks[i] = 1;
-}
-
-int findSet1(int x)
-{
-    return (x == parent[x] ? x : parent[x] = findSet1(parent[x]));
-}
-
-int findSet2(int x)
-{
-    int ancestor = x;
-    while (ancestor != parent[ancestor]) ancestor = parent[ancestor];
-    while (x != ancestor) {
-        int temp = parent[x];
-        parent[x] = ancestor;
-        x = temp;
+    void initialize(int n) {
+        this->MAXN = n;
+        T.assign(n, 0);
     }
 
-    return x;
+    int get(int x)
+    {
+        int sum = 0;
+        for (; x >= 0; x = (x & (x + 1)) - 1)
+            sum += T[x];
+        return sum;
+    }
+
+    void add(int x, int delta)
+    {
+        for (; x < MAXN; x = x | (x + 1))
+            T[x] += delta;
+    }
+
+    int sum(int L, int R)
+    {
+        return get(R) - get(L - 1);
+    }
+
+    void prepare(vector<int> A)
+    {
+        initialize(A.size());
+        for (size_t i = 0; i < A.size(); i++)
+            add(i, A[i]);
+    }
+};
+
+inline int lowbit(int x) { return x & (-x); }
+
+int T[MAXN + 16] = {};
+
+void add(int x, int delta)
+{
+    for (int i = x; i <= MAXN; i += lowbit(i))
+        T[i] += delta;
 }
 
-bool unionSet1(int x, int y)
+int get(int x)
 {
-    x = findSet1(x), y = findSet1(y);
-    
-    if (x != y) {
-        if (ranks[x] > ranks[y]) parent[y] = x, ranks[x] += ranks[y];
-        else parent[x] = y, ranks[y] += ranks[x];
-        return true;
-    }
-    return false;
+    int sum = 0;
+    for (int i = x; i; i -= lowbit(i))
+        sum += T[i];
+    return sum;
 }
 
-bool unionSet2(int x, int y)
+int sum(int L, int R)
 {
-    x = findSet1(x), y = findSet1(y);
-    if (x != y) {
-        if (ranks[x] > ranks[y]) parent[y] = x;
-        else {
-            parent[x] = y;
-            if (ranks[x] == ranks[y]) ranks[y]++;
-        }
-        return true;
-    }
-    return false;
+    return get(R) - get(L - 1);
 }
 
 int main(int argc, char *argv[])
 {
-    makeSet1();
+    int A[MAXN + 16];
+    vector<int> AA;
+    for (int i = 1; i <= MAXN; i++)
+    {
+        A[i] = i;
+        AA.push_back(i);
+    }
+
+    FenwickTree ft;
+    ft.prepare(AA);
+
+    for (int i = 1; i <= MAXN; i++)
+        add(i, A[i]);
+
+    srand(time(NULL));
+    for (int cases = 1; cases <= 100; cases++) {
+        int L = rand() % MAXN + 1, R = rand() % MAXN + 1;
+        if (L > R) swap(L, R);
+        cout << "S[" << setw(4) << right << L << ", ";
+        cout << setw(4) << right << R << "] => ";
+        cout << sum(L, R) << " = ";
+        cout << ft.sum(L - 1, R - 1);
+        cout << " = " << (R + L) * (R - L + 1) / 2 << '\n';
+    }
+
     return 0;
 }

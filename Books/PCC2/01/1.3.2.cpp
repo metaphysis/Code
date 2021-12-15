@@ -11,7 +11,7 @@ int main(int argc, char* argv[])
     cout << setw(60) << internal << line << endl;
     
     int number = -1234567890;
-    cout << setw(20) << left << number << endl;
+    cout << setw(30) << left << number << endl;
     cout << setw(30) << internal << number << endl;
     cout << setw(30) << right << number << endl;
 

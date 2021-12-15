@@ -20,7 +20,7 @@ void search()
     
     cout << "First matched:";
     smatch sm;
-    if (regex_search(ip, sm, e)) cout << " [" << sm[0].str() << "]";
+    if (regex_search(ip, sm, e)) cout << " " << sm[0].str();
     cout << endl;
 
     cout << "All matched:";
@@ -28,7 +28,7 @@ void search()
     regex_iterator<string::iterator> end;
     while (it != end)
     {
-        cout << " [" << it->str() << "]";
+        cout << " " << it->str();
         it++;
     }
     cout << endl;
@@ -40,7 +40,7 @@ void replace()
     string pattern = R"((\d+)\.(\d+)\.(\d+)\.(\d+))";
     regex e(pattern);
     
-    cout << "Replaced: [" << regex_replace(ip, e, "$1.$2.2.$4") << "]" << endl;
+    cout << "Replaced: " << regex_replace(ip, e, "$1.$2.2.$4") << endl;
 }
 
 int main(int argc, char *argv[])
