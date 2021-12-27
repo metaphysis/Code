@@ -10,27 +10,30 @@
 
 using namespace std;
 
-const double EPSILON = 1e-7;
 const int OUT = 0, ON = 1, IN = 2;
 
 struct point {
-    double x, y;
-    point (double x = 0, double y = 0): x(x), y(y) {}
+    int x, y;
+    point (int x = 0, int y = 0): x(x), y(y) {}
     point operator + (point p) { return point(x + p.x, y + p.y); };
     point operator - (point p) { return point(x - p.x, y - p.y); };
-    point operator * (double k) { return point(x * k, y * k); };
-    point operator / (double k) { return point(x / k, y / k); };
+    point operator * (int k) { return point(x * k, y * k); };
     bool operator==(const point &p) { return x == p.x && y == p.y; }
 };
 
-double dot(point a, point b)
+int dot(point a, point b)
 {
     return a.x * b.x + a.y * b.y;
 }
 
-double cross(point a, point b)
+int cross(point a, point b)
 {
     return a.x * b.y - a.y * b.x;
+}
+
+int cp(point a, point b, point c)
+{
+	return cross(b - a, c - a);
 }
 
 typedef vector<point> polygon;
@@ -41,9 +44,9 @@ int isPointInPolygon(point p, polygon &pg)
     for (int i = 0; i < pg.size(); i++)
     {
         point a = pg[i] - p, b = pg[(i + 1) % pg.size()] - p;
-        if (abs(cross(a, b)) < EPSILON && dot(a, b) < EPSILON) return ON;
+        if (abs(cross(a, b)) == 0 && dot(a, b) == 0) return ON;
         if (a.y > b.y) swap(a, b);
-        if (a.y < EPSILON && EPSILON < b.y && cross(a, b) > EPSILON) in = !in;
+        if (a.y <= 0 && 0 < b.y && cross(a, b) > 0) in = !in;
     }
     return in ? IN : OUT;
 }
@@ -51,28 +54,20 @@ int isPointInPolygon(point p, polygon &pg)
 int n1, n2;
 polygon pg1, pg2;
 
-// 判断两个多边形是否重合。
-bool isSame()
+// 判断某个多边形的顶点是否全部落在另外一个多边形的边界上。
+bool isAllPointOn()
 {
-    if (n1 != n2) return false;
+    int cnt = 0;
     for (int i = 0; i < n1; i++)
-        for (int j = 0; j < n2; j++)
-        {
-            bool same = true;
-            for (int k = 0; k < n1; k++)
-            {
-                if (pg1[(i + k) % n1] == pg2[(j + k) % n2]) continue;
-                same = false;
-                break;
-            }
-            if (same) return true;
-        }
+        if (isPointInPolygon(pg1[i], pg2) == ON)
+            cnt++;
+    if (cnt == n1) return true;
+    cnt = 0;
+    for (int i = 0; i < n2; i++)
+        if (isPointInPolygon(pg2[i], pg1) == ON)
+            cnt++;
+    if (cnt == n2) return true;
     return false;    
-}
-
-double cp(point a, point b, point c)
-{
-	return cross(b - a, c - a);
 }
 
 // 判断两条线段是否跨越式相交。
@@ -81,28 +76,22 @@ bool isIntersected()
     for (int i = 0; i < n1; i++)
         for (int j = 0; j < n2; j++)
         {
-            double cp1 = cp(pg1[i], pg1[(i + 1) % n1], pg2[j]), cp2 = cp(pg1[i], pg1[(i + 1) % n1], pg2[(j + 1) % n2]);
-            double cp3 = cp(pg2[j], pg2[(j + 1) % n2], pg1[i]), cp4 = cp(pg2[j], pg2[(j + 1) % n2], pg1[(i + 1) % n1]);
+            int cp1 = cp(pg1[i], pg1[(i + 1) % n1], pg2[j]), cp2 = cp(pg1[i], pg1[(i + 1) % n1], pg2[(j + 1) % n2]);
+            int cp3 = cp(pg2[j], pg2[(j + 1) % n2], pg1[i]), cp4 = cp(pg2[j], pg2[(j + 1) % n2], pg1[(i + 1) % n1]);
             if ((cp1 * cp2 < 0) && (cp3 * cp4) < 0) return true;
         }
     return false;
 }
 
-// 判断某个多边形边的中点是否在另外一个多边形内。
-bool isMidpointIn()
+// 判断某个多边形边的顶点是否在另外一个多边形内。
+bool isPointIn()
 {
     for (int i = 0; i < n1; i++)
-    {
-        point mp = (pg1[i] + pg1[(i + 1) % n1]) / 2.0;
-        if (isPointInPolygon(mp, pg2) == IN)
+        if (isPointInPolygon(pg1[i], pg2) == IN)
             return true;
-    }
     for (int i = 0; i < n2; i++)
-    {
-        point mp = (pg2[i] + pg2[(i + 1) % n2]) / 2.0;
-        if (isPointInPolygon(mp, pg1) == IN)
+        if (isPointInPolygon(pg2[i], pg1) == IN)
             return true;
-    }
     return false;
 }
 
@@ -126,7 +115,7 @@ int main(int argc, char *argv[])
             cin >> x >> y;
             pg2.push_back(point(x, y));
         }
-        bool overlapped = isSame() || isIntersected() || isMidpointIn() ;
+        bool overlapped = isAllPointOn() || isIntersected() || isPointIn() ;
         cout << "Case " << ++cases << ": " << (overlapped ? "Yes" : "No") << '\n';
     }
 
