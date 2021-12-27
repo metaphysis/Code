@@ -1,0 +1,20 @@
+left of left of A
+left of A
+A
+right of A
+right of right of A
+right of right of right of A
+right of right of right of right of A
+right of right of right of right of right of A
+right of right of right of right of right of right of A
+middle of A and B
+left of left of left of left of left of left of B
+left of left of left of left of left of B
+left of left of left of left of B
+left of left of left of B
+left of left of B
+left of B
+B
+right of B
+right of right of B
+right of right of right of B
