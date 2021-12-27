@@ -1,0 +1,3 @@
+2
+---B--S-D--S--
+DDBDDBDDBDD
