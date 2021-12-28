@@ -1,0 +1,10 @@
+Case 1: Yes
+Case 2: No
+Case 3: No
+Case 4: No
+Case 5: Yes
+Case 6: Yes
+Case 7: Yes
+Case 8: No
+Case 9: Yes
+Case 10: Yes
