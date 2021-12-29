@@ -34,6 +34,6 @@ int main(int argc, char *argv[])
 {
     while (cin >> n, n > 0) {
         for (int i = 0; i < n; i++) cin >> data[i];
-        cout << mergeSort(data, 0, n - 1) << '\n';
+        cout << mergeSort(0, n - 1) << '\n';
     }
 }

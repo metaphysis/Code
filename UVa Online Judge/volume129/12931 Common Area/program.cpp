@@ -17,7 +17,6 @@ struct point {
     point (int x = 0, int y = 0): x(x), y(y) {}
     point operator + (point p) { return point(x + p.x, y + p.y); };
     point operator - (point p) { return point(x - p.x, y - p.y); };
-    bool operator<(const point &p) { return x != p.x ? x < p.x : y < p.y; }
 };
 
 int dot(point a, point b)
@@ -53,6 +52,7 @@ int isPointInPolygon(point p, polygon &pg)
 int n1, n2;
 polygon pg1, pg2;
 
+// 判断某个多边形边的中点是否在另外一个多边形内。
 bool isMiddlePointIn()
 {
     for (int i = 0; i < n1; i++)
