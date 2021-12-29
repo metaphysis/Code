@@ -51,43 +51,13 @@ double cp(point a, point b, point c)
 	return cross(b - a, c - a);
 }
 
-bool cw(point a, point b, point c)
-{
-	return cp(a, b, c) < -EPSILON;
-}
-
-bool ccw(point a, point b, point c)
-{
-	return cp(a, b, c) > EPSILON;
-}
-
-bool collinear(point a, point b, point c)
-{
-    return fabs(cp(a, b, c)) < EPSILON;
-}
-
-bool cwOrCollinear(point a, point b, point c)
-{
-    return cw(a, b, c) || collinear(a, b, c);
-}
-
-bool ccwOrCollinear(point a, point b, point c)
-{
-    return ccw(a, b, c) || collinear(a, b, c);
-}
-
-bool pointInBox(point a, point b, point p)
+bool pointInBox(point a, point b, point p, bool includeEndPoint)
 {
     double minx = min(a.x, b.x), maxx = max(a.x, b.x);
     double miny = min(a.y, b.y), maxy = max(a.y, b.y);
-    return p.x >= minx && p.x <= maxx && p.y >= miny && p.y <= maxy;
+    if (includeEndPoint) return p.x >= minx && p.x <= maxx && p.y >= miny && p.y <= maxy;
+    else return p.x > minx && p.x < maxx && p.y > miny && p.y < maxy;
 }
-
-struct segment
-{
-    point p1, p2;
-    bool contains(const point &p) { return pointInBox(p1, p2, p); }
-};
 
 struct line
 {
@@ -128,84 +98,74 @@ int isPointInPolygon(point p, polygon &pg)
     return in ? IN : OUT;
 }
 
-// 检测以点i和点j为端点的线段是否在多边形内，如果线段与多边形的边界重合也认为是在多边形上
 bool isInPolygon(int i, int j)
 {
     if (j == i + 1) return true;
-    // 该条线段与多边形的任意一条边不能发生内交，即交点在线段内部（不包括端点）的相交
-    // pg1 记录端点相交的交点
     polygon pg1;
     for (int k1 = 0, k2 = 1; k1 < n; k1++, k2++)
     {
         if (k2 >= n) k2 %= n;
         double cp1 = cp(pg[i], pg[j], pg[k1]);
         double cp2 = cp(pg[i], pg[j], pg[k2]);
-        if (cp1 * cp2 < EPSILON)
+        if (cp1 * cp2 < -EPSILON)
         {
             point p1 = getIntersection(getLine(pg[i], pg[j]), getLine(pg[k1], pg[k2]));
-            if (pointInBox(pg[i], pg[j], p1))
+            if (pointInBox(pg[i], pg[j], p1, false))
                 return false;
         }
-        if (fabs(cp1) < fabs(EPSILON)) pg1.push_back(pg[k1]);
-        if (fabs(cp2) < fabs(EPSILON)) pg1.push_back(pg[k2]);
+        if (fabs(cp1) < EPSILON && pointInBox(pg[i], pg[j], pg[k1], true)) pg1.push_back(pg[k1]);
+        if (fabs(cp2) < EPSILON && pointInBox(pg[i], pg[j], pg[k2], true)) pg1.push_back(pg[k2]);
     }
-    // 将端点相交的交点按 X-Y 轴排序，任意两个交点的中点必须在多边形内，否则整条线段不在多边形内
     sort(pg1.begin(), pg1.end());
-    for (int i = 0; i < pg1.size() - 1; i++)
-        if (isPointInPolygon((pg1[i] + pg1[i + 1]) / 2.0, pg) == OUT)
+    for (int k = 0; k < pg1.size() - 1; k++)
+        if (isPointInPolygon((pg1[k] + pg1[k + 1]) / 2.0, pg) == OUT)
             return false;
     return true;
 }
 
-// 检查与线段ij两端相交的线段，获得的端点即为跑道的长度。
 double getDist(int i, int j)
 {
-    // 从i到j的方向与简单多边形的交点。
-    point leftPoint = pg[i], rightPoint = pg[j];
-    bool lastPointSetted = false;
-    for (int c = 0, k = j; c < n; c++, k++)
+    if (pg[i].x > pg[j].x) swap(i, j);
+    polygon pg1;
+    for (int k1 = 0, k2 = 1; k1 < n; k1++, k2++)
     {
-        if ((k + 1) % n == i)
+        if (k2 >= n) k2 %= n;
+        double cp1 = cp(pg[i], pg[j], pg[k1]);
+        double cp2 = cp(pg[i], pg[j], pg[k2]);
+        if (cp1 * cp2 < -EPSILON)
         {
-            rightPoint = pg[i];
-            continue;
+            point p1 = getIntersection(getLine(pg[i], pg[j]), getLine(pg[k1], pg[k2]));
+            if (pointInBox(pg[i], pg[j], p1, true))
+                pg1.push_back(p1);
         }
-        double cp1 = cp(pg[i], pg[j], pg[k]);
-        double cp2 = cp(pg[i], pg[j], pg[(k + 1) % n]);
-        if (cp1 * cp2 < EPSILON)
-        {
-            point p1 = getIntersection(getLine(pg[i], pg[j]), getLine(pg[k], pg[(k + 1) % n]));
-            if (pointInBox(pg[k], pg[(k + 1) % n], p1))
-            {
-                point middle = (p1 + rightPoint) / 2.0;
-                if (isPointInPolygon(middle, pg) != OUT) rightPoint = p1;
-                break;
-            }
-        }
-        if (fabs(cp1) < fabs(EPSILON))
-        {
-            point middle = (pg[k] + rightPoint) / 2.0;
-            if (isPointInPolygon(middle, pg) != OUT) rightPoint = p1;
-            else break;
-        }
-        if (fabs(cp2) < fabs(EPSILON))
-        {
-            point middle = (pg[(k + 1) % n] + rightPoint) / 2.0;
-            if (isPointInPolygon(middle, pg) != OUT) rightPoint = p1;
-            else break;
-        }
+        if (fabs(cp1) < EPSILON && pointInBox(pg[i], pg[j], pg[k1], true)) pg1.push_back(pg[k1]);
+        if (fabs(cp2) < EPSILON && pointInBox(pg[i], pg[j], pg[k2], true)) pg1.push_back(pg[k2]);
     }
-    // 从j到i的方向与简单多边形的交点。
-    for (int k = i - 1; ; k--)
-    {
-        k = (k + n) % n;
-        if (ccw(pg[i], pg[j], pg[k]))
+    sort(pg1.begin(), pg1.end());
+    int s = -1, e = -1;
+    for (int k = 0; k < pg1.size(); k++)
+        if (pg[i] == pg1[k])
         {
-            p2 = getIntersection(getLine(pg[i], pg[j]), getLine(pg[k], pg[(k + 1) % n]));
+            s = k;
             break;
         }
+    for (int k = 0; k < pg1.size(); k++)
+        if (pg[j] == pg1[k])
+        {
+            e = k;
+            break;
+        }
+    while (true)
+    {
+        if (!s || isPointInPolygon((pg1[s] + pg1[s - 1]) / 2, pg) == OUT) break;
+        s--;
     }
-    return leftPoint.distTo(rightPoint);
+    while (true)
+    {
+        if (e + 1 == pg1.size() || isPointInPolygon((pg1[e] + pg1[e + 1]) / 2, pg) == OUT) break;
+        e++;
+    }
+    return pg1[s].distTo(pg1[e]);
 }
 
 int main(int argc, char *argv[])
@@ -213,17 +173,14 @@ int main(int argc, char *argv[])
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
 
     double x1, y1;
-
     while (cin >> n)
     {
         pg.clear();
-
         for (int i = 0; i < n; i++)
         {
             cin >> x1 >> y1;
             pg.push_back(point{x1, y1});
         }
-        
         double longest = 0.0;
         for (int i = 0; i < n; i++)
             for (int j = i + 1; j < n; j++)
