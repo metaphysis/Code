@@ -309,16 +309,16 @@ void solvePuzzle(vector<int> tiles)
     int dir[STEPS_BOUND] = {};
 
     // 深度优先搜索。
-    // dfs(tiles, moves);
+    // dfs(tiles, dir);
 
-    // 宽度优先搜索。
-    // bfs(tiles, moves);
+    // 广度优先搜索。
+    bfs(tiles, dir);
 
     // A*搜索。解长度在30-50步之间的局面平均需要7s。UVa RT 1.004s。
-    // AStar(tiles, moves);
+    // AStar(tiles, dir);
 
     // IDA*搜索。解长度在30-50步之间的局面平均需要1.5s。UVa RT 0.120s。
-    IDAStar(tiles, moves);
+    //IDAStar(tiles, dir);
 
     // 输出走法步骤。
     for (int i = 0; i < STEPS_BOUND; i++)

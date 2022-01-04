@@ -33,7 +33,7 @@ void nQueen(int *clnAtRow, int n)
 int main(int argc, char *argv[])
 {
     srand(time(NULL));
-    int n = rand() % MAXN + 1;
+    int n = 15;
     int *clnAtRow = new int[n];
     nQueen(clnAtRow, n);
     cout << " n = " << n << '\n';

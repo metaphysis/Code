@@ -48,7 +48,7 @@ void fillMagic2()
                 magic[i][j] = i * n + j + 1;
 }
 
-void fillHelper(int n, int offseti, int offsetj, int offsetk)
+void helper(int n, int offseti, int offsetj, int offsetk)
 {
     for (int i = 0, j = n / 2, k = 1; k <= n * n; k++)
     {
@@ -66,10 +66,10 @@ void fillHelper(int n, int offseti, int offsetj, int offsetk)
 // n = 4 * k + 2, k >= 1.
 void fillMagic3()
 {
-    fillHelper(n / 2, 0, 0, 0);
-    fillHelper(n / 2, n / 2, n / 2, n * n / 4);
-    fillHelper(n / 2, 0, n / 2, n * n / 2);
-    fillHelper(n / 2, n / 2, 0, n * n / 4 * 3);
+    helper(n / 2, 0, 0, 0);
+    helper(n / 2, n / 2, n / 2, n * n / 4);
+    helper(n / 2, 0, n / 2, n * n / 2);
+    helper(n / 2, n / 2, 0, n * n / 4 * 3);
     for (int i = 0; i < n / 2; i++)
         for (int j = 0; j < n / 4; j++)
             swap(magic[i][j], magic[i + n / 2][j]);
