@@ -1,0 +1,20 @@
+3
+2 110 Ja
+5 Tan Sid Sam Sha Tan
+6 Ja Sha Sid Ja Ja Ja
+4 Ja Sam Tan Tan
+8 Ja Sha Sam Tan Sha Sha Sha Sha
+2 Ja Sam
+5 950 Tan
+7 Tan Sid Sam Sha Tan Sid Sam
+5 Ja Sid Sid Tan Sid
+7 Sam Tan Ja Ja Tan Sam Sid
+8 Tan Sha Sam Ja Ja Tan Tan Ja
+7 Sha Sam Sid Sha Sid Sam Ja
+20 12 Sid
+5 Tan Sid Sam Sha Tan
+1 Ja
+1 Ja
+1 Ja
+5 Ja Ja Ja Ja Ja
+
