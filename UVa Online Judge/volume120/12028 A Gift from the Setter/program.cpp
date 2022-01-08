@@ -25,10 +25,10 @@ int main(int argc, char *argv[])
             a[i] = (K * a[i - 1] + C) % 1000007LL;
         sort(a, a + n);
         long long S = 0, R = 0;
-        for (int i = 1; i <= n; i++)
+        for (int i = 1; i < n; i++)
         {
             S += a[i - 1];
-            R += i * a[i - 1] - S;
+            R += i * a[i] - S;
         }
         cout << "Case " << cs << ": " << R << '\n';
     }

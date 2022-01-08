@@ -1,8 +1,8 @@
 // Movie Collection
 // UVa ID: 1513
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2022-01-07
+// UVa Run Time: 0.070s
 //
 // 版权所有（C）2022，邱秋。metaphysis # yeah dot net
 
