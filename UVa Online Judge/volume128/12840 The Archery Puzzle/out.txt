@@ -1,0 +1,100 @@
+Case 1: [2] 230 2
+Case 2: [2] 38 6
+Case 3: [1] 138
+Case 4: impossible
+Case 5: [2] 188 44
+Case 6: [2] 230 1
+Case 7: [2] 72 72
+Case 8: [1] 33
+Case 9: [2] 190 2
+Case 10: [2] 82 11
+Case 11: [2] 105 2
+Case 12: [2] 78 3
+Case 13: [2] 101 4
+Case 14: [2] 99 4
+Case 15: [2] 119 2
+Case 16: [2] 205 23
+Case 17: [1] 278
+Case 18: [2] 189 1
+Case 19: [2] 134 3
+Case 20: [1] 29
+Case 21: [1] 6
+Case 22: [2] 226 30
+Case 23: [2] 243 26
+Case 24: [2] 39 36
+Case 25: [2] 218 51
+Case 26: [2] 294 2
+Case 27: [1] 29
+Case 28: [3] 130 29 17
+Case 29: [15] 216 10 10 10 10 10 1 1 1 1 1 1 1 1 1
+Case 30: impossible
+Case 31: [1] 100
+Case 32: [2] 195 24
+Case 33: [3] 168 7 7
+Case 34: [6] 62 48 48 8 8 8
+Case 35: [1] 3
+Case 36: [1] 117
+Case 37: [1] 106
+Case 38: [2] 186 52
+Case 39: impossible
+Case 40: [2] 202 43
+Case 41: [2] 72 50
+Case 42: [2] 165 12
+Case 43: impossible
+Case 44: [3] 67 51 13
+Case 45: [2] 12 5
+Case 46: [3] 97 36 36
+Case 47: [1] 133
+Case 48: [1] 73
+Case 49: [2] 164 8
+Case 50: [1] 140
+Case 51: [4] 175 19 19 19
+Case 52: [1] 225
+Case 53: [3] 95 49 4
+Case 54: [2] 100 20
+Case 55: [1] 100
+Case 56: [3] 133 27 27
+Case 57: [2] 190 16
+Case 58: [2] 145 7
+Case 59: [2] 120 1
+Case 60: [2] 38 3
+Case 61: [2] 48 2
+Case 62: [1] 11
+Case 63: [2] 81 4
+Case 64: [2] 8 5
+Case 65: [2] 158 70
+Case 66: [2] 171 7
+Case 67: [2] 131 8
+Case 68: [3] 108 90 7
+Case 69: [2] 88 41
+Case 70: [1] 183
+Case 71: [2] 103 2
+Case 72: [2] 79 1
+Case 73: [1] 110
+Case 74: impossible
+Case 75: [3] 286 4 4
+Case 76: [3] 126 126 37
+Case 77: [2] 66 15
+Case 78: [2] 40 7
+Case 79: [2] 2 2
+Case 80: [2] 20 1
+Case 81: [2] 288 4
+Case 82: [1] 228
+Case 83: [2] 262 27
+Case 84: [2] 146 73
+Case 85: [3] 41 15 6
+Case 86: [2] 33 8
+Case 87: [2] 139 117
+Case 88: [2] 186 69
+Case 89: [2] 13 1
+Case 90: [2] 98 30
+Case 91: [2] 146 2
+Case 92: impossible
+Case 93: [2] 185 27
+Case 94: impossible
+Case 95: impossible
+Case 96: [2] 52 28
+Case 97: [2] 114 22
+Case 98: [3] 134 49 44
+Case 99: [1] 29
+Case 100: [2] 14 2
