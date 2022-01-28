@@ -17,7 +17,11 @@ int main(int argc, char *argv[])
     while (cin >> p >> n)
     {
         int low = 1, high = 0;
-        for (int i = 0; i < n; i++) { cin >> m[i]; high = max(high, m[i]); }
+        for (int i = 0; i < n; i++)
+        {
+            cin >> m[i];
+            high = max(high, m[i]);
+        }
         int middle, r;
         while (low <= high)
         {
