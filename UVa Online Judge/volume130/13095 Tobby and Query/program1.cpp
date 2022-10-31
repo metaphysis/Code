@@ -1,8 +1,8 @@
 // Tobby and Query
 // UVa ID: 13095
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2022-10-30
+// UVa Run Time: 0.270s
 //
 // 版权所有（C）2022，邱秋。metaphysis # yeah dot net
 
