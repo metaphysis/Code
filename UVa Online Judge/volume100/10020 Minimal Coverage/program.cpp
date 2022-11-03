@@ -1,4 +1,4 @@
-// Minimal coverage
+// Minimal Coverage
 // UVa ID: 10020
 // Verdict: Accepted
 // Submission Date: 2017-10-15
