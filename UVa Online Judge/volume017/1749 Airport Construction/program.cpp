@@ -1,154 +1,70 @@
 // Airport Construction
 // UVa ID: 1749
-// Verdict: Wrong Answer
-// Submission Date: 2020-07-01
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2022-11-21
+// UVa Run Time: 0.570s
 //
-// 版权所有（C）2020，邱秋。metaphysis # yeah dot net
+// 版权所有（C）2022，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
 
 using namespace std;
 
-const double EPSILON = 1e-6;
-
-struct point
-{
-	double x, y;
-    point (double x = 0, double y = 0): x(x), y(y) {}
-    point operator + (point p) { return point(x + p.x, y + p.y); };
-    point operator - (point p) { return point(x - p.x, y - p.y); };
-    point operator * (double k) { return point(x * k, y * k); };
-    point operator / (double k) { return point(x / k, y / k); };
-
-	bool operator<(const point &p) const
-	{
-	    if (fabs(x - p.x) > EPSILON) return x < p.x;
-	    return y < p.y;
-	}
-	
-	double distTo(const point &p)
-	{
-	    return sqrt(pow(x - p.x, 2) + pow(y - p.y, 2));
-	}
-};
-
-typedef vector<point> polygon;
+const int MAXN = 205;
+const double EPSILON = 1e-9;
 
 int n;
-polygon pg;
+double answer;
 
-double dot(point a, point b) { return a.x * b.x + a.y * b.y; }
-double cross(point a, point b) { return a.x * b.y - a.y * b.x; }
+int sgn(double x) { return x > EPSILON ? 1 : x < -EPSILON ? -1 : 0; }
 
-double cp(point a, point b, point c)
-{
-	return cross(b - a, c - a);
-}
+struct point {
+    double x, y;
+    point(double x = 0, double y = 0) : x(x), y(y) { }
+    point operator+(const point & p) { return point(x + p.x, y + p.y); }
+    point operator-(const point & p) { return point(x - p.x, y - p.y); }
+    double operator*(const point & p) { return x * p.y - y * p.x; }
+    double norm() { return sqrt(x * x + y * y); }
+} ps[MAXN];
 
-bool pointInBox(point a, point b, point p)
-{
-    double minx = min(a.x, b.x), maxx = max(a.x, b.x);
-    double miny = min(a.y, b.y), maxy = max(a.y, b.y);
-    return p.x >= minx && p.x <= maxx && p.y >= miny && p.y <= maxy;
-}
-
-struct line
-{
-    double a, b, c;
-    line (double a = 0, double b = 0, double c = 0): a(a), b(b), c(c) {}
+struct line {
+    point p, v;
+    line(point p, point v) : p(p), v(v) { }
 };
 
-line getLine(double x1, double y1, double x2, double y2)
-{
-    return line(y2 - y1, x1 - x2, y1 * (x2 - x1) - x1 * (y2 - y1));
-}
+double getDist(line a, line b) { return b.v * (a.p - b.p) / (a.v * b.v) * a.v.norm(); }
 
-line getLine(point p, point q)
-{
-    return getLine(p.x, p.y, q.x, q.y);
-}
+pair<double, int> ip[MAXN];
 
-point getIntersection(line p, line q)
+void getLength(line l)
 {
-    point pi;
-    pi.x = (p.b * q.c - p.c * q.b) / (p.a * q.b - p.b * q.a);
-    pi.y = (p.a * q.c - p.c * q.a) / (p.b * q.a - p.a * q.b);
-    return pi; 
-}
-
-const int OUT = 0, ON = 1, IN = 2;
-
-int isPointInPolygon(point p)
-{
-    bool in = false;
-    for (int i = 0; i < pg.size(); i++)
-    {
-        point a = pg[i] - p, b = pg[(i + 1) % pg.size()] - p;
-        if (abs(cross(a, b)) < EPSILON && dot(a, b) < EPSILON) return ON;
-        if (a.y > b.y) swap(a, b);
-        if (a.y < EPSILON && EPSILON < b.y && cross(a, b) > EPSILON) in = !in;
+    int cnt = 0;
+    for (int i = 0; i < n; i++) {
+        int cp1 = sgn(l.v * (ps[i] - l.p)), cp2 = sgn(l.v * (ps[i + 1] - l.p));
+        if (cp1 == cp2) continue;
+        ip[cnt++] = make_pair(getDist(l, line(ps[i], ps[i + 1] - ps[i])), cp1 - cp2);
     }
-    return in ? IN : OUT;
-}
-
-double getDist(int i, int j)
-{
-    polygon pg1;
-    for (int k1 = 0, k2 = 1; k1 < n; k1++, k2++)
-    {
-        if (k2 >= n) k2 %= n;
-        double cp1 = cp(pg[i], pg[j], pg[k1]);
-        double cp2 = cp(pg[i], pg[j], pg[k2]);
-        if (cp1 * cp2 < -EPSILON)
-        {
-            point p1 = getIntersection(getLine(pg[i], pg[j]), getLine(pg[k1], pg[k2]));
-            if (pointInBox(pg[i], pg[j], p1)) pg1.push_back(p1);
-        }
-        if (fabs(cp1) < EPSILON) pg1.push_back(pg[k1]);
+    sort(ip, ip + cnt);
+    int flag = 0;
+    double length = 0;
+    for (int i = 0; i < cnt; i++) {
+        if (flag) length += ip[i].first - ip[i - 1].first;
+        else answer = max(answer, length), length = 0;
+        flag += ip[i].second;
     }
-    sort(pg1.begin(), pg1.end());
-    
-    double d = 0, cd = 0;
-    for (int i = 1; i < pg1.size(); i++)
-    {
-        point m = (pg1[i] + pg[i - 1]) / 2.0;
-        if (isPointInPolygon(m) != OUT) cd += pg1[i].distTo(pg1[i - 1]);
-        else
-        {
-            d = max(d, cd);
-            cd = 0;
-        }
-    }
-
-    return d;
+    answer = max(answer, length);
 }
 
 int main(int argc, char *argv[])
 {
-    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
-
-    double x1, y1;
-    while (cin >> n)
-    {
-        pg.clear();
+    while (cin >> n) {
+        answer = 0;
+        for (int i = 0; i < n; i++) cin >> ps[i].x >> ps[i].y;
+        ps[n] = ps[0];
         for (int i = 0; i < n; i++)
-        {
-            cin >> x1 >> y1;
-            pg.push_back(point{x1, y1});
-        }
-        double longest = 0.0;
-        for (int i = 0; i < n; i++)
-        {
-            longest = max(longest, pg[i].distTo(pg[(i + 1) % n]));
-            for (int j = i + 2; j < n; j++)
-            {
-                if (fabs(pg[i].distTo(pg[j]) - longest) < EPSILON) continue;
-                longest = max(longest, getDist(i, j));
-            }
-        }
-        cout << fixed << setprecision(9) << longest << '\n';
+            for (int j = i + 1; j < n; j++)
+                getLength(line(ps[i], ps[j] - ps[i]));
+        cout << fixed << setprecision(9) << answer << '\n';
     }
-    
     return 0;
 }
