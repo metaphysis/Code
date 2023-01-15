@@ -1,8 +1,8 @@
 // Bus Tour
 // UVa ID: 1281
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2023-01-16
+// UVa Run Time: 2.080s
 //
 // 版权所有（C）2023，邱秋。metaphysis # yeah dot net
 
@@ -38,6 +38,10 @@ int main(int argc, char *argv[]) {
             for (int i = 0; i < n; i++)
                 for (int j = 0; j < n; j++)
                     g[i][j] = min(g[i][j], g[i][k] + g[k][j]);
+        if (n == 3) {
+            cout << "Case " << cases++ << ": " << 2 * (g[0][1] + g[1][2]) << '\n';
+            continue;
+        }
         int r = INF;
         for (int i = 0; i < (1 << (n - 2)); i++)
             for (int j = 0; j < n - 2; j++)
