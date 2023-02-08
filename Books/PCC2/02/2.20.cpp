@@ -12,74 +12,82 @@ typedef struct Node {
     }
 }* Tree;
 
-void pushUp(Tree &x) {
-    if (x == nullptr) return;
-    x->size = x->cnt;
-    if (x->leftChild != nullptr) x->size += x->leftChild->size;
-    if (x->rightChild != nullptr) x->size += x->rightChild->size;
+void pushUp(Tree &t) {
+    if (t == nullptr) return;
+    t->size = t->cnt;
+    if (t->leftChild != nullptr) t->size += t->leftChild->size;
+    if (t->rightChild != nullptr) t->size += t->rightChild->size;
 }
 
-void rightRotate(Tree &x) {
-    Tree y = x->leftChild;
-    x->leftChild = y->rightChild;
-    y->rightChild = x;
-    x = y;
-    pushUp(x->rightChild);
-    pushUp(x);
+void rightRotate(Tree &t) {
+    Tree lt = t->leftChild;
+    t->leftChild = lt->rightChild;
+    lt->rightChild = t;
+    t = lt;
+    pushUp(t->rightChild);
+    pushUp(t);
 }
 
-void leftRotate(Tree &x) {
-    Tree y = x->rightChild;
-    x->rightChild = y->leftChild;
-    y->leftChild = x;
-    x = y;
-    pushUp(x->leftChild);
-    pushUp(x);
+void leftRotate(Tree &t) {
+    Tree rt = t->rightChild;
+    t->rightChild = rt->leftChild;
+    rt->leftChild = t;
+    t = rt;
+    pushUp(t->leftChild);
+    pushUp(t);
 }
 
-void insert(Tree &x, int k) {
-    if (x == nullptr) {
-        x = new Node(k);
-    } else if (k == x->key) {
-        x->cnt++;
-    } else if (k < x->key) {
-        insert(x->leftChild, k);
-        if (x->priority < x->leftChild->priority) rightRotate(x);
+void insert(Tree &t, int k) {
+    if (t == nullptr) {
+        t = new Node(k);
+    } else if (k == t->key) {
+        t->cnt++;
+    } else if (k < t->key) {
+        insert(t->leftChild, k);
+        if (t->priority < t->leftChild->priority) rightRotate(t);
     } else {
-        insert(x->rightChild, k);
-        if (x->priority < x->rightChild->priority) leftRotate(x);
+        insert(t->rightChild, k);
+        if (t->priority < t->rightChild->priority) leftRotate(t);
     }
-    pushUp(x);
+    pushUp(t);
 }
 
-void remove(Tree &x, int k) {
-    if (x == nullptr) return;
-    if (k == x->key) {
-        if (x->cnt > 1) x->cnt--;
-        else if (x->leftChild != nullptr || x->rightChild != nullptr) {
-            if (x->rightChild == nullptr ||
-                (x->leftChild != nullptr &&
-                x->leftChild->priority > x->rightChild->priority)) {
-                    rightRotate(x);
-                    remove(x->rightChild, k);
+void remove(Tree &t, int k) {
+    if (t == nullptr) return;
+    if (k == t->key) {
+        if (t->cnt > 1) t->cnt--;
+        else if (t->leftChild != nullptr || t->rightChild != nullptr) {
+            if (t->rightChild == nullptr ||
+                (t->leftChild != nullptr &&
+                t->leftChild->priority > t->rightChild->priority)) {
+                    rightRotate(t);
+                    remove(t->rightChild, k);
                 } else {
-                    leftRotate(x);
-                    remove(x->leftChild, k);
+                    leftRotate(t);
+                    remove(t->leftChild, k);
                 }
         } else {
-            delete x;
-            x = nullptr;
+            delete t;
+            t = nullptr;
         }
-    } else if (k < x->key) remove(x->leftChild, k);
-    else remove(x->rightChild, k);
-    pushUp(x);
+    } else if (k < t->key) remove(t->leftChild, k);
+    else remove(t->rightChild, k);
+    pushUp(t);
 }
 
-void traversal(Tree &x) {
-    if (x == nullptr) return;
-    cout << x->key << ' ' << x->priority << ' ' << x->cnt << ' ' << x->size << '\n';
-    traversal(x->leftChild);
-    traversal(x->rightChild);
+int getRank(Tree t, int x) {
+    if (t == nullptr) return -1;
+    int s = t->leftChild == nullptr ? 0 : t->leftChild->size;
+    if (x == t->key) return s;
+    if (x < t->key) return getRank(t->leftChild, x);
+    return s + t->cnt + getRank(t->rightChild, x);
+}
+
+void traversal(Tree &t) {
+    if (t == nullptr) return;
+    cout << t->key << ' ' << t->priority << ' ' << t->cnt << ' ' << t->size << '\n';
+    traversal(t->leftChild);
+    traversal(t->rightChild);
 }
 
 int main(int argc, char *argv[]) {
@@ -89,6 +97,7 @@ int main(int argc, char *argv[]) {
     insert(root, 2);
     insert(root, 8);
     insert(root, 5);
-    traversal(root);
+    insert(root, 2);
+    cout << getRank(root, 5) << '\n';
     return 0;
 }
