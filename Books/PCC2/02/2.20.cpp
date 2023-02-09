@@ -12,6 +12,8 @@ typedef struct Node {
     }
 }* Tree;
 
+const int INF = 0x7f7f7f7f;
+
 void pushUp(Tree &t) {
     if (t == nullptr) return;
     t->size = t->cnt;
@@ -76,28 +78,57 @@ void remove(Tree &t, int k) {
 }
 
 int getRank(Tree t, int x) {
-    if (t == nullptr) return -1;
+    if (t == nullptr) return -INF + 1;
     int s = t->leftChild == nullptr ? 0 : t->leftChild->size;
-    if (x == t->key) return s;
+    if (x == t->key) return s + 1;
     if (x < t->key) return getRank(t->leftChild, x);
     return s + t->cnt + getRank(t->rightChild, x);
 }
 
-void traversal(Tree &t) {
-    if (t == nullptr) return;
-    cout << t->key << ' ' << t->priority << ' ' << t->cnt << ' ' << t->size << '\n';
-    traversal(t->leftChild);
-    traversal(t->rightChild);
+int getKth(Tree t, int k) {
+    if (t == nullptr) return INF;
+    int s = t->leftChild == nullptr ? 0 : t->leftChild->size;
+    if (k <= s) return getKth(t->leftChild, k);
+    if (k <= s + t->cnt) return t->key;
+    return getKth(t->rightChild, k - s - t->cnt);
+}
+
+int getPrevious(Tree t, int x) {
+    int r = INF;
+    while (t != nullptr) {
+        if (t->key < x) {
+            r = t->key;
+            t = t->rightChild;
+        } else t = t->leftChild;
+    }
+    return r;
+}
+
+int getNext(Tree t, int x) {
+    int r = INF;
+    while (t != nullptr) {
+        if (t->key > x) {
+            r = t->key;
+            t = t->leftChild;
+        } else t = t->rightChild;
+    }
+    return r;
 }
 
 int main(int argc, char *argv[]) {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
-    srand(time(NULL));
-    Tree root = new Node(1);
-    insert(root, 2);
-    insert(root, 8);
-    insert(root, 5);
-    insert(root, 2);
-    cout << getRank(root, 5) << '\n';
+    Tree root = new Node(-INF);
+    int n, cmd, x;
+    cin >> n;
+    for (int i = 1; i <= n; i++) {
+        cin >> cmd >> x;
+        if (cmd == 1) insert(root, x);
+        if (cmd == 2) remove(root, x);
+        if (cmd == 3) cout << getRank(root, x) - 1 << '\n';
+        if (cmd == 4) cout << getKth(root, x + 1) << '\n';
+        if (cmd == 5) cout << getPrevious(root, x) << '\n';
+        if (cmd == 6) cout << getNext(root, x) << '\n';
+    }
+    
     return 0;
 }
