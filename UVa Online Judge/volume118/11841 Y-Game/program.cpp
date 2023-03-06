@@ -43,18 +43,20 @@ int main(int argc, char *argv[]) {
                 B |= ps[i].z == 0;
                 cc = 0;
                 connected[cc++] = i;
-                for (int j = i + 1; j < m; j++) {
-                    if (!tag[j])
-                        for (int k = 0; k < cc; k++) {
-                            if (isConnected(connected[k], j)) {
-                                tag[j] = 1;
-                                connected[cc++] = j;
-                                L |= ps[j].x == 0;
-                                R |= ps[j].y == 0;
-                                B |= ps[j].z == 0;
-                                break;
-                            }
-                        }
+                while (true) {
+                    bool added = false;
+                    for (int j = 0; j < m && !added; j++)
+                        if (!tag[j])
+                            for (int k = 0; k < cc && !added; k++)
+                                if (isConnected(connected[k], j)) {
+                                    tag[j] = 1;
+                                    connected[cc++] = j;
+                                    L |= ps[j].x == 0;
+                                    R |= ps[j].y == 0;
+                                    B |= ps[j].z == 0;
+                                    added = true;
+                                }
+                    if (!added) break;
                 }
                 if (L && R && B) {
                     Benny = 1;
