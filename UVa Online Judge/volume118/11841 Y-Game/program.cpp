@@ -1,8 +1,8 @@
 // Y-Game
 // UVa ID: 11841
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2023-03-09
+// UVa Run Time: 0.010s
 //
 // 版权所有（C）2023，邱秋。metaphysis # yeah dot net
 
@@ -25,7 +25,7 @@ int tag[410], connected[410];
 
 int main(int argc, char *argv[]) {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
-    while (cin >> n >> m, m) {
+    while (cin >> n >> m, n || m) {
         int x, y, z;
         for (int i = 0; i < m; i++) {
             cin >> x >> y >> z;
