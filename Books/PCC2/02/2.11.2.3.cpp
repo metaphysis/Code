@@ -57,7 +57,7 @@ int queryX(int px, int lx, int rx, int qlx, int qly, int qrx, int qry)
 void updateY(int px, int lx, int rx, int py, int ly, int ry, int x, int y, int value)
 {
     if (ly == ry) {
-        if (lx == rx) st[px][py] = data[lx][ly];
+        if (lx == rx) st[px][py] = value;
         else st[px][py] = max(st[LC(px)][py], st[RC(px)][py]);
     } else {
         int my = (ly + ry) >> 1;
