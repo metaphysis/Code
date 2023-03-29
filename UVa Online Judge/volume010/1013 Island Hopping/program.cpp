@@ -1,8 +1,8 @@
 // Island Hopping
 // UVa ID: 1013
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2023-03-30
+// UVa Run Time: 0.030s
 //
 // 版权所有（C）2023，邱秋。metaphysis # yeah dot net
 
