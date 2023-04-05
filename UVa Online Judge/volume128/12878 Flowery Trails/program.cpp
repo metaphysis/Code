@@ -58,7 +58,6 @@ int main(int argc, char *argv[]) {
             add(u, v, w);
         }
         d[0] = 0;
-        visited[0] = 1;
         priority_queue<block> q;
         q.push(block{0, 0});
         while (!q.empty()) {
