@@ -63,16 +63,13 @@ int main(int argc, char *argv[]) {
         q.push(block{0, 0});
         while (!q.empty()) {
             block b = q.top(); q.pop();
-            visited[b.v] = 0;
+            if (d[b.v] < b.w) continue;
             for (int i = head[b.v]; ~i; i = g[i].nxt)
                 if (d[g[i].v] > d[b.v] + g[i].w) {
                     d[g[i].v] = d[b.v] + g[i].w;
                     parent[g[i].v].clear();
                     parent[g[i].v].push_back(make_pair(b.v, g[i].w));
-                    if (!visited[g[i].v]) {
-                        visited[g[i].v] = 1;
-                        q.push(block{g[i].v, d[g[i].v]});
-                    }
+                    q.push(block{g[i].v, d[g[i].v]});
                 } else if (d[g[i].v] == d[b.v] + g[i].w)
                     parent[g[i].v].push_back(make_pair(b.v, g[i].w));
         }
