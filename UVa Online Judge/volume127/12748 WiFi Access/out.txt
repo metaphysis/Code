@@ -1,0 +1,2941 @@
+Case 1:
+Yes
+Yes
+Yes
+Yes
+Case 2:
+Yes
+Case 3:
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 4:
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 5:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 6:
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 7:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 8:
+Yes
+Yes
+Yes
+Yes
+Case 9:
+No
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 10:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 11:
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 12:
+Yes
+Yes
+Yes
+Yes
+Case 13:
+Yes
+Yes
+Case 14:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 15:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 16:
+Yes
+Yes
+Case 17:
+Yes
+Yes
+Yes
+Yes
+Case 18:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 19:
+Yes
+Case 20:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 21:
+Yes
+Yes
+Yes
+Yes
+Case 22:
+Yes
+Case 23:
+Yes
+Case 24:
+Yes
+Yes
+Yes
+Yes
+Case 25:
+Yes
+Case 26:
+Yes
+Yes
+Yes
+Case 27:
+Yes
+Yes
+Yes
+Yes
+Case 28:
+Yes
+Yes
+Yes
+Yes
+Case 29:
+Yes
+Case 30:
+Yes
+Yes
+Case 31:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 32:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 33:
+No
+No
+No
+Case 34:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 35:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 36:
+Yes
+Yes
+Case 37:
+Yes
+Yes
+Yes
+Case 38:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 39:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 40:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 41:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 42:
+Yes
+Yes
+Yes
+Yes
+Case 43:
+Yes
+Yes
+Yes
+Yes
+Case 44:
+Yes
+Yes
+Yes
+Yes
+Case 45:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 46:
+No
+No
+Yes
+Yes
+Yes
+No
+Case 47:
+Yes
+Yes
+Case 48:
+Yes
+Yes
+Yes
+Yes
+Yes
+No
+Yes
+Yes
+Yes
+Case 49:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 50:
+Yes
+Case 51:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 52:
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 53:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 54:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 55:
+Yes
+Yes
+Yes
+Yes
+Case 56:
+Yes
+Yes
+Yes
+Yes
+Case 57:
+Yes
+Yes
+Yes
+No
+Case 58:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 59:
+Yes
+Case 60:
+Yes
+Yes
+Case 61:
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 62:
+Yes
+Yes
+Case 63:
+Yes
+Yes
+Yes
+Case 64:
+Yes
+Yes
+Yes
+Yes
+No
+Yes
+Yes
+Yes
+Case 65:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 66:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 67:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 68:
+No
+Yes
+Yes
+Case 69:
+No
+Yes
+No
+Case 70:
+Yes
+No
+Yes
+Case 71:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 72:
+Yes
+Case 73:
+Yes
+Yes
+Yes
+No
+Yes
+Yes
+Yes
+Case 74:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 75:
+Yes
+Yes
+Yes
+Case 76:
+Yes
+Yes
+Yes
+Yes
+Case 77:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 78:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 79:
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 80:
+Yes
+Yes
+Yes
+Yes
+Case 81:
+Yes
+Yes
+Case 82:
+Yes
+Yes
+Yes
+Case 83:
+Yes
+Yes
+Yes
+Case 84:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 85:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 86:
+Yes
+Case 87:
+Yes
+Yes
+Yes
+Yes
+Case 88:
+Yes
+Yes
+Yes
+Yes
+Case 89:
+Yes
+Case 90:
+No
+No
+Yes
+No
+Yes
+Yes
+Yes
+Yes
+Case 91:
+Yes
+Yes
+Case 92:
+Yes
+Case 93:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 94:
+Yes
+Case 95:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 96:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 97:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 98:
+Yes
+Yes
+Case 99:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 100:
+No
+Yes
+Yes
+No
+Yes
+Yes
+Yes
+Case 101:
+Yes
+Yes
+Yes
+Case 102:
+Yes
+Yes
+Yes
+Case 103:
+Yes
+Yes
+Case 104:
+Yes
+Case 105:
+Yes
+Yes
+Case 106:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 107:
+Yes
+Yes
+Yes
+Yes
+Case 108:
+Yes
+Yes
+Yes
+Yes
+Case 109:
+Yes
+Yes
+Yes
+Yes
+Case 110:
+Yes
+Yes
+Case 111:
+Yes
+Yes
+Case 112:
+No
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 113:
+Yes
+Yes
+Yes
+Case 114:
+Yes
+Case 115:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 116:
+Yes
+Yes
+Yes
+Case 117:
+Yes
+Yes
+Yes
+Case 118:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 119:
+No
+No
+No
+No
+No
+No
+Yes
+No
+Yes
+Case 120:
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 121:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 122:
+Yes
+Yes
+Yes
+Case 123:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 124:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 125:
+Yes
+Yes
+Case 126:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 127:
+No
+No
+Case 128:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 129:
+Yes
+Yes
+Yes
+Yes
+Case 130:
+Yes
+Yes
+Yes
+Yes
+Case 131:
+Yes
+Yes
+Yes
+No
+Yes
+No
+Case 132:
+Yes
+Case 133:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 134:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 135:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 136:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 137:
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 138:
+Yes
+Case 139:
+Yes
+Yes
+Case 140:
+Yes
+Yes
+Case 141:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 142:
+Yes
+Yes
+Yes
+Case 143:
+No
+No
+No
+No
+No
+No
+No
+No
+No
+Case 144:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 145:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 146:
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 147:
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 148:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 149:
+Yes
+No
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 150:
+Yes
+Yes
+Yes
+Case 151:
+No
+Yes
+No
+Yes
+Yes
+No
+Case 152:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 153:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 154:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 155:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 156:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 157:
+Yes
+Yes
+Case 158:
+Yes
+Case 159:
+Yes
+Yes
+Case 160:
+Yes
+Yes
+Yes
+Yes
+Case 161:
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 162:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 163:
+Yes
+Yes
+Yes
+Yes
+Case 164:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 165:
+Yes
+Case 166:
+No
+Yes
+Yes
+Case 167:
+Yes
+Yes
+Yes
+Yes
+Case 168:
+Yes
+Case 169:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 170:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 171:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 172:
+No
+Yes
+Case 173:
+Yes
+Yes
+Yes
+Case 174:
+Yes
+Yes
+Case 175:
+Yes
+Yes
+Case 176:
+Yes
+Yes
+Case 177:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 178:
+Yes
+Yes
+Yes
+Yes
+Case 179:
+Yes
+Yes
+Yes
+Yes
+Case 180:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 181:
+Yes
+Yes
+Yes
+Case 182:
+Yes
+Yes
+Yes
+Yes
+No
+Yes
+Yes
+No
+Case 183:
+Yes
+Yes
+Yes
+No
+No
+No
+No
+No
+Yes
+Case 184:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 185:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 186:
+Yes
+Yes
+Case 187:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 188:
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 189:
+Yes
+Case 190:
+Yes
+Case 191:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 192:
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 193:
+Yes
+No
+No
+Yes
+No
+No
+Yes
+Case 194:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 195:
+Yes
+Yes
+Yes
+Case 196:
+No
+No
+Case 197:
+Yes
+Yes
+Yes
+Yes
+Case 198:
+Yes
+Case 199:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 200:
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 201:
+Yes
+Case 202:
+Yes
+Yes
+Yes
+Case 203:
+Yes
+Yes
+Case 204:
+Yes
+Yes
+Yes
+Case 205:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 206:
+Yes
+Case 207:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 208:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 209:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 210:
+Yes
+Yes
+Yes
+Yes
+Case 211:
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 212:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 213:
+No
+Case 214:
+Yes
+Case 215:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 216:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 217:
+Yes
+Yes
+Yes
+Yes
+Case 218:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 219:
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 220:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 221:
+No
+No
+No
+No
+Yes
+Yes
+Yes
+Yes
+No
+Case 222:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 223:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 224:
+Yes
+Yes
+Case 225:
+No
+Case 226:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 227:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 228:
+Yes
+Yes
+Yes
+Case 229:
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 230:
+Yes
+Yes
+Yes
+Case 231:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 232:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 233:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 234:
+Yes
+Yes
+Yes
+Yes
+Case 235:
+No
+No
+No
+Case 236:
+Yes
+Yes
+Case 237:
+Yes
+Yes
+Yes
+Yes
+Case 238:
+No
+Yes
+No
+No
+Case 239:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 240:
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 241:
+Yes
+Yes
+Yes
+Yes
+Case 242:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 243:
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 244:
+Yes
+Yes
+Yes
+Yes
+Case 245:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 246:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 247:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 248:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 249:
+Yes
+Case 250:
+Yes
+Yes
+Yes
+Yes
+Case 251:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 252:
+Yes
+Yes
+Yes
+Yes
+Yes
+No
+Yes
+Case 253:
+Yes
+Yes
+Yes
+Case 254:
+Yes
+Yes
+Yes
+Yes
+Case 255:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 256:
+Yes
+Yes
+Yes
+Yes
+Case 257:
+Yes
+Case 258:
+Yes
+Case 259:
+Yes
+Yes
+No
+Yes
+Yes
+Yes
+Case 260:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 261:
+Yes
+Yes
+Case 262:
+Yes
+Yes
+Yes
+Case 263:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 264:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 265:
+Yes
+Case 266:
+Yes
+Case 267:
+Yes
+Yes
+Yes
+Case 268:
+Yes
+Yes
+Yes
+Case 269:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 270:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 271:
+Yes
+Yes
+Yes
+Case 272:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 273:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 274:
+Yes
+Case 275:
+Yes
+Yes
+Case 276:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 277:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 278:
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 279:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 280:
+Yes
+Yes
+Yes
+Yes
+Case 281:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 282:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 283:
+Yes
+Yes
+Yes
+Yes
+Case 284:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 285:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 286:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 287:
+Yes
+Case 288:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 289:
+No
+No
+No
+Case 290:
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 291:
+Yes
+Yes
+Case 292:
+Yes
+Yes
+Yes
+Yes
+Case 293:
+Yes
+Yes
+Yes
+Yes
+Case 294:
+Yes
+Yes
+Yes
+Case 295:
+Yes
+Yes
+Yes
+Yes
+Case 296:
+Yes
+Case 297:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 298:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 299:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 300:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 301:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 302:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 303:
+Yes
+Yes
+Yes
+Case 304:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 305:
+Yes
+No
+Case 306:
+Yes
+Yes
+Case 307:
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 308:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 309:
+Yes
+Yes
+Yes
+Yes
+Case 310:
+Yes
+Yes
+Case 311:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 312:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 313:
+Yes
+Yes
+Yes
+Case 314:
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 315:
+Yes
+Case 316:
+Yes
+Yes
+Yes
+Case 317:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 318:
+Yes
+Case 319:
+Yes
+Yes
+Case 320:
+Yes
+Yes
+Yes
+Yes
+Case 321:
+Yes
+Case 322:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 323:
+Yes
+Case 324:
+Yes
+Yes
+Yes
+Yes
+Case 325:
+Yes
+Yes
+Yes
+Yes
+Case 326:
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 327:
+Yes
+Yes
+Case 328:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 329:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 330:
+Yes
+Yes
+Yes
+Case 331:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 332:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 333:
+No
+No
+Case 334:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 335:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 336:
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 337:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 338:
+Yes
+Yes
+Yes
+Yes
+Case 339:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 340:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 341:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 342:
+No
+No
+No
+No
+Case 343:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 344:
+Yes
+Yes
+Yes
+No
+Case 345:
+Yes
+Yes
+Yes
+Yes
+Case 346:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 347:
+Yes
+Yes
+Yes
+Yes
+Case 348:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 349:
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 350:
+Yes
+Yes
+Yes
+Yes
+Case 351:
+Yes
+Yes
+Yes
+Case 352:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 353:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 354:
+Yes
+Yes
+Yes
+Yes
+Case 355:
+Yes
+Yes
+Yes
+Case 356:
+Yes
+Yes
+Yes
+Yes
+Case 357:
+No
+Yes
+Yes
+No
+No
+Yes
+Yes
+Case 358:
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 359:
+Yes
+Yes
+Yes
+Case 360:
+No
+No
+No
+No
+No
+No
+Case 361:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 362:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 363:
+Yes
+Case 364:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 365:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 366:
+Yes
+Case 367:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 368:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 369:
+Yes
+Yes
+Yes
+Case 370:
+Yes
+Yes
+Yes
+Yes
+Case 371:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 372:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 373:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 374:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 375:
+No
+No
+No
+No
+No
+Yes
+No
+No
+Case 376:
+Yes
+Yes
+Yes
+Case 377:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 378:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 379:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 380:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 381:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 382:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 383:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 384:
+Yes
+Yes
+Yes
+Case 385:
+Yes
+Yes
+Yes
+Case 386:
+Yes
+Case 387:
+Yes
+Case 388:
+No
+Case 389:
+Yes
+Yes
+Yes
+Case 390:
+No
+Yes
+Yes
+No
+Yes
+No
+No
+Case 391:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 392:
+Yes
+Yes
+Case 393:
+Yes
+Yes
+No
+Yes
+Case 394:
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 395:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 396:
+No
+No
+Case 397:
+No
+No
+Case 398:
+Yes
+Case 399:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 400:
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 401:
+Yes
+Yes
+Yes
+Yes
+Case 402:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 403:
+Yes
+Yes
+Yes
+Yes
+Case 404:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 405:
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 406:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 407:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 408:
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 409:
+Yes
+Yes
+Yes
+Case 410:
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 411:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 412:
+No
+No
+No
+No
+No
+No
+No
+Case 413:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 414:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 415:
+Yes
+Yes
+Case 416:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 417:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 418:
+Yes
+Case 419:
+Yes
+Case 420:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 421:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 422:
+Yes
+Yes
+Case 423:
+Yes
+Yes
+Case 424:
+Yes
+Yes
+Yes
+Case 425:
+Yes
+Yes
+Yes
+Case 426:
+Yes
+Case 427:
+Yes
+Yes
+Case 428:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 429:
+Yes
+Yes
+Case 430:
+Yes
+Yes
+Case 431:
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 432:
+Yes
+Case 433:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 434:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 435:
+Yes
+Yes
+Yes
+Case 436:
+Yes
+Case 437:
+No
+Yes
+Yes
+Yes
+No
+Yes
+Yes
+Case 438:
+Yes
+Yes
+Yes
+Case 439:
+Yes
+Yes
+Yes
+Yes
+Case 440:
+No
+No
+Case 441:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 442:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 443:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 444:
+Yes
+Yes
+Yes
+Case 445:
+Yes
+Case 446:
+Yes
+Yes
+Yes
+Case 447:
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 448:
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 449:
+Yes
+Yes
+Yes
+Yes
+Case 450:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 451:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 452:
+No
+Yes
+Yes
+No
+Case 453:
+Yes
+Yes
+Case 454:
+Yes
+Yes
+Yes
+Case 455:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 456:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 457:
+Yes
+Yes
+Yes
+Yes
+Case 458:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 459:
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 460:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 461:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 462:
+Yes
+Yes
+Yes
+Yes
+Case 463:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 464:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 465:
+Yes
+Case 466:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 467:
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 468:
+Yes
+Yes
+Yes
+Case 469:
+Yes
+Case 470:
+Yes
+Yes
+Yes
+Case 471:
+Yes
+Yes
+Yes
+Yes
+Case 472:
+Yes
+Yes
+Yes
+Case 473:
+Yes
+Yes
+Yes
+Case 474:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 475:
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 476:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 477:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 478:
+Yes
+Case 479:
+Yes
+Yes
+Case 480:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 481:
+Yes
+Yes
+Case 482:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 483:
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 484:
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 485:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 486:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 487:
+No
+No
+No
+No
+No
+No
+No
+No
+Case 488:
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 489:
+Yes
+Case 490:
+Yes
+Yes
+Yes
+Case 491:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 492:
+Yes
+Yes
+Yes
+Case 493:
+Yes
+Yes
+Case 494:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 495:
+Yes
+Case 496:
+Yes
+Case 497:
+Yes
+Yes
+Yes
+Yes
+No
+Yes
+Case 498:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Case 499:
+Yes
+Yes
+Case 500:
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
