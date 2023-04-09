@@ -44,6 +44,7 @@ int main(int argc, char *argv[]) {
             r += verify(b, (1 << 11) | (1 << 14) );
             if (r == 16) o.push_back(b);
         }
+
     int T;
     cin >> T;
     for (int cs = 1; cs <= T; cs++) {
