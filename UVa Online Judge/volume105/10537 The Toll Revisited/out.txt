@@ -1,0 +1,15 @@
+Case 1:
+2
+A
+Case 2:
+3605038190
+A-B-C-D-E-F-G-H-I-J-K-L-M-N-O-P-Q-R-S-T-U-V-W-X-Y-Z
+Case 3:
+20
+A-B-c
+Case 4:
+21
+A-b-c
+Case 5:
+44
+A-b-c-X

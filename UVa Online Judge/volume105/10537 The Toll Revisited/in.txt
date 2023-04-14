@@ -1,0 +1,49 @@
+0 
+2 A A
+25  
+A B
+B C
+C D
+D E
+E F
+F G
+G H
+H I
+I J
+J K
+K L
+L M
+M N 
+N O
+O P
+P Q
+Q R
+R S
+S T
+T U
+U V
+V W
+W X
+X Y
+Y Z
+999999999 A Z
+4 
+A b 
+A B 
+b c 
+B c 
+18 A c
+4
+A b 
+A B 
+b c 
+B c 
+19 A c
+5
+A D
+D X
+A b
+b c
+c X
+39 A X
+-1
