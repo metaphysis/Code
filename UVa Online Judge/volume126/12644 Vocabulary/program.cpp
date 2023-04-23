@@ -2,7 +2,7 @@
 // UVa ID: 12644
 // Verdict: Accepted
 // Submission Date: 2023-04-23
-// UVa Run Time: 0.390s
+// UVa Run Time: 0.110s
 //
 // 版权所有（C）2023，邱秋。metaphysis # yeah dot net
 
@@ -12,15 +12,11 @@ using namespace std;
 
 struct edge { int v, nxt; } g[260000];
 int V, C, cnt, cx[1010], cy[1010], head[1010], visited[1010];
-string vw[510], cw[510];
-int dx[32], dy[32];
+string w;
+int dx[510][32], dy[510][32];
 bool matched(int i, int j) {
-    memset(dx, 0, sizeof dx);
-    memset(dy, 0, sizeof dy);
-    for (auto c : vw[i]) dx[c - 'a']++;
-    for (auto c : cw[j]) dy[c - 'a']++;
-    for (int i = 0; i < 26; i++)
-        if (dy[i] > dx[i])
+    for (int k = 0; k < 26; k++)
+        if (dx[i][k] < dy[j][k])
             return false;
     return true;
 }
@@ -53,8 +49,16 @@ int main(int argc, char *argv[]) {
     while (cin >> V >> C) {
         cnt = 0;
         memset(head, -1, sizeof head);
-        for (int i = 0; i < V; i++) cin >> vw[i];
-        for (int i = 0; i < C; i++) cin >> cw[i];
+        memset(dx, 0, sizeof dx);
+        memset(dy, 0, sizeof dy);
+        for (int i = 0; i < V; i++) {
+            cin >> w;
+            for (auto c : w) dx[i][c - 'a']++;
+        }
+        for (int i = 0; i < C; i++) {
+            cin >> w;
+            for (auto c : w) dy[i][c - 'a']++;
+        }
         for (int i = 0; i < V; i++)
             for (int j = 0; j < C; j++)
                 if (matched(i, j)) {
