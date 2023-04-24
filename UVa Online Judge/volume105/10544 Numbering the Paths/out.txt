@@ -1,0 +1,13 @@
+DCFE: 9
+GCE: 15
+GAB: 1
+CFE: 3
+AFE: 6
+CB: 1
+GB: 13
+DAB: 1
+DAFE: 6
+ABCD: 1
+ACD: 3
+CD: 1
+AC: 3

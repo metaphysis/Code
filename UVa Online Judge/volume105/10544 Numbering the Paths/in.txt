@@ -1,0 +1,44 @@
+3
+7 15
+CB
+FE
+DA
+GA
+AB
+DC
+AF
+GB
+AE
+GA
+AC
+CE
+GF
+GC
+CF
+9
+DCFE
+GCE
+GAB
+CFE
+AFE
+CB
+GB
+DAB
+DAFE
+5 6
+AB
+AC
+BC
+CD
+CE
+ED
+3
+ABCD
+ACD
+CD
+3 3
+AB
+AC
+AB
+1
+AC
