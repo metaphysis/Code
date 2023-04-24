@@ -17,36 +17,31 @@ int cnt, head[MAXV];
 int dist[MAXV], visited[MAXV];
 
 struct edge { int v, w, next; } edges[MAXE];
-struct state
-{
-    int u, w;
-    bool operator < (const state &s) const { return w > s.w; }
+struct state {
+    int u, fx;
+    bool operator < (const state &s) const { return fx > s.fx; }
 };
 
-void clearEdge()
-{
+void clearEdge() {
     cnt = 0;
     memset(head, -1, sizeof head);
 }
 
-void addEdge(int u, int v, int w)
-{
+void addEdge(int u, int v, int w) {
     edges[cnt] = edge{v, w, head[u]};
     head[u] = cnt++;
 }
 
 priority_queue<state> q;
 
-int ksp(vector<tuple<int, int, int>> &data, int s, int t, int k)
-{
+int ksp(vector<tuple<int, int, int>> &data, int s, int t, int k) {
     clearEdge();
     for (auto d : data) addEdge(get<1>(d), get<0>(d), get<2>(d));
 
     for (int i = 0; i < n; i++) dist[i] = INF, visited[i] = 0;
     int u = t;
     dist[u] = 0;
-    while (!visited[u])
-    {
+    while (!visited[u]) {
         visited[u] = 1;
         for (int i = head[u]; ~i; i = edges[i].next)
             if (!visited[edges[i].v] && dist[edges[i].v] > dist[u] + edges[i].w)
@@ -63,10 +58,9 @@ int ksp(vector<tuple<int, int, int>> &data, int s, int t, int k)
 
     while (!q.empty()) q.pop();
     q.push(state{s, dist[s]});
-    while (!q.empty())
-    {
+    while (!q.empty()) {
         state s = q.top(); q.pop();
-        int walked = s.w - dist[s.u];
+        int walked = s.fx - dist[s.u];
         if (s.u == t)
             if (!(--k))
                 return walked;
