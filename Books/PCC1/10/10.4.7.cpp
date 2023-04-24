@@ -1,16 +1,4 @@
-// Always Late
-// UVa ID: 10342
-// Verdict: Accepted
-// Submission Date: 2023-04-24
-// UVa Run Time: 0.030s
-//
-// 版权所有（C）2023，邱秋。metaphysis # yeah dot net
-
-#include <bits/stdc++.h>
-
-using namespace std;
-
-const int MAXV = 110, MAXE = 20010, INF = 0x3f3f3f3f;
+const int MAXV = 1010, MAXE = 100010, INF = 0x3f3f3f3f;
 
 int n, m;
 int cnt, head[MAXV];
@@ -30,11 +18,12 @@ void clearEdge() {
 void addEdge(int u, int v, int w) {
     g[cnt] = edge{v, w, head[u]};
     head[u] = cnt++;
-    g[cnt] = edge{u, w, head[v]};
-    head[v] = cnt++;
 }
 
-int ksp(int s, int t, int k) {
+int ksp(vector<tuple<int, int, int>> &data, int s, int t, int k) {
+    clearEdge();
+    for (auto d : data) addEdge(get<1>(d), get<0>(d), get<2>(d));
+
     for (int i = 0; i < n; i++) dist[i] = INF, visited[i] = 0;
     int u = t;
     dist[u] = 0;
@@ -47,8 +36,13 @@ int ksp(int s, int t, int k) {
         for (int i = 0; i < n; i++)
             if (!visited[i] && dist[i] < least)
                 least = dist[i], u = i;
+            
     }
     if (dist[s] == INF) return -1;
+
+    clearEdge();
+    for (auto d : data) addEdge(get<0>(d), get<1>(d), get<2>(d));
+
     int lastPathLength = -INF;
     priority_queue<state> q;
     q.push(state{s, dist[s]});
@@ -63,26 +57,4 @@ int ksp(int s, int t, int k) {
             q.push(state{g[i].v, walked + g[i].w + dist[g[i].v]});
     }
     return -1;
-}
-
-int main(int argc, char *argv[]) {
-    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
-    int s, t, q, cases = 1;
-    while (cin >> n >> m) {
-        cout << "Set #" << cases++ << '\n';
-        clearEdge();
-        for (int i = 0, u, v, w; i < m; i++) {
-            cin >> u >> v >> w;
-            addEdge(u, v, w);
-        }
-        cin >> q;
-        for (int i = 0; i < q; i++) {
-            cin >> s >> t;
-            int r = ksp(s, t, 2);
-            if (r == -1) cout << '?';
-            else cout << r;
-            cout << '\n';
-        }
-    }
-    return 0;
 }
