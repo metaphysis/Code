@@ -1,0 +1,10 @@
+TTTTTTT The solution is accepted
+TTTFFTT The solution is not accepted
+TFTTTFT The solution is not accepted
+FFFFFFF The solution is not accepted
+TTTTTTT The solution is accepted
+TTTTTTT The solution is accepted
+TTTTTFT The solution is not accepted
+TTTTTTT The solution is accepted
+FFFFFFF The solution is not accepted
+TTTTTTF The solution is not accepted

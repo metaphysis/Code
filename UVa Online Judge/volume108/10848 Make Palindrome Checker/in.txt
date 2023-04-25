@@ -1,0 +1,10 @@
+abcd 3 abcdcba
+aaaa 3 abcdcba
+abc 2 abdcba
+aab b baab
+abababaabababa 0 abababaabababa
+pqrsabcdpqrs 9 pqrsabcdpqrqpdcbasrqp
+a 0 aa
+aa 0 aa
+ 0
+ 2 aa
