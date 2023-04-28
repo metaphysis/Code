@@ -1,4 +1,4 @@
-// Fourth Point!!
+// Fourth Point
 // UVa ID: 10242
 // Verdict: Accepted
 // Submission Date: 2017-12-05
