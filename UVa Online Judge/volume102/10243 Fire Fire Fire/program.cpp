@@ -1,4 +1,4 @@
-// Fire! Fire!! Fire!!!
+// Fire Fire Fire
 // UVa ID: 10243
 // Verdict: Accepted
 // Submission Date: 2017-10-22
