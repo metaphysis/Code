@@ -1,4 +1,4 @@
-// Dijkstra, Dijkstra.
+// Dijkstra Dijkstra
 // UVa ID: 10806
 // Verdict: Accepted
 // Submission Date: 2017-10-05
