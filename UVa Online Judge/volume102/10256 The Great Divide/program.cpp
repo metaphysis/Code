@@ -1,8 +1,8 @@
 // The Great Divide
 // UVa ID: 10256
 // Verdict: Accepted
-// Submission Date: 2023-04-06
-// UVa Run Time: 0.310s
+// Submission Date: 2023-04-29
+// UVa Run Time: 0.080s
 //
 // 版权所有（C）2023，邱秋。metaphysis # yeah dot net
 
@@ -47,6 +47,9 @@ bool ccwOrCollinear(point &a, point &b, point &c) {
 }
 
 polygon andrewConvexHull(polygon &pg) {
+    sort(pg.begin(), pg.end());
+    pg.erase(unique(pg.begin(), pg.end()), pg.end());
+
 	polygon ch;
 	if (pg.size() < 3) {
 	    for (int i = 0; i < pg.size(); i++) ch.push_back(pg[i]);
@@ -82,29 +85,47 @@ int isPointInPolygon(point p, polygon &pg) {
     return in ? IN : OUT;
 }
 
+struct segment {
+    point p1, p2;
+};
+
+bool isIntersected(segment s1, segment s2) {
+    double cp1 = cp(s1.p1, s1.p2, s2.p1), cp2 = cp(s1.p1, s1.p2, s2.p2);
+    double cp3 = cp(s2.p1, s2.p2, s1.p1), cp4 = cp(s2.p1, s2.p2, s1.p2);
+    return cp1 * cp2 < 0 && cp3 * cp4 < 0;
+}
+
+bool isPolygonIntersected(polygon pg1, polygon pg2) {
+    int s1 = pg1.size(), s2 = pg2.size();
+    for (int i = 0; i < s1; i++)
+        if (isPointInPolygon(pg1[i], pg2))
+            return true;
+    for (int i = 0; i < s2; i++)
+        if (isPointInPolygon(pg2[i], pg1))
+            return true;
+    for (int i = 0; i < s1; i++)
+        for (int j = 0; j < s2; j++)
+            if (isIntersected(segment{pg1[i], pg1[(i + 1) % s1]}, segment{pg2[j], pg2[(j + 1) % s2]}))
+                return true;
+    return false;
+}
+
 int main(int argc, char *argv[]) {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
     int M, C;
     while (cin >> M >> C, M) {
-        polygon pg;
+        polygon pg1, pg2;
         for (int i = 0, x, y; i < M; i++) {
             cin >> x >> y;
-            pg.push_back(point(x, y));
+            pg1.push_back(point(x, y));
         }
-        sort(pg.begin(), pg.end());
-        pg.erase(unique(pg.begin(), pg.end()), pg.end());
-        polygon ch1 = andrewConvexHull(pg);
-        
-        pg.clear();
         for (int i = 0, x, y; i < C; i++) {
             cin >> x >> y;
-            pg.push_back(point(x, y));
+            pg2.push_back(point(x, y));
         }
-        sort(pg.begin(), pg.end());
-        pg.erase(unique(pg.begin(), pg.end()), pg.end());
-        polygon ch2 = andrewConvexHull(pg);
-        
-        
+        if (isPolygonIntersected(andrewConvexHull(pg1), andrewConvexHull(pg2))) cout << "No";
+        else cout << "Yes";
+        cout << '\n';
     }
     return 0;
 }
