@@ -1,0 +1,16 @@
+1
+
+2 2 4
+A-b B-a
+a-A b-B
+
+1
+
+6 6 12
+X-e e-Y Y-f f-X
+A-b b-B B-c c-D D-i i-E E-k k-A
+
+1
+
+2 2 4
+Y-a a-X X-b b-Y
