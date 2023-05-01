@@ -6,23 +6,19 @@ const int MAXV = 100000;
 
 int parent[MAXV], ranks[MAXV];
 
-void makeSet1()
-{
+void makeSet1() {
     for (int i = 0; i < MAXV; i++) parent[i] = i, ranks[i] = 0;
 }
 
-void makeSet2()
-{
+void makeSet2() {
     for (int i = 0; i < MAXV; i++) parent[i] = i, ranks[i] = 1;
 }
 
-int findSet1(int x)
-{
-    return (x == parent[x] ? x : parent[x] = findSet1(parent[x]));
+int findSet1(int x){
+    return x == parent[x] ? x : parent[x] = findSet1(parent[x]);
 }
 
-int findSet2(int x)
-{
+int findSet2(int x) {
     int ancestor = x;
     while (ancestor != parent[ancestor]) ancestor = parent[ancestor];
     while (x != ancestor) {
@@ -30,14 +26,11 @@ int findSet2(int x)
         parent[x] = ancestor;
         x = temp;
     }
-
     return x;
 }
 
-bool unionSet1(int x, int y)
-{
+bool unionSet1(int x, int y) {
     x = findSet1(x), y = findSet1(y);
-    
     if (x != y) {
         if (ranks[x] > ranks[y]) parent[y] = x, ranks[x] += ranks[y];
         else parent[x] = y, ranks[y] += ranks[x];
@@ -46,8 +39,7 @@ bool unionSet1(int x, int y)
     return false;
 }
 
-bool unionSet2(int x, int y)
-{
+bool unionSet2(int x, int y) {
     x = findSet1(x), y = findSet1(y);
     if (x != y) {
         if (ranks[x] > ranks[y]) parent[y] = x;
@@ -60,8 +52,7 @@ bool unionSet2(int x, int y)
     return false;
 }
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
     makeSet1();
     return 0;
 }
