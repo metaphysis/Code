@@ -12,9 +12,7 @@ using namespace std;
 const int MAXN = 100010;
 struct edge { int v, w, nxt; } g[MAXN];
 int d[MAXN];
-bool cmp(int a, int b) {
-    return d[a] > d[b];
-}
+bool cmp(int a, int b) { return d[a] > d[b]; }
 int main(int argc, char *argv[]) {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
     int N, F;
