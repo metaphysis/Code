@@ -11,9 +11,9 @@ void makeSet1()
     for (int i = 0; i < MAXV; i++) parent[i] = i, ranks[i] = 0;
 }
 
-void makeSet2()
+void makeSet2(int n)
 {
-    for (int i = 0; i < MAXV; i++) parent[i] = i, ranks[i] = 1;
+    for (int i = 0; i < n; i++) parent[i] = i, ranks[i] = 0;
 }
 
 int findSet1(int x)
