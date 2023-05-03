@@ -1,55 +1,48 @@
 // Promotions
 // UVa ID: 13015
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2023-05-03
+// UVa Run Time: 0.370s
 //
 // 版权所有（C）2023，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
-
 using namespace std;
-
-const int MAXN = 5100;
-
-int in[MAXN], visited[MAXN];
-vector<int> g[MAXN];
-
+vector<int> g[5100][2];
+int tag[5100];
+int dfs(int u, int flag, int idx) {
+    if (tag[u] == flag) return 0;
+    tag[u] = flag;
+    int r = 1;
+    for (auto v : g[u][idx])
+        r += dfs(v, flag, idx);
+    return r;
+}
 int main(int argc, char *argv[]) {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
     int A, B, E, P;
     while (cin >> A >> B >> E >> P) {
         for (int i = 0; i < E; i++) {
-            g[i].clear();
-            in[i] = visited[i] = 0;
+            g[i][0].clear();
+            g[i][1].clear();
         }
         for (int i = 0, u, v; i < P; i++) {
             cin >> u >> v;
-            g[u].push_back(v);
-            in[v]++;
+            g[u][0].push_back(v);
+            g[v][1].push_back(u);
         }
-        int cnt = 0, r1 = 0, r2 = 0, r3 = 0;
-        queue<int> q;
-        while (true) {
-            for (int i = 0; i < E; i++)
-                if (!visited[i] && !in[i]) {
-                    cnt++;
-                    q.push(i);
-                    visited[i] = 1;
-                }
-            if (q.empty()) break;
-            if (cnt <= A) r1 = cnt;
-            if (cnt <= B) r2 = cnt;
-            r3 = E - cnt;
-            if (cnt >= B) break;
-            while (!q.empty()) {
-                int u = q.front();
-                q.pop();
-                for (auto v : g[u])
-                    in[v]--;
-            }
+        memset(tag, -1, sizeof tag);
+        int cA = 0, cB = 0, nC = 0;
+        for (int i = 0; i < E; i++) {
+            int r = E - dfs(i, i, 0);
+            if (r < A) cA++;
+            if (r < B) cB++;
+            r = dfs(i, E + i, 1);
+            if (r > B) nC++;
         }
-        cout << r1 << '\n' << r2 << '\n' << r3 << '\n';
+        cout << cA << '\n';
+        cout << cB << '\n';
+        cout << nC << '\n';
     }
     return 0;
 }
