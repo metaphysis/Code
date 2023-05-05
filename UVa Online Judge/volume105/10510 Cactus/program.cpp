@@ -1,65 +1,74 @@
 // Cactus
 // UVa ID: 10510
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2023-05-05
+// UVa Run Time: 0.010s
 //
 // 版权所有（C）2023，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
-
 using namespace std;
-
-int n, m, flag;
-vector<int> g[10010];
-int visited[10010], in[10010], out[10010], cnt[10010], parent[10010];
-
-void dfs(int u, int father) {
-    visited[u] = 1;
-    parent[u] = father;
-    for (auto v : g[u])
-        if (!visited[v]) dfs(v, u);
-        else {
-            int p = parent[u];
-            while (p != v) {
-                cnt[p]++;
-                if (cnt[p] >= 2) {
-                    flag = 0;
-                    return;
-                }
-                p = parent[p];
-            }
+struct edge { int v, nxt; } g[10010];
+int dfn[10010], low[10010], scc[10010], dfntime, cscc;
+int cnt, head[10010];
+int yes;
+stack<int> s;
+void tarjan(int u) {
+    dfn[u] = low[u] = ++dfntime;
+    s.push(u);
+    int counter = 0;
+    for (int i = head[u]; ~i; i = g[i].nxt) {
+        int v = g[i].v;
+        if (!dfn[v]) {
+            tarjan(v);
+            low[u] = min(low[u], low[v]);
+            if (low[v] > dfn[u]) yes = 0;
+            if (low[v] < dfn[u]) counter++;
+        } else {
+            if (!scc[v]) {
+                low[u] = min(low[u], dfn[v]); 
+                counter++;
+            } else yes = 0;
         }
+    }
+    if (counter > 1) yes = 0;
+    if (low[u] == dfn[u]) {
+        ++cscc;
+        if (cscc > 1) yes = 0;
+        while (true) {
+            int v = s.top(); s.pop();
+            scc[v] = cscc;
+            if (v == u) break;
+        }
+    }
 }
-
 int main(int argc, char *argv[]) {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
-    int cases;
-    cin >> cases;
-    while (cases--) {
+    int T; cin >> T;
+    while (T--) {
+        int n, m;
         cin >> n >> m;
-        for (int i = 0; i < n; i++) {
-            g[i].clear();
-            visited[i] = in[i] = out[i] = 0;
-        }
+        cnt = 0;
+        for (int i = 0; i < n; i++) head[i] = -1;
         for (int i = 0, u, v; i < m; i++) {
             cin >> u >> v;
-            g[u].push_back(v);
-            out[u]++, in[v]++;
+            g[cnt] = edge{v, head[u]};
+            head[u] = cnt++;
         }
-        flag = 1;
-        dfs(0, -1);
+        if (n <= 1) {
+            cout << "YES\n";
+            continue;
+        }
+        yes = 1;
+        cscc = dfntime = 0;
+        while (!s.empty()) s.pop();
+        for (int i = 0; i < n; i++) dfn[i] = 0, scc[i] = 0;
         for (int i = 0; i < n; i++)
-            if (!visited[i]) {
-                flag = 0;
-                break;
-            }
-        for (int i = 0; i < n; i++)
-            if (in[i] != out[i]) {
-                flag = 0;
-                break;
-            }
-        cout << (flag ? "YES" : "NO") << '\n';
+            if (!dfn[i])
+                tarjan(i);
+        if (yes) cout << "YES";
+        else cout << "NO";
+        cout << '\n';
     }
     return 0;
 }
