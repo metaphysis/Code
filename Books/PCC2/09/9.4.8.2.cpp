@@ -1,38 +1,20 @@
-const int MAXV = 10010;
+const int MAXV = 10010, MAXE = 1000010;
 
-int n;
-int dfn[MAXV], low[MAXV], scc[MAXV], dfstime, cscc;
-vector<list<int>> edges(MAXV);
-stack<int> s;
+struct edge { int v, nxt; } g[MAXE];
 
-void dfs(int u)
-{
-    low[u] = dfn[u] = ++dfstime;
-    s.push(u);
-    for (auto v : edges[u])
-    {
-        if (!dfn[v]) dfs(v), low[u] = min(low[u], low[v]);
-        else if (!scc[v]) low[u] = min(low[u], dfn[v]);
-    }
-    if (dfn[u] == low[u])
-    {
-        ++cscc;
-        while (true)
-        {
-            int v = s.top(); s.pop();
-            scc[v] = cscc;
-            if (u == v) break;
+int cnt, head[MAXV];
+int dfn[MAXV], ic[MAXV], dfstime = 0;
+
+int dfs(int u, int parent) {
+    int lowu = dfn[u] = ++dfstime, lowv, children = 0;
+    for (int i = head[u]; ~i; i = g[i].nxt) {
+        int v = g[i].v;
+        if (!dfn[v]) {
+            ++children, lowu = min(lowu, lowv = dfs(v, u));
+            if (lowv >= dfn[u]) ic[u] = 1;
         }
+        else if (dfn[v] < dfn[u] && v != parent) lowu = min(lowu, dfn[v]);
     }
-}
-
-void tarjan()
-{
-    dfstime = 0, cscc = 0;
-    while (!s.empty()) s.pop();
-    memset(dfn, 0, sizeof(dfn));
-    memset(scc, 0, sizeof(scc));
-    for (int i = 0; i < n; i++)
-        if (!dfn[i])
-            dfs(i);
+    if (parent < 0 && children == 1) ic[u] = 0;
+    return lowu;
 }
