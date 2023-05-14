@@ -10,8 +10,13 @@ long long getHash(string &s) {
     return h[n];
 }
 
+int prepared = 0;
+
 int getHash(string &s, int L, int R) {
-    getHash(s);
+    if (!prepared) {
+        getHash(s);
+        prepared = 1;
+    }
     long long b = 1;
     for (int i = L; i <= R; i++) b = b * BASE % MOD;
     return (h[R + 1] - h[L + 1] * b % MOD + MOD) % MOD;
