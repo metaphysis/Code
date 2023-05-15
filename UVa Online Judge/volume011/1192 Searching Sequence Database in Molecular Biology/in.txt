@@ -1,0 +1,17 @@
+>query
+ACGGG
+
+>seq1
+ACGGT
+
+>seq2
+ACGGGG
+
+>seq3
+TCCGGTT
+
+>seq4
+TCGGG
+
+>seq5
+AACGGG

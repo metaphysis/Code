@@ -1,0 +1,10 @@
+The query sequence is:
+ACGGG
+
+The most similar sequences are:
+
+ACGGGG
+The similarity score is: 18
+
+AACGGG
+The similarity score is: 18
