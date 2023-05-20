@@ -14,51 +14,35 @@ const int MAXN = 25;
 
 int order[MAXN], events[MAXN], length[MAXN], n;
 
-int getScores()
-{
-    for (int i = 1; i <= n; i++)
-        length[i] = 1;
-
+int lis() {
+    for (int i = 1; i <= n; i++) length[i] = 1;
     for (int i = 1; i <= n; i++)
         for (int j = 1; j < i; j++)
             if (events[j] < events[i] && (length[j] + 1) > length[i])
                 length[i] = length[j] + 1;
-
     int maxLength = 1;
     for (int i = 1; i <= n; i++)
         maxLength = max(maxLength, length[i]);
-
     return maxLength;
 }
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
     string line;
     int index;
-
     order[0] = 0;
-
     cin >> n;
-    for (int i = 1; i <= n; i++)
-    {
+    for (int i = 1; i <= n; i++) {
         cin >> index;
         order[index] = i;
     }
-
     cin.ignore(1024, '\n');
-
-    while (getline(cin, line))
-    {
+    while (getline(cin, line)) {
         istringstream iss(line);
-
-        for (int i = 1; i <= n; i++)
-        {
+        for (int i = 1; i <= n; i++) {
             iss >> index;
             events[index] = find(order, order + n, i) - order;
         }
-
-        cout << getScores() << endl;
+        cout << lis() << endl;
     }
-
     return 0;
 }

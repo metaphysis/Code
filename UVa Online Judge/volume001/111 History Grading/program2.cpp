@@ -12,7 +12,7 @@ using namespace std;
 
 vector<int> order, events;
 
-int getScores()
+int lis()
 {
     vector<int> M; M.push_back(events.front());
     for (auto it = events.begin() + 1; it != events.end(); it++)
@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
             iss >> index;
             events[index - 1] = find(order.begin(), order.end(), i) - order.begin();
         }
-        cout << getScores() << '\n';
+        cout << lis() << '\n';
     }
 
     return 0;
