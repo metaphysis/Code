@@ -6,17 +6,8 @@
 //
 // 版权所有（C）2023，邱秋。metaphysis # yeah dot net
 
-#include <bits/stdc++.h>
-
+#include<bits/stdc++.h>
 using namespace std;
-bool verify(double r, string s) {
-    stringstream ss;
-    string n;
-    ss << fixed << setprecision(s.length() - 2) << r + 1e-9;
-    ss >> n;
-    return n == s;
-}
-
 int main(int argc, char *argv[]) {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
     string s;
@@ -24,15 +15,23 @@ int main(int argc, char *argv[]) {
     while (cin >> s) {
         if (s.front() == '-') break;
         cout << "Case " << cases++ << ": ";
-        int m = 1;
-        double r = stod(s);
+        int p = (int)(s.find('.'));
+        long long n = stoll(s.substr(p + 1)) * 10;
+        long long ln = n - 5, hn = n + 5;
+        long long c = pow(10, s.substr(p + 1).length() + 1);
+        long long lb = 1;
         while (true) {
-            double rr = r * m;
-            double fr = floor(rr), cr = ceil(rr);
-            if (verify(fr / m, s)) { cout << m << '\n'; break; }
-            if (verify(cr / m, s)) { cout << m << '\n'; break; }
-            m++;
+            int flag = 0;
+            long long lx = 0, hx = lb - 1, mx;
+            while (lx <= hx) {
+                mx = (lx + hx) >> 1;
+                if (ln * lb <= c * mx && c * mx < hn * lb) { flag = 1; break; }
+                if (c * mx < ln * lb) lx = mx + 1;
+                if (c * mx >= hn * lb) hx = mx - 1;
+            }
+            if (flag) break;
+            lb++;
         }
+        cout << lb << '\n';
     }
-    return 0;
 }
