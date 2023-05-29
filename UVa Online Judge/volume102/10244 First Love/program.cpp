@@ -2,7 +2,7 @@
 // UVa ID: 10244
 // Verdict: Accepted
 // Submission Date: 2023-05-29
-// UVa Run Time: 0.030s
+// UVa Run Time: 0.020s
 //
 // 版权所有（C）2023，邱秋。metaphysis # yeah dot net
 
@@ -23,7 +23,7 @@ int main(int argc, char *argv[]) {
             if (n == 1) { cout << bit << '\n'; continue; }
             cache.clear();
             stack<string> path;
-            vector<string> circuit;
+            vector<char> circuit;
             string u = string(n - 1, bit.front());
             path.push(u);
             while (!path.empty()) {
@@ -36,14 +36,17 @@ int main(int argc, char *argv[]) {
                     cache.insert(u + bit[v]);
                     u = u.substr(1) + bit[v];
                 } else {
-                    circuit.push_back(u);
+                    circuit.push_back(u.back());
                     u = path.top();
                     path.pop();
                 }
             }
             string r;
-            reverse(circuit.begin(), circuit.end());
-            for (int i = 1; i < circuit.size(); i++) r += circuit[i].back();
+            for (int i = circuit.size() - 2; i >= 0; i--) r += circuit[i];
+            // 注意，当给定的字符串长度为 1，但 N 大于 1 时，circuit 的大小为 2，
+            // 此时不能使用以下语句来获取结果：
+            // for (int i = circuit.size() - 2, j = 0; j < n - 1; i--, j++) r += circuit[i];
+            // 这样会导致错误，而应使用以下的语句：
             for (int i = 0; i < n - 1; i++) r += r[i];
             cout << r << '\n';
         }
