@@ -1,8 +1,8 @@
 // First Love
 // UVa ID: 10244
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2023-05-29
+// UVa Run Time: 0.030s
 //
 // 版权所有（C）2023，邱秋。metaphysis # yeah dot net
 
@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
     int n;
     while (cin >> bit >> n) {
         sort(bit.begin(), bit.end());
-        long long k = bit.length();
+        int k = bit.length();
         long long t = (long long)pow(k, n) + n - 1;
         cout << t << '\n';
         if (t > 10000) cout << "TOO LONG TO PRINT.\n";
@@ -23,27 +23,29 @@ int main(int argc, char *argv[]) {
             if (n == 1) { cout << bit << '\n'; continue; }
             cache.clear();
             stack<string> path;
-            vector<char> circuit;
+            vector<string> circuit;
             string u = string(n - 1, bit.front());
             path.push(u);
             while (!path.empty()) {
                 int v = 0;
-                for (v = 0; v < bit.length(); v++)
+                for (v = 0; v < k; v++)
                     if (!cache.count(u + bit[v]))
                         break;
-                if (v < bit.length()) {
+                if (v < k) {
                     path.push(u);
                     cache.insert(u + bit[v]);
                     u = u.substr(1) + bit[v];
                 } else {
-                    circuit.push_back(u.back());
+                    circuit.push_back(u);
                     u = path.top();
                     path.pop();
                 }
             }
-            for (int i = circuit.size() - 2; i >= 0; i--) cout << circuit[i];
-            for (int i = circuit.size() - 2, j = 1; j < n; i--, j++) cout << circuit[i];
-            cout << '\n';
+            string r;
+            reverse(circuit.begin(), circuit.end());
+            for (int i = 1; i < circuit.size(); i++) r += circuit[i].back();
+            for (int i = 0; i < n - 1; i++) r += r[i];
+            cout << r << '\n';
         }
     }
     return 0;
