@@ -1,8 +1,8 @@
 // Component Placement
 // UVa ID: 11765
 // Verdict: Accepted
-// Submission Date: 2023-01-22
-// UVa Run Time: 0.030s
+// Submission Date: 2023-06-03
+// UVa Run Time: 0.060s
 //
 // 版权所有（C）2023，邱秋。metaphysis # yeah dot net
 
@@ -77,37 +77,34 @@ public:
 
 int main(int argc, char *argv[]) {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
-    int T, N, M;
-    string line;
-    cin >> T;
-    int used[300100];
-    for (int cs = 1; cs <= T; cs++) {
-        cout << "Case " << cs << ":\n";
-        memset(used, 0, sizeof used);
-        Dinic dinic(6100, 1000010, 0, 6001);
-        int s = 0, p, c;
-        cin >> N;
-        cin.ignore(256, '\n');
-        for (int i = 1; i <= N; i++) {
-            getline(cin, line);
-            istringstream iss(line);
-            iss >> p; s += p;
-            dinic.addArc(0, i, p);
-            while (iss >> c) used[c] = i;
-        }
-        cin >> M;
-        cin.ignore(256, '\n');
-        for (int i = 1; i <= M; i++) {
-            getline(cin, line);
-            istringstream iss(line);
-            iss >> p; s += p;
-            dinic.addArc(N + i, 6001, p);
-            while (iss >> c) {
-                if (used[c]) dinic.addArc(used[c], N + i, INF);
+    int T; cin >> T;
+    int top[256], bottom[256], n, m;
+    while (T--) {
+        cin >> n >> m;
+        int source = 0, sink = n + 1;
+        Dinic dinic(256, 100000, source, sink);
+        for (int i = 1; i <= n; i++) cin >> top[i];
+        for (int i = 1; i <= n; i++) cin >> bottom[i];
+        for (int i = 1, flag; i <= n; i++) {
+            cin >> flag;
+            if (flag == 0) {
+                dinic.addArc(source, i, top[i]);
+                dinic.addArc(i, sink, bottom[i]);
+            } else if (flag == 1) {
+                dinic.addArc(source, i, top[i]);
+                dinic.addArc(i, sink, INF);
+            } else {
+                dinic.addArc(source, i, INF);
+                dinic.addArc(i, sink, bottom[i]);
             }
         }
-        cout << s - dinic.maxFlow() << '\n';
-        if (cs < T) cout << '\n';
+        for (int i = 1, p, q, r; i <= m; i++) {
+            cin >> p >> q >> r;
+            dinic.addArc(p, q, r);
+            dinic.addArc(q, p, r);
+        }
+        
+        cout << dinic.maxFlow() << '\n';
     }
     return 0;
 }
