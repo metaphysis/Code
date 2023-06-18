@@ -32,12 +32,10 @@ void getBinary(long long r) {
 
 int main(int argc, char *argv[]) {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
-    int m;
-    int b[4], minb[4], maxb[4];
+    int m, b[4], minb[4], maxb[4];
     char dot;
     while (cin >> m) {
-        for (int i = 0; i < 4; i++)
-            minb[i] = 255, maxb[i] = 0;
+        for (int i = 0; i < 4; i++) minb[i] = 255, maxb[i] = 0;
         for (int i = 0; i < m; i++) {
             cin >> b[0];
             for (int i = 1; i < 4; i++) cin >> dot >> b[i];
@@ -46,7 +44,6 @@ int main(int argc, char *argv[]) {
         }
         long long address = 0, mask = (1LL << 32) - 1;
         for (int i = 0, j = 3; i < 4; i++, j--) address |= (1LL * getAddress(minb[i], maxb[i])) << (j * 8);
-        long long ba = address, bm = mask;
         while (true) {
             int valid = 1;
             for (int i = 0; valid && i < 4; i++) {
@@ -58,7 +55,6 @@ int main(int argc, char *argv[]) {
                 getBinary(address), getBinary(mask);
                 break;
             }
-            ba = address, bm = mask;
             mask -= mask & -mask;
             address &= mask;
         }
