@@ -7,52 +7,25 @@
 // 版权所有（C）2023，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
-
 using namespace std;
-
-inline int getAddress(int minb, int maxb) {
-    for (int i = 0; i <= 8; i++) {
-        int range = 1 << i;
-        if (range < maxb - minb + 1) continue;
-        for (int j = 0; j < 256; j += range)
-                if (j <= minb  && maxb <= j + range - 1)
-                    return j;
-    }
-}
-
-void getBinary(long long r) {
-    long long mask = 255LL << 24;
-    for (int i = 3; i >= 0; i--) {
-        cout << ((r & mask) >> (i * 8));
-        mask >>= 8;
-        if (i) cout << '.';
-    }
-    cout << '\n';
-}
-
-int main(int argc, char *argv[]) {
-    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
-    int m, b[4], minb[4], maxb[4];
-    char dot;
-    while (cin >> m) {
-        for (int i = 0; i < 4; i++) minb[i] = 255, maxb[i] = 0;
+#define BIT(X, Y) ((X & (255LL << Y)) >> Y)
+#define BINARY(X) BIT(X, 24), BIT(X, 16), BIT(X, 8), BIT(X, 0)
+int main(int argc, char *argv[])
+{
+    int m;
+    unsigned int a, b, c, d, minb, maxb, address, orb;
+    while (scanf("%d", &m) == 1) {
+        minb = -1, maxb = 0, address = -1;
         for (int i = 0; i < m; i++) {
-            cin >> b[0];
-            for (int i = 1; i < 4; i++) cin >> dot >> b[i];
-            for (int i = 0; i < 4; i++)
-                minb[i] = min(minb[i], b[i]), maxb[i] = max(maxb[i], b[i]);
+            scanf("%d.%d.%d.%d", &a, &b, &c, &d);
+            orb = (a << 24) | (b << 16) | (c << 8) | d;
+            address &= orb, minb = min(minb, orb), maxb = max(maxb, orb);
         }
-        long long address = 0, mask = (1LL << 32) - 1;
-        for (int i = 0, j = 3; i < 4; i++, j--) address |= (1LL * getAddress(minb[i], maxb[i])) << (j * 8);
+        unsigned int mask = -1;
         while (true) {
-            int valid = 1;
-            for (int i = 0; valid && i < 4; i++) {
-                int base = (address & (255LL << ((4 - i - 1) * 8))) >> ((4 - i - 1) * 8);
-                int range = 255LL - ((mask & (255LL << ((4 - i - 1) * 8))) >> ((4 - i - 1) * 8));
-                if (minb[i] < base || maxb[i] > base + range) valid = 0;
-            }
-            if (valid) {
-                getBinary(address), getBinary(mask);
+            if (minb >= address & (address | ~mask) >= maxb) {
+                printf("%d.%d.%d.%d\n", BINARY(address));
+                printf("%d.%d.%d.%d\n", BINARY(mask));
                 break;
             }
             mask -= mask & -mask;
