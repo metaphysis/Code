@@ -1,0 +1,1333 @@
+666
+6
+B A a c A B
+10
+a a a c c a b c A a
+4
+a a A b
+8
+a C a B A B c B
+7
+B b b B B b a
+8
+a C c a c b a b
+10
+c a B B b a a a b a
+5
+c A C C A
+8
+a A B a b C c b
+7
+C A c c c C a
+11
+C b C C a c b C b A a
+7
+B A b A b a B
+10
+C b a c C A b b a A
+11
+A A c A b c b a b C b
+4
+b b c C
+2
+A a
+4
+c a C C
+10
+B c c A a b a a a a
+7
+B B C c a c c
+9
+A B b C a a c c c
+8
+A a A A b b c b
+2
+a c
+2
+A C
+3
+b a B
+9
+C c c C a B a a A
+10
+a c A c c a A B A a
+6
+a a a b a b
+7
+A C C b a c a
+8
+a a b B a C b b
+6
+a C c B C b
+11
+C c c c B a a b a b a
+4
+a B b c
+8
+a a c a A c a B
+4
+b B a c
+10
+C a A b b C a a B a
+8
+a a C a a b c b
+9
+b a b a A A a B b
+8
+a C a B B b b b
+9
+A B A a C b B a b
+10
+c b c A c A b a a A
+11
+c c A B c A b a A B a
+8
+C C c A a a c b
+11
+a c c c a b A A b a C
+6
+b A a a A B
+7
+a b b b c b B
+3
+B a a
+2
+b c
+9
+c b c c b a A c c
+4
+b B a a
+4
+a b b B
+6
+c a A a b b
+7
+c c c B a a b
+2
+b C
+7
+a B A c c a b
+8
+c a A b C B b b
+10
+B B b a B B A b C c
+8
+c b C c B c c a
+2
+b b
+10
+c B C b b b b b A b
+10
+b b c b b B B c B c
+7
+c B A C c a b
+9
+b B B B B c B C A
+7
+c a b b b c c
+8
+A a a c B a a C
+4
+a c b b
+2
+c c
+6
+c B C b A a
+11
+a a b A a b a b b c a
+2
+b c
+11
+a a c B c b b a b a A
+7
+b c c A C a a
+7
+b c A a b a b
+9
+b b B b B B B C c
+8
+c b B c b B b c
+10
+a c a A B a a a C C
+8
+A b c c a b a a
+8
+c c a C B b b B
+7
+c b b c b b B
+3
+b a C
+10
+c A B A b A A b c a
+4
+c b b b
+10
+a B c c c a a c A A
+7
+C c a A c b b
+4
+A a a c
+5
+c A B A b
+8
+B B b b c C c c
+11
+A a b c C A c b b c C
+2
+c a
+4
+a c C b
+6
+b C c c b A
+2
+c B
+2
+A C
+5
+a a b b B
+3
+B a A
+9
+b c c a b C B a b
+9
+a a A c b b b A b
+5
+B a A B a
+9
+c B a a b b a c B
+6
+a C B c c C
+2
+C B
+11
+A b c c b A b c b B c
+9
+b C c b a a B c A
+2
+B c
+3
+C b c
+10
+b a b c c a a b b a
+2
+b b
+11
+a a c b c c c B c A c
+11
+c B b b b C a C a c a
+3
+B c c
+9
+b b b a C B C A c
+5
+c B C b a
+10
+A a c c a b a B A B
+6
+b c a b b c
+6
+a a C b B a
+5
+A B A b a
+3
+c b c
+8
+B C c b b A c A
+11
+c C C C c C c b c b c
+8
+c A b A A a b b
+7
+c A a A b a c
+3
+B a a
+6
+c a a c B C
+10
+C b C b a b a a B b
+6
+b b c C A b
+8
+B c b B b c c c
+5
+b b b A c
+5
+b a b c B
+9
+b c a A b a c B a
+11
+b a a a A B b B c a b
+7
+C c b a c c a
+2
+A B
+6
+a B A A c a
+7
+b a B b A a A
+6
+c C b b a A
+7
+c c a c b B c
+6
+a A B A a c
+7
+a a a C c C b
+11
+a C c b c b a c C a b
+2
+a c
+3
+b B a
+7
+B B c a b c b
+5
+b b c c b
+3
+c b C
+11
+C B a a B C b a c a b
+2
+a A
+2
+b b
+4
+a b c b
+6
+A c b b A a
+11
+c a b c b b b C C B B
+5
+A b a a A
+3
+c b c
+3
+b b A
+9
+C c c B c b a a C
+4
+b b c b
+9
+b a a b B A A c c
+3
+b A c
+4
+a b c a
+8
+c b a a C C b b
+2
+C A
+3
+a C c
+5
+a A a c a
+4
+b b A c
+9
+b c C c b a c A B
+4
+A c c B
+10
+C b c a C b a B c C
+5
+B C B a c
+3
+C c C
+9
+c B a a b C a a c
+10
+a A B C A C A B a a
+9
+b C c b B A B b C
+3
+b c A
+7
+A A b c a c b
+8
+c b a B A c C b
+8
+b c a c a c b c
+2
+C B
+6
+c c a a A a
+6
+C C A a b a
+7
+b b a B a b a
+6
+b a A c b c
+5
+b c a a c
+2
+c a
+6
+b a b b b B
+5
+a c A b a
+3
+C b c
+3
+b b A
+5
+B a C A c
+11
+c b A b b b C b C C a
+7
+A b c B a b B
+10
+a a A c A c b C B b
+9
+b c C a b B c b A
+8
+b C A C a c a C
+10
+c c a a c c A c b b
+2
+a c
+10
+b C c A c B B C a b
+4
+c a b C
+2
+c c
+10
+C B B b C C b C b c
+5
+b a a a b
+3
+a c C
+3
+A A b
+10
+a c c c c a b b c b
+5
+b b c c B
+3
+b a B
+8
+c b b b a b B c
+4
+B c a B
+10
+c A b a c a b b b a
+9
+C A B A b c b b A
+9
+C b b B b A a A B
+2
+a b
+10
+b b b a C A c C c A
+10
+C b B A C a a C a b
+5
+a a b C b
+5
+a c b a b
+11
+b b a a C c b c B a A
+7
+b c c b a C b
+11
+B a c B C c c c a c c
+10
+C a C B c a c A b b
+8
+a A a B B a a c
+7
+c b b A B b b
+3
+a c a
+5
+A c a b B
+6
+c a B b a b
+10
+A c A A c c B a c B
+7
+c b C b c c c
+7
+a b b b b B a
+11
+b b a c A c A b C b B
+7
+b b C c A b b
+2
+B C
+5
+A C B b B
+4
+a c c c
+6
+c C c C C a
+8
+b b b A b b c c
+2
+A b
+2
+a a
+6
+c b b B A b
+5
+B C b c a
+2
+c c
+5
+c B a C c
+3
+b a b
+2
+b C
+6
+b c b C b b
+4
+a c B b
+11
+c A C a c b c a A B c
+3
+c B B
+7
+b c a C B b C
+8
+c a c B c a B c
+5
+a a b c b
+5
+a C a c c
+9
+A A a B B A c A c
+4
+B c a a
+2
+c A
+5
+b a c B c
+7
+a b c b C c c
+8
+B C c b a c a a
+6
+A b a C A b
+6
+C c A A C A
+5
+A b A c C
+2
+b a
+6
+b a c B C B
+3
+b B C
+6
+A b A b C C
+5
+a A c a A
+5
+C B b c c
+4
+c C C a
+9
+b a a a b a c b C
+3
+B A A
+7
+B c b a A A C
+11
+B b c B c b a c b b a
+10
+B a c B c B A a B a
+10
+a C C b b a c c b C
+3
+c c A
+11
+a b a a a a C b b c B
+5
+c b c a A
+3
+a C B
+7
+c A b C A a c
+8
+c b b B a A b b
+10
+a c a c a C c B C a
+9
+B b a C b c a c a
+9
+B c b C C A a A c
+11
+a a a b a B a a c b a
+4
+A B c B
+3
+B C C
+6
+A a A c c a
+9
+a a C C b c c b C
+10
+B b b a b c B B b b
+11
+c A A a B a C B c b b
+7
+b a a b a B a
+9
+c b c B c B B a A
+6
+b c C B c A
+11
+c c b a b a A c A b c
+8
+a a A C c b c a
+4
+a A B C
+3
+B a c
+8
+A A a C a b b a
+8
+C c c B c a b C
+4
+c c c b
+3
+B c c
+2
+c C
+9
+A c c c c A a b b
+6
+c a B c c c
+8
+A c A c c a B C
+2
+a b
+5
+a C B a a
+9
+b c b a b C c a B
+9
+c b a C C A A c b
+5
+a A C c b
+11
+c a b A c c B b c C c
+9
+b c b b A B a a C
+5
+c A a c a
+9
+a B c A B b b c b
+5
+b c a B c
+10
+A c A a A a a A a c
+6
+c c B C B A
+9
+b b a c b c c a B
+5
+b a c A b
+6
+A c a A C a
+8
+C A C B b C A a
+7
+c c C a c c a
+5
+a B a B C
+2
+c a
+4
+c a b B
+5
+C a C a c
+10
+c a B b b A c C c c
+2
+c a
+5
+c c c c b
+11
+B A A b B b a b A C C
+2
+a c
+5
+a b a A a
+2
+a B
+5
+c c c B b
+2
+C c
+11
+a b b C a b a A A b a
+4
+a C C B
+3
+a C a
+3
+B A c
+3
+A c C
+5
+a B C a b
+3
+b a B
+11
+c a C b c c C c b C b
+10
+a B B a a a c b a B
+10
+b a C B b B c b a a
+2
+b C
+4
+a c C a
+8
+c c C C b B a a
+3
+a A C
+9
+c c a b b c c A c
+10
+C c b B B c A A c b
+8
+a b a A A C B A
+8
+c C a a c a c b
+4
+A b c A
+5
+B c B b a
+7
+C b b b A a b
+10
+b b B b a C c b b B
+4
+a B B A
+11
+a a A a b b a c b a C
+6
+B b a a A a
+7
+c a C b A c a
+3
+a a a
+6
+a b B A C b
+7
+c B a c a B b
+2
+c a
+9
+C b C c a a a C a
+6
+c b c c c c
+11
+C c a c b C A a C A c
+6
+C C b a a c
+6
+C b A a c B
+9
+A B b c b a a C A
+2
+b A
+5
+c c B C c
+11
+b C c b a c c a A B a
+8
+c B b c B c A C
+10
+B a B c b a b A c C
+6
+c c b b c A
+9
+C C c c C C a b b
+2
+A A
+4
+c a B C
+5
+A a b b a
+4
+a A a B
+10
+c a c b b b b c A B
+3
+A C C
+3
+b b c
+8
+B A b C b A a c
+10
+c c b b c a a a c B
+4
+c b c a
+3
+a c A
+3
+B A a
+7
+c a C a a c a
+4
+A b A b
+2
+a A
+5
+b a a c a
+11
+a a A c a c B a B a C
+11
+B B a A a b C c b c a
+3
+A c B
+4
+c a a b
+11
+B A B a b b A a a C c
+5
+a c c c a
+9
+A A a b C b c c a
+10
+C c a A C B c c a a
+9
+B a C b B c A b a
+8
+B a B C c c C a
+7
+a a c A b a a
+8
+A B a c b A a A
+10
+C A c B c c c A c C
+8
+C a C A C b b a
+6
+b b a a A b
+2
+B A
+10
+c a c a A c A a a C
+7
+a c a C a b b
+6
+c b a B a a
+2
+c B
+2
+b C
+5
+B a C a a
+6
+B c C a a c
+7
+c a C c c b a
+8
+a a a c C A a b
+9
+b b c C a A c c C
+3
+a c b
+10
+B C c A a b b a B c
+11
+a b C b B b b c b b c
+10
+c a c b B b B a a a
+11
+C A b a b B a A b B C
+11
+c A B b b a B b b C c
+4
+b a A C
+5
+b B C c A
+6
+C b c c C B
+11
+C a a A a c a A b b B
+8
+b b c c B b b a
+8
+C b c c C a a c
+5
+b A c a C
+9
+a b a C c B c b b
+2
+b c
+8
+a B b c C c c c
+10
+c C a c a c c b C b
+5
+B b b C B
+11
+a a a b C a A a a C C
+11
+C a c c c a C c A a A
+11
+B b b A C B a b c c c
+8
+c c B b c a B A
+7
+a a b c b B B
+5
+a c B A c
+6
+b a b c b b
+11
+B C b A b a B b b c B
+11
+c c b c a c a B c B c
+11
+b A c b A A c B A C b
+3
+c a B
+6
+C C C a a b
+10
+C c c a c b b a b c
+4
+B A a C
+10
+b b c A C A b b b B
+11
+b C c a c C b C A C A
+6
+a C c C c a
+7
+a A b A A B b
+3
+c B A
+9
+c c a c c b B b c
+7
+C C B c c a a
+5
+C c c a b
+4
+c c a c
+8
+a b a B b C C c
+7
+a c A b A a b
+7
+a b C b a b C
+4
+B C b a
+4
+b b c A
+7
+a c A b b A b
+9
+a C c c B a b a c
+10
+A b a b C A c c c C
+2
+a b
+10
+a C B b c A b b C a
+6
+C c c c A A
+6
+A C C c a a
+8
+c b A b A b b A
+8
+c a b b c A a b
+11
+a a a B c b b b c C b
+10
+b a b c c B b C B C
+8
+b a c c b A a B
+5
+b a b C A
+6
+b b c b B B
+11
+c c B b B a A B c A a
+9
+c c C B B C c B b
+11
+C b a C a A b c C A a
+5
+C C b B A
+9
+B b a B B c c b a
+5
+A a C B C
+2
+a A
+2
+A a
+8
+b b a c B a B c
+7
+B B B a B c b
+9
+A b b A b c b c c
+3
+C c b
+7
+C a C b a A a
+2
+a C
+4
+c b b B
+11
+b c B c A b C A A c C
+2
+B B
+6
+B c c B b B
+8
+a a b b B B c b
+10
+B B c c a c b C b a
+5
+c c c c A
+8
+c c A b b a A c
+4
+a c b a
+11
+A b B b B C a C a A c
+2
+a B
+6
+B a a b c B
+7
+b A b C b a A
+11
+c A c a C a A c a B C
+5
+c a B B b
+5
+B B a a a
+5
+c b A B a
+9
+a c c B a c a b b
+6
+c b b C c b
+5
+C B c A c
+10
+C a b a c b c C B C
+7
+b B a a a c C
+7
+a a b C a B a
+5
+a C b B c
+8
+c b b C a b c C
+7
+b A B B A A c
+3
+b a b
+3
+c a c
+6
+B b B C b a
+2
+B b
+11
+a b b b c B b c c A B
+10
+A b A a A A c C a c
+6
+b B C a b C
+7
+a c b c C C A
+11
+c a C a b a B b A B a
+7
+C b a c b A A
+8
+c b B c b a A B
+8
+A c A b c a b a
+4
+C a B c
+2
+B c
+5
+c c c a A
+11
+c A B c C a B a a b c
+8
+c c c b a b a B
+9
+A C A b a c a c b
+5
+c C B a a
+9
+A A c B A B a c B
+8
+B b c c A A b c
+11
+a a B C C b b C a a c
+9
+b c b b B c a c A
+8
+b b c B b C C C
+9
+b A a a c a B C a
+8
+c a a b c a A a
+11
+C b c c C a a a c c C
+7
+A A A c B C A
+9
+B B a a B B C c A
+11
+B C b c B b b c A a a
+11
+A b c C C c C c C b A
+10
+b C A c a b b a B c
+2
+C c
+3
+a a a
+3
+a a b
+4
+c b a b
+7
+a a b a b b b
+10
+c A b b C c a a B a
+10
+c b a c a B A a C A
+4
+c b c A
+8
+c B b B c B c c
+7
+c c A c a c A
+6
+C A a a C c
+6
+a a A c B c
+6
+a C b B A C
+9
+A A B B b a B a C
+8
+b a a b C c b A
+10
+B B c b a B c c C C
+3
+A b b
+5
+C b C b c
+11
+b b B c B a c B c C c
+8
+b a C c a B a B
+9
+a B a b a b B b C
+10
+b a C c a B b B C a
+9
+A C c c b a c B A
+6
+c b B a c C
+5
+A a a c C
+6
+B b c b B c
+7
+b a a b b c b
+9
+b b A a a b C a c
+2
+c a
+4
+b b c C
+5
+a a c a b
+8
+b c c A A b B c
+11
+c a c a b B c c a C B
+5
+b b c c b
+3
+b a B
+2
+A b
+9
+A C B b c a A c b
+4
+b c C C
+5
+b c b C a
+10
+a c a C b a b B a a
+5
+A A a c a
+10
+b b b a c A C B a b
+5
+C c b b C
+4
+a a b c
+4
+c a b a
+4
+C c a b
+4
+a a b a
+2
+B a
+8
+b a b a c A A a
+11
+C c B a A C A c c a B
+7
+A b c B B C a
+9
+c b B c a C A B a
+8
+b a C B b c A C
+10
+B c C a A B C A b c
+4
+a a B c
+6
+A B a B B c
+8
+a a B a A b b C
+2
+c c
+6
+b a b b a B
+5
+c A c c B
+5
+a C B a c
+4
+b b a A
+9
+a B a A a a b b c
+8
+c C a a B a a a
+2
+c B
+4
+c B a a
+3
+a b C
+2
+A C
+11
+c c C a C C B A c c A
+10
+b A c b C a c b c C
+5
+C A b b a
+6
+a c A A c B
+8
+a b c c b c a c
+11
+B a c a B a a a b c c
+7
+B b a b c b b
+7
+a A b B B a c
+11
+B a b B b a A A C A b
+2
+a c
+10
+c A a b b b a a C B
+6
+C b c a b b
+2
+b a
+5
+C b c b b
+10
+b a a c A A C c C a
+9
+C b b B c c c a c
+5
+b b B a A
+6
+a b C C a c
+3
+c a a
+4
+c c c A
+2
+c B
+11
+c a c b c A B c a b c
+11
+b c B C b c b b a a a
+10
+c c b A c C c b C c
+4
+b c a a
+11
+c c C b b c b C c a A
+11
+c A b B b A C B a c C
+10
+a C c b c b a B C B
+4
+b C c b
+4
+A c a A
+2
+b b
+6
+B c a c B B
+9
+A b A C a b a B b
+5
+b a c c c
+8
+a c a a b a A c
+6
+b B b c c b
+5
+B B a A c
+5
+c A c C a
+7
+b b b a a a a
+4
+a C a c
+10
+a a c A c c A b c A
+8
+B b C B c b C B
+2
+A c
+2
+c A
+10
+c a b b C b c b a a
+2
+c B
+6
+c c B B a b
+7
+a a A B b a B
+6
+a A c a C A
+6
+b a A b b a
