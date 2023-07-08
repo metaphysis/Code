@@ -10,8 +10,9 @@ struct Trie
 
     Trie()
     {
-        memset(child[0], 0, sizeof(child[0]));
-        root = cnt = ending[0] = 0;
+        root = cnt = 1;
+        ending[root] = 0;
+        memset(child[root], 0, sizeof(child[root]));
     }
 
     void insert(const string s)
