@@ -1,0 +1,7 @@
+6
+ACABCB
+ABCAB
+aa0123456789b
+aaaaaaaaabaaaaaaaaac
+aaaaaaaaabaaaaaaaaacdefghijk
+aaaaaaaaabaaaaaaaaacdefghijkl
