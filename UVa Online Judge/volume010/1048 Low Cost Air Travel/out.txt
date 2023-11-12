@@ -1,0 +1,2 @@
+Case 1, Trip 1: Cost = 225
+  Tickets used: 1
