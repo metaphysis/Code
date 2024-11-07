@@ -1,11 +1,3 @@
-// Investigating Div-Sum Property
-// UVa ID: 11361
-// Verdict: Accepted
-// Submission Date: 2024-11-07
-// UVa Run Time: 0.320s
-//
-// 版权所有（C）2024，邱秋。metaphysis # yeah dot net
-
 #include <bits/stdc++.h>
 
 using namespace std;
