@@ -14,7 +14,7 @@ string colours = "roygb", wastes = "PGASN";
 
 int matrix[110][5] = {0}, counter[5][5] = {0}, cities = 0;
 
-int getIndex(void)
+void getIndex(void)
 {
     int minChanges = -1, minIndex = 0;
     for (int i = 0; i < cities; i++)
