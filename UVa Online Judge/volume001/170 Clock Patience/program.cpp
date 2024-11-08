@@ -17,19 +17,8 @@ struct card
 };
 
 string cardValue = "A23456789TJQK";
-vector < card > cards;
-vector < vector < card > > piles;
-
-void display()
-{
-    for (int i = 0; i < piles.size(); i++)
-    {
-        cout << "index " << i + 1 << ": ";
-        for (int j = 0; j < piles[i].size(); j++)
-            cout << piles[i][j].text << " ";
-        cout << endl;
-    }
-}
+vector<card> cards;
+vector<vector<card>> piles;
 
 void play()
 {
@@ -44,8 +33,6 @@ void play()
             
     for (int i = 0; i < piles.size(); i++)
         reverse(piles[i].begin(), piles[i].end());
-    
-    display();
     
     int index = 13;
     int exposed = 0;
@@ -75,7 +62,7 @@ int main(int argc, char *argv[])
     
     for (int i = 1; i <= 13; i++)
     {
-        vector < card > pile;
+        vector<card> pile;
         piles.push_back(pile);
     }
     
