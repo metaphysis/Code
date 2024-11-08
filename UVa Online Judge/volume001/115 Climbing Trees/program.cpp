@@ -208,6 +208,8 @@ bool isCousin(string fName, string sName)
 		
 		cout << (backN - n) << " cousin\n";
 	}
+	
+	return true;
 }
 
 int main (int argc, char const* argv[])
