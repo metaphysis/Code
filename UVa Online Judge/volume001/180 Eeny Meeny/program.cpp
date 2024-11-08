@@ -13,7 +13,7 @@ using namespace std;
 int lower, upper, m = 15;
 int chiefCW[1000010], chiefCCW[1000010], safe[1000010];
 
-int findChief()
+void findChief()
 {
     fill(chiefCW, chiefCW + 1000010, 0);
     fill(chiefCCW, chiefCCW + 1000010, 0);
