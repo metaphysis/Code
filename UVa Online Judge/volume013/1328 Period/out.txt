@@ -1,0 +1,330 @@
+Test case #1
+8 2
+12 3
+
+Test case #2
+6 2
+
+Test case #3
+
+Test case #4
+
+Test case #5
+
+Test case #6
+4 2
+
+Test case #7
+2 2
+
+Test case #8
+2 2
+3 3
+
+Test case #9
+
+Test case #10
+4 2
+
+Test case #11
+
+Test case #12
+2 2
+3 3
+
+Test case #13
+2 2
+
+Test case #14
+
+Test case #15
+8 2
+
+Test case #16
+2 2
+
+Test case #17
+8 2
+
+Test case #18
+
+Test case #19
+4 2
+
+Test case #20
+4 2
+10 2
+
+Test case #21
+6 2
+
+Test case #22
+
+Test case #23
+
+Test case #24
+2 2
+6 2
+
+Test case #25
+
+Test case #26
+2 2
+
+Test case #27
+6 2
+
+Test case #28
+
+Test case #29
+
+Test case #30
+2 2
+
+Test case #31
+6 2
+
+Test case #32
+2 2
+3 3
+4 4
+5 5
+
+Test case #33
+4 2
+
+Test case #34
+2 2
+3 3
+
+Test case #35
+2 2
+3 3
+
+Test case #36
+
+Test case #37
+2 2
+3 3
+
+Test case #38
+2 2
+
+Test case #39
+6 2
+
+Test case #40
+2 2
+
+Test case #41
+2 2
+
+Test case #42
+4 2
+
+Test case #43
+2 2
+
+Test case #44
+2 2
+
+Test case #45
+2 2
+3 3
+
+Test case #46
+
+Test case #47
+4 2
+6 3
+
+Test case #48
+
+Test case #49
+2 2
+3 3
+
+Test case #50
+2 2
+3 3
+
+Test case #51
+
+Test case #52
+2 2
+3 3
+4 4
+
+Test case #53
+
+Test case #54
+
+Test case #55
+2 2
+3 3
+
+Test case #56
+4 2
+
+Test case #57
+2 2
+3 3
+4 4
+5 5
+6 6
+
+Test case #58
+4 2
+
+Test case #59
+2 2
+
+Test case #60
+2 2
+3 3
+4 4
+
+Test case #61
+12 2
+
+Test case #62
+2 2
+6 2
+
+Test case #63
+
+Test case #64
+
+Test case #65
+6 2
+
+Test case #66
+2 2
+3 3
+4 4
+5 5
+12 2
+
+Test case #67
+2 2
+3 3
+
+Test case #68
+2 2
+
+Test case #69
+8 2
+
+Test case #70
+2 2
+3 3
+4 4
+
+Test case #71
+2 2
+3 3
+
+Test case #72
+
+Test case #73
+2 2
+3 3
+
+Test case #74
+4 2
+
+Test case #75
+2 2
+3 3
+
+Test case #76
+4 2
+6 3
+8 4
+
+Test case #77
+2 2
+3 3
+
+Test case #78
+2 2
+
+Test case #79
+2 2
+3 3
+
+Test case #80
+6 2
+9 3
+
+Test case #81
+
+Test case #82
+2 2
+
+Test case #83
+2 2
+3 3
+
+Test case #84
+2 2
+6 2
+
+Test case #85
+10 2
+
+Test case #86
+6 2
+
+Test case #87
+6 2
+
+Test case #88
+2 2
+10 2
+
+Test case #89
+
+Test case #90
+2 2
+3 3
+4 4
+5 5
+6 6
+7 7
+
+Test case #91
+2 2
+3 3
+4 4
+
+Test case #92
+2 2
+
+Test case #93
+2 2
+
+Test case #94
+2 2
+
+Test case #95
+2 2
+3 3
+18 2
+
+Test case #96
+2 2
+3 3
+
+Test case #97
+2 2
+
+Test case #98
+4 2
+
+Test case #99
+2 2
+
+Test case #100
+2 2
+
