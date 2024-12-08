@@ -15,10 +15,10 @@ struct NODE {
     }
 }tr[MAXN];
 
-int root = 0;
 int idx = 0;
+int root = 0;
 
-void pushup(int x) {
+void pushUp(int x) {
     tr[x].size = tr[tr[x].s[0]].size + tr[tr[x].s[1]].size + tr[x].cnt;
 }
 
@@ -28,7 +28,7 @@ void rotate(int x) {
     tr[z].s[tr[z].s[1] == y] = x, tr[x].p = z;
     tr[y].s[k] = tr[x].s[k ^ 1], tr[tr[x].s[k ^ 1]].p = y;
     tr[x].s[k ^ 1] = y, tr[y].p = x;
-    pushup(y), pushup(x);
+    pushUp(y), pushUp(x);
 }
 
 void splay(int x, int k) {
@@ -41,29 +41,6 @@ void splay(int x, int k) {
         rotate(x);
     }
     if (!k) root = x;
-}
-
-void split(int &x, int &y, int k) {
-
-}
-
-void merge(int x, int y) {
-
-}
-
-
-void traversal(int u) {
-    if (!u) return;
-    traversal(tr[u].s[0]);
-    cout << ' ' << tr[u].w << '[' << tr[u].cnt << ',' << tr[u].size << ']';
-    cout << '[';
-    if (tr[u].s[0]) cout << tr[tr[u].s[0]].w;
-    else cout << -1;
-    cout << ',';
-    if (tr[u].s[1]) cout << tr[tr[u].s[1]].w;
-    else cout << -1;
-    cout << ']';
-    traversal(tr[u].s[1]);
 }
 
 int find(int w) {
@@ -91,6 +68,7 @@ void insert(int w) {
         if (p) tr[p].s[w > tr[p].w] = u;
         tr[u].set(p, w);
     }
+    pushUp(u);
     splay(u, 0);
 }
 
@@ -106,7 +84,7 @@ int remove(int w) {
         splay(v, 0);
         tr[v].s[1] = tr[u].s[1];
         tr[tr[u].s[1]].p = v;
-        pushup(v);
+        pushUp(v);
     } else {
         tr[tr[u].s[0]].p = tr[tr[u].s[1]].p = 0;
         splay(tr[u].s[0] | tr[u].s[1], 0);
@@ -114,53 +92,47 @@ int remove(int w) {
     return u;
 }
 
-int getkth(int k) {
-    int u = root;
-    if (k > tr[u].size) return -1;
-    while (u) {
-        if (k <= tr[tr[u].s[0]].size) u = tr[u].s[0];
-        else if (k <= tr[tr[u].s[0]].size + tr[u].cnt) return u;
-        else k -= tr[tr[u].s[0]].size + tr[u].cnt, u = tr[u].s[1];
-    }
-    return -1;
+int getRank(int w) {
+    insert(w);
+    int r = 1;
+    if (tr[root].s[0]) r += tr[tr[root].s[0]].size;
+    remove(w);
+    return r;
 }
 
-int main(int argc, char* argv[]) {
-    srand(time(NULL));
-    for (int i = 1; i <= 1000; i++) {
-        int cases = rand() % 4;
-        if (cases == 0) {
-            cout << "INSERT:\n";
-            int w = rand() % 20;
-            cout << w << '\n';
-            insert(w);
-            traversal(root);
-            cout << '\n';
-        } else if (cases == 1) {
-            cout << "FIND:\n";
-            int w = rand() % 20;
-            cout << w << '\n';
-            int u = find(w);
-            cout << w << ' ' << u << '\n';
-        } else if (cases == 2) {
-            cout << "REMOVE:\n";
-            int w = rand() % 20;
-            cout << w << '\n';
-            int u = remove(w);
-            cout << u << '\n';
-            traversal(root);
-            cout << '\n';
-        } else if (cases == 3) {
-            cout << "GET KTH:\n";
-            int k = rand() % 20;
-            int u = getkth(k);
-            cout << k;
-            if (u != -1) cout << ' ' << tr[u].w;
-            else cout << ' ' << -1;
-            cout << '\n';
-        } else if (cases == 4) {
-        
-        }
+int getKth(int k) {
+    int u = root;
+    while (true) {
+        if (k <= tr[tr[u].s[0]].size) u = tr[u].s[0];
+        else if (k <= tr[tr[u].s[0]].size + tr[u].cnt) return tr[u].w;
+        else k -= tr[tr[u].s[0]].size + tr[u].cnt, u = tr[u].s[1];
+    }
+}
+
+int getPrevious() {
+    int u = tr[root].s[0];
+    while (tr[u].s[1]) u = tr[u].s[1];
+    return tr[u].w;
+}
+
+int getNext() {
+    int u = tr[root].s[1];
+    while (tr[u].s[0]) u = tr[u].s[0];
+    return tr[u].w;
+}
+
+int main(int argc, char *argv[]) {
+    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
+    int n, cmd, x;
+    cin >> n;
+    for (int i = 1; i <= n; i++) {
+        cin >> cmd >> x;
+        if (cmd == 1) insert(x);
+        if (cmd == 2) remove(x);
+        if (cmd == 3) cout << getRank(x) << '\n';
+        if (cmd == 4) cout << getKth(x) << '\n';
+        if (cmd == 5) { insert(x); cout << getPrevious() << '\n'; remove(x); }
+        if (cmd == 6) { insert(x); cout << getNext() << '\n'; remove(x); }
     }
     return 0;
 }
