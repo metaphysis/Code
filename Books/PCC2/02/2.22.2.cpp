@@ -1,3 +1,6 @@
+// [LUOGU P3369](https://www.luogu.com.cn/problem/P3369)
+// Splay Tree
+
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -109,16 +112,22 @@ int getKth(int k) {
     }
 }
 
-int getPrevious() {
+int getPrevious(int w) {
+    insert(w);
     int u = tr[root].s[0];
     while (tr[u].s[1]) u = tr[u].s[1];
-    return tr[u].w;
+    int r = tr[u].w;
+    remove(w);
+    return r;
 }
 
-int getNext() {
+int getNext(int w) {
+    insert(w);
     int u = tr[root].s[1];
     while (tr[u].s[0]) u = tr[u].s[0];
-    return tr[u].w;
+    int r= tr[u].w;
+    remove(w);
+    return r;
 }
 
 int main(int argc, char *argv[]) {
@@ -131,8 +140,8 @@ int main(int argc, char *argv[]) {
         if (cmd == 2) remove(x);
         if (cmd == 3) cout << getRank(x) << '\n';
         if (cmd == 4) cout << getKth(x) << '\n';
-        if (cmd == 5) { insert(x); cout << getPrevious() << '\n'; remove(x); }
-        if (cmd == 6) { insert(x); cout << getNext() << '\n'; remove(x); }
+        if (cmd == 5) cout << getPrevious(x) << '\n';
+        if (cmd == 6) cout << getNext(x) << '\n';
     }
     return 0;
 }

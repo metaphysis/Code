@@ -9,28 +9,21 @@ const int MAXN = 1000010, INF = 0x7f7f7f7f;
 
 struct node { int sum, prefix, suffix, sub; } st[4 * MAXN];
 
-node combine(node a, node b)
-{
-    if (a.sum == -INF) return b;
-    if (b.sum == -INF) return a;
-    node nd;
-    nd.sum = a.sum + b.sum;
-    nd.prefix = max(a.prefix, a.sum + b.prefix);
-    nd.suffix = max(b.suffix, b.sum + a.suffix);
-    nd.sub = max(max(a.sub, b.sub), a.suffix + b.prefix);
-    return nd;
-}
-
 node getData(int value)
 {
     node nd;
-    nd.sum = nd.prefix = nd.suffix = nd.sub = value;
+    nd.sum = nd.sub = value;
+    nd.prefix = nd.suffix = max(value, 0);
     return nd;
 }
 
 void pushUp(int p)
 {
-    st[p] = combine(st[LC(p)], st[RC(p)]);
+    node a = st[LC(p)], b = st[RC(p)];
+    st[p].sum = a.sum + b.sum;
+    st[p].sub = max(max(a.sub, b.sub), a.suffix + st[p].value + b.prefix);
+    st[p].prefix = max(a.prefix, a.sum + st[p].value + b.prefix);
+    st[p].suffix = max(b.suffix, a.suffix + st[p].value + b.sum);
 }
 
 void build(int data[], int p, int left, int right)
