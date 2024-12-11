@@ -5,7 +5,7 @@
 
 using namespace std;
 
-const int MAXN = 500010;
+const int MAXN = 500010, INF = 0x3f3f3f3f;
 
 struct NODE {
     int s[2], p, w;
@@ -20,9 +20,8 @@ struct NODE {
     }
 }tr[MAXN];
 
-int cache[MAXN >> 4];
-int idx = 0, cidx = 0;
-int root = 0;
+int cache[MAXN], data[MAXN];;
+int idx = 0, cidx = 0, root = 0;
 
 void pushUp(int x) {
     int u = tr[x].s[0], v = tr[x].s[1];
@@ -35,6 +34,7 @@ void pushUp(int x) {
 
 void pushDown(int x) {
     if (tr[x].same) {
+        tr[x].same = tr[x].reversed = 0;
         tr[x].sum = tr[x].size * tr[x].w;
         if (tr[x].w >= 0) tr[x].prefix = tr[x].suffix = tr[x].sub = tr[x].sum;
         else {
@@ -43,12 +43,12 @@ void pushDown(int x) {
         }
         tr[tr[x].s[0]].same = tr[tr[x].s[1]].same = 1;
     }
-    if (tr[x].reversed && !tr[x].same) {
+    if (tr[x].reversed) {
+        tr[x].reversed = 0;
         swap(tr[x].prefix, tr[x].suffix);
         tr[tr[x].s[0]].reversed ^= 1;
         tr[tr[x].s[1]].reversed ^= 1;
     }
-    tr[x].same = tr[x].reversed = 0;
 }
 
 void rotate(int x) {
@@ -82,8 +82,6 @@ int find(int k) {
     }
 }
 
-int data[MAXN];
-
 int malloc() {
     if (cidx) return cache[--cidx];
     return ++idx;
@@ -100,33 +98,20 @@ int build(int p, int left, int right) {
     return u;
 }
 
-void insert() {
-    int posi, tot;
-    cin >> posi >> tot;
+int split(int posi, int tot) {
+    int left = find(posi), right = find(posi + tot + 1);
+    splay(left, 0), splay(right, left);
+    return right;
+}
+
+void insert(int posi, int tot) {
     for (int i = 0; i < tot; i++) cin >> data[i];
-    int u = build(0, 0, tot - 1);
-    int left = posi, right = posi + 1;
-    if (left == 0) {
-        right = find(left + 1);
-        splay(right, 0);
-        tr[right].s[0] = u;
-        tr[u].p = right;
-        pushUp(right);
-    } else if (left == tr[root].size) {
-        left = find(left);
-        splay(left, 0);
-        tr[left].s[1] = u;
-        tr[u].p = left;
-        pushUp(left);
-    } else {
-        left = find(left), right = find(right);
-        splay(left, 0);
-        splay(right, left);
-        tr[right].s[0] = u;
-        tr[u].p = right;
-        pushUp(right);
-        pushUp(left);
-    }
+    int v = build(0, 0, tot - 1);
+    int left = find(posi + 1), right = find(posi + 2);
+    splay(left, 0), splay(right, left);
+    tr[right].s[0] = v;
+    tr[v].p = right;
+    pushUp(right), pushUp(left);
 }
 
 void recycle(int u) {
@@ -136,86 +121,31 @@ void recycle(int u) {
     recycle(tr[u].s[1]);
 }
 
-void remove() {
-    int posi, tot;
-    cin >> posi >> tot;
-    int left = posi - 1, right = posi + tot;
-    if (left == 0) {
-        right = find(right);
-        splay(right, 0);
-        int u = tr[right].s[0];
-        tr[right].s[0] = 0;
-        pushUp(right);
-        recycle(u);
-    } else {
-        left = find(left), right = find(right);
-        splay(left, 0);
-        splay(right, left);
-        int u = tr[right].s[0];
-        tr[right].s[0] = 0;
-        pushUp(right);
-        pushUp(left);
-        recycle(u);
-    }
+void remove(int posi, int tot) {
+    int u = split(posi, tot);
+    recycle(tr[u].s[0]);
+    tr[u].s[0] = 0;
+    pushUp(u);
 }
 
-void makeSame() {
-    int posi, tot;
-    cin >> posi >> tot;
-    int left = posi - 1, right = posi + tot;
-    if (left == 0) {
-        right = find(right);
-        splay(right, 0);
-        int u = tr[right].s[0];
-        tr[u].same = 1;
-    } else {
-        left = find(left), right = find(right);
-        splay(left, 0);
-        splay(right, left);
-        int u = tr[right].s[0];
-        tr[u].same = 1;
-    }
+void makeSame(int posi, int tot) {
+    int u = split(posi, tot);
+    tr[tr[u].s[0]].same = 1;
+    pushUp(tr[u].s[0]), pushUp(u), pushUp(tr[u].p);
 }
 
-void reverse() {
-    int posi, tot;
-    cin >> posi >> tot;
-    int left = posi - 1, right = posi + tot;
-    if (left == 0) {
-        right = find(right);
-        splay(right, 0);
-        int u = tr[right].s[0];
-        tr[u].reversed ^= 1;
-    } else {
-        left = find(left), right = find(right);
-        splay(left, 0);
-        splay(right, left);
-        int u = tr[right].s[0];
-        tr[u].reversed ^= 1;
-    }
+void reverse(int posi, int tot) {
+    int u = split(posi, tot);
+    tr[tr[u].s[0]].reversed = 1;
+    pushUp(tr[u].s[0]), pushUp(u), pushUp(tr[u].p);
 }
 
-void getSum() {
-    int posi, tot;
-    cin >> posi >> tot;
-    int left = posi - 1, right = posi + tot;
-    if (left == 0) {
-        right = find(right);
-        splay(right, 0);
-        int u = tr[right].s[0];
-        cout << tr[u].sum << '\n';
-    } else {
-        left = find(left), right = find(right);
-        splay(left, 0);
-        splay(right, left);
-        int u = tr[right].s[0];
-        cout << tr[u].sum << '\n';
-    }
+void getSum(int posi, int tot) {
+    int u = split(posi, tot);
+    cout << tr[tr[u].s[0]].sum << '\n';
 }
 
-void maxSum() {
-    cout << tr[root].sub << '\n';
-}
+void maxSum() { cout << tr[root].sub << '\n'; }
 
 void traversal(int u) {
     if (!u) return;
@@ -232,21 +162,21 @@ void traversal(int u) {
 
 int main(int argc, char *argv[]) {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
-    int N, M;
-    tr[0].set(0, 0);
-    tr[0].size = 0;
-    cin >> N >> M;
-    for (int i = 0; i < N; i++) cin >> data[i];
-    root = build(0, 0, N - 1);
-    //traversal(root);
     string cmd;
+    int N, M, posi, tot;
+    tr[0].set(0, 0), tr[0].size = 0;
+    cin >> N >> M;
+    for (int i = 1; i <= N; i++) cin >> data[i];
+    data[0] = data[N + 1] = -INF;
+    root = build(0, 0, N);
     for (int i = 0; i < M; i++) {
         cin >> cmd;
-        if (cmd == "INSERT") insert();
-        else if (cmd == "DELETE") remove();
-        else if (cmd == "MAKE-SAME") makeSame();
-        else if (cmd == "REVERSE") reverse();
-        else if (cmd == "GET-SUM") getSum();
+        if (cmd != "MAX-SUM") cin >> posi >> tot;
+        if (cmd == "INSERT") insert(posi, tot);
+        else if (cmd == "DELETE") remove(posi, tot);
+        else if (cmd == "MAKE-SAME") makeSame(posi, tot);
+        else if (cmd == "REVERSE") reverse(posi, tot);
+        else if (cmd == "GET-SUM") getSum(posi, tot);
         else maxSum();
     }
     return 0;
