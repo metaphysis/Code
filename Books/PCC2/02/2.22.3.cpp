@@ -23,32 +23,46 @@ struct NODE {
 int cache[MAXN], data[MAXN];;
 int idx = 0, cidx = 0, root = 0;
 
-void pushUp(int x) {
-    int u = tr[x].s[0], v = tr[x].s[1];
-    tr[x].size = tr[u].size + tr[v].size + 1;
-    tr[x].sum = tr[u].sum + tr[v].sum + tr[x].w;
-    tr[x].sub = max(max(tr[u].sub, tr[v].sub), tr[u].suffix + tr[x].w + tr[v].prefix); 
-    tr[x].prefix = max(tr[u].prefix, tr[u].sum + tr[x].w + tr[v].prefix);
-    tr[x].suffix = max(tr[v].suffix, tr[u].suffix + tr[x].w + tr[v].sum);
+void commitSame(int x, int w) {
+    if (!x) return;
+    tr[x].w = w;
+    tr[x].sum = tr[x].size * w;
+    if (w >= 0) tr[x].prefix = tr[x].suffix = tr[x].sub = tr[x].sum;
+    else {
+        tr[x].prefix = tr[x].suffix = 0;
+        tr[x].sub = w;
+    }
+    tr[x].same = 1;
+}
+
+void commitReversed(int x) {
+    if (!x) return;
+    swap(tr[x].s[0], tr[x].s[1]);
+    swap(tr[x].prefix, tr[x].suffix);
+    tr[x].reversed ^= 1;
 }
 
 void pushDown(int x) {
     if (tr[x].same) {
         tr[x].same = tr[x].reversed = 0;
-        tr[x].sum = tr[x].size * tr[x].w;
-        if (tr[x].w >= 0) tr[x].prefix = tr[x].suffix = tr[x].sub = tr[x].sum;
-        else {
-            tr[x].prefix = tr[x].suffix = 0;
-            tr[x].sub = tr[x].w;
-        }
-        tr[tr[x].s[0]].same = tr[tr[x].s[1]].same = 1;
+        commitSame(tr[x].s[0], tr[x].w);
+        commitSame(tr[x].s[1], tr[x].w);
     }
     if (tr[x].reversed) {
         tr[x].reversed = 0;
-        swap(tr[x].prefix, tr[x].suffix);
-        tr[tr[x].s[0]].reversed ^= 1;
-        tr[tr[x].s[1]].reversed ^= 1;
+        commitReversed(tr[x].s[0]);
+        commitReversed(tr[x].s[1]);
     }
+}
+
+void pushUp(int x) {
+    int u = tr[x].s[0], v = tr[x].s[1];
+    tr[x].size = tr[u].size + tr[v].size + 1;
+    tr[x].sum = tr[u].sum + tr[v].sum + tr[x].w;
+    tr[x].sub = max(max(tr[u].sub, tr[v].sub),
+        tr[u].suffix + tr[x].w + tr[v].prefix);
+    tr[x].prefix = max(tr[u].prefix, tr[u].sum + tr[x].w + tr[v].prefix);
+    tr[x].suffix = max(tr[v].suffix, tr[u].suffix + tr[x].w + tr[v].sum);
 }
 
 void rotate(int x) {
@@ -57,7 +71,7 @@ void rotate(int x) {
     tr[z].s[tr[z].s[1] == y] = x, tr[x].p = z;
     tr[y].s[k] = tr[x].s[k ^ 1], tr[tr[x].s[k ^ 1]].p = y;
     tr[x].s[k ^ 1] = y, tr[y].p = x;
-    pushUp(y), pushUp(x);
+    pushUp(y); pushUp(x);
 }
 
 void splay(int x, int k) {
@@ -100,7 +114,7 @@ int build(int p, int left, int right) {
 
 int split(int posi, int tot) {
     int left = find(posi), right = find(posi + tot + 1);
-    splay(left, 0), splay(right, left);
+    splay(left, 0); splay(right, left);
     return right;
 }
 
@@ -108,10 +122,10 @@ void insert(int posi, int tot) {
     for (int i = 0; i < tot; i++) cin >> data[i];
     int v = build(0, 0, tot - 1);
     int left = find(posi + 1), right = find(posi + 2);
-    splay(left, 0), splay(right, left);
+    splay(left, 0); splay(right, left);
     tr[right].s[0] = v;
     tr[v].p = right;
-    pushUp(right), pushUp(left);
+    pushUp(right); pushUp(left);
 }
 
 void recycle(int u) {
@@ -125,19 +139,19 @@ void remove(int posi, int tot) {
     int u = split(posi, tot);
     recycle(tr[u].s[0]);
     tr[u].s[0] = 0;
-    pushUp(u);
+    pushUp(u); pushUp(tr[u].p);
 }
 
-void makeSame(int posi, int tot) {
+void modify(int posi, int tot, int c) {
     int u = split(posi, tot);
-    tr[tr[u].s[0]].same = 1;
-    pushUp(tr[u].s[0]), pushUp(u), pushUp(tr[u].p);
+    commitSame(tr[u].s[0], c);
+    pushUp(u); pushUp(tr[u].p);
 }
 
 void reverse(int posi, int tot) {
     int u = split(posi, tot);
-    tr[tr[u].s[0]].reversed = 1;
-    pushUp(tr[u].s[0]), pushUp(u), pushUp(tr[u].p);
+    commitReversed(tr[u].s[0]);
+    pushUp(u); pushUp(tr[u].p);
 }
 
 void getSum(int posi, int tot) {
@@ -145,39 +159,26 @@ void getSum(int posi, int tot) {
     cout << tr[tr[u].s[0]].sum << '\n';
 }
 
-void maxSum() { cout << tr[root].sub << '\n'; }
-
-void traversal(int u) {
-    if (!u) return;
-    traversal(tr[u].s[0]);
-    cout << "u = " << u << " leftChild = " << tr[u].s[0] << " rightChild = " << tr[u].s[1] << '\n';
-    cout << "tr[u].w = " << tr[u].w << '\n';
-    cout << "tr[u].sum = " << tr[u].sum << '\n';
-    cout << "tr[u].sub = " << tr[u].sub << '\n';
-    cout << "tr[u].prefix = " << tr[u].prefix << '\n';
-    cout << "tr[u].suffix = " << tr[u].suffix << '\n';
-    cout << '\n';
-    traversal(tr[u].s[1]);
-}
+void getMaxSum() { cout << tr[root].sub << '\n'; }
 
 int main(int argc, char *argv[]) {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
     string cmd;
-    int N, M, posi, tot;
-    tr[0].set(0, 0), tr[0].size = 0;
+    int N, M, posi, tot, c;
     cin >> N >> M;
     for (int i = 1; i <= N; i++) cin >> data[i];
-    data[0] = data[N + 1] = -INF;
-    root = build(0, 0, N);
+    tr[0].set(0, 0), tr[0].size = 0;
+    tr[0].sub = data[0] = data[N + 1] = -INF;
+    root = build(0, 0, N + 1);
     for (int i = 0; i < M; i++) {
         cin >> cmd;
         if (cmd != "MAX-SUM") cin >> posi >> tot;
         if (cmd == "INSERT") insert(posi, tot);
         else if (cmd == "DELETE") remove(posi, tot);
-        else if (cmd == "MAKE-SAME") makeSame(posi, tot);
+        else if (cmd == "MAKE-SAME") { cin >> c; modify(posi, tot, c); }
         else if (cmd == "REVERSE") reverse(posi, tot);
         else if (cmd == "GET-SUM") getSum(posi, tot);
-        else maxSum();
+        else getMaxSum();
     }
     return 0;
 }
