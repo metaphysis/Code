@@ -20,7 +20,7 @@ struct NODE {
     }
 }tr[MAXN];
 
-int cache[MAXN], data[MAXN];;
+int cache[MAXN], data[MAXN];
 int idx = 0, cidx = 0, root = 0;
 
 void commitSame(int x, int w) {
