@@ -8,7 +8,8 @@ struct edge { int v, w, nxt; } g[MAXN];
 
 int head[MAXN], idx;
 
-int parent[MAXN], son[MAXN], depth[MAXN], size[MAXN], top[MAXN], dfn[MAXN], rnk[MAXN];
+int parent[MAXN], son[MAXN], depth[MAXN];
+int size[MAXN], top[MAXN], dfn[MAXN], rnk[MAXN];
 int cnt;
 
 void addEdge(int u, int v, int w) {
