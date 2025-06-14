@@ -1,8 +1,8 @@
 // Happy Painting
 // UVa ID: 11994
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2025-06-14
+// UVa Run Time: 0.490s
 //
 // 版权所有（C）2025，邱秋。metaphysis # yeah dot net
 
@@ -15,14 +15,15 @@ const int MAXN = 100010;
 #define LC(x) tr[x].s[0]
 #define RC(x) tr[x].s[1]
 
-struct NODE { int s[2], p, v, bit, size, lazy, reversed; } tr[MAXN];
+struct NODE { int s[2], p, v, mask, size, lazy, reversed; } tr[MAXN];
 
-bool isRoot(int x) { return tr[tr[x].p].s[0] != x && tr[tr[x].p].s[1] != x; }
+bool isRoot(int x) { return LC(tr[x].p) != x && RC(tr[x].p) != x; }
 
 void pushUp(int x) {
-    tr[x].bit = tr[x].v, tr[x].size = 1;
-    if (LC(x)) tr[x].size += tr[LC(x)].size, tr[x].bit |= tr[LC(x)].bit;
-    if (RC(x)) tr[x].size += tr[RC(x)].size, tr[x].bit |= tr[RC(x)].bit;
+    if (!x) return;
+    tr[x].mask = tr[x].v, tr[x].size = 1;
+    if (LC(x)) tr[x].size += tr[LC(x)].size, tr[x].mask |= tr[LC(x)].mask;
+    if (RC(x)) tr[x].size += tr[RC(x)].size, tr[x].mask |= tr[RC(x)].mask;
 }
 
 void commitReversed(int x) {
@@ -38,8 +39,8 @@ void pushDown(int x) {
         tr[x].reversed = 0;
     }
     if (tr[x].lazy) {
-        if (LC(x)) tr[LC(x)].v = tr[LC(x)].bit = tr[LC(x)].lazy = tr[x].lazy;
-        if (RC(x)) tr[RC(x)].v = tr[RC(x)].bit = tr[RC(x)].lazy = tr[x].lazy;
+        if (LC(x)) tr[LC(x)].v = tr[LC(x)].mask = tr[LC(x)].lazy = tr[x].lazy;
+        if (RC(x)) tr[RC(x)].v = tr[RC(x)].mask = tr[RC(x)].lazy = tr[x].lazy;
         tr[x].lazy = 0;
     }
 }
@@ -111,19 +112,19 @@ void cut(int x, int y) {
 
 int _cut(int x, int y) {
     makeRoot(x);
-    access(x);
-    splay(x);
-    int rt = LC(x);
-    while (RC(rt)) rt = RC(rt);
-    tr[LC(x)].p = tr[x].p;
-    tr[x].p = LC(x) = 0;
-    return rt;
+    access(y);
+    splay(y);
+    int fy = LC(y);
+    while (RC(fy)) fy = RC(fy);
+    tr[LC(y)].p = tr[y].p;
+    tr[y].p = LC(y) = 0;
+    return fy;
 }
 
 void change(int x, int y, int c) {
     if (x == y) return;
-    int rt = findRoot(x), fx = 0;
-    if (rt != x) fx = _cut(rt, x);
+    int rx = findRoot(x), fx = 0;
+    if (rx != x) fx = _cut(rx, x);
     if (x == findRoot(y)) {
         if (fx) link(x, fx);
     } else {
@@ -138,8 +139,8 @@ void paint(int x, int y, int c) {
     for (int a = y, b = 0; a; a = tr[a].p) {
         splay(a);
         if (!tr[a].p) {
-            tr[RC(a)].v = tr[RC(a)].bit = tr[RC(a)].lazy = c;
-            tr[b].v = tr[b].bit = tr[b].lazy = c;
+            if (RC(a)) tr[RC(a)].v = tr[RC(a)].mask = tr[RC(a)].lazy = c;
+            if (b) tr[b].v = tr[b].mask = tr[b].lazy = c;
         }
         RC(a) = b;
         b = a;
@@ -153,7 +154,8 @@ pair<int, int> query(int x, int y) {
     pair<int, int > r = {0, 0};
     for (int a = y, b = 0; a; a = tr[a].p) {
         splay(a);
-        if (!tr[a].p) r = {tr[RC(a)].size + tr[b].size, tr[RC(a)].bit + tr[b].bit};
+        pushDown(a);
+        if (!tr[a].p) r = {tr[RC(a)].size + tr[b].size, tr[RC(a)].mask | tr[b].mask};
         RC(a) = b;
         b = a;
         pushUp(b);
@@ -166,10 +168,10 @@ int main(int argc, char *argv[]) {
     int n, m, cmd, x, y, c;
     int f[MAXN];
     cin >> n >> m;
-    for (int i = 1; i <= n; i++) {
+    for (int i = 0; i <= n; i++) {
         tr[i].p = tr[i].s[0] = tr[i].s[1] = 0;
-        tr[i].v = tr[i].bit = tr[i].reversed = 0;
-        tr[i].size = 1;
+        tr[i].v = tr[i].mask = tr[i].reversed = 0;
+        tr[i].size = i ? 1 : 0;
     }
     for (int i = 1; i <= n; i++) {
         cin >> f[i];
@@ -184,11 +186,11 @@ int main(int argc, char *argv[]) {
         cin >> cmd;
         if (cmd == 1) {
             cin >> x >> y >> c;
-            change(x, y, c);
+            change(x, y, 1 << (c - 1));
         }
         if (cmd == 2) {
             cin >> x >> y >> c;
-            paint(x, y, c);
+            paint(x, y, 1 << (c - 1));
         }
         if (cmd == 3) {
             cin >> x >> y;
