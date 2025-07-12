@@ -181,7 +181,7 @@ int main(int argc, char *argv[]) {
         cin >> c;
         if (f[i]) tr[i].v = 1 << (c - 1);
     }
-    
+
     for (int i = 1; i <= m; i++) {
         cin >> cmd;
         if (cmd == 1) {
