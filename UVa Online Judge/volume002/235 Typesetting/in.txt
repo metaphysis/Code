@@ -11,19 +11,9 @@ AAA *f1 *f1 *f2 *s30
 *f6 AAA BBB CCC *f3 *s25
 ABC *f1 CBA AABC *f6 CACA D
 *f4 AABBB B *s21 DAB
-0 0
-5
-A 10 20 30 12 22 32
-B 1 2 3 4 5 6
-C 9 10 8 3 5 2
-D 2 4 5 6 7 11
-  2 4 6 3 5 7
-1 1
-*f2 A *f2 B *s1 C *s2 D *s99 ABCD
-4 100
-AAA *f1 *f1 *f2 *s30
-*f6 AAA BBB CCC *f3 *s25
-ABC *f1 CBA AABC *f6 CACA D
-*f4 AABBB B *s21 DAB
+1 100
+*f6
+1 100
+*f6 AAA
 0 0
 0
