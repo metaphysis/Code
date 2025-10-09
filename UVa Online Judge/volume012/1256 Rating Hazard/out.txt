@@ -1,4 +1,6 @@
-Case 1: 211
-Case 2: 801
-Case 3: 1
-Case 4: 12805
+Case 1: 13
+Case 2: 847
+Case 3: 13333337
+Case 4: 190
+Case 5: 3
+Case 6: 29
