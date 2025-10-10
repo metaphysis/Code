@@ -1,286 +1,247 @@
 // Smallest Enclosing Box
 // UVa ID: 12308
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2025-10-10
+// UVa Run Time: 0.120s
 //
-// 版权所有（C）2019，邱秋。metaphysis # yeah dot net
+// 版权所有（C）2025，邱秋。metaphysis # yeah dot net
 
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <cmath>
+#include <algorithm>
+#include <iomanip>
+#include <limits>
+#include <functional>
 
 using namespace std;
 
-const double EPSILON = 1e-7, PI = 2 * acos(0);
+const double EPS = 1e-12;        // 浮点数比较精度
+const double PI = acos(-1.0);    // 圆周率
 
-struct point3
-{
+// 三维点结构体
+struct Point3D {
     double x, y, z;
-    point3 (double x = 0, double y = 0, double z = 0): x(x), y(y), z(z) {}
-    point3 operator+(const point3 p) { return point3(x + p.x, y + p.y, z + p.z); }
-    point3 operator-(const point3 p) { return point3(x - p.x, y - p.y, z - p.z); }
-    point3 operator*(double k) { return point3(x * k, y * k, z * k); }
-    point3 operator/(double k) { return point3(x / k, y / k, z / k); }
-};
-
-struct plane3
-{
-    point3 a, b, c;
-    plane3 (point3 a = point3(0, 0, 0), point3 b = point3(0, 0, 0), point3 c = point3(0, 0, 0)): a(a), b(b), c(c) {}
-    point3 operator[](int i)
-    {
-        if (i == 0) return a;
-        if (i == 1) return b;
-        if (i == 2) return c;
+    Point3D() : x(0), y(0), z(0) {}
+    Point3D(double x, double y, double z) : x(x), y(y), z(z) {}
+    
+    // 点加法
+    Point3D operator+(const Point3D& p) const {
+        return Point3D(x + p.x, y + p.y, z + p.z);
+    }
+    
+    // 点减法
+    Point3D operator-(const Point3D& p) const {
+        return Point3D(x - p.x, y - p.y, z - p.z);
     }
 };
 
-bool zero(double x) { return fabs(x) < EPSILON; }
-
-double norm(point3 p)
-{
-    return sqrt(pow(p.x, 2) + pow(p.y, 2) + pow(p.z, 2));
-}
-
-point3 cross(point3 a, point3 b)
-{
-    point3 r;
-    r.x = a.y * b.z - a.z * b.y;
-    r.y = a.z * b.x - a.x * b.z;
-    r.z = a.x * b.y - a.y * b.x;
-    return r;
-}
-
-int dot(point3 a, point3 b)
-{
+// 点积运算
+double dot(const Point3D& a, const Point3D& b) {
     return a.x * b.x + a.y * b.y + a.z * b.z;
 }
 
-int signedVolume(point3 p, point3 a, point3 b, point3 c)
-{
-    return dot(a - p, cross(b - p, c - p));
+// 叉积运算
+Point3D cross(const Point3D& a, const Point3D& b) {
+    return Point3D(a.y * b.z - a.z * b.y,
+                   a.z * b.x - a.x * b.z,
+                   a.x * b.y - a.y * b.x);
 }
 
-double signedArea(point3 a, point3 b, point3 c)
-{
-    return norm(cross(b - a, c - a));
+// 向量长度
+double length(const Point3D& v) {
+    return sqrt(dot(v, v));
 }
 
-point3 normalV(plane3 s)
-{
-    return cross(s.a - s.b, s.b - s.c);
-}
-
-double distOfPointToPlane(point3 p, plane3 s)
-{
-    return fabs(dot(normalV(s), p - s.a)) / norm(normalV(s));
-}
-
-double cos(plane3 u, plane3 v)
-{
-    return dot(normalV(u), normalV(v)) / norm(normalV(u)) / norm(normalV(v));
-}
-
-struct point
-{
-    double x, y;
-    point(double x = 0, double y = 0): x(x), y(y) {}
-    point operator+(point i) { return point(x + i.x, y + i.y); };
-    point operator-(point i) { return point(x - i.x, y - i.y); };
-    point operator*(double k) { return point(x * k, y * k); };
-    point operator/(double k) { return point(x / k, y / k); };
-    bool operator<(const point &p) const
-    {
-	    if (fabs(y - p.y) > EPSILON) return y < p.y;
-	    return x < p.x;
+// 计算点在给定方向上的投影范围
+void projectPoints(const vector<Point3D>& points, const Point3D& dir, 
+                   double& minVal, double& maxVal) {
+    minVal = maxVal = dot(points[0], dir);
+    for (int i = 1; i < points.size(); i++) {
+        double val = dot(points[i], dir);
+        if (val < minVal) minVal = val;
+        if (val > maxVal) maxVal = val;
     }
-	bool operator==(const point &p) const
-    {
-	    return fabs(x - p.x) <= EPSILON && fabs(y - p.y) <= EPSILON;
-    }
-    double distTo(point i) { return sqrt(pow(x - i.x, 2) + pow(y - i.y, 2)); }
-};
-
-typedef vector<point> polygon;
-
-double cross(point a, point b) { return a.x * b.y - a.y * b.x; }
-double dot(point a, point b) { return a.x * b.x + a.y * b.y; }
-double norm(point a) { return dot(a, a); }
-double abs(point a) { return sqrt(norm(a)); }
-
-double cp(point &a, point &b, point &c)
-{
-	return (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x);
 }
 
-bool ccw(point &a, point &b, point &c)
-{
-    return cp(a, b, c) > EPSILON;
+// 欧拉角旋转：根据三个欧拉角生成旋转矩阵的三个正交基向量
+void eulerRotation(double alpha, double beta, double gamma,
+                   Point3D& u, Point3D& v, Point3D& w) {
+    double ca = cos(alpha), sa = sin(alpha);
+    double cb = cos(beta), sb = sin(beta);
+    double cg = cos(gamma), sg = sin(gamma);
+    
+    // 旋转矩阵 R = Rz(gamma) * Ry(beta) * Rx(alpha)
+    u.x = cb * cg;
+    u.y = sa * sb * cg + ca * sg;
+    u.z = -ca * sb * cg + sa * sg;
+    
+    v.x = -cb * sg;
+    v.y = -sa * sb * sg + ca * cg;
+    v.z = ca * sb * sg + sa * cg;
+    
+    w.x = sb;
+    w.y = -sa * cb;
+    w.z = ca * cb;
 }
 
-bool ccwOrCollinear(point &a, point &b, point &c)
-{
-    double cp1 = cp(a, b, c);
-	return cp1 > EPSILON || fabs(cp1) <= EPSILON;
+// 计算在给定旋转角度下的包围盒体积
+double computeVolume(const vector<Point3D>& points, double alpha, double beta, double gamma) {
+    Point3D u, v, w;
+    eulerRotation(alpha, beta, gamma, u, v, w);
+    
+    double minU, maxU, minV, maxV, minW, maxW;
+    projectPoints(points, u, minU, maxU);
+    projectPoints(points, v, minV, maxV);
+    projectPoints(points, w, minW, maxW);
+    
+    return (maxU - minU) * (maxV - minV) * (maxW - minW);
 }
 
-// Any three vertices are not collinear.
-polygon andrewConvexHull(polygon &pg)
-{
-	polygon ch;
-    sort(pg.begin(), pg.end());
-	for (int i = 0; i < pg.size(); i++)
-	{
-		while (ch.size() >= 2 &&
-		    ccwOrCollinear(ch[ch.size() - 2], ch[ch.size() - 1], pg[i]))
-			ch.pop_back();
-		ch.push_back(pg[i]);
-	}
-	for (int i = pg.size() - 1, upper = ch.size() + 1; i >= 0; i--)
-	{
-		while (ch.size() >= upper &&
-		    ccwOrCollinear(ch[ch.size() - 2], ch[ch.size() - 1], pg[i]))
-			ch.pop_back();
-		ch.push_back(pg[i]);
-	}
-    ch.pop_back();
-	return ch;
-}
-
-pair<double, double> rotatingCalipers(polygon pg)
-{
-    double minArea = 1e20, minLength = 1e20;
-    pg.push_back(pg.front());
-    for (int i = 0, j = 1, k, m, n = pg.size() - 1; i < n; i++)
-    {
-        while (dot(pg[i + 1] - pg[i], pg[j + 1] - pg[j]) > EPSILON)
-            j = (j + 1) % n;
-        if (!i) k = j;
-        while (cross(pg[i + 1] - pg[i], pg[k + 1] - pg[k]) > EPSILON)
-            k = (k + 1) % n;
-        if (!i)  m = k;
-        while (dot(pg[i + 1] - pg[i], pg[m + 1] - pg[m]) < -EPSILON)
-            m = (m + 1) % n;
-        double d = abs(pg[i + 1] - pg[i]);
-        double height = fabs(cp(pg[i], pg[i + 1], pg[k])) / d;
-        double width = dot(pg[i + 1] - pg[i], pg[j] - pg[m]) / d;
-        minArea = min(minArea, width * height);
-        minLength = min(minLength, (width + height) * 2);
-    }
-    return make_pair(minArea, minLength);
-}
-
-point3 rotatePoint(point3 p, point3 v, double theta)
-{
-    double r = theta;
-    double c = cos(r);
-    double s = sin(r);
-    double x = (v.x * v.x * (1 - c) + c) * p.x + (v.x * v.y * (1 - c) - v.z * s) * p.y + (v.x * v.z * (1 - c) + v.y * s) * p.z;
-    double y = (v.y * v.x * (1 - c) + v.z * s) * p.x + (v.y * v.y * (1 - c) + c) * p.y + (v.y * v.z * (1 - c) - v.x * s) * p.z;
-    double z = (v.x * v.z * (1 - c) - v.y * s) * p.x + (v.y * v.z * (1 - c) + v.x * s) * p.y + (v.z * v.z * (1 - c) + c) * p.z;
-    return point3(x, y, z);
-}
-
-bool isSamePoint(point3 a, point3 b)
-{
-    return zero(a.x - b.x) && zero(a.y - b.y) && zero(a.z - b.z);
-}
-
-pair<int, plane3> coincideEdge(plane3 u, plane3 v)
-{
-    double sv1 = signedVolume(v.a, u.a, u.b, u.c);
-    double sv2 = signedVolume(v.b, u.a, u.b, u.c);
-    double sv3 = signedVolume(v.c, u.a, u.b, u.c);
-    if (zero(sv1) && zero(sv2) && zero(sv3)) return make_pair(0, plane3(point3(0, 0, 0), point3(0, 0, 0), point3(0, 0, 0)));
-    point3 pa[3] = {u.a, u.b, u.c}, pb[3] = {v.a, v.b, v.c};
-    for (int i = 0; i < 3; i++)
-        for (int j = 0; j < 3; j++)
-            if (isSamePoint(pa[i], pb[j]) && isSamePoint(pa[(i + 1) % 3], pb[(j + 2) % 3]))
-                return make_pair(1, plane3(pa[i], pa[(i + 1) % 3], pa[(i + 2) % 3]));
-    make_pair(0, plane3(point3(0, 0, 0), point3(0, 0, 0), point3(0, 0, 0)));
-}
-
-point3 getProjectedPoint(point3 p, plane3 u)
-{
-    point3 nv = normalV(u);
-    double scale = (dot(nv, u.a) - dot(nv, p)) / norm(nv);
-    return p + nv * scale;
-}
-
-int main(int argc, char *argv[])
-{
-    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
-
-    int n;
-    point3 psOn3D[16];
-
-    while (cin >> n, n > 0)
-    {
-        for (int i = 0; i < n; i++)
-            cin >> psOn3D[i].x >> psOn3D[i].y >> psOn3D[i].z;
-        // Get 3D convex hull by brute force search.
-        vector<plane3> faces;
-        for (int i = 0; i < n; i++)
-            for (int j = i + 1; j < n; j++)
-                for (int k = j + 1; k < n; k++)
-                {
-                    int left = 0, right = 0;
-                    // Three points are not colinear.
-                    if (zero(signedArea(psOn3D[i], psOn3D[j], psOn3D[k]))) continue;
-                    for (int l = 0; l < n; l++)
-                    {
-                        if (l == i || l == j || l == k) continue;
-                        double sv = signedVolume(psOn3D[l], psOn3D[i], psOn3D[j], psOn3D[k]);
-                        if (zero(sv)) continue;
-                        if (sv > 0) left++;
-                        if (sv < 0) right++;
-                        if (left * right > 0) break;
-                    }
-                    if (left == 0 || right == 0)
-                        faces.push_back(plane3(psOn3D[i], psOn3D[j], psOn3D[k]));
-                }
-        // Try every face of 3D convex hull as surface of enclosing box.
-        double V = 1e20;
-        for (int ii = 0; ii < faces.size(); ii++)
-            for (int jj = ii + 1; jj < faces.size(); jj++)
-            {
-                pair<int, plane3> r = coincideEdge(faces[ii], faces[jj]);
-                if (r.first)
-                {
-                    point3 pp = getProjectedPoint(r.second.c, faces[jj]);
-                    for (int kk = 0; kk <= 1000; kk++)
-                    {
-                        double H = 0;
-                        point3 pr = r.second.c + (pp - r.second.c) * (1.0 * kk / 1000);
-                        vector<point3> projection;
-                        plane3 bottom = plane3(r.second.a, r.second.b, pr);
-                        point3 nv = normalV(bottom);
-                        for (int j = 0; j < faces.size(); j++)
-                            for (int k = 0; k < 3; k++)
-                            {
-                                projection.push_back(getProjectedPoint(faces[j][k], bottom));
-                                H = max(H, distOfPointToPlane(faces[j][k], bottom));
-                            }
-                        // Get projection of point on plane.
-                        double cosv = cos(bottom, plane3(point3(0, 0, 0), point3(1, 0, 0), point3(0, 1, 0)));
-                        vector<point> psOn2D;
-                        for (int j = 0; j < projection.size(); j++)
-                        {
-                            point3 p = projection[j] - bottom.c;
-                            if (zero(cosv)) psOn2D.push_back(point(p.z, p.y));
-                            else psOn2D.push_back(point(p.x / cosv, p.y));
-                        }
-                        // Get 2D convex hull.
-                        sort(psOn2D.begin(), psOn2D.end());
-                        psOn2D.erase(unique(psOn2D.begin(), psOn2D.end()), psOn2D.end());
-                        polygon pg = andrewConvexHull(psOn2D);
-                        reverse(pg.begin(), pg.end());
-                        pair<double, double> r = rotatingCalipers(pg);
-                        V = min(V, r.first * H);
+// 超精细局部优化：在候选解附近进行多轮逐步细化的搜索
+double ultraRefinedOptimize(const vector<Point3D>& points, double alpha, double beta, double gamma) {
+    double bestVolume = computeVolume(points, alpha, beta, gamma);
+    double bestAlpha = alpha, bestBeta = beta, bestGamma = gamma;
+    
+    // 多轮逐步细化，使用极小的步长（最小到PI/100000）
+    for (double step = PI / 15.0; step > PI / 100000.0; step /= 2.5) {
+        bool improved = false;
+        
+        // 在三个欧拉角方向上进行局部搜索
+        for (double da = -step; da <= step; da += step / 3.0) {
+            for (double db = -step; db <= step; db += step / 3.0) {
+                for (double dg = -step; dg <= step; dg += step / 3.0) {
+                    double newAlpha = bestAlpha + da;
+                    double newBeta = max(0.0, min(PI, bestBeta + db));  // beta限制在[0, π]
+                    double newGamma = bestGamma + dg;
+                    
+                    double volume = computeVolume(points, newAlpha, newBeta, newGamma);
+                    if (volume < bestVolume - EPS) {
+                        bestVolume = volume;
+                        bestAlpha = newAlpha;
+                        bestBeta = newBeta;
+                        bestGamma = newGamma;
+                        improved = true;
                     }
                 }
             }
-        cout << fixed << setprecision(2) << V << '\n';
+        }
+        
+        // 如果没有改进且步长已经很小，提前终止
+        if (!improved && step < PI / 100.0) break;
     }
+    
+    return bestVolume;
+}
 
+// 主算法：寻找最小体积包围盒
+double minBoundingBox(const vector<Point3D>& points) {
+    double minVolume = numeric_limits<double>::max();
+    
+    // 根据点集大小调整搜索密度
+    int steps = 18;
+    if (points.size() <= 6) {
+        steps = 22;  // 对于小点集，使用更密集的搜索
+    }
+    
+    // 第一阶段：中等密度搜索找到大致范围
+    vector<vector<double>> candidates;
+    
+    // 在欧拉角空间中进行均匀采样
+    for (int i = 0; i < steps; i++) {
+        double alpha = 2.0 * PI * i / steps;  // alpha ∈ [0, 2π]
+        for (int j = 0; j < steps; j++) {
+            double beta = PI * j / steps;     // beta ∈ [0, π]
+            for (int k = 0; k < steps; k++) {
+                double gamma = 2.0 * PI * k / steps;  // gamma ∈ [0, 2π]
+                
+                double volume = computeVolume(points, alpha, beta, gamma);
+                // 保存所有有希望的候选解（体积小于当前最小值的2倍）
+                if (volume < minVolume * 2.0) {
+                    candidates.push_back({alpha, beta, gamma, volume});
+                }
+                if (volume < minVolume) {
+                    minVolume = volume;
+                }
+            }
+        }
+    }
+    
+    // 第二阶段：对大量候选解进行精细优化
+    sort(candidates.begin(), candidates.end(), 
+         [](const vector<double>& a, const vector<double>& b) {
+             return a[3] < b[3];  // 按体积升序排序
+         });
+    
+    // 对前30个最好的候选解进行超精细优化
+    int num_to_optimize = min(30, (int)candidates.size());
+    for (int i = 0; i < num_to_optimize; i++) {
+        double alpha = candidates[i][0];
+        double beta = candidates[i][1];
+        double gamma = candidates[i][2];
+        
+        double volume = ultraRefinedOptimize(points, alpha, beta, gamma);
+        if (volume < minVolume) {
+            minVolume = volume;
+        }
+    }
+    
+    // 第三阶段：基于几何特征的搜索
+    // 计算所有点对的方向向量
+    vector<Point3D> directions;
+    for (int i = 0; i < points.size(); i++) {
+        for (int j = i + 1; j < points.size(); j++) {
+            Point3D dir = points[j] - points[i];
+            if (length(dir) > EPS) {
+                // 归一化方向向量
+                double len = length(dir);
+                dir = Point3D(dir.x/len, dir.y/len, dir.z/len);
+                directions.push_back(dir);
+            }
+        }
+    }
+    
+    // 对每个方向向量进行精细搜索
+    for (const Point3D& dir : directions) {
+        // 将方向向量转换为欧拉角
+        double beta = acos(dir.z);
+        double gamma = atan2(dir.y, dir.x);
+        
+        // 围绕这个主轴进行密集旋转搜索
+        for (int k = 0; k < 12; k++) {
+            double alpha = 2.0 * PI * k / 12;
+            double volume = computeVolume(points, alpha, beta, gamma);
+            if (volume < minVolume) {
+                minVolume = volume;
+            }
+            
+            // 对好的方向进行局部优化
+            if (volume < minVolume * 1.2) {
+                volume = ultraRefinedOptimize(points, alpha, beta, gamma);
+                if (volume < minVolume) {
+                    minVolume = volume;
+                }
+            }
+        }
+    }
+    
+    return minVolume;
+}
+
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    
+    int n;
+    while (cin >> n && n != 0) {
+        vector<Point3D> points(n);
+        for (int i = 0; i < n; i++) {
+            cin >> points[i].x >> points[i].y >> points[i].z;
+        }
+        
+        double volume = minBoundingBox(points);
+        cout << fixed << setprecision(2) << volume << endl;
+    }
+    
     return 0;
 }
