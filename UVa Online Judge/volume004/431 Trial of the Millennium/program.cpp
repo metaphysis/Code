@@ -10,119 +10,82 @@
 
 using namespace std;
 
-struct evidence
-{
-    int index, score, hour;
+vector<pair<int, int>> evidenceList;
+int memo[200][300];
+bool selected[200][300];
+
+int knapsack(int index, int remainingTime) {
+    if (index == evidenceList.size() || remainingTime == 0) return 0;
+    if (~memo[index][remainingTime]) return memo[index][remainingTime];
+    int takeScore = 0, skipScore = 0;
+    if (evidenceList[index].second <= remainingTime) 
+        takeScore = knapsack(index + 1, remainingTime - evidenceList[index].second) + evidenceList[index].first;
+    skipScore = knapsack(index + 1, remainingTime);
+    selected[index][remainingTime] = takeScore > skipScore;
+    return memo[index][remainingTime] = max(takeScore, skipScore);
+}
+
+struct Evidence {
     string description;
-    
-    bool operator<(const evidence &data) const
-    {
-        if (hour != data.hour)
-            return hour < data.hour;
-        if (score != data.score)
-            return score > data.score;
-        return description < data.description;
+    int timeRequired, scoreValue;
+    bool friend operator<(const Evidence &a, const Evidence &b) {
+        return a.timeRequired < b.timeRequired;
     }
-};
+} tempEvidence;
 
-int main(int argc, char *argv[])
-{
-    string line;
-    int scores[110][250], choices[110][250], n, cases;
-    
-    cin >> cases;
-    for (int cs = 1; cs <= cases; cs++)
-    {
-        int time_limit;
-        cin >> time_limit;
-        cin.ignore(256, '\n');
-
-        vector<evidence> evidences;
-        int count = 1;
-        while (getline(cin, line), line.length() > 0)
-        {
-            if (line.length() == 0) break;
-            evidence data;
-            data.index = count++;
-            istringstream iss(line);
-            iss >> data.score >> data.hour;
-            getline(iss, data.description);
-            data.description.erase(data.description.begin());
-            evidences.push_back(data);
+int main() {
+    ios::sync_with_stdio(false);
+    int testCases, totalTime, scoreValue, timeRequired;
+    string inputLine, description;
+    stringstream stringParser;
+    vector<string> descriptions;
+    cin >> testCases;
+    getline(cin, inputLine);
+    getline(cin, inputLine);
+    while (testCases--) {
+        descriptions.clear();
+        evidenceList.clear();
+        memset(memo, -1, sizeof memo);
+        memset(selected, 0, sizeof selected);
+        cin >> totalTime;
+        getline(cin, inputLine);
+        while (getline(cin, inputLine) && inputLine != "") {
+            stringParser.clear(), stringParser.str(inputLine);
+            stringParser >> scoreValue >> timeRequired;
+            getline(stringParser, description);
+            description.erase(description.begin());
+            evidenceList.push_back(make_pair(scoreValue, timeRequired));
+            descriptions.push_back(description);
         }
-        
-        if (cs > 1) cout << '\n';
-
-        sort(evidences.begin(), evidences.end());
-
-        // Add a DUMB element to adjust index.
-        evidence empty;
-        evidences.insert(evidences.begin(), empty);
-
-        memset(scores, 0, sizeof(scores));
-        memset(choices, 0, sizeof(choices));
-        n = evidences.size() - 1;
-
-        for (int i = 1; i <= n; i++)
-            for (int j = 1; j <= time_limit; j++)
-            {
-                if (j >= evidences[i].hour && scores[i - 1][j - evidences[i].hour] + evidences[i].score > scores[i - 1][j])
-                {
-                    choices[i][j] = 1;
-                    scores[i][j] = scores[i - 1][j - evidences[i].hour] + evidences[i].score;
-                }
-                else scores[i][j] = scores[i - 1][j];
-            }
-        
-        vector<int> selected;
-        int last_index = n, pre_time_limit = time_limit;
-        int used_hours = 0, max_points = 0;
-
-        while (last_index)
-        {
-            if (choices[last_index][pre_time_limit])
-            {
-                selected.push_back(last_index);
-                pre_time_limit -= evidences[last_index].hour;
-                used_hours += evidences[last_index].hour;
-                max_points += evidences[last_index].score;
-            }
-            last_index--;
-        }
-        reverse(selected.begin(), selected.end());
-
-        if (time_limit == 0)
-        {
-            max_points = 0;
-            selected.clear();
-            for (int i = 1; i <= n; i++)
-                if (evidences[i].hour == 0)
-                {
-                    selected.push_back(i);
-                    max_points += evidences[i].score;
-                }
-        }
-
-        if (max_points == 0)
-        {
+        int totalScore = knapsack(0, totalTime), totalTimeUsed = 0;
+        int currentIndex = 0;
+        if (totalScore == 0) {
             cout << "There is not enough time to present any evidence. Drop the charges.\n";
+            if (testCases) cout << '\n';
             continue;
         }
-
+        vector<Evidence> selectedEvidence;
+        while (currentIndex < evidenceList.size()) {
+            if (selected[currentIndex][totalTime]) {
+                tempEvidence.description = descriptions[currentIndex];
+                tempEvidence.scoreValue = evidenceList[currentIndex].first;
+                tempEvidence.timeRequired = evidenceList[currentIndex].second;
+                totalTimeUsed += tempEvidence.timeRequired;
+                totalTime -= tempEvidence.timeRequired;
+                selectedEvidence.push_back(tempEvidence);
+            }
+            currentIndex++;
+        }
+        sort(selectedEvidence.begin(), selectedEvidence.end());
         cout << "Score  Time  Description\n";
         cout << "-----  ----  -----------\n";
-        for (auto item : selected)
-        {
-            cout << setw(3) << right << evidences[item].score;
-            cout << "    ";
-            cout << setw(3) << right << evidences[item].hour;
-            cout << "   ";
-            cout << evidences[item].description << '\n';
+        for (int i = 0; i < selectedEvidence.size(); i++) {
+            cout << setw(3) << selectedEvidence[i].scoreValue << "    " << setw(3) << selectedEvidence[i].timeRequired << "   " << selectedEvidence[i].description << '\n';
         }
         cout << '\n';
-        cout << "Total score: " << max_points << " points\n";
-        cout << " Total time: " << used_hours << " hours\n";
+        cout << "Total score: " << totalScore << " points\n";
+        cout << " Total time: " << totalTimeUsed << " hours\n";
+        if (testCases) cout << '\n';
     }
-    
-	return 0;
+    return 0;
 }
