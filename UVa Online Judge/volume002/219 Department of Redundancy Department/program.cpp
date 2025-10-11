@@ -1,164 +1,118 @@
 // Department of Redundancy Department
 // UVa ID: 219
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2025-10-11
+// UVa Run Time: 0.000s
 //
-// 版权所有（C）2016，邱秋。metaphysis # yeah dot net
+// 版权所有（C）2025，邱秋。metaphysis # yeah dot net
 
-#include <bits/stdc++.h>
-
+#include <cstdio>
+#include <cstring>
+#include <algorithm>
 using namespace std;
-
-vector<pair<int, int>> fd;
-vector<bool> visited(110);
-vector<int> path(110);
-
-bool isRedundant(int valueOr, int index)
-{
-    vector<bool> used(110);
-    fill(used.begin(), used.end(), false);
-    bool updated;
-    do
-    {
-        updated = false;
-        for (int i = 0; i < fd.size(); i++)
-        {
-            if (visited[i] || used[i]) continue;
-            if ((valueOr & fd[i].first) != fd[i].first) continue;
-            
-            used[i] = true;
-            valueOr |= fd[i].second;
-            updated = true; 
+const int MAX_N = 105; // 最大FD数量
+bool hasRedundant; // 标记当前组是否存在冗余FD
+int n; // FD数量
+int lhsMask[MAX_N], rhsMask[MAX_N]; // 每个FD的左右部字段掩码
+int path[MAX_N], visited[MAX_N]; // 记录推导路径和访问标记
+// 解析输入字符串，转换为掩码形式
+void parseFD(char* str, int idx) {
+    bool isRight = false; // 是否遇到->符号，进入右部解析
+    int len = strlen(str);
+    for (int i = 0; i < len; i++) {
+        if (str[i] >= 'A' && str[i] <= 'Z') {
+            if (isRight)
+                rhsMask[idx] |= (1 << (str[i] - 'A')); // 设置右部对应位
+            else
+                lhsMask[idx] |= (1 << (str[i] - 'A')); // 设置左部对应位
+        } else if (str[i] == '-') {
+            isRight = true; // 遇到->，开始解析右部
+            i++; // 跳过下一个字符'>'
         }
-    } while (updated);
-    
-    return (valueOr | fd[index].second) == valueOr;
-}
-
-void shrink(int step, int index)
-{
-    vector<int> shortest;
-    for (int i = 0; i < step; i++)
-        shortest.push_back(path[i]);
-    
-    while (true)
-    {
-        int forbidden = 0;
-        bool updated = false;
-        while (forbidden < shortest.size())
-        {
-            int left = fd[index].first;
-            for (int i = 0; i < shortest.size(); i++)
-            {
-                if (i == forbidden)
-                    continue;
-                if ((left & fd[shortest[i]].first) == fd[shortest[i]].first)
-                    left |= fd[shortest[i]].second;
-            }
-            
-            if ((left & fd[index].second) == fd[index].second)
-            {
-                shortest.erase(shortest.begin() + forbidden);
-                updated = true;
-                break;
-            }
-                
-            forbidden++;
-        }
-        
-        if (!updated)
-            break;
     }
-    
-    cout << "     FD " << (index + 1) << " is redundant using FDs:";
-    for (int i = 0; i < shortest.size(); i++)
-        cout << " " << (shortest[i] + 1);
-    cout << endl;
 }
-
-bool backtrack(int step, int valueOr, int index)
-{
-    if ((valueOr & fd[index].second) == fd[index].second)
-    {
-        shrink(step, index);
+// 初始化：读取输入并解析
+void initialize() {
+    char inputStr[MAX_N];
+    hasRedundant = true; // 初始假设存在冗余
+    memset(lhsMask, 0, sizeof(lhsMask));
+    memset(rhsMask, 0, sizeof(rhsMask));
+    for (int i = 0; i < n; i++) {
+        scanf("%s", inputStr);
+        parseFD(inputStr, i);
+    }
+}
+// 输出找到的冗余FD及其推导路径
+void outputRedundantFD(int idx) {
+    printf("     FD %d is redundant using FDs:", idx + 1);
+    for (int i = 0; path[i] != -1; i++)
+        printf(" %d", path[i]);
+    printf("\n");
+}
+// 检查当前字段集合是否能推导出目标FD的右部（不使用目标FD）
+bool canDerive(int currentSet, int targetIdx) {
+    int used[MAX_N];
+    memset(used, 0, sizeof(used));
+    while (true) {
+        bool noChange = true; // 标记是否无法继续扩展
+        for (int i = 0; i < n; i++) {
+            if (used[i] || visited[i]) // 跳过已使用或标记为忽略的FD
+                continue;
+            if ((currentSet & lhsMask[i]) != lhsMask[i]) // 检查左部是否满足
+                continue;
+            used[i] = 1;
+            currentSet |= rhsMask[i]; // 扩展当前字段集合
+            noChange = false;
+        }
+        if (noChange) break; // 无法继续扩展，退出循环
+    }
+    // 检查是否包含目标右部
+    return (currentSet | rhsMask[targetIdx]) != currentSet;
+}
+// DFS搜索推导路径
+bool searchPath(int depth, int currentSet, int targetIdx) {
+    path[depth] = -1; // 路径结束标记
+    // 若当前集合已包含目标右部，则找到路径
+    if ((currentSet & rhsMask[targetIdx]) == rhsMask[targetIdx])
         return true;
-    }
-
-    for (int i = 0; i < fd.size(); i++)
-    {
+    // 若无法继续推导，剪枝
+    if (canDerive(currentSet, targetIdx))
+        return false;
+    // 尝试应用每个未使用的FD
+    for (int i = 0; i < n; i++) {
         if (visited[i]) continue;
-        if ((valueOr & fd[i].first) != fd[i].first) continue;
-        if ((valueOr | fd[i].second) == valueOr) continue;
-
-        visited[i] = true;
-        if (backtrack(step, valueOr, index)) return true;
-        path[step] = i;
-        if (backtrack(step + 1, valueOr | fd[i].second, index)) return true;
-        visited[i] = false;
+        if ((currentSet & lhsMask[i]) != lhsMask[i]) continue; // 左部不满足
+        if ((currentSet | rhsMask[i]) == currentSet) continue; // 右部已包含
+        visited[i] = 1;
+        if (searchPath(depth, currentSet, targetIdx)) // 不选择当前FD
+            return true;
+        path[depth] = i + 1; // 记录当前FD编号（从1开始）
+        if (searchPath(depth + 1, currentSet | rhsMask[i], targetIdx)) // 选择当前FD
+            return true;
+        visited[i] = 0;
+    }
+    return false;
+}
+// 主处理函数：检测每个FD是否冗余
+void findRedundantFDs() {
+    for (int i = 0; i < n; i++) {
+        memset(visited, 0, sizeof(visited));
+        visited[i] = 1; // 标记当前FD为忽略
+        if (searchPath(0, lhsMask[i], i)) { // 从当前FD的左部开始搜索
+            outputRedundantFD(i);
+            hasRedundant = false; // 标记存在冗余
+        }
     }
 }
-
-int main(int argc, char *argv[])
-{
-    int cases = 0;
-    string line;
-    while (getline(cin, line))
-    {
-        int n = stoi(line);
-        if (n == 0)
-            break;
-
-        fd.clear();
-        for (int i = 1; i <= n; i++)
-        {
-            getline(cin, line);
-            int index = line.find("->");
-
-            int first = 0;
-            for (auto c:line.substr(0, index)) first |= (1 << (c - 'A'));
-
-            int second = 0;
-            for (auto c:line.substr(index + 2)) second |= (1 << (c - 'A'));
-
-            fd.push_back(make_pair(first, second));
-        }
-
-        if (cases)
-            cout << endl;
-        cout << "Set number " << ++cases << endl;
-
-        vector<int> redundant;
-        for (int i = 0; i < fd.size(); i++)
-        {
-            fill(visited.begin(), visited.end(), false);
-            visited[i] = true;
-            if (isRedundant(fd[i].first, i))
-                redundant.push_back(i);
-        }
-        
-        if (redundant.size() == 0)
-        {
-            cout << "     No redundant FDs." << endl;
-            continue;
-        }
-        
-        bool isAllRedundant = (redundant.size() == fd.size());
-        for (int i = 0; i < redundant.size(); i++)
-        {
-            fill(visited.begin(), visited.end(), false);
-            
-            visited[redundant[i]] = true;
-            
-            if (!isAllRedundant)
-            {
-                for (int j = 0; j < redundant.size(); j++)
-                    visited[redundant[j]] = true;
-            }
-
-            backtrack(0, fd[redundant[i]].first, redundant[i]);
-        }
+int main() {
+    int caseNum = 1;
+    while (scanf("%d", &n) == 1 && n) {
+        initialize();
+        printf("Set number %d\n", caseNum++);
+        findRedundantFDs();
+        if (hasRedundant)
+            printf("     No redundant FDs.\n");
+        printf("\n");
     }
-
     return 0;
 }
