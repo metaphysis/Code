@@ -67,7 +67,7 @@ long long dynamicProgramming() {
             }
         }
     }
-    // 提取结果：最后一个石堆高度为h[n-1]的最小调整量
+    // 提取结果：最后一个石堆高度为h[n - 1]的最小调整量
     long long answer = INF;
     for (int j = 0; j < m; j++)
         if (candidates[j] == h[n - 1] && dp[n - 1][j] < answer)
