@@ -1,119 +1,157 @@
-// [LUOGU P3369](https://www.luogu.com.cn/problem/P3690)
-// Link-Cut Tree
+// [LUOGU P3369](https://www.luogu.com.cn/problem/P3369)
+// Splay Tree
 
 #include <bits/stdc++.h>
 
 using namespace std;
 
-const int MAXN = 100010;
+const int MAXN = 1000010;
 
-struct NODE { int s[2], p, w, v, reversed; } tr[MAXN];
+struct NODE {
+    int s[2], p, w;
+    int size;
+    void set(int _p, int _w) {
+        s[0] = s[1] = 0;
+        p = _p, w = _w;
+        size = 1;
+    }
+}tr[MAXN];
 
-bool isRoot(int x) { return tr[tr[x].p].s[0] != x && tr[tr[x].p].s[1] != x; }
+int idx = 0;
+int root = 0;
 
 void pushUp(int x) {
-    tr[x].v = tr[tr[x].s[0]].v ^ tr[tr[x].s[1]].v ^ tr[x].w;
-}
-
-void commitReversed(int x) {
-    if (!x) return;
-    swap(tr[x].s[0], tr[x].s[1]);
-    tr[x].reversed ^= 1;
-}
-
-void pushDown(int x) {
-    if (tr[x].reversed) {
-        commitReversed(tr[x].s[0]);
-        commitReversed(tr[x].s[1]);
-        tr[x].reversed = 0;
-    }
-}
-
-void updatePath(int x) {
-    if (!isRoot(x)) updatePath(tr[x].p);
-    pushDown(x);
+    tr[x].size = tr[tr[x].s[0]].size + tr[tr[x].s[1]].size + 1;
 }
 
 void rotate(int x) {
     int y = tr[x].p, z = tr[y].p;
     int k = tr[y].s[1] == x;
-    if (!isRoot(y)) tr[z].s[tr[z].s[1] == y] = x;
-    tr[x].p = z;
+    tr[z].s[tr[z].s[1] == y] = x, tr[x].p = z;
     tr[y].s[k] = tr[x].s[k ^ 1], tr[tr[x].s[k ^ 1]].p = y;
     tr[x].s[k ^ 1] = y, tr[y].p = x;
-    pushUp(y); pushUp(x);
+    pushUp(y), pushUp(x);
 }
 
-void splay(int x) {
-    updatePath(x);
-    while (!isRoot(x)) {
+void splay(int x, int k) {
+    while (tr[x].p != k) {
         int y = tr[x].p, z = tr[y].p;
-        if (!isRoot(y)) {
+        if (z != k) {
             if ((tr[y].s[1] == x) ^ (tr[z].s[1] == y)) rotate(x);
             else rotate(y);
         }
         rotate(x);
     }
+    if (!k) root = x;
 }
 
-void access(int x) {
-    for (int p = 0; x; p = x, x = tr[x].p) {
-        splay(x);
-        tr[x].s[1] = p;
-        pushUp(x);
+int find(int w) {
+    int u = root;
+    while (u) {
+        if (w == tr[u].w) break;
+        else u = tr[u].s[w > tr[u].w];
+    }
+    if (u) { splay(u, 0); return u; }
+    else return -1;
+}
+
+int find2(int k) {
+    if (k > tr[root].size) return -1;
+    int u = root;
+    while (true) {
+        pushDown(u);
+        if (k <= tr[tr[u].s[0]].size) u = tr[u].s[0];
+        else if (k <= tr[tr[u].s[0]].size + tr[u].cnt) return u;
+        else k -= tr[tr[u].s[0]].size + tr[u].cnt, u = tr[u].s[1];
     }
 }
 
-void makeRoot(int x) {
-    access(x);
-    splay(x);
-    commitReversed(x);
-}
-
-int findRoot(int x) {
-    access(x);
-    splay(x);
-    while (tr[x].s[0]) {
-        pushDown(x);
-        x = tr[x].s[0];
+void insert(int w) {
+    int u = root, p = 0;
+    while (u) {
+        if (w == tr[u].w) {
+            tr[u].cnt += 1;
+            break;
+        }
+        p = u;
+        u = tr[u].s[w > tr[u].w];
     }
-    splay(x);
-    return x;
-}
-
-void split(int x, int y) {
-    makeRoot(x);
-    access(y);
-    splay(y);
-}
-
-void link(int x, int y) {
-    makeRoot(x);
-    if (findRoot(y) != x) tr[x].p = y;
-}
-
-void cut(int x, int y) {
-    makeRoot(x);
-    if (findRoot(y) == x && tr[y].p == x && !tr[y].s[0]) {
-        tr[y].p = tr[x].s[1] = 0;
-        pushUp(x);
+    if (!u) {
+        u = ++idx;
+        if (p) tr[p].s[w > tr[p].w] = u;
+        tr[u].set(p, w);
     }
+    pushUp(u);
+    splay(u, 0);
+}
+
+int remove(int w) {
+    int u = find(w);
+    if (u == -1) return -1;
+    tr[u].cnt--;
+    if (tr[u].cnt) return u;
+    if (tr[u].s[0] && tr[u].s[1]) {
+        tr[tr[u].s[0]].p = 0;
+        int v = tr[u].s[0];
+        while (tr[v].s[1]) v = tr[v].s[1];
+        splay(v, 0);
+        tr[v].s[1] = tr[u].s[1];
+        tr[tr[u].s[1]].p = v;
+        pushUp(v);
+    } else {
+        tr[tr[u].s[0]].p = tr[tr[u].s[1]].p = 0;
+        splay(tr[u].s[0] | tr[u].s[1], 0);
+    }
+    return u;
+}
+
+int getRank(int w) {
+    insert(w);
+    int r = 1;
+    if (tr[root].s[0]) r += tr[tr[root].s[0]].size;
+    remove(w);
+    return r;
+}
+
+int getKth(int k) {
+    int u = root;
+    while (true) {
+        if (k <= tr[tr[u].s[0]].size) u = tr[u].s[0];
+        else if (k <= tr[tr[u].s[0]].size + tr[u].cnt) return tr[u].w;
+        else k -= tr[tr[u].s[0]].size + tr[u].cnt, u = tr[u].s[1];
+    }
+}
+
+int getPrevious(int w) {
+    insert(w);
+    int u = tr[root].s[0];
+    while (tr[u].s[1]) u = tr[u].s[1];
+    int r = tr[u].w;
+    remove(w);
+    return r;
+}
+
+int getNext(int w) {
+    insert(w);
+    int u = tr[root].s[1];
+    while (tr[u].s[0]) u = tr[u].s[0];
+    int r= tr[u].w;
+    remove(w);
+    return r;
 }
 
 int main(int argc, char *argv[]) {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
-    int n, m, cmd, x, y;
-    cin >> n >> m;
-    for (int i = 0; i <= n; i++) {
-        tr[i].s[0] = tr[i].s[1] = tr[i].p = tr[i].reversed = tr[i].v = 0;
-        if (i) cin >> tr[i].w;
-    }
-    for (int i = 1; i <= m; i++) {
-        cin >> cmd >> x >> y;
-        if (cmd == 0) { split(x, y); cout << tr[y].v << '\n'; }
-        if (cmd == 1) link(x, y);
-        if (cmd == 2) cut(x, y);
-        if (cmd == 3) { splay(x); tr[x].w = y; }
+    int n, cmd, x;
+    cin >> n;
+    for (int i = 1; i <= n; i++) {
+        cin >> cmd >> x;
+        if (cmd == 1) insert(x);
+        if (cmd == 2) remove(x);
+        if (cmd == 3) cout << getRank(x) << '\n';
+        if (cmd == 4) cout << getKth(x) << '\n';
+        if (cmd == 5) cout << getPrevious(x) << '\n';
+        if (cmd == 6) cout << getNext(x) << '\n';
     }
     return 0;
 }

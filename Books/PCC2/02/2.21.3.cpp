@@ -1,184 +1,117 @@
-// [LUOGU P2042](https://www.luogu.com.cn/problem/P2042)
-// Splay Tree
+//https://www.luogu.com.cn/problem/P8581
+
 
 #include <bits/stdc++.h>
 
 using namespace std;
 
-const int MAXN = 500010, INF = 0x3f3f3f3f;
+const int MAXV = 1000010, MAXE = 2100010;
 
-struct NODE {
-    int s[2], p, w;
-    int size, same, reversed, sum, prefix, suffix, sub;
-    void set(int _p, int _w) {
-        s[0] = s[1] = 0;
-        p = _p, w = _w;
-        size = 1;
-        same = reversed = 0;
-        sum = sub = _w;
-        prefix = suffix = max(_w, 0);
+double ri[MAXV];
+int n, visited[MAXV], MH[MAXV], head[MAXV], tot;
+long long w[MAXV], ai[MAXV], bi[MAXV];
+
+struct edge { int v, nxt; } edges[MAXE];
+struct NODE { double ratio; int v, lc, rc, d; };
+
+struct MH {
+    NODE nd[MAXV];
+    int cnt = 0, maxHeap = 0;
+    inline bool cmp(double &a, double &b) { return maxHeap ? a < b : a > b; }
+    int merge(int x, int y) {
+        if (!x || !y) return x | y;
+        if (cmp(nd[x].ratio, nd[y].ratio)) swap(x, y);
+        nd[x].rc = merge(nd[x].rc, y);
+        if (nd[nd[x].lc].d < nd[nd[x].rc].d) swap(nd[x].lc, nd[x].rc);
+        nd[x].d = nd[nd[x].rc].d + 1;
+        return x;
     }
-}tr[MAXN];
-
-int cache[MAXN], data[MAXN];
-int idx = 0, cidx = 0, root = 0;
-
-void commitSame(int x, int w) {
-    if (!x) return;
-    tr[x].w = w;
-    tr[x].sum = tr[x].size * w;
-    if (w >= 0) tr[x].prefix = tr[x].suffix = tr[x].sub = tr[x].sum;
-    else {
-        tr[x].prefix = tr[x].suffix = 0;
-        tr[x].sub = w;
+    int get(double ratio, int v) {
+        ++cnt;
+        nd[cnt].ratio = ratio;
+        nd[cnt].v = v;
+        nd[cnt].lc = nd[cnt].rc = nd[cnt].d = 0;
+        return cnt;
     }
-    tr[x].same = 1;
-}
+    int push(int x, int y) { return merge(x, y); }
+    NODE top(int x) { return nd[x]; }
+    int pop(int x) { return merge(nd[x].lc, nd[x].rc); }
+}H;
 
-void commitReversed(int x) {
-    if (!x) return;
-    swap(tr[x].s[0], tr[x].s[1]);
-    swap(tr[x].prefix, tr[x].suffix);
-    tr[x].reversed ^= 1;
-}
-
-void pushDown(int x) {
-    if (tr[x].same) {
-        tr[x].same = tr[x].reversed = 0;
-        commitSame(tr[x].s[0], tr[x].w);
-        commitSame(tr[x].s[1], tr[x].w);
-    }
-    if (tr[x].reversed) {
-        tr[x].reversed = 0;
-        commitReversed(tr[x].s[0]);
-        commitReversed(tr[x].s[1]);
-    }
-}
-
-void pushUp(int x) {
-    int u = tr[x].s[0], v = tr[x].s[1];
-    tr[x].size = tr[u].size + tr[v].size + 1;
-    tr[x].sum = tr[u].sum + tr[v].sum + tr[x].w;
-    tr[x].sub = max(max(tr[u].sub, tr[v].sub),
-        tr[u].suffix + tr[x].w + tr[v].prefix);
-    tr[x].prefix = max(tr[u].prefix, tr[u].sum + tr[x].w + tr[v].prefix);
-    tr[x].suffix = max(tr[v].suffix, tr[u].suffix + tr[x].w + tr[v].sum);
-}
-
-void rotate(int x) {
-    int y = tr[x].p, z = tr[y].p;
-    int k = tr[y].s[1] == x;
-    tr[z].s[tr[z].s[1] == y] = x, tr[x].p = z;
-    tr[y].s[k] = tr[x].s[k ^ 1], tr[tr[x].s[k ^ 1]].p = y;
-    tr[x].s[k ^ 1] = y, tr[y].p = x;
-    pushUp(y); pushUp(x);
-}
-
-void splay(int x, int k) {
-    while (tr[x].p != k) {
-        int y = tr[x].p, z = tr[y].p;
-        if (z != k) {
-            if ((tr[y].s[1] == x) ^ (tr[z].s[1] == y)) rotate(x);
-            else rotate(y);
+void dfs(int u) {
+    visited[u] = 1;
+    ri[u] = (double)ai[u] / bi[u];
+    if (head[u] == -1) return;
+    for (int i = head[u]; ~i; i = edges[i].nxt) {
+        int v = edges[i].v;
+        if (!visited[v]) {
+            dfs(v);
+            int y = H.get(ri[v], v);
+            if (!MH[u]) MH[u] = y;
+            else MH[u] = H.push(MH[u], y);
         }
-        rotate(x);
     }
-    if (!k) root = x;
-}
-
-int find(int k) {
-    int u = root;
-    while (true) {
-        pushDown(u);
-        if (k <= tr[tr[u].s[0]].size) u = tr[u].s[0];
-        else if (k <= tr[tr[u].s[0]].size + 1) return u;
-        else k -= tr[tr[u].s[0]].size + 1, u = tr[u].s[1];
+    while (MH[u]) {
+        NODE lt = H.top(MH[u]);
+        if (H.cmp(lt.ratio, ri[u])) break;
+        MH[u] = H.pop(MH[u]);
+        ai[u] += ai[lt.v], bi[u] += bi[lt.v];
+        ri[u] = (double)ai[u] / bi[u];
+        MH[u] = H.merge(MH[u], MH[lt.v]);
     }
 }
 
-int malloc() {
-    if (cidx) return cache[--cidx];
-    return ++idx;
+void add(int u, int v) {
+    edges[tot].v = v;
+    edges[tot].nxt = head[u];
+    head[u] = tot++;
 }
-
-int build(int p, int left, int right) {
-    if (left > right) return 0;
-    int middle = (left + right) >> 1;
-    int u = malloc();
-    tr[u].set(p, data[middle]);
-    tr[u].s[0] = build(u, left, middle - 1);
-    tr[u].s[1] = build(u, middle + 1, right);
-    pushUp(u);
-    return u;
-}
-
-int split(int posi, int tot) {
-    int left = find(posi), right = find(posi + tot + 1);
-    splay(left, 0); splay(right, left);
-    return right;
-}
-
-void insert(int posi, int tot) {
-    for (int i = 0; i < tot; i++) cin >> data[i];
-    int v = build(0, 0, tot - 1);
-    int left = find(posi + 1), right = find(posi + 2);
-    splay(left, 0); splay(right, left);
-    tr[right].s[0] = v;
-    tr[v].p = right;
-    pushUp(right); pushUp(left);
-}
-
-void recycle(int u) {
-    if (!u) return;
-    recycle(tr[u].s[0]);
-    cache[cidx++] = u;
-    recycle(tr[u].s[1]);
-}
-
-void remove(int posi, int tot) {
-    int u = split(posi, tot);
-    recycle(tr[u].s[0]);
-    tr[u].s[0] = 0;
-    pushUp(u); pushUp(tr[u].p);
-}
-
-void modify(int posi, int tot, int c) {
-    int u = split(posi, tot);
-    commitSame(tr[u].s[0], c);
-    pushUp(u); pushUp(tr[u].p);
-}
-
-void reverse(int posi, int tot) {
-    int u = split(posi, tot);
-    commitReversed(tr[u].s[0]);
-    pushUp(u); pushUp(tr[u].p);
-}
-
-void getSum(int posi, int tot) {
-    int u = split(posi, tot);
-    cout << tr[tr[u].s[0]].sum << '\n';
-}
-
-void getMaxSum() { cout << tr[root].sub << '\n'; }
 
 int main(int argc, char *argv[]) {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
-    string cmd;
-    int N, M, posi, tot, c;
-    cin >> N >> M;
-    for (int i = 1; i <= N; i++) cin >> data[i];
-    tr[0].set(0, 0), tr[0].size = 0;
-    tr[0].sub = data[0] = data[N + 1] = -INF;
-    root = build(0, 0, N + 1);
-    for (int i = 0; i < M; i++) {
-        cin >> cmd;
-        if (cmd != "MAX-SUM") cin >> posi >> tot;
-        if (cmd == "INSERT") insert(posi, tot);
-        else if (cmd == "DELETE") remove(posi, tot);
-        else if (cmd == "MAKE-SAME") { cin >> c; modify(posi, tot, c); }
-        else if (cmd == "REVERSE") reverse(posi, tot);
-        else if (cmd == "GET-SUM") getSum(posi, tot);
-        else getMaxSum();
+
+    cin >> n
+    for (int i = 1; i <= n; i++) head[i] = -1;
+    for (int i = 2, u; i <= n; i++) { cin >> u; add(u, i); }
+    for (int i = 1, av; i <= n; i++) { cin >> av; ai[i] = av; }
+    for (int i = 1, bv; i <= n; i++) { cin >> bv; bi[i] = bv; }
+
+    int R = 1;
+    queue<int> q;
+    q.push(R);
+    while (!q.empty()) {
+        int u = q.front(); q.pop();
+        dfs(u);
+        w[u] = ai[u] = ceil(ri[u]), bi[u] = 1;
+        head[u] = -1;
+        while (MH[u]) {
+            NODE lt = H.top(MH[u]);
+            MH[u] = H.pop(MH[u]);
+            ai[lt.v] += ai[u];
+            add(u, lt.v);
+            q.push(lt.v);
+        }
     }
+
+    H.cnt = 0;
+    H.maxHeap = 1;
+    for (int i = 1; i <= n; i++) visited[i] = 0;
+    dfs(R);
+
+    long long W = 0, t = 1;
+    priority_queue<pair<double, int>> pq;
+    pq.push(make_pair(ri[R], R));
+    while (!pq.empty()) {
+        pair<double, int> gt = pq.top(); pq.pop();
+        W += t * w[gt.second];
+        for (int i = head[gt.second]; ~i; i = edges[i].nxt)
+        {
+            int v = edges[i].v;
+            pq.push(make_pair(ri[v], v));
+        }
+        t++;
+    }
+    cout << W << '\n';
+
     return 0;
 }
