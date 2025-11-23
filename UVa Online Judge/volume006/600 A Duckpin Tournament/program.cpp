@@ -1,141 +1,110 @@
 // A Duckpin Tournament
 // UVa ID: 600
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2025-11-23
+// UVa Run Time: 0.000s
 //
-// 版权所有（C）2019，邱秋。metaphysis # yeah dot net
+// 版权所有（C）2025，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
-
 using namespace std;
 
-const int PLAYERS = 110;
+struct Player {
+    string name;
+    int totalScore = 0;
+    int maxGameScore = 0;
+};
 
-vector<int> numbers[3];
-int pins[16][3], frames[16], scores[PLAYERS];
-
-void parse()
-{
-    int f2 = 0, f3 = 0;
-    memset(pins, 0, sizeof(pins));
-    for (int f1 = 0; f1 < numbers[0].size(); f1++)
-    {
-        pins[f1][0] = numbers[0][f1];
-        if (numbers[0][f1] == 10 || numbers[0][f1] < 0) continue;
-        if (numbers[0][f1] + abs(numbers[1][f2]) > 10) continue;
-        pins[f1][1] = numbers[1][f2]; f2++;
-        if (numbers[0][f1] + abs(numbers[1][f2 - 1]) == 10 || numbers[1][f2 - 1] < 0) continue;
-        if (numbers[0][f1] + numbers[1][f2 - 1] + abs(numbers[2][f3]) > 10) continue;
-        pins[f1][2] = numbers[2][f3]; f3++;
-    }
-    cout << '\n';
-    for (int i = 0; i < 3; i++)
-    {
-        for (int j = 0; j < numbers[0].size(); j++)
-            cout << right << setw(4) << pins[j][i];
-        cout << endl;
-    }
-}
-
-void getScores()
-{
-    memset(frames, 0, sizeof(frames));
-    for (int i = 0; i < 10; i++)
-    {
-        if (pins[i][0] == 10)
-        {
-            frames[i] += 10;
-            if (pins[i + 1][0] >= 0) 
-            {
-                frames[i] += pins[i + 1][0];
-                if (pins[i + 1][0] == 10)
-                {
-                    if (pins[i + 2][0] > 0)
-                        frames[i] += pins[i + 2][0];
-                }
-                else
-                {
-                    if (pins[i + 1][1] > 0)
-                        frames[i] += pins[i + 1][1];
-                }
-            }
+vector<int> calculateGame(const string& line1, const string& line2, const string& line3) {
+    stringstream combined(line1 + " Q " + line2 + " Q " + line3);
+    vector<int> frameScores(10, 0), framePins(12, 0);
+    vector<tuple<int, int, int, int>> throws; // (frame, attempt, score, totalPins)
+    int currentFrame = 0, attemptType = 1;
+    string token;
+    while (combined >> token) {
+        if (token == "Q") {
+            attemptType++;
+            currentFrame = 0;
+            continue;
         }
-        else if (pins[i][0] + pins[i][1] == 10)
-        {
-            frames[i] += 10;
-            if (pins[i + 1][0] > 0)
-                frames[i] += pins[i + 1][0];
+        int score = stoi(token);
+        // 跳过已经完成（全中/补中）的frame
+        while (framePins[currentFrame] == 10) currentFrame++;
+        // 更新frame的累计击倒数
+        if (score < 0) framePins[currentFrame] = 10; // 犯规视为完成该frame
+        else framePins[currentFrame] += score;
+        throws.emplace_back(currentFrame, attemptType, score, framePins[currentFrame]);
+        currentFrame++;
+    }
+    // 按frame排序投掷记录
+    sort(throws.begin(), throws.end());
+    // 计算每个frame的得分
+    for (int i = 0; i < throws.size(); i++) {
+        auto [frame, attempt, scoreVal, totalPins] = throws[i];
+        if (frame >= 10) break; // 只处理前10个frame
+        // 基础分（只计算正分）
+        if (scoreVal >= 0) frameScores[frame] += scoreVal;
+        // 计算奖励分
+        int bonusAttempts = 0;
+        if (scoreVal >= 0 && totalPins == 10) {
+            if (attempt == 1) bonusAttempts = 2; // 第一次尝试全中
+            else if (attempt == 2) bonusAttempts = 1; // 第二次尝试补中
         }
-        else
-        {
-            for (int j = 0; j < 3 && pins[i][j] >= 0; j++)
-                frames[i] += pins[i][j];
+        // 添加奖励分
+        for (int j = 1; j <= bonusAttempts; j++) {
+            auto [nextFrame, nextAttempt, nextScore, nextTotal] = throws[i + j];
+            if (nextScore >= 0) frameScores[frame] += nextScore;
+            else break; // 遇到犯规停止奖励
         }
     }
-    
-    for (int i = 1; i < 10; i++)
-        frames[i] += frames[i - 1];
+    // 计算累计得分
+    for (int i = 1; i < 10; i++) frameScores[i] += frameScores[i - 1];
+    return frameScores;
 }
 
-void printScores()
-{
-    for (int i = 0; i < 10; i++)
-        cout << right << setw(4) << frames[i];
-    cout << '\n';
-}
-
-int main(int argc, char *argv[])
-{
-    //cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
-
+int main() {
+    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
     int n;
-    string names[PLAYERS], line;
-    while (cin >> n, n > 0)
-    {
-        for (int i = 0; i < n; i++) cin >> names[i];
-        int highGameScore = 0, highGameScorePlayer = -1;
-        memset(scores, 0, sizeof(scores));
-
-        cin.ignore(256, '\n');
-        for (int match = 1; match <= 3; match++)
-        {
-            for (int i = 0; i < n; i++)
-            {
-                cout << left << setw(10) << names[i];
-                for (int j = 0; j < 3; j++)
-                {
-                    getline(cin, line);
-                    numbers[j].clear();
-                    int n;
-                    istringstream iss(line);
-                    while (iss >> n) numbers[j].push_back(n);
-                }
-                parse();
-                getScores();
-                printScores();
-                scores[i] += frames[9];
-                if (frames[9] > highGameScore)
-                {
-                    highGameScore = frames[9];
-                    highGameScorePlayer = i;
-                }
+    while (cin >> n && n != 0) {
+        vector<Player> players(n);
+        for (int i = 0; i < n; i++) cin >> players[i].name;
+        cin.ignore(128, '\n');
+        vector<string> data;
+        string line;
+        // 读取所有比赛数据
+        while (getline(cin, line)) {
+            if (line.find('#') != string::npos) break;
+            data.push_back(line);
+        }
+        // 处理每个选手的每局比赛
+        for (int i = 0; i < data.size(); i += 3) {
+            int playerIndex = (i / 3) % n;
+            vector<int> scores = calculateGame(data[i], data[i + 1], data[i + 2]);
+            // 格式化输出
+            cout << left << setw(10) << players[playerIndex].name;
+            for (int score : scores) cout << right << setw(4) << score;
+            cout << endl;
+            // 更新选手统计
+            int gameScore = scores.back();
+            players[playerIndex].totalScore += gameScore;
+            players[playerIndex].maxGameScore = max(players[playerIndex].maxGameScore, gameScore);
+        }
+        // 确定获胜者
+        int bestSeries = 0, bestGame = 0;
+        string seriesWinner, gameWinner;
+        for (const auto& player : players) {
+            if (player.totalScore > bestSeries) {
+                bestSeries = player.totalScore;
+                seriesWinner = player.name;
+            }
+            if (player.maxGameScore > bestGame) {
+                bestGame = player.maxGameScore;
+                gameWinner = player.name;
             }
         }
-
-        getline(cin, line);
-
-        int maxScore = 0, maxScorePlayer = -1;
-        for (int i = 0; i < n; i++)
-            if (scores[i] > maxScore)
-            {
-                maxScore = scores[i];
-                maxScorePlayer = i;
-            }
-        cout << names[maxScorePlayer] << " has the high series score of " << maxScore << ".\n";
-        cout << names[highGameScorePlayer] << " has the high game score of " << highGameScore << ".\n";
+        cout << seriesWinner << " has the high series score of " << bestSeries << "." << '\n';
+        cout << gameWinner << " has the high game score of " << bestGame << "." << '\n';
         cout << '\n';
     }
-
     return 0;
 }
