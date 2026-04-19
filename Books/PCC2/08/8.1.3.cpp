@@ -2,36 +2,134 @@
 
 using namespace std;
 
-int n, cnt, N_ONES;
+const int MAXN = 32;
 
-void dfs(int L, int M, int R)
+int n, magic[MAXN][MAXN], maxWidth[MAXN];
+
+void display()
 {
-    int available, cln;
-    if (M != N_ONES) {
-        available = N_ONES & (~(L | M | R));
-        while (available) {
-            cln = available & (~available + 1);
-            available ^= cln;
-            dfs((L | cln) << 1, M | cln, (R | cln) >> 1);
-        }
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            maxWidth[j] = max(maxWidth[j], (int)to_string(magic[i][j]).length());
+
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+            cout << setw(maxWidth[j] + 1) << right << magic[i][j];
+        cout << '\n';
     }
-    else cnt++;
+}
+
+// n = 2 * k + 1, k >= 1.
+void fillMagic1()
+{
+    for (int i = 0, j = n / 2, k = 1; k <= n * n; k++)
+    {
+        magic[i][j] = k;
+        if (k % n)
+        {
+            i = (i - 1 + n) % n;
+            j = (j + 1) % n;
+        }
+        else
+            i = (i + 1) % n;
+    }
+}
+
+// n = 4 * k, k >= 1.
+void fillMagic2()
+{
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            if (((i % 4 == 0 || i % 4 == 3) && (j % 4 == 0 || j % 4 == 3)) ||
+                ((i % 4 == 1 || i % 4 == 2) && (j % 4 == 1 || j % 4 == 2)))
+                magic[i][j] = n * n - (i * n + j);
+            else
+                magic[i][j] = i * n + j + 1;
+}
+
+void helper(int n, int offseti, int offsetj, int offsetk)
+{
+    for (int i = 0, j = n / 2, k = 1; k <= n * n; k++)
+    {
+        magic[i + offseti][j + offsetj] = k + offsetk;
+        if (k % n)
+        {
+            i = (i - 1 + n) % n;
+            j = (j + 1) % n;
+        }
+        else
+            i = (i + 1) % n;
+    }
+}
+
+// n = 4 * k + 2, k >= 1.
+void fillMagic3()
+{
+    helper(n / 2, 0, 0, 0);
+    helper(n / 2, n / 2, n / 2, n * n / 4);
+    helper(n / 2, 0, n / 2, n * n / 2);
+    helper(n / 2, n / 2, 0, n * n / 4 * 3);
+    for (int i = 0; i < n / 2; i++)
+        for (int j = 0; j < n / 4; j++)
+            swap(magic[i][j], magic[i + n / 2][j]);
+    for (int i = 0; i < n / 2; i++)
+        for (int j = n - n / 4 + 1; j < n; j++)
+            swap(magic[i][j], magic[i + n / 2][j]);
+    for (int j = 0; j <= n / 4; j += n / 4)
+        swap(magic[n / 4][j], magic[n / 4 + n / 2][j]);
+}
+
+bool validate()
+{
+    int M = n * (n * n + 1) / 2;
+    int sum = 0, sum1 = 0, sum2 = 0;
+    for (int i = 0; i < n; i++)
+    {
+        // Row by row.
+        sum = 0;
+        for (int j = 0; j < n; j++)
+            sum += magic[i][j];
+        if (sum != M) return false;
+        
+        // Column by column.
+        sum = 0;
+        for (int j = 0; j < n; j++)
+            sum += magic[j][i];
+        if (sum != M) return false;
+        
+        // Main and sub diagonal.
+        sum1 += magic[i][i], sum2 += magic[i][n - 1 - i];
+    }
+    if (sum1 != M) return false;
+    if (sum2 != M) return false;
+    return true;
 }
 
 int main(int argc, char *argv[])
 {
-    clock_t start, finish;
-
-    start = clock();
+    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
+    
+    int cases = 0;
     while (cin >> n)
     {
-        cnt = 0;
-        N_ONES = (1 << n) - 1;
-        dfs(0, 0, 0);
-        cout << "N = " << n << ": " << cnt << '\n';
+        if (cases++ > 0) cout << '\n';
+
+        cout << "n=" << n << ", sum=" << n * (n * n + 1) / 2 << '\n';
+        
+        memset(magic, 0, sizeof(magic));
+
+        if (n % 2)
+            fillMagic1();
+        else if (n % 4 == 0)
+            fillMagic2();
+        else
+            fillMagic3();
+
+        if (!validate()) cout << "ERROR!\n";
+
+        display();
     }
-    finish = clock();
-    cout << (double)(finish - start) / CLOCKS_PER_SEC << "s\n";
 
     return 0;
 }

@@ -2,33 +2,49 @@
 
 using namespace std;
 
-int n, cnt, ONES;
+const int MAXN = 32;
 
-int dfs(int L, int M, int R)
+void nQueen(int *clnAtRow, int n)
 {
-    if (M == ONES) cnt++;
+    if (n % 6 != 2 && n % 6 != 3)
+    {
+        int row = 0;
+        for (int y = 2; y <= n; y += 2) clnAtRow[row++] = y - 1;
+        for (int y = 1; y <= n; y += 2) clnAtRow[row++] = y - 1;
+    }
     else
     {
-        for (int i = 0; i < n; i++)
-            if (((1 << i) & (L | M | R)) == 0)
-                dfs((L | (1 << i)) << 1, M | (1 << i), (R | (1 << i)) >> 1);
+        int k = n / 2;
+        int intervals[2][4][2] = {
+            {{k, n}, {2, k - 2}, {k + 3,  n - 1}, {1, k + 1}},
+            {{k, n - 1}, {1, k - 2}, {k + 3, n}, {2, k + 1}}
+        };
+        int row = 0;
+        for (int x = 0; x < 4; x++)
+        {
+            int start = intervals[k % 2][x][0], end = intervals[k % 2][x][1];
+            for (int y = start; y <= end; y += 2)
+                clnAtRow[row++] = y - 1;
+        }
+        if (n % 2) clnAtRow[row++] = n - 1;
     }
 }
 
 int main(int argc, char *argv[])
 {
-    clock_t start, finish;
-
-    start = clock();
-    while (cin >> n)
+    srand(time(NULL));
+    int n = 15;
+    int *clnAtRow = new int[n];
+    nQueen(clnAtRow, n);
+    cout << " n = " << n << '\n';
+    for (int i = 0; i < n; i++)
     {
-        cnt = 0;
-        ONES = (1 << n) - 1;
-        dfs(0, 0, 0);
-        cout << "N = " << n << ": " << cnt << '\n';
+        for (int j = 0; j < n; j++)
+        {
+            if (j == clnAtRow[i]) cout << " Q";
+            else cout << " *";
+        }
+        cout << '\n';
     }
-    finish = clock();
-    cout << (double)(finish - start) / CLOCKS_PER_SEC << "s\n";
-
     return 0;
 }
