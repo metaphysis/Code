@@ -33,7 +33,7 @@ void cutToSegments(double cx, double cy, double r, int sz) {
     int y0 = (int)floor(cy);                     // 圆心所在的行索引
     int yMin = max(0, (int)floor(cy - r));       // 影响的最小行
     int yMax = min(sz, (int)ceil(cy + r));       // 影响的最大行（注意sz是网格边界）
-    
+
     // 处理圆心下方的行（y < y0）
     for (int y = yMin; y < y0; ++y) {
         double dy = cy - (y + 1);                // 圆心到格子上边界的垂直距离
@@ -42,12 +42,12 @@ void cutToSegments(double cx, double cy, double r, int sz) {
         int ed = min(sz, (int)ceil(cx + dx));
         addSeg(st, ed, y);
     }
-    
+
     // 处理圆心所在的行
     int st = max(0, (int)floor(cx - r));
     int ed = min(sz, (int)ceil(cx + r));
     addSeg(st, ed, y0);
-    
+
     // 处理圆心上方的行（y > y0）
     for (int y = y0 + 1; y < yMax; ++y) {
         double dy = y - cy;                      // 圆心到格子下边界的垂直距离
@@ -64,17 +64,17 @@ int main() {
     while (t--) {
         segs.clear();                            // 清空全局线段数组
         scanf("%d%d", &sz, &n);                  // 读取网格大小和蘑菇数量
-        
+
         // 处理每个蘑菇
         for (int i = 0; i < n; ++i) {
             double x, y, r;
             scanf("%lf%lf%lf", &x, &y, &r);
             cutToSegments(x, y, r, sz);
         }
-        
+
         // 按行排序
         sort(segs.begin(), segs.end(), cmp);
-        
+
         long long ans = 0;
         // 按行分组，合并区间
         for (size_t i = 0, j = 0; i <= segs.size(); ++i) {
@@ -95,7 +95,7 @@ int main() {
                 j = i;                           // 移动到下一组
             }
         }
-        
+
         printf("%lld\n", ans);                   // 输出结果
     }
     return 0;
