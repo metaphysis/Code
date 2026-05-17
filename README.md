@@ -1,6 +1,4 @@
-这是 [Online Judge](https://onlinejudge.org/index.php) （原 UVa OJ）的解题代码。
-
-使用建议：在使用参考代码前，建议先自己思考并尝试解题。
+以下是 [Online Judge](https://onlinejudge.org/index.php) （原 UVa OJ）的题解索引。
 
 | 序号 |  题目 | 类别 | 备注 |
 |--|--|--|--|
