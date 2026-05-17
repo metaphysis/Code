@@ -1,7 +1,5 @@
-以下是 [Online Judge](https://onlinejudge.org/index.php) （原 UVa OJ）的题解索引。
-
 | 序号 |  题目 | 类别 | 备注 |
-|--|--|--|--|
+|:--:|:--:|:--:|:--:|
 | 100 | [The 3n + 1 Problem](https://blog.csdn.net/metaphysis/article/details/154979101)     | 模拟 | 动态规划 |
 | 101 | [The Blocks Problem](https://blog.csdn.net/metaphysis/article/details/154981316)     | 模拟 | |
 | 102 | [Ecological Bin Packing](https://blog.csdn.net/metaphysis/article/details/154980955) | 模拟 | |
