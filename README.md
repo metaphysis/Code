@@ -1,10 +1,7 @@
-这是 # [Online Judge](https://onlinejudge.org/index.php) （原 UVa OJ）的解题代码。
-
-我是 [metaphysis](https://blog.csdn.net/metaphysis), 一位编程爱好者。
-
+这是 [Online Judge](https://onlinejudge.org/index.php) （原 UVa OJ）的解题代码。我是 [metaphysis](https://blog.csdn.net/metaphysis)，一位编程爱好者。
 使用建议：在使用参考代码前，建议先自己思考并尝试解题。
 
-题解列表：
+题解索引列表：
 
 | 序号 |  题目 | 类别 | 备注 |
 |--|--|--|--|
