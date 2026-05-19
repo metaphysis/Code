@@ -1,5 +1,5 @@
 | 序号 |  题目 | 类别 | 备注 |
-|:--:|:--:|:--:|:--:|
+|:---:|:---:|:---:|:---:|
 | 100 | [The 3n + 1 Problem](https://blog.csdn.net/metaphysis/article/details/154979101)     | 模拟 | 动态规划 |
 | 101 | [The Blocks Problem](https://blog.csdn.net/metaphysis/article/details/154981316)     | 模拟 | |
 | 102 | [Ecological Bin Packing](https://blog.csdn.net/metaphysis/article/details/154980955) | 模拟 | |
@@ -100,3 +100,43 @@
 | 197 | [Cube](https://blog.csdn.net/metaphysis/article/details/153037436) | 回溯法 | |
 | 198 | [Peter's Calculator](https://blog.csdn.net/metaphysis/article/details/160943552) | 数据结构 | 栈 表达式计算 |
 | 199 | [Partial Differential Equations](https://blog.csdn.net/metaphysis/article/details/160944824) | 数据结构 模拟 | 内置数组 |
+| 200 | [Rare Order](https://blog.csdn.net/metaphysis/article/details/161002291) | 图遍历 | 拓扑排序 Kahn算法 |
+| 201 | [Squares](https://blog.csdn.net/metaphysis/article/details/161003966) | 模拟 网格 | 矩形网格 枚举 |
+| 202 | [Repeating Decimals](https://blog.csdn.net/metaphysis/article/details/161006375) | 算术与代数 | 分数 |
+| 203 | [Running Lights Visibility Calculator](https://blog.csdn.net/metaphysis/article/details/161009036) | 几何 模拟 | 三角函数 |
+| 204 | [Robot Crash](https://blog.csdn.net/metaphysis/article/details/152732870) | 计算几何 | 确定线段是否相交以及交点 |
+| 205 | [Getting There](https://blog.csdn.net/metaphysis/article/details/161009619) | 回溯法 | 完全搜索 |
+| 206 | [Meals on Wheels Routing System](https://blog.csdn.net/metaphysis/article/details/161009941) | 几何 | 三角函数库 |
+| 207 | [PGA Tour Prize Money](https://blog.csdn.net/metaphysis/article/details/161010071) | 字符串 排序 | |
+| 208 | [Firetruck](https://blog.csdn.net/metaphysis/article/details/161010330) | 图遍历 图算法 | DFS Floyd-Warshall算法 |
+| 209 | [Triangluar Vertices](https://blog.csdn.net/metaphysis/article/details/161010462) | 网格 | 三角形网格 |
+| 210 | [Concurrent Simulator](https://blog.csdn.net/metaphysis/article/details/161043031) | 数据结构 | 双端队列 |
+| 211 | [The Domino Effect](https://blog.csdn.net/metaphysis/article/details/161045135) | 回溯法 | |
+| 212 | [Use of Hospital Facilities](https://blog.csdn.net/metaphysis/article/details/161045992) | 数据结构 | 优先队列 |
+| 213 | [Message Decoding](https://blog.csdn.net/metaphysis/article/details/161046213) | 数据结构 | 位集 |
+| 214 | [Code Generation](https://blog.csdn.net/metaphysis/article/details/161046423) | 数据结构 | 表达式计算 |
+| 215 | [Spreadsheet Calculator](https://blog.csdn.net/metaphysis/article/details/161046683) | 数据结构 | 集合 |
+| 216 | [Getting in Line](https://blog.csdn.net/metaphysis/article/details/161046927) | 图算法 | 旅行商问题 |
+| 217 | [Radio Direction Finder](https://blog.csdn.net/metaphysis/article/details/161047184) | 计算几何 | 直线间关系 |
+| 218 | [Moth Eradiction](https://blog.csdn.net/metaphysis/article/details/161047408) | 计算几何 | 凸包 |
+| 219 | [Department of Redundancy Department](https://blog.csdn.net/metaphysis/article/details/161047706) | 回溯法 | |
+| 220 | [Othello](https://blog.csdn.net/metaphysis/article/details/161083263) | 数据结构 | 模拟 内置数组 |
+| 221 | [Urban Elevations](https://blog.csdn.net/metaphysis/article/details/161084594) | 计算几何 | 坐标离散化 |
+| 222 | [Budget Travel](https://blog.csdn.net/metaphysis/article/details/161085031) | 回溯法 | |
+| 223 | [Classifying Lots in a Subdivision](https://blog.csdn.net/metaphysis/article/details/161111474) | 计算几何 | 极角排序 |
+| 224 | [Kissin' Cousins](https://blog.csdn.net/metaphysis/article/details/161085826) | 图遍历 | BFS |
+| 225 | [Golygons](https://blog.csdn.net/metaphysis/article/details/161087139) | 回溯法 | |
+| 226 | [MIDI Preprocessing](https://blog.csdn.net/metaphysis/article/details/161087240) | 排序 | |
+| 227 | [Puzzle](https://blog.csdn.net/metaphysis/article/details/161087346) | 网格 | 矩形网格 |
+| 228 | [Resource Allocation](https://blog.csdn.net/metaphysis/article/details/161087427) | 回溯法 | |
+| 229 | [Scanner](https://blog.csdn.net/metaphysis/article/details/153005875) | 回溯法 | 传播约束 |
+| 230 | [Borrowers](https://blog.csdn.net/metaphysis/article/details/161207211) | 字符串 | 文本解析 记录排序 |
+| 231 | [Testing the CATCHER](https://blog.csdn.net/metaphysis/article/details/161207581) | 动态规划 | 最长递增子序列（LIS） |
+| 232 | [Crossword Answers](https://blog.csdn.net/metaphysis/article/details/161207735) | 数据结构 | 内置数组 |
+| 233 | [Package Pricing](https://blog.csdn.net/metaphysis/article/details/161207878) | 动态规划 | 背包问题 |
+| 234 | [Switching Channels](https://blog.csdn.net/metaphysis/article/details/161210413) | 回溯法 | STL next_permutation |
+| 235 | [Typesetting](https://blog.csdn.net/metaphysis/article/details/161210988) | 字符串 | 文本解析 格式化输出 |
+| 236 | [VTAS - Vessel Traffic Advisory Service](https://blog.csdn.net/metaphysis/article/details/161213679) | 图遍历 | 离散事件模拟 区间重叠检测 排序 |
+| 237 | [Monitoring Wheelchair Patients](https://blog.csdn.net/metaphysis/article/details/152667327) | 计算几何 | 二分搜索 |
+| 238 | [Jill's Bike](https://blog.csdn.net/metaphysis/article/details/161212187) | 图算法 | 最短路径算法 Moore-Dijkstra算法 |
+| 239 | [Time and Motion](https://blog.csdn.net/metaphysis/article/details/161212923) | 组合数学 | Pólya计数定理 置换群 轮换 |
