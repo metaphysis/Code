@@ -7,7 +7,6 @@
 // 版权所有（C）2025，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
-
 using namespace std;
 
 // 清理字符串中的重复字符
@@ -35,36 +34,26 @@ int main() {
         cout << "NTA " << caseNum << "\n";
         cin.ignore(100, '\n'); // 清除换行符
         // 读入转移表
-        for (int i = 0; i < numStates; ++i) {
-            for (int j = 0; j < numStates; ++j) {
+        for (int i = 0; i < numStates; ++i)
+            for (int j = 0; j < numStates; ++j)
                 getline(cin, transitionTable[i][j]);
-            }
-        }
         // 构建接受状态字符串
         string acceptStates = "";
-        for (int i = numStates - numAccept; i < numStates; ++i) {
-            acceptStates += 'a' + i;
-        }
+        for (int i = numStates - numAccept; i < numStates; ++i) acceptStates += 'a' + i;
         // 处理每个输入配置
         while (getline(cin, inputStr) && inputStr != "#") {
             int len = inputStr.length();
             // 单字符输入直接判断
             if (len == 1) {
-                if (inputStr[0] - 'a' >= numStates - numAccept) {
-                    cout << "accept " << inputStr << "\n";
-                } else {
-                    cout << "reject " << inputStr << "\n";
-                }
+                if (inputStr[0] - 'a' >= numStates - numAccept) cout << "accept " << inputStr << "\n";
+                else cout << "reject " << inputStr << "\n";
                 continue;
             }
             // 初始化 dp 数组
-            for (int i = 0; i < len; ++i) {
-                for (int j = 0; j <= i; ++j) {
-                    for (int k = 0; k < numStates; ++k) {
+            for (int i = 0; i < len; ++i)
+                for (int j = 0; j <= i; ++j)
+                    for (int k = 0; k < numStates; ++k)
                         dp[i][j][k] = "";
-                    }
-                }
-            }
             // 初始化底部两层
             for (int j = 0; j < len - 1; ++j) {
                 int state = inputStr[j] - 'a';
@@ -79,17 +68,14 @@ int main() {
                             if (!transitionTable[leftState][rightState].empty()) {
                                 for (char grandChildChar : dp[i + 1][j + 1][rightState]) {
                                     int grandChildState = grandChildChar - 'a';
-                                    for (char parentChar : transitionTable[leftState][rightState]) {
+                                    for (char parentChar : transitionTable[leftState][rightState])
                                         dp[i][j][parentChar - 'a'] += transitionTable[rightState][grandChildState];
-                                    }
                                 }
                             }
                         }
                     }
                     // 清理重复状态
-                    for (int k = 0; k < numStates; ++k) {
-                        cleanup(dp[i][j][k]);
-                    }
+                    for (int k = 0; k < numStates; ++k) cleanup(dp[i][j][k]);
                 }
             }
             // 检查顶端是否可能为接受状态
@@ -104,11 +90,8 @@ int main() {
                 }
                 if (accepted) break;
             }
-            if (accepted) {
-                cout << "accept " << inputStr << "\n";
-            } else {
-                cout << "reject " << inputStr << "\n";
-            }
+            if (accepted) cout << "accept " << inputStr << "\n";
+            else cout << "reject " << inputStr << "\n";
         }
     }
     return 0;
