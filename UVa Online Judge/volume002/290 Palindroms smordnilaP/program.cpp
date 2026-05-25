@@ -1,4 +1,4 @@
-// Palindroms <---> smordnilaP
+// Palindroms smordnilaP
 // UVa ID: 290
 // Verdict: Accepted
 // Submission Date: 2016-05-14
