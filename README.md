@@ -9,7 +9,7 @@
 | 106 | [Fermat vs. Pythagoras](https://blog.csdn.net/metaphysis/article/details/155676223) | 几何 | 勾股定理 数论 |
 | 107 | [The Cat in the Hat](https://blog.csdn.net/metaphysis/article/details/155676281) | 数论 | 素因子分解 |
 | 108 | [Maximum Sum](https://blog.csdn.net/metaphysis/article/details/155676350) | 动态规划 | 最大子矩形和 |
-| 109 | [SCUD Busters](https://blog.csdn.net/metaphysis/article/details/155676371) | 计算几何 | 凸包 |
+| 109 | [SCUD Busters](https://blog.csdn.net/metaphysis/article/details/155676371) | 计算几何 | 凸包 点和多边形的关系 |
 | 110 | [Meta-Loopless Sorts](https://blog.csdn.net/metaphysis/article/details/155676396) | 排序 |  |
 | 111 | [History Grading](https://blog.csdn.net/metaphysis/article/details/156641317) | 动态规划 | 最长递增子序列（LIS） |
 | 112 | [Tree Summing](https://blog.csdn.net/metaphysis/article/details/156641586) | 数据结构 | 二叉树 图遍历 |
@@ -136,7 +136,164 @@
 | 233 | [Package Pricing](https://blog.csdn.net/metaphysis/article/details/161207878) | 动态规划 | 背包问题 |
 | 234 | [Switching Channels](https://blog.csdn.net/metaphysis/article/details/161210413) | 回溯法 | STL next_permutation |
 | 235 | [Typesetting](https://blog.csdn.net/metaphysis/article/details/161210988) | 字符串 | 文本解析 格式化输出 |
-| 236 | [VTAS - Vessel Traffic Advisory Service](https://blog.csdn.net/metaphysis/article/details/161213679) | 图遍历 | 离散事件模拟 区间重叠检测 排序 |
+| 236 | [VTAS - Vessel Traffic Advisory Service](https://blog.csdn.net/metaphysis/article/details/161213679) | 图遍历 | 离散事件模拟 区间重叠检测 （尚未通过）|
 | 237 | [Monitoring Wheelchair Patients](https://blog.csdn.net/metaphysis/article/details/152667327) | 计算几何 | 二分搜索 |
 | 238 | [Jill's Bike](https://blog.csdn.net/metaphysis/article/details/161212187) | 图算法 | 最短路径算法 Moore-Dijkstra算法 |
 | 239 | [Time and Motion](https://blog.csdn.net/metaphysis/article/details/161212923) | 组合数学 | Pólya计数定理 置换群 轮换 |
+| 240 | [Variable Radix Huffman Encoding](https://blog.csdn.net/metaphysis/article/details/161245610) | 动态规划 | 贪心算法 霍夫曼编码 |
+| 241 | [Sail Race](https://blog.csdn.net/metaphysis/article/details/161143475) | 几何 | 三角函数 线性方程组 |
+| 242 | [Stamps and Envelope Size](https://blog.csdn.net/metaphysis/article/details/161246240) | 动态规划 | 背包问题 |
+| 243 | [Theseus and the Minotaur (II)](https://blog.csdn.net/metaphysis/article/details/161246648) | 图遍历 | 图的表示 模拟 |
+| 244 | [Train Time](https://blog.csdn.net/metaphysis/article/details/161247689) | 模拟 | 物理定律 相遇问题 实数的输出 |
+| 245 | [Uncompress](https://blog.csdn.net/metaphysis/article/details/161248396) | 数据结构 | 双向链表 |
+| 246 | [10-20-30](https://blog.csdn.net/metaphysis/article/details/161248730) | 模拟 数据结构 | 集合 |
+| 247 | [Calling Circles](https://blog.csdn.net/metaphysis/article/details/161249671) | 图算法 | 强连通分支 |
+| 248 | [Cutting Corners](https://blog.csdn.net/metaphysis/article/details/161250332) | 图算法 计算几何 | 最短路径算法 |
+| 249 | [Bang the Drum Slowly](https://blog.csdn.net/metaphysis/article/details/161250523) | 动态规划 模拟 | 记忆化搜索 |
+| 250 | [Pattern Matching Prelims](https://blog.csdn.net/metaphysis/article/details/161278906) | 模拟 | 二维数组 前缀和 实数大小的比较 |
+| 251 | [Nondeterministic Trellis Automata](https://blog.csdn.net/metaphysis/article/details/153045390) | 动态规划 | |
+| 252 | [Trucking](https://blog.csdn.net/metaphysis/article/details/152929598) | 模 数据结构 | 优先队列 |
+| 253 | [Cube Painting](https://blog.csdn.net/metaphysis/article/details/161281388) | 模拟 组合数学 | 立方体旋转群 |
+| 254 | [Towers of Hanoi](https://blog.csdn.net/metaphysis/article/details/161281878) | 算术与代码 | 高精度整数 |
+| 255 | [Correct Move](https://blog.csdn.net/metaphysis/article/details/161282912) | 模拟 数据结构 | 集合 |
+| 256 | [Quirksome Squares](https://blog.csdn.net/metaphysis/article/details/161283555) | 模拟 数论 | 整数拆分 |
+| 257 | [Palinwords](https://blog.csdn.net/metaphysis/article/details/161283895) | 动态规划 | 最长回文字符串 |
+| 258 | [Mirror Maze](https://blog.csdn.net/metaphysis/article/details/161284023) | 回溯法 | 完全搜索 状态记录 |
+| 259 | [Software Allocation](https://blog.csdn.net/metaphysis/article/details/161284178) | 回溯法 | |
+| 260 | [Il Gioco dell'X](https://blog.csdn.net/metaphysis/article/details/161302590) | 图遍历 网格 | DFS/BFS Flood-Fill算法 六边形网格 |
+| 261 | [The Window Property](https://blog.csdn.net/metaphysis/article/details/161305762) | 数据结构 模拟 | 集合 |
+| 262 | [Transferable Voting](https://blog.csdn.net/metaphysis/article/details/161306647) | 模拟 字符串 | 文本解析 选举计票 |
+| 263 | [Number Chains](https://blog.csdn.net/metaphysis/article/details/161307090) | 模拟 字符串 数据结构 排序 | |
+| 264 | [Count on Cantor](https://blog.csdn.net/metaphysis/article/details/161308160) | 算术与代数 | 实数 分数 |
+| 265 | [Dining Diplomats](https://blog.csdn.net/metaphysis/article/details/161308399) | 回溯法 | |
+| 266 | [Stamping Out Stamps](https://blog.csdn.net/metaphysis/article/details/161308627) | 贪心算法 | 纸币找零问题 |
+| 267 | [Of(f) Course](https://blog.csdn.net/metaphysis/article/details/161309472) | 几何 | 余弦定理 |
+| 268 | [Double Trouble](https://blog.csdn.net/metaphysis/article/details/161309742) | 算术与代数 数论 | 高精度整数 模运算 |
+| 269 | [Counting Patterns](https://blog.csdn.net/metaphysis/article/details/161309974) | 回溯法 | 剪枝 |
+| 270 | [Lining Up](https://blog.csdn.net/metaphysis/article/details/161332722) | 计算几何 排序 | 剪枝 叉积 判断线段转动方向  |
+| 271 | [Simply Syntax](https://blog.csdn.net/metaphysis/article/details/161332792) | 字符串 | 语法分析 |
+| 272 | [TEX Quotes](https://blog.csdn.net/metaphysis/article/details/161333004) | 字符串 | 输入输出处理 |
+| 273 | [Jack Straws](https://blog.csdn.net/metaphysis/article/details/161333199) | 计算几何 图算法 | 线段相交判断 传递闭包 |
+| 274 | [Cat and Mouse](https://blog.csdn.net/metaphysis/article/details/161333259) | 动态规划 | 松弛 |
+| 275 | [Expanding Fractions](https://blog.csdn.net/metaphysis/article/details/161333598) | 算术与代数 数论 | |
+| 276 | [Egyptian Multiplication](https://blog.csdn.net/metaphysis/article/details/161333751) | 算术与代数 | 进展转换 |
+| 277 | [Cabinets](https://blog.csdn.net/metaphysis/article/details/161333665) | 字符串 | 输入输出 |
+| 278 | [Chess](https://blog.csdn.net/metaphysis/article/details/161333940) | 组合数学 网格 | 计数 国际象棋棋盘 |
+| 279 | [Spin](https://blog.csdn.net/metaphysis/article/details/161334100) | 数据结构 |  内置数组 游戏模拟 |
+| 280 | [Vertex](https://blog.csdn.net/metaphysis/article/details/161360318) | 图遍历 | BFS/DFS |
+| 281 | [Rubik's Cube](https://blog.csdn.net/metaphysis/article/details/161136691) | 组合数学 数据结构 | 旋转群 矩阵变换 映射 |
+| 282 | [Rename](https://blog.csdn.net/metaphysis/article/details/161360506) | 字符串 模拟 | |
+| 283 | [Compress](https://blog.csdn.net/metaphysis/article/details/161360719) | 回溯法 | |
+| 284 | [Logic](https://blog.csdn.net/metaphysis/article/details/161360996) | 图遍历 | |
+| 285 | [Crosswords](https://blog.csdn.net/metaphysis/article/details/161361105) | 字符串 | 游戏模拟 |
+| 286 | [Dead Or Not - That Is The Question](https://blog.csdn.net/metaphysis/article/details/161361455) | 网格 模拟 | 国际象棋棋盘 |
+| 287 | [Text Comparison](https://blog.csdn.net/metaphysis/article/details/161118420) | 动态规划 | 最短编辑距离 |
+| 288 | [Arithmetic Operations With Large Integers](https://blog.csdn.net/metaphysis/article/details/161361582) | 算术与代码 数据结构 | 高精度整数 栈 |
+| 289 | [A Very Nasty Text Formatter](https://blog.csdn.net/metaphysis/article/details/161361745) | 字符串 数据结构 | 链表 |
+| 290 | [Palindroms smordnilaP](https://blog.csdn.net/metaphysis/article/details/161386099) | 算术与代数 | 高精度整数 回文字符串 |
+| 291 | [The House Of Santa Claus](https://blog.csdn.net/metaphysis/article/details/161386536) | 回溯法 | |
+| 292 | [Presentation Error](https://blog.csdn.net/metaphysis/article/details/161387098) | 字符串 | 字符串匹配 |
+| 293 | [Bits](https://blog.csdn.net/metaphysis/article/details/161387510) | 语法分析 | |
+| 294 | [Divisors](https://blog.csdn.net/metaphysis/article/details/161387998) | 数论 | 素因子分解 因子个数 |
+| 295 | [Fatman](https://blog.csdn.net/metaphysis/article/details/161388516) | 图遍历 | 图的连通性 二分搜索 |
+| 296 | [Safebreaker](https://blog.csdn.net/metaphysis/article/details/161388999) | 回溯法 | |
+| 297 | [Quadtrees](https://blog.csdn.net/metaphysis/article/details/161389482) | 数据结构 | 四叉树 |
+| 298 | [Race Tracks](https://blog.csdn.net/metaphysis/article/details/161389705) | 图遍历 | BFS |
+| 299 | [Train Swapping](https://blog.csdn.net/metaphysis/article/details/161389940) | 排序 | 逆序对数 冒泡排序 |
+| 300 | [Maya Calendar](https://blog.csdn.net/metaphysis/article/details/161440218) | 数论 | 日期和时间转换 |
+| 301 | [Transportation](https://blog.csdn.net/metaphysis/article/details/161441539) | 回溯法 | |
+| 302 | [John's Trip](https://blog.csdn.net/metaphysis/article/details/161441829) | 图算法 | 欧拉回路 |
+| 303 | [Pipe](https://blog.csdn.net/metaphysis/article/details/161441978) | 计算几何 | 直线间关系 |
+| 304 | [Department](https://blog.csdn.net/metaphysis/article/details/161445536) | 模拟 数据结构 | 优先队列 |
+| 305 | [Joseph](https://blog.csdn.net/metaphysis/article/details/161445851) | 数论 | 约瑟夫问题 |
+| 306 | [Cipher](https://blog.csdn.net/metaphysis/article/details/161445975) | 组合数学 | 置换 轮换 |
+| 307 | [Sticks](https://blog.csdn.net/metaphysis/article/details/161446157) | 回溯法 | 剪枝 |
+| 308 | [Tin Cutter](https://blog.csdn.net/metaphysis/article/details/161446265) | 图遍历 数据结构 | DFS 并查集 |
+| 309 | [FORCAL](https://blog.csdn.net/metaphysis/article/details/161446396) | 字符串 | 语法分析 |
+| 310 | [L-system](https://blog.csdn.net/metaphysis/article/details/161471676) | 图遍历 | 隐式图 DFS/BFS |
+| 311 | [Packets](https://blog.csdn.net/metaphysis/article/details/161472300) | 几何 | |
+| 312 | [Crosswords (II)](https://blog.csdn.net/metaphysis/article/details/161476505) | 网格 | |
+| 313 | [Intervals](https://blog.csdn.net/metaphysis/article/details/161476834) | 几何 | 圆 |
+| 314 | [Robot](https://blog.csdn.net/metaphysis/article/details/161477021) | 图遍历 | BFS |
+| 315 | [Network](https://blog.csdn.net/metaphysis/article/details/161477161) | 图算法 | 割点 Tarjan算法 |
+| 316 | [Stars](https://blog.csdn.net/metaphysis/article/details/161477281) | 几何 | 坐标变换 |
+| 317 | [Hexagon](https://blog.csdn.net/metaphysis/article/details/161478029) | 网格 | 六边形网格 |
+| 318 | [Domino Effect](https://blog.csdn.net/metaphysis/article/details/161477447) | 图算法 | 最短路径算法 Dijkstra算法 |
+| 319 | [Pendulum](https://blog.csdn.net/metaphysis/article/details/161477841) | 模拟 计算几何 | 向量 叉积 确定线段转动方向 |
+| 320 | [Border](https://blog.csdn.net/metaphysis/article/details/161504792) | 模拟 网格 | |
+| 321 | [The New Villa](https://blog.csdn.net/metaphysis/article/details/161510151) | 图遍历 | BFS 最短路径 |
+| 322 | [Ships](https://blog.csdn.net/metaphysis/article/details/154292321) | 回溯法 | 剪枝 |
+| 323 | [Jury Compromise](https://blog.csdn.net/metaphysis/article/details/161512540) | 动态规划 | 状态偏移 |
+| 324 | [Factorial Frequencies](https://blog.csdn.net/metaphysis/article/details/161513362) | 算术与代数 | 高精度整数 |
+| 325 | [Identifying Legal Pascal Real Constants](https://blog.csdn.net/metaphysis/article/details/161513565) | 字符串 | 正则表达式 |
+| 326 | [Extrapolation Using a Difference Table](https://blog.csdn.net/metaphysis/article/details/161513674) | 算术与代数 | 等差数列 |
+| 327 | [Evaluating Simple C Expressions](https://blog.csdn.net/metaphysis/article/details/161513771) | 数据结构 | 栈 表达式计算 |
+| 328 | [The Finite State Text-Processing Machine](https://blog.csdn.net/metaphysis/article/details/161513859) | 字符串 | 文本解析 |
+| 329 | [PostScript Emulation](https://blog.csdn.net/metaphysis/article/details/161513947) | 几何 | 坐标变换 |
+| 330 | [Inventory Maintenance](https://blog.csdn.net/metaphysis/article/details/161533073) | 字符串 | 文本解析 指令解析 |
+| 331 | [Mapping the Swaps](https://blog.csdn.net/metaphysis/article/details/161533140) | 回溯法 排序 | 交换排序 |
+| 332 | [Rational Numbers from Repeating Fractions](https://blog.csdn.net/metaphysis/article/details/161533385) | 算术与代数 | 小数转换为分数 |
+| 333 | [Recognizing Good ISBNs](https://blog.csdn.net/metaphysis/article/details/161533406) | 字符串 | 文本解析 |
+| 334 | [Identifying Concurrent Events](https://blog.csdn.net/metaphysis/article/details/161533434) | 图算法 | Floyd-Warshall算法 |
+| 335 | [Processing MX Records](https://blog.csdn.net/metaphysis/article/details/161544988) | 模拟 数据结构 | 映射 |
+| 336 | [A Node Too Far](https://blog.csdn.net/metaphysis/article/details/161545030) | 图算法 | Floyd-Warshall算法 |
+| 337 | [Interpreting Control Sequences](https://blog.csdn.net/metaphysis/article/details/161545062) | 模拟 字符串 | |
+| 338 | [Long Multiplication](https://blog.csdn.net/metaphysis/article/details/161545124) | 模拟 字符串 | |
+| 339 | [SameGame Simulation](https://blog.csdn.net/metaphysis/article/details/161545149) | 模拟 数据结构 | 内置数组 |
+| 340 | [Master-Mind Hints](https://blog.csdn.net/metaphysis/article/details/161557093) | 模拟 字符串 数据结构 | 映射 |
+| 341 | [Non-Stop Travel](https://blog.csdn.net/metaphysis/article/details/161557110) | 图算法 | 最短路径算法 Moore-Dijkstra算法 |
+| 342 | [HTML Syntax Checking](https://blog.csdn.net/metaphysis/article/details/161557128) | 字符串 | 语法分析 |
+| 343 | [What Base Is This](https://blog.csdn.net/metaphysis/article/details/161557143) | 算术与代数 | 进制转换 |
+| 344 | [Roman Digititis](https://blog.csdn.net/metaphysis/article/details/161557151) | 算术与代数 | 进制转换 |
+| 345 | [It's Ir-Resist-Able](https://blog.csdn.net/metaphysis/article/details/161557158) | 算术与代数 | 高斯消元法 |
+| 346 | [Getting Chorded](https://blog.csdn.net/metaphysis/article/details/161557172) | 模拟 字符串 | 文本解析 |
+| 347 | [Run Run Runaround Numbers](https://blog.csdn.net/metaphysis/article/details/161557202) | 回溯法 | |
+| 348 | [Optimal Array Multiplication Sequence](https://blog.csdn.net/metaphysis/article/details/161557216) | 动态规划 | 矩阵链乘法 |
+| 349 | [Transferable Voting (II)](https://blog.csdn.net/metaphysis/article/details/161557739) | 模拟 字符串 | 文本解析 |
+| 350 | [Pseudo-Random Numbers](https://blog.csdn.net/metaphysis/article/details/161582373) | 数据结构 数论 | 模运算 映射 |
+| 352 | [The Seasonal War](https://blog.csdn.net/metaphysis/article/details/161583092) | 网格 | Flood-Fill算法 |
+| 353 | [Pesky Palindromes](https://blog.csdn.net/metaphysis/article/details/161588600) | 数据结构 | 集合 |
+| 355 | [The Bases Are Loaded](https://blog.csdn.net/metaphysis/article/details/161588738) | 算术与代数 数据结构 | 进制转换 映射 |
+| 356 | [Square Pegs And Round Holes](https://blog.csdn.net/metaphysis/article/details/161588854) | 几何 | 圆 计数 |
+| 357 | [Let Me Count The Ways](https://blog.csdn.net/metaphysis/article/details/161588949) | 动态规划 组合数学 | 计数 |
+| 358 | [Don't Have A Cow Dude](https://blog.csdn.net/metaphysis/article/details/161589158) | 几何 | 二分搜索 |
+| 359 | [Sex Assignments And Breeding Experiments](https://blog.csdn.net/metaphysis/article/details/161589245) | 图算法 | 2-SAT Tarjan算法 |
+| 360 | [Don't Get Hives From This One](https://blog.csdn.net/metaphysis/article/details/161611145) | 网格 | |
+| 361 | [Cops and Robbers](https://blog.csdn.net/metaphysis/article/details/161611212) | 计算几何 | 点和多边形的关系 |
+| 362 | [18000 Seconds Remaining](https://blog.csdn.net/metaphysis/article/details/161611286) | 模拟 字符串 | 文本解析 |
+| 363 | [Approximate Matches](https://blog.csdn.net/metaphysis/article/details/161611319) | 动态规划 | 最长上升子序列 |
+| 365 | [Welfare Reform](https://blog.csdn.net/metaphysis/article/details/161611349) | 模拟 字符串 | 文本解析 |
+| 366 | [Cutting Up](https://blog.csdn.net/metaphysis/article/details/161147618) | 贪心算法 | |
+| 367 | [Halting Factor Replacement Systems](https://blog.csdn.net/metaphysis/article/details/161611411) | 算术与代数 | 高精度整数 |
+| 368 | [Indexing Web Pages](https://blog.csdn.net/metaphysis/article/details/161611437) | 图遍历 | BFS |
+| 369 | [Combinations](https://blog.csdn.net/metaphysis/article/details/161611459) | 数论 | 素因子分解 |
+| 370 | [Bingo](https://blog.csdn.net/metaphysis/article/details/161642248) | 模拟 字符串 | 游戏模拟 |
+| 371 | [Ackermann Functions](https://blog.csdn.net/metaphysis/article/details/161642286) | 动态规划 | 备忘 |
+| 372 | [WhatFix Notation](https://blog.csdn.net/metaphysis/article/details/161642317) | 数据结构 | 树 |
+| 373 | [Romulan Spelling](https://blog.csdn.net/metaphysis/article/details/161642327) | 模拟 字符串 | 文本解析 |
+| 374 | [Big Mod](https://blog.csdn.net/metaphysis/article/details/161642342) | 数论 | 快速幂取模 |
+| 375 | [Inscribed Circles and Isosceles Triangles](https://blog.csdn.net/metaphysis/article/details/161642353) | 几何 | 三角形的特色性质点 |
+| 376 | [More Triangles THE AMBIGUOUS ...](https://blog.csdn.net/metaphysis/article/details/161642363) | 几何 | 三角形 余弦定理 |
+| 377 | [Cowculations](https://blog.csdn.net/metaphysis/article/details/161642581) | 算术与代数 | 进制转换 |
+| 378 | [Intersecting Lines](https://blog.csdn.net/metaphysis/article/details/161642675) | 计算几何 | 直线间关系 |
+| 379 | [Hi-Q](https://blog.csdn.net/metaphysis/article/details/161642703) | 模拟 数据结构 | 游戏模拟 内置数组 |
+| 380 | [Call Forwarding](https://blog.csdn.net/metaphysis/article/details/161673534) | 数据结构 | 映射 |
+| 381 | [Making the Grade](https://blog.csdn.net/metaphysis/article/details/161673558) | 模拟 字符串 | 文本解析 |
+| 382 | [Perfection](https://blog.csdn.net/metaphysis/article/details/161673587) | 数论 | 模运算 |
+| 383 | [Shipping Routes](https://blog.csdn.net/metaphysis/article/details/161673596) | 图算法 | Floyd-Warshall算法 |
+| 384 | [Slurpys](https://blog.csdn.net/metaphysis/article/details/161673607) | 字符串 | 语法分析 递归下降分析 |
+| 385 | [DNA Translation](https://blog.csdn.net/metaphysis/article/details/161673631) | 字符串 | 文本解析 |
+| 386 | [Perfect Cubes](https://blog.csdn.net/metaphysis/article/details/161673646) | 算术与代数 | 实数函数库 |
+| 387 | [A Puzzling Problem](https://blog.csdn.net/metaphysis/article/details/161673654) | 回溯法 | 精确覆盖问题 |
+| 388 | [Galactic Import](https://blog.csdn.net/metaphysis/article/details/161673665) | 图算法 | 最短路径算法 Moore-Dijkstra算法 |
+| 389 | [Basically Speaking](https://blog.csdn.net/metaphysis/article/details/161673686) | 算术与代数 | 进制转换 |
+| 390 | [Letter Sequence Analysis](https://blog.csdn.net/metaphysis/article/details/161705415) | 排序 | |
+| 391 | [Mark-Up](https://blog.csdn.net/metaphysis/article/details/161705432) | 字符串 | 文本解析 |
+| 392 | [Polynomial Showdown](https://blog.csdn.net/metaphysis/article/details/161705442) | 字符串 | 文本解析 |
+| 393 | [The Doors](https://blog.csdn.net/metaphysis/article/details/161705448) | 图算法 计算几何 | 最短路径算法 Moore-Dijkstra算法 |
+| 394 | [Mapmaker](https://blog.csdn.net/metaphysis/article/details/161705460) | 数据结构 | 映射 |
+| 395 | [Board Silly](https://blog.csdn.net/metaphysis/article/details/161705466) | 数据结构 模拟 | 游戏模拟 内置数组 |
+| 396 | [Top Dog](https://blog.csdn.net/metaphysis/article/details/161705476) | 字符串 | 文本解析 |
+| 397 | [Equation Elation](https://blog.csdn.net/metaphysis/article/details/161705487) | 模拟 字符串 | 方程求解 |
+| 398 | [18-Wheeler Caravans (aka Semigroups)](https://blog.csdn.net/metaphysis/article/details/161705494) | 模拟 字符串 | 文本解析 |
+| 399 | [Another Puzzling Problem](https://blog.csdn.net/metaphysis/article/details/161705501) | 回溯法 | 完全搜索 |
