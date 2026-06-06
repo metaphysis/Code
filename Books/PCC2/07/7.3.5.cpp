@@ -13,7 +13,7 @@ ll modPow(ll n, ll k, ll mod)
     return r;
 }
 
-ll modLog(ll x, ll n, ll p)
+ll bsgs(ll x, ll n, ll p)
 {
     map<ll, ll> hash;
     ll s = (ll)sqrt((double)p);
