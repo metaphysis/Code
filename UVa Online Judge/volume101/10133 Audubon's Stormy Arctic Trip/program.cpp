@@ -9,7 +9,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-const int MAXN = 10000;
+const int MAXN = 10000, OFFSET = 100;
 
 vector<int> g[MAXN];
 long long dp[MAXN];
@@ -31,9 +31,9 @@ int main() {
     for (int cs = 0; cs < t; cs++) {
         if (cs) cout << '\n';
         for (int i = 0; i < MAXN; i++) g[i].clear();
-        map<int, string> idxer;
+        vector<string> names;
         vector<long long> queries;
-        int nodeIdx = -1, subNodeIdx = 101;
+        int nodeIdx = -1, subNodeIdx = OFFSET;
         while (getline(cin, line)) {
             if (line.back() == ':') nodeIdx = stoi(line.substr(0, 2));
             else if (line.front() == ' ') {
@@ -41,8 +41,7 @@ int main() {
                 string block;
                 while (iss >> block) {
                     int p = block.find(':');
-                    string nodeName = block.substr(0, p);
-                    idxer[subNodeIdx] = nodeName;
+                    names.push_back(block.substr(0, p));
                     g[nodeIdx].push_back(subNodeIdx);
                     if (block.back() != '$') {
                         int v = stoi(block.substr(p + 1));
@@ -64,7 +63,6 @@ int main() {
         for (long long q : queries) {
             int u = 0;
             vector<int> r;
-            r.push_back(u);
             while (g[u].size()) {
                 for (auto v : g[u]) {
                     if (q > dp[v]) q -= dp[v];
@@ -73,15 +71,11 @@ int main() {
                         break;
                     }
                 }
-                r.push_back(u);
+                if (u >= OFFSET) r.push_back(u);
             }
-            int printed = 0;
             for (int i = 0; i < r.size(); i++) {
-                if (idxer.count(r[i])) {
-                    if (printed) cout << '-';
-                    printed = 1;
-                    cout << idxer[r[i]];
-                }
+                if (i) cout << '-';
+                cout << names[r[i] - OFFSET];
             }
             cout << '\n';
         }
