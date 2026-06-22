@@ -7,43 +7,29 @@
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
-
 using namespace std;
 
-int main(int argc, char *argv[])
-{
+int main() {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
-
     int cases = 0, x, y, z;
     string wheel1, wheel2, wheel3;
-
     cin >> cases;
-    for (int c = 1; c <= cases; c++)
-    {
+    for (int c = 1; c <= cases; c++) {
         cin >> x >> y >> z;
         cin >> wheel1 >> wheel2 >> wheel3;
-
         int count1[26] = {0}, count2[26] = {0}, count3[26] = {0};
-        
-        for (int i = 0; i < x; i++)
-            count1[wheel1[i] - 'A']++;
-        for (int i = 0; i < y; i++)
-            count2[wheel2[i] - 'A']++;
-        for (int i = 0; i < z; i++)
-            count3[wheel3[i] - 'A']++;
-        
+        for (int i = 0; i < x; i++) count1[wheel1[i] - 'A']++;
+        for (int i = 0; i < y; i++) count2[wheel2[i] - 'A']++;
+        for (int i = 0; i < z; i++) count3[wheel3[i] - 'A']++;
         double average = 0.0;
-        for (int i = 0; i < 26; i++)
-        {
+        for (int i = 0; i < 26; i++) {
             double rate = 1.0;
             rate *= (double)(count1[i]) / (double)(x);
             rate *= (double)(count2[i]) / (double)(y);
             rate *= (double)(count3[i]) / (double)(z);
             average += rate * 34.0;
         }
-
         cout << fixed << setprecision(4) << average << '\n';
     }
-
     return 0;
 }
