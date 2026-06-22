@@ -1,4 +1,4 @@
-// Pizza Anyone?
+// Pizza Anyone
 // UVa ID: 565
 // Verdict: Accepted
 // Submission Date: 2016-08-18
