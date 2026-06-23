@@ -7,26 +7,18 @@
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
-
 using namespace std;
 
-int main(int argc, char *argv[])
-{
+int main() {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
-
     string line;
-    while (getline(cin, line), line != "0")
-    {
+    while (getline(cin, line), line != "0") {
         long long number = 0, exponent = 2;
-
-        for (int i = line.length() - 1; i >= 0; i--)
-        {
+        for (int i = line.length() - 1; i >= 0; i--) {
             number += (line[i] - '0') * (exponent - 1);
             exponent *= 2;
         }
-
         cout << number << '\n';
     }
-    
-	return 0;
+    return 0;
 }
