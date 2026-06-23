@@ -7,72 +7,48 @@
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
-
 using namespace std;
 
 int number[12], visited[12], t, n, counter;
 string text[12];
 set<string> solutions;
 
-void backtrack(int depth, int sum)
-{
-    if (sum == t)
-    {
+void dfs(int depth, int sum) {
+    if (sum == t) {
         string sequence;
         bool first_number = true;
         for (int i = 0; i < n; i++)
-        {
-            if (visited[i])
-            {
-                if (first_number)
-                    first_number = false;
-                else
-                    sequence += '+';
+            if (visited[i]) {
+                if (first_number) first_number = false;
+                else sequence += '+';
                 sequence += text[i];
             }
-        }
-        
-        if (solutions.find(sequence) == solutions.end())
-        {
+        if (solutions.find(sequence) == solutions.end()) {
             cout << sequence << '\n';
             solutions.insert(sequence);
         }
-    }
-    else
-    {
+    } else {
         for (int i = depth; i < n; i++)
-        {
-            if (!visited[i] && sum + number[i] <= t)
-            {
+            if (!visited[i] && sum + number[i] <= t) {
                 visited[i] = 1;
-                backtrack(depth + 1, sum + number[i]);
+                dfs(depth + 1, sum + number[i]);
                 visited[i] = 0;
             }
-        }
     }
 }
 
-int main(int argc, char *argv[])
-{
+int main() {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
-
-    while (cin >> t >> n, t)
-    {
-        for (int i = 1; i <= n; i++)
-        {
+    while (cin >> t >> n, t) {
+        for (int i = 1; i <= n; i++) {
             cin >> number[i - 1];
             text[i - 1] = to_string(number[i - 1]);
         }
-        
         cout << "Sums of " << t << ":\n";
-        
         solutions.clear();
         memset(visited, 0, sizeof(visited));
-        backtrack(0, 0);
-        
-        if (solutions.size() == 0)
-            cout << "NONE\n";
+        dfs(0, 0);
+        if (solutions.size() == 0) cout << "NONE\n";
     }
-    
-	return 0;
+    return 0;
 }
