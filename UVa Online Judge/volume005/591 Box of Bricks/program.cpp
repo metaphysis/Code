@@ -7,34 +7,25 @@
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
-
 using namespace std;
 
-int main(int argc, char *argv[])
-{
+int main() {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
-
     int n, cases = 0;
-    while (cin >> n, n)
-    {
+    while (cin >> n, n) {
         vector<int> bricks(n);
-
         int total = 0;
-        for (int i = 0; i < n; i++)
-        {
+        for (int i = 0; i < n; i++) {
             cin >> bricks[i];
             total += bricks[i];
         }
-        
         int height = total / n;
         total = 0;
         for (int i = 0; i < n; i++)
             if (bricks[i] < height)
                 total += (height - bricks[i]);
-                
         cout << "Set #" << ++cases << '\n';
         cout << "The minimum number of moves is " << total << ".\n\n";
     }
-    
-	return 0;
+    return 0;
 }
