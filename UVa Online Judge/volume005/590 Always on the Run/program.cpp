@@ -9,7 +9,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main(int argc, char *argv[]) {
+int main() {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
     vector<vector<int>> schedule[12];
     int cost[1100][12];
