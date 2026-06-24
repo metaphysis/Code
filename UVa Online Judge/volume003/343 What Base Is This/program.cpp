@@ -1,4 +1,4 @@
-// What Base Is This?
+// What Base Is This
 // UVa ID: 343
 // Verdict: Accepted
 // Submission Date: 2016-06-27

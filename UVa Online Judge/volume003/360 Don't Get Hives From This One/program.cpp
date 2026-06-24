@@ -1,4 +1,4 @@
-// Don't Get Hives From This One!
+// Don't Get Hives From This One
 // UVa ID: 360
 // Verdict: Accepted
 // Submission Date: 2016-11-24

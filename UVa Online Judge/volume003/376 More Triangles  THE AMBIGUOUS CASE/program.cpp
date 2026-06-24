@@ -1,4 +1,4 @@
-// More Triangles ... THE AMBIGUOUS CASE
+// More Triangles THE AMBIGUOUS CASE
 // UVa ID: 376
 // Verdict: Accepted
 // Submission Date: 2016-07-08

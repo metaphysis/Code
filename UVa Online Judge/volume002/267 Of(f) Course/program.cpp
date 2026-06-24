@@ -1,4 +1,4 @@
-// Of(f) Course!
+// Of(f) Course
 // UVa ID: 267
 // Verdict: Accepted
 // Submission Date: 2016-05-27

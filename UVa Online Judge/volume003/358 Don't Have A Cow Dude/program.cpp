@@ -1,4 +1,4 @@
-// Don't Have A Cow, Dude
+// Don't Have A Cow Dude
 // UVa ID: 358
 // Verdict: Accepted
 // Submission Date: 2016-07-06

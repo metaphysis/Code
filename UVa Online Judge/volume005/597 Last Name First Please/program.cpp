@@ -1,4 +1,4 @@
-// Last Name First, Please
+// Last Name First Please
 // UVa ID: 597
 // Verdict: 
 // Submission Date: 

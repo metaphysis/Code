@@ -1,4 +1,4 @@
-// It's Ir-Resist-Able!
+// It's Ir-Resist-Able
 // UVa ID: 345
 // Verdict: Accepted
 // Submission Date: 2016-11-15
