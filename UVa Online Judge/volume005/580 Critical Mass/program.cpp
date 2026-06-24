@@ -7,21 +7,22 @@
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
-
 using namespace std;
 
-int main(int argc, char *argv[])
-{
-    cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
-
-    int solutions[31] = {0};
-    solutions[3] = 1, solutions[4] = 3;
-    for (int i = 5; i <= 30; i++)
-        solutions[i] = 2 * solutions[i - 1] - solutions[i - 4] + (1 << (i - 4));
-    
+int main() {
+    // dp[i][0]：长度为i，不包含连续的三个U且末尾为0个U（即末尾为L）
+    // dp[i][1]：长度为i，不包含连续的三个U且末尾为1个U
+    // dp[i][2]：长度为i，不包含连续的三个U且末尾为2个U
+    long long dp[32][3] = {0};
+    dp[0][0] = 1;
+    for (int i = 1; i <= 30; i++) {
+        // 附加1个L
+        dp[i][0] = dp[i - 1][0] + dp[i - 1][1] + dp[i - 1][2];
+        // 附加1个U
+        dp[i][1] = dp[i - 1][0];
+        dp[i][2] = dp[i - 1][1];
+    }
     int n;
-    while (cin >> n, n)
-        cout << solutions[n] << '\n';
-        
-	return 0;
+    while (cin >> n, n) cout << (1LL << n) - (dp[n][0] + dp[n][1] + dp[n][2]) << '\n';
+    return 0;
 }
