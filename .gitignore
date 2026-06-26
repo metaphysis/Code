@@ -5,3 +5,4 @@
 *.orig
 *.java~
 *.class
+*.sh
