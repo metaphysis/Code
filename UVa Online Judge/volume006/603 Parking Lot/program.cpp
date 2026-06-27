@@ -11,7 +11,7 @@ using namespace std;
 
 bool cmp(const pair<int, int> &a, const pair<int, int> &b) { return a.second > b.second; }
 
-int main(int argc, char *argv[]) {
+int main() {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
     int cases, car, empty, advanced;
     cin >> cases;
