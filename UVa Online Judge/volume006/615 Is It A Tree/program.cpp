@@ -1,4 +1,4 @@
-// Is It A Tree?
+// Is It A Tree
 // UVa ID: 615
 // Verdict: Accepted
 // Submission Date: 2016-08-27
@@ -7,74 +7,48 @@
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
-
 using namespace std;
 
-int main(int argc, char *argv[])
-{
+int main() {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
-
     int from, to, cases = 0;
-    while (cin >> from >> to)
-    {
-        if (from < 0)
-            break;
-        
+    while (cin >> from >> to) {
+        if (from < 0) break;
         bool isTree = true;
         map<int, set<int>> edges;
         map<int, int> degrees;
         set<int> nodes;
-        
-        while (from > 0)
-        {
-            if (edges[from].find(to) != edges[from].end() || from == to)
-                isTree = false;
+        while (from > 0) {
+            if (edges[from].find(to) != edges[from].end() || from == to) isTree = false;
             edges[from].insert(to);
             degrees[to]++;
             nodes.insert(from), nodes.insert(to);
             cin >> from >> to;
         }
-        
-        if (edges.size() == 0)
-            isTree = true;
-        else
-        {
+        if (edges.size() == 0) isTree = true;
+        else {
             int start;
             for (auto node : nodes)
-                if (degrees.find(node) == degrees.end())
-                {
+                if (degrees.find(node) == degrees.end()) {
                     start = node;
                     break;
                 }
-
             set<int> visited;
             queue<int> unvisited;
             unvisited.push(start);
-            while (!unvisited.empty())
-            {
+            while (!unvisited.empty()) {
                 int current = unvisited.front();
-                if (visited.find(current) != visited.end())
-                {
+                if (visited.find(current) != visited.end()) {
                     isTree = false;
                     break;
-                }
-                else
-                    visited.insert(current);
+                } else visited.insert(current);
                 unvisited.pop();
-                
-                for (auto edge : edges[current])
-                    unvisited.push(edge);
+                for (auto edge : edges[current]) unvisited.push(edge);
             }
-            
-            if (visited.size() != nodes.size())
-                isTree = false;
+            if (visited.size() != nodes.size()) isTree = false;
         }
-        
-        if (isTree)
-            cout << "Case " << ++cases << " is a tree.\n";
-        else
-            cout << "Case " << ++cases << " is not a tree.\n";
+        if (isTree) cout << "Case " << ++cases << " is a tree.\n";
+        else cout << "Case " << ++cases << " is not a tree.\n";
     }
-    
-	return 0;
+    return 0;
 }
