@@ -7,7 +7,6 @@
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
-
 using namespace std;
 
 const int MAXV = 1100, MAXE = 100010, INF = 0x3f3f3f3f;
@@ -17,56 +16,38 @@ struct edge { int from, to, weight, next; } edges[MAXE];
 int n, m, head[MAXV];
 int dist[MAXV], parent[MAXV], visited[MAXV], counter[MAXV];
 
-bool spfa(int source)
-{
-    for (int i = 0; i < n; i++)
-        dist[i] = INF, parent[i] = -1, visited[i] = 0, counter[i] = 0;
+bool spfa(int source) {
+    for (int i = 0; i < n; i++) dist[i] = INF, parent[i] = -1, visited[i] = 0, counter[i] = 0;
     dist[source] = 0, visited[source]++;
-    
     queue<int> q; q.push(source);
-    while (!q.empty())
-    {
+    while (!q.empty()) {
         int u = q.front(); q.pop();
- 
         if (counter[u] > n) return true;
-        
-        for (int i = head[u]; ~i; i = edges[i].next)
-        {
+        for (int i = head[u]; ~i; i = edges[i].next) {
             int v = edges[i].to, w = edges[i].weight;
-            if (dist[v] > dist[u] + w)
-            {
+            if (dist[v] > dist[u] + w) {
                 dist[v] = dist[u] + w, parent[v] = u;
                 if (!visited[v]) q.push(v), visited[v]++, counter[v]++;
             }
         }
-        
         visited[u]--;
     }
-
     return false;
 }
 
-int main(int argc, char *argv[])
-{
+int main() {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
-
     int cases, x, y, t;
-
     cin >> cases;
-    for (int c = 1; c <= cases; c++)
-    {
+    for (int c = 1; c <= cases; c++) {
         cin >> n >> m;
-        
         memset(head, -1, sizeof(head));
-        for (int i = 0; i < m; i++)
-        {
+        for (int i = 0; i < m; i++) {
             cin >> x >> y >> t;
             edges[i] = edge{x, y, t, head[x]};
             head[x] = i;
         }
-
         cout << (spfa(0) ? "possible\n" : "not possible\n");
     }
-    
-	return 0;
+    return 0;
 }
