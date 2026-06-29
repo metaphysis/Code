@@ -7,7 +7,6 @@
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
-
 using namespace std;
 
 map<char, int> suits = {{'C', 0}, {'D', 1}, {'S', 2}, {'H', 3}};
@@ -21,46 +20,32 @@ map<char, int> offset = {{'S', 3}, {'W', 2}, {'N', 1}, {'E', 0}};
 
 string suit_text = "CDSH", rank_text = "23456789TJQKA";
 
-struct card
-{
+struct card {
     int suit, rank;
-    
-    bool operator<(const card& another) const
-    {
-        if (suit != another.suit)
-            return suit < another.suit;
-        else
-            return rank < another.rank;
+    bool operator<(const card& another) const {
+        if (suit != another.suit) return suit < another.suit;
+        else return rank < another.rank;
     }
 };
 
-int main(int argc, char *argv[])
-{
+int main() {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
-
     char dealer, suit, rank;
-    while (cin >> dealer, dealer != '#')
-    {
+    while (cin >> dealer, dealer != '#') {
         vector<vector<card>> cards(4, vector<card>(13));
         for (int i = 0; i < 13; i++)
-            for (int j = 0; j < 4; j++)
-            {
+            for (int j = 0; j < 4; j++) {
                 cin >> suit >> rank;
                 cards[j][i].suit = suits[suit];
                 cards[j][i].rank = ranks[rank];
             }
-                
-        for (int i = 0; i < 4; i++)
-            sort(cards[i].begin(), cards[i].end());
-            
-        for (auto d : dealers)
-        {
+        for (int i = 0; i < 4; i++) sort(cards[i].begin(), cards[i].end());
+        for (auto d : dealers) {
             cout << d.second << ':';
             for (auto c : cards[(offset[dealer] + d.first) % 4])
                 cout << ' ' << suit_text[c.suit] << rank_text[c.rank];
             cout << '\n';
         }
     }
-    
-	return 0;
+    return 0;
 }
