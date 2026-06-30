@@ -7,29 +7,20 @@
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
-
 using namespace std;
 
-int main(int argc, char *argv[])
-{
+int main() {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
-
     int base, first_factor, second_factor;
-    while (cin >> base >> first_factor >> second_factor)
-    {
+    while (cin >> base >> first_factor >> second_factor) {
         int n = 1, x, exponent = base;
-
-        while (true)
-        {
+        while (true) {
             int r = first_factor * (exponent - 1) % (second_factor * base - 1);
-            if (r == 0)
-                break;
+            if (r == 0) break;
             exponent = (exponent * base) % (second_factor * base - 1);
             n++;
         }
-        
         cout << n << endl;
     }
-    
-	return 0;
+    return 0;
 }
