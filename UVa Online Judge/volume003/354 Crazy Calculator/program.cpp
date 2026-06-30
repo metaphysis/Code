@@ -1,109 +1,83 @@
 // Crazy Calculator
 // UVa ID: 354
-// Verdict: Wrong Answer
-// Submission Date: 2026-06-21
-// UVa Run Time: 0.070s
+// Verdict: Accepted
+// Submission Date: 2026-06-30
+// UVa Run Time: 0.090s
 //
 // 版权所有（C）2026，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
 using namespace std;
 
-unordered_map<char, char> localToStd;   // 本地符号 -> 标准运算符
-unordered_map<char, int> localPrec;     // 本地符号 -> 优先级
-unordered_map<char, char> localAssoc;   // 本地符号 -> 结合性
+unordered_map<char, char> toStd;
+unordered_map<char, int> prec;
+unordered_map<char, char> assoc;
 
-struct Node {
-    int val;
-    string stdExpr;
-};
-
-// 函数原型声明
-int applyOp(int a, int b, char stdOp);
-Node parsePrimary();
-Node parseExpr(int minPrec);
-
-string expr;
-int pos, n;
-
-int applyOp(int a, int b, char stdOp) {
-    switch (stdOp) {
+int calc(int a, int b, char op) {
+    switch (op) {
         case '+': return a + b;
         case '-': return a - b;
         case '*': return a * b;
-        case '/': return (b == 0) ? 0 : a / b;
+        case '/': return b ? a / b : 0;
     }
     return 0;
 }
 
-Node parsePrimary() {
-    if (pos < n && expr[pos] == '(') {
-        ++pos; // 跳过 '('
-        Node inner = parseExpr(0);
-        if (pos < n && expr[pos] == ')') ++pos;
-        return {inner.val, "(" + inner.stdExpr + ")"};
-    } else {
-        int num = 0;
-        while (pos < n && isdigit(expr[pos])) {
-            num = num * 10 + (expr[pos] - '0');
-            ++pos;
-        }
-        return {num, to_string(num)};
-    }
-}
-
-Node parseExpr(int minPrec) {
-    Node left = parsePrimary();
-    while (pos < n && localToStd.find(expr[pos]) != localToStd.end()) {
-        char op = expr[pos];
-        int prec = localPrec[op];
-        char assoc = localAssoc[op];
-        if ((assoc == 'L' && prec < minPrec) || (assoc == 'R' && prec <= minPrec))
-            break;
-        ++pos; // 消费运算符
-        Node right = parseExpr((assoc == 'L') ? prec + 1 : prec);
-        int res = applyOp(left.val, right.val, localToStd[op]);
-        string stdExpr = left.stdExpr + localToStd[op] + right.stdExpr;
-        left = {res, stdExpr};
-    }
-    return left;
+void apply(stack<int>& val, stack<string>& exp, stack<char>& op) {
+    char o = op.top(); op.pop();
+    string r = exp.top(); exp.pop();
+    string l = exp.top(); exp.pop();
+    int rb = val.top(); val.pop();
+    int lb = val.top(); val.pop();
+    val.push(calc(lb, rb, toStd[o]));
+    exp.push(l + toStd[o] + r);
 }
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-
+    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
     string line;
     getline(cin, line);
     int T = stoi(line);
-    getline(cin, line); // 空行
-
+    getline(cin, line);
     for (int cs = 0; cs < T; ++cs) {
         if (cs) cout << '\n';
-        localToStd.clear();
-        localPrec.clear();
-        localAssoc.clear();
-
-        for (int k = 0; k < 4; ++k) {
+        toStd.clear(); prec.clear(); assoc.clear();
+        for (int i = 0; i < 4; ++i) {
             getline(cin, line);
-            char stdOp = line[0];
-            char localSym = line[1];
-            int prec = line[2] - '0';
-            char assoc = line[3];
-            localToStd[localSym] = stdOp;
-            localPrec[localSym] = prec;
-            localAssoc[localSym] = assoc;
+            toStd[line[1]] = line[0];
+            prec[line[1]] = line[2] - '0';
+            assoc[line[1]] = line[3];
         }
-
-        while (getline(cin, line)) {
-            if (line.empty()) break;
-            expr = line;
-            pos = 0;
-            n = expr.size();
-            Node root = parseExpr(0);
-            cout << root.stdExpr << " = " << root.val << '\n';
+        while (getline(cin, line) && !line.empty()) {
+            stack<int> val;
+            stack<string> exp;
+            stack<char> op;
+            for (int i = 0; i < (int)line.size(); ) {
+                if (isdigit(line[i])) {
+                    int num = 0;
+                    while (i < (int)line.size() && isdigit(line[i]))
+                        num = num * 10 + (line[i++] - '0');
+                    val.push(num);
+                    exp.push(to_string(num));
+                } else {
+                    char cur = line[i++];
+                    while (!op.empty()) {
+                        char top = op.top();
+                        bool pop = false;
+                        if (prec[cur] < prec[top]) pop = true;
+                        else if (prec[cur] == prec[top]) {
+                            if (cur == top) pop = (assoc[top] == 'L');
+                            else pop = true;
+                        }
+                        if (!pop) break;
+                        apply(val, exp, op);
+                    }
+                    op.push(cur);
+                }
+            }
+            while (!op.empty()) apply(val, exp, op);
+            cout << exp.top() << " = " << val.top() << '\n';
         }
     }
-
     return 0;
 }
