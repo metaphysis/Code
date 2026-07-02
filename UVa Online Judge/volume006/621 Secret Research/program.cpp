@@ -7,30 +7,20 @@
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
-
 using namespace std;
 
-int main(int argc, char *argv[])
-{
+int main() {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
-
     int n;
     cin >> n;
     cin.ignore(1024, '\n');
-    
     string line;
-    for (int i = 1; i <= n; i++)
-    {
+    for (int i = 1; i <= n; i++) {
         getline(cin, line);
-        if (line == "1" || line == "4" || line == "78")
-            cout << "+\n";
-        else if (line[line.length() - 2] == '3' && line[line.length() - 1] == '5')
-            cout << "-\n";
-        else if (line.front() == '9' && line.back() == '4')
-            cout << "*\n";
-        else
-            cout << "?\n";
+        if (line == "1" || line == "4" || line == "78") cout << "+\n";
+        else if (line[line.length() - 2] == '3' && line[line.length() - 1] == '5') cout << "-\n";
+        else if (line.front() == '9' && line.back() == '4') cout << "*\n";
+        else cout << "?\n";
     }
-    
-	return 0;
+    return 0;
 }
