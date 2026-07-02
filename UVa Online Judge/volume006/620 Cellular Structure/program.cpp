@@ -7,73 +7,50 @@
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
-
 using namespace std;
 
 bool is_fully_grown(string cell);
 bool is_mutangenic(string cell);
 
-bool is_simple(string cell)
-{
+bool is_simple(string cell) {
     return cell.length() == 1 && cell.front() == 'A';
 }
 
-bool is_fully_grown(string cell)
-{
-    if (cell.length() <= 2)
-        return false;
-    
-    if (cell.back() == 'B')
-    {
+bool is_fully_grown(string cell) {
+    if (cell.length() <= 2) return false;
+    if (cell.back() == 'B') {
         cell.erase(cell.end() - 1);
-        if (cell.back() == 'A')
-        {
+        if (cell.back() == 'A') {
             cell.erase(cell.end() - 1);
             return is_simple(cell) || is_fully_grown(cell) || is_mutangenic(cell);
         }
     }
-
     return false;
 }
 
-bool is_mutangenic(string cell)
-{
-    if (cell.length() <= 2)
-        return false;
-    
-    if (cell.back() == 'A')
-    {
+bool is_mutangenic(string cell) {
+    if (cell.length() <= 2) return false;
+    if (cell.back() == 'A') {
         cell.erase(cell.end() - 1);
-        if (cell.front() == 'B')
-        {
+        if (cell.front() == 'B') {
             cell.erase(cell.begin());
             return is_simple(cell) || is_fully_grown(cell) || is_mutangenic(cell);
         }
     }
-
     return false;
 }
 
-int main(int argc, char *argv[])
-{
+int main() {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
-
     int n;
     cin >> n;
-    
     string line;
-    for (int i = 1; i <= n; i++)
-    {
+    for (int i = 1; i <= n; i++) {
         cin >> line;
-        if (is_simple(line))
-            cout << "SIMPLE\n";
-        else if (is_fully_grown(line))
-            cout << "FULLY-GROWN\n";
-        else if (is_mutangenic(line))
-            cout << "MUTAGENIC\n";
-        else
-            cout << "MUTANT\n";
+        if (is_simple(line)) cout << "SIMPLE\n";
+        else if (is_fully_grown(line)) cout << "FULLY-GROWN\n";
+        else if (is_mutangenic(line)) cout << "MUTAGENIC\n";
+        else cout << "MUTANT\n";
     }
-    
-	return 0;
+    return 0;
 }
