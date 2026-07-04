@@ -7,76 +7,52 @@
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
-
 using namespace std;
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
-
     int pi, ri;
     vector<pair<int, int>> pairs;
     vector<int> indexer;
     string line;
-
-    while (getline(cin, line))
-    {
-        do
-        {
+    while (getline(cin, line)) {
+        do {
             pi = ri = 0;
-            
             int idx = 0;
-            while (!isblank(line[idx]))
-            {
+            while (!isblank(line[idx])) {
                 pi = pi * 10 + (line[idx] - '0');
                 idx++;
             }
-
             if (pi == 0) ri = 1;
-            else
-            {
+            else {
                 idx++;
-                while (idx < line.length())
-                {
+                while (idx < line.length()) {
                     ri = ri * 10 + (line[idx] - '0');
                     idx++;
                 }
             }
-
             pairs.push_back(make_pair(pi, ri));
             if (pi == 0) indexer.push_back(pairs.size() - 1);
         }
         while (getline(cin, line), line.length() > 0);
-        
         int total = 0, lastCheckPoint = pairs.size();
-        for (auto it = indexer.rbegin(); it != indexer.rend(); it++)
-        {
+        for (auto it = indexer.rbegin(); it != indexer.rend(); it++) {
             int start = *it, end = lastCheckPoint, length = 0;
-
             if (start == 0) continue;
-
-            for (int i = start; i < end; i++)
-            {
-                if (pairs[i].first <= length)
-                    length += pairs[i].second;
-                else
-                {
+            for (int i = start; i < end; i++) {
+                if (pairs[i].first <= length) length += pairs[i].second;
+                else {
                     length = -1;
                     break;
                 }
             }
-            
-            if (length >= 0)
-            {
+            if (length >= 0) {
                 lastCheckPoint = start;
                 total++;
             }
         }
-
         cout << total << '\n';
-
         pairs.clear(), indexer.clear();
     }
-    
     return 0;
 }
