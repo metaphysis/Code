@@ -7,40 +7,29 @@
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
-
 using namespace std;
 
-int main(int argc, char *argv[])
-{
+int main() {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
-
     int grid[110][110], n;
-    
-    while (cin >>n)
-    {
+    while (cin >> n) {
         memset(grid, 0, sizeof(grid));
-        
         for (int i = 1; i <= n; i++)
             for (int j = 1; j <= n; j++)
                 cin >> grid[i][j];
-        
         int total = 0;
         for (int i = 1; i <= n; i++)
             for (int j = 1; j <= n; j++)
-                for (int k = 1; k <= n; k++)
-                {
+                for (int k = 1; k <= n; k++) {
                     if (i == j || j == k || k == i) continue;
-                    if (grid[i][j] && grid[j][k] && grid[k][i])
-                     {
-                        if ((i < j && j < k) || (i > j && j > k))
-                        {
+                    if (grid[i][j] && grid[j][k] && grid[k][i]) {
+                        if ((i < j && j < k) || (i > j && j > k)) {
                             cout << i << ' ' << j << ' ' << k << '\n';
                             total++;
                         }
-                     }
-                 }
+                    }
+                }
         cout << "total:" << total << "\n\n";
     }
-    
     return 0;
 }
