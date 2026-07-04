@@ -7,55 +7,38 @@
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
-
 using namespace std;
 
-int main(int argc, char *argv[])
-{
+int main() {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
-
     int pi, ri;
     string line;
-
-    while (getline(cin, line))
-    {
+    while (getline(cin, line)) {
         int current = 0;
         list<int> cache;
-
-        do
-        {
+        do {
             pi = ri = 0;
-            
             int idx = 0;
-            while (!isblank(line[idx]))
-            {
+            while (!isblank(line[idx])) {
                 pi = pi * 10 + (line[idx] - '0');
                 idx++;
             }
-
             if (pi == 0) ri = 1;
-            else
-            {
+            else {
                 idx++;
-                while (idx < line.length())
-                {
+                while (idx < line.length()) {
                     ri = ri * 10 + (line[idx] - '0');
                     idx++;
                 }
             }
-            
             if (pi == 0) cache.push_back(current++);
-            else
-            {
-                while (current - cache.back() < pi)
-                    cache.pop_back();
+            else {
+                while (current - cache.back() < pi) cache.pop_back();
                 current += ri;
             }
         }
         while (getline(cin, line), line.length() > 0);
-
         cout << (cache.size() - 1) << '\n';
     }
-    
     return 0;
 }
