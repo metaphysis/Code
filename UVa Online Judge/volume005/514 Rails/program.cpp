@@ -7,54 +7,35 @@
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
-
 using namespace std;
 
-int main(int argc, char *argv[])
-{
+int main(){
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
-
     string line;
-    while (getline(cin, line), line != "0")
-    {
+    while (getline(cin, line), line != "0"){
         int n = stoi(line);
-        while (getline(cin, line), line != "0")
-        {
+        while (getline(cin, line), line != "0"){
             int number, current = 1;
             stack<int> rails;
             istringstream iss(line);
-            
             bool yes = true;
-            while (iss >> number)
-            {
-                if (number == current)
-                {
-                    current++;
-                }
-                else if (rails.empty() == false && number == rails.top())
-                {
-                    rails.pop();
-                }
-                else if (number > current)
-                {
-                    while (current < number)
-                    {
+            while (iss >> number){
+                if (number == current) current++;
+                else if (rails.empty() == false && number == rails.top())rails.pop();
+                else if (number > current) {
+                    while (current < number) {
                         rails.push(current);
                         current++;
                     }
                     current++;
-                }
-                else
-                {
+                } else {
                     yes = false;
                     break; 
                 }
             }
-            
             cout << (yes ? "Yes\n" : "No\n");
         }
         cout << '\n';
     }
-    
-	return 0;
+    return 0;
 }
