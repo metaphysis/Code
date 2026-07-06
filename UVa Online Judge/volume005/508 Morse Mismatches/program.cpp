@@ -7,73 +7,50 @@
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
-
 using namespace std;
 
-int main(int argc, char *argv[])
-{
+int main() {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
-
     map<char, string> table;
     vector<string> word, context;
-
     char letter;
     string field;
-    while (cin >> letter, letter != '*')
-    {
+    while (cin >> letter, letter != '*') {
         cin >> field;
         table[letter] = field;
     }
-
-    while (cin >> field, field != "*")
-    {
+    while (cin >> field, field != "*") {
         string code;
         for (auto c : field) code += table[c];
         word.push_back(field);
         context.push_back(code);
     }
-
-    while (cin >> field, field != "*")
-    {
+    while (cin >> field, field != "*") {
         vector<string> perfectly;
         string flawed = word.front();
         int minDiff = 102400;
-        
-        for (int i = 0; i < word.size(); i++)
-        {
+        for (int i = 0; i < word.size(); i++) {
             size_t matched = 0;
-            for (size_t j = 0; j < field.size() && j < context[i].size(); j++)
-            {
+            for (size_t j = 0; j < field.size() && j < context[i].size(); j++) {
                 if (field[j] != context[i][j]) break;
                 matched++;
             }
-
-            if (matched == field.size() && matched == context[i].size())
-                perfectly.push_back(word[i]);
-            else
-            {
-                if (matched == min(context[i].size(), field.size()))
-                {
+            if (matched == field.size() && matched == context[i].size()) perfectly.push_back(word[i]);
+            else {
+                if (matched == min(context[i].size(), field.size())) {
                     int diff = abs((int)context[i].size() - (int)field.size());
-                    if (diff < minDiff)
-                    {
+                    if (diff < minDiff) {
                         minDiff = diff;
                         flawed = word[i];
                     }
                 }
             }
         }
-
-        if (perfectly.size() == 1)
-            cout << perfectly.front() << '\n';
-        else
-        {
-            if (perfectly.size() > 1)
-                cout << perfectly.front() << "!\n";
-            else
-                cout << flawed << "?\n";
+        if (perfectly.size() == 1) cout << perfectly.front() << '\n';
+        else {
+            if (perfectly.size() > 1) cout << perfectly.front() << "!\n";
+            else cout << flawed << "?\n";
         }
     }
-
     return 0;
 }
