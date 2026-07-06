@@ -7,7 +7,6 @@
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
-
 using namespace std;
 
 const char separator = (char)(179), right_line_separator = (char)(180),
@@ -17,71 +16,47 @@ const char separator = (char)(179), right_line_separator = (char)(180),
     middle_line_separator = (char)(197), bottom_right_corner = (char)(217),
     top_left_corner = (char)(218);
 
-void drawLine(int columns, vector<int> &columnWidth, char leftChar, char middleChar, char rightChar)
-{
+void drawLine(int columns, vector<int> &columnWidth, char leftChar, char middleChar, char rightChar) {
     cout << leftChar;
-    for (int i = 0; i < columns; i++)
-    {
-        if (i > 0)
-            cout << middleChar;
-        for (int j = 0; j < columnWidth[i] + 2; j++)
-            cout << link;
+    for (int i = 0; i < columns; i++) {
+        if (i > 0) cout << middleChar;
+        for (int j = 0; j < columnWidth[i] + 2; j++) cout << link;
     }
     cout << rightChar << '\n';
 }
 
-void process(vector<string> &table)
-{
+void process(vector<string> &table) {
     vector<int> columnWidth(256, 0);
-
     int columns = 0;
     for (int i = 0; i < table.size(); i++)
-        if (table[i].front() == separator)
-        {
+        if (table[i].front() == separator) {
             istringstream iss(table[i].substr(1, table[i].length() - 1));
             string block;
-
             int c = 0;
-            while (getline(iss, block, separator))
-            {
+            while (getline(iss, block, separator)) {
                 int ii = 0, jj = block.length() - 1;
-                while (ii < block.length() && isblank(block[ii]))
-                    ii++;
-                while (jj >= 0 && isblank(block[jj]))
-                    jj--;
-                if (ii <= jj)
-                    columnWidth[c] = max(columnWidth[c], jj - ii + 1);
+                while (ii < block.length() && isblank(block[ii])) ii++;
+                while (jj >= 0 && isblank(block[jj])) jj--;
+                if (ii <= jj) columnWidth[c] = max(columnWidth[c], jj - ii + 1);
                 c++;
             }
             columns = c;
         }
 
-    for (int i = 0; i < table.size(); i++)
-    {
-        if (table[i].front() == top_left_corner)
-            drawLine(columns, columnWidth, top_left_corner, top_line_separator, top_right_corner);
-        if (table[i].front() == bottom_left_corner)
-            drawLine(columns, columnWidth, bottom_left_corner, bottom_line_separator, bottom_right_corner);
-        if (table[i].front() == left_line_separator)
-            drawLine(columns, columnWidth, left_line_separator, middle_line_separator, right_line_separator);
-
-        if (table[i].front() == separator)
-        {
+    for (int i = 0; i < table.size(); i++) {
+        if (table[i].front() == top_left_corner) drawLine(columns, columnWidth, top_left_corner, top_line_separator, top_right_corner);
+        if (table[i].front() == bottom_left_corner) drawLine(columns, columnWidth, bottom_left_corner, bottom_line_separator, bottom_right_corner);
+        if (table[i].front() == left_line_separator) drawLine(columns, columnWidth, left_line_separator, middle_line_separator, right_line_separator);
+        if (table[i].front() == separator) {
             istringstream iss(table[i].substr(1, table[i].length() - 1));
-
             string block;
             int c = 0;
-            while (getline(iss, block, separator))
-            {
+            while (getline(iss, block, separator)) {
                 int ii = 0, jj = block.length() - 1;
-                while (ii < block.length() && isblank(block[ii]))
-                    ii++;
-                while (jj >= 0 && isblank(block[jj]))
-                    jj--;
-                if (ii <= jj)
-                    block = block.substr(ii, jj - ii + 1);
-                else
-                    block.clear();
+                while (ii < block.length() && isblank(block[ii])) ii++;
+                while (jj >= 0 && isblank(block[jj])) jj--;
+                if (ii <= jj) block = block.substr(ii, jj - ii + 1);
+                else block.clear();
                 cout << separator << ' ' << block;
                 cout << string(columnWidth[c] + 1 - block.length(), ' ');
                 c++;
@@ -91,27 +66,17 @@ void process(vector<string> &table)
     }
 }
 
-int main(int argc, char *argv[])
-{
+int main() {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
-    
     string line;
     getline(cin, line);
-
     int cases = stoi(line);
-
     getline(cin, line);
-    for (int c = 1; c <= cases; c++)
-    {
-        if (c > 1)
-            cout << '\n';
-
+    for (int c = 1; c <= cases; c++) {
+        if (c > 1) cout << '\n';
         vector<string> table;
-        while (getline(cin, line), line.length() > 0)
-            table.push_back(line);
-
+        while (getline(cin, line), line.length() > 0) table.push_back(line);
         process(table);
     }
-
     return 0;
 }
