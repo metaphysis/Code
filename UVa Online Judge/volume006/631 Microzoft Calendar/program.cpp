@@ -7,7 +7,6 @@
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
-
 using namespace std;
 
 const int daysOfYear = 365;
@@ -19,62 +18,42 @@ const int daysBeforeMonth[2][13] = {
     {0, 31, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335, 366}
 };
 
-bool isLeapYear(int yyyy)
-{
+bool isLeapYear(int yyyy) {
     return ((yyyy % 4 == 0 && yyyy % 100 != 0) || yyyy % 400 == 0);
 }
 
 // 以公元元年1月1日为基准日期，将公元元年以后的日期转换为天数。
-int toDays(int yyyy, int mm, int dd)
-{
+int toDays(int yyyy, int mm, int dd) {
     int days = 0, year = yyyy - 1;
-
     days += (year / 400) * daysOf400Years, year %= 400;
     days += (year / 100) * daysOf100Years, year %= 100;
     days += (year / 4) * daysOf4Years, year %= 4;
     days += year * daysOfYear;
     days += daysBeforeMonth[isLeapYear(yyyy)][mm - 1] + dd;
-
     return days;
 };
 
 // 将天数转换为日期。
-void toDate(int dayOfStart, int dayOfCurrent)
-{
+void toDate(int dayOfStart, int dayOfCurrent) {
     int yyyy = 1, dayDiff = abs(dayOfCurrent - dayOfStart);
-
-    // calculate the year and elpased days since the start of a year.
     if (dayOfCurrent >= dayOfStart) dayDiff += 1;
-
-    while (true)
-    {
+    while (true) {
         int dayOfYear = isLeapYear(yyyy) ? 366 : 365;
-        if (dayDiff > dayOfYear)
-        {
+        if (dayDiff > dayOfYear) {
             yyyy += 1;
             dayDiff -= dayOfYear;
-        }
-        else break;
+        } else break;
     }
-
-    if (dayOfCurrent >= dayOfStart)
-        dayDiff -= 1;
-    else
-    {
+    if (dayOfCurrent >= dayOfStart) dayDiff -= 1;
+    else {
         int dayOfYear = isLeapYear(yyyy) ? 366 : 365;
         dayDiff = dayOfYear - dayDiff;
     }
-
-    // output.
     int dayToYearStart = dayDiff;
-    
     string monthNames[] = {"Sun", "Water", "Forest", "Mountains", "Money"};
     string weekNames[] = {"First", "Second", "Third", "Fourth", "Fifth", "Sixth"};
-
-    if (dayToYearStart > 359)
-        cout << "Feast " << (dayToYearStart - 359);
-    else
-    {
+    if (dayToYearStart > 359) cout << "Feast " << (dayToYearStart - 359);
+    else {
         if (dayToYearStart >= 180) cout << "Bates"; else cout << "Gill";
         dayToYearStart %= 180;
         cout << '-' << monthNames[dayToYearStart / 36];
@@ -83,38 +62,27 @@ void toDate(int dayOfStart, int dayOfCurrent)
         dayToYearStart %= 6;
         cout << '-' << (dayToYearStart + 1);
     }
-
     cout << '-' << yyyy;
     if (dayOfCurrent < dayOfStart) cout << "bd";
     cout << '\n';
 }
 
-int main(int argc, char *argv[])
-{
+int main() {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
-
     string date;
-    
     int dayOfStart = toDays(1998, 6, 25);
-    
-    while (getline(cin, date), date != "END")
-    {
+    while (getline(cin, date), date != "END") {
         if (date.find("Bates") != date.npos ||
             date.find("Gill") != date.npos ||
-            date.find("Feast") != date.npos)
-        {
+            date.find("Feast") != date.npos) {
             cout << "Enter date in old format\n";
             continue;
         }
-        
         int year = stoi(date.substr(0, 4));
         int month = stoi(date.substr(5, 2));
         int day = stoi(date.substr(8, 2));
-        
         int dayOfCurrent = toDays(year, month, day);
-        
         toDate(dayOfStart, dayOfCurrent);
     }
-    
     return 0;
 }
