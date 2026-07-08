@@ -1,36 +1,26 @@
 // Pig-Latin
 // UVa ID: 492
-// Verdict: 
-// Submission Date: 
-// UVa Run Time: s
+// Verdict: Accepted
+// Submission Date: 2026-07-08
+// UVa Run Time: 0.060s
 //
-// 版权所有（C）2016，邱秋。metaphysis # yeah dot net
+// 版权所有（C）2026，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
-
 using namespace std;
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
     ios::sync_with_stdio(false);
-
     cin.unsetf(ios::skipws);
     char input;
     string block;
-    
-    while (cin >> input)
-    {
-        if (isalpha(input))
-            block += input;
-        else
-        {
-            if (block.length() > 0)
-            {
+    while (cin >> input) {
+        if (isalpha(input)) block += input;
+        else {
+            if (block.length() > 0) {
                 char vowel = tolower(block.front());
-                if (vowel == 'a' || vowel == 'e' || vowel == 'i' || vowel == 'o' || vowel == 'u')
-                    cout << block << "ay";
-                else
-                {
+                if (vowel == 'a' || vowel == 'e' || vowel == 'i' || vowel == 'o' || vowel == 'u') cout << block << "ay";
+                else {
                     char front = block.front();
                     block.erase(block.begin());
                     cout << block << front << "ay";
@@ -40,6 +30,5 @@ int main(int argc, char *argv[])
             block.clear();
         }
     }
-    
-	return 0;
+    return 0;
 }
