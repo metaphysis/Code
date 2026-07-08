@@ -7,31 +7,22 @@
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
-
 using namespace std;
 
-int main(int argc, char *argv[])
-{
+int main() {
     ios::sync_with_stdio(false);
-
     string line;
-    while (getline(cin, line))
-    {
+    while (getline(cin, line)) {
         int start = 0, counter = 0;
-        while (start < line.length())
-        {
-            if (isalpha(line[start]))
-            {
+        while (start < line.length()) {
+            if (isalpha(line[start])) {
                 counter++;
-                while (start < line.length() && isalpha(line[start]))
-                    start++;
+                while (start < line.length() && isalpha(line[start])) start++;
                 continue;
             }
-            
             start++;
         }
         cout << counter << endl;
     }
-    
 	return 0;
 }
