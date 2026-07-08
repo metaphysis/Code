@@ -21,9 +21,7 @@ point operator/(const point& a, double k) { return {a.x / k, a.y / k}; }
 double cross(const point& a, const point& b) { return a.x * b.y - a.y * b.x; }
 
 inline bool pointInTriangle(point& P, point& T1, point& T2, point& T3) {
-    double d1 = cross(T2 - T1, P - T1);
-    double d2 = cross(T3 - T2, P - T2);
-    double d3 = cross(T1 - T3, P - T3);
+    double d1 = cross(T2 - T1, P - T1), d2 = cross(T3 - T2, P - T2), d3 = cross(T1 - T3, P - T3);
     bool hasPos = (d1 > EPS) || (d2 > EPS) || (d3 > EPS);
     bool hasNeg = (d1 < -EPS) || (d2 < -EPS) || (d3 < -EPS);
     return !(hasPos && hasNeg);
@@ -34,7 +32,8 @@ typedef vector<point> polygon;
 int n;
 polygon pts;
 
-bool countTriangles(point& Q, point& A, point& B, point& C) {
+bool countTriangles(point& Q) {
+    static point A{0.0, 0.0}, B{1000.0, 0.0}, C{0.0, 1000.0};
     int c1 = 0, c2 = 0, c3 = 0;
     for (auto& p : pts) {
         if (pointInTriangle(p, Q, B, C)) c1++;
@@ -52,13 +51,14 @@ void intersectLines(point& p1, point& p2, point& p3, point& p4, point& q) {
 
 void solve0() {
     point P[3] = {{0.0, 0.0}, {1000.0, 0.0}, {0.0, 1000.0}};
-    polygon ps[3];
+    polygon Ps[3];
     for (int i = 0; i < 3; i++) {
-        ps[i].insert(ps[i].begin(), pts.begin(), pts.end());
-        sort(ps[i].begin(), ps[i].end(), [&](const point& a, const point& b) {
+        Ps[i].insert(Ps[i].begin(), pts.begin(), pts.end());
+        sort(Ps[i].begin(), Ps[i].end(), [&](const point& a, const point& b) {
             return atan2(a.y - P[i].y, a.x - P[i].x) < atan2(b.y - P[i].y, b.x - P[i].x);
         });
     }
+    srand(time(0));
     int needed = (n + 2) / 3;
     int start = needed - 1, end = n - needed;
     while (true) {
@@ -66,21 +66,18 @@ void solve0() {
         bool found = false;
         for (int i = start; i < end; i++) {
             double fa = (rand() % 10000) / 10000.0;
-            point m1 = ps[a][i] + (ps[a][i + 1] - ps[a][i]) * fa;
+            point m1 = Ps[a][i] + (Ps[a][i + 1] - Ps[a][i]) * fa;
             for (int j = start; j < end; j++) {
                 double fb = (rand() % 10000) / 10000.0;
-                point m2 = ps[b][j] + (ps[b][j + 1] - ps[b][j]) * fb;
+                point m2 = Ps[b][j] + (Ps[b][j + 1] - Ps[b][j]) * fb;
                 point Q;
                 intersectLines(P[a], m1, P[b], m2, Q);
-                if (countTriangles(Q, P[0], P[1], P[2])) {
+                if (countTriangles(Q)) {
                     cout << Q.x << " " << Q.y << "\n";
-                    found = true;
-                    break;
+                    return;
                 }
             }
-            if (found) break;
         }
-        if (found) break;
     }
 }
 
@@ -101,49 +98,37 @@ polygon getCandidates(point& V, bool includeAll) {
     return r;
 }
 
-bool work(polygon& As, polygon& Bs, point& A, point& B, point& C) {
-    bool found = false;
+bool work(polygon& As, polygon& Bs, point& A, point& B) {
     for (auto& dA : As) {
         for (auto& dB : Bs) {
             point Q;
             intersectLines(A, dA, B, dB, Q);
-            if (countTriangles(Q, A, B, C)) {
+            if (countTriangles(Q)) {
                 cout << Q.x << " " << Q.y << "\n";
-                found = true;
-                break;
+                return true;
             }
         }
-        if (found) break;
     }
-    return found;
+    return false;
 }
 
 void solve1() {
     point A{0.0, 0.0}, B{1000.0, 0.0}, C{0.0, 1000.0};
-    polygon As = getCandidates(A, false);
-    polygon Bs = getCandidates(B, false);
-    polygon Cs = getCandidates(C, false);
-    bool found = work(As, Bs, A, B, C);
-    if (!found) found = work(As, Cs, A, C, B);
-    if (!found) found = work(Bs, Cs, B, C, A);
-    assert(found);
+    polygon As = getCandidates(A, false), Bs = getCandidates(B, false), Cs = getCandidates(C, false);
+    if (work(As, Bs, A, B) || work(As, Cs, A, C) || work(Bs, Cs, B, C)) return;
 }
 
 void solve2() {
-    point A{0.0, 0.0}, B{1000.0, 0.0}, C{0.0, 1000.0};
-    polygon A1s = getCandidates(A, false);
-    polygon B1s = getCandidates(B, false);
-    polygon C1s = getCandidates(C, false);
-    polygon A2s = getCandidates(A, true);
-    polygon B2s = getCandidates(B, true);
-    polygon C2s = getCandidates(C, true);
-    bool found = work(A1s, B2s, A, B, C);
-    if (!found) found = work(A1s, C2s, A, C, B);
-    if (!found) found = work(B1s, A2s, B, A, C);
-    if (!found) found = work(B1s, C2s, B, C, A);
-    if (!found) found = work(C1s, A2s, C, A, B);
-    if (!found) found = work(C1s, B2s, C, B, A);
-    assert(found);
+    point P[3] = {{0.0, 0.0}, {1000.0, 0.0}, {0.0, 1000.0}};
+    polygon P1[3], P2[3];
+    for (int i = 0; i < 3; i++) {
+        P1[i] = getCandidates(P[i], false);
+        P2[i] = getCandidates(P[i], true);
+    }
+    for (int i = 0; i < 3; i++)
+        for (int j = i + 1; j < 3; j++)
+            if (work(P1[i], P2[j], P[i], P[j]) || work(P1[j], P2[i], P[j], P[i]))
+                return;
 }
 
 int main() {
