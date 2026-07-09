@@ -7,29 +7,21 @@
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
-
 using namespace std;
 
-int main(int argc, char *argv[])
-{
+int main() {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
-    
     vector<int> number;
     set<int> appeared;
     map<int, int> counter;
-    
     int n;
-    while (cin >> n)
-    {
-        if (appeared.find(n) == appeared.end())
-        {
+    while (cin >> n) {
+        if (appeared.find(n) == appeared.end()) {
             number.push_back(n);
             appeared.insert(n);
         }
         counter[n]++;
     }
-    
     for (auto i : number) cout << i << " " << counter[i] << endl;
-        
 	return 0;
 }
