@@ -7,30 +7,21 @@
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
-
 using namespace std;
 
-int main(int argc, char *argv[])
-{
+int main() {
     ios::sync_with_stdio(false);
-
     string line;
-    while (getline(cin, line))
-    {
+    while (getline(cin, line)) {
         int index  = 0;
-        while (index < line.length())
-        {
-            if (isblank(line[index]))
-                cout << line[index];
-            else
-            {
+        while (index < line.length()) {
+            if (isblank(line[index])) cout << line[index];
+            else {
                 string block;
-                while (index < line.length() && isblank(line[index]) == false)
-                {
+                while (index < line.length() && isblank(line[index]) == false) {
                     block += line[index];
                     index++;
                 }
-                
                 reverse(block.begin(), block.end());
                 cout << block;
                 continue;
@@ -39,6 +30,5 @@ int main(int argc, char *argv[])
         }
         cout << endl;
     }
-    
-	return 0;
+    return 0;
 }
