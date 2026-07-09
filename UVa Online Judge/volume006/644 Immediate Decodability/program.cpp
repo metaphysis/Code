@@ -7,45 +7,28 @@
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
-
 using namespace std;
 
-int main(int argc, char *argv[])
-{
+int main() {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
-
     int cases = 0;
-    
     string line;
-    while (true)
-    {
+    while (true) {
         vector<string> decoded;
-        
         bool decodable = true;
-        while (getline(cin, line), line.length() > 0 && line.front() != '9')
-        {
-            if (!decodable)
-                continue;
-
+        while (getline(cin, line), line.length() > 0 && line.front() != '9') {
+            if (!decodable) continue;
             for (int i = 0; i < decoded.size(); i++)
-                if (line.find(decoded[i]) == 0 || decoded[i].find(line) == 0)
-                {
+                if (line.find(decoded[i]) == 0 || decoded[i].find(line) == 0) {
                     decodable = false;
                     break;
                 }
-            
             decoded.push_back(line);
         }
-        
-        if (line.length() == 0)
-            break;
-            
+        if (line.length() == 0) break;
         cout << "Set " << ++cases;
-        if (decodable)
-            cout << " is immediately decodable\n";
-        else
-            cout << " is not immediately decodable\n";
+        if (decodable) cout << " is immediately decodable.\n";
+        else cout << " is not immediately decodable.\n";
     }
-    
-	return 0;
+    return 0;
 }
