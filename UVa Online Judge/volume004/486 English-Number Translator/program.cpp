@@ -7,7 +7,6 @@
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
-
 using namespace std;
 
 map<string, int> value = {
@@ -20,30 +19,20 @@ map<string, int> value = {
     {"million", 1000000}
 };
 
-int stringToInt(vector<string> number)
-{
-    if (number.size() == 0)
-        return 0;
-        
-    if (number.size() == 1)
-        return value[number.front()];
-    
+int stringToInt(vector<string> number) {
+    if (number.size() == 0) return 0;
+    if (number.size() == 1) return value[number.front()];
     int sign = 1;
-    if (number.front() == "negative")
-    {
+    if (number.front() == "negative") {
         number.erase(number.begin());
         sign = -1;
     }
-
     vector<string> tag{"million", "thousand", "hundred"};
-    
     int sum = 0;
     bool found = false;
-    for (int i = 0; i < 3; i++)
-    {
+    for (int i = 0; i < 3; i++) {
         auto index = find(number.begin(), number.end(), tag[i]);
-        if (index != number.end())
-        {
+        if (index != number.end()) {
             vector<string> next(number.begin(), index);
             sum += stringToInt(next) * value[tag[i]];
             number.erase(number.begin(), index + 1);
@@ -52,33 +41,22 @@ int stringToInt(vector<string> number)
             break;
         }
     }
-    
-    if (found == false)
-    {
-        if (number.size() == 1)
-            sum = value[number.front()];
-        if (number.size() == 2)
-            sum = value[number.front()] + value[number.back()];
+    if (found == false) {
+        if (number.size() == 1) sum = value[number.front()];
+        if (number.size() == 2) sum = value[number.front()] + value[number.back()];
     }
-
     return sign * sum;
 }
 
-int main(int argc, char *argv[])
-{
+int main() {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
-
     string line, digit;
     istringstream iss;
-    
-    while (getline(cin, line))
-    {
+    while (getline(cin, line)) {
         vector<string> number;
         iss.clear(); iss.str(line);
-        while (iss >> digit)
-            number.push_back(digit);
+        while (iss >> digit) number.push_back(digit);
         cout << stringToInt(number) << '\n';  
     }
-    
-	return 0;
+    return 0;
 }
