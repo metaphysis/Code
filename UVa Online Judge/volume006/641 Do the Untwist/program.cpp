@@ -7,42 +7,28 @@
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
-
 using namespace std;
 
-int main(int argc, char *argv[])
-{
+int main() {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
-
     int k;
     string ciphertext;
     string letters = "_abcdefghijklmnopqrstuvwxyz.";
     map<char, int> code;
-    
-    for (int i = 0; i < letters.length(); i++)
-        code[letters[i]] = i;
-        
-    while (cin >> k, k)
-    {
+    for (int i = 0; i < letters.length(); i++) code[letters[i]] = i;
+    while (cin >> k, k) {
         cin >> ciphertext;
-        
         int n = ciphertext.length();
         string plaintext(n, '0');
-        
-        for (int i = 0; i < ciphertext.length(); i++)
-        {
-            //plaintext[(k * i) % n] = letters[(code[ciphertext[i]] + i) % 28];
+        for (int i = 0; i < ciphertext.length(); i++) {
             int m = code[ciphertext[i]];
             for (int j = 0; j <= 27; j++)
-                if ((j - i + 84) % 28 == m)
-                {
+                if ((j - i + 84) % 28 == m) {
                     plaintext[(k * i) % n] = letters[j];
                     break;
                 }
         }
-        
         cout << plaintext << '\n';
     }
-    
-	return 0;
+    return 0;
 }
