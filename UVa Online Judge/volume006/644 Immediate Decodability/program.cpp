@@ -27,8 +27,8 @@ int main() {
         }
         if (line.length() == 0) break;
         cout << "Set " << ++cases;
-        if (decodable) cout << " is immediately decodable.\n";
-        else cout << " is not immediately decodable.\n";
+        if (decodable) cout << " is immediately decodable\n";
+        else cout << " is not immediately decodable\n";
     }
-    return 0;
+	return 0;
 }
