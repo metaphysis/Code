@@ -7,100 +7,80 @@
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
-
 using namespace std;
 
 string commands[] = {"ADD", "DIV", "DUP", "MUL", "SUB"};
 int n, source[10], target[10];
 
-struct state
-{
+struct state {
     string operations;
     vector<int> operands;
 };
 
-bool calculate(vector<int> &result, char operators)
-{
+bool calculate(vector<int> &result, char operators) {
     int a, b;
-    switch (operators)
-    {
-        case '0':
+    switch (operators) {
+        case '0': // ADD
             a = result.back(); result.pop_back();
             b = result.back(); result.pop_back();
             if (abs(a + b) > 30000) return false;
             result.push_back(a + b);
             break;
-        case '1':
+        case '1': // DIV
             a = result.back(); result.pop_back();
             b = result.back(); result.pop_back();
             if (a == 0) return false;
             if (abs(b / a) > 30000) return false;
             result.push_back(b / a);
             break;
-        case '2':
+        case '2': // DUP
             result.push_back(result.back());
             break;
-        case '3':
+        case '3': // MUL
             a = result.back(); result.pop_back();
             b = result.back(); result.pop_back();
             if (abs(a * b) > 30000) return false;
             result.push_back(a * b);
             break;
-        case '4':
+        case '4': // SUB
             a = result.back(); result.pop_back();
             b = result.back(); result.pop_back();
             if (abs(b - a) > 30000) return false;
             result.push_back(b - a);
-            break;             
+            break;
     }
-    
     return true;
 }
 
-bool check(string &operations)
-{
-    for (int i = 0; i < n; i++)
-    {
+bool check(string &operations) {
+    for (int i = 0; i < n; i++) {
         vector<int> result;
         result.push_back(source[i]);
         for (int j = 0; j < operations.size(); j++)
             if (!calculate(result, operations[j])) return false;
         if (result.back() != target[i]) return false;
     }
-    
     return true;
 }
 
-int main(int argc, char *argv[])
-{
+int main() {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
-
     int cases = 0;
-
-    while (cin >> n, n > 0)
-    {
+    while (cin >> n, n > 0) {
         for (int i = 0; i < n; i++) cin >> source[i];
         for (int i = 0; i < n; i++) cin >> target[i];
-        
         string sequence = "Impossible", empty;
         state current, next;
-        
         queue<state> unvisited;
         unvisited.push(state{empty, vector<int>(1, source[0])});
-        
-        while (!unvisited.empty())
-        {
+        while (!unvisited.empty()) {
             current = unvisited.front();
             unvisited.pop();
-
             if (current.operations.size() > 10) continue;
-            if (current.operands.size() == 1 && current.operands.back() == target[0])
-            {
-                if (check(current.operations))
-                {
+            if (current.operands.size() == 1 && current.operands.back() == target[0]) {
+                if (check(current.operations)) {
                     sequence.clear();
-                    for (int i = 0; i < current.operations.size(); i++)
-                    {
+                    for (int i = 0; i < current.operations.size(); i++) {
                         if (i > 0) sequence += ' ';
                         sequence += commands[current.operations[i] - '0'];
                     }
@@ -108,17 +88,12 @@ int main(int argc, char *argv[])
                     break;
                 }
             }
-
-            if (current.operands.size() <= 1)
-            {
+            if (current.operands.size() <= 1) {
                 next = current;
                 next.operations += '2', next.operands.push_back(next.operands.back());
                 unvisited.push(next);
-            }
-            else
-            {
-                for (int i = 0; i < 5; i++)
-                {
+            } else {
+                for (int i = 0; i < 5; i++) {
                     next = current;
                     next.operations += (char)('0' + i);
                     if (!calculate(next.operands, (char)('0' + i))) continue;
@@ -126,10 +101,8 @@ int main(int argc, char *argv[])
                 }
             }
         }
-
         cout << "Program " << ++cases << '\n';
         cout << sequence << "\n\n";
     }
-    
     return 0;
 }
