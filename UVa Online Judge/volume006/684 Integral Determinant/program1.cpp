@@ -13,22 +13,17 @@ using namespace std;
 int n;
 long long g[32][32];
 
-long long determinant()
-{
+long long determinant() {
     long long r = 1;
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = i + 1; j < n; j++)
-        {
+    for (int i = 0; i < n; i++) {
+        for (int j = i + 1; j < n; j++) {
             int x = i, y = j;
-            while (g[y][i])
-            {
+            while (g[y][i]) {
                 long long q = g[x][i] / g[y][i];
                 for (int k = i; k < n; k++) g[x][k] -= g[y][k] * q;
                 swap(x, y);
             }
-            if (x != i)
-            {
+            if (x != i) {
                 swap(g[i], g[j]);
                 r = -r;
             }
@@ -39,18 +34,14 @@ long long determinant()
     return r;
 }
 
-int main(int argc, char *argv[])
-{
+int main() {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
-
-    while (cin >> n, n)
-    {
+    while (cin >> n, n) {
         for (int i = 0; i < n; i++)
             for (int j = 0; j < n; j++)
                 cin >> g[i][j];
         cout << determinant() << '\n';
     }
     cout << "*\n";
-
     return 0;
 }
