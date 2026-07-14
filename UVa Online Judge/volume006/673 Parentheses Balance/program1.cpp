@@ -7,54 +7,35 @@
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
-
 using namespace std;
 
-int main(int argc, char *argv[])
-{
+int main() {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
-
     string line;
     getline(cin, line);
     int n = stoi(line);
-
     char bank[200];
-
-    for (int i = 1; i <= n; i++)
-    {
+    for (int i = 1; i <= n; i++) {
         getline(cin, line);
-        
         bool error = false;
         int top = 0;
         for (int j = 0; j < line.length(); j++)
-            if (line[j] == '(' || line[j] == '[')
-                bank[top++] = line[j];
-            else if (line[j] == ')')
-            {
-                if (top > 0 && bank[top - 1] == '(')
-                    top--;
-                else
-                {
+            if (line[j] == '(' || line[j] == '[') bank[top++] = line[j];
+            else if (line[j] == ')') {
+                if (top > 0 && bank[top - 1] == '(') top--;
+                else {
+                    error = true;
+                    break;
+                }
+            } else if (line[j] == ']') {
+                if (top > 0 && bank[top - 1] == '[') top--;
+                else {
                     error = true;
                     break;
                 }
             }
-            else if (line[j] == ']')
-            {
-                if (top > 0 && bank[top - 1] == '[')
-                    top--;
-                else
-                {
-                    error = true;
-                    break;
-                }
-            }
-        
-        if (top > 0)
-            error = true;
-            
+        if (top > 0) error = true;
         cout << (error ? "No\n" : "Yes\n");
     }
-    
 	return 0;
 }
