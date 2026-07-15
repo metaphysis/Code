@@ -6,7 +6,6 @@
 //
 // 版权所有（C）2026，邱秋。metaphysis # yeah dot net
 
-
 #include <bits/stdc++.h>
 using namespace std;
 
