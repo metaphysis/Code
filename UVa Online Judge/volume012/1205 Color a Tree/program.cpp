@@ -7,7 +7,6 @@
 // 版权所有（C）2021，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
-
 using namespace std;
 
 const int MAXV = 1010;
@@ -16,24 +15,18 @@ int N, R, factor[MAXV], ai[MAXV], bi[MAXV];
 double ri[MAXV];
 vector<int> g[MAXV], s[MAXV];
 
-void dfs(int u)
-{
+void dfs(int u) {
     ri[u] = (double)ai[u] / bi[u];
     if (!g[u].size()) return;
-
-    for (auto v : g[u])
-    {
+    for (auto v : g[u]) {
         dfs(v);
         s[u].push_back(v);
     }
-
-    while (true)
-    {
+    while (true) {
         int maxI = -1;
         double r = 0;
         for (int i = 0; i < s[u].size(); i++)
-            if (ri[s[u][i]] >= r)
-            {
+            if (ri[s[u][i]] >= r) {
                 r = ri[s[u][i]];
                 maxI = i;
             }
@@ -45,28 +38,21 @@ void dfs(int u)
     }
 }
 
-int main(int argc, char *argv[])
-{
+int main() {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
-
-    while (cin >> N >> R)
-    {
+    while (cin >> N >> R)     {
         if (N == 0) break;
         for (int i = 1; i <= N; i++) { cin >> factor[i]; ai[i] = factor[i]; bi[i] = 1; }
         for (int i = 1; i <= N; i++) { g[i].clear(); s[i].clear(); }
-        for (int i = 1, u, v; i < N; i++)
-        {
+        for (int i = 1, u, v; i < N; i++) {
             cin >> u >> v;
             g[u].push_back(v);
         }
-
         dfs(R);
-
         int elapsed = 1, cost = 0;
         priority_queue<pair<double, int>> q;
         q.push(make_pair(ri[R], R));
-        while (!q.empty())
-        {
+        while (!q.empty()) {
             pair<double, int> p = q.top(); q.pop();
             cost += elapsed * factor[p.second];
             for (auto v : g[p.second]) q.push(make_pair(ri[v], v));
@@ -74,6 +60,5 @@ int main(int argc, char *argv[])
         }
         cout << cost << '\n';
     }
-
     return 0;
 }
