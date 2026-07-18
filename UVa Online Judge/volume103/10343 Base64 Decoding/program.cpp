@@ -6,68 +6,70 @@
 //
 // 版权所有（C）2025，邱秋。metaphysis # yeah dot net
 
-// 在线测试数据存在问题，目前无法获得通过。
-
-#include <bits/stdc++.h>
-
-using namespace std;
-
-int main(int argc, char *argv[]) {
-    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
-
-    return 0;
-}
-
 #include <bits/stdc++.h>
 using namespace std;
 
-const string base64Chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+// 字符到 6 位值的映射表（-1 表示无效）
+int charToVal[256];
 
-int findIndex(char c) {
-    if (c >= 'A' && c <= 'Z') return c - 'A';
-    if (c >= 'a' && c <= 'z') return c - 'a' + 26;
-    if (c >= '0' && c <= '9') return c - '0' + 52;
-    if (c == '+') return 62;
-    if (c == '/') return 63;
-    return -1;
+// 初始化映射表
+void initTable() {
+    fill(charToVal, charToVal + 256, -1);
+    for (int i = 0; i < 26; ++i) charToVal['A' + i] = i;
+    for (int i = 0; i < 26; ++i) charToVal['a' + i] = 26 + i;
+    for (int i = 0; i < 10; ++i) charToVal['0' + i] = 52 + i;
+    charToVal['+'] = 62;
+    charToVal['/'] = 63;
 }
 
-string base64Decode(const string& encoded) {
+// 解码一个 Base64 字符串（已过滤掉无关字符）
+string decodeBase64(const string& encoded) {
     string decoded;
-    int len = encoded.size();
-    int i = 0;
-    while (i < len) {
-        int chunk = 0, count = 0, euqal = 0;
-        for (int j = 0; j < 4 && i < len; i++, j++) {
-            char c = encoded[i];
-            if (c == '=') { euqal++; continue; }
-            int idx = findIndex(c);
-            if (idx != -1) {
-                chunk = (chunk << 6) | idx;
-                count++;
-            }
+    int n = encoded.size();
+    for (int i = 0; i < n; i += 4) {
+        int v[4] = {0};
+        int validCnt = 0;
+        for (int j = 0; j < 4; ++j) {
+            char c = encoded[i + j];
+            if (c == '=') v[j] = -1;          // 填充符
+            else v[j] = charToVal[(unsigned char)c];
+            if (v[j] != -1) ++validCnt;
         }
-        if (euqal) {
-            if (euqal == 2) decoded += (chunk >> 4) & 0xFF;
-            if (euqal == 1) decoded += (chunk >> 8) & 0xFF, decoded += (chunk >> 4) & 0xFF;
-            break;
+        if (validCnt == 4) {
+            decoded.push_back((v[0] << 2) | (v[1] >> 4));
+            decoded.push_back(((v[1] & 0xF) << 4) | (v[2] >> 2));
+            decoded.push_back(((v[2] & 0x3) << 6) | v[3]);
+        } else if (validCnt == 3) {
+            decoded.push_back((v[0] << 2) | (v[1] >> 4));
+            decoded.push_back(((v[1] & 0xF) << 4) | (v[2] >> 2));
+        } else if (validCnt == 2) {
+            decoded.push_back((v[0] << 2) | (v[1] >> 4));
         }
-        if (count >= 2) decoded += (chunk >> 16) & 0xFF;
-        if (count >= 3) decoded += (chunk >> 8) & 0xFF;
-        if (count >= 4) decoded += chunk & 0xFF;
     }
     return decoded;
 }
 
 int main() {
-    string line, data;
-    while (getline(cin, line))
-        for (char c : line)
-            if (c == '#') {
-                if (!data.empty()) {
-                    cout << base64Decode(data) << "#";
-                    data.clear();
-                }
-            } else data += c;
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    initTable();
+    string current;   // 当前数据集的 Base64 字符序列（含 '='）
+    char ch;
+    while (cin.get(ch)) {
+        if (ch == '#') {
+            if (!current.empty()) {
+                string decoded = decodeBase64(current);
+                cout << decoded << '#';
+                current.clear();
+            }
+            // 若 current 为空，说明是连续的 #，忽略
+        } else {
+            // 只保留 Base64 有效字符和 '='
+            bool isValid = (ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z') ||
+                           (ch >= '0' && ch <= '9') || ch == '+' || ch == '/' || ch == '=';
+            if (isValid) current.push_back(ch);
+            // 其他字符（空格、换行等）忽略
+        }
+    }
     return 0;
 }
