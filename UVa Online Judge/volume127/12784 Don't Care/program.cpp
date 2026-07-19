@@ -1,8 +1,8 @@
 // Don't Care
 // UVa ID: 12784
 // Verdict: Accepted
-// Submission Date: 2026-07-
-// UVa Run Time: s
+// Submission Date: 2026-07-12
+// UVa Run Time: 0.100s
 //
 // 版权所有（C）2026，邱秋。metaphysis # yeah dot net
 
