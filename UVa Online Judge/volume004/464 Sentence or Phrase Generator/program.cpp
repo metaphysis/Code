@@ -7,7 +7,6 @@
 // 版权所有（C）2016，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
-
 using namespace std;
 
 int k = 1;
@@ -35,49 +34,31 @@ map<string, vector<vector<string>>> phrases = {
     {"#empty", {{""}}}
 };
 
-void generate(string phrase)
-{
-    if (phrase.length() > 0 && phrase.front() == '#')
-    {
+void generate(string phrase) {
+    if (phrase.length() > 0 && phrase.front() == '#') {
         int choices = phrases[phrase].size();
-
         int indexChoosed = 0;
-        if (choices > 1)
-        {
+        if (choices > 1) {
             indexChoosed = k % choices;
             k++;
         }
-
-        for (auto p : phrases[phrase][indexChoosed])
-            generate(p);
-    }
-    else
-    {
-        if (printSpace == false)
-            printSpace = true;
-        else if (phrase.length() > 0)
-            cout << ' ';
-
+        for (auto p : phrases[phrase][indexChoosed]) generate(p);
+    } else {
+        if (printSpace == false) printSpace = true;
+        else if (phrase.length() > 0) cout << ' ';
         cout << phrase;
     }
 }
 
-int main(int argc, char *argv[])
-{
+int main() {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
-
     string line;
-    while (getline(cin, line))
-    {
-        while (line.length() > 0 && isblank(line.front()))
-            line.erase(line.begin());
-        while (line.length() > 0 && isblank(line.back()))
-            line.erase(line.end() - 1);
-
+    while (getline(cin, line)) {
+        while (line.length() > 0 && isblank(line.front())) line.erase(line.begin());
+        while (line.length() > 0 && isblank(line.back())) line.erase(line.end() - 1);
         printSpace = false;
         generate('#' + line);
         cout << '\n';
     }
-        
-	return 0;
+    return 0;
 }
