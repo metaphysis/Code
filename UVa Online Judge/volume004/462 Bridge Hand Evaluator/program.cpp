@@ -9,7 +9,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main(i) {
+int main() {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
     map<char, int> suits = {{'S', 0}, {'H', 1}, {'D', 2}, {'C', 3}};
     map<char, int> point = {{'A', 4}, {'K', 3}, {'Q', 2}, {'J', 1}};
