@@ -7,70 +7,48 @@
 // 版权所有（C）2011，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
-
 using namespace std;
 
-void find_smallest_exponent_by_brute_force(long number)
-{
+void find_smallest_exponent_by_brute_force(long number) {
     long long unsigned exponent = 7;
-
     string first;
-    while (number)
-    {
+    while (number) {
         first.append(1, '0' + number % 10);
         number /= 10;
     }
-
     string result = "821";
-
-    while (result.rfind(first) != (string::size_type)(result.length() - first.length())
-            || result.length() < (2 * first.length() + 1))
-    {
+    while (result.rfind(first) != (string::size_type)(result.length() - first.length()) || result.length() < (2 * first.length() + 1)) {
         int carry = 0;
-        for (int i = 0; i < result.length(); i++)
-        {
+        for (int i = 0; i < result.length(); i++) {
             carry = 2 * (result[i] - '0') + carry;
             result[i] = '0' + carry % 10;
             carry = carry / 10;
         }
-
-        if (carry)
-            result.append(1, '1');
+        if (carry) result.append(1, '1');
         exponent++;
     }
-
     cout << exponent << endl;
 }
 
-void find_smallest_exponent_by_log(long number)
-{
+void find_smallest_exponent_by_log(long number) {
     int digits = 0;
     long original = number;
-    while (original)
-    {
+    while (original) {
         digits++;
         original /= 10;
     }
-
-    for (int k = (digits + 1); ; k++)
-    {
+    for (int k = (digits + 1); ; k++) {
         long long down = floor((log10(number) + k) / log10(2));
         long long up = floor((log10(number + 1) + k) / log10(2));
-
-        if (up > down)
-        {
+        if (up > down) {
             cout << up << endl;
             return;
         }
     }
 }
 
-int main(int ac, char *av[])
-{
+int main() {
     long number;
-
-    while (cin >> number)
-        find_smallest_exponent_by_log(number);
-
+    while (cin >> number) find_smallest_exponent_by_log(number);
     return 0;
 }
