@@ -96,7 +96,6 @@
 // http://www.cs.princeton.edu/~rs/AlgsDS07/01UnionFind.pdf。
 
 #include <bits/stdc++.h>
-
 using namespace std;
 
 #define MAXV 150
@@ -115,8 +114,7 @@ using namespace std;
 #define DOWN 6
 #define RIGHT_BOTTOM 7
 
-struct mazes
-{
+struct mazes {
 	int status[MAXV][MAXV];
 	int width, height;
 };
@@ -126,32 +124,24 @@ int offset[8][2] = { {-1, -1}, {-1, 0}, {-1, 1}, {0, -1}, {0, 1}, {1, -1}, {1, 0
 	{1, 1} };
 
 // 检查坐标是否在矩阵内。
-inline bool in_range(int line, int row, int width, int height)
-{
+inline bool in_range(int line, int row, int width, int height) {
 	return ((0 <= line && line < height) && (0 <= row && row < width));
 }
 
 // 使用 Flood fill 算法将与位置（line，row）相连通的位置其值置为 VISITED。Flood fill 算法
 // 实际上是深度优先搜索的思想。
-void flood_fill(mazes * maze, int line, int row)
-{
+void flood_fill(mazes * maze, int line, int row) {
 	length++;
 	maze->status[line][row] = VISITED;
-
-	for (int d = LEFT_UP; d <= RIGHT_BOTTOM; d++)
-	{
+	for (int d = LEFT_UP; d <= RIGHT_BOTTOM; d++) {
 		int tline = line + offset[d][0];
 		int trow = row + offset[d][1];
-
 		if (in_range(tline, trow, maze->width, maze->height))
-			if (maze->status[tline][trow] == EMPTY)
-			{
+			if (maze->status[tline][trow] == EMPTY) {
 				// 左，右，上，下的 0 位置总是可以直接走的。
-				if (tline == line || trow == row)
-					flood_fill(maze, tline, trow);
+				if (tline == line || trow == row) flood_fill(maze, tline, trow);
 				// 对角线上的 0 位置才需要判断。
-				else
-				{
+				else {
 					// 左上角的 0 位置可行的条件是其左侧不为斜线。
 					if (d == LEFT_UP)
 						if (maze->status[line][row - 1] != SLASH)
@@ -173,66 +163,49 @@ void flood_fill(mazes * maze, int line, int row)
 	}
 }
 
-int main(int ac, char *av[])
-{
+int main() {
 	mazes maze;
 	int width, height, cases = 1;
 	char slash;
 	bool is_backslash;
-
-	while (cin >> width >> height, width && height)
-	{
+	while (cin >> width >> height, width && height) {
 		// 注意在读入数据时是将给定迷宫长和宽各扩大两倍来表示。
 		for (int i = 0; i < height; i++)
-			for (int j = 0; j < width; j++)
-			{
+			for (int j = 0; j < width; j++) {
 				cin >> slash;
-				
 				is_backslash = (slash == '\\');
 				maze.status[i * 2][j * 2] = is_backslash ? BACKSLASH : EMPTY;
 				maze.status[i * 2][j * 2 + 1] = is_backslash ? EMPTY : SLASH;
 				maze.status[i * 2 + 1][j * 2] = is_backslash ? EMPTY : SLASH;
 				maze.status[i * 2 + 1][j * 2 + 1] = is_backslash ? BACKSLASH : EMPTY;				
 			}
-
 		maze.width = 2 * width;
 		maze.height = 2 * height;
-
 		// 处理矩阵周边的 0。
 		for (int i = 0; i < maze.height; i++)
 			for (int j = 0; j < maze.width; j++)
 				if (maze.status[i][j] == EMPTY)
-					if (i == 0 || j == 0 || i == (maze.height - 1)
-						|| j == (maze.width - 1))
+					if (i == 0 || j == 0 || i == (maze.height - 1) || j == (maze.width - 1))
 						flood_fill(&maze, i, j);
-
 		// 获取最大环长度。
 		int maximum = 0, cycles = 0;
 		for (int i = 0; i < maze.height; i++)
 			for (int j = 0; j < maze.width; j++)
-				if (maze.status[i][j] == EMPTY)
-				{
+				if (maze.status[i][j] == EMPTY) {
 					cycles++;
-					
 					length = 0;
 					flood_fill(&maze, i, j);
-
-					if (maximum < length)
-						maximum = length;
+					if (maximum < length) maximum = length;
 				}
 
 		// 输出结果，注意每组数据后需要输出空行。
 		cout << "Maze #" << cases++ << ":" << endl;
-		if (maximum > 0)
-		{
+		if (maximum > 0) {
 			cout << cycles;
 			cout << " Cycles; the longest has length ";
 			cout << maximum << ".";
-		}
-		else
-			cout << "There are no cycles.";
+		} else cout << "There are no cycles.";
 		cout << endl << endl;
 	}
-
 	return 0;
 }
