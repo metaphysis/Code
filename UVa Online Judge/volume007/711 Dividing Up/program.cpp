@@ -35,6 +35,7 @@ int main() {
             }
             if (k) piles[cnt++] = i * k;
         }
+        memset(arrived, 0, sizeof arrived);
         arrived[0] = 1;
         for (int i = 0; i < cnt; i++)
             for (int v = sum; v >= piles[i]; v--)
