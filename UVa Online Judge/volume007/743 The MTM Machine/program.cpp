@@ -7,22 +7,16 @@
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
-
 using namespace std;
 
 const string empty;
 
-string parse(string number)
-{
-    if (number.front() == '2')
-    {
-        if (number.length() > 1)
-            return number.substr(1);
-        else
-            return empty;
+string parse(string number) {
+    if (number.front() == '2') {
+        if (number.length() > 1) return number.substr(1);
+        else return empty;
     }
-    else if (number.front() == '3')
-    {
+    else if (number.front() == '3') {
         if (number.length() == 1) return empty;
         string next = parse(number.substr(1));
         if (next == empty) return empty;
@@ -31,24 +25,18 @@ string parse(string number)
     else return empty;
 }
 
-int main(int argc, char *argv[])
-{
+int main() {
     cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
-
     string line;
-    while (getline(cin, line))
-    {
+    while (getline(cin, line)) {
         if (line == "0") break;
-        if (count(line.begin(), line.end(), '0') > 0)
-        {
+        if (count(line.begin(), line.end(), '0') > 0) {
             cout << "NOT ACCEPTABLE\n";
             continue;
         }
-
         string result = parse(line);
         if (result != empty) cout << result << '\n';
         else cout << "NOT ACCEPTABLE\n";
     }
-
     return 0;
 }
