@@ -112,9 +112,9 @@ void addFollow(Node* node) {
 }
 
 const int MAXM = 505;
-const int MAXW = 8; // 64*8=512 > 500
+const int MAXW = 8;
 int charOfPos[MAXM];
-vector<int> outEdge[MAXM][10]; // outEdge[state][digit] -> list of target states
+vector<int> outEdge[MAXM][10];
 unsigned long long finalMask[MAXW];
 
 int main() {
@@ -127,7 +127,7 @@ int main() {
         Node* root = parseExpr(R, idx);
         int posCnt = 0;
         assignPos(root, posCnt);
-        int M = posCnt + 1; // states: 0..posCnt, 0 is start
+        int M = posCnt + 1;
         int W = (M + 63) >> 6;
         for (int i = 0; i < M; ++i) charOfPos[i] = -1;
         function<void(Node*)> collect = [&](Node* node) {
@@ -141,8 +141,7 @@ int main() {
         for (int p : root->last) finalMask[p >> 6] |= 1ULL << (p & 63);
         edges.clear();
         addFollow(root);
-        for (int p : root->first) edges.push_back({0, p}); // start -> first positions
-        // clear outEdge
+        for (int p : root->first) edges.push_back({0, p});
         for (int i = 0; i < M; ++i) for (int c = 0; c < n; ++c) outEdge[i][c].clear();
         for (auto &e : edges) {
             int from = e.first, to = e.second;
@@ -154,7 +153,7 @@ int main() {
         ans.reserve(1024);
         int active[MAXM], actCnt;
         for (int pos = 0; pos < (int)T.size(); ++pos) {
-            cur[0] |= 1ULL; // allow new match starting at this position
+            cur[0] |= 1ULL;
             int c = T[pos] - '0';
             unsigned long long nxt[MAXW] = {0};
             actCnt = 0;
@@ -168,9 +167,7 @@ int main() {
             }
             for (int i = 0; i < actCnt; ++i) {
                 int st = active[i];
-                for (int j : outEdge[st][c]) {
-                    nxt[j >> 6] |= 1ULL << (j & 63);
-                }
+                for (int j : outEdge[st][c]) nxt[j >> 6] |= 1ULL << (j & 63);
             }
             bool ok = false;
             for (int w = 0; w < W; ++w) if (nxt[w] & finalMask[w]) { ok = true; break; }
