@@ -94,17 +94,17 @@ int main() {
     cin >> T;
     bool firstCase = true;
     while (T--) {
-        cin >> ::m >> ::n;
-        cells.assign(::m, vector<string>(::n));
-        for (int i = 0; i < ::m; ++i)
-            for (int j = 0; j < ::n; ++j)
+        cin >> m >> n;
+        cells.assign(m, vector<string>(n));
+        for (int i = 0; i < m; ++i)
+            for (int j = 0; j < n; ++j)
                 cin >> cells[i][j];
-        vals.assign(::m, vector<int>(::n, 0));
-        computed.assign(::m, vector<bool>(::n, false));
+        vals.assign(m, vector<int>(n, 0));
+        computed.assign(m, vector<bool>(n, false));
         if (!firstCase) cout << '\n';
         firstCase = false;
-        for (int i = 0; i < ::m; ++i) {
-            for (int j = 0; j < ::n; ++j) {
+        for (int i = 0; i < m; ++i) {
+            for (int j = 0; j < n; ++j) {
                 if (j) cout << ' ';
                 cout << getVal(i, j);
             }
