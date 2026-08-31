@@ -6,7 +6,7 @@ struct State {
 };
 
 int mugNum;
-unordered_map<unsigned long long, int> memo;
+unordered_map<unsigned long long, int> dp;
 
 unsigned long long getKey(const State &s) {
     unsigned long long key = 0;
@@ -37,23 +37,23 @@ void decCool(State &s) {
         if (s.cool[i] > 0) s.cool[i]--;
 }
 
-int searchGame(const State &s) {
+int dfs(const State &s) {
     unsigned long long key = getKey(s);
-    unordered_map<unsigned long long, int>::iterator it = memo.find(key);
-    if (it != memo.end()) return it->second;
+    unordered_map<unsigned long long, int>::iterator it = dp.find(key);
+    if (it != dp.end()) return it->second;
     int player = s.turn, other = 1 - player;
     bool selfHas = hasMug(s, player), otherHas = hasMug(s, other);
     if (!selfHas && !otherHas) {
         int result = s.score[0] - s.score[1];
-        memo[key] = result;
+        dp[key] = result;
         return result;
     }
     if (!selfHas) {
         State next = s;
         decCool(next);
         next.turn = other;
-        int result = searchGame(next);
-        memo[key] = result;
+        int result = dfs(next);
+        dp[key] = result;
         return result;
     }
     int best = player == 0 ? -1000000000 : 1000000000;
@@ -90,7 +90,7 @@ int searchGame(const State &s) {
         if (lastPos > mugNum && lastPos < 2 * mugNum + 1) {
             int oppIndex = lastPos - mugNum - 1;
             bool canSwap = s.swapCnt[player] < 3 && s.cool[oppIndex] == 0 && base.mug[player][oppIndex] > 0;
-            int value = searchGame(base);
+            int value = dfs(base);
             if (player == 0)
                 best = max(best, value);
             else
@@ -100,21 +100,21 @@ int searchGame(const State &s) {
                 swap(swapped.mug[player][oppIndex], swapped.mug[other][oppIndex]);
                 swapped.cool[oppIndex] = 4;
                 swapped.swapCnt[player]++;
-                value = searchGame(swapped);
+                value = dfs(swapped);
                 if (player == 0)
                     best = max(best, value);
                 else
                     best = min(best, value);
             }
         } else {
-            int value = searchGame(base);
+            int value = dfs(base);
             if (player == 0)
                 best = max(best, value);
             else
                 best = min(best, value);
         }
     }
-    memo[key] = best;
+    dp[key] = best;
     return best;
 }
 
@@ -134,8 +134,8 @@ int main() {
             cin >> start.mug[1][i];
         cin >> start.score[1];
         start.turn = 1;
-        memo.clear();
-        cout << searchGame(start) << '\n';
+        dp.clear();
+        cout << dfs(start) << '\n';
     }
     return 0;
 }
