@@ -46,7 +46,7 @@ bool checkLines() {
     return true;
 }
 
-bool search() {
+bool dfs() {
     int emptyR = -1, emptyC = -1;
     for (int i = 0; i < 4 && emptyR == -1; i++)
         for (int j = 0; j < 4; j++)
@@ -72,7 +72,7 @@ bool search() {
                 board[emptyR][emptyC] = firstValue;
                 board[nextR][nextC] = secondValue;
                 used[i] = true;
-                if (checkLines() && search())
+                if (checkLines() && dfs())
                     return true;
                 used[i] = false;
                 board[emptyR][emptyC] = -1;
@@ -102,7 +102,7 @@ int main() {
         target = sum / 4;
         memset(board, -1, sizeof(board));
         memset(used, false, sizeof(used));
-        cout << (search() ? "Y\n" : "N\n");
+        cout << (dfs() ? "Y\n" : "N\n");
     }
     return 0;
 }
