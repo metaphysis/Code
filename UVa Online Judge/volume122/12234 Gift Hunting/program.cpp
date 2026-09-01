@@ -7,7 +7,9 @@ struct Gift {
     int price, happy, special;
 };
 
-int solve() {
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
     int v1, v2, n, caseNum = 1;
     while (cin >> v1 >> v2 >> n) {
         if (v1 == 0 && v2 == 0 && n == 0)
@@ -45,10 +47,4 @@ int solve() {
         cout << "Case " << caseNum++ << ": " << answer << "\n\n";
     }
     return 0;
-}
-
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    return solve();
 }
