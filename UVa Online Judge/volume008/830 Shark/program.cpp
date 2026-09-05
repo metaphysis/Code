@@ -35,6 +35,7 @@ int main() {
         for (int i = 1; i <= L; i++) {
             for (int j = 1; j <= C; j++)
                 cin >> grid[i][j];
+            // 输入末尾可能有多余的空格，若不加此语句，评测结果为 Wrong Answer。
             cin.ignore(1024, '\n');
         }
         int sardines = 0, mackerels = 0, salmons = 0, groupers = 0, turtles = 0, dolphines = 0, whales = 0, sharks = 0;
