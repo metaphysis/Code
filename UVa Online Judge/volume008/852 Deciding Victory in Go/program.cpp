@@ -1,4 +1,4 @@
-// Deciding victory in Go
+// Deciding Victory in Go
 // UVa ID: 852
 // Verdict: Accepted
 // Submission Date: 2016-12-09

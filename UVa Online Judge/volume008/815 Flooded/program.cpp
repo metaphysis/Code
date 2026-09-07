@@ -1,4 +1,4 @@
-// Flooded!
+// Flooded
 // UVa ID: 815
 // Verdict: Accepted
 // Submission Date: 2016-12-08
