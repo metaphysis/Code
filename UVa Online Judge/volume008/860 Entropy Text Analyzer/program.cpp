@@ -10,18 +10,13 @@
 
 using namespace std;
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
     cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
-
     string line;
-    while (getline(cin, line), line != "****END_OF_INPUT****")
-    {
+    while (getline(cin, line), line != "****END_OF_INPUT****") {
         map<string, int> counter;
         int lambda = 0;
-
-        do
-        {
+        do {
             // , . : ; ! ? " ( )
             string buffer, word;
             for (int i = 0; i < line.length(); i++)
@@ -29,31 +24,21 @@ int main(int argc, char *argv[])
                     line[i] == ';' || line[i] == '!' || line[i] == '?' ||
                     line[i] == '\"' || line[i] == '(' || line[i] == ')')
                     buffer += ' ';
-                else
-                    buffer += tolower(line[i]);
-
+                else buffer += tolower(line[i]);
             istringstream iss(buffer);
-            while (iss >> word)
-            {
+            while (iss >> word) {
                 lambda++;
                 counter[word]++;
             }
-            
         } while (getline(cin, line), line != "****END_OF_TEXT****");
-        
         double Et = 0.0, Emax, Erel;
-        
-        for (auto c : counter)
-            Et += c.second * (log10(lambda) - log10(c.second));
-        
+        for (auto c : counter) Et += c.second * (log10(lambda) - log10(c.second));
         Et /= lambda;
         Emax = log10(lambda);
         Erel = Et / Emax * 100.0;
-        
         cout << lambda << ' ';
         cout << fixed << setprecision(1) << Et << ' ';
         cout << fixed << setprecision(0) << Erel << '\n';
     }
-    
 	return 0;
 }
