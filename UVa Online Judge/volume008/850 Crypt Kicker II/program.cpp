@@ -24,10 +24,10 @@ void printPlain(string cipher) {
 }
 
 void decipher() {
-    bool allMatched = true;
+    bool hasKey = false;
     for (int i = 0; i < encrypted.size(); i++) {
         if (encrypted[i].size() != plain.size()) continue;
-        allMatched = true;
+        bool allMatched = true;
         for (int j = 0; j < plain.size(); j++)
             if (encrypted[i][j].length() != plain[j].length()) {
                 allMatched = false;
@@ -45,14 +45,14 @@ void decipher() {
                         break;
                 }
             }
-            if (allMatched == false) break;
         }
-        if (allMatched == true) {
+        if (allMatched) {
+            hasKey = true;
             printPlain(cipher);
             break;
         }
     }
-    if (allMatched == false) cout << "No solution." << endl;
+    if (!hasKey) cout << "No solution." << endl;
 }
 
 int main() {
@@ -65,7 +65,8 @@ int main() {
     getline(cin, line);
     while (cases--) {
         encrypted.clear();
-        while (getline(cin, line), line.length() > 0) {
+        while (getline(cin, line)) {
+            if (line.empty()) break;
             iss.clear();
             iss.str(line);
             vector<string> tmp;
