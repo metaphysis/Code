@@ -61,6 +61,9 @@ int main() {
     cin >> T;
     for (int cs = 1; cs <= T; cs++) {
         cin >> n;
+        // 尚未找到原因，使用以下语句读入数据，会出现运行时错误：
+        // for (int i = 1; i <= n; i++) cin >> leftChild[i] >> rightChild[i];
+        // 使用 scanf 读入数据可以通过
         for (int i = 1; i <= n; i++) scanf("%d %d", &leftChild[i], &rightChild[i]);
         cin >> str;
         cout << "Case " << cs << ": " << (checkWin() ? "Yes" : "No") << '\n';
