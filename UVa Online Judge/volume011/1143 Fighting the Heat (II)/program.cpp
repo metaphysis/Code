@@ -68,7 +68,7 @@ void addWord(int wordId) {
     }
 }
 
-BigInteger searchSquare(int depth) {
+BigInteger dfs(int depth) {
     int node, i, index;
     BigInteger answer;
     if (depth == n)
@@ -81,7 +81,7 @@ BigInteger searchSquare(int depth) {
     }
     for (index = head[node]; index != 0; index = occNext[index]) {
         squareWord[depth] = occWord[index];
-        answer.add(searchSquare(depth + 1));
+        answer.add(dfs(depth + 1));
     }
     return answer;
 }
@@ -102,7 +102,7 @@ int main() {
             cin >> wordList[i];
             addWord(i);
         }
-        cout << searchSquare(0).toString() << '\n';
+        cout << dfs(0).toString() << '\n';
     }
     return 0;
 }
