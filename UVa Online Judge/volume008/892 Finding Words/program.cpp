@@ -1,4 +1,4 @@
-// Finding words
+// Finding Words
 // UVa ID: 892
 // Verdict: Accepted
 // Submission Date: 2016-12-13
