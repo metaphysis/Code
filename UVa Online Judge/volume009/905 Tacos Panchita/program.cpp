@@ -5,9 +5,6 @@
 // UVa Run Time: 0.000s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
-//
-// The sample output was still wrong.
-//
 
 #include <bits/stdc++.h>
 

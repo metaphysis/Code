@@ -1,13 +1,10 @@
-// TV game
+// TV Game
 // UVa ID: 910
 // Verdict: Accepted
 // Submission Date: 2017-04-10
 // UVa Run Time: 0.000s
 //
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
-//
-// https://github.com/dmitrime/algorithmic-puzzles/blob/d608e78b7bbeee8e9cdfb9d80421186b984328e0/uva/910.cpp
-// 原解题代码的状态转移方程有错误，以下为经过修正后能够AC的代码。
 
 #include <bits/stdc++.h>
 
