@@ -1,4 +1,4 @@
-// (Jiandan) Mua(I)
+// (Jiandan) Mua (I) - Lexical Analyzer
 // UVa ID: 12421
 // Verdict: Accepted
 // Submission Date: 2025-12-31
