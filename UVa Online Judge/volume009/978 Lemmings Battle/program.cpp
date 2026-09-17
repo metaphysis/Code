@@ -1,4 +1,4 @@
-// Lemmings Battle!
+// Lemmings Battle
 // UVa ID: 978
 // Verdict: Accepted
 // Submission Date: 2017-02-17

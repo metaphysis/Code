@@ -1,4 +1,4 @@
-// One-way traffic
+// One-Way Traffic
 // UVa ID: 1310
 // Verdict: Accepted
 // Submission Date: 2016-08-31

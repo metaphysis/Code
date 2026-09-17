@@ -1,4 +1,4 @@
-// Expert Enough?
+// Expert Enough
 // UVa ID: 1237
 // Verdict: Accepted
 // Submission Date: 2017-11-07
