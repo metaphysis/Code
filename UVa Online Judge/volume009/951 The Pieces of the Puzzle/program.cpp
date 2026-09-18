@@ -4,10 +4,6 @@ using namespace std;
 using Cell = pair<int, int>;
 using Shape = vector<Cell>;
 
-bool isFilled(char ch) {
-    return ch == '#' || ch == 'X';
-}
-
 Shape normalize(Shape cells) {
     int minRow = INT_MAX, minCol = INT_MAX;
     for (const auto &cell : cells) {
@@ -184,7 +180,7 @@ int main() {
         string line;
         for (int row = 0; row < height; ++row) {
             cin >> line;
-            for (int col = 0; col < width; ++col) if (isFilled(line[col])) cellId[row][col] = ++cellCount;
+            for (int col = 0; col < width; ++col) if (line[col] == 'X') cellId[row][col] = ++cellCount;
         }
         cin >> pieceCount;
         map<Shape, int> typeMap;
@@ -196,7 +192,7 @@ int main() {
             Shape cells;
             for (int row = 0; row < pieceH; ++row) {
                 cin >> line;
-                for (int col = 0; col < pieceW; ++col) if (isFilled(line[col])) cells.push_back({row, col});
+                for (int col = 0; col < pieceW; ++col) if (line[col] == 'X') cells.push_back({row, col});
             }
             totalArea += (int)cells.size();
             vector<Shape> forms = getForms(cells);
