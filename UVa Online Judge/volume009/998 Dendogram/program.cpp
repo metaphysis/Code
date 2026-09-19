@@ -8,33 +8,28 @@ struct Node {
 };
 
 bool nodeLess(const vector<Node> &nodes, int first, int second) {
-    if (nodes[first].value != nodes[second].value)
-        return nodes[first].value < nodes[second].value;
+    if (nodes[first].value != nodes[second].value) return nodes[first].value < nodes[second].value;
     return nodes[first].label < nodes[second].label;
 }
 
 bool pairLess(const vector<Node> &nodes, int first, int second, int bestFirst, int bestSecond) {
-    if (nodeLess(nodes, first, bestFirst))
-        return true;
-    if (nodeLess(nodes, bestFirst, first))
-        return false;
+    if (nodeLess(nodes, first, bestFirst)) return true;
+    if (nodeLess(nodes, bestFirst, first)) return false;
     return nodeLess(nodes, second, bestSecond);
 }
 
 bool isBetterPair(const vector<Node> &nodes, int first, int second, int bestFirst, int bestSecond, float difference, float bestDifference) {
-    if (bestFirst == -1)
-        return true;
-    if (difference != bestDifference)
-        return difference < bestDifference;
+    if (bestFirst == -1) return true;
+    if (difference != bestDifference) return difference < bestDifference;
     return pairLess(nodes, first, second, bestFirst, bestSecond);
 }
 
 int buildTree(const vector<float> &values, vector<Node> &nodes) {
     vector<int> activeNodes;
-    for (int i = 0; i < static_cast<int>(values.size()); i++) {
+    for (int i = 0; i < values.size(); i++) {
         Node node;
         node.value = values[i];
-        node.label = string(1, static_cast<char>('a' + i));
+        node.label = string(1, 'a' + i);
         node.leftChild = -1;
         node.rightChild = -1;
         nodes.push_back(node);
@@ -43,8 +38,8 @@ int buildTree(const vector<float> &values, vector<Node> &nodes) {
     while (activeNodes.size() > 1) {
         int bestFirst = -1, bestSecond = -1;
         float bestDifference = 0.0f;
-        for (int i = 0; i < static_cast<int>(activeNodes.size()); i++) {
-            for (int j = i + 1; j < static_cast<int>(activeNodes.size()); j++) {
+        for (int i = 0; i < activeNodes.size(); i++) {
+            for (int j = i + 1; j < activeNodes.size(); j++) {
                 int first = activeNodes[i], second = activeNodes[j];
                 if (nodeLess(nodes, second, first))
                     swap(first, second);
@@ -61,7 +56,7 @@ int buildTree(const vector<float> &values, vector<Node> &nodes) {
         cluster.label = nodes[bestFirst].label + nodes[bestSecond].label;
         cluster.leftChild = bestFirst;
         cluster.rightChild = bestSecond;
-        int clusterIndex = static_cast<int>(nodes.size());
+        int clusterIndex = nodes.size();
         nodes.push_back(cluster);
         vector<int> nextNodes;
         for (int nodeIndex : activeNodes)
@@ -74,11 +69,9 @@ int buildTree(const vector<float> &values, vector<Node> &nodes) {
 }
 
 void printInfix(const vector<Node> &nodes, int root) {
-    if (nodes[root].leftChild != -1)
-        printInfix(nodes, nodes[root].leftChild);
-    cout << static_cast<int>(nodes[root].value + 0.5f) << "," << nodes[root].label << '\n';
-    if (nodes[root].rightChild != -1)
-        printInfix(nodes, nodes[root].rightChild);
+    if (nodes[root].leftChild != -1) printInfix(nodes, nodes[root].leftChild);
+    cout << int(nodes[root].value + 0.5f) << "," << nodes[root].label << '\n';
+    if (nodes[root].rightChild != -1) printInfix(nodes, nodes[root].rightChild);
 }
 
 int main() {
@@ -92,10 +85,8 @@ int main() {
             values.push_back(value);
             continue;
         }
-        if (values.empty())
-            continue;
-        if (!firstCase)
-            cout << '\n';
+        if (values.empty()) continue;
+        if (!firstCase) cout << '\n';
         vector<Node> nodes;
         int root = buildTree(values, nodes);
         printInfix(nodes, root);
