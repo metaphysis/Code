@@ -72,14 +72,14 @@ struct Solver {
                 if (revise(domains, upper.first, upper.second, upper.distance, true)) changed = true;
                 if (revise(domains, upper.second, upper.first, upper.distance, true)) changed = true;
             }
-            for (int i = 0; i < static_cast<int>(domains.size()); i++)
+            for (int i = 0; i < domains.size(); i++)
                 if (domains[i].count() == 0) return false;
-            for (int i = 0; i < static_cast<int>(domains.size()); i++) {
+            for (int i = 0; i < domains.size(); i++) {
                 if (domains[i].count() != 1) continue;
                 int position = -1;
                 for (int j = 0; j < cellCount; j++)
                     if (domains[i][j]) position = j;
-                for (int j = 0; j < static_cast<int>(domains.size()); j++) {
+                for (int j = 0; j < domains.size(); j++) {
                     if (i == j || domains[j].count() == 1) continue;
                     if (domains[j][position]) {
                         domains[j].reset(position);
@@ -87,11 +87,11 @@ struct Solver {
                     }
                 }
             }
-            for (int i = 0; i < static_cast<int>(domains.size()); i++)
+            for (int i = 0; i < domains.size(); i++)
                 if (domains[i].count() == 0) return false;
         }
-        for (int i = 0; i < static_cast<int>(domains.size()); i++)
-            for (int j = i + 1; j < static_cast<int>(domains.size()); j++)
+        for (int i = 0; i < domains.size(); i++)
+            for (int j = i + 1; j < domains.size(); j++)
                 if (domains[i].count() == 1 && domains[j].count() == 1 && domains[i] == domains[j]) return false;
         return true;
     }
@@ -99,7 +99,7 @@ struct Solver {
     bool search(vector<bitset<100>> domains, const vector<Upper> &uppers) {
         if (!propagate(domains, uppers)) return false;
         int selected = -1, minSize = 101;
-        for (int i = 0; i < static_cast<int>(domains.size()); i++) {
+        for (int i = 0; i < domains.size(); i++) {
             int currentSize = domains[i].count();
             if (currentSize > 1 && currentSize < minSize) {
                 minSize = currentSize;
@@ -123,8 +123,8 @@ struct Solver {
         if (specialFirst != -1) {
             uppers.push_back({specialFirst, specialSecond, limit});
         } else {
-            for (int i = 0; i < static_cast<int>(houseIds.size()); i++)
-                for (int j = i + 1; j < static_cast<int>(houseIds.size()); j++)
+            for (int i = 0; i < houseIds.size(); i++)
+                for (int j = i + 1; j < houseIds.size(); j++)
                     uppers.push_back({houseIds[i], houseIds[j], limit});
         }
         return search(domains, uppers);
@@ -145,8 +145,8 @@ struct Solver {
     int getMaximumGuaranteedSeparation() {
         int result = 0;
         int maxDistance = rowCount + colCount - 2;
-        for (int i = 0; i < static_cast<int>(houseIds.size()); i++)
-            for (int j = i + 1; j < static_cast<int>(houseIds.size()); j++) {
+        for (int i = 0; i < houseIds.size(); i++)
+            for (int j = i + 1; j < houseIds.size(); j++) {
                 int low = 0, high = maxDistance;
                 while (low < high) {
                     int middle = (low + high) / 2;
@@ -204,8 +204,8 @@ int main() {
         cout << "Maximum guaranteed separation is " << minimumMaximum << " blocks.\n";
         cout << "Houses separated by at least " << maximumGuaranteed << " blocks:\n";
         vector<pair<int, int>> result;
-        for (int i = 0; i < static_cast<int>(solver.houseIds.size()); i++)
-            for (int j = i + 1; j < static_cast<int>(solver.houseIds.size()); j++) {
+        for (int i = 0; i < solver.houseIds.size(); i++)
+            for (int j = i + 1; j < solver.houseIds.size(); j++) {
                 int low = 0, high = solver.rowCount + solver.colCount - 2;
                 while (low < high) {
                     int middle = (low + high) / 2;
