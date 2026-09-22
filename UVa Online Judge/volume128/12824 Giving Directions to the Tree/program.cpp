@@ -7,148 +7,94 @@ struct Edge {
 };
 
 struct Solution {
-    int cnt;
+    int cnt = -1;
     vector<pair<int, char>> path;
 };
 
-int nodeCount, edgeCount, limitLen;
-vector<vector<Edge>> treeGraph;
-vector<vector<vector<Solution>>> dp;
-vector<int> fixedInLen, fixedOutLen, fixedBestLen;
+using Matrix = vector<vector<Solution>>;
 
-bool betterSolution(const Solution &a, const Solution &b) {
-    if (a.cnt != b.cnt)
-        return a.cnt > b.cnt;
+int n, m, limitLen;
+vector<vector<Edge>> graph;
+vector<Matrix> dp;
+vector<int> fixedIn, fixedOut, fixedBest;
+
+bool better(const Solution &a, const Solution &b) {
+    if (a.cnt != b.cnt) return a.cnt > b.cnt;
     return a.path < b.path;
 }
 
-Solution mergeSolution(const Solution &a, const Solution &b, int edgeId, char edgeType) {
+void update(Solution &a, const Solution &b) { if (better(b, a)) a = b; }
+
+Matrix makeMatrix() { return Matrix(limitLen + 1, vector<Solution>(limitLen + 1)); }
+
+Solution mergeSolution(const Solution &a, const Solution &b, int id = 0, char type = 0) {
     Solution result;
-    result.cnt = a.cnt + b.cnt + (edgeId == 0 ? 0 : 1);
-    result.path.reserve(a.path.size() + b.path.size() + (edgeId == 0 ? 0 : 1));
-    vector<pair<int, char>> extra;
-    if (edgeId != 0)
-        extra.push_back(make_pair(edgeId, edgeType));
-    int i = 0, j = 0, k = 0;
-    while (i < (int)a.path.size() || j < (int)b.path.size() || k < (int)extra.size()) {
-        pair<int, char> current;
-        bool hasA = i < (int)a.path.size();
-        bool hasB = j < (int)b.path.size();
-        bool hasC = k < (int)extra.size();
-        if (hasA)
-            current = a.path[i];
-        else if (hasB)
-            current = b.path[j];
-        else
-            current = extra[k];
-        if (hasB && b.path[j] < current)
-            current = b.path[j];
-        if (hasC && extra[k] < current)
-            current = extra[k];
-        result.path.push_back(current);
-        if (hasA && a.path[i] == current)
-            ++i;
-        if (hasB && b.path[j] == current)
-            ++j;
-        if (hasC && extra[k] == current)
-            ++k;
-    }
+    result.cnt = a.cnt + b.cnt + (id != 0);
+    result.path = a.path;
+    result.path.insert(result.path.end(), b.path.begin(), b.path.end());
+    if (id != 0) result.path.push_back({id, type});
+    sort(result.path.begin(), result.path.end());
     return result;
 }
 
-void updateSolution(Solution &target, const Solution &candidate) {
-    if (betterSolution(candidate, target))
-        target = candidate;
-}
-
-void initSolutions(vector<vector<Solution>> &solutions) {
-    for (int i = 0; i < (int)solutions.size(); ++i)
-        for (int j = 0; j < (int)solutions[i].size(); ++j)
-            solutions[i][j].cnt = -1;
-}
-
 void getFixedInfo(int u) {
-    fixedInLen[u] = 0;
-    fixedOutLen[u] = 0;
-    fixedBestLen[u] = 0;
-    for (const Edge &edge : treeGraph[u]) {
-        int v = edge.to;
-        getFixedInfo(v);
-        fixedBestLen[u] = max(fixedBestLen[u], fixedBestLen[v]);
-        if (edge.type == 'd')
-            fixedOutLen[u] = max(fixedOutLen[u], fixedOutLen[v] + 1);
-        else if (edge.type == 'u')
-            fixedInLen[u] = max(fixedInLen[u], fixedInLen[v] + 1);
+    for (const Edge &e : graph[u]) {
+        getFixedInfo(e.to);
+        fixedBest[u] = max(fixedBest[u], fixedBest[e.to]);
+        if (e.type == 'd') fixedOut[u] = max(fixedOut[u], fixedOut[e.to] + 1);
+        else if (e.type == 'u') fixedIn[u] = max(fixedIn[u], fixedIn[e.to] + 1);
     }
-    fixedBestLen[u] = max(fixedBestLen[u], fixedInLen[u] + fixedOutLen[u]);
+    fixedBest[u] = max(fixedBest[u], fixedIn[u] + fixedOut[u]);
 }
 
-void solveDp(int u) {
-    dp[u].assign(limitLen + 1, vector<Solution>(limitLen + 1));
-    for (int i = 0; i <= limitLen; ++i)
-        for (int j = 0; j <= limitLen; ++j)
-            dp[u][i][j].cnt = -1;
+void solve(int u) {
+    dp[u] = makeMatrix();
     dp[u][0][0].cnt = 0;
-    for (const Edge &edge : treeGraph[u]) {
-        int v = edge.to;
-        solveDp(v);
-        vector<vector<Solution>> bestD(limitLen + 1, vector<Solution>(limitLen + 1));
-        vector<vector<Solution>> bestU(limitLen + 1, vector<Solution>(limitLen + 1));
-        initSolutions(bestD);
-        initSolutions(bestU);
+    for (const Edge &e : graph[u]) {
+        int v = e.to;
+        solve(v);
+        Matrix bestD = makeMatrix();
+        Matrix bestU = makeMatrix();
         Solution bestFree;
-        bestFree.cnt = -1;
-        for (int childIn = 0; childIn <= limitLen; ++childIn) {
-            for (int childOut = 0; childOut <= limitLen - childIn; ++childOut) {
-                if (dp[v][childIn][childOut].cnt == -1)
-                    continue;
-                updateSolution(bestD[childOut][childIn], dp[v][childIn][childOut]);
-                updateSolution(bestU[childIn][childOut], dp[v][childIn][childOut]);
-                updateSolution(bestFree, dp[v][childIn][childOut]);
+        for (int in = 0; in <= limitLen; ++in) {
+            for (int out = 0; out + in <= limitLen; ++out) {
+                if (dp[v][in][out].cnt == -1) continue;
+                update(bestD[out][in], dp[v][in][out]);
+                update(bestU[in][out], dp[v][in][out]);
+                update(bestFree, dp[v][in][out]);
             }
         }
-        for (int childOut = 0; childOut <= limitLen; ++childOut)
-            for (int childIn = 1; childIn <= limitLen; ++childIn)
-                updateSolution(bestD[childOut][childIn], bestD[childOut][childIn - 1]);
-        for (int childIn = 0; childIn <= limitLen; ++childIn)
-            for (int childOut = 1; childOut <= limitLen; ++childOut)
-                updateSolution(bestU[childIn][childOut], bestU[childIn][childOut - 1]);
-        vector<vector<Solution>> nextDp(limitLen + 1, vector<Solution>(limitLen + 1));
-        initSolutions(nextDp);
-        for (int inLen = 0; inLen <= limitLen; ++inLen) {
-            for (int outLen = 0; outLen <= limitLen - inLen; ++outLen) {
-                if (dp[u][inLen][outLen].cnt == -1)
-                    continue;
-                const Solution &current = dp[u][inLen][outLen];
-                if (edge.type == 0) {
-                    Solution candidate = mergeSolution(current, bestFree, 0, 0);
-                    updateSolution(nextDp[inLen][outLen], candidate);
-                }
-                if (edge.type == 0 || edge.type == 'd') {
+        for (int out = 0; out <= limitLen; ++out)
+            for (int in = 1; in <= limitLen; ++in)
+                update(bestD[out][in], bestD[out][in - 1]);
+        for (int in = 0; in <= limitLen; ++in)
+            for (int out = 1; out <= limitLen; ++out)
+                update(bestU[in][out], bestU[in][out - 1]);
+        Matrix next = makeMatrix();
+        for (int in = 0; in <= limitLen; ++in) {
+            for (int out = 0; in + out <= limitLen; ++out) {
+                if (dp[u][in][out].cnt == -1) continue;
+                const Solution &current = dp[u][in][out];
+                if (e.type == 0) update(next[in][out], mergeSolution(current, bestFree));
+                if (e.type == 0 || e.type == 'd') {
                     for (int childOut = 0; childOut < limitLen; ++childOut) {
-                        int newOut = max(outLen, childOut + 1);
-                        if (inLen + newOut > limitLen)
-                            continue;
-                        if (bestD[childOut][limitLen].cnt == -1)
-                            continue;
-                        Solution candidate = mergeSolution(current, bestD[childOut][limitLen], edge.id, 'd');
-                        updateSolution(nextDp[inLen][newOut], candidate);
+                        int newOut = max(out, childOut + 1);
+                        if (in + newOut > limitLen) continue;
+                        if (bestD[childOut][limitLen].cnt == -1) continue;
+                        update(next[in][newOut], mergeSolution(current, bestD[childOut][limitLen], e.id, 'd'));
                     }
                 }
-                if (edge.type == 0 || edge.type == 'u') {
+                if (e.type == 0 || e.type == 'u') {
                     for (int childIn = 0; childIn < limitLen; ++childIn) {
-                        int newIn = max(inLen, childIn + 1);
-                        if (newIn + outLen > limitLen)
-                            continue;
-                        if (bestU[childIn][limitLen].cnt == -1)
-                            continue;
-                        Solution candidate = mergeSolution(current, bestU[childIn][limitLen], edge.id, 'u');
-                        updateSolution(nextDp[newIn][outLen], candidate);
+                        int newIn = max(in, childIn + 1);
+                        if (newIn + out > limitLen) continue;
+                        if (bestU[childIn][limitLen].cnt == -1) continue;
+                        update(next[newIn][out], mergeSolution(current, bestU[childIn][limitLen], e.id, 'u'));
                     }
                 }
             }
         }
-        dp[u].swap(nextDp);
+        dp[u].swap(next);
     }
 }
 
@@ -156,65 +102,45 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
     int caseNumber = 1;
-    while (true) {
-        vector<tuple<int, int, char>> inputEdges;
-        vector<int> describedNodes;
-        int u;
-        if (!(cin >> u))
-            break;
-        if (u == 0)
-            continue;
-        while (u != 0) {
-            describedNodes.push_back(u);
+    int root;
+    while (cin >> root) {
+        if (root == 0) continue;
+        vector<tuple<int, int, char>> edges;
+        n = 1;
+        while (root != 0) {
+            n = max(n, root);
             string token;
-            while (cin >> token) {
-                if (token == "0")
-                    break;
+            while (cin >> token && token != "0") {
                 int v = 0, pos = 0;
                 while (pos < (int)token.size() && isdigit(token[pos])) {
                     v = v * 10 + token[pos] - '0';
                     ++pos;
                 }
-                char type = 0;
-                if (pos < (int)token.size())
-                    type = token[pos];
-                inputEdges.push_back(make_tuple(u, v, type));
+                char type = pos < (int)token.size() ? token[pos] : 0;
+                edges.push_back({root, v, type});
+                n = max(n, v);
             }
-            cin >> u;
+            cin >> root;
         }
-        nodeCount = 1;
-        for (const auto &item : inputEdges) {
-            nodeCount = max(nodeCount, get<0>(item));
-            nodeCount = max(nodeCount, get<1>(item));
+        graph.assign(n + 1, {});
+        m = 0;
+        for (const auto &[u, v, type] : edges) {
+            int id = type == 0 ? ++m : 0;
+            graph[u].push_back({v, id, type});
         }
-        for (int x : describedNodes)
-            nodeCount = max(nodeCount, x);
-        treeGraph.assign(nodeCount + 1, vector<Edge>());
-        edgeCount = 0;
-        for (const auto &item : inputEdges) {
-            int from = get<0>(item);
-            int to = get<1>(item);
-            char type = get<2>(item);
-            int id = 0;
-            if (type == 0)
-                id = ++edgeCount;
-            treeGraph[from].push_back({to, id, type});
-        }
-        fixedInLen.assign(nodeCount + 1, 0);
-        fixedOutLen.assign(nodeCount + 1, 0);
-        fixedBestLen.assign(nodeCount + 1, 0);
+        fixedIn.assign(n + 1, 0);
+        fixedOut.assign(n + 1, 0);
+        fixedBest.assign(n + 1, 0);
         getFixedInfo(1);
-        limitLen = fixedBestLen[1];
-        dp.assign(nodeCount + 1, vector<vector<Solution>>());
-        solveDp(1);
+        limitLen = fixedBest[1];
+        dp.assign(n + 1, {});
+        solve(1);
         Solution answer;
-        answer.cnt = -1;
-        for (int inLen = 0; inLen <= limitLen; ++inLen)
-            for (int outLen = 0; outLen <= limitLen - inLen; ++outLen)
-                updateSolution(answer, dp[1][inLen][outLen]);
+        for (int in = 0; in <= limitLen; ++in)
+            for (int out = 0; in + out <= limitLen; ++out)
+                update(answer, dp[1][in][out]);
         cout << "Case " << caseNumber++ << ": " << answer.cnt;
-        for (const auto &item : answer.path)
-            cout << " (" << item.first << "," << item.second << ")";
+        for (const auto &[id, type] : answer.path) cout << " (" << id << "," << type << ")";
         cout << '\n';
     }
     return 0;
