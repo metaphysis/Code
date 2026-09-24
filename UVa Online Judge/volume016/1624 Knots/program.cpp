@@ -2,10 +2,7 @@
 using namespace std;
 
 const int MAXL = 1000000 + 5;
-
-struct Node {
-    int pre, nxt;
-};
+struct Node { int pre, nxt; };
 
 int T, L, P;
 int pairNode[MAXL];   // 配对点，-1表示无配对
@@ -34,7 +31,6 @@ int main() {
         }
         listNode[0].pre = L - 1;
         listNode[L - 1].nxt = 0;
-
         // 读入配对
         for (int i = 0; i < P; i++) {
             int A, B;
@@ -44,18 +40,13 @@ int main() {
             coverState[A] = 1;   // A在B上方
             coverState[B] = -1;  // B在A下方
         }
-
         // 删除所有未参与覆盖的点（它们不阻碍消除过程）
-        for (int i = 0; i < L; i++) {
-            if (coverState[i] == 0) {
+        for (int i = 0; i < L; i++)
+            if (coverState[i] == 0)
                 deleteNode(i);
-            }
-        }
-
         int head = 0;
         while (coverState[head] == 0) head++;
         int roundTag = 0;
-
         // 反复扫描并消除
         while (P > 0) {
             bool eliminated = false;
@@ -64,7 +55,6 @@ int main() {
             for (int i = head; visTag[i] != roundTag && !eliminated; i = listNode[i].nxt) {
                 visTag[i] = roundTag;
                 int x = listNode[i].nxt;
-
                 // 规则一：旋转消除（i与x相邻且互为配对）
                 if (x == pairNode[i] || listNode[x].nxt == i) {
                     deleteNode(i);
@@ -73,7 +63,6 @@ int main() {
                     eliminated = true;
                     break;
                 }
-
                 // 规则二：平移消除
                 if (coverState[i] == coverState[x]) {
                     int pi = pairNode[i];
@@ -89,14 +78,11 @@ int main() {
                     }
                 }
             }
-
             // 若无任何消除，说明无法继续化简
             if (!eliminated) break;
-
             // 更新head为下一个未被删除的点
             while (coverState[head] == 0) head++;
         }
-
         printf("Case #%d: %s\n", caseNo, P == 0 ? "YES" : "NO");
     }
     return 0;
