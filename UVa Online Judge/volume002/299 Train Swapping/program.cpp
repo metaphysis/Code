@@ -10,16 +10,15 @@
 
 using namespace std;
 
-vector < int > trains;
+vector < int >trains;
 
 int sortAndCount()
 {
     int swaps = 0;
-    
+
     for (int i = trains.size() - 1; i > 0; i--)
         for (int j = 0; j < i; j++)
-            if (trains[j] > trains[j + 1])
-            {
+            if (trains[j] > trains[j + 1]) {
                 swaps++;
                 swap(trains[j], trains[j + 1]);
             }
@@ -31,24 +30,22 @@ int main(int argc, char *argv[])
 {
     cin.tie(0);
     cin.sync_with_stdio(false);
-    
+
     int cases, number;
     cin >> cases;
-    
-    while (cases--)
-    {
+
+    while (cases--) {
         cin >> number;
         trains.clear();
-        
+
         int index;
-        for (int i = 1; i <= number; i++)
-        {
+        for (int i = 1; i <= number; i++) {
             cin >> index;
             trains.push_back(index);
         }
-        
+
         cout << "Optimal train swapping takes " << sortAndCount() << " swaps.\n";
     }
-    
-	return 0;
+
+    return 0;
 }
