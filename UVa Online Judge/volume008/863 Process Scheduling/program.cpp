@@ -1,3 +1,11 @@
+// Process Scheduling
+// UVa ID: 863
+// Verdict: Accepted
+// Submission Date: 2026-09-30
+// UVa Run Time: 3.260s
+//
+// 版权所有（C）2026，邱秋。metaphysis # yeah dot net
+
 #include <bits/stdc++.h>
 using namespace std;
 
