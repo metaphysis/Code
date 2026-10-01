@@ -1,3 +1,11 @@
+// The Probable n-Ascendants
+// UVa ID: 931
+// Verdict: Accepted
+// Submission Date: 2026-09-21
+// UVa Run Time: 0.000s
+//
+// 版权所有（C）2026，邱秋。metaphysis # yeah dot net
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -31,7 +39,8 @@ int main() {
         for (int i = 0; i < 6; ++i) {
             if (pairProb[i] <= 0) continue;
             cout << pairName[i] << ' ';
-            cout << fixed << setprecision(2) << (pairProb[i] * 100 + 1e-11L);
+            airProb[i] *= 100;
+            cout << fixed << setprecision(2) << pairProb[i];
             cout << "%\n";
         }
     }
