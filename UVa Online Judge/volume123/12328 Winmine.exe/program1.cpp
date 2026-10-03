@@ -1,4 +1,4 @@
-// The code is correct (by Professor Krzysztof Stencel), but it's not being accepted. 
+// The code is CORRECT (by Professor Krzysztof Stencel), but it's not being accepted. 
 
 #include <bits/stdc++.h>
 using namespace std;
