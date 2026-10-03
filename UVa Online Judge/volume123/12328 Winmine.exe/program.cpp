@@ -1,3 +1,5 @@
+// The code is WRONG(by Qiu Qiu), but it's being accepted.
+
 #include <bits/stdc++.h>
 using namespace std;
 
