@@ -18,10 +18,6 @@ bool inBoard(int r, int c) {
     return r >= 1 && r <= n && c >= 1 && c <= m;
 }
 
-int popCount(int mask) {
-    return __builtin_popcount((unsigned)mask);
-}
-
 void extractComponent(int r, int c) {
     dfsTimer++;
     visited[r][c] = true;
@@ -105,9 +101,8 @@ bool checkAssign(const vector<int>& ids, const vector<int>& vals, const vector<p
             if (inBoard(nr, nc)) mineCnt[nr][nc]++;
         }
     }
-    for (pair<int, int> cell : deps) {
+    for (pair<int, int> cell : deps)
         if (mineCnt[cell.first][cell.second] != grid[cell.first][cell.second]) return false;
-    }
     return true;
 }
 
@@ -171,9 +166,7 @@ void forceEnumerate() {
     vector<int> ways(min(len, mineTotal) + 1, 0);
     for (int mask = 0; mask < stateCnt; mask++) {
         for (pair<int, int> cell : boundSeq) clearAround(cell);
-        for (int i = 0; i < len; i++) {
-            if (mask >> i & 1) setAround(boundSeq[i]);
-        }
+        for (int i = 0; i < len; i++) if (mask >> i & 1) setAround(boundSeq[i]);
         bool valid = true;
         for (pair<int, int> cell : boundSeq) {
             if (!checkAround(cell)) {
@@ -182,16 +175,14 @@ void forceEnumerate() {
             }
         }
         if (!valid) continue;
-        int cnt = popCount(mask);
+        int cnt = __builtin_popcount(mask);
         if (cnt <= mineTotal) {
             ways[cnt]++;
             if (ways[cnt] == mod) ways[cnt] = 0;
         }
     }
     vector<pair<int, int>> result;
-    for (int i = 0; i < (int)ways.size(); i++) {
-        if (ways[i] != 0) result.push_back({i, ways[i]});
-    }
+    for (int i = 0; i < (int)ways.size(); i++) if (ways[i] != 0) result.push_back({i, ways[i]});
     compWays.push_back(result);
 }
 
@@ -212,14 +203,14 @@ void runProfileDp() {
     vector<vector<int>> cur(mineTotal + 1, vector<int>(16, 0));
     vector<vector<int>> nxt(mineTotal + 1, vector<int>(16, 0));
     makeCheckDeps();
-    for (int tailMask = 0; tailMask < 16; tailMask++) {
-        for (int i = 0; i < 16; i++) headTailOk[tailMask][i] = checkHeadTail(tailMask, i);
-    }
+    for (int tailMask = 0; tailMask < 16; tailMask++)
+        for (int i = 0; i < 16; i++)
+            headTailOk[tailMask][i] = checkHeadTail(tailMask, i);
     for (int tailMask = 0; tailMask < 16; tailMask++) {
         for (int i = 0; i <= mineTotal; i++) fill(cur[i].begin(), cur[i].end(), 0);
         for (int headMask = 0; headMask < 16; headMask++) {
             if (!headTailOk[tailMask][headMask]) continue;
-            int cnt = popCount(headMask);
+            int cnt = __builtin_popcount(headMask);
             if (cnt <= mineTotal) cur[cnt][headMask] = 1;
         }
         for (int pos = 4; pos < len; pos++) {
@@ -252,9 +243,7 @@ void runProfileDp() {
         }
     }
     vector<pair<int, int>> result;
-    for (int i = 0; i < (int)ways.size(); i++) {
-        if (ways[i] != 0) result.push_back({i, ways[i]});
-    }
+    for (int i = 0; i < (int)ways.size(); i++) if (ways[i] != 0) result.push_back({i, ways[i]});
     compWays.push_back(result);
 }
 
@@ -263,11 +252,8 @@ void processComponent() {
     globalTag++;
     for (pair<int, int> cell : aroundCells) boardTag[cell.first][cell.second] = globalTag;
     buildBoundSequence();
-    if ((int)boundSeq.size() <= 8) {
-        forceEnumerate();
-    } else {
-        runProfileDp();
-    }
+    if (boundSeq.size() <= 8) forceEnumerate();
+    else runProfileDp();
 }
 
 bool isFreeCell(int r, int c) {
@@ -366,10 +352,10 @@ int calculateAnswer() {
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    int testCnt;
-    cin >> testCnt;
+    int T;
+    cin >> T;
     memset(grid, -1, sizeof(grid));
-    for (int caseId = 1; caseId <= testCnt; caseId++) {
+    for (int caseId = 1; caseId <= T; caseId++) {
         cin >> n >> m >> mineTotal;
         memset(grid, -1, sizeof(grid));
         for (int r = 1; r <= n; r++) {
