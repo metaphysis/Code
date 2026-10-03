@@ -1,114 +1,128 @@
 // Charles Frédéric Gros
 // UVa ID: 1140
-// Verdict: Wrong Answer
-// Submission Date: 2026-09-27
-// UVa Run Time: 0.130s
+// Verdict: Accepted
+// Submission Date: 2026-10-03
+// UVa Run Time: 0.200s
 //
 // 版权所有（C）2026，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
 using namespace std;
 
-vector<bool> getPrime(int limit) {
-    vector<bool> isPrime(limit + 1, true);
-    if (limit >= 0)
-        isPrime[0] = false;
-    if (limit >= 1)
-        isPrime[1] = false;
-    for (int i = 2; 1LL * i * i <= limit; ++i) {
-        if (!isPrime[i])
-            continue;
-        for (int j = i * i; j <= limit; j += i)
-            isPrime[j] = false;
-    }
-    return isPrime;
+const long long SQUARE_CHECK_LIMIT = 10000;
+
+long long getSqrt(long long x) {
+    long long y = sqrt(x);
+    while (1LL * (y + 1) * (y + 1) <= x) ++y;
+    while (1LL * y * y > x) --y;
+    return y;
 }
 
-vector<bool> getEligible(int dMin, int dMax) {
-    int count = (dMax - dMin) / 4 + 1;
-    vector<bool> eligible(count, true);
-    int limit = sqrt(dMax);
-    vector<bool> isPrime = getPrime(limit);
-    for (int p = 3; p <= limit; p += 2) {
-        if (!isPrime[p])
-            continue;
+vector<int> getPrimes(int limit) {
+    vector<char> composite(limit + 1, false);
+    vector<int> primes;
+    for (int i = 2; i <= limit; ++i) {
+        if (composite[i]) continue;
+        primes.push_back(i);
+        if (1LL * i * i <= limit)
+            for (int j = i * i; j <= limit; j += i)
+                composite[j] = true;
+    }
+    return primes;
+}
+
+vector<char> getBad(long long left, long long right, const vector<int> &primes) {
+    if (left > right) return {};
+    vector<char> bad(right - left + 1, false);
+    for (int p : primes) {
         long long square = 1LL * p * p;
-        long long inverse = (3 * square + 1) / 4;
-        long long residue = (square - (1LL * (dMin % square) * inverse) % square) % square;
-        for (long long index = residue; index < count; index += square)
-            eligible[index] = false;
-    }
-    return eligible;
-}
-
-vector<int> getClassNumbers(int dMin, int dMax, const vector<bool> &eligible) {
-    int count = (dMax - dMin) / 4 + 1;
-    vector<int> classNumbers(count, 0);
-    int maxA = sqrt(dMax / 3.0);
-    while (3LL * (maxA + 1) * (maxA + 1) <= dMax)
-        ++maxA;
-    while (3LL * maxA * maxA > dMax)
-        --maxA;
-    for (int a = 1; a <= maxA; ++a) {
-        for (int b = 1; b <= a; b += 2) {
-            long long bSquare = 1LL * b * b;
-            long long cMin = max(1LL * a, (dMin + bSquare + 4LL * a - 1) / (4LL * a));
-            long long cMax = (dMax + bSquare) / (4LL * a);
-            if (cMin > cMax)
-                continue;
-            for (long long c = cMin; c <= cMax; ++c) {
-                long long d = 4LL * a * c - bSquare;
-                if (d < dMin || d > dMax)
-                    continue;
-                int index = (d - dMin) / 4;
-                if (!eligible[index])
-                    continue;
-                if (a < c && b < a)
-                    classNumbers[index] += 2;
-                else
-                    ++classNumbers[index];
-            }
+        if (square > right) break;
+        long long start = (left + square - 1) / square * square;
+        for (long long value = start; value <= right; ) {
+            bad[value - left] = true;
+            if (value > right - square) break;
+            value += square;
         }
     }
-    return classNumbers;
+    return bad;
+}
+
+long long getSquareFreePart(long long x, const vector<int> &primes) {
+    long long result = 1;
+    for (int p : primes) {
+        long long prime = p;
+        if (prime * prime > x)
+            break;
+        int exponent = 0;
+        while (x % prime == 0) {
+            x /= prime;
+            ++exponent;
+        }
+        if (exponent & 1) result *= prime;
+    }
+    if (x > 1) result *= x;
+    return result;
+}
+
+int getClassNumber(long long d) {
+    int answer = 0;
+    long long maxA = getSqrt(d / 3);
+    for (long long a = 1; a <= maxA; ++a) {
+        long long minValue = 4LL * a * a - d;
+        long long minB = 1;
+        if (minValue > 0) {
+            minB = getSqrt(minValue);
+            if (1LL * minB * minB < minValue)
+                ++minB;
+        }
+        if ((minB & 1LL) == 0) ++minB;
+        for (long long b = minB; b <= a; b += 2) {
+            long long value = d + b * b;
+            long long divisor = 4LL * a;
+            if (value % divisor != 0) continue;
+            long long c = value / divisor;
+            if (c < a) continue;
+            if (a == b || a == c) ++answer;
+            else answer += 2;
+        }
+    }
+    return answer;
 }
 
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    int dMin, dMax, k;
+    long long dMin, dMax, k;
+    vector<int> primes = getPrimes(46340);
+    unordered_map<long long, int> classCache;
+    classCache.reserve(4096);
     bool firstCase = true;
     while (cin >> dMin >> dMax >> k) {
-        if (!firstCase)
-            cout << '\n';
+        long long checkedRight = min(dMax, SQUARE_CHECK_LIMIT - 1);
+        vector<char> bad;
+        if (dMin <= checkedRight) bad = getBad(dMin, checkedRight, primes);
+        if (!firstCase) cout << '\n';
         firstCase = false;
-        vector<bool> eligible = getEligible(dMin, dMax);
-        vector<int> classNumbers = getClassNumbers(dMin, dMax, eligible);
-        int count = (dMax - dMin) / 4 + 1;
-        vector<int> squareRoots(count);
-        int root = sqrt(dMin);
-        for (int i = 0; i < count; ++i) {
-            int d = dMin + 4 * i;
-            while (1LL * (root + 1) * (root + 1) <= d)
-                ++root;
-            while (1LL * root * root > d)
-                --root;
-            squareRoots[i] = root;
-        }
         bool found = false;
-        for (int i = 0; i < count; ++i) {
-            if (!eligible[i])
-                continue;
-            int d = dMin + 4 * i;
-            int h = classNumbers[i];
-            int f = 1000 * h / squareRoots[i];
-            if (f < k)
-                continue;
+        for (long long d = dMin; d <= dMax; d += 4) {
+            if (d < SQUARE_CHECK_LIMIT && bad[d - dMin]) continue;
+            long long classArgument;
+            if (d < SQUARE_CHECK_LIMIT) classArgument = d;
+            else classArgument = getSquareFreePart(d, primes);
+            int h;
+            auto it = classCache.find(classArgument);
+            if (it != classCache.end()) h = it->second;
+            else {
+                h = getClassNumber(classArgument);
+                classCache.emplace(classArgument, h);
+            }
+            long long root = getSqrt(d);
+            long long f = 1000LL * h / root;
+            if (f < k) continue;
             cout << d << ' ' << h << ' ' << f << '\n';
             found = true;
         }
-        if (!found)
-            cout << "empty\n";
+        if (!found) cout << "empty\n";
     }
     return 0;
 }
