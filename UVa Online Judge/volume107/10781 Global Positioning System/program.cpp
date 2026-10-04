@@ -65,10 +65,6 @@ int main() {
         bool validDate = parseDate(dateText, day, month);
         bool validSunrise = parseTime(sunriseText, sunriseHour, sunriseMinute, sunriseSecond);
         bool validSunset = parseTime(sunsetText, sunsetHour, sunsetMinute, sunsetSecond);
-        if (!validDate || !validSunrise || !validSunset) {
-            cout << "Lost My Way\n";
-            continue;
-        }
         int sunriseTime = timeToSeconds(sunriseHour, sunriseMinute, sunriseSecond);
         int sunsetTime = timeToSeconds(sunsetHour, sunsetMinute, sunsetSecond);
         /*
