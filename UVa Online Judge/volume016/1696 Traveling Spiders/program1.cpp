@@ -2,7 +2,7 @@
 // UVa ID: 1696
 // Verdict: Accepted
 // Submission Date: 2026-10-07
-// UVa Run Time: 0.910s
+// UVa Run Time: 1.390s
 //
 // 版权所有（C）2026，邱秋。metaphysis # yeah dot net
 
@@ -73,31 +73,15 @@ void buildPoints() {
 
 void buildGraph() {
     graph.assign(total, {});
-    const int sameFace[6][3] = {
-        {-2, 0, 0},
-        {2, 0, 0},
-        {0, -2, 0},
-        {0, 2, 0},
-        {0, 0, -2},
-        {0, 0, 2}
-    };
-    const int acrossEdge[12][3] = {
-        {-1, -1, 0},
-        {-1, 1, 0},
-        {1, -1, 0},
-        {1, 1, 0},
-        {-1, 0, -1},
-        {-1, 0, 1},
-        {1, 0, -1},
-        {1, 0, 1},
-        {0, -1, -1},
-        {0, -1, 1},
-        {0, 1, -1},
-        {0, 1, 1}
+    const int directions[18][3] = {
+        {-2, 0, 0}, {2, 0, 0}, {0, -2, 0}, {0, 2, 0}, {0, 0, -2}, {0, 0, 2},
+        {-1, -1, 0}, {-1, 1, 0}, {1, -1, 0}, {1, 1, 0},
+        {-1, 0, -1}, {-1, 0, 1}, {1, 0, -1}, {1, 0, 1},
+        {0, -1, -1}, {0, -1, 1}, {0, 1, -1}, {0, 1, 1}
     };
     for (int id = 0; id < total; id++) {
         int x = points[id].x, y = points[id].y, z = points[id].z;
-        for (const auto &direction : sameFace) {
+        for (const auto &direction : directions) {
             int nx = x + direction[0], ny = y + direction[1], nz = z + direction[2];
             if (!inRange(nx, ny, nz))
                 continue;
@@ -105,21 +89,11 @@ void buildGraph() {
             if (iter != pointId.end())
                 graph[id].push_back(iter->second);
         }
-        for (const auto &direction : acrossEdge) {
-            int nx = x + direction[0], ny = y + direction[1], nz = z + direction[2];
-            if (!inRange(nx, ny, nz))
-                continue;
-            auto iter = pointId.find(getKey(nx, ny, nz));
-            if (iter != pointId.end())
-                graph[id].push_back(iter->second);
-        }
-        sort(graph[id].begin(), graph[id].end());
-        graph[id].erase(unique(graph[id].begin(), graph[id].end()), graph[id].end());
     }
 }
 
 bool adjacent(int a, int b) {
-    return binary_search(graph[a].begin(), graph[a].end(), b);
+    return find(graph[a].begin(), graph[a].end(), b) != graph[a].end();
 }
 
 vector<int> getFaceCycle(int offset) {
@@ -142,25 +116,13 @@ vector<int> getFaceCycle(int offset) {
     return cycle;
 }
 
-bool hasDirectedEdge(const vector<int> &cycle, int a, int b) {
-    int size = (int)cycle.size();
-    for (int i = 0; i < size; i++)
-        if (cycle[i] == a && cycle[(i + 1) % size] == b)
-            return true;
-    return false;
-}
-
 vector<int> reverseCycle(const vector<int> &cycle) {
     vector<int> result = cycle;
     reverse(result.begin(), result.end());
     return result;
 }
 
-vector<int> spliceCycles(vector<int> first, int a, int b, vector<int> second, int c, int d) {
-    if (!hasDirectedEdge(first, a, b))
-        first = reverseCycle(first);
-    if (!hasDirectedEdge(second, c, d))
-        second = reverseCycle(second);
+vector<int> spliceCycles(const vector<int> &first, int a, int b, const vector<int> &second, int c, int d) {
     int firstSize = (int)first.size(), secondSize = (int)second.size();
     int firstA = -1, firstB = -1, secondC = -1, secondD = -1;
     for (int i = 0; i < firstSize; i++) {
@@ -175,8 +137,6 @@ vector<int> spliceCycles(vector<int> first, int a, int b, vector<int> second, in
         if (second[i] == d)
             secondD = i;
     }
-    if (firstA == -1 || firstB == -1 || secondC == -1 || secondD == -1)
-        return {};
     vector<int> result;
     result.reserve(firstSize + secondSize);
     result.push_back(a);
@@ -212,21 +172,6 @@ vector<int> mergeCycles(const vector<int> &first, const vector<int> &second) {
         }
     }
     return {};
-}
-
-bool validCycle(const vector<int> &cycle) {
-    if ((int)cycle.size() != total)
-        return false;
-    vector<bool> used(total, false);
-    for (int id : cycle) {
-        if (id < 0 || id >= total || used[id])
-            return false;
-        used[id] = true;
-    }
-    for (int i = 0; i < total; i++)
-        if (!adjacent(cycle[i], cycle[(i + 1) % total]))
-            return false;
-    return true;
 }
 
 vector<int> buildHamiltonCycle() {
@@ -272,17 +217,14 @@ bool findPath(int start, int target, const vector<int> &cycle, vector<int> &answ
     vector<int> initial = rotateCycleToStart(cycle, start);
     int maxStep = max(10000, total * 200);
     while (true) {
-        vector<int> path = initial;
-        vector<int> position(total);
+        vector<int> path = initial, position(total);
         for (int i = 0; i < total; i++)
             position[path[i]] = i;
         int endpoint = path.back();
         for (int step = 0; step < maxStep; step++) {
-            if (endpoint == target) {
-                if (checkPath(path, start, target)) {
-                    answer = move(path);
-                    return true;
-                }
+            if (endpoint == target && checkPath(path, start, target)) {
+                answer = move(path);
+                return true;
             }
             vector<int> choices;
             for (int neighbor : graph[endpoint]) {
@@ -302,10 +244,6 @@ bool findPath(int start, int target, const vector<int> &cycle, vector<int> &answ
     }
 }
 
-int getPointId(int x, int y, int z) {
-    return pointId.find(getKey(x, y, z))->second;
-}
-
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -317,12 +255,9 @@ int main() {
         cin >> sx >> sy >> sz >> tx >> ty >> tz;
         buildPoints();
         buildGraph();
-        int start = getPointId(sx, sy, sz), target = getPointId(tx, ty, tz);
-        vector<int> cycle = buildHamiltonCycle();
-        vector<int> answer;
+        int start = pointId[getKey(sx, sy, sz)], target = pointId[getKey(tx, ty, tz)];
+        vector<int> cycle = buildHamiltonCycle(), answer;
         findPath(start, target, cycle, answer);
-        if (!checkPath(answer, start, target))
-            return 0;
         cout << 1 << '\n';
         for (int id : answer)
             cout << points[id].x << ' ' << points[id].y << ' ' << points[id].z << '\n';
