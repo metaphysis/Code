@@ -7,44 +7,57 @@
 // 版权所有（C）2017，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
-
 using namespace std;
 
-int main(int argc, char *argv[])
-{
-    cin.tie(0); cout.tie(0); ios::sync_with_stdio(false);
-
-    long long cubes[2000];
-    
-    for (int i = 0; i < 1010; i++) cubes[i] = i * i * i;
-
-    unordered_map<long long, int> cabNumbers;
-    
-    for (int i = 1; i < 1010; i++)
-        for (int j = i + 1; j < 1010; j++)
-            cabNumbers[cubes[i] + cubes[j]]++;
-    
-    int counter = 0;
-    for (auto cab : cabNumbers)
-        if (cab.second >= 2)
-            cubes[counter++] = cab.first;
-
-    long long nl, rg;
-    while (cin >> nl >> rg)
-    {
-        rg += nl;
-
-        int printed = 0;
-        for (int i = 0; i < counter; i++)
-        {
-            if (cubes[i] >= nl && cubes[i] <= rg)
-            {
-                cout << cubes[i] << '\n';
-                printed++;
-            }
+vector<long long> buildCabNumbers(long long maxValue) {
+    vector<long long> sums, cabNumbers;
+    long long maxBase = 1;
+    while ((maxBase + 1) * (maxBase + 1) * (maxBase + 1) <= maxValue)
+        ++maxBase;
+    for (long long a = 1; a <= maxBase; ++a) {
+        long long cubeA = a * a * a;
+        for (long long b = a; b <= maxBase; ++b) {
+            long long cubeB = b * b * b, sum = cubeA + cubeB;
+            if (sum > maxValue)
+                break;
+            sums.push_back(sum);
         }
-        if (printed == 0) cout << "None\n";
     }
-    
+    sort(sums.begin(), sums.end());
+    for (int i = 0; i < sums.size();) {
+        int j = i + 1;
+        while (j < sums.size() && sums[j] == sums[i])
+            ++j;
+        if (j - i >= 2)
+            cabNumbers.push_back(sums[i]);
+        i = j;
+    }
+    return cabNumbers;
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    vector<pair<long long, long long>> queries;
+    long long n1, rg, maxValue = 0;
+    while (cin >> n1 >> rg) {
+        queries.push_back({n1, rg});
+        maxValue = max(maxValue, n1 + rg);
+    }
+    vector<long long> cabNumbers = buildCabNumbers(maxValue);
+    for (const pair<long long, long long>& query : queries) {
+        long long left = query.first, right = query.first + query.second;
+        bool found = false;
+        for (long long number : cabNumbers) {
+            if (number < left)
+                continue;
+            if (number > right)
+                break;
+            cout << number << '\n';
+            found = true;
+        }
+        if (!found)
+            cout << "None\n";
+    }
     return 0;
 }
