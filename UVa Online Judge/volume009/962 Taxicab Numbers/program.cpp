@@ -1,4 +1,4 @@
-// TaxicabNumbers Numbers
+// Taxicab Numbers
 // UVa ID: 962
 // Verdict: Accepted
 // Submission Date: 2017-03-08
