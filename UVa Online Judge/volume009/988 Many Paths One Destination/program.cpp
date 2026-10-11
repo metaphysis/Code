@@ -1,4 +1,4 @@
-// Many paths, one destination
+// Many Paths One Destination
 // UVa ID: 988
 // Verdict: Accepted
 // Submission Date: 2017-03-08
