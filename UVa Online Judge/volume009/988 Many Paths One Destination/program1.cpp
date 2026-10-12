@@ -13,7 +13,7 @@ using namespace std;
 vector<vector<int>> edges;
 vector<int> visited, ways;
 
-int dfs(int i)
+void dfs(int i)
 {
     visited[i] = 1;
 
