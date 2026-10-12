@@ -1,4 +1,4 @@
-// Product of digits
+// Product of Digits
 // UVa ID: 993
 // Verdict: Accepted
 // Submission Date: 2016-01-09
