@@ -19,21 +19,34 @@
 # 样例输入
 
 ```text
-R(#ID,Name)
-S(ID,Value)
+S(#C,A,D)
+R(#A,B)
+T(E,A)
 data
-R(a,Alice)
-S(a,Book)
+T(e1,a2)
+S(c3,a1,d1)
+S(c1,a2,d2)
+S(c2,a1,d3)
+R(a1,b1)
+R(a2,b2)
 ```
 
 # 样例输出
 
 ```text
 <DB>
-<R #ID="a" Name="Alice">
-</R>
-<S ID="a" Value="Book">
+<R #A="a1" B="b1">
+<S #C="c2" D="d3">
 </S>
+<S #C="c3" D="d1">
+</S>
+</R>
+<R #A="a2" B="b2">
+<S #C="c1" D="d2">
+</S>
+<T E="e1">
+</T>
+</R>
 </DB>
 ```
 
