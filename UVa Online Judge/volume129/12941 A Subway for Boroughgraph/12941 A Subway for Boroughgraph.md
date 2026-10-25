@@ -114,7 +114,7 @@ N
 
 # 代码实现
 
-代码使用 $\texttt{uint64\_t}$ 保存邻接集合。函数 $\texttt{reduceGraph}$ 完成顶点删除和平滑，函数 $\texttt{hasK5}$ 检查 $K_5$，函数 $\texttt{hasK33}$ 检查 $K_{3,3}$。所有集合交、边删除和顶点状态更新都通过位运算完成。
+代码使用 `uint64_t` 保存邻接集合。函数 $\texttt{reduceGraph}$ 完成顶点删除和平滑，函数 $\texttt{hasK5}$ 检查 $K_5$，函数 $\texttt{hasK33}$ 检查 $K_{3,3}$。所有集合交、边删除和顶点状态更新都通过位运算完成。
 
 ```cpp
 #include <bits/stdc++.h>
