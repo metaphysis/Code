@@ -1,3 +1,11 @@
+// Nasty Virus
+// UVa ID: 470
+// Verdict: Accepted
+// Submission Date: 2026-10-29
+// UVa Run Time: 0.020s
+//
+// 版权所有（C）2026，邱秋。metaphysis # yeah dot net
+
 #include <bits/stdc++.h>
 using namespace std;
 
