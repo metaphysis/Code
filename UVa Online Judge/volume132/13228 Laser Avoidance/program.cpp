@@ -1,3 +1,11 @@
+// Laser Avoidance
+// UVa ID: 13228
+// Verdict: Accepted
+// Submission Date: 2026-11-02
+// UVa Run Time: 1.770s
+//
+// 版权所有（C）2026，邱秋。metaphysis # yeah dot net
+
 #include <iostream>
 #include <vector>
 #include <deque>
