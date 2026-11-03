@@ -1,4 +1,4 @@
-// Triangular Test II
+// Triangular Test (II)
 // UVa ID: 13098
 // Verdict: Accepted
 // Submission Date: 2026-07-15
