@@ -1,4 +1,4 @@
-// Colorful Board II
+// Colorful Board (II)
 // UVa ID: 11798
 // Verdict: Accepted
 // Submission Date: 2026-07-12
