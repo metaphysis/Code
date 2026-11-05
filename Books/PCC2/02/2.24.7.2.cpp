@@ -2,18 +2,15 @@
 
 using namespace std;
 
-struct Tag
-{
+struct Tag {
     int age;
     bool gender;
     char name[20];
 };
 
-int main(int argc, char *argv[])
-{
+int main() {
     int data[10];
-    for (int i = 0; i < 10; i++)
-    {
+    for (int i = 0; i < 10; i++) {
         data[i] = i + 1;
         cout << data[i] << " ";
     }
@@ -23,11 +20,11 @@ int main(int argc, char *argv[])
     for (int i = 0; i < 10; i++) cout << data[i] << " ";
     cout << endl;
 
-    Tag tag = (Tag){1, true, "the brown fox"};
-    cout << tag.age << " " << tag.gender << " " << tag.name << endl;
+    Tag t = (Tag){1, true, "the brown fox"};
+    cout << t.age << " " << t.gender << " " << t.name << endl;
 
-    memset(&tag, 0, sizeof(tag));
-    cout << tag.age << " " << tag.gender << " " << tag.name << endl;
+    memset(&t, 0, sizeof(t));
+    cout << t.age << " " << t.gender << " " << t.name << endl;
 
     return 0;
 }
