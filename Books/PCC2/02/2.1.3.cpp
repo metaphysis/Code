@@ -49,7 +49,7 @@ void transposeAntiDiag(vector<vector<int>>& mat) {
     vector<vector<int>> result(m, vector<int>(n));
     for (int i = 0; i < n; i++)
         for (int j = 0; j < m; j++)
-            result[n - 1 - j][n - 1 - i] = mat[i][j];
+            result[m - 1 - j][n - 1 - i] = mat[i][j];
     mat = move(result);
 }
 

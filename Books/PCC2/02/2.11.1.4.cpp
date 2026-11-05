@@ -1,9 +1,9 @@
 int findFirst(int p, int left, int right, int qleft, int qright, int x)
 {
     if (right < qleft || left > qright) return -1;
-    if (left <= qleft && qright <= right)
+    if (qleft <= left && right <= qright)
     {
-        if (st[p].max < x) return -1;
+        if (st[p].max <= x) return -1;
         while (left != right)
         {
             int middle = (left + right) >> 1;
