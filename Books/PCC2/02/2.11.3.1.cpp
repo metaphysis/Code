@@ -28,7 +28,7 @@ int query(node* p, int left, int right, int ql, int qr) {
     if (left == ql && right == qr) return p->sum;
     int mid = (left + right) >> 1;
     return query(p->lc, left, mid, ql, min(qr, mid)) +
-        query(p->rc, mid + 1, right, max(left, mid + 1), right);
+        query(p->rc, mid + 1, right, max(ql, mid + 1), qr);
 }
 
 node* update(node* p, int left, int right, int idx, int v) {

@@ -49,14 +49,14 @@ int main(int argc, char *argv[])
         B2A[A2B[A[i]]] = A[i];
     }
         
-    int left = 0, right = B.size() + 1;
+    int left = 0, right = B.size() - 1;
     vector<node*> roots;
     roots.push_back(build(left, right));
     for (int i = 0; i < n; i++)
         roots.push_back(update(roots.back(), left, right, A2B[A[i]]));
 
     int l = 4, r = 32, k = 8;
-    int idx = findKth(roots[4], roots[32], left, right, 8);
+    int idx = findKth(roots[3], roots[32], left, right, 8);
     cout << B2A[idx] << '\n';
 
     return 0;
