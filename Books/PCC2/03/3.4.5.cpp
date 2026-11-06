@@ -1,7 +1,6 @@
 int z[1 << 20];
 
-int Z(string &s)
-{
+void Z(string &s) {
     z[0] = s.length();
     for (int i = 1, j = 1, k; i < s.length(); i = k) {
         if (j < i) j = i;
