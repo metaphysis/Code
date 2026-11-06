@@ -24,7 +24,7 @@ bool kmp1(string &s, string &p)
     while (i < s.length()) {
         if (j == 0 || s[i] == p[j]) i++, j++;
         else j = fail[j];
-        if (j > p.length()) return true;
+        if (j >= p.length()) return true;
     }
     return false;
 }
