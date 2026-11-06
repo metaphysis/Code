@@ -5,7 +5,7 @@ using namespace std;
 void match()
 {
     string float1 = " -5.236e-12  ", float2 = "6.e+12";
-	string pattern = R"(^\s*[\+|-]?[1-9]\d*\.\d+e[\+|-]?[1-9]\d*\s*$)";
+	string pattern = R"(^\s*[+-]?[1-9]\d*\.\d+e[+-]?[1-9]\d*\s*$)";
 	regex e(pattern, regex_constants::icase);
 	
 	cout << (regex_match(float1, e) ? "Matched." : "Unmatched.") << endl;
