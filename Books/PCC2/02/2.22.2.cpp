@@ -122,8 +122,17 @@ int getKth(int k) {
     }
 }
 
+const int INF = 0x3f3f3f3f;
+const int NEG_INF = -INF;
+
+// 查询键值w的前驱：小于w的最大键值
 int getPrevious(int w) {
     insert(w);
+    // w 为最小值，左子树为空，无前驱
+    if (tr[root].s[0] == 0) {
+        remove(w);
+        return NEG_INF;
+    }
     int u = tr[root].s[0];
     while (tr[u].s[1]) u = tr[u].s[1];
     int r = tr[u].w;
@@ -131,11 +140,17 @@ int getPrevious(int w) {
     return r;
 }
 
+// 查询键值w的后继：大于w的最小键值
 int getNext(int w) {
     insert(w);
+    // w 为最大值，右子树为空，无后继
+    if (tr[root].s[1] == 0) {
+        remove(w);
+        return INF;
+    }
     int u = tr[root].s[1];
     while (tr[u].s[0]) u = tr[u].s[0];
-    int r= tr[u].w;
+    int r = tr[u].w;
     remove(w);
     return r;
 }

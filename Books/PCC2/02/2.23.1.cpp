@@ -4,7 +4,7 @@ using namespace std;
 
 const int MAXE = 1000010, MAXN = 10010;
 
-struct edge { int v, w, nxt; } g[MAXN];
+struct edge { int v, w, nxt; } g[2 * MAXN];
 
 int head[MAXN], idx;
 

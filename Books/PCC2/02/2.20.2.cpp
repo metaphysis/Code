@@ -65,10 +65,9 @@ void remove(Tree &t, int k) {
     Tree x, y, z;
     split(t, x, y, k);
     split(x, x, z, k - 1);
-    if (z->cnt > 1) { z->cnt--; z->size = z->cnt; }
-    else {
-        delete z;
-        z = nullptr;
+    if (z != nullptr) {
+        if (z->cnt > 1) { z->cnt--; z->size = z->cnt; }
+        else { delete z; z = nullptr; }
     }
     merge(x, x, z);
     merge(t, x, y);

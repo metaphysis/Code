@@ -21,10 +21,10 @@ int merge(int x, int y) {
 
 int top(int x) { return lt[x].key; }
 
-void pop(int x) { return merge(lt[x].lc, lt[x].rc); }
+int pop(int x) { return merge(lt[x].lc, lt[x].rc); }
 
 int root = 0;
-void push(int x, int y) {
+int push(int x, int y) {
     ++root;
     lt[root].key = y;
     lt[root].lc = lt[root].rc = lt[root].d = 1;
