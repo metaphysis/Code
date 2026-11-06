@@ -35,7 +35,7 @@ void kmpAllMatch(string &s, string &p)
     while (i < s.length()) {
         if (j == 0 || s[i] == p[j]) i++, j++;
         else j = fail[j];
-        if (j > p.length()) {
+        if (j >= p.length()) {
             cout << i - j + 1 << '\n';
             j = fail[j];
         }
@@ -114,7 +114,7 @@ int main(int argc, char *argv[])
 {
     string t = "abce", p = "abcd";
     getFail1(p);
-    for (int i = 1; i < p.length(); i++) cout << ' ' << fail[i];
+    for (int i = 1; i <= p.length(); i++) cout << ' ' << fail[i];
     cout << '\n';
     cout << (kmp1(t, p) ? "Find a match\n" : "None match found\n");
 
