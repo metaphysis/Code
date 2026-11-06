@@ -125,7 +125,7 @@ $$
 ## 代码实现
 
 ```cpp
-// Battle II
+// Battle (II)
 // UVa ID: 11098
 // Verdict: Accepted
 // Submission Date: 2026-07-15
