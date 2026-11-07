@@ -70,7 +70,7 @@ bool kmp2(string s, string p) {
     while (i < n) {
         if (j == 0 || s[i] == p[j]) i++, j++;
         else j = fail[j];
-        if (j == m)) return true;
+        if (j == m) return true;
     }
     return false;
 }
