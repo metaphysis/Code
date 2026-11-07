@@ -8,8 +8,8 @@ int fail[MAXN] = {0};
 void getFail1(string p) {
     p = '#' + p;
     fail[1] = 0;
-    int i = 1, j = 0;
-    while (i < p.length()) {
+    int i = 1, j = 0, m = p.length();
+    while (i < m) {
         if (j == 0 || p[i] == p[j]) {
             i++, j++;
             fail[i] = j;
@@ -20,11 +20,11 @@ void getFail1(string p) {
 // 寻找第一次匹配
 bool kmp1(string s, string p) {
     s = '#' + s, p = '#' + p;
-    int i = 1, j = 1;
-    while (i < s.length()) {
+    int i = 1, j = 1, n = s.length(), m = p.length();
+    while (i < n) {
         if (j == 0 || s[i] == p[j]) i++, j++;
         else j = fail[j];
-        if (j == p.length()) {
+        if (j == m) {
             cout << "找到匹配，主串序号为：" << (i - j + 1) << '\n';
             return true;
         }
@@ -36,12 +36,12 @@ bool kmp1(string s, string p) {
 // 寻找所有匹配
 void kmpAllMatch(string s, string p) {
     s = '#' + s, p = '#' + p;
-    int i = 1, j = 1;
+    int i = 1, j = 1, n = s.length(), m = p.length();
     bool found = false;
-    while (i < s.length()) {
+    while (i < n) {
         if (j == 0 || s[i] == p[j]) i++, j++;
         else j = fail[j];
-        if (j == p.length()) {
+        if (j == m) {
             cout << "找到匹配，主串序号为：" << (i - j + 1) << '\n';
             j = fail[j];
             found = true;
@@ -54,8 +54,8 @@ void kmpAllMatch(string s, string p) {
 void getFail2(string p) {
     p = '#' + p;
     fail[1] = 0;
-    int i = 1, j = 0;
-    while (i < p.length()) {
+    int i = 1, j = 0, m = p.length();
+    while (i < m) {
         if (j == 0 || p[i] == p[j]) {
             i++, j++;
             int k = j;
@@ -66,19 +66,19 @@ void getFail2(string p) {
 }
 
 bool kmp2(string s, string p) {
-    int i = 0, j = 1;
-    while (i < s.length()) {
+    int i = 0, j = 1, n = s.length(), m = p.length();
+    while (i < n) {
         if (j == 0 || s[i] == p[j]) i++, j++;
         else j = fail[j];
-        if (j > p.length()) return true;
+        if (j == m)) return true;
     }
     return false;
 }
 
 void getFail3(string &p) {
     fail[0] = -1;
-    int i = 0, j = -1;
-    while (i < p.length() - 1) {
+    int i = 0, j = -1, m = p.length();
+    while (i < m - 1) {
         if (j == -1 || p[i] == p[j]) {
             i++, j++;
             int k = j;
@@ -89,11 +89,11 @@ void getFail3(string &p) {
 }
 
 bool kmp3(string &s, string &p) {
-    int i = 0, j = 0;
-    while (i < s.length()) {
+    int i = 0, j = 0, n = s.length(), m = p.length();
+    while (i < n) {
         if (j == -1 || s[i] == p[j]) i++, j++;
         else j = fail[j];
-        if (j == p.length()) return true;
+        if (j == m) return true;
     }
     return false;
 }
