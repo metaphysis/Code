@@ -4,65 +4,71 @@ using namespace std;
 class FractionalCascading {
 private:
     struct Entry {
-        int value;  // 当前增广元素的值；末尾虚拟位置的该字段不参与比较。
-        int answer; // 原列表中第一个大于或等于 value 的元素序号，序号从 1 开始。
-        int down;   // 下一层中第一个大于或等于 value 的元素下标，下标从 0 开始。
+        // 当前增广元素的值；末尾虚拟位置的该字段不参与比较
+        int value;
+        // 原列表中第一个大于或等于 value 的元素序号，序号从 1 开始
+        int answer;
+        // 下一层中第一个大于或等于 value 的元素下标，下标从 0 开始
+        int down;
     };
     vector<vector<Entry> > layers;
 public:
-    explicit FractionalCascading(const vector<vector<int> >& lists) {
-        int k = static_cast<int>(lists.size());
+    explicit FractionalCascading(const vector<vector<int>>& lists) {
+        int k = lists.size();
         layers.resize(k);
         for (int i = k - 1; i >= 0; --i) {
             const vector<int>& original = lists[i];
-            int n = static_cast<int>(original.size());
-            int nextSize = i + 1 < k ? static_cast<int>(layers[i + 1].size()) - 1 : 0;
+            int n = original.size();
+            int nextSize = i + 1 < k ? layers[i + 1].size() - 1 : 0;
             vector<Entry>& current = layers[i];
             current.reserve(n + nextSize / 2 + 1);
             int originalPosition = 0;
             int sampledPosition = 1;
-            // 采用从 0 开始的下标，因此下标 1、3、5……就是从 1 开始编号时的偶数位置。
-            // 将当前原列表与下一层的采样元素归并，保留重复值。
+            // 采用从 0 开始的下标，因此下标 1、3、5……就是从 1 开始编号时的偶数位置
+            // 将当前原列表与下一层的采样元素归并，保留重复值
             while (originalPosition < n || sampledPosition < nextSize) {
                 bool takeOriginal = sampledPosition >= nextSize;
-                if (!takeOriginal && originalPosition < n) takeOriginal = original[originalPosition] <= layers[i + 1][sampledPosition].value;
+                if (!takeOriginal && originalPosition < n)
+                    takeOriginal = original[originalPosition] <= layers[i + 1][sampledPosition].value;
                 if (takeOriginal) {
-                    current.push_back(Entry{original[originalPosition], 0, 0});
+                    current.push_back({original[originalPosition], 0, 0});
                     ++originalPosition;
                 } else {
-                    current.push_back(Entry{layers[i + 1][sampledPosition].value, 0, 0});
+                    current.push_back({layers[i + 1][sampledPosition].value, 0, 0});
                     sampledPosition += 2;
                 }
             }
-            int currentSize = static_cast<int>(current.size());
+            int currentSize = current.size();
             int originalLowerBound = 0;
             int nextLowerBound = 0;
             // 当前层按升序排列，因此两个 lower_bound 位置都只会向右移动。
-            // 整个循环的总时间为 O(|A_i| + |L_i| + |A_{i+1}|)，无需逐元素二分。
+            // 整个循环的总时间为 O(|A_i| + |L_i| + |A_{i+1}|)，无需逐元素二分
             for (int p = 0; p < currentSize; ++p) {
                 int value = current[p].value;
-                while (originalLowerBound < n && original[originalLowerBound] < value) ++originalLowerBound;
+                while (originalLowerBound < n &&
+                    original[originalLowerBound] < value) ++originalLowerBound;
                 current[p].answer = originalLowerBound + 1;
                 if (i + 1 < k) {
-                    while (nextLowerBound < nextSize && layers[i + 1][nextLowerBound].value < value) ++nextLowerBound;
+                    while (nextLowerBound < nextSize &&
+                        layers[i + 1][nextLowerBound].value < value) ++nextLowerBound;
                     current[p].down = nextLowerBound;
                 }
             }
-            // 额外保存一个末尾虚拟位置，表示当前层不存在大于或等于查询值的元素。
-            // 它的答案为 n + 1，桥指针指向下一层的末尾虚拟位置。
-            // 这里的 value 仅用于占位，不会参与二分查找或修正比较。
-            current.push_back(Entry{0, n + 1, nextSize});
+            // 额外保存一个末尾虚拟位置，表示当前层不存在大于或等于查询值的元素
+            // 它的答案为 n + 1，桥指针指向下一层的末尾虚拟位置
+            // 这里的 value 仅用于占位，不会参与二分查找或修正比较
+            current.push_back({0, n + 1, nextSize});
         }
     }
 
     vector<int> query(int x) const {
-        int k = static_cast<int>(layers.size());
+        int k = layers.size();
         vector<int> result(k);
         if (k == 0) return result;
         int left = 0;
-        int right = static_cast<int>(layers[0].size()) - 1;
-        // 搜索区间只包含真实元素，right 的初值同时也是末尾虚拟位置的下标。
-        // 如果所有真实元素都小于 x，二分结果自然就是末尾虚拟位置。
+        int right = layers[0].size() - 1;
+        // 搜索区间只包含真实元素，right 的初值同时也是末尾虚拟位置的下标
+        // 如果所有真实元素都小于 x，二分结果自然就是末尾虚拟位置
         while (left < right) {
             int middle = left + (right - left) / 2;
             if (layers[0][middle].value < x) left = middle + 1;
@@ -87,7 +93,7 @@ public:
 // 朴素算法作为验证器：分别在每个原列表中执行一次标准库 lower_bound。
 vector<int> bruteForce(const vector<vector<int> >& lists, int x) {
     vector<int> result(lists.size());
-    for (size_t i = 0; i < lists.size(); ++i) result[i] = static_cast<int>(lower_bound(lists[i].begin(), lists[i].end(), x) - lists[i].begin()) + 1;
+    for (size_t i = 0; i < lists.size(); ++i) result[i] = lower_bound(lists[i].begin(), lists[i].end(), x) - lists[i].begin() + 1;
     return result;
 }
 
