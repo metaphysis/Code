@@ -1,11 +1,17 @@
 int z[1 << 20];
 
-void Z(string &s) {
-    z[0] = s.length();
-    for (int i = 1, j = 1, k; i < s.length(); i = k) {
-        if (j < i) j = i;
-        while (j < s.length() && s[j] == s[j - i]) j++;
-        z[i] = j – i, k = i + 1;
-        while (k + z[k - i] < j) z[k] = z[k - i], k++;
+void Z(const string &s) {
+    int n = s.length();
+    z[0] = n;
+    // [l, r) 是当前已知的、与前缀相同的最右匹配区间
+    int l = 0, r = 0;
+    for (int i = 1; i < n; i++) {
+        if (i < r) z[i] = min(z[i - l], r - i);
+        else z[i] = 0;
+        while (i + z[i] < n && s[z[i]] == s[i + z[i]]) z[i]++;
+        if (i + z[i] > r) {
+            l = i;
+            r = i + z[i];
+        }
     }
 }
