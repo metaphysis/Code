@@ -18,7 +18,7 @@ int main(int ac, char *av[]) {
 		else {
 			int n = sqrt(distance);
 			if (n * n == distance) cout << (2 * n - 1) << endl;
-			else if ((distance - n * n) <= (n + 1)) cout << (2 * n) << endl;
+			else if ((distance - n * n) <= n) cout << (2 * n) << endl;
 			else cout << (2 * n + 1) << endl;
 		}
 	}
