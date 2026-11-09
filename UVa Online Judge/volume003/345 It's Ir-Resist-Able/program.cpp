@@ -83,7 +83,8 @@ int main(int argc, char *argv[])
         // 求出两个连接点之间直接相连的并联电阻的等效阻值。
         for (int i = 0; i < C; i++)
             for (int j = 0; j < C; j++)
-                resistor[i][j] = 1.0 / resistor[i][j];
+                if (resistor[i][j] > 0)
+                    resistor[i][j] = 1.0 / resistor[i][j];
 
         vector<vector<double>> matrix(C, vector<double>(C, 0.0));
         vector<double> voltage(C, 0.0);
