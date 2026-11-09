@@ -246,6 +246,7 @@ BigInteger operator*(const BigInteger& x, const BigInteger& y) {
 
 // 高精度整数除法，为整除运算。
 BigInteger operator/(const BigInteger& x, const BigInteger& y) {
+    if (x < y) return BigInteger(0);
     // z表示整除得到的商，r表示每次试除时的被除数。
     BigInteger z, r;
     // 设置商和被除数的符号位。
