@@ -61,7 +61,7 @@ int main(int argc, char *argv[])
                 head = sub, frequency = 1;
             }
         }
-
+        if (frequency > most) { most = frequency; password = head; }
         decode(password);
     }
 
