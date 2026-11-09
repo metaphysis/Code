@@ -1,19 +1,26 @@
 #include <bits/stdc++.h>
-
 using namespace std;
 
-int main(int argc, char *argv[])
-{
-    string s = "ABCDE", t = "CEADB";
-    
-    int indexer = 1;
-    do {
-        if (s == t) {
-            cout << indexer << '\n';
-            break;
-        }
-        indexer++;
-    } while (next_permutation(s.begin(), s.end()));
-    
+long long factorial[20] = {1};
+
+void inverseCantorExpansion(string s, long long n) {
+    n %= factorial[s.length()];
+    for (int i = s.length() - 1; i >= 0; i--) {
+        long long idx = n / factorial[i];
+        cout << s[idx];
+        s.erase(s.begin() + idx);
+        n %= factorial[i];
+    }
+    cout << '\n';
+}
+
+int main() {
+    for (int i = 1; i < 20; i++) factorial[i] = factorial[i - 1] * i;
+    string s;
+    long long n;
+    while (cin >> s >> n) {
+        sort(s.begin(), s.end());
+        inverseCantorExpansion(s, n);
+    }
     return 0;
 }
