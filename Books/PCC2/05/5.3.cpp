@@ -299,7 +299,7 @@ BigInteger operator^(const BigInteger& x, const unsigned int& y) {
     if (y == 0) return BigInteger(1);
     if (y == 1) return x;
     if (y == 2) return x * x;
-    if (y & 1 > 0) return ((x ^ (y / 2)) ^ 2) * x;
+    if (y & 1) return ((x ^ (y / 2)) ^ 2) * x;
     else return ((x ^ (y / 2)) ^ 2);
 }
 
