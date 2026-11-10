@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// n表示棋盘的大小，cnt记录符合要求的布局数量
+// n表示棋盘的大小
 int n, cnt = 0;
 
 // 递归实现回溯搜索
@@ -18,14 +18,14 @@ void dfs(int D, int L, int M, int R) {
 }
 
 int main() {
-    clock_t start, finish;
-    start = clock();
     while (cin >> n) {
+        clock_t start, finish;
+        start = clock();
         cnt = 0;
         dfs(0, 0, 0, 0);
-        cout << "N = " << n << ": " << cnt << '\n';
+        finish = clock();
+        cout << "N = " << n << " COUNT = " << cnt
+             << " TIME USED = " << (double)(finish - start) / CLOCKS_PER_SEC << "s\n";
     }
-    finish = clock();
-    cout << (double)(finish - start) / CLOCKS_PER_SEC << "s\n";
     return 0;
 }
