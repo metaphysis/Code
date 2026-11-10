@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
         if (n == 0) break;
         if (n < 0 || n > pow(10, 12)) continue;
         long long r = 1, nn = n;
-        for (int i = 0; i < cnt && P[i] * P[i] <= n; i++) {
+        for (int i = 0; i < cnt && 1LL * P[i] * P[i] <= n; i++) {
             if (n % P[i]) continue;
             long long p = P[i];
             while (n % P[i] == 0) {
