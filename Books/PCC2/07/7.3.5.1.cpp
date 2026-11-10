@@ -43,23 +43,24 @@ ll bsgs(ll a, ll b, ll p) {
     if (b == 1) return 0;
 
     ll m = (ll)sqrt((long double)p) + 1;
-    unordered_map<ll, ll> mp;
-    mp.reserve((size_t)(2 * m));
+    unordered_map<ll, ll> hash;
+    hash.reserve((size_t)(2 * m));
 
-    // mp[a^j] = j
+    // hash[a^j] = j
     ll cur = 1 % p;
     for (ll i = 0; i < m; i++) {
-        if (!mp.count(cur)) mp[cur] = i;
+        if (!hash.count(cur)) hash[cur] = i;
         cur = mulMod(cur, a, p);
     }
 
     ll am = powMod(a, m, p);
-    ll invAm = invMod(am, p);   // gcd(a,p)=1 保证存在
+    // gcd(a,p)=1 保证存在
+    ll invAm = invMod(am, p);
 
     // 查 b * a^{-im}
     cur = b;
     for (ll i = 0; i <= m; i++) {
-        if (mp.count(cur)) return i * m + mp[cur];
+        if (hash.count(cur)) return i * m + hash[cur];
         cur = mulMod(cur, invAm, p);
     }
     return -1;
