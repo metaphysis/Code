@@ -76,8 +76,8 @@ int main(int argc, char *argv[]) {
             cout << "    1\n";
             continue;
         }
-        if (N <= 5 || (N % 2 == 1)) {
-            cout << "No Circuit Tour.\n";
+        if (N < 5) {
+            cout << "No Open Tour.\n";
             continue;
         }
         while (!findOpenKnightTour()) {}
