@@ -51,7 +51,7 @@ struct ISAP
             }
         }
 
-        return d[source] <= vertices;
+        return d[source] > 0;
     }
 
     int dfs(int u, int volume)
