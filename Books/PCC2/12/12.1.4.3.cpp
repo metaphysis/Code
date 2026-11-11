@@ -25,7 +25,7 @@ inline int getDegree(int r, int c) {
 }
 
 bool nextMove(int *r, int *c) {
-    int minDegIdx = -1, degree, minDeg = 8, nr, nc;
+    int minDegIdx = -1, degree, minDeg = 9, nr, nc;
     int si = rand() % 8;
     for (int i = rand() % 8, j = 0, k; j < 8; j++) {
         k = (i + j) % 8;
