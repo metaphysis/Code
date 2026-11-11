@@ -61,6 +61,14 @@ int getLCA(int u, int v) {
     return ancestor[u][0];
 }
 
+// 倍增预处理
+void prepare(int n) {
+    for (int d = 1; d < MAXD; d++)
+        for (int u = 0; u <= n; u++)
+            if (ancestor[u][d - 1] != -1)
+                ancestor[u][d] = ancestor[ancestor[u][d - 1]][d - 1];
+}
+
 int main() {
     int n, q;
     while (cin >> n && n) {
@@ -77,14 +85,7 @@ int main() {
         memset(depth, 0, sizeof(depth));
         // 以 1 为根建树
         dfs(1);
-        // 倍增预处理
-        for (int d = 1; d < MAXD; d++) {
-            for (int u = 0; u <= n; u++) {
-                if (ancestor[u][d - 1] != -1) {
-                    ancestor[u][d] = ancestor[ancestor[u][d - 1]][d - 1];
-                }
-            }
-        }
+        prepare(n);
         cin >> q;
         // 处理查询
         for (int i = 0, u, v; i < q; i++) {
