@@ -2,7 +2,7 @@ const double PI = 2 * acos(0);
 
 pair<int, int> collide(int a, int b, int x, int y, int A, int v, int s, int t)
 {
-    double d = (v + s * t) * t / 2.0;
+    double d = (2 * v + s * t) * t / 2.0;
     double dx = fabs(d * cos(A * PI / 180.0)), dy = fabs(d * sin(A * PI / 180.0));
 
     int ch = 0, cv = 0;
