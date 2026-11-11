@@ -47,11 +47,9 @@ int getLCA(int u, int v) {
     if (depth[u] < depth[v]) swap(u, v);
     // 将 u 跳到与 v 同深度
     int diff = depth[u] - depth[v];
-    for (int d = 0; d < MAXD; d++) {
-        if (diff & (1 << d)) {
+    for (int d = 0; d < MAXD; d++)
+        if (diff & (1 << d))
             u = ancestor[u][d];
-        }
-    }
     if (u == v) return u;
     // 两者同时向上跳，直到 LCA 的下一层
     for (int d = MAXD - 1; d >= 0; d--) {
