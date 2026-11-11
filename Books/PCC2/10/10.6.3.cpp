@@ -1,11 +1,12 @@
 const int MAXV = 500, INF = 0x7f7f7f7f;
 
-int g[MAXV][MAXV], visited[MAXV], cx[MAXV], cy[MAXV], dx[MAXV], dy[MAXV];
 int tx, ty;
+int g[MAXV][MAXV], visited[MAXV], cx[MAXV], cy[MAXV], dx[MAXV], dy[MAXV];
+int dist;
 
 int bfs()
 {
-    int dist = INF;
+    dist = INF;
     memset(dx, -1, sizeof(dx)); memset(dy, -1, sizeof(dy));
 
     queue<int> q;
@@ -38,7 +39,6 @@ int bfs()
 
 int dfs(int u)
 {
-    int dist = INF;
     for (int v = 0; v < ty; v++)
         if (g[u][v] && !visited[v] && dy[v] == (dx[u] + 1))
         {
