@@ -23,7 +23,7 @@ void setValue()
         components[scc[i]].push_back(i);
 
     // 初始时假定所有变量均未被赋值。
-    value.assign(n, -1);
+    value.assign(2 * n, -1);
     for (int i = 1; i <= cscc; i++) {
         // 赋值原则：尽量为同一强连通分支内的变量赋予真值。
         int boolean = 1;
