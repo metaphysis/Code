@@ -18,15 +18,13 @@ ULL SUCCEED;
 int NR, NC, cnt[8][8];
 vector<point> path;
 
-bool cmp(point &a, point &b) { return cnt[a.x][b.y] < cnt[b.x][b.y]; }
+bool cmp(point &a, point &b) { return cnt[a.x][a.y] < cnt[b.x][b.y]; }
 
-bool dfs(int r, int c, ULL mask)
-{
+bool dfs(int r, int c, ULL mask) {
     if (mask == SUCCEED) {
         path.push_back(point(r, c));
         return true;
     }
-
     int tot = 0;
     point ps[9];
     for (int i = 0; i < 8; i++) {
@@ -45,11 +43,9 @@ bool dfs(int r, int c, ULL mask)
     return false;
 }
 
-void knightTour(int W, int H, int SR, int SC)
-{
+void knightTour(int W, int H, int SR, int SC) {
     NC = W, NR = H;
     SUCCEED = (1ULL << (NR * NC - 1)) + ((1ULL << (NR * NC - 1)) - 1ULL);
-
     for (int r = 0; r < NR; r++)
         for (int c = 0; c < NC; c++) {
             cnt[r][c] = 0;
@@ -59,14 +55,12 @@ void knightTour(int W, int H, int SR, int SC)
                 cnt[r][c]++;
             }
         }
-
     path.clear();
-    dfs(SR - 1, SC - 1, 1ULL << (SR * SC - 1));
+    dfs(SR - 1, SC - 1, 1ULL << ((SR - 1) * NC + (SC - 1)));
     if (path.size()) reverse(path.begin(), path.end());
 }
 
-int main(int argc, char *argv[])
-{
+int main() {
     int cases = 0, W, H, SR, SC;
     while (cin >> W >> H >> SR >> SC) {
         if (cases++) cout << '\n';
