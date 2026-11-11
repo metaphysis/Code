@@ -87,8 +87,8 @@ struct ISAP
                         flow += volume;
                         for (u = father[v]; u != source; u = father[u])
                         {
-                            arcs[current[u]].residual -= volume;
-                            arcs[current[u] ^ 1].residual += volume;
+                            arcs[current[father[u]]].residual -= volume;
+                            arcs[current[father[u]] ^ 1].residual += volume;
                         }
                         volume = INF;
                     }
