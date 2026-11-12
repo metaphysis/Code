@@ -1,0 +1,197 @@
+[UVa 184 Laser Lines](https://blog.csdn.net/metaphysis/article/details/160890810)
+
+## 题目分析
+
+本题要求判断给定平面上的一系列整数点（坐标范围 $0 \sim 9999$），是否存在至少 $3$ 个点共线的直线。如果存在，按照特定格式输出这些直线上的所有点；如果不存在，则输出 `No lines were found`。
+
+输入包含多组数据，每组数据以 $(0, 0)$ 结束，整个文件也以 $(0, 0)$ 结束。每组数据包含 $3$ 到 $300$ 个点，但题目保证最多只有一组数据包含超过 $100$ 个点。
+
+输出要求：
+
+- 每条直线上的点按 $x$ 升序排列，$x$ 相同时按 $y$ 升序排列。
+- 各条直线按照“第一个点”排序，如果第一个点相同则按“第二个点”排序。
+- 每个点输出格式为 `(x, y)`，其中 $x$ 和 $y$ 占 $4$ 位宽度，右对齐。
+
+## 解题思路
+
+### 1. 共线判定
+
+三点 $(x_1, y_1)$、$(x_2, y_2)$、$(x_3, y_3)$ 共线的充要条件是向量叉积为 $0$：
+
+$$
+(x_2 - x_1) \times (y_3 - y_1) = (x_3 - x_1) \times (y_2 - y_1)
+$$
+
+使用整数运算可避免浮点精度问题。
+
+### 2. 枚举所有直线
+
+最直接的方法是枚举所有点对 $(i, j)$，用它们确定一条直线，然后检查其他点是否落在这条直线上。由于点最多 $300$ 个，点对数量约为 $45000$，每条直线检查剩余点需要 $O(n)$，总复杂度 $O(n^3)$ 在 $n=300$ 时约为 $2.7 \times 10^7$，可以接受。
+
+但需要注意：同一条直线可能被多个点对重复发现。例如一条直线上有 $k$ 个点，会产生 $\binom{k}{2}$ 个点对，我们需要去重。
+
+### 3. 去重策略
+
+本解法采用一种简单有效的去重方法：
+
+- 维护一个 `slopes` 向量，存储已经处理过的直线。
+- 枚举点对 $(i, j)$ 时，判断该点对是否已经被某条已记录的直线所包含。如果已存在，则跳过；否则将其作为一条新直线加入 `slopes`。
+- 最后，对每条记录在 `slopes` 中的直线，收集所有落在其上的点，若点数 $\ge 3$ 则保留。
+
+判断点对 $(i, j)$ 是否已被直线 $L$ 包含的方法是：检查 $i$ 和 $j$ 是否都在直线 $L$ 上。
+
+### 4. 排序与输出
+
+- 对每条直线上的点按 $(x, y)$ 升序排序。
+- 对直线之间排序：依次比较每条直线上对应位置的第一个不同点，按 $(x, y)$ 升序排列。
+- 输出格式要求严格：每个点占宽度 $4$，使用 `setw(4)` 实现。
+
+## 代码实现
+
+```cpp
+// Laser Lines
+// UVa ID: 184
+// Verdict: Accepted
+// Submission Date: 2016-03-13
+// UVa Run Time: 1.176s
+//
+// 版权所有（C）2016，邱秋。metaphysis # yeah dot net
+
+#include <bits/stdc++.h>
+using namespace std;
+
+// 点结构体
+struct point {
+    int x, y;
+};
+
+// 直线结构体（用起点和终点表示）
+struct line {
+    point start, end;
+};
+
+vector<vector<point>> lines;  // 存储所有符合条件的直线上的点
+vector<point> points;          // 存储当前数据集的点
+
+// 点的排序规则：先按 x，再按 y
+bool pointCmp(point a, point b) {
+    return a.x == b.x ? a.y < b.y : a.x < b.x;
+}
+
+// 直线的排序规则：逐点比较两条直线上的点
+bool vectorCmp(vector<point> a, vector<point> b) {
+    int index = 0;
+    while (index < a.size() && index < b.size()) {
+        if (a[index].x == b[index].x && a[index].y == b[index].y)
+            index++;
+        else
+            return pointCmp(a[index], b[index]);
+    }
+
+    // 如果一条直线是另一条的前缀（理论上不会发生，因为直线上的点集互异）
+    if (index < a.size())
+        return false;
+    else
+        return true;
+}
+
+// 输出结果
+void print() {
+    if (lines.size() == 0) {
+        cout << "No lines were found\n";
+        return;
+    }
+
+    // 对每条直线上的点排序
+    for (int i = 0; i < lines.size(); i++)
+        sort(lines[i].begin(), lines[i].end(), pointCmp);
+    // 对直线排序
+    sort(lines.begin(), lines.end(), vectorCmp);
+
+    cout << "The following lines were found:\n";
+    for (int i = 0; i < lines.size(); i++) {
+        for (int j = 0; j < lines[i].size(); j++)
+            cout << "(" << right << setw(4) << lines[i][j].x << ","
+                 << right << setw(4) << lines[i][j].y << ")";
+        cout << "\n";
+    }
+}
+
+// 判断三点是否共线（叉积为零）
+bool isOnLine(point a, point b, point c) {
+    return ((c.x - a.x) * (b.y - a.y) - (b.x - a.x) * (c.y - a.y)) == 0;
+}
+
+// 查找所有共线点集
+void find() {
+    // 先对所有点排序
+    sort(points.begin(), points.end(), pointCmp);
+
+    // 存储所有不同的直线（用点对表示）
+    vector<line> slopes;
+    for (int i = 0; i < points.size() - 1; i++)
+        for (int j = i + 1; j < points.size(); j++) {
+            bool existed = false;
+            // 检查当前点对是否已经被某条已有直线包含
+            for (int k = 0; k < slopes.size(); k++) {
+                if (isOnLine(slopes[k].start, slopes[k].end, points[i]) &&
+                        isOnLine(slopes[k].start, slopes[k].end, points[j])) {
+                    existed = true;
+                    break;
+                }
+            }
+
+            // 如果是新直线，加入 slopes
+            if (existed == false)
+                slopes.push_back((line){points[i], points[j]});
+        }
+
+    lines.clear();
+    // 对每条直线，收集所有落在其上的点
+    for (int i = 0; i < slopes.size(); i++) {
+        vector<point> online;
+        for (int j = 0; j < points.size(); j++)
+            if (isOnLine(slopes[i].start, slopes[i].end, points[j]))
+                online.push_back(points[j]);
+
+        lines.push_back(online);
+    }
+
+    // 移除点数少于 3 的直线
+    for (int i = lines.size() - 1; i >= 0; i--)
+        if (lines[i].size() == 2)
+            lines.erase(lines.begin() + i);
+
+    print();
+}
+
+int main() {
+    cin.tie(0);
+    cout.sync_with_stdio(false);
+
+    int x, y;
+    while (cin >> x >> y) {
+        if (x == 0 && y == 0)  // 整个文件结束
+            break;
+        else
+            points.push_back((point){x, y});
+
+        // 读取一组数据，直到遇到 (0, 0)
+        while (cin >> x >> y) {
+            if (x == 0 && y == 0) {
+                find();        // 处理当前数据集
+                points.clear(); // 清空，准备下一组
+                break;
+            } else points.push_back((point){x, y});
+        }
+    }
+
+    return 0;
+}
+```
+
+## 复杂度分析
+
+- **时间复杂度**：最坏情况下，点数为 $n = 300$。点对数量为 $O(n^2) \approx 45000$，每个点对需要与已记录的直线比较，已记录直线数最多约为 $O(n^2)$，故总体复杂度约为 $O(n^4)$。但由于共线点集较小且实际问题中直线数量有限，实际运行可以接受。更优的做法是使用哈希表记录斜率归约。
+
+- **空间复杂度**：$O(n^2)$，用于存储直线和点集。
