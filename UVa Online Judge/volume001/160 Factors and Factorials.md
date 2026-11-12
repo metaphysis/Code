@@ -1,3 +1,5 @@
+[UVa 160 Factors and Factorials](https://blog.csdn.net/metaphysis/article/details/158611840)
+
 ## 题目分析
 
 本题要求计算 $N!$ 中各个质因数的出现次数，其中 $N$ 的取值范围为 $2 \leq N \leq 100$。由于 $N!$ 的结果会非常大，无法直接存储，因此需要采用质因数分解的方式来描述这个巨大的数。
