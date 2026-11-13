@@ -7,28 +7,28 @@
 // 版权所有（C）2018，邱秋。metaphysis # yeah dot net
 
 #include <bits/stdc++.h>
-
 using namespace std;
 
-int main(int argc, char *argv[])
-{
-    cin.tie(0), cout.tie(0), ios::sync_with_stdio(false);
-
-    int J[36] = {0, 1, 1}, A[36] = {};
-    for (int i = 3; i <= 34; i++)
-    {
-        J[i] = J[i - 1] + 2 * J[i - 2];
-        if (i & 1) A[i - 3] = (J[i - 3] + J[(i - 3) / 2]) / 2;
-        else A[i - 3] = (J[i - 3] + J[i / 2]) / 2;
-    }
-
-    int cases, n;
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    const int MAXN = 30;
+    long long f[MAXN + 1] = {};
+    f[0] = 1;
+    f[1] = 1;
+    for (int n = 2; n <= MAXN; n++) f[n] = f[n - 1] + 2 * f[n - 2];
+    int cases;
     cin >> cases;
-    while (cases--)
-    {
+    while (cases--) {
+        int n;
         cin >> n;
-        cout << A[n + 1] << '\n';
+        long long symmetric;
+        if (n % 2 == 1) symmetric = f[n / 2];
+        else {
+            int k = n / 2;
+            symmetric = f[k] + 2 * f[k - 1];
+        }
+        cout << (f[n] + symmetric) / 2 << '\n';
     }
-
     return 0;
 }
