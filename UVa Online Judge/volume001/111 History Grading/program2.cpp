@@ -18,7 +18,7 @@ int lis()
     for (auto it = events.begin() + 1; it != events.end(); it++)
         if (*it > M.back()) M.push_back(*it);
         else {
-            auto location = upper_bound(M.begin(), M.end(), *it);
+            auto location = lower_bound(M.begin(), M.end(), *it);
             *location = *it;
         }
     return M.size();
