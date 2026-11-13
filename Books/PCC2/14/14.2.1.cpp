@@ -7,14 +7,14 @@ struct point {
     point operator / (double k) { return point(x / k, y / k); };
 };
 
-double norm(point a)
+double sqnorm(point a)
 {
 	return a.x * a.x + a.y * a.y;
 }
 
 double abs(point a)
 {
-    return sqrt(norm(a));
+    return sqrt(sqnorm(a));
 }
 
 double dot(point a, point b)
