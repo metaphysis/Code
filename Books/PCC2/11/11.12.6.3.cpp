@@ -12,7 +12,7 @@ void manacher(string &line)
     modified.back() = '|';
     
     int rightmost = 0, center = 0;
-    for (int i = 0; i < modified.size(); i++)
+    for (int i = 1; i < modified.size(); i++)
     {
         int x = 2 * center - i, y = rightmost - i;
         P[i] = (rightmost > i) ? (P[x] < y ? P[x] : y) : 1;
