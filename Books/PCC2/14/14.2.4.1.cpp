@@ -93,7 +93,8 @@ bool isIntersected(segment s1, segment s2)
     if (fabs(p.a * q.b - q.a * p.b) < EPSILON)
     {
         if (fabs(cp(s1.p1, s1.p2, s2.p1)) < EPSILON)
-            return s1.contains(s2.p1) || s1.contains(s2.p2);
+            return s1.contains(s2.p1) || s1.contains(s2.p2) ||
+				s2.contains(s1.p1) || s2.contains(s1.p2);
         return false;
     }
 
