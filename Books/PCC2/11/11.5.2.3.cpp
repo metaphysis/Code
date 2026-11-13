@@ -4,7 +4,7 @@ using namespace std;
 const int MAXV = 310;
 
 int n, sum[MAXV] = {0}, possible[MAXV][MAXV];
-int stones[MAXV], dp[MAXV][MAXV];
+int a[MAXV], dp[MAXV][MAXV];
 
 int dfs(int i, int j) {
     if (i >= j) return 0;
@@ -17,7 +17,7 @@ int dfs(int i, int j) {
                 if (erased == sum[t - 1] - sum[s]) {
                     erased += dfs(i, s - 1);
                     erased += dfs(t + 1, j);
-                    erased += stones[s] + stones[t];
+                    erased += a[s] + a[t];
                     r = max(r, erased);
                 }
             }
@@ -27,13 +27,13 @@ int dfs(int i, int j) {
 int main() {
     cin >> n;
     for (int i = 1; i <= n; i++) {
-        cin >> stones[i];
-        sum[i] = sum[i - 1] + stones[i];
+        cin >> a[i];
+        sum[i] = sum[i - 1] + a[i];
     }
     memset(possible, 0, sizeof possible);
     for (int i = 1; i <= n; i++)
         for (int j = i + 1; j <= n; j++)
-            if (__gcd(stones[i], stones[j]) == 1)
+            if (__gcd(stones[i], a[j]) == 1)
                 possible[i][j] = 1;
     memset(dp, -1, sizeof dp);
     cout << dfs(1, n) << '\n';
