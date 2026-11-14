@@ -14,40 +14,34 @@ struct line {
 
 typedef vector<point> polygon;
 
-double cp(point a, point b, point c)
-{
+double cp(point a, point b, point c) {
     return (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x);
 }
 
-bool cw(point a, point b, point c)
-{
+bool cw(point a, point b, point c) {
     return cp(a, b, c) < -EPSILON;
 }
 
-bool collinear(point a, point b, point c)
-{
+bool collinear(point a, point b, point c) {
     return fabs(cp(a, b, c)) <= EPSILON;
 }
 
-bool parallel(line p, line q)
-{
+bool parallel(line p, line q) {
     return fabs((p.a.x - p.b.x) * (q.a.y - q.b.y) -
         (q.a.x - q.b.x) * (p.a.y - p.b.y)) <= EPSILON;
 }
 
-point getIntersection(line p, line q)
-{
-    point p = p.a;
+point getIntersection(line p, line q) {
+    point pi = p.a;
     double scale = 
         ((p.a.x - q.a.x) * (q.a.y - q.b.y) - (p.a.y - q.a.y) * (q.a.x - q.b.x)) /
         ((p.a.x - p.b.x) * (q.a.y - q.b.y) - (p.a.y - p.b.y) * (q.a.x - q.b.x));
-    p.x += (p.b.x - p.a.x) * scale;
-    p.y += (p.b.y - p.a.y) * scale;
-    return p;
+    pi.x += (p.b.x - p.a.x) * scale;
+    pi.y += (p.b.y - p.a.y) * scale;
+    return pi;
 }
 
-vector<polygon> halfPlaneIntersection(polygon pg, line cutline)
-{
+vector<polygon> halfPlaneIntersection(polygon pg, line cutline) {
     polygon cutted;
     for (int i = 0; i < pg.size(); i++) {
         point p1 = pg[i], p2 = pg[(i + 1) % pg.size()];
@@ -63,12 +57,11 @@ vector<polygon> halfPlaneIntersection(polygon pg, line cutline)
     if (cutted.size() > 0 && cutted.front() == cutted.back()) cutted.pop_back();
 
     polygon leftHalf, rightHalf;
-    for (auto v : cutted.vertices) {
+    for (auto v : cutted) {
         if (collinear(cutline.a, cutline.b, v)) {
             leftHalf.push_back(v);
             rightHalf.push_back(v);
-        }
-        else {
+        } else {
             if (cw(cutline.a, cutline.b, v))
                 rightHalf.push_back(v);
             else
