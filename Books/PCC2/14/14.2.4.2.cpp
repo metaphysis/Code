@@ -24,7 +24,7 @@ struct line { point a, b; };
 point getIntersection(line p, line q)
 {
     if (p.a == q.a) return p.a;
-    double k = fabs(cross(p.a - p.b, q.a - q.b)) / fabs(cross(p.a - q.a, q.a - q.b));
+    double k = cross(q.a - p.a, q.b - q.a) / cross(p.b - p.a, q.b - q.a);
     return p.a + (p.b - p.a) * k;
 }
 
