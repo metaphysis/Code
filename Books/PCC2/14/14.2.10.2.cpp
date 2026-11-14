@@ -1,5 +1,5 @@
-const int MAXV = 100;
 const double EPSILON = 1E-7;
+
 struct point { double x, y; };
 struct segment { point a, b; };
 typedef vector<point> polygon;
@@ -29,7 +29,7 @@ bool segmentsIntersect(segment ray, segment side) {
 
 bool isPointInPolygon(point p, polygon pg) {
     // 找到多边形顶点中位于最右边的点的横坐标。
-    double rightX = pg0].x;
+    double rightX = pg[0].x;
     for (int i = 0; i < pg.size(); i++) {
         if (pg[i].x > rightX)
             rightX = pg[i].x;
